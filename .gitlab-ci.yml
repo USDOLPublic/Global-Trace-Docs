@@ -1,0 +1,17 @@
+default:
+  retry:
+    max: 2
+    when: runner_system_failure
+
+stages:
+  - build
+
+include:
+  - project: 'diginexhk/tools/shared-assets/ci-cd'
+    ref: refactor
+    file: main.yml
+
+build:
+  stage: build
+  extends:
+    - .build
