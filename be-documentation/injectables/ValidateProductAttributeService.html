@@ -1,0 +1,2299 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Global Trace BE documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">Global Trace BE documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Injectables</li>
+  <li class="breadcrumb-item" >ValidateProductAttributeService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/events/services/product/validate-product-attribute.service.ts</code>
+        </p>
+
+
+
+            <p class="comment">
+                <h3>Extends</h3>
+            </p>
+            <p class="comment">
+                        <code>TransactionService</code>
+            </p>
+
+
+            <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#checkRequiredAttributes" >checkRequiredAttributes</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#checkUniqueProductCode" >checkUniqueProductCode</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#createAttributeValidationError" >createAttributeValidationError</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#isExceedMaxValue" >isExceedMaxValue</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#validateAttachments" >validateAttachments</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#validateAttributesValue" >validateAttributesValue</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#validateAttributeValue" >validateAttributeValue</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#validateCountry" >validateCountry</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#validateCountryProvinceDistrict" >validateCountryProvinceDistrict</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#validateDate" >validateDate</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#validateDistrict" >validateDistrict</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#validateList" >validateList</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#validateNumber" >validateNumber</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#validateNumberUnitPair" >validateNumberUnitPair</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#validatePercentage" >validatePercentage</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#validateProvince" >validateProvince</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#validateText" >validateText</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(productService: <a href="../injectables/ProductService.html" target="_self">ProductService</a>, attributeService: <a href="../injectables/AttributeService.html" target="_self">AttributeService</a>, locationService: <a href="../injectables/LocationService.html" target="_self">LocationService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/events/services/product/validate-product-attribute.service.ts:30</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>productService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ProductService.html" target="_self" >ProductService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>attributeService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AttributeService.html" target="_self" >AttributeService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>locationService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/LocationService.html" target="_self" >LocationService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="checkRequiredAttributes"></a>
+                    <span class="name">
+                        <span ><b>checkRequiredAttributes</b></span>
+                        <a href="#checkRequiredAttributes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>checkRequiredAttributes(undefined: <a href="../entitys/ProductDefinitionEntity.html" target="_self">ProductDefinitionEntity</a>, manualAddedProducts: <a href="../classes/OutputProductDto.html" target="_self">OutputProductDto[]</a>, transactionType: <a href="../undefineds/TransactionTypeEnum.html" target="_self">TransactionTypeEnum</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="77"
+                                    class="link-to-prism">src/events/services/product/validate-product-attribute.service.ts:77</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                            <code><a href="../entitys/ProductDefinitionEntity.html" target="_self" >ProductDefinitionEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>manualAddedProducts</td>
+                                            <td>
+                                                            <code><a href="../classes/OutputProductDto.html" target="_self" >OutputProductDto[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>transactionType</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/enumerations.html#TransactionTypeEnum" target="_self" >TransactionTypeEnum</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="checkUniqueProductCode"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>checkUniqueProductCode</b></span>
+                        <a href="#checkUniqueProductCode"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>checkUniqueProductCode(manualAddedProducts: <a href="../classes/ManualAddedProductDto.html" target="_self">ManualAddedProductDto[]</a>, facility: <a href="../entitys/FacilityEntity.html" target="_self">FacilityEntity</a>, transactionType: <a href="../undefineds/TransactionTypeEnum.html" target="_self">TransactionTypeEnum</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="39"
+                                    class="link-to-prism">src/events/services/product/validate-product-attribute.service.ts:39</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>manualAddedProducts</td>
+                                            <td>
+                                                            <code><a href="../classes/ManualAddedProductDto.html" target="_self" >ManualAddedProductDto[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>facility</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >FacilityEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>transactionType</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/enumerations.html#TransactionTypeEnum" target="_self" >TransactionTypeEnum</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createAttributeValidationError"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>createAttributeValidationError</b></span>
+                        <a href="#createAttributeValidationError"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createAttributeValidationError(error: <a href="../undefineds/ValidateAttributeErrorType.html" target="_self">ValidateAttributeErrorType</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="192"
+                                    class="link-to-prism">src/events/services/product/validate-product-attribute.service.ts:192</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>error</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#ValidateAttributeErrorType" target="_self" >ValidateAttributeErrorType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isExceedMaxValue"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>isExceedMaxValue</b></span>
+                        <a href="#isExceedMaxValue"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>isExceedMaxValue(value: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="459"
+                                    class="link-to-prism">src/events/services/product/validate-product-attribute.service.ts:459</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>value</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateAttachments"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>validateAttachments</b></span>
+                        <a href="#validateAttachments"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateAttachments(option: <a href="../undefineds/ValidateAttributeOptionType.html" target="_self">ValidateAttributeOptionType</a>, errors: <a href="../undefineds/ValidationError.html" target="_self">ValidationError[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="434"
+                                    class="link-to-prism">src/events/services/product/validate-product-attribute.service.ts:434</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>option</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#ValidateAttributeOptionType" target="_self" >ValidateAttributeOptionType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>errors</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#ValidationError" target="_self" >ValidationError[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateAttributesValue"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>validateAttributesValue</b></span>
+                        <a href="#validateAttributesValue"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateAttributesValue(undefined: <a href="../entitys/ProductDefinitionEntity.html" target="_self">ProductDefinitionEntity</a>, manualAddedProducts: <a href="../classes/ManualAddedProductDto.html" target="_self">ManualAddedProductDto[]</a>, transactionType: <a href="../undefineds/TransactionTypeEnum.html" target="_self">TransactionTypeEnum</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="121"
+                                    class="link-to-prism">src/events/services/product/validate-product-attribute.service.ts:121</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                            <code><a href="../entitys/ProductDefinitionEntity.html" target="_self" >ProductDefinitionEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>manualAddedProducts</td>
+                                            <td>
+                                                            <code><a href="../classes/ManualAddedProductDto.html" target="_self" >ManualAddedProductDto[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>transactionType</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/enumerations.html#TransactionTypeEnum" target="_self" >TransactionTypeEnum</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateAttributeValue"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>validateAttributeValue</b></span>
+                        <a href="#validateAttributeValue"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateAttributeValue(category: <a href="../undefineds/FieldCategoryEnum.html" target="_self">FieldCategoryEnum</a>, option: <a href="../undefineds/ValidateAttributeOptionType.html" target="_self">ValidateAttributeOptionType</a>, errors: <a href="../undefineds/ValidationError.html" target="_self">ValidationError[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="154"
+                                    class="link-to-prism">src/events/services/product/validate-product-attribute.service.ts:154</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>category</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/enumerations.html#FieldCategoryEnum" target="_self" >FieldCategoryEnum</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>option</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#ValidateAttributeOptionType" target="_self" >ValidateAttributeOptionType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>errors</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#ValidationError" target="_self" >ValidationError[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateCountry"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>validateCountry</b></span>
+                        <a href="#validateCountry"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateCountry(countryId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, option: <a href="../undefineds/ValidateAttributeOptionType.html" target="_self">ValidateAttributeOptionType</a>, errors: <a href="../undefineds/ValidationError.html" target="_self">ValidationError[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="380"
+                                    class="link-to-prism">src/events/services/product/validate-product-attribute.service.ts:380</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>countryId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>option</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#ValidateAttributeOptionType" target="_self" >ValidateAttributeOptionType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>errors</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#ValidationError" target="_self" >ValidationError[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateCountryProvinceDistrict"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>validateCountryProvinceDistrict</b></span>
+                        <a href="#validateCountryProvinceDistrict"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateCountryProvinceDistrict(option: <a href="../undefineds/ValidateAttributeOptionType.html" target="_self">ValidateAttributeOptionType</a>, errors: <a href="../undefineds/ValidationError.html" target="_self">ValidationError[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="333"
+                                    class="link-to-prism">src/events/services/product/validate-product-attribute.service.ts:333</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>option</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#ValidateAttributeOptionType" target="_self" >ValidateAttributeOptionType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>errors</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#ValidationError" target="_self" >ValidationError[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#now" target="_self" >unknown</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateDate"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>validateDate</b></span>
+                        <a href="#validateDate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateDate(option: <a href="../undefineds/ValidateAttributeOptionType.html" target="_self">ValidateAttributeOptionType</a>, errors: <a href="../undefineds/ValidationError.html" target="_self">ValidationError[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="263"
+                                    class="link-to-prism">src/events/services/product/validate-product-attribute.service.ts:263</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>option</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#ValidateAttributeOptionType" target="_self" >ValidateAttributeOptionType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>errors</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#ValidationError" target="_self" >ValidationError[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateDistrict"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>validateDistrict</b></span>
+                        <a href="#validateDistrict"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateDistrict(districtId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, option: <a href="../undefineds/ValidateAttributeOptionType.html" target="_self">ValidateAttributeOptionType</a>, errors: <a href="../undefineds/ValidationError.html" target="_self">ValidationError[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="416"
+                                    class="link-to-prism">src/events/services/product/validate-product-attribute.service.ts:416</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>districtId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>option</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#ValidateAttributeOptionType" target="_self" >ValidateAttributeOptionType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>errors</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#ValidationError" target="_self" >ValidationError[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateList"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>validateList</b></span>
+                        <a href="#validateList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateList(option: <a href="../undefineds/ValidateAttributeOptionType.html" target="_self">ValidateAttributeOptionType</a>, errors: <a href="../undefineds/ValidationError.html" target="_self">ValidationError[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="278"
+                                    class="link-to-prism">src/events/services/product/validate-product-attribute.service.ts:278</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>option</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#ValidateAttributeOptionType" target="_self" >ValidateAttributeOptionType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>errors</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#ValidationError" target="_self" >ValidationError[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateNumber"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>validateNumber</b></span>
+                        <a href="#validateNumber"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateNumber(option: <a href="../undefineds/ValidateAttributeOptionType.html" target="_self">ValidateAttributeOptionType</a>, errors: <a href="../undefineds/ValidationError.html" target="_self">ValidationError[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="221"
+                                    class="link-to-prism">src/events/services/product/validate-product-attribute.service.ts:221</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>option</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#ValidateAttributeOptionType" target="_self" >ValidateAttributeOptionType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>errors</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#ValidationError" target="_self" >ValidationError[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateNumberUnitPair"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>validateNumberUnitPair</b></span>
+                        <a href="#validateNumberUnitPair"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateNumberUnitPair(option: <a href="../undefineds/ValidateAttributeOptionType.html" target="_self">ValidateAttributeOptionType</a>, errors: <a href="../undefineds/ValidationError.html" target="_self">ValidationError[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="295"
+                                    class="link-to-prism">src/events/services/product/validate-product-attribute.service.ts:295</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>option</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#ValidateAttributeOptionType" target="_self" >ValidateAttributeOptionType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>errors</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#ValidationError" target="_self" >ValidationError[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validatePercentage"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>validatePercentage</b></span>
+                        <a href="#validatePercentage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validatePercentage(option: <a href="../undefineds/ValidateAttributeOptionType.html" target="_self">ValidateAttributeOptionType</a>, errors: <a href="../undefineds/ValidationError.html" target="_self">ValidationError[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="247"
+                                    class="link-to-prism">src/events/services/product/validate-product-attribute.service.ts:247</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>option</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#ValidateAttributeOptionType" target="_self" >ValidateAttributeOptionType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>errors</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#ValidationError" target="_self" >ValidationError[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateProvince"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>validateProvince</b></span>
+                        <a href="#validateProvince"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateProvince(provinceId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, option: <a href="../undefineds/ValidateAttributeOptionType.html" target="_self">ValidateAttributeOptionType</a>, errors: <a href="../undefineds/ValidationError.html" target="_self">ValidationError[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="398"
+                                    class="link-to-prism">src/events/services/product/validate-product-attribute.service.ts:398</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>provinceId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>option</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#ValidateAttributeOptionType" target="_self" >ValidateAttributeOptionType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>errors</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#ValidationError" target="_self" >ValidationError[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateText"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>validateText</b></span>
+                        <a href="#validateText"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateText(option: <a href="../undefineds/ValidateAttributeOptionType.html" target="_self">ValidateAttributeOptionType</a>, errors: <a href="../undefineds/ValidationError.html" target="_self">ValidationError[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="206"
+                                    class="link-to-prism">src/events/services/product/validate-product-attribute.service.ts:206</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>option</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#ValidateAttributeOptionType" target="_self" >ValidateAttributeOptionType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>errors</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#ValidationError" target="_self" >ValidationError[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ValidateException, ValidationError } from &#x27;@diginexhk/nestjs-exception&#x27;;
+import { TransactionService } from &#x27;@diginexhk/nestjs-transaction&#x27;;
+import { BadRequestException, Injectable } from &#x27;@nestjs/common&#x27;;
+import { isUUID } from &#x27;class-validator&#x27;;
+import { isNull, isUndefined } from &#x27;lodash&#x27;;
+import moment from &#x27;moment&#x27;;
+import { In } from &#x27;typeorm&#x27;;
+import { createValidationError } from &#x27;~core/helpers/create-validation-error.helper&#x27;;
+import { maxDecimalValue } from &#x27;~core/helpers/number.helper&#x27;;
+import { hasAllProperties } from &#x27;~core/helpers/type.helper&#x27;;
+import { FileUploadType } from &#x27;~core/types/file-upload.type&#x27;;
+import { FacilityEntity } from &#x27;~facilities/entities/facility.entity&#x27;;
+import { LocationService } from &#x27;~locations/services/location.service&#x27;;
+import { TransactionTypeEnum } from &#x27;~events/enums/transaction-type.enum&#x27;;
+import { ManualAddedProductDto } from &#x27;~events/http/dto/manual-added-product-attribute.dto&#x27;;
+import { OutputProductDto } from &#x27;~events/http/dto/output-product.dto&#x27;;
+import { CountryProvinceDistrictAttributeType } from &#x27;~events/types/country-province-district-attribute.type&#x27;;
+import { ValidateAttributeErrorType } from &#x27;~events/types/validate-attribute-error.type&#x27;;
+import { ValidateAttributeOptionType } from &#x27;~events/types/validate-attribute-option.type&#x27;;
+import { ProductDefinitionAttributeEntity } from &#x27;~product-definitions/entities/product-definition-attribute.entity&#x27;;
+import { ProductDefinitionEntity } from &#x27;~product-definitions/entities/product-definition.entity&#x27;;
+import { FieldCategoryEnum } from &#x27;~product-definitions/enums/field-category.enum&#x27;;
+import { FieldTypeEnum } from &#x27;~product-definitions/enums/field-type.enum&#x27;;
+import { AttributeService } from &#x27;~product-definitions/services/attribute.service&#x27;;
+import { ProductEntity } from &#x27;~products/entities/product.entity&#x27;;
+import { ProductService } from &#x27;~products/services/product.service&#x27;;
+
+@Injectable()
+export class ValidateProductAttributeService extends TransactionService {
+    constructor(
+        private productService: ProductService,
+        private attributeService: AttributeService,
+        private locationService: LocationService
+    ) {
+        super();
+    }
+
+    async checkUniqueProductCode(
+        manualAddedProducts: ManualAddedProductDto[],
+        facility: FacilityEntity,
+        transactionType: TransactionTypeEnum
+    ) {
+        const errors: ValidationError[] &#x3D; [];
+
+        for await (const { attributes } of manualAddedProducts) {
+            const foundAttribute &#x3D; await this.attributeService.findOne({
+                select: [&#x27;id&#x27;, &#x27;name&#x27;],
+                where: {
+                    id: In(attributes.map(({ id }) &#x3D;&gt; id)),
+                    type: FieldTypeEnum.PRODUCT_ID
+                }
+            });
+
+            if (!foundAttribute) {
+                continue;
+            }
+
+            const { value } &#x3D; attributes.find((attr) &#x3D;&gt; attr.id &#x3D;&#x3D;&#x3D; foundAttribute.id);
+            if (!value) {
+                continue;
+            }
+
+            const foundProduct: ProductEntity &#x3D;
+                transactionType &#x3D;&#x3D;&#x3D; TransactionTypeEnum.PURCHASE
+                    ? await this.productService.findFacilityProductByCode(facility, value)
+                    : await this.productService.findOneByCode(value);
+
+            if (foundProduct) {
+                throw new BadRequestException({ translate: &#x27;validation.duplicate_product_id&#x27; });
+            }
+        }
+
+        if (errors.length) throw new ValidateException(errors);
+    }
+
+    checkRequiredAttributes(
+        { productDefinitionAttributes }: ProductDefinitionEntity,
+        manualAddedProducts: OutputProductDto[],
+        transactionType: TransactionTypeEnum
+    ) {
+        const requiredAttributes &#x3D; productDefinitionAttributes.filter(
+            (pDA) &#x3D;&gt;
+                !pDA.isOptional &amp;&amp;
+                (transactionType &#x3D;&#x3D;&#x3D; TransactionTypeEnum.PURCHASE ||
+                    (transactionType &#x3D;&#x3D;&#x3D; TransactionTypeEnum.ASSIGN &amp;&amp; !pDA.isAddManuallyOnly))
+        );
+        const errors: ValidationError[] &#x3D; [];
+
+        manualAddedProducts.forEach(({ attributes, qrCode }, index) &#x3D;&gt; {
+            // If has QR code, skip attribute Product ID
+            let filterRequiredAttributes &#x3D; requiredAttributes;
+            if (qrCode) {
+                filterRequiredAttributes &#x3D; requiredAttributes.filter(
+                    ({ attribute }) &#x3D;&gt; attribute.type !&#x3D;&#x3D; FieldTypeEnum.PRODUCT_ID
+                );
+            }
+
+            const missingRequiredAttributes: ProductDefinitionAttributeEntity[] &#x3D; filterRequiredAttributes.filter(
+                (rA) &#x3D;&gt; !!!attributes.find((attribute) &#x3D;&gt; attribute.id &#x3D;&#x3D;&#x3D; rA.attributeId)
+            );
+
+            if (missingRequiredAttributes.length) {
+                missingRequiredAttributes.forEach(({ attribute }) &#x3D;&gt;
+                    errors.push(
+                        createValidationError({
+                            property: &#x60;manuallyAddedData.manualAddedProducts[${index}].${attribute.name}&#x60;,
+                            message: &#x27;product_attribute_is_required&#x27;,
+                            detail: {
+                                attributeName: attribute.name
+                            }
+                        })
+                    )
+                );
+            }
+        });
+
+        if (errors.length) throw new ValidateException(errors);
+    }
+
+    async validateAttributesValue(
+        { productDefinitionAttributes }: ProductDefinitionEntity,
+        manualAddedProducts: ManualAddedProductDto[],
+        transactionType: TransactionTypeEnum
+    ) {
+        const errors: ValidationError[] &#x3D; [];
+
+        for await (const [index, { attributes }] of manualAddedProducts.entries()) {
+            for await (const [attributeIndex, { id, value, quantityUnit }] of attributes.entries()) {
+                const {
+                    isOptional,
+                    isAddManuallyOnly,
+                    attribute: { name: attributeName, category, options }
+                } &#x3D; productDefinitionAttributes.find((pDA) &#x3D;&gt; pDA.attributeId &#x3D;&#x3D;&#x3D; id);
+
+                if (
+                    (isOptional || (isAddManuallyOnly &amp;&amp; transactionType &#x3D;&#x3D;&#x3D; TransactionTypeEnum.ASSIGN)) &amp;&amp;
+                    (isNull(value) || isUndefined(value))
+                ) {
+                    continue;
+                }
+
+                await this.validateAttributeValue(
+                    category,
+                    { index, attributeIndex, attributeName, options, quantityUnit, value },
+                    errors
+                );
+            }
+        }
+
+        if (errors.length) throw new ValidateException(errors);
+    }
+
+    private async validateAttributeValue(
+        category: FieldCategoryEnum,
+        option: ValidateAttributeOptionType,
+        errors: ValidationError[]
+    ) {
+        const { index, attributeIndex, attributeName, options, quantityUnit, value } &#x3D; option;
+
+        switch (category) {
+            case FieldCategoryEnum.TEXT:
+                this.validateText({ index, attributeIndex, attributeName, value }, errors);
+                break;
+            case FieldCategoryEnum.NUMBER:
+                this.validateNumber({ index, attributeIndex, attributeName, value }, errors);
+                break;
+            case FieldCategoryEnum.PERCENTAGE:
+                this.validatePercentage({ index, attributeIndex, attributeName, value }, errors);
+                break;
+            case FieldCategoryEnum.DATE:
+                this.validateDate({ index, attributeIndex, attributeName, value }, errors);
+                break;
+            case FieldCategoryEnum.LIST:
+                this.validateList({ index, attributeIndex, attributeName, options, value }, errors);
+                break;
+            case FieldCategoryEnum.NUMBER_UNIT_PAIR:
+                this.validateNumberUnitPair(
+                    { index, attributeIndex, attributeName, options, value, quantityUnit },
+                    errors
+                );
+                break;
+            case FieldCategoryEnum.COUNTRY_PROVINCE_DISTRICT:
+                await this.validateCountryProvinceDistrict({ index, attributeIndex, attributeName, value }, errors);
+                break;
+            case FieldCategoryEnum.ATTACHMENTS:
+                this.validateAttachments({ index, attributeIndex, attributeName, value }, errors);
+                break;
+        }
+    }
+
+    private createAttributeValidationError(error: ValidateAttributeErrorType) {
+        const { index, property, attributeIndex, attributeName, attributeType, attributeValue, message } &#x3D; error;
+
+        return createValidationError({
+            property: property || &#x60;manuallyAddedData.manualAddedProducts[${index}].attributes[${attributeIndex}]&#x60;,
+            message: message || &#x27;invalid_product_attribute_type&#x27;,
+            detail: {
+                attributeName,
+                attributeType,
+                attributeValue
+            }
+        });
+    }
+
+    private validateText(option: ValidateAttributeOptionType, errors: ValidationError[]) {
+        const { index, attributeIndex, attributeName, value } &#x3D; option;
+
+        if (typeof value !&#x3D;&#x3D; &#x27;string&#x27;) {
+            errors.push(
+                this.createAttributeValidationError({
+                    index,
+                    attributeIndex,
+                    attributeName,
+                    attributeType: FieldCategoryEnum.TEXT
+                })
+            );
+        }
+    }
+
+    private validateNumber(option: ValidateAttributeOptionType, errors: ValidationError[]) {
+        const { index, attributeIndex, attributeName, value } &#x3D; option;
+
+        if (typeof value !&#x3D;&#x3D; &#x27;number&#x27;) {
+            return errors.push(
+                this.createAttributeValidationError({
+                    index,
+                    attributeIndex,
+                    attributeName,
+                    attributeType: FieldCategoryEnum.NUMBER
+                })
+            );
+        }
+
+        if (this.isExceedMaxValue(value)) {
+            errors.push(
+                this.createAttributeValidationError({
+                    index,
+                    attributeIndex,
+                    attributeName,
+                    message: &#x27;exceed_maximum_decimal&#x27;
+                })
+            );
+        }
+    }
+
+    private validatePercentage(option: ValidateAttributeOptionType, errors: ValidationError[]) {
+        const { index, attributeIndex, attributeName, value } &#x3D; option;
+
+        if (typeof value !&#x3D;&#x3D; &#x27;number&#x27; || value &lt; 0 || value &gt; 100) {
+            errors.push(
+                this.createAttributeValidationError({
+                    index,
+                    attributeIndex,
+                    attributeName,
+                    attributeType: FieldCategoryEnum.PERCENTAGE,
+                    message: &#x27;invalid_product_attribute_percentage&#x27;
+                })
+            );
+        }
+    }
+
+    private validateDate(option: ValidateAttributeOptionType, errors: ValidationError[]) {
+        const { index, attributeIndex, attributeName, value } &#x3D; option;
+
+        if (!moment(value).isValid()) {
+            errors.push(
+                this.createAttributeValidationError({
+                    index,
+                    attributeIndex,
+                    attributeName,
+                    attributeType: FieldCategoryEnum.DATE
+                })
+            );
+        }
+    }
+
+    private validateList(option: ValidateAttributeOptionType, errors: ValidationError[]) {
+        const { index, attributeIndex, attributeName, options, value } &#x3D; option;
+        const foundValue &#x3D; options.find((item) &#x3D;&gt; item.value &#x3D;&#x3D;&#x3D; value);
+
+        if (!!!foundValue) {
+            errors.push(
+                this.createAttributeValidationError({
+                    index,
+                    attributeIndex,
+                    attributeName,
+                    attributeValue: options.map((item) &#x3D;&gt; item.value),
+                    message: &#x27;invalid_product_attribute_value&#x27;
+                })
+            );
+        }
+    }
+
+    private validateNumberUnitPair(option: ValidateAttributeOptionType, errors: ValidationError[]) {
+        const { index, attributeIndex, attributeName, options, value, quantityUnit } &#x3D; option;
+
+        if (!quantityUnit || !!!options.find((item) &#x3D;&gt; item.value &#x3D;&#x3D;&#x3D; quantityUnit)) {
+            return errors.push(
+                this.createAttributeValidationError({
+                    index,
+                    attributeIndex,
+                    attributeName,
+                    attributeValue: options.map((item) &#x3D;&gt; item.value),
+                    message: &#x27;invalid_quantity_unit&#x27;
+                })
+            );
+        }
+
+        if (typeof value !&#x3D;&#x3D; &#x27;number&#x27;) {
+            return errors.push(
+                this.createAttributeValidationError({
+                    index,
+                    attributeIndex,
+                    attributeName,
+                    attributeType: FieldCategoryEnum.NUMBER_UNIT_PAIR
+                })
+            );
+        }
+
+        if (this.isExceedMaxValue(value)) {
+            errors.push(
+                this.createAttributeValidationError({
+                    index,
+                    attributeIndex,
+                    attributeName,
+                    message: &#x27;exceed_maximum_decimal&#x27;
+                })
+            );
+        }
+    }
+
+    private async validateCountryProvinceDistrict(option: ValidateAttributeOptionType, errors: ValidationError[]) {
+        const { index, attributeIndex, attributeName, value } &#x3D; option;
+        const sampleCountryProvinceDistrictAttribute: CountryProvinceDistrictAttributeType &#x3D; {
+            countryId: &#x27;string&#x27;,
+            provinceId: &#x27;string&#x27;,
+            districtId: &#x27;string&#x27;
+        };
+        if (!(value instanceof Object) || !hasAllProperties(value, sampleCountryProvinceDistrictAttribute)) {
+            return errors.push(
+                this.createAttributeValidationError({
+                    index,
+                    attributeIndex,
+                    attributeName,
+                    attributeType: FieldCategoryEnum.COUNTRY_PROVINCE_DISTRICT
+                })
+            );
+        }
+
+        for (const [key, id] of Object.entries(value)) {
+            if (!isUUID(id)) {
+                errors.push(
+                    this.createAttributeValidationError({
+                        index,
+                        attributeIndex,
+                        attributeName: &#x60;${attributeName}.${key}&#x60;,
+                        property: &#x60;manuallyAddedData.manualAddedProducts[${index}].attributes[${attributeIndex}].${attributeName}.${key}&#x60;,
+                        message: &#x27;product_attribute_must_be_uuid&#x27;
+                    })
+                );
+
+                continue;
+            }
+
+            switch (key) {
+                case &#x27;countryId&#x27;:
+                    await this.validateCountry(id, option, errors);
+                    break;
+                case &#x27;provinceId&#x27;:
+                    await this.validateProvince(id, option, errors);
+                    break;
+                case &#x27;districtId&#x27;:
+                    await this.validateDistrict(id, option, errors);
+                    break;
+            }
+        }
+    }
+
+    private async validateCountry(countryId: string, option: ValidateAttributeOptionType, errors: ValidationError[]) {
+        const { index, attributeIndex, attributeName } &#x3D; option;
+
+        const country &#x3D; await this.locationService.findCountryById(countryId);
+
+        if (!country) {
+            errors.push(
+                this.createAttributeValidationError({
+                    index,
+                    attributeIndex,
+                    attributeName,
+                    property: &#x60;manuallyAddedData.manualAddedProducts[${index}].attributes[${attributeIndex}].${attributeName}.countryId&#x60;,
+                    message: &#x27;invalid_country_id&#x27;
+                })
+            );
+        }
+    }
+
+    private async validateProvince(provinceId: string, option: ValidateAttributeOptionType, errors: ValidationError[]) {
+        const { index, attributeIndex, attributeName } &#x3D; option;
+
+        const province &#x3D; await this.locationService.findProvinceById(provinceId);
+
+        if (!province) {
+            errors.push(
+                this.createAttributeValidationError({
+                    index,
+                    attributeIndex,
+                    attributeName,
+                    property: &#x60;manuallyAddedData.manualAddedProducts[${index}].attributes[${attributeIndex}].${attributeName}.provinceId&#x60;,
+                    message: &#x27;invalid_province_id&#x27;
+                })
+            );
+        }
+    }
+
+    private async validateDistrict(districtId: string, option: ValidateAttributeOptionType, errors: ValidationError[]) {
+        const { index, attributeIndex, attributeName } &#x3D; option;
+
+        const district &#x3D; await this.locationService.findDistrictById(districtId);
+
+        if (!district) {
+            errors.push(
+                this.createAttributeValidationError({
+                    index,
+                    attributeIndex,
+                    attributeName,
+                    property: &#x60;manuallyAddedData.manualAddedProducts[${index}].attributes[${attributeIndex}].${attributeName}.districtId&#x60;,
+                    message: &#x27;invalid_district_id&#x27;
+                })
+            );
+        }
+    }
+
+    private validateAttachments(option: ValidateAttributeOptionType, errors: ValidationError[]) {
+        const { index, attributeIndex, attributeName, value } &#x3D; option;
+        const sampleFileUpload: FileUploadType &#x3D; { fileName: &#x27;string&#x27;, blobName: &#x27;string&#x27; };
+
+        if (!Array.isArray(value)) {
+            errors.push(
+                this.createAttributeValidationError({
+                    index,
+                    attributeIndex,
+                    attributeName,
+                    attributeType: FieldCategoryEnum.ATTACHMENTS
+                })
+            );
+        } else if (!value.every((item) &#x3D;&gt; value instanceof Object &amp;&amp; hasAllProperties(item, sampleFileUpload))) {
+            errors.push(
+                this.createAttributeValidationError({
+                    index,
+                    attributeIndex,
+                    attributeName,
+                    attributeType: &#x27;FileUploadType&#x27;
+                })
+            );
+        }
+    }
+
+    private isExceedMaxValue(value: number) {
+        return value &gt; maxDecimalValue(14, 2);
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'ValidateProductAttributeService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

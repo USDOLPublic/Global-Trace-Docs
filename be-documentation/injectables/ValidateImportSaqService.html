@@ -1,0 +1,2534 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Global Trace BE documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">Global Trace BE documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Injectables</li>
+  <li class="breadcrumb-item" >ValidateImportSaqService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/self-assessments/services/import/saq/validate-import-saq.service.ts</code>
+        </p>
+
+
+
+
+
+            <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getCorrespondingSheetNameSAQFile" >getCorrespondingSheetNameSAQFile</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getDataValidationFgtFile" >getDataValidationFgtFile</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getGroupDataValidationFgtFile" >getGroupDataValidationFgtFile</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getListDataValidation" >getListDataValidation</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getStartingSAQColumn" >getStartingSAQColumn</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#validate" >validate</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#validateConditionalQuestion" >validateConditionalQuestion</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#validateDataInEachSheet" >validateDataInEachSheet</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#validateEnoughColumnsInEachSheet" >validateEnoughColumnsInEachSheet</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#validateEnoughSheets" >validateEnoughSheets</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#validateGoTo" >validateGoTo</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#validateGroupQuestion" >validateGroupQuestion</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#validateIndicatorAndSubIndicator" >validateIndicatorAndSubIndicator</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#validateQuestion" >validateQuestion</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#validateQuestionIndex" >validateQuestionIndex</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#validateResponseOption" >validateResponseOption</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#validateResponseType" >validateResponseType</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#validateResponseTypeWithFMSaqFile" >validateResponseTypeWithFMSaqFile</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#validateResponseTypeWithSaqFile" >validateResponseTypeWithSaqFile</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#validateRiskLevel" >validateRiskLevel</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(getDataExcelService: <a href="../classes/GetDataExcelService.html" target="_self">GetDataExcelService</a>, importGroupQuestionService: <a href="../injectables/ImportGroupQuestionService.html" target="_self">ImportGroupQuestionService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/self-assessments/services/import/saq/validate-import-saq.service.ts:38</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>getDataExcelService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../classes/GetDataExcelService.html" target="_self" >GetDataExcelService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>importGroupQuestionService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ImportGroupQuestionService.html" target="_self" >ImportGroupQuestionService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getCorrespondingSheetNameSAQFile"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>getCorrespondingSheetNameSAQFile</b></span>
+                        <a href="#getCorrespondingSheetNameSAQFile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getCorrespondingSheetNameSAQFile(sheetName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="434"
+                                    class="link-to-prism">src/self-assessments/services/import/saq/validate-import-saq.service.ts:434</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>sheetName</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getDataValidationFgtFile"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>getDataValidationFgtFile</b></span>
+                        <a href="#getDataValidationFgtFile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getDataValidationFgtFile(workbook: Workbook, sheetName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="404"
+                                    class="link-to-prism">src/self-assessments/services/import/saq/validate-import-saq.service.ts:404</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>workbook</td>
+                                            <td>
+                                                        <code>Workbook</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>sheetName</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#DataValidationFgtFile" target="_self" >DataValidationFgtFile</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getGroupDataValidationFgtFile"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>getGroupDataValidationFgtFile</b></span>
+                        <a href="#getGroupDataValidationFgtFile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getGroupDataValidationFgtFile(file: Express.Multer.File)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="382"
+                                    class="link-to-prism">src/self-assessments/services/import/saq/validate-import-saq.service.ts:382</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>file</td>
+                                            <td>
+                                                        <code>Express.Multer.File</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;GroupDataValidationFgtFile&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getListDataValidation"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>getListDataValidation</b></span>
+                        <a href="#getListDataValidation"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getListDataValidation(dataValidation: DataValidation)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="371"
+                                    class="link-to-prism">src/self-assessments/services/import/saq/validate-import-saq.service.ts:371</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>dataValidation</td>
+                                            <td>
+                                                        <code>DataValidation</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>string[]</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getStartingSAQColumn"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>getStartingSAQColumn</b></span>
+                        <a href="#getStartingSAQColumn"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getStartingSAQColumn(sheetName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="442"
+                                    class="link-to-prism">src/self-assessments/services/import/saq/validate-import-saq.service.ts:442</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>sheetName</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validate"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>validate</b></span>
+                        <a href="#validate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validate(files: <a href="../undefineds/ImportFilesSelfAssessmentType.html" target="_self">ImportFilesSelfAssessmentType</a>, canAdminCompletesProfile: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="44"
+                                    class="link-to-prism">src/self-assessments/services/import/saq/validate-import-saq.service.ts:44</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>files</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#ImportFilesSelfAssessmentType" target="_self" >ImportFilesSelfAssessmentType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>canAdminCompletesProfile</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#ValidateImportType" target="_self" >Promise&lt;ValidateImportType&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateConditionalQuestion"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>validateConditionalQuestion</b></span>
+                        <a href="#validateConditionalQuestion"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateConditionalQuestion(row: <a href="../undefineds/RowDataType.html" target="_self">RowDataType</a>, errors: FileValidationError[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="260"
+                                    class="link-to-prism">src/self-assessments/services/import/saq/validate-import-saq.service.ts:260</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>row</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#RowDataType" target="_self" >RowDataType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>errors</td>
+                                            <td>
+                                                        <code>FileValidationError[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateDataInEachSheet"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>validateDataInEachSheet</b></span>
+                        <a href="#validateDataInEachSheet"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateDataInEachSheet(dataImport: <a href="../undefineds/ExcelToJsonResultType.html" target="_self">ExcelToJsonResultType[]</a>, validationErrors: <a href="../undefineds/FileDataValidationType.html" target="_self">FileDataValidationType[]</a>, groupDataValidationFgtFile: <a href="../undefineds/GroupDataValidationFgtFile.html" target="_self">GroupDataValidationFgtFile</a>, canAdminCompletesProfile: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="126"
+                                    class="link-to-prism">src/self-assessments/services/import/saq/validate-import-saq.service.ts:126</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>dataImport</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#ExcelToJsonResultType" target="_self" >ExcelToJsonResultType[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>validationErrors</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#FileDataValidationType" target="_self" >FileDataValidationType[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>groupDataValidationFgtFile</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#GroupDataValidationFgtFile" target="_self" >GroupDataValidationFgtFile</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>canAdminCompletesProfile</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;number&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateEnoughColumnsInEachSheet"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>validateEnoughColumnsInEachSheet</b></span>
+                        <a href="#validateEnoughColumnsInEachSheet"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateEnoughColumnsInEachSheet(dataHeader: <a href="../undefineds/HeaderSheetType.html" target="_self">HeaderSheetType[]</a>, validationErrors: <a href="../undefineds/FileDataValidationType.html" target="_self">FileDataValidationType[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="92"
+                                    class="link-to-prism">src/self-assessments/services/import/saq/validate-import-saq.service.ts:92</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>dataHeader</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#HeaderSheetType" target="_self" >HeaderSheetType[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>validationErrors</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#FileDataValidationType" target="_self" >FileDataValidationType[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateEnoughSheets"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>validateEnoughSheets</b></span>
+                        <a href="#validateEnoughSheets"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateEnoughSheets(dataHeader: <a href="../undefineds/HeaderSheetType.html" target="_self">HeaderSheetType[]</a>, canAdminCompletesProfile: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="80"
+                                    class="link-to-prism">src/self-assessments/services/import/saq/validate-import-saq.service.ts:80</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>dataHeader</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#HeaderSheetType" target="_self" >HeaderSheetType[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>canAdminCompletesProfile</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateGoTo"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>validateGoTo</b></span>
+                        <a href="#validateGoTo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateGoTo(row: <a href="../undefineds/RowDataType.html" target="_self">RowDataType</a>, errors: FileValidationError[], mappedIndex: number[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="313"
+                                    class="link-to-prism">src/self-assessments/services/import/saq/validate-import-saq.service.ts:313</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>row</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#RowDataType" target="_self" >RowDataType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>errors</td>
+                                            <td>
+                                                        <code>FileValidationError[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>mappedIndex</td>
+                                            <td>
+                                                        <code>number[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateGroupQuestion"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>validateGroupQuestion</b></span>
+                        <a href="#validateGroupQuestion"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateGroupQuestion(sheet: <a href="../undefineds/ExcelToJsonResultType.html" target="_self">ExcelToJsonResultType</a>, validationErrors: <a href="../undefineds/FileDataValidationType.html" target="_self">FileDataValidationType[]</a>, dataValidationFgtFile: <a href="../undefineds/DataValidationFgtFile.html" target="_self">DataValidationFgtFile</a>, canAdminCompletesProfile: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="154"
+                                    class="link-to-prism">src/self-assessments/services/import/saq/validate-import-saq.service.ts:154</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>sheet</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#ExcelToJsonResultType" target="_self" >ExcelToJsonResultType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>validationErrors</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#FileDataValidationType" target="_self" >FileDataValidationType[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>dataValidationFgtFile</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#DataValidationFgtFile" target="_self" >DataValidationFgtFile</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>canAdminCompletesProfile</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#ValidateImportType" target="_self" >Promise&lt;ValidateImportType&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateIndicatorAndSubIndicator"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>validateIndicatorAndSubIndicator</b></span>
+                        <a href="#validateIndicatorAndSubIndicator"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateIndicatorAndSubIndicator(row: <a href="../undefineds/RowDataType.html" target="_self">RowDataType</a>, errors: FileValidationError[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="333"
+                                    class="link-to-prism">src/self-assessments/services/import/saq/validate-import-saq.service.ts:333</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>row</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#RowDataType" target="_self" >RowDataType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>errors</td>
+                                            <td>
+                                                        <code>FileValidationError[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateQuestion"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>validateQuestion</b></span>
+                        <a href="#validateQuestion"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateQuestion(row: <a href="../undefineds/RowDataType.html" target="_self">RowDataType</a>, errors: FileValidationError[], indexColumn: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="214"
+                                    class="link-to-prism">src/self-assessments/services/import/saq/validate-import-saq.service.ts:214</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>row</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#RowDataType" target="_self" >RowDataType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>errors</td>
+                                            <td>
+                                                        <code>FileValidationError[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>indexColumn</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateQuestionIndex"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>validateQuestionIndex</b></span>
+                        <a href="#validateQuestionIndex"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateQuestionIndex(row: <a href="../undefineds/RowDataType.html" target="_self">RowDataType</a>, questionIndex: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, errors: FileValidationError[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="203"
+                                    class="link-to-prism">src/self-assessments/services/import/saq/validate-import-saq.service.ts:203</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>row</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#RowDataType" target="_self" >RowDataType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>questionIndex</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>errors</td>
+                                            <td>
+                                                        <code>FileValidationError[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateResponseOption"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>validateResponseOption</b></span>
+                        <a href="#validateResponseOption"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateResponseOption(row: <a href="../undefineds/RowDataType.html" target="_self">RowDataType</a>, errors: FileValidationError[], dataValidationFgtFile: <a href="../undefineds/DataValidationFgtFile.html" target="_self">DataValidationFgtFile</a>, rowIndex: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="226"
+                                    class="link-to-prism">src/self-assessments/services/import/saq/validate-import-saq.service.ts:226</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>row</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#RowDataType" target="_self" >RowDataType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>errors</td>
+                                            <td>
+                                                        <code>FileValidationError[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>dataValidationFgtFile</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#DataValidationFgtFile" target="_self" >DataValidationFgtFile</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>rowIndex</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateResponseType"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>validateResponseType</b></span>
+                        <a href="#validateResponseType"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateResponseType(row: <a href="../undefineds/RowDataType.html" target="_self">RowDataType</a>, errors: FileValidationError[], canAdminCompletesProfile: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="279"
+                                    class="link-to-prism">src/self-assessments/services/import/saq/validate-import-saq.service.ts:279</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>row</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#RowDataType" target="_self" >RowDataType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>errors</td>
+                                            <td>
+                                                        <code>FileValidationError[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>canAdminCompletesProfile</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateResponseTypeWithFMSaqFile"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>validateResponseTypeWithFMSaqFile</b></span>
+                        <a href="#validateResponseTypeWithFMSaqFile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateResponseTypeWithFMSaqFile(row: <a href="../undefineds/RowDataType.html" target="_self">RowDataType</a>, errors: FileValidationError[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="291"
+                                    class="link-to-prism">src/self-assessments/services/import/saq/validate-import-saq.service.ts:291</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>row</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#RowDataType" target="_self" >RowDataType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>errors</td>
+                                            <td>
+                                                        <code>FileValidationError[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateResponseTypeWithSaqFile"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>validateResponseTypeWithSaqFile</b></span>
+                        <a href="#validateResponseTypeWithSaqFile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateResponseTypeWithSaqFile(row: <a href="../undefineds/RowDataType.html" target="_self">RowDataType</a>, errors: FileValidationError[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="302"
+                                    class="link-to-prism">src/self-assessments/services/import/saq/validate-import-saq.service.ts:302</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>row</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#RowDataType" target="_self" >RowDataType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>errors</td>
+                                            <td>
+                                                        <code>FileValidationError[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateRiskLevel"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>validateRiskLevel</b></span>
+                        <a href="#validateRiskLevel"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateRiskLevel(row: <a href="../undefineds/RowDataType.html" target="_self">RowDataType</a>, errors: FileValidationError[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="359"
+                                    class="link-to-prism">src/self-assessments/services/import/saq/validate-import-saq.service.ts:359</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>row</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#RowDataType" target="_self" >RowDataType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>errors</td>
+                                            <td>
+                                                        <code>FileValidationError[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { BadRequestException, Injectable } from &#x27;@nestjs/common&#x27;;
+import { ValidateImportType } from &#x27;~self-assessments/types/validate-import.type&#x27;;
+import { FileDataValidationType, FileValidationError } from &#x27;~files/types/file-data-validation.type&#x27;;
+import { HeaderSheetType } from &#x27;~self-assessments/types/header-sheet.type&#x27;;
+import {
+    COMMUNITY_SHEET_NAME,
+    FARM_MANAGEMENT_SAQ_RESPONSE_TYPES,
+    FREE_TEXT_RESPONSE_TYPE,
+    GROUP_QUESTION_COLUMN_NAMES,
+    INTEGER_RESPONSE_TYPE,
+    LABOR_SHEET_NAME,
+    PRODUCT_SHEET_NAME,
+    SAQ_RESPONSE_TYPES,
+    SHEET_IMPORT_FACILITY_GROUP_SAQ_NAMES,
+    SHEET_IMPORT_SAQ_NAMES
+} from &#x27;~self-assessments/constants/import-saq.constant&#x27;;
+import { ExcelToJsonResultType, RowDataType } from &#x27;~self-assessments/types/excel-to-json-result.type&#x27;;
+import { GetDataExcelService } from &#x27;~self-assessments/services/import/get-data-excel.service&#x27;;
+import { ImportGroupQuestionService } from &#x27;~self-assessments/services/import/saq/import-group-question.service&#x27;;
+import { trans } from &#x27;@diginexhk/nestjs-cls-translation&#x27;;
+import { isEmpty, isNil, trim, uniq } from &#x27;lodash&#x27;;
+import { trimValue } from &#x27;~core/helpers/string.helper&#x27;;
+import {
+    COMMUNITY_LEVEL_SHEET_NAME,
+    FARM_LEVEL_RISK_ASSESSMENT_COLUMN_NAMES,
+    FARM_LEVEL_SHEET_NAME,
+    RESPONSE_OPTION
+} from &#x27;~self-assessments/constants/upload-facility-group-template.constant&#x27;;
+import { ImportFilesSelfAssessmentType } from &#x27;~self-assessments/types/import-files-self-assessment.type&#x27;;
+import { DataValidation, Workbook } from &#x27;exceljs&#x27;;
+import {
+    DataValidationFgtFile,
+    GroupDataValidationFgtFile
+} from &#x27;~self-assessments/types/group-data-validation-fgt-file.type&#x27;;
+
+@Injectable()
+export class ValidateImportSaqService {
+    constructor(
+        private getDataExcelService: GetDataExcelService,
+        private importGroupQuestionService: ImportGroupQuestionService
+    ) {}
+
+    async validate(
+        files: ImportFilesSelfAssessmentType,
+        canAdminCompletesProfile: boolean
+    ): Promise&lt;ValidateImportType&gt; {
+        const fileSaq &#x3D; files.fileSaq[0];
+        const dataHeader &#x3D; await this.getDataExcelService.getHeaderRowsFromFile(fileSaq);
+        const dataImport &#x3D; await this.getDataExcelService.getDataFromFile(fileSaq);
+
+        let groupDataValidationFgtFile: GroupDataValidationFgtFile &#x3D; {};
+        if (canAdminCompletesProfile) {
+            const fileFgt &#x3D; files.fileFacilityGroupTemplate[0];
+            groupDataValidationFgtFile &#x3D; await this.getGroupDataValidationFgtFile(fileFgt);
+        }
+
+        let validationErrors: FileDataValidationType[] &#x3D; [];
+
+        this.validateEnoughSheets(dataHeader, canAdminCompletesProfile);
+        if (validationErrors.length) {
+            return { validatedItemCount: 0, validationErrors };
+        }
+
+        this.validateEnoughColumnsInEachSheet(dataHeader, validationErrors);
+        if (validationErrors.length) {
+            return { validatedItemCount: 0, validationErrors };
+        }
+
+        const validatedItemCount &#x3D; await this.validateDataInEachSheet(
+            dataImport,
+            validationErrors,
+            groupDataValidationFgtFile,
+            canAdminCompletesProfile
+        );
+
+        return { validatedItemCount, validationErrors };
+    }
+
+    private validateEnoughSheets(dataHeader: HeaderSheetType[], canAdminCompletesProfile: boolean): void {
+        let sheetNames &#x3D; dataHeader.map((item) &#x3D;&gt; item.sheetName);
+        const requiredSheets &#x3D; canAdminCompletesProfile
+            ? SHEET_IMPORT_FACILITY_GROUP_SAQ_NAMES
+            : SHEET_IMPORT_SAQ_NAMES;
+        for (const sheetName of requiredSheets) {
+            if (!sheetNames.includes(sheetName)) {
+                throw new BadRequestException({ translate: &#x27;error.worksheet_name_mismatch&#x27; });
+            }
+        }
+    }
+
+    private validateEnoughColumnsInEachSheet(
+        dataHeader: HeaderSheetType[],
+        validationErrors: FileDataValidationType[]
+    ): void {
+        for (const sheet of dataHeader) {
+            let columnNamesToCheck &#x3D; [];
+            switch (sheet.sheetName) {
+                case PRODUCT_SHEET_NAME:
+                case COMMUNITY_SHEET_NAME:
+                case LABOR_SHEET_NAME:
+                    columnNamesToCheck &#x3D; GROUP_QUESTION_COLUMN_NAMES;
+                    break;
+            }
+
+            for (const columnName of columnNamesToCheck) {
+                if (!sheet.headers.includes(columnName)) {
+                    validationErrors.push({
+                        index: 1,
+                        errors: [
+                            {
+                                key: columnName,
+                                error: trans(&#x27;error.file_structure_altered&#x27;),
+                                currentValue: null,
+                                isBlankRow: false
+                            }
+                        ],
+                        isShowRow: true,
+                        sheet: sheet.sheetName
+                    });
+                }
+            }
+        }
+    }
+
+    private async validateDataInEachSheet(
+        dataImport: ExcelToJsonResultType[],
+        validationErrors: FileDataValidationType[],
+        groupDataValidationFgtFile: GroupDataValidationFgtFile,
+        canAdminCompletesProfile: boolean
+    ): Promise&lt;number&gt; {
+        let validatedItemCount &#x3D; 0;
+
+        for (const sheet of dataImport) {
+            switch (sheet.sheetName) {
+                case PRODUCT_SHEET_NAME:
+                case COMMUNITY_SHEET_NAME:
+                case LABOR_SHEET_NAME:
+                    const { validatedItemCount: validNumber } &#x3D; await this.validateGroupQuestion(
+                        sheet,
+                        validationErrors,
+                        groupDataValidationFgtFile[sheet.sheetName] || {},
+                        canAdminCompletesProfile
+                    );
+                    validatedItemCount +&#x3D; validNumber;
+
+                    break;
+            }
+        }
+
+        return validatedItemCount;
+    }
+
+    async validateGroupQuestion(
+        sheet: ExcelToJsonResultType,
+        validationErrors: FileDataValidationType[],
+        dataValidationFgtFile: DataValidationFgtFile,
+        canAdminCompletesProfile: boolean
+    ): Promise&lt;ValidateImportType&gt; {
+        const sheetData: RowDataType[] &#x3D; sheet.sheetData;
+        let numberValid &#x3D; 0;
+        let indexColumn &#x3D; 0;
+        let questionIndex &#x3D; 0;
+        let previousRow: RowDataType &#x3D; null;
+        const mappedIndex &#x3D; sheetData.map((item) &#x3D;&gt; Number(item.Index));
+
+        for (let index &#x3D; 0; index &lt; sheetData.length; index++) {
+            const row &#x3D; this.importGroupQuestionService.convertRow(sheetData[index]);
+            const errors: FileValidationError[] &#x3D; [];
+
+            if (row.question !&#x3D;&#x3D; previousRow?.question) {
+                questionIndex +&#x3D; 1;
+            }
+
+            this.validateQuestionIndex(row, questionIndex, errors);
+            indexColumn &#x3D; this.validateQuestion(row, errors, indexColumn);
+            this.validateConditionalQuestion(row, errors);
+            this.validateResponseType(row, errors, canAdminCompletesProfile);
+            // this.validateResponseOption(row, errors, dataValidationFgtFile, index + 2);
+            this.validateGoTo(row, errors, uniq(mappedIndex));
+            previousRow &#x3D; row;
+
+            if (trimValue(row.indicator)) {
+                await this.validateIndicatorAndSubIndicator(row, errors);
+            }
+            if (trimValue(row.riskLevel)) {
+                this.validateRiskLevel(row, errors);
+            }
+            if (errors.length) {
+                validationErrors.push({
+                    index: index + 2,
+                    errors,
+                    isShowRow: true,
+                    sheet: sheet.sheetName
+                });
+            } else {
+                numberValid++;
+            }
+        }
+        return { validatedItemCount: numberValid, validationErrors };
+    }
+
+    private validateQuestionIndex(row: RowDataType, questionIndex: number, errors: FileValidationError[]): void {
+        if (row.index !&#x3D; questionIndex) {
+            errors.push({
+                key: &#x27;Question&#x27;,
+                error: trans(&#x27;validation.duplicate_index_numbers_detected&#x27;, { args: { attributeName: &#x27;Question&#x27; } }),
+                currentValue: row.question,
+                isBlankRow: isEmpty(row.question)
+            });
+        }
+    }
+
+    private validateQuestion(row: RowDataType, errors: FileValidationError[], indexColumn: number): number {
+        if (isEmpty(row.question) &amp;&amp; indexColumn !&#x3D;&#x3D; row.index) {
+            errors.push({
+                key: &#x27;Question&#x27;,
+                error: trans(&#x27;validation.product_attribute_is_required&#x27;, { args: { attributeName: &#x27;Question&#x27; } }),
+                currentValue: row.question,
+                isBlankRow: isEmpty(row.question)
+            });
+        }
+        return row.index;
+    }
+
+    private validateResponseOption(
+        row: RowDataType,
+        errors: FileValidationError[],
+        dataValidationFgtFile: DataValidationFgtFile,
+        rowIndex: number
+    ): void {
+        if (!isEmpty(dataValidationFgtFile) &amp;&amp; dataValidationFgtFile[&#x60;${rowIndex}&#x60;] !&#x3D;&#x3D; row.responseOptions) {
+            {
+                errors.push({
+                    key: RESPONSE_OPTION,
+                    error: trans(&#x27;validation.response_is_invalid&#x27;, {
+                        args: { attributeName: &#x27;Response Option&#x27; }
+                    }),
+                    currentValue: row.responseOptions,
+                    isBlankRow: isEmpty(row.responseOptions)
+                });
+            }
+        }
+
+        if (
+            isEmpty(row.responseOptions) &amp;&amp;
+            ![INTEGER_RESPONSE_TYPE, FREE_TEXT_RESPONSE_TYPE].includes(row.responseType)
+        ) {
+            errors.push({
+                key: RESPONSE_OPTION,
+                error: trans(&#x27;validation.product_attribute_is_required&#x27;, {
+                    args: { attributeName: &#x27;Response Option&#x27; }
+                }),
+                currentValue: row.responseOptions,
+                isBlankRow: isEmpty(row.responseOptions)
+            });
+        }
+    }
+
+    private validateConditionalQuestion(row: RowDataType, errors: FileValidationError[]): void {
+        if (![&#x27;Y&#x27;, &#x27;N&#x27;].includes(row.conditionalQuestion)) {
+            errors.push({
+                key: &#x27;Conditional question&#x27;,
+                error: trans(&#x27;validation.conditional_question_must_be_y_or_n&#x27;),
+                currentValue: row.conditionalQuestion,
+                isBlankRow: isEmpty(row.conditionalQuestion)
+            });
+        }
+        if (row.conditionalQuestion &#x3D;&#x3D;&#x3D; &#x27;Y&#x27; &amp;&amp; isEmpty(row.goTo)) {
+            errors.push({
+                key: &#x27;Conditional question&#x27;,
+                error: trans(&#x27;validation.routing_missing_go_to&#x27;),
+                currentValue: row.conditionalQuestion,
+                isBlankRow: isEmpty(row.conditionalQuestion)
+            });
+        }
+    }
+
+    private validateResponseType(
+        row: RowDataType,
+        errors: FileValidationError[],
+        canAdminCompletesProfile: boolean
+    ): void {
+        if (canAdminCompletesProfile) {
+            return this.validateResponseTypeWithFMSaqFile(row, errors);
+        }
+
+        return this.validateResponseTypeWithSaqFile(row, errors);
+    }
+
+    private validateResponseTypeWithFMSaqFile(row: RowDataType, errors: FileValidationError[]) {
+        if (!FARM_MANAGEMENT_SAQ_RESPONSE_TYPES.includes(row.responseType)) {
+            errors.push({
+                key: &#x27;Response Type&#x27;,
+                error: trans(&#x27;validation.invalid_farm_management_saq_response_type&#x27;),
+                currentValue: row.responseType,
+                isBlankRow: isEmpty(row.responseType)
+            });
+        }
+    }
+
+    private validateResponseTypeWithSaqFile(row: RowDataType, errors: FileValidationError[]) {
+        if (!SAQ_RESPONSE_TYPES.includes(row.responseType)) {
+            errors.push({
+                key: &#x27;Response Type&#x27;,
+                error: trans(&#x27;validation.invalid_saq_response_type&#x27;),
+                currentValue: row.responseType,
+                isBlankRow: isEmpty(row.responseType)
+            });
+        }
+    }
+
+    private validateGoTo(row: RowDataType, errors: FileValidationError[], mappedIndex: number[]): void {
+        if (row.conditionalQuestion &#x3D;&#x3D;&#x3D; &#x27;Y&#x27; &amp;&amp; row.goTo &amp;&amp; row.goTo !&#x3D;&#x3D; &#x27;End&#x27;) {
+            if (isNaN(Number(row.goTo))) {
+                errors.push({
+                    key: &#x27;Go to&#x27;,
+                    error: trans(&#x27;validation.go_to_must_be_a_number_or_end&#x27;),
+                    currentValue: row.goTo,
+                    isBlankRow: isEmpty(row.goTo)
+                });
+            } else if (!mappedIndex.includes(Number(row.goTo))) {
+                errors.push({
+                    key: &#x27;Go to&#x27;,
+                    error: trans(&#x27;validation.incorrect_routing_go_to&#x27;),
+                    currentValue: row.goTo,
+                    isBlankRow: isEmpty(row.goTo)
+                });
+            }
+        }
+    }
+
+    private async validateIndicatorAndSubIndicator(row: RowDataType, errors: FileValidationError[]): Promise&lt;void&gt; {
+        const indicatorId &#x3D; await this.importGroupQuestionService.getIndicatorId(trimValue(row.indicator));
+        if (!indicatorId) {
+            errors.push({
+                key: &#x27;Indicator&#x27;,
+                error: trans(&#x27;validation.indicator_is_not_valid&#x27;),
+                currentValue: row.indicator,
+                isBlankRow: isEmpty(row.indicator)
+            });
+        }
+        if (trimValue(row.subIndicator)) {
+            const subIndicatorId &#x3D; await this.importGroupQuestionService.getSubIndicatorId(
+                indicatorId,
+                trimValue(row.subIndicator)
+            );
+            if (!subIndicatorId) {
+                errors.push({
+                    key: &#x27;Sub indicator&#x27;,
+                    error: trans(&#x27;validation.sub_indicator_is_not_valid&#x27;),
+                    currentValue: row.subIndicator,
+                    isBlankRow: isEmpty(row.subIndicator)
+                });
+            }
+        }
+    }
+
+    private validateRiskLevel(row: RowDataType, errors: FileValidationError[]): void {
+        const riskLevel &#x3D; this.importGroupQuestionService.getRiskLevel(row.riskLevel);
+        if (isNil(riskLevel)) {
+            errors.push({
+                key: &#x27;Risk category/weight&#x27;,
+                error: trans(&#x27;validation.risk_category_weight_is_not_valid&#x27;),
+                currentValue: row.riskLevel,
+                isBlankRow: isEmpty(row.riskLevel)
+            });
+        }
+    }
+
+    private getListDataValidation(dataValidation: DataValidation): string[] {
+        if (dataValidation?.type !&#x3D; &#x27;list&#x27; || !dataValidation?.formulae?.length) {
+            return [];
+        }
+
+        return dataValidation.formulae[0]
+            .slice(1, -1)
+            .split(/,\s?(?&#x3D;[A-Z])|(?&lt;&#x3D;\d%),/)
+            .map((value) &#x3D;&gt; value.trim().replace(/,$/, &#x27;&#x27;));
+    }
+
+    async getGroupDataValidationFgtFile(file: Express.Multer.File): Promise&lt;GroupDataValidationFgtFile&gt; {
+        const workbook &#x3D; new Workbook();
+        try {
+            await workbook.xlsx.load(file.buffer);
+        } catch (error) {
+            throw new BadRequestException({ translate: &#x27;error.file_has_the_wrong_format&#x27; });
+        }
+
+        const groupDataValidationFgtFile: GroupDataValidationFgtFile &#x3D; {};
+        const sheetNames &#x3D; [COMMUNITY_LEVEL_SHEET_NAME, FARM_LEVEL_SHEET_NAME];
+
+        for (const sheetName of sheetNames) {
+            const correspondingSheetNameSAQFile &#x3D; this.getCorrespondingSheetNameSAQFile(sheetName);
+            groupDataValidationFgtFile[correspondingSheetNameSAQFile] &#x3D; this.getDataValidationFgtFile(
+                workbook,
+                sheetName
+            );
+        }
+
+        return groupDataValidationFgtFile;
+    }
+
+    private getDataValidationFgtFile(workbook: Workbook, sheetName: string): DataValidationFgtFile {
+        const dataValidationFgtFile: DataValidationFgtFile &#x3D; {};
+        const startingSAQColumn &#x3D; this.getStartingSAQColumn(sheetName);
+        const allQuestions &#x3D; workbook.getWorksheet(sheetName).getRow(1).values as string[];
+        const questionsSimilarSAQFile &#x3D; allQuestions.slice(startingSAQColumn).map(trim);
+
+        let rowIndex &#x3D; 2;
+        for (const index in questionsSimilarSAQFile) {
+            const dataValidation &#x3D; workbook
+                .getWorksheet(sheetName)
+                .getRow(2)
+                .getCell(Number(index) + startingSAQColumn).dataValidation;
+
+            const listDataValidation &#x3D; this.getListDataValidation(dataValidation);
+
+            if (!listDataValidation.length) {
+                dataValidationFgtFile[rowIndex] &#x3D; null;
+                rowIndex++;
+                continue;
+            }
+
+            for (const value of listDataValidation) {
+                dataValidationFgtFile[rowIndex] &#x3D; value;
+                rowIndex++;
+            }
+        }
+
+        return dataValidationFgtFile;
+    }
+
+    private getCorrespondingSheetNameSAQFile(sheetName: string): string {
+        if (sheetName &#x3D;&#x3D;&#x3D; COMMUNITY_LEVEL_SHEET_NAME) {
+            return COMMUNITY_SHEET_NAME;
+        }
+
+        return LABOR_SHEET_NAME;
+    }
+
+    private getStartingSAQColumn(sheetName: string): number {
+        if (sheetName &#x3D;&#x3D;&#x3D; COMMUNITY_LEVEL_SHEET_NAME) {
+            return 1;
+        }
+
+        return FARM_LEVEL_RISK_ASSESSMENT_COLUMN_NAMES.length + 1;
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'ValidateImportSaqService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,1136 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Global Trace BE documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">Global Trace BE documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Injectables</li>
+  <li class="breadcrumb-item" >ProductTransformationValidatorService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/events/services/transformation/product-transformation-validator.service.ts</code>
+        </p>
+
+
+
+
+
+            <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#calculateTotalWeight" >calculateTotalWeight</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#checkOutputLessThanInput" >checkOutputLessThanInput</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#checkStockInHand" >checkStockInHand</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#checkStockInHandOldLogic" >checkStockInHandOldLogic</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getAttributeValue" >getAttributeValue</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#validateTransformations" >validateTransformations</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#validateTransformationsByDefault" >validateTransformationsByDefault</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(harvestSeasonService: <a href="../injectables/HarvestSeasonService.html" target="_self">HarvestSeasonService</a>, productActivityService: <a href="../injectables/ProductActivityService.html" target="_self">ProductActivityService</a>, attributeService: <a href="../injectables/AttributeService.html" target="_self">AttributeService</a>, supplyChainService: <a href="../injectables/SupplyChainService.html" target="_self">SupplyChainService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/events/services/transformation/product-transformation-validator.service.ts:17</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>harvestSeasonService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/HarvestSeasonService.html" target="_self" >HarvestSeasonService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>productActivityService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ProductActivityService.html" target="_self" >ProductActivityService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>attributeService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AttributeService.html" target="_self" >AttributeService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>supplyChainService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SupplyChainService.html" target="_self" >SupplyChainService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="calculateTotalWeight"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>calculateTotalWeight</b></span>
+                        <a href="#calculateTotalWeight"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>calculateTotalWeight(products: literal type[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="135"
+                                    class="link-to-prism">src/events/services/transformation/product-transformation-validator.service.ts:135</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>products</td>
+                                            <td>
+                                                        <code>literal type[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="checkOutputLessThanInput"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>checkOutputLessThanInput</b></span>
+                        <a href="#checkOutputLessThanInput"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>checkOutputLessThanInput(calculateField: <a href="../entitys/CalculateFieldEntity.html" target="_self">CalculateFieldEntity</a>, inputProducts: <a href="../entitys/ProductEntity.html" target="_self">ProductEntity[]</a>, outputProducts: <a href="../entitys/ProductEntity.html" target="_self">ProductEntity[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="85"
+                                    class="link-to-prism">src/events/services/transformation/product-transformation-validator.service.ts:85</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>calculateField</td>
+                                            <td>
+                                                            <code><a href="../entitys/CalculateFieldEntity.html" target="_self" >CalculateFieldEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>inputProducts</td>
+                                            <td>
+                                                            <code><a href="../entitys/ProductEntity.html" target="_self" >ProductEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>outputProducts</td>
+                                            <td>
+                                                            <code><a href="../entitys/ProductEntity.html" target="_self" >ProductEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="checkStockInHand"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>checkStockInHand</b></span>
+                        <a href="#checkStockInHand"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>checkStockInHand(calculateField: <a href="../entitys/CalculateFieldEntity.html" target="_self">CalculateFieldEntity</a>, currentUser: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>, outputProducts: <a href="../entitys/ProductEntity.html" target="_self">ProductEntity[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="46"
+                                    class="link-to-prism">src/events/services/transformation/product-transformation-validator.service.ts:46</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>calculateField</td>
+                                            <td>
+                                                            <code><a href="../entitys/CalculateFieldEntity.html" target="_self" >CalculateFieldEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>currentUser</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>outputProducts</td>
+                                            <td>
+                                                            <code><a href="../entitys/ProductEntity.html" target="_self" >ProductEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="checkStockInHandOldLogic"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>checkStockInHandOldLogic</b></span>
+                        <a href="#checkStockInHandOldLogic"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>checkStockInHandOldLogic(currentUser: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>, outputProducts: <a href="../entitys/ProductEntity.html" target="_self">ProductEntity[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="142"
+                                    class="link-to-prism">src/events/services/transformation/product-transformation-validator.service.ts:142</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>currentUser</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>outputProducts</td>
+                                            <td>
+                                                            <code><a href="../entitys/ProductEntity.html" target="_self" >ProductEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAttributeValue"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>getAttributeValue</b></span>
+                        <a href="#getAttributeValue"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getAttributeValue(attributeMap: <a href="../entitys/AttributeEntity.html" target="_self">Record&lt;string | AttributeEntity&gt;</a>, attribute: literal type)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="122"
+                                    class="link-to-prism">src/events/services/transformation/product-transformation-validator.service.ts:122</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>attributeMap</td>
+                                            <td>
+                                                            <code><a href="../entitys/AttributeEntity.html" target="_self" >Record&lt;string | AttributeEntity&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>attribute</td>
+                                            <td>
+                                                        <code>literal type</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateTransformations"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>validateTransformations</b></span>
+                        <a href="#validateTransformations"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateTransformations(user: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>, outputProducts: <a href="../entitys/ProductEntity.html" target="_self">ProductEntity[]</a>, inputProducts?: <a href="../entitys/ProductEntity.html" target="_self">ProductEntity[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="25"
+                                    class="link-to-prism">src/events/services/transformation/product-transformation-validator.service.ts:25</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>user</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>outputProducts</td>
+                                            <td>
+                                                            <code><a href="../entitys/ProductEntity.html" target="_self" >ProductEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>inputProducts</td>
+                                            <td>
+                                                            <code><a href="../entitys/ProductEntity.html" target="_self" >ProductEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    Yes
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateTransformationsByDefault"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>validateTransformationsByDefault</b></span>
+                        <a href="#validateTransformationsByDefault"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateTransformationsByDefault(user: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>, outputProducts: <a href="../entitys/ProductEntity.html" target="_self">ProductEntity[]</a>, inputProducts?: <a href="../entitys/ProductEntity.html" target="_self">ProductEntity[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="69"
+                                    class="link-to-prism">src/events/services/transformation/product-transformation-validator.service.ts:69</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>user</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>outputProducts</td>
+                                            <td>
+                                                            <code><a href="../entitys/ProductEntity.html" target="_self" >ProductEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>inputProducts</td>
+                                            <td>
+                                                            <code><a href="../entitys/ProductEntity.html" target="_self" >ProductEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    Yes
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { BadRequestException, Injectable } from &#x27;@nestjs/common&#x27;;
+import { ProductEntity } from &#x27;~products/entities/product.entity&#x27;;
+import { UserEntity } from &#x27;~users/entities/user.entity&#x27;;
+import { ProductActivityService } from &#x27;../product-activity.service&#x27;;
+import { HarvestSeasonService } from &#x27;~role-permissions/services/harvest-season.service&#x27;;
+import { TimeRangeType } from &#x27;~events/types/time-range.type&#x27;;
+import { convertToKg } from &#x27;~events/helpers/convert-to-kg.helper&#x27;;
+import { AttributeService } from &#x27;~product-definitions/services/attribute.service&#x27;;
+import { concat, keyBy, sumBy, isEmpty } from &#x27;lodash&#x27;;
+import { AttributeEntity } from &#x27;~product-definitions/entities/attribute.entity&#x27;;
+import { FieldTypeEnum } from &#x27;~product-definitions/enums/field-type.enum&#x27;;
+import { CalculateFieldEntity } from &#x27;~calculate-field/entities/calculate-field.entity&#x27;;
+import { FieldCategoryEnum } from &#x27;~product-definitions/enums/field-category.enum&#x27;;
+import { SupplyChainService } from &#x27;~supply-chains/services/supply-chain.service&#x27;;
+
+@Injectable()
+export class ProductTransformationValidatorService {
+    constructor(
+        private harvestSeasonService: HarvestSeasonService,
+        private productActivityService: ProductActivityService,
+        private attributeService: AttributeService,
+        private supplyChainService: SupplyChainService
+    ) {}
+
+    async validateTransformations(user: UserEntity, outputProducts: ProductEntity[], inputProducts?: ProductEntity[]) {
+        const roleId &#x3D; user.currentFacility.typeId;
+        const metadata &#x3D; await this.supplyChainService.findSupplyChainMetadata(roleId);
+        await metadata.loadRelation(&#x27;calculateFields&#x27;);
+        const productDefinitionId &#x3D; outputProducts[0].productDefinitionId;
+
+        const calculateField &#x3D; metadata.calculateFields.find(
+            (calculateField) &#x3D;&gt; calculateField.outputProductDefinitionId &#x3D;&#x3D;&#x3D; productDefinitionId
+        );
+
+        if (!calculateField || isEmpty(calculateField.expressionItems)) {
+            await this.validateTransformationsByDefault(user, outputProducts, inputProducts);
+        } else {
+            if (!isEmpty(inputProducts)) {
+                await this.checkOutputLessThanInput(calculateField, inputProducts, outputProducts);
+            } else {
+                await this.checkStockInHand(calculateField, user, outputProducts);
+            }
+        }
+    }
+
+    async checkStockInHand(
+        calculateField: CalculateFieldEntity,
+        currentUser: UserEntity,
+        outputProducts: ProductEntity[]
+    ) {
+        const currentFacility &#x3D; currentUser.currentFacility;
+        const timeRange &#x3D; await this.harvestSeasonService.getCurrentReconciliationWindow(
+            currentUser.currentFacility,
+            currentUser.role
+        );
+
+        const [inputProducts, currentOutputProducts] &#x3D; await this.productActivityService.getProductsByRange(
+            currentFacility.id,
+            timeRange
+        );
+
+        await this.checkOutputLessThanInput(
+            calculateField,
+            inputProducts,
+            concat(currentOutputProducts, outputProducts)
+        );
+    }
+
+    private async validateTransformationsByDefault(
+        user: UserEntity,
+        outputProducts: ProductEntity[],
+        inputProducts?: ProductEntity[]
+    ): Promise&lt;void&gt; {
+        if (!isEmpty(inputProducts)) {
+            const inputTotalWeight &#x3D; this.calculateTotalWeight(inputProducts);
+            const outputTotalWeight &#x3D; this.calculateTotalWeight(outputProducts);
+            if (outputTotalWeight &gt; inputTotalWeight) {
+                throw new BadRequestException({ translate: &#x27;error.assign_product_id_output_product_list&#x27; });
+            }
+        } else {
+            await this.checkStockInHandOldLogic(user, outputProducts);
+        }
+    }
+
+    private async checkOutputLessThanInput(
+        calculateField: CalculateFieldEntity,
+        inputProducts: ProductEntity[],
+        outputProducts: ProductEntity[]
+    ): Promise&lt;void&gt; {
+        const attributeIds &#x3D; concat(inputProducts, outputProducts).flatMap((product) &#x3D;&gt;
+            product.additionalAttributes.map((attribute) &#x3D;&gt; attribute.attributeId)
+        );
+        const attributes &#x3D; await this.attributeService.findByIds(attributeIds);
+        const attributeMap &#x3D; keyBy(attributes, (attribute) &#x3D;&gt; attribute.id);
+
+        const inputVariables &#x3D; inputProducts.reduce((variables, product) &#x3D;&gt; {
+            for (const attribute of product.additionalAttributes) {
+                const key &#x3D; &#x60;${product.productDefinitionId}-${attribute.attributeId}&#x60;;
+                variables[key] &#x3D; this.getAttributeValue(attributeMap, attribute);
+            }
+            return variables;
+        }, {});
+
+        const inputTotalWeight &#x3D; calculateField.evaluate(inputVariables);
+
+        const outputTotalWeight &#x3D; sumBy(outputProducts, (product) &#x3D;&gt; {
+            const outputAttribute &#x3D; product.additionalAttributes.find(
+                ({ attributeId }) &#x3D;&gt; attributeId &#x3D;&#x3D;&#x3D; calculateField.outputAttributeId
+            );
+            if (outputAttribute) {
+                return this.getAttributeValue(attributeMap, outputAttribute);
+            } else {
+                return convertToKg(product.quantity, product.quantityUnit);
+            }
+        });
+
+        if (outputTotalWeight &gt; inputTotalWeight) {
+            throw new BadRequestException({ translate: &#x27;error.assign_product_id_output_product_list&#x27; });
+        }
+    }
+
+    private getAttributeValue(
+        attributeMap: Record&lt;string, AttributeEntity&gt;,
+        attribute: { attributeId: string; value: any; quantityUnit?: string }
+    ): number {
+        if (attributeMap[attribute.attributeId].type &#x3D;&#x3D;&#x3D; FieldTypeEnum.PRODUCT_QUANTITY) {
+            return convertToKg(attribute.value, attribute.quantityUnit);
+        } else if (attributeMap[attribute.attributeId].category &#x3D;&#x3D; FieldCategoryEnum.PERCENTAGE) {
+            return attribute.value * 0.01;
+        } else {
+            return attribute.value;
+        }
+    }
+
+    private calculateTotalWeight(products: { quantity: number; quantityUnit?: string }[]) {
+        return products.reduce&lt;number&gt;(
+            (previousValue, item) &#x3D;&gt; previousValue + convertToKg(item.quantity, item.quantityUnit),
+            0
+        );
+    }
+
+    async checkStockInHandOldLogic(currentUser: UserEntity, outputProducts: ProductEntity[]) {
+        const timeRange: TimeRangeType&lt;Date&gt; &#x3D; await this.harvestSeasonService.getCurrentReconciliationWindow(
+            currentUser.currentFacility,
+            currentUser.role
+        );
+
+        const totalPurchases &#x3D; await this.productActivityService.getTotalPurchases(
+            currentUser.currentFacility,
+            timeRange
+        );
+        const totalByProducts &#x3D; await this.productActivityService.getTotalByProducts(
+            currentUser.currentFacility,
+            timeRange
+        );
+        const totalOutputs &#x3D; await this.productActivityService.getTotalOutputs(currentUser.currentFacility, timeRange);
+        const totalLoggingOutputs &#x3D; outputProducts.reduce&lt;number&gt;((previousValue, product) &#x3D;&gt; {
+            return previousValue + convertToKg(product.quantity, product.quantityUnit);
+        }, 0);
+
+        if (totalPurchases &lt; totalOutputs + totalByProducts + totalLoggingOutputs) {
+            throw new BadRequestException({
+                translate: &#x27;validation.insufficient_stock_in_hand_please_register_all_purchases&#x27;
+            });
+        }
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'ProductTransformationValidatorService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

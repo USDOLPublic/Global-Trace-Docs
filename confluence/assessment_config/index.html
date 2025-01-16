@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>5. Assessment configuration - Global Trace</title>
+<meta name="generator" content="Hugo 0.125.1">
+<link href="./index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="https://globaltrace-docs.uat.dgnx.io/confluence/assessment_config/">
+<link rel="stylesheet" href="https://globaltrace-docs.uat.dgnx.io/confluence/css/theme.min.css">
+<link rel="stylesheet" href="https://globaltrace-docs.uat.dgnx.io/confluence/css/chroma.min.css">
+<script defer src="./js/fontawesome6/all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js" integrity="sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha256-4XodgW4TwIJuDtf+v6vDJ39FVxI0veC/kSCCmnFp7ck=" crossorigin="anonymous"></script>
+<script src="https://globaltrace-docs.uat.dgnx.io/confluence/js/bundle.js"></script><style>
+:root {--custom-background-color: grey;}
+</style>
+<meta property="og:url" content="https://globaltrace-docs.uat.dgnx.io/confluence/assessment_config/">
+  <meta property="og:site_name" content="Global Trace">
+  <meta property="og:title" content="5. Assessment configuration">
+  <meta property="og:description" content="During Role Definition, the super administrator configures if a role will require completion of an assessment or self assessment questionnaire when the user is onboarded. Each role that was provided permission to undertake an assessment will appear in the table.
+In this step we use an offline excel document to define an assessment for each role. Templates can be downloaded using the “Manage attachments” button in the table.
+Assessment Definition Template After downloading the template you will see an excel document with two tabs: Labor and Product.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="website">
+    <meta property="og:image" content="https://globaltrace-docs.uat.dgnx.io/confluence/images/icon.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://globaltrace-docs.uat.dgnx.io/confluence/images/icon.png"><meta name="twitter:title" content="5. Assessment configuration">
+<meta name="twitter:description" content="">
+
+  <meta itemprop="name" content="5. Assessment configuration">
+  <meta itemprop="description" content="During Role Definition, the super administrator configures if a role will require completion of an assessment or self assessment questionnaire when the user is onboarded. Each role that was provided permission to undertake an assessment will appear in the table.
+In this step we use an offline excel document to define an assessment for each role. Templates can be downloaded using the “Manage attachments” button in the table.
+Assessment Definition Template After downloading the template you will see an excel document with two tabs: Labor and Product.">
+  <meta itemprop="datePublished" content="2024-04-20T15:42:58+09:30">
+  <meta itemprop="dateModified" content="2024-04-20T15:42:58+09:30">
+  <meta itemprop="wordCount" content="355">
+  <meta itemprop="image" content="https://globaltrace-docs.uat.dgnx.io/confluence/images/icon.png"></head>
+<body>
+
+<div class="container"><header>
+<h1>Global Trace</h1>
+</header>
+
+
+<div class="content-container">
+<main><h1>5. Assessment configuration</h1><p>During Role Definition, the super administrator configures if a role will require completion of an assessment or self assessment questionnaire when the user is onboarded. Each role that was provided permission to undertake an assessment will appear in the table.</p>
+<p><img src="https://globaltrace-docs.uat.dgnx.io/confluence/images/saq_list.png" alt="targets"></p>
+<p>In this step we use an offline excel document to define an assessment  for each role. Templates can be downloaded using the “Manage attachments” button in the table.</p>
+<p>Assessment Definition Template
+After downloading the template you will see an excel document with two tabs: Labor and Product.  All questions provided in the labor tab will appear under the heading “Labor” during the SAQ flow (in user onboarding), and all questions provided in the product tab will appear under the heading “Product”.</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Title</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>Index</td>
+<td>Question number</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Question</td>
+<td></td>
+</tr>
+<tr>
+<td>C</td>
+<td>Method of collecting data</td>
+<td>How do we collect data? Platform or In-person</td>
+</tr>
+<tr>
+<td>D</td>
+<td>Conditional question</td>
+<td>Either ‘Y’ or ‘N,’ If ‘Y,’ then we must mention question number in Go to (Column H) for routing</td>
+</tr>
+<tr>
+<td>E</td>
+<td>Response Type</td>
+<td>Single select, Multi select, Boolean, Integer</td>
+</tr>
+<tr>
+<td>F</td>
+<td>Response options</td>
+<td>Responses to choose</td>
+</tr>
+<tr>
+<td>G</td>
+<td>Option Type</td>
+<td>Input as “Other” if we need to get input from user</td>
+</tr>
+<tr>
+<td>H</td>
+<td>Go to</td>
+<td>Determines routing based on responses to the question</td>
+</tr>
+<tr>
+<td>I</td>
+<td>Risk category (Optional)</td>
+<td>Low/Medium/High</td>
+</tr>
+<tr>
+<td>J</td>
+<td>Indicator (Optional)</td>
+<td>From the Indicator List</td>
+</tr>
+<tr>
+<td>K</td>
+<td>Sub-indicator (Optional)</td>
+<td>From the Indicator List</td>
+</tr>
+</tbody>
+</table>
+<p>Columns I, J, and K are used to signal that a question should contribute to the overall risk for the supplier and are optional. Note that if a risk, indicator or sub-indicator is provided, then the expectation is that all three items will be completed.</p>
+<p>Once an SAQ has been successfully uploaded, an Upload SAQ translation link is enabled on the super administrator flow.</p>
+<h2 id="facility-group-templates">Facility Group Templates</h2>
+<p>For each role that is configured for the administrator to upload the assessment, an additional template is required on top of the excel described above.  The assessment definition template is used to describe the questions that will be asked. The facility group template is a formatted template that is used to collect data from users, and then is uploaded by the administrator after completion.</p>
+<div class="edit-meta">
+Last updated on 20 Apr 2024
+
+
+<br>
+Published on 20 Apr 2024
+<br></div><nav class="pagination"><a class="nav nav-prev" href="https://globaltrace-docs.uat.dgnx.io/confluence/indicator_list/" title="4. List of Indicators"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - 4. List of Indicators</a>
+<a class="nav nav-next" href="https://globaltrace-docs.uat.dgnx.io/confluence/risk_assessment/" title="6. Risk assessment">Next - 6. Risk assessment <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main>
+<div class="sidebar">
+
+<nav class="open-menu">
+<ul>
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/">Home</a></li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/define_product/">1. Product definition</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/define_role/">2. Role definition</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/map_chain/">3. Mapping the supply chain</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/indicator_list/">4. List of Indicators</a>
+  
+</li>
+
+<li class=" active"><a href="https://globaltrace-docs.uat.dgnx.io/confluence/assessment_config/">5. Assessment configuration</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/risk_assessment/">6. Risk assessment</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/external_risk/">Appendix A. External risk</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/translations/">Appendix B. Translations</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/tracing/">Appendix C. Product tracing</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/purchase_sale/">Appendix D. Purchases and sales</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/open_supply/">Appendix E. Open Supply ID</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/resources/">Appendx F. Resources</a>
+  
+<ul class="sub-menu">
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/resources/cobalt/">Cobalt Pilot Configuration</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/resources/cotton/">Cotton Pilot Configuration</a>
+  
+</li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>

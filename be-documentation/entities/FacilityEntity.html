@@ -1,0 +1,2392 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Global Trace BE documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">Global Trace BE documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content entity">
+                   <div class="content-data">
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Entities</li>
+  <li class="breadcrumb-item" >FacilityEntity</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/facilities/entities/facility.entity.ts</code>
+        </p>
+
+
+
+
+            <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#addedPartnerAt" >addedPartnerAt</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#additionalInformation" >additionalInformation</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#additionalRole" >additionalRole</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#address" >address</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#answeredSaqAt" >answeredSaqAt</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#businessRegisterNumber" >businessRegisterNumber</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#certification" >certification</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#certificationExpiredDate" >certificationExpiredDate</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#chainOfCustody" >chainOfCustody</a>
+                            </li>
+                            <li>
+                                <a href="#complianceHistory" >complianceHistory</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#country" >country</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#countryId" >countryId</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#deletedAt" >deletedAt</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#district" >district</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#districtId" >districtId</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#dna" >dna</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#dnaTesting" >dnaTesting</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#externalRiskIndicators" >externalRiskIndicators</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                <a href="#facilityGroupFile" >facilityGroupFile</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                <a href="#facilityGroupFileId" >facilityGroupFileId</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#facilityPartners" >facilityPartners</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                <a href="#farmGroup" >farmGroup</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                <a href="#farmGroupId" >farmGroupId</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#farmId" >farmId</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#farms" >farms</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#goods" >goods</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#grievanceReports" >grievanceReports</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Optional</span>
+                                <a href="#identifierSystem" >identifierSystem</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                <a href="#logo" >logo</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#name" >name</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#oarId" >oarId</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#orders" >orders</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                <a href="#overallRiskLevel" >overallRiskLevel</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#overallRiskScore" >overallRiskScore</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#partnerFacilities" >partnerFacilities</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#province" >province</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#provinceId" >provinceId</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#reconciliationDuration" >reconciliationDuration</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#reconciliationStartAt" >reconciliationStartAt</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#riskData" >riskData</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#riskLevel" >riskLevel</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#selfAssessment" >selfAssessment</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#supplierPartnerFacilities" >supplierPartnerFacilities</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#topIssues" >topIssues</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#traderName" >traderName</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                <a href="#type" >type</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                <a href="#typeId" >typeId</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                <a href="#users" >users</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addedPartnerAt"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>addedPartnerAt</b></span>
+                        <a href="#addedPartnerAt"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>number | Date</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Column({type: &#x27;timestamp&#x27;, nullable: true, transformer: undefined})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="205" class="link-to-prism">src/facilities/entities/facility.entity.ts:205</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="additionalInformation"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>additionalInformation</b></span>
+                        <a href="#additionalInformation"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#FacilityAdditionalInformationType" target="_self" >FacilityAdditionalInformationType</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Column({type: &#x27;jsonb&#x27;})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="132" class="link-to-prism">src/facilities/entities/facility.entity.ts:132</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="additionalRole"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>additionalRole</b></span>
+                        <a href="#additionalRole"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/enumerations.html#AdditionalRoleEnum" target="_self" >AdditionalRoleEnum</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Column({nullable: true})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="122" class="link-to-prism">src/facilities/entities/facility.entity.ts:122</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="address"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>address</b></span>
+                        <a href="#address"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Column({nullable: true})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/facilities/entities/facility.entity.ts:58</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="answeredSaqAt"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>answeredSaqAt</b></span>
+                        <a href="#answeredSaqAt"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>number | Date</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Column({type: &#x27;timestamp&#x27;, nullable: true, transformer: undefined})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="212" class="link-to-prism">src/facilities/entities/facility.entity.ts:212</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="businessRegisterNumber"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>businessRegisterNumber</b></span>
+                        <a href="#businessRegisterNumber"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Column({nullable: true})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="76" class="link-to-prism">src/facilities/entities/facility.entity.ts:76</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="certification"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>certification</b></span>
+                        <a href="#certification"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>CertificationEnum | FarmCertificationEnum</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Column({nullable: true})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="82" class="link-to-prism">src/facilities/entities/facility.entity.ts:82</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="certificationExpiredDate"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>certificationExpiredDate</b></span>
+                        <a href="#certificationExpiredDate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Date | number</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Column({type: &#x27;timestamp&#x27;, transformer: undefined, nullable: true})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="89" class="link-to-prism">src/facilities/entities/facility.entity.ts:89</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="chainOfCustody"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>chainOfCustody</b></span>
+                        <a href="#chainOfCustody"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/enumerations.html#ChainOfCustodyEnum" target="_self" >ChainOfCustodyEnum</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Column({nullable: true})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="79" class="link-to-prism">src/facilities/entities/facility.entity.ts:79</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="complianceHistory"></a>
+                    <span class="name">
+                        <span ><b>complianceHistory</b></span>
+                        <a href="#complianceHistory"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>ReportRiskType[]</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="195" class="link-to-prism">src/facilities/entities/facility.entity.ts:195</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="country"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>country</b></span>
+                        <a href="#country"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../entitys/CountryEntity.html" target="_self" >CountryEntity</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ManyToOne(undefined)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="180" class="link-to-prism">src/facilities/entities/facility.entity.ts:180</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="countryId"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>countryId</b></span>
+                        <a href="#countryId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Column({nullable: true})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">src/facilities/entities/facility.entity.ts:67</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deletedAt"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>deletedAt</b></span>
+                        <a href="#deletedAt"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" >Date</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @DeleteDateColumn({type: &#x27;timestamp&#x27;, transformer: undefined})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="105" class="link-to-prism">src/facilities/entities/facility.entity.ts:105</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="district"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>district</b></span>
+                        <a href="#district"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../entitys/DistrictEntity.html" target="_self" >DistrictEntity</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ManyToOne(undefined)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="186" class="link-to-prism">src/facilities/entities/facility.entity.ts:186</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="districtId"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>districtId</b></span>
+                        <a href="#districtId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Column({nullable: true})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/facilities/entities/facility.entity.ts:61</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="dna"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>dna</b></span>
+                        <a href="#dna"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Test.html" target="_self" >DnaTestingEntity[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @OneToMany(undefined, dnaTesting &#x3D;&gt; dnaTesting.productSupplier)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="163" class="link-to-prism">src/facilities/entities/facility.entity.ts:163</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="dnaTesting"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>dnaTesting</b></span>
+                        <a href="#dnaTesting"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Test.html" target="_self" >DnaTestingEntity[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @OneToMany(undefined, dnaTesting &#x3D;&gt; dnaTesting.requestFacility)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="160" class="link-to-prism">src/facilities/entities/facility.entity.ts:160</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="externalRiskIndicators"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>externalRiskIndicators</b></span>
+                        <a href="#externalRiskIndicators"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ExternalRiskIndicator" target="_self" >ExternalRiskIndicator[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Column({type: &#x27;jsonb&#x27;})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="138" class="link-to-prism">src/facilities/entities/facility.entity.ts:138</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="facilityGroupFile"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                        <span ><b>facilityGroupFile</b></span>
+                        <a href="#facilityGroupFile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../entitys/FileEntity.html" target="_self" >FileEntity</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @OneToOne(undefined)<br />@JoinColumn({name: &#x27;facilityGroupFileId&#x27;})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="193" class="link-to-prism">src/facilities/entities/facility.entity.ts:193</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="facilityGroupFileId"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                        <span ><b>facilityGroupFileId</b></span>
+                        <a href="#facilityGroupFileId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Column({nullable: true})<br />@Index()<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="126" class="link-to-prism">src/facilities/entities/facility.entity.ts:126</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="facilityPartners"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>facilityPartners</b></span>
+                        <a href="#facilityPartners"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../entitys/FacilityPartnerEntity.html" target="_self" >FacilityPartnerEntity[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @OneToMany(undefined, facilityPartner &#x3D;&gt; facilityPartner.facility)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="148" class="link-to-prism">src/facilities/entities/facility.entity.ts:148</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="farmGroup"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                        <span ><b>farmGroup</b></span>
+                        <a href="#farmGroup"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../entitys/FacilityEntity.html" target="_self" >FacilityEntity</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ManyToOne(undefined)<br />@JoinColumn({name: &#x27;farmGroupId&#x27;})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="167" class="link-to-prism">src/facilities/entities/facility.entity.ts:167</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="farmGroupId"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                        <span ><b>farmGroupId</b></span>
+                        <a href="#farmGroupId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Column({nullable: true})<br />@Index()<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/facilities/entities/facility.entity.ts:48</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="farmId"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>farmId</b></span>
+                        <a href="#farmId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Column({nullable: true})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="129" class="link-to-prism">src/facilities/entities/facility.entity.ts:129</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="farms"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>farms</b></span>
+                        <a href="#farms"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../entitys/FacilityEntity.html" target="_self" >FacilityEntity[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @OneToMany(undefined, farm &#x3D;&gt; farm.farmGroup)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="174" class="link-to-prism">src/facilities/entities/facility.entity.ts:174</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="goods"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>goods</b></span>
+                        <a href="#goods"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>string[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Column({nullable: true, type: &#x27;character varying&#x27;, array: true})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="189" class="link-to-prism">src/facilities/entities/facility.entity.ts:189</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="grievanceReports"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>grievanceReports</b></span>
+                        <a href="#grievanceReports"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../entitys/GrievanceReportEntity.html" target="_self" >GrievanceReportEntity[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @OneToMany(undefined, grievanceReport &#x3D;&gt; grievanceReport.facility)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="157" class="link-to-prism">src/facilities/entities/facility.entity.ts:157</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="identifierSystem"></a>
+                    <span class="name">
+                            <span class="modifier">Optional</span>
+                        <span ><b>identifierSystem</b></span>
+                        <a href="#identifierSystem"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#IdentifierSystem" target="_self" >IdentifierSystem</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="227" class="link-to-prism">src/facilities/entities/facility.entity.ts:227</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="logo"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                        <span ><b>logo</b></span>
+                        <a href="#logo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Column({nullable: true})<br />@TransformTo(convertToUrl)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="109" class="link-to-prism">src/facilities/entities/facility.entity.ts:109</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="name"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>name</b></span>
+                        <a href="#name"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Column({nullable: true})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/facilities/entities/facility.entity.ts:55</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="oarId"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>oarId</b></span>
+                        <a href="#oarId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Column({nullable: true})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="73" class="link-to-prism">src/facilities/entities/facility.entity.ts:73</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="orders"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>orders</b></span>
+                        <a href="#orders"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../entitys/OrderEntity.html" target="_self" >OrderEntity[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @OneToMany(undefined, orders &#x3D;&gt; orders.facility)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="141" class="link-to-prism">src/facilities/entities/facility.entity.ts:141</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="overallRiskLevel"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                        <span ><b>overallRiskLevel</b></span>
+                        <a href="#overallRiskLevel"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/enumerations.html#RiskScoreLevelEnum" target="_self" >RiskScoreLevelEnum</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Column({nullable: true})<br />@Index()<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="119" class="link-to-prism">src/facilities/entities/facility.entity.ts:119</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="overallRiskScore"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>overallRiskScore</b></span>
+                        <a href="#overallRiskScore"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Column({type: &#x27;decimal&#x27;, precision: 10, scale: 2, nullable: true, transformer: undefined})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="115" class="link-to-prism">src/facilities/entities/facility.entity.ts:115</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="partnerFacilities"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>partnerFacilities</b></span>
+                        <a href="#partnerFacilities"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../entitys/FacilityPartnerEntity.html" target="_self" >FacilityPartnerEntity[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @OneToMany(undefined, facilityPartner &#x3D;&gt; facilityPartner.partner)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="151" class="link-to-prism">src/facilities/entities/facility.entity.ts:151</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="province"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>province</b></span>
+                        <a href="#province"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../entitys/ProvinceEntity.html" target="_self" >ProvinceEntity</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ManyToOne(undefined)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="183" class="link-to-prism">src/facilities/entities/facility.entity.ts:183</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="provinceId"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>provinceId</b></span>
+                        <a href="#provinceId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Column({nullable: true})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">src/facilities/entities/facility.entity.ts:64</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="reconciliationDuration"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>reconciliationDuration</b></span>
+                        <a href="#reconciliationDuration"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Column({nullable: true})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="99" class="link-to-prism">src/facilities/entities/facility.entity.ts:99</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="reconciliationStartAt"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>reconciliationStartAt</b></span>
+                        <a href="#reconciliationStartAt"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Date | number</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Column({type: &#x27;timestamp&#x27;, transformer: undefined, nullable: true})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="96" class="link-to-prism">src/facilities/entities/facility.entity.ts:96</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="riskData"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>riskData</b></span>
+                        <a href="#riskData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#FacilityRiskType" target="_self" >FacilityRiskType</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Column({type: &#x27;jsonb&#x27;})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="198" class="link-to-prism">src/facilities/entities/facility.entity.ts:198</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="riskLevel"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>riskLevel</b></span>
+                        <a href="#riskLevel"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#RiskLevelType" target="_self" >RiskLevelType</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Column({type: &#x27;jsonb&#x27;, select: false})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="112" class="link-to-prism">src/facilities/entities/facility.entity.ts:112</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selfAssessment"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>selfAssessment</b></span>
+                        <a href="#selfAssessment"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../entitys/SelfAssessmentEntity.html" target="_self" >SelfAssessmentEntity</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @OneToOne(undefined, selfAssessment &#x3D;&gt; selfAssessment.forFacility)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="177" class="link-to-prism">src/facilities/entities/facility.entity.ts:177</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="supplierPartnerFacilities"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>supplierPartnerFacilities</b></span>
+                        <a href="#supplierPartnerFacilities"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../entitys/FacilityPartnerEntity.html" target="_self" >FacilityPartnerEntity[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @OneToMany(undefined, facilityPartner &#x3D;&gt; facilityPartner.ownerFacility)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="154" class="link-to-prism">src/facilities/entities/facility.entity.ts:154</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="topIssues"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>topIssues</b></span>
+                        <a href="#topIssues"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Issue" target="_self" >Issue[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Column({type: &#x27;jsonb&#x27;})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="135" class="link-to-prism">src/facilities/entities/facility.entity.ts:135</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="traderName"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>traderName</b></span>
+                        <a href="#traderName"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Column({nullable: true})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">src/facilities/entities/facility.entity.ts:70</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="type"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                        <span ><b>type</b></span>
+                        <a href="#type"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../entitys/RoleEntity.html" target="_self" >RoleEntity</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ManyToOne(undefined, role &#x3D;&gt; role.facilities)<br />@JoinColumn({name: &#x27;typeId&#x27;})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="171" class="link-to-prism">src/facilities/entities/facility.entity.ts:171</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="typeId"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                        <span ><b>typeId</b></span>
+                        <a href="#typeId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Column({nullable: true})<br />@Index()<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/facilities/entities/facility.entity.ts:52</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="users"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                        <span ><b>users</b></span>
+                        <a href="#users"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ManyToMany(undefined, user &#x3D;&gt; user.facilities)<br />@JoinTable({name: &#x27;FacilityUser&#x27;})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="145" class="link-to-prism">src/facilities/entities/facility.entity.ts:145</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+    Column,
+    DeleteDateColumn,
+    Entity,
+    Index,
+    JoinColumn,
+    JoinTable,
+    ManyToMany,
+    ManyToOne,
+    OneToMany,
+    OneToOne
+} from &#x27;typeorm&#x27;;
+import { BaseEntity } from &#x27;~core/entities/base.entity&#x27;;
+import { FloatTransformer } from &#x27;~core/transformers/float.transformer&#x27;;
+import { TimestampTransformer } from &#x27;~core/transformers/timestamp.transformer&#x27;;
+import { DnaTestingEntity } from &#x27;~dna-testing/entities/dna-testing.entity&#x27;;
+import { AdditionalRoleEnum } from &#x27;~facilities/enums/additional-role.enum&#x27;;
+import { CertificationEnum } from &#x27;~facilities/enums/certification.enum&#x27;;
+import { FarmCertificationEnum } from &#x27;~facilities/enums/farm-certification.enum&#x27;;
+import { FacilityAdditionalInformationType } from &#x27;~facilities/types/facility-additional-information.type&#x27;;
+import { FileEntity } from &#x27;~files/entities/file.entity&#x27;;
+import { GrievanceReportEntity } from &#x27;~grievance-report/entities/grievance-report.entity&#x27;;
+import { ReportRiskType } from &#x27;~grievance-report/types/report-risk.type&#x27;;
+import { CountryEntity } from &#x27;~locations/entities/country.entity&#x27;;
+import { DistrictEntity } from &#x27;~locations/entities/district.entity&#x27;;
+import { ProvinceEntity } from &#x27;~locations/entities/province.entity&#x27;;
+import { OrderEntity } from &#x27;~order/entities/order.entity&#x27;;
+import { RoleEntity } from &#x27;~role-permissions/entities/role.entity&#x27;;
+import { ChainOfCustodyEnum } from &#x27;~role-permissions/enums/chain-of-custody.enum&#x27;;
+import { SelfAssessmentEntity } from &#x27;~self-assessments/entities/self-assessment.entity&#x27;;
+import { RiskScoreLevelEnum } from &#x27;~self-assessments/enums/risk-score-level.enum&#x27;;
+import { RiskLevelType } from &#x27;~self-assessments/types/risk-level.type&#x27;;
+import { UserEntity } from &#x27;~users/entities/user.entity&#x27;;
+import { FacilityPartnerEntity } from &#x27;./facility-partner.entity&#x27;;
+import { FacilityRiskType } from &#x27;~risk-assessments/types/facility-risk.type&#x27;;
+import { Issue } from &#x27;~risk-assessments/types/issue.type&#x27;;
+import { ExternalRiskIndicator } from &#x27;~risk-assessments/types/external-risk-indicator.type&#x27;;
+import { first, orderBy } from &#x27;lodash&#x27;;
+import { UserTypeEnum } from &#x27;~users/enums/user-type.enum&#x27;;
+import { convertToUrl } from &#x27;~core/helpers/file.helper&#x27;;
+import { TransformTo } from &#x27;@diginexhk/typeorm-helper&#x27;;
+import { IdentifierSystem } from &#x27;~facilities/types/identifier-system.type&#x27;;
+
+@Entity(&#x27;Facility&#x27;)
+export class FacilityEntity extends BaseEntity {
+    @Column({ nullable: true })
+    @Index()
+    farmGroupId: string;
+
+    @Column({ nullable: true })
+    @Index()
+    typeId: string;
+
+    @Column({ nullable: true })
+    name: string;
+
+    @Column({ nullable: true })
+    address: string;
+
+    @Column({ nullable: true })
+    districtId: string;
+
+    @Column({ nullable: true })
+    provinceId: string;
+
+    @Column({ nullable: true })
+    countryId: string;
+
+    @Column({ nullable: true })
+    traderName: string;
+
+    @Column({ nullable: true })
+    oarId: string;
+
+    @Column({ nullable: true })
+    businessRegisterNumber: string;
+
+    @Column({ nullable: true })
+    chainOfCustody: ChainOfCustodyEnum;
+
+    @Column({ nullable: true })
+    certification: CertificationEnum | FarmCertificationEnum;
+
+    @Column({
+        type: &#x27;timestamp&#x27;,
+        transformer: new TimestampTransformer(),
+        nullable: true
+    })
+    certificationExpiredDate: Date | number;
+
+    @Column({
+        type: &#x27;timestamp&#x27;,
+        transformer: new TimestampTransformer(),
+        nullable: true
+    })
+    reconciliationStartAt: Date | number;
+
+    @Column({ nullable: true })
+    reconciliationDuration: string;
+
+    @DeleteDateColumn({
+        type: &#x27;timestamp&#x27;,
+        transformer: new TimestampTransformer()
+    })
+    deletedAt: Date;
+
+    @Column({ nullable: true })
+    @TransformTo(convertToUrl)
+    logo: string;
+
+    @Column({ type: &#x27;jsonb&#x27;, select: false })
+    riskLevel: RiskLevelType;
+
+    @Column({ type: &#x27;decimal&#x27;, precision: 10, scale: 2, nullable: true, transformer: new FloatTransformer() })
+    overallRiskScore: number;
+
+    @Column({ nullable: true })
+    @Index()
+    overallRiskLevel: RiskScoreLevelEnum;
+
+    @Column({ nullable: true })
+    additionalRole: AdditionalRoleEnum;
+
+    @Column({ nullable: true })
+    @Index()
+    facilityGroupFileId: string;
+
+    @Column({ nullable: true })
+    farmId: string;
+
+    @Column({ type: &#x27;jsonb&#x27; })
+    additionalInformation: FacilityAdditionalInformationType;
+
+    @Column({ type: &#x27;jsonb&#x27; })
+    topIssues: Issue[];
+
+    @Column({ type: &#x27;jsonb&#x27; })
+    externalRiskIndicators: ExternalRiskIndicator[];
+
+    @OneToMany(() &#x3D;&gt; OrderEntity, (orders) &#x3D;&gt; orders.facility)
+    orders: OrderEntity[];
+
+    @ManyToMany(() &#x3D;&gt; UserEntity, (user) &#x3D;&gt; user.facilities)
+    @JoinTable({ name: &#x27;FacilityUser&#x27; })
+    users: UserEntity[];
+
+    @OneToMany(() &#x3D;&gt; FacilityPartnerEntity, (facilityPartner) &#x3D;&gt; facilityPartner.facility)
+    facilityPartners: FacilityPartnerEntity[];
+
+    @OneToMany(() &#x3D;&gt; FacilityPartnerEntity, (facilityPartner) &#x3D;&gt; facilityPartner.partner)
+    partnerFacilities: FacilityPartnerEntity[];
+
+    @OneToMany(() &#x3D;&gt; FacilityPartnerEntity, (facilityPartner) &#x3D;&gt; facilityPartner.ownerFacility)
+    supplierPartnerFacilities: FacilityPartnerEntity[];
+
+    @OneToMany(() &#x3D;&gt; GrievanceReportEntity, (grievanceReport) &#x3D;&gt; grievanceReport.facility)
+    grievanceReports: GrievanceReportEntity[];
+
+    @OneToMany(() &#x3D;&gt; DnaTestingEntity, (dnaTesting) &#x3D;&gt; dnaTesting.requestFacility)
+    dnaTesting: DnaTestingEntity[];
+
+    @OneToMany(() &#x3D;&gt; DnaTestingEntity, (dnaTesting) &#x3D;&gt; dnaTesting.productSupplier)
+    dna: DnaTestingEntity[];
+
+    @ManyToOne(() &#x3D;&gt; FacilityEntity)
+    @JoinColumn({ name: &#x27;farmGroupId&#x27; })
+    farmGroup: FacilityEntity;
+
+    @ManyToOne(() &#x3D;&gt; RoleEntity, (role) &#x3D;&gt; role.facilities)
+    @JoinColumn({ name: &#x27;typeId&#x27; })
+    type: RoleEntity;
+
+    @OneToMany(() &#x3D;&gt; FacilityEntity, (farm) &#x3D;&gt; farm.farmGroup)
+    farms: FacilityEntity[];
+
+    @OneToOne(() &#x3D;&gt; SelfAssessmentEntity, (selfAssessment) &#x3D;&gt; selfAssessment.forFacility)
+    selfAssessment: SelfAssessmentEntity;
+
+    @ManyToOne(() &#x3D;&gt; CountryEntity)
+    country: CountryEntity;
+
+    @ManyToOne(() &#x3D;&gt; ProvinceEntity)
+    province: ProvinceEntity;
+
+    @ManyToOne(() &#x3D;&gt; DistrictEntity)
+    district: DistrictEntity;
+
+    @Column({ nullable: true, type: &#x27;character varying&#x27;, array: true })
+    goods: string[];
+
+    @OneToOne(() &#x3D;&gt; FileEntity)
+    @JoinColumn({ name: &#x27;facilityGroupFileId&#x27; })
+    facilityGroupFile: FileEntity;
+
+    complianceHistory: ReportRiskType[];
+
+    @Column({ type: &#x27;jsonb&#x27; })
+    riskData: FacilityRiskType;
+
+    @Column({
+        type: &#x27;timestamp&#x27;,
+        nullable: true,
+        transformer: new TimestampTransformer()
+    })
+    addedPartnerAt: number | Date;
+
+    @Column({
+        type: &#x27;timestamp&#x27;,
+        nullable: true,
+        transformer: new TimestampTransformer()
+    })
+    answeredSaqAt: number | Date;
+
+    get typeName() {
+        return this.type?.name;
+    }
+
+    get roleType() {
+        return this.type?.type;
+    }
+
+    get firstAdmin() {
+        const adminUsers &#x3D; this.users.filter(({ userType }) &#x3D;&gt; userType &#x3D;&#x3D;&#x3D; UserTypeEnum.ADMIN);
+        return first(orderBy(adminUsers, &#x27;createdAt&#x27;));
+    }
+
+    identifierSystem?: IdentifierSystem;
+}
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'entity';
+            var COMPODOC_CURRENT_PAGE_URL = 'FacilityEntity.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

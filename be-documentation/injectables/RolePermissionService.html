@@ -1,0 +1,2386 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Global Trace BE documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">Global Trace BE documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Injectables</li>
+  <li class="breadcrumb-item" >RolePermissionService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/role-permissions/services/role-permission.service.ts</code>
+        </p>
+
+
+
+
+
+            <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#assignPermissionsToRole" >assignPermissionsToRole</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#checkHasAnyPermissionsOrFail" >checkHasAnyPermissionsOrFail</a>
+                            </li>
+                            <li>
+                                <a href="#exists" >exists</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#existsRoleHasPermission" >existsRoleHasPermission</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#findOne" >findOne</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#findRoleIdsHasPermissionByAction" >findRoleIdsHasPermissionByAction</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#findRolesByPermission" >findRolesByPermission</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#hasAllPermissions" >hasAllPermissions</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#hasAnyPermissions" >hasAnyPermissions</a>
+                            </li>
+                            <li>
+                                <a href="#hasAnyRoles" >hasAnyRoles</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#hasDirectPermission" >hasDirectPermission</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#hasPermission" >hasPermission</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#hasPermissionViaRole" >hasPermissionViaRole</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#isSamePermission" >isSamePermission</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#loadPermissions" >loadPermissions</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#loadRoles" >loadRoles</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#sanitizeAssignedPermission" >sanitizeAssignedPermission</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#updateRoleHasPermission" >updateRoleHasPermission</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#validateAssignedPermissionType" >validateAssignedPermissionType</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#validateAssignedSubPermission" >validateAssignedSubPermission</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#validateSingleAssignedSubPermission" >validateSingleAssignedSubPermission</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#validateSubPermissionMarginOfError" >validateSubPermissionMarginOfError</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(roleRepo: <a href="../classes/RoleRepository.html" target="_self">RoleRepository</a>, permissionRepo: <a href="../classes/PermissionRepository.html" target="_self">PermissionRepository</a>, rolePermissionRepo: <a href="../classes/RoleHasPermissionRepository.html" target="_self">RoleHasPermissionRepository</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/role-permissions/services/role-permission.service.ts:19</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>roleRepo</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../classes/RoleRepository.html" target="_self" >RoleRepository</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>permissionRepo</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../classes/PermissionRepository.html" target="_self" >PermissionRepository</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>rolePermissionRepo</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../classes/RoleHasPermissionRepository.html" target="_self" >RoleHasPermissionRepository</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="assignPermissionsToRole"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>assignPermissionsToRole</b></span>
+                        <a href="#assignPermissionsToRole"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>assignPermissionsToRole(roleId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, assignedPermissionIds: string[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="105"
+                                    class="link-to-prism">src/role-permissions/services/role-permission.service.ts:105</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>roleId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>assignedPermissionIds</td>
+                                            <td>
+                                                        <code>string[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="checkHasAnyPermissionsOrFail"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>checkHasAnyPermissionsOrFail</b></span>
+                        <a href="#checkHasAnyPermissionsOrFail"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>checkHasAnyPermissionsOrFail(user: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>, permissions: <a href="../entitys/PermissionEntity.html" target="_self">string[] | PermissionEntity[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="41"
+                                    class="link-to-prism">src/role-permissions/services/role-permission.service.ts:41</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>user</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>permissions</td>
+                                            <td>
+                                                            <code><a href="../entitys/PermissionEntity.html" target="_self" >string[] | PermissionEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="exists"></a>
+                    <span class="name">
+                        <span ><b>exists</b></span>
+                        <a href="#exists"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>exists(conditions: FindManyOptions<RoleHasPermissionEntity>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="250"
+                                    class="link-to-prism">src/role-permissions/services/role-permission.service.ts:250</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>conditions</td>
+                                            <td>
+                                                        <code>FindManyOptions&lt;RoleHasPermissionEntity&gt;</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;boolean&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="existsRoleHasPermission"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>existsRoleHasPermission</b></span>
+                        <a href="#existsRoleHasPermission"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>existsRoleHasPermission(actions: <a href="../undefineds/PermissionEnum.html" target="_self">PermissionEnum[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="246"
+                                    class="link-to-prism">src/role-permissions/services/role-permission.service.ts:246</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>actions</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/enumerations.html#PermissionEnum" target="_self" >PermissionEnum[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;boolean&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findOne"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>findOne</b></span>
+                        <a href="#findOne"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>findOne(options: FindOneOptions<RoleHasPermissionEntity>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="242"
+                                    class="link-to-prism">src/role-permissions/services/role-permission.service.ts:242</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>options</td>
+                                            <td>
+                                                        <code>FindOneOptions&lt;RoleHasPermissionEntity&gt;</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#now" target="_self" >unknown</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findRoleIdsHasPermissionByAction"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>findRoleIdsHasPermissionByAction</b></span>
+                        <a href="#findRoleIdsHasPermissionByAction"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>findRoleIdsHasPermissionByAction(action: <a href="../undefineds/PermissionEnum.html" target="_self">PermissionEnum</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="237"
+                                    class="link-to-prism">src/role-permissions/services/role-permission.service.ts:237</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>action</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/enumerations.html#PermissionEnum" target="_self" >PermissionEnum</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;string[]&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findRolesByPermission"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>findRolesByPermission</b></span>
+                        <a href="#findRolesByPermission"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>findRolesByPermission(action: <a href="../undefineds/PermissionEnum.html" target="_self">PermissionEnum</a>, types: <a href="../undefineds/RoleTypeEnum.html" target="_self">RoleTypeEnum[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="254"
+                                    class="link-to-prism">src/role-permissions/services/role-permission.service.ts:254</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Default value</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>action</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/enumerations.html#PermissionEnum" target="_self" >PermissionEnum</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+                                            <td>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                                <td>types</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/enumerations.html#RoleTypeEnum" target="_self" >RoleTypeEnum[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+                                            <td>
+                                                    <code>[]</code>
+                                            </td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/RoleEntity.html" target="_self" >Promise&lt;RoleEntity[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hasAllPermissions"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>hasAllPermissions</b></span>
+                        <a href="#hasAllPermissions"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>hasAllPermissions(user: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>, permissions: <a href="../entitys/PermissionEntity.html" target="_self">string[] | PermissionEntity[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="57"
+                                    class="link-to-prism">src/role-permissions/services/role-permission.service.ts:57</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>user</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>permissions</td>
+                                            <td>
+                                                            <code><a href="../entitys/PermissionEntity.html" target="_self" >string[] | PermissionEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;boolean&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hasAnyPermissions"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>hasAnyPermissions</b></span>
+                        <a href="#hasAnyPermissions"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>hasAnyPermissions(user: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>, permissions: <a href="../entitys/PermissionEntity.html" target="_self">string[] | PermissionEntity[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="48"
+                                    class="link-to-prism">src/role-permissions/services/role-permission.service.ts:48</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>user</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>permissions</td>
+                                            <td>
+                                                            <code><a href="../entitys/PermissionEntity.html" target="_self" >string[] | PermissionEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;boolean&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hasAnyRoles"></a>
+                    <span class="name">
+                        <span ><b>hasAnyRoles</b></span>
+                        <a href="#hasAnyRoles"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>hasAnyRoles(user: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>, roles: <a href="../entitys/RoleEntity.html" target="_self">Array&lt;string | RoleEntity&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="26"
+                                    class="link-to-prism">src/role-permissions/services/role-permission.service.ts:26</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>user</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>roles</td>
+                                            <td>
+                                                            <code><a href="../entitys/RoleEntity.html" target="_self" >Array&lt;string | RoleEntity&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hasDirectPermission"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>hasDirectPermission</b></span>
+                        <a href="#hasDirectPermission"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>hasDirectPermission(user: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>, permission: <a href="../entitys/PermissionEntity.html" target="_self">string | PermissionEntity</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="75"
+                                    class="link-to-prism">src/role-permissions/services/role-permission.service.ts:75</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>user</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>permission</td>
+                                            <td>
+                                                            <code><a href="../entitys/PermissionEntity.html" target="_self" >string | PermissionEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;boolean&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hasPermission"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>hasPermission</b></span>
+                        <a href="#hasPermission"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>hasPermission(user: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>, permission: <a href="../entitys/PermissionEntity.html" target="_self">string | PermissionEntity</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="66"
+                                    class="link-to-prism">src/role-permissions/services/role-permission.service.ts:66</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>user</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>permission</td>
+                                            <td>
+                                                            <code><a href="../entitys/PermissionEntity.html" target="_self" >string | PermissionEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;boolean&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hasPermissionViaRole"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>hasPermissionViaRole</b></span>
+                        <a href="#hasPermissionViaRole"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>hasPermissionViaRole(user: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>, permission: <a href="../entitys/PermissionEntity.html" target="_self">string | PermissionEntity</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="83"
+                                    class="link-to-prism">src/role-permissions/services/role-permission.service.ts:83</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>user</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>permission</td>
+                                            <td>
+                                                            <code><a href="../entitys/PermissionEntity.html" target="_self" >string | PermissionEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;boolean&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isSamePermission"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>isSamePermission</b></span>
+                        <a href="#isSamePermission"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>isSamePermission(action: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, permission: <a href="../entitys/PermissionEntity.html" target="_self">string | PermissionEntity</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="91"
+                                    class="link-to-prism">src/role-permissions/services/role-permission.service.ts:91</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>action</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>permission</td>
+                                            <td>
+                                                            <code><a href="../entitys/PermissionEntity.html" target="_self" >string | PermissionEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadPermissions"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>loadPermissions</b></span>
+                        <a href="#loadPermissions"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>loadPermissions(user: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="99"
+                                    class="link-to-prism">src/role-permissions/services/role-permission.service.ts:99</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>user</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadRoles"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>loadRoles</b></span>
+                        <a href="#loadRoles"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>loadRoles(user: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="35"
+                                    class="link-to-prism">src/role-permissions/services/role-permission.service.ts:35</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>user</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sanitizeAssignedPermission"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>sanitizeAssignedPermission</b></span>
+                        <a href="#sanitizeAssignedPermission"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>sanitizeAssignedPermission(type: <a href="../undefineds/RoleTypeEnum.html" target="_self">RoleTypeEnum</a>, chainOfCustody?: <a href="../undefineds/ChainOfCustodyEnum.html" target="_self">ChainOfCustodyEnum</a>, permissionIds?: string[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="133"
+                                    class="link-to-prism">src/role-permissions/services/role-permission.service.ts:133</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>type</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/enumerations.html#RoleTypeEnum" target="_self" >RoleTypeEnum</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>chainOfCustody</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/enumerations.html#ChainOfCustodyEnum" target="_self" >ChainOfCustodyEnum</a></code>
+                                            </td>
+
+                                            <td>
+                                                    Yes
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>permissionIds</td>
+                                            <td>
+                                                        <code>string[]</code>
+                                            </td>
+
+                                            <td>
+                                                    Yes
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;string[]&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateRoleHasPermission"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>updateRoleHasPermission</b></span>
+                        <a href="#updateRoleHasPermission"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updateRoleHasPermission(roleId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, assignedPermissionIds: string[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="114"
+                                    class="link-to-prism">src/role-permissions/services/role-permission.service.ts:114</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>roleId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>assignedPermissionIds</td>
+                                            <td>
+                                                        <code>string[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateAssignedPermissionType"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>validateAssignedPermissionType</b></span>
+                        <a href="#validateAssignedPermissionType"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateAssignedPermissionType(type: <a href="../undefineds/RoleTypeEnum.html" target="_self">RoleTypeEnum</a>, permissions: <a href="../entitys/PermissionEntity.html" target="_self">PermissionEntity[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="151"
+                                    class="link-to-prism">src/role-permissions/services/role-permission.service.ts:151</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>type</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/enumerations.html#RoleTypeEnum" target="_self" >RoleTypeEnum</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>permissions</td>
+                                            <td>
+                                                            <code><a href="../entitys/PermissionEntity.html" target="_self" >PermissionEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateAssignedSubPermission"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>validateAssignedSubPermission</b></span>
+                        <a href="#validateAssignedSubPermission"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateAssignedSubPermission(permissions: <a href="../entitys/PermissionEntity.html" target="_self">PermissionEntity[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="168"
+                                    class="link-to-prism">src/role-permissions/services/role-permission.service.ts:168</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>permissions</td>
+                                            <td>
+                                                            <code><a href="../entitys/PermissionEntity.html" target="_self" >PermissionEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateSingleAssignedSubPermission"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>validateSingleAssignedSubPermission</b></span>
+                        <a href="#validateSingleAssignedSubPermission"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateSingleAssignedSubPermission(permissions: <a href="../entitys/PermissionEntity.html" target="_self">PermissionEntity[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="189"
+                                    class="link-to-prism">src/role-permissions/services/role-permission.service.ts:189</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>permissions</td>
+                                            <td>
+                                                            <code><a href="../entitys/PermissionEntity.html" target="_self" >PermissionEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateSubPermissionMarginOfError"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>validateSubPermissionMarginOfError</b></span>
+                        <a href="#validateSubPermissionMarginOfError"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateSubPermissionMarginOfError(permissions: <a href="../entitys/PermissionEntity.html" target="_self">PermissionEntity[]</a>, type: <a href="../undefineds/RoleTypeEnum.html" target="_self">RoleTypeEnum</a>, chainOfCustody?: <a href="../undefineds/ChainOfCustodyEnum.html" target="_self">ChainOfCustodyEnum</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="213"
+                                    class="link-to-prism">src/role-permissions/services/role-permission.service.ts:213</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>permissions</td>
+                                            <td>
+                                                            <code><a href="../entitys/PermissionEntity.html" target="_self" >PermissionEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>type</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/enumerations.html#RoleTypeEnum" target="_self" >RoleTypeEnum</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>chainOfCustody</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/enumerations.html#ChainOfCustodyEnum" target="_self" >ChainOfCustodyEnum</a></code>
+                                            </td>
+
+                                            <td>
+                                                    Yes
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ValidateException, ValidationError } from &#x27;@diginexhk/nestjs-exception&#x27;;
+import { ForbiddenException, Injectable } from &#x27;@nestjs/common&#x27;;
+import { isEmpty, isNil, uniq, uniqBy } from &#x27;lodash&#x27;;
+import { FindManyOptions, FindOneOptions, FindOptionsWhere, In } from &#x27;typeorm&#x27;;
+import { createValidationError } from &#x27;~core/helpers/create-validation-error.helper&#x27;;
+import { PermissionEntity } from &#x27;~role-permissions/entities/permission.entity&#x27;;
+import { RoleHasPermissionEntity } from &#x27;~role-permissions/entities/role-has-permission.entity&#x27;;
+import { RoleEntity } from &#x27;~role-permissions/entities/role.entity&#x27;;
+import { ChainOfCustodyEnum } from &#x27;~role-permissions/enums/chain-of-custody.enum&#x27;;
+import { GroupTypeEnum } from &#x27;~role-permissions/enums/group-type.enum&#x27;;
+import { PermissionEnum } from &#x27;~role-permissions/enums/permission.enum&#x27;;
+import { RoleTypeEnum } from &#x27;~role-permissions/enums/role-type.enum&#x27;;
+import { PermissionRepository } from &#x27;~role-permissions/repositories/permission.repository&#x27;;
+import { RoleHasPermissionRepository } from &#x27;~role-permissions/repositories/role-has-permission.repository&#x27;;
+import { RoleRepository } from &#x27;~role-permissions/repositories/role.repository&#x27;;
+import { UserEntity } from &#x27;~users/entities/user.entity&#x27;;
+
+@Injectable()
+export class RolePermissionService {
+    constructor(
+        private roleRepo: RoleRepository,
+        private permissionRepo: PermissionRepository,
+        private rolePermissionRepo: RoleHasPermissionRepository
+    ) {}
+
+    hasAnyRoles(user: UserEntity, roles: Array&lt;string | RoleEntity&gt;): boolean {
+        return !!roles.find((role) &#x3D;&gt; {
+            if (role instanceof RoleEntity) {
+                return role?.name &#x3D;&#x3D;&#x3D; user.roleName;
+            }
+            return role &#x3D;&#x3D;&#x3D; user.roleName;
+        });
+    }
+
+    async loadRoles(user: UserEntity): Promise&lt;void&gt; {
+        if (isNil(user?.role)) {
+            user.role &#x3D; await this.roleRepo.findById(user.roleId, { relations: [&#x27;permissions&#x27;] });
+        }
+    }
+
+    async checkHasAnyPermissionsOrFail(user: UserEntity, permissions: string[] | PermissionEntity[]): Promise&lt;void&gt; {
+        const isValid &#x3D; await this.hasAnyPermissions(user, permissions);
+        if (!isValid) {
+            throw new ForbiddenException({ translate: &#x27;error.forbidden&#x27; });
+        }
+    }
+
+    async hasAnyPermissions(user: UserEntity, permissions: string[] | PermissionEntity[]): Promise&lt;boolean&gt; {
+        for (const permission of permissions) {
+            if (await this.hasPermission(user, permission)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    async hasAllPermissions(user: UserEntity, permissions: string[] | PermissionEntity[]): Promise&lt;boolean&gt; {
+        for (const permission of permissions) {
+            if (!(await this.hasPermission(user, permission))) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    async hasPermission(user: UserEntity, permission: string | PermissionEntity): Promise&lt;boolean&gt; {
+        const [hasPermission, hasDirectPermission] &#x3D; await Promise.all([
+            this.hasPermissionViaRole(user, permission),
+            this.hasDirectPermission(user, permission)
+        ]);
+
+        return hasPermission || hasDirectPermission;
+    }
+
+    async hasDirectPermission(user: UserEntity, permission: string | PermissionEntity): Promise&lt;boolean&gt; {
+        await this.loadPermissions(user);
+
+        return user.permissions.some(({ action }) &#x3D;&gt; {
+            return this.isSamePermission(action, permission);
+        });
+    }
+
+    async hasPermissionViaRole(user: UserEntity, permission: string | PermissionEntity): Promise&lt;boolean&gt; {
+        await this.loadRoles(user);
+
+        return user.role.permissions.some(({ action }) &#x3D;&gt; {
+            return this.isSamePermission(action, permission);
+        });
+    }
+
+    private isSamePermission(action: string, permission: string | PermissionEntity): boolean {
+        if (permission instanceof PermissionEntity) {
+            return permission.action &#x3D;&#x3D;&#x3D; action;
+        }
+
+        return permission &#x3D;&#x3D;&#x3D; action;
+    }
+
+    private async loadPermissions(user: UserEntity): Promise&lt;void&gt; {
+        if (isNil(user.permissions)) {
+            user.permissions &#x3D; await this.permissionRepo.getPermissionsOfUser(user);
+        }
+    }
+
+    async assignPermissionsToRole(roleId: string, assignedPermissionIds: string[]): Promise&lt;void&gt; {
+        await this.rolePermissionRepo.save(
+            assignedPermissionIds.map((permissionId) &#x3D;&gt; ({
+                roleId,
+                permissionId
+            }))
+        );
+    }
+
+    async updateRoleHasPermission(roleId: string, assignedPermissionIds: string[]): Promise&lt;void&gt; {
+        if (!assignedPermissionIds.length) {
+            await this.rolePermissionRepo.delete({ roleId });
+            return;
+        }
+
+        await this.rolePermissionRepo.deleteUnusedPermissions(roleId, assignedPermissionIds);
+
+        await this.rolePermissionRepo.upsert(
+            assignedPermissionIds.map((permissionId) &#x3D;&gt; ({
+                roleId,
+                permissionId
+            })),
+            {
+                conflictPaths: [&#x27;roleId&#x27;, &#x27;permissionId&#x27;]
+            }
+        );
+    }
+
+    async sanitizeAssignedPermission(
+        type: RoleTypeEnum,
+        chainOfCustody?: ChainOfCustodyEnum,
+        permissionIds?: string[]
+    ): Promise&lt;string[]&gt; {
+        if (!permissionIds?.length) return [];
+
+        const uniqPermissionIds &#x3D; uniq(permissionIds);
+        const foundPermissions &#x3D; await this.permissionRepo.findByIds(uniqPermissionIds);
+
+        this.validateAssignedPermissionType(type, foundPermissions);
+        this.validateAssignedSubPermission(foundPermissions);
+        this.validateSingleAssignedSubPermission(foundPermissions);
+        this.validateSubPermissionMarginOfError(foundPermissions, type, chainOfCustody);
+
+        return uniqPermissionIds;
+    }
+
+    private validateAssignedPermissionType(type: RoleTypeEnum, permissions: PermissionEntity[]) {
+        const errors: ValidationError[] &#x3D; [];
+
+        permissions.forEach((permission, index) &#x3D;&gt; {
+            if (!permission.groups.includes(type)) {
+                errors.push(
+                    createValidationError({
+                        property: &#x60;assignedPermissionIds[${index}]&#x60;,
+                        message: &#x27;invalid_type_of_assigned_permission&#x27;
+                    })
+                );
+            }
+        });
+
+        if (errors.length) throw new ValidateException(errors);
+    }
+
+    private validateAssignedSubPermission(permissions: PermissionEntity[]) {
+        const errors: ValidationError[] &#x3D; [];
+
+        permissions
+            .filter(({ parentId }) &#x3D;&gt; parentId !&#x3D;&#x3D; null)
+            .forEach((subPermission, index) &#x3D;&gt; {
+                const parentPermission &#x3D; permissions.find((permission) &#x3D;&gt; permission.id &#x3D;&#x3D;&#x3D; subPermission.parentId);
+
+                if (!parentPermission) {
+                    errors.push(
+                        createValidationError({
+                            property: &#x60;assignedPermissionIds[${index}]&#x60;,
+                            message: &#x27;improperly_assigned_sub_permission&#x27;
+                        })
+                    );
+                }
+            });
+
+        if (errors.length) throw new ValidateException(errors);
+    }
+
+    private validateSingleAssignedSubPermission(permissions: PermissionEntity[]) {
+        const errors: ValidationError[] &#x3D; [];
+
+        permissions
+            .filter(
+                ({ parentId, groupType }) &#x3D;&gt;
+                    !parentId &amp;&amp; [GroupTypeEnum.RADIO_GROUP, GroupTypeEnum.RADIO_MULTIPLE_GROUP].includes(groupType)
+            )
+            .forEach((permission, index) &#x3D;&gt; {
+                const subPermissions &#x3D; permissions.filter((subPermission) &#x3D;&gt; subPermission.parentId &#x3D;&#x3D;&#x3D; permission.id);
+
+                if (uniqBy(subPermissions, &#x27;label&#x27;).length !&#x3D;&#x3D; subPermissions.length) {
+                    errors.push(
+                        createValidationError({
+                            property: &#x60;assignedPermissionIds[${index}]&#x60;,
+                            message: &#x27;invalid_assigned_single_sub_permission&#x27;
+                        })
+                    );
+                }
+            });
+
+        if (errors.length) throw new ValidateException(errors);
+    }
+
+    private validateSubPermissionMarginOfError(
+        permissions: PermissionEntity[],
+        type: RoleTypeEnum,
+        chainOfCustody?: ChainOfCustodyEnum
+    ) {
+        const errors: ValidationError[] &#x3D; [];
+        if (type !&#x3D;&#x3D; RoleTypeEnum.PRODUCT || chainOfCustody !&#x3D;&#x3D; ChainOfCustodyEnum.PRODUCT_SEGREGATION) {
+            return;
+        }
+
+        permissions
+            .filter(({ action }) &#x3D;&gt; action &#x3D;&#x3D;&#x3D; PermissionEnum.VIEW_MARGIN_OF_ERROR)
+            .forEach((permission, index) &#x3D;&gt; {
+                errors.push(
+                    createValidationError({
+                        property: &#x60;assignedPermissionIds[${index}]&#x60;,
+                        message: &#x27;view_margin_of_error_is_not_allowed&#x27;
+                    })
+                );
+            });
+
+        if (errors.length) throw new ValidateException(errors);
+    }
+
+    async findRoleIdsHasPermissionByAction(action: PermissionEnum): Promise&lt;string[]&gt; {
+        const roleHasPermission &#x3D; await this.rolePermissionRepo.findRoleHasPermissionByAction(action);
+        return roleHasPermission.map(({ roleId }) &#x3D;&gt; roleId);
+    }
+
+    async findOne(options: FindOneOptions&lt;RoleHasPermissionEntity&gt;) {
+        return this.rolePermissionRepo.findOne(options);
+    }
+
+    async existsRoleHasPermission(actions: PermissionEnum[]): Promise&lt;boolean&gt; {
+        return this.rolePermissionRepo.existsRoleHasPermission(actions);
+    }
+
+    exists(conditions: FindManyOptions&lt;RoleHasPermissionEntity&gt;): Promise&lt;boolean&gt; {
+        return this.rolePermissionRepo.exists(conditions);
+    }
+
+    async findRolesByPermission(action: PermissionEnum, types: RoleTypeEnum[] &#x3D; []): Promise&lt;RoleEntity[]&gt; {
+        const roleIds &#x3D; await this.findRoleIdsHasPermissionByAction(action);
+        const filter: FindOptionsWhere&lt;RoleEntity&gt; &#x3D; { id: In(roleIds) };
+
+        if (!isEmpty(types)) {
+            filter.type &#x3D; In(types);
+        }
+
+        return this.roleRepo.findBy(filter);
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'RolePermissionService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

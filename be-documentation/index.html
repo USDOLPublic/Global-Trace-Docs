@@ -1,0 +1,436 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Global Trace BE documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+	   <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="./" class="navbar-brand">Global Trace BE documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content getting-started">
+                   <div class="content-data">
+
+<p align="center">
+  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
+</p>
+
+<h2>Description</h2>
+<p><a href="https://github.com/nestjs/nest">Nest</a> framework TypeScript starter repository.</p>
+<h2>NOTE</h2>
+<p>We are using some private package so you need get some GITLAB_DIGINEX_TOKEN from leader</p>
+<ul>
+<li>Window</li>
+</ul>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-shell">SETX GITLAB_DIGINEX_TOKEN tokenValue</code></pre></div><ul>
+<li>Linux</li>
+</ul>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-shell">export GITLAB_DIGINEX_TOKEN=tokenValue</code></pre></div><h2>Folder structure</h2>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-none">.
+├── charts                      -&gt; Helm chart
+│   └── usdol-backend
+│       ├── charts
+│       ├── environments
+│       └── templates
+├── src
+│   ├── config
+│   ├── core
+│   │   ├── databases
+│   │   ├── entities
+│   │   ├── exceptions
+│   │   ├── http
+│   │   │   ├── controllers
+│   │   │   └── guards
+│   │   ├── repositories
+│   │   │   ├── criterias
+│   │   │   └── eloquents
+│   │   ├── requests
+│   │   ├── services
+│   │   ├── tests
+│   │   └── transformers
+│   ├── mails
+│   │   ├── adapters
+│   │   ├── constants
+│   │   ├── interfaces
+│   │   ├── mails
+│   │   └── services
+│   └── users                   -&gt; Module user
+│       ├── databases
+│       │   ├── factories       -&gt; Contains factories
+│       │   └── migrations      -&gt; Contains migrations
+│       ├── entities            -&gt; Contains entities
+│       ├── enums               -&gt; Contains enums
+│       ├── http
+│       │   ├── controllers     -&gt; Contains controllers
+│       │   ├── guards          -&gt; Contains guards
+│       │   ├── midlewares      -&gt; Contains midlewares
+│       │   └── requests        -&gt; Contains request
+│       ├── mails               -&gt; Contains emails
+│       ├── repositories        -&gt; Contains repositories
+│       ├── resources           -&gt; Contains information such as views, fonts, css...
+│       │   └── mails           -&gt; Contains views for email
+│       ├── services            -&gt; Contains services
+│       ├── tests               -&gt; Contains unit test, e2e test
+│       └── transformers        -&gt; Contains transformers
+└── test
+</code></pre></div><h3>File structure conventions</h3>
+<p>Some code examples display a file that has one or more similarly named companion files. For
+example, <code>hero.controller.ts</code> and <code>hero.service.ts</code></p>
+<h3>Single responsibility</h3>
+<p>Apply the single responsibility principle (SRP) to all components, services, and other symbols. This helps make the app
+cleaner, easier to read and maintain, and more testable.</p>
+<h2>Code Rule</h2>
+<p>Nestjs is inspired by Angular, so you can use some rules from Angular.</p>
+<h5>Small functions</h5>
+<p>Do define small functions</p>
+<p>Consider limiting to no more than 75 lines.</p>
+<p>Consider limiting files to 400 lines of code.</p>
+<h4>Naming</h4>
+<h5>General Naming Guidelines</h5>
+<p>Do use consistent names for all symbols.</p>
+<p>Do follow a pattern that describes the symbol&#39;s feature then its type. The recommended pattern is <code>feature.type.ts</code>.</p>
+<h5>Separate file names with dots and dashes</h5>
+<p>Do use dashes to separate words in the descriptive name.</p>
+<p>Do use dots to separate the descriptive name from the type.</p>
+<p>Do use consistent type names for all components following a pattern that describes the component&#39;s feature then its
+type. A recommended pattern is <code>feature.type.ts</code>.</p>
+<p>Do use conventional type names including <code>.service, .component, .pipe, .module</code>, and <code>.directive</code>. Invent additional
+type names if you must but take care not to create too many.</p>
+<h5>Symbols and file names</h5>
+<p>Do use consistent names for all assets named after what they represent.</p>
+<p>Do use upper camel case for class names.</p>
+<p>Do match the name of the symbol to the name of the file.</p>
+<p>Do append the symbol name with the conventional suffix (such as Component, Directive, Module, Pipe, or Service) for a
+thing of that type.</p>
+<p>Do give the filename the conventional suffix (such as <code>.component.ts</code>, <code>.directive.ts</code>, <code>.module.ts</code>, <code>.pipe.ts</code>,
+or <code>.service.ts</code>) for a file of that type.</p>
+<h5>Unit test</h5>
+<p>Do name test specification files the same as the component they test.</p>
+<p>Do name test specification files with a suffix of <code>.spec.ts</code></p>
+<h5>E2E test</h5>
+<p>Do name end-to-end test specification files after the feature they test with a suffix of <code>.e2e-spec.ts</code></p>
+<h2>Database rule</h2>
+<p>Normally, naming the database will be an underscore (like <code>user_plan</code>), but to synchronize the entire standard on the system with NestJs, we will use camelCase for column and PascalCase for table.
+Example: <code>user_plan</code> -&gt; <code>userPlan</code> or <code>UserPlan</code></p>
+<blockquote>
+<p>This will cause some problems when querying pure, be careful with it.</p>
+</blockquote>
+<h4>Table name:</h4>
+<ul>
+<li><p>Must be singular</p>
+</li>
+<li><p>Must be a noun</p>
+</li>
+<li><p>Must be PascalCase</p>
+</li>
+</ul>
+<h4>Column name</h4>
+<ul>
+<li>Must be camelCase</li>
+</ul>
+<h4>Index name</h4>
+<ul>
+<li>columnNameTableNameIndex</li>
+</ul>
+<h4>Foreign key</h4>
+<ul>
+<li>columnNameTableNameFk</li>
+</ul>
+<h2>Datetime</h2>
+<ul>
+<li><p>All inputs and outputs must be in universal time.</p>
+</li>
+<li><p>Must be timestamp</p>
+</li>
+</ul>
+<h2>Requirements</h2>
+<blockquote>
+<p>All APIs must have an e2e test.</p>
+<p>Complex functions must have unit tests.</p>
+</blockquote>
+<h4>Version</h4>
+<blockquote>
+<p>Postgres: 11</p>
+</blockquote>
+<h2>Docker</h2>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-$xslt">docker-compose up -d</code></pre></div><h2>Installation</h2>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-bash">$ npm install</code></pre></div><h2>Running the app</h2>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-bash"># development
+$ npm run start
+
+# watch mode
+$ npm run start:dev
+
+# production mode
+$ npm run start:prod</code></pre></div><h2>Command</h2>
+<p>You need link cli first <code>npm link</code></p>
+<h5>Make migration</h5>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-shell script">wz-command make-migration create-user-table -- --module=&lt;module-name&gt; --create=User --update=User</code></pre></div><h5>Make module</h5>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-shell script">wz-command make-module</code></pre></div><h5>Make e2e test</h5>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-shell script">wz-command make-e2e-test user-controller -- --module=&lt;module-name&gt;</code></pre></div><h5>Make service</h5>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-shell script">wz-command make-service user -- --module=&lt;module-name&gt;</code></pre></div><h5>Make entity</h5>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-shell script">wz-command make-entity user -- --module=&lt;module-name&gt;</code></pre></div><h5>Make controller</h5>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-shell script">wz-command make-controller user -- --module=&lt;module-name&gt;</code></pre></div><h5>Make dto</h5>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-shell script">wz-command make-dto user -- --module=&lt;module-name&gt;</code></pre></div><h5>Make repository</h5>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-shell script">wz-command make-repository user -- --module=&lt;module-name&gt;</code></pre></div><h2>Test</h2>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-bash"># unit tests
+$ npm run test
+
+# e2e tests
+$ npm run test:e2e
+
+# test coverage
+$ npm run test:cov</code></pre></div><h2>Response</h2>
+<h4>Success</h4>
+<p>Return a data object</p>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-json"></code></pre></div><h4>Validate error - 422</h4>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-json">{
+  &quot;message&quot;: null,
+  &quot;errors&quot;: {
+    &quot;email&quot;: {
+      &quot;messages&quot;: [
+        &quot;email should not be empty&quot;
+      ]
+    },
+    &quot;password&quot;: {
+      &quot;messages&quot;: [
+        &quot;password must be longer than or equal to 15 characters&quot;,
+        &quot;password must be a string&quot;
+      ]
+    },
+    &quot;test&quot;: {
+      &quot;children&quot;: {
+        &quot;email&quot;: {
+          &quot;messages&quot;: [
+            &quot;email should not be empty&quot;
+          ]
+        },
+        &quot;password&quot;: {
+          &quot;messages&quot;: [
+            &quot;password must be longer than or equal to 15 characters&quot;,
+            &quot;password must be a string&quot;
+          ]
+        }
+      },
+      &quot;messages&quot;: []
+    }
+  }
+}</code></pre></div><h4>Entities not found - 404</h4>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-json">{
+    &quot;message&quot;: &quot;Enterprise not found&quot;,
+    &quot;errors&quot;: null
+}</code></pre></div><h4>Unauthorized - 401</h4>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-json">{
+    &quot;message&quot;: &quot;Unauthorized&quot;,
+    &quot;errors&quot;: null
+}</code></pre></div><h2>Update role, permissions</h2>
+<h3>New roles or permissions</h3>
+<p>When adding new roles or permissions, we need to:</p>
+<ul>
+<li>Create new role, permission file following by format: <code>roles|permissions-DD-MM-YYYY-v(n)</code></li>
+<li>Add role_permission_mapping object in the ROLE_PERMISSION_MAPPING too</li>
+<li>Generate (n) migrations to:<ol>
+<li>(Optional) Add role if adding new role</li>
+<li>(Optional) Add permission if adding new permission</li>
+<li>(Required) Add role permission mapping if adding new role or permission</li>
+</ol>
+</li>
+</ul>
+<h3>Change in existed role permission mapping</h3>
+<p>When adding or removing role in existed role_permission_mapping object, we need to:</p>
+<ul>
+<li>Generate migration to update these changes</li>
+</ul>
+<h3>Resources in the application</h3>
+<h4>Locations</h4>
+<p>At local: You can run this command to crawl the locations</p>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-shell script">wz-command crawl-location</code></pre></div><p>After having built the application, you need to execute to the docker container then run this command which is a little different</p>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-shell script">node dist/cli.js crawl-location</code></pre></div><h3>Environment variables</h3>
+<h4>WHITELIST_DOMAINS</h4>
+<ul>
+<li>There are the list of domains that Backend will accept and let it pass to request to server.</li>
+<li>Example: We have the uat domain is <code>usdol.uat.dgnx.io</code> so that we need to add it in the list split by the comma <code>,</code>
+with no <code>space</code>. At the local, such as the FE run at localhost:3010 we will have the WHITELIST_DOMAINS like this: <code>usdol.uat.dgnx.io,localhost:3010</code></li>
+</ul>
+<h4>MAIL_SEND_FROM:</h4>
+<ul>
+<li>This is the mail address that will be shown as the sender when our application send invitation mail or any mail to our suppliers</li>
+<li>Example: <code>Global Trace Protocol &lt;global-trace-protocol@dev.dgnx.io&gt;</code></li>
+</ul>
+<h4>FIREBASE_*...*</h4>
+<ul>
+<li><code>FIREBASE_DYNAMIC_LINK_DOMAIN, FIREBASE_DYNAMIC_LINK_API_KEY, FIREBASE_DYNAMIC_LINK_APN, FIREBASE_DYNAMIC_LINK_IBI</code></li>
+<li>These are variables which used to generate the deep link to take use go to the App store or CH Play to download the application immediately depend on their operating system</li>
+</ul>
+<h4>WEB_2_PDF</h4>
+<ul>
+<li>In our application, to generate the PDF file we&#39;re using a technique that will scratch and take screenshots of the UI page. To use it, we need to connect its API because it&#39;s host on another server. That&#39;s why we need its domain <code>WEB_2_PDF_API_URL</code> and its private key for security stuff <code>WEB_2_PDF_API_KEY</code></li>
+</ul>
+<h4>RAPID</h4>
+<ul>
+<li>This is the 3rd party that we use them to crawl the countries, provinces and districts for our application.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 0;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
+            var COMPODOC_CURRENT_PAGE_URL = 'index.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="./js/libs/custom-elements.min.js"></script>
+       <script src="./js/libs/lit-html.js"></script>
+
+       <script src="./js/menu-wc.js" defer></script>
+       <script nomodule src="./js/menu-wc_es5.js" defer></script>
+
+       <script src="./js/libs/bootstrap-native.js"></script>
+
+       <script src="./js/libs/es6-shim.min.js"></script>
+       <script src="./js/libs/EventDispatcher.js"></script>
+       <script src="./js/libs/promise.min.js"></script>
+       <script src="./js/libs/zepto.min.js"></script>
+
+       <script src="./js/compodoc.js"></script>
+
+       <script src="./js/tabs.js"></script>
+       <script src="./js/menu.js"></script>
+       <script src="./js/libs/clipboard.min.js"></script>
+       <script src="./js/libs/prism.js"></script>
+       <script src="./js/sourceCode.js"></script>
+          <script src="./js/search/search.js"></script>
+          <script src="./js/search/lunr.min.js"></script>
+          <script src="./js/search/search-lunr.js"></script>
+          <script src="./js/search/search_index.js"></script>
+       <script src="./js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Appendix A. External risk - Global Trace</title>
+<meta name="generator" content="Hugo 0.125.1">
+<link href="./index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="https://globaltrace-docs.uat.dgnx.io/confluence/external_risk/">
+<link rel="stylesheet" href="https://globaltrace-docs.uat.dgnx.io/confluence/css/theme.min.css">
+<link rel="stylesheet" href="https://globaltrace-docs.uat.dgnx.io/confluence/css/chroma.min.css">
+<script defer src="./js/fontawesome6/all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js" integrity="sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha256-4XodgW4TwIJuDtf+v6vDJ39FVxI0veC/kSCCmnFp7ck=" crossorigin="anonymous"></script>
+<script src="https://globaltrace-docs.uat.dgnx.io/confluence/js/bundle.js"></script><style>
+:root {--custom-background-color: grey;}
+</style>
+<meta property="og:url" content="https://globaltrace-docs.uat.dgnx.io/confluence/external_risk/">
+  <meta property="og:site_name" content="Global Trace">
+  <meta property="og:title" content="Appendix A. External risk">
+  <meta property="og:description" content="Global Trace supports external risk indices to be defined for countries. This risk data must be input into the system using an excel template, available in the following directory.
+src/risk-assessments/constants/goods-risk.json
+Country risk The first sheet enables the super administrator to input initial values for country risk. In our sample workbook, the risk is defined as a combination of Global Slavery Index ratings and US State Department’s Trafficking in Persons Report Tier.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="website">
+    <meta property="og:image" content="https://globaltrace-docs.uat.dgnx.io/confluence/images/icon.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://globaltrace-docs.uat.dgnx.io/confluence/images/icon.png"><meta name="twitter:title" content="Appendix A. External risk">
+<meta name="twitter:description" content="">
+
+  <meta itemprop="name" content="Appendix A. External risk">
+  <meta itemprop="description" content="Global Trace supports external risk indices to be defined for countries. This risk data must be input into the system using an excel template, available in the following directory.
+src/risk-assessments/constants/goods-risk.json
+Country risk The first sheet enables the super administrator to input initial values for country risk. In our sample workbook, the risk is defined as a combination of Global Slavery Index ratings and US State Department’s Trafficking in Persons Report Tier.">
+  <meta itemprop="datePublished" content="2024-04-20T15:43:35+09:30">
+  <meta itemprop="dateModified" content="2024-04-20T15:43:35+09:30">
+  <meta itemprop="wordCount" content="214">
+  <meta itemprop="image" content="https://globaltrace-docs.uat.dgnx.io/confluence/images/icon.png"></head>
+<body>
+
+<div class="container"><header>
+<h1>Global Trace</h1>
+</header>
+
+
+<div class="content-container">
+<main><h1>Appendix A. External risk</h1><p>Global Trace supports external risk indices to be defined for countries. This risk data must be input into the system using an excel template, available in the following directory.</p>
+<p><code>src/risk-assessments/constants/goods-risk.json</code></p>
+<h2 id="country-risk">Country risk</h2>
+<p>The first sheet enables the super administrator to input initial values for country risk. In our sample workbook, the risk is defined as a combination of Global Slavery Index ratings and US State Department’s Trafficking in Persons Report Tier.</p>
+<p>This document lists each country and provides a risk rating on a scale of 0 to 100 (0 is low risk, 100 is extreme risk).</p>
+<table>
+<thead>
+<tr>
+<th>Country</th>
+<th>Risk (out of 100)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Afghanistan</td>
+<td>95</td>
+</tr>
+<tr>
+<td>Albania</td>
+<td>36</td>
+</tr>
+<tr>
+<td>Algeria</td>
+<td>72</td>
+</tr>
+</tbody>
+</table>
+<p>The second sheet provides a country / commodity risk rating. Each category / Indicator / Sub-indicator must also appear in the Indicator list, enabling the rating data to be combined in the overall supplier risk. In our example, we use the sub-indicator field to show the source of the rating. As with ESG assessment reports, the severity is marked on a 3 point scale (1: low, 2: high, 3: extreme)</p>
+<table>
+<thead>
+<tr>
+<th>Country/ Area</th>
+<th>Good</th>
+<th>Category</th>
+<th>Indicator</th>
+<th>Sub-Indicator</th>
+<th>Severity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Afghanistan</td>
+<td>Bricks</td>
+<td>Labor</td>
+<td>Forced Labor</td>
+<td>Goods produced with forced labor (ILAB List of Goods)</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Afghanistan</td>
+<td>Bricks</td>
+<td>Labor</td>
+<td>Child Labor</td>
+<td>Goods produced with child labor (ILAB List of Goods)</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<div class="edit-meta">
+Last updated on 20 Apr 2024
+
+
+<br>
+Published on 20 Apr 2024
+<br></div><nav class="pagination"><a class="nav nav-prev" href="https://globaltrace-docs.uat.dgnx.io/confluence/risk_assessment/" title="6. Risk assessment"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - 6. Risk assessment</a>
+<a class="nav nav-next" href="https://globaltrace-docs.uat.dgnx.io/confluence/translations/" title="Appendix B. Translations">Next - Appendix B. Translations <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main>
+<div class="sidebar">
+
+<nav class="open-menu">
+<ul>
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/">Home</a></li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/define_product/">1. Product definition</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/define_role/">2. Role definition</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/map_chain/">3. Mapping the supply chain</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/indicator_list/">4. List of Indicators</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/assessment_config/">5. Assessment configuration</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/risk_assessment/">6. Risk assessment</a>
+  
+</li>
+
+<li class=" active"><a href="https://globaltrace-docs.uat.dgnx.io/confluence/external_risk/">Appendix A. External risk</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/translations/">Appendix B. Translations</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/tracing/">Appendix C. Product tracing</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/purchase_sale/">Appendix D. Purchases and sales</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/open_supply/">Appendix E. Open Supply ID</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/resources/">Appendx F. Resources</a>
+  
+<ul class="sub-menu">
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/resources/cobalt/">Cobalt Pilot Configuration</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/resources/cotton/">Cotton Pilot Configuration</a>
+  
+</li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>

@@ -1,0 +1,2375 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Global Trace BE documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">Global Trace BE documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Injectables</li>
+  <li class="breadcrumb-item" >ProductService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/products/services/product.service.ts</code>
+        </p>
+
+
+
+
+
+            <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#checkAndReturnData" >checkAndReturnData</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#createProduct" >createProduct</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#doesProductBelongToFacility" >doesProductBelongToFacility</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#downloadCertifications" >downloadCertifications</a>
+                            </li>
+                            <li>
+                                <a href="#exist" >exist</a>
+                            </li>
+                            <li>
+                                <a href="#find" >find</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#findByIds" >findByIds</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#findFacilityProductByCode" >findFacilityProductByCode</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#findFacilityProductsById" >findFacilityProductsById</a>
+                            </li>
+                            <li>
+                                <a href="#findOne" >findOne</a>
+                            </li>
+                            <li>
+                                <a href="#findOneByCode" >findOneByCode</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#findProductByCode" >findProductByCode</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#findProductById" >findProductById</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#findProductByQrCode" >findProductByQrCode</a>
+                            </li>
+                            <li>
+                                <a href="#findPurchaseTransactionsByProductIds" >findPurchaseTransactionsByProductIds</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getFacilitySoldProductByCode" >getFacilitySoldProductByCode</a>
+                            </li>
+                            <li>
+                                <a href="#getPurchaseCottonNotTransformed" >getPurchaseCottonNotTransformed</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getPurchasedProductByCode" >getPurchasedProductByCode</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getTransportedProductByCode" >getTransportedProductByCode</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#update" >update</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(storageService: StorageService, productRepo: <a href="../classes/ProductRepository.html" target="_self">ProductRepository</a>, facilityItemService: <a href="../injectables/FacilityItemService.html" target="_self">FacilityItemService</a>, qrCodeService: <a href="../injectables/QrCodeService.html" target="_self">QrCodeService</a>, rolePermissionService: <a href="../injectables/RolePermissionService.html" target="_self">RolePermissionService</a>, productDefinitionService: <a href="../injectables/ProductDefinitionService.html" target="_self">ProductDefinitionService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/products/services/product.service.ts:24</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>storageService</td>
+                                                  
+                                                        <td>
+                                                                    <code>StorageService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>productRepo</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../classes/ProductRepository.html" target="_self" >ProductRepository</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>facilityItemService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/FacilityItemService.html" target="_self" >FacilityItemService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>qrCodeService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/QrCodeService.html" target="_self" >QrCodeService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>rolePermissionService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/RolePermissionService.html" target="_self" >RolePermissionService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>productDefinitionService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ProductDefinitionService.html" target="_self" >ProductDefinitionService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="checkAndReturnData"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>checkAndReturnData</b></span>
+                        <a href="#checkAndReturnData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>checkAndReturnData(option: literal type)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="187"
+                                    class="link-to-prism">src/products/services/product.service.ts:187</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>option</td>
+                                            <td>
+                                                        <code>literal type</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#now" target="_self" >unknown</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createProduct"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>createProduct</b></span>
+                        <a href="#createProduct"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createProduct(facility: <a href="../entitys/FacilityEntity.html" target="_self">FacilityEntity</a>, manualAddedProduct: <a href="../undefineds/ManualAddedProductType.html" target="_self">ManualAddedProductType</a>, isManualAdded: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="34"
+                                    class="link-to-prism">src/products/services/product.service.ts:34</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Default value</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>facility</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >FacilityEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+                                            <td>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                                <td>manualAddedProduct</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#ManualAddedProductType" target="_self" >ManualAddedProductType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+                                            <td>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                                <td>isManualAdded</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+                                            <td>
+                                                    <code>false</code>
+                                            </td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#now" target="_self" >unknown</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="doesProductBelongToFacility"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>doesProductBelongToFacility</b></span>
+                        <a href="#doesProductBelongToFacility"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>doesProductBelongToFacility(facility: <a href="../entitys/FacilityEntity.html" target="_self">FacilityEntity</a>, product: <a href="../entitys/ProductEntity.html" target="_self">ProductEntity</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="280"
+                                    class="link-to-prism">src/products/services/product.service.ts:280</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>facility</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >FacilityEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>product</td>
+                                            <td>
+                                                            <code><a href="../entitys/ProductEntity.html" target="_self" >ProductEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="downloadCertifications"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>downloadCertifications</b></span>
+                        <a href="#downloadCertifications"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>downloadCertifications(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, res: Response)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="320"
+                                    class="link-to-prism">src/products/services/product.service.ts:320</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>id</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>res</td>
+                                            <td>
+                                                        <code>Response</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#now" target="_self" >unknown</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="exist"></a>
+                    <span class="name">
+                        <span ><b>exist</b></span>
+                        <a href="#exist"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>exist(options: <a href="../entitys/ProductEntity.html" target="_self">FindManyOptions&lt;ProductEntity&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="296"
+                                    class="link-to-prism">src/products/services/product.service.ts:296</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>options</td>
+                                            <td>
+                                                            <code><a href="../entitys/ProductEntity.html" target="_self" >FindManyOptions&lt;ProductEntity&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;boolean&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="find"></a>
+                    <span class="name">
+                        <span ><b>find</b></span>
+                        <a href="#find"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>find(options: <a href="../entitys/ProductEntity.html" target="_self">FindManyOptions&lt;ProductEntity&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="304"
+                                    class="link-to-prism">src/products/services/product.service.ts:304</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>options</td>
+                                            <td>
+                                                            <code><a href="../entitys/ProductEntity.html" target="_self" >FindManyOptions&lt;ProductEntity&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/ProductEntity.html" target="_self" >Promise&lt;ProductEntity[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findByIds"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>findByIds</b></span>
+                        <a href="#findByIds"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>findByIds(productIds: string[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="300"
+                                    class="link-to-prism">src/products/services/product.service.ts:300</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>productIds</td>
+                                            <td>
+                                                        <code>string[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#now" target="_self" >unknown</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findFacilityProductByCode"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>findFacilityProductByCode</b></span>
+                        <a href="#findFacilityProductByCode"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>findFacilityProductByCode(facility: <a href="../entitys/FacilityEntity.html" target="_self">FacilityEntity</a>, code: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="68"
+                                    class="link-to-prism">src/products/services/product.service.ts:68</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>facility</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >FacilityEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>code</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#now" target="_self" >unknown</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findFacilityProductsById"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>findFacilityProductsById</b></span>
+                        <a href="#findFacilityProductsById"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>findFacilityProductsById(facility: <a href="../entitys/FacilityEntity.html" target="_self">FacilityEntity</a>, productIds: string[], errorCallback?: () => void)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="72"
+                                    class="link-to-prism">src/products/services/product.service.ts:72</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>facility</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >FacilityEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>productIds</td>
+                                            <td>
+                                                        <code>string[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>errorCallback</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
+                                            </td>
+
+                                            <td>
+                                                    Yes
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#now" target="_self" >unknown</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findOne"></a>
+                    <span class="name">
+                        <span ><b>findOne</b></span>
+                        <a href="#findOne"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>findOne(options: <a href="../entitys/ProductEntity.html" target="_self">FindOneOptions&lt;ProductEntity&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="308"
+                                    class="link-to-prism">src/products/services/product.service.ts:308</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>options</td>
+                                            <td>
+                                                            <code><a href="../entitys/ProductEntity.html" target="_self" >FindOneOptions&lt;ProductEntity&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/ProductEntity.html" target="_self" >Promise&lt;ProductEntity&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findOneByCode"></a>
+                    <span class="name">
+                        <span ><b>findOneByCode</b></span>
+                        <a href="#findOneByCode"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>findOneByCode(code: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="312"
+                                    class="link-to-prism">src/products/services/product.service.ts:312</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>code</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/ProductEntity.html" target="_self" >Promise&lt;ProductEntity&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findProductByCode"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>findProductByCode</b></span>
+                        <a href="#findProductByCode"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>findProductByCode(code: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, purchasedProductDefinitionIds: string[], isInputProduct: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>, ownFacility: <a href="../entitys/FacilityEntity.html" target="_self">FacilityEntity</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="137"
+                                    class="link-to-prism">src/products/services/product.service.ts:137</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Default value</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>code</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+                                            <td>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                                <td>purchasedProductDefinitionIds</td>
+                                            <td>
+                                                        <code>string[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+                                            <td>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                                <td>isInputProduct</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+                                            <td>
+                                                    <code>false</code>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                                <td>ownFacility</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >FacilityEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+                                            <td>
+                                                    <code>null</code>
+                                            </td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#now" target="_self" >unknown</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findProductById"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>findProductById</b></span>
+                        <a href="#findProductById"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>findProductById(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, productDefinitionIds: string[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="172"
+                                    class="link-to-prism">src/products/services/product.service.ts:172</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>id</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>productDefinitionIds</td>
+                                            <td>
+                                                        <code>string[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#now" target="_self" >unknown</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findProductByQrCode"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>findProductByQrCode</b></span>
+                        <a href="#findProductByQrCode"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>findProductByQrCode(qrCode: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, purchasedProductDefinitionIds: string[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="129"
+                                    class="link-to-prism">src/products/services/product.service.ts:129</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>qrCode</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>purchasedProductDefinitionIds</td>
+                                            <td>
+                                                        <code>string[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#now" target="_self" >unknown</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findPurchaseTransactionsByProductIds"></a>
+                    <span class="name">
+                        <span ><b>findPurchaseTransactionsByProductIds</b></span>
+                        <a href="#findPurchaseTransactionsByProductIds"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>findPurchaseTransactionsByProductIds(ids: string[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="339"
+                                    class="link-to-prism">src/products/services/product.service.ts:339</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>ids</td>
+                                            <td>
+                                                        <code>string[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getFacilitySoldProductByCode"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>getFacilitySoldProductByCode</b></span>
+                        <a href="#getFacilitySoldProductByCode"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getFacilitySoldProductByCode(currentUser: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>, code: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="210"
+                                    class="link-to-prism">src/products/services/product.service.ts:210</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>currentUser</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>code</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#now" target="_self" >unknown</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPurchaseCottonNotTransformed"></a>
+                    <span class="name">
+                        <span ><b>getPurchaseCottonNotTransformed</b></span>
+                        <a href="#getPurchaseCottonNotTransformed"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getPurchaseCottonNotTransformed(facility: <a href="../entitys/FacilityEntity.html" target="_self">FacilityEntity</a>, productDefinitionIds: string[], timeRange: <a href="../undefineds/TimeRangeType.html" target="_self">TimeRangeType&lt;Date&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="288"
+                                    class="link-to-prism">src/products/services/product.service.ts:288</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>facility</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >FacilityEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>productDefinitionIds</td>
+                                            <td>
+                                                        <code>string[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>timeRange</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#TimeRangeType" target="_self" >TimeRangeType&lt;Date&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/ProductEntity.html" target="_self" >Promise&lt;ProductEntity[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPurchasedProductByCode"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>getPurchasedProductByCode</b></span>
+                        <a href="#getPurchasedProductByCode"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getPurchasedProductByCode(option: <a href="../undefineds/GetPurchasedProductByCode.html" target="_self">GetPurchasedProductByCode</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="85"
+                                    class="link-to-prism">src/products/services/product.service.ts:85</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>option</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#GetPurchasedProductByCode" target="_self" >GetPurchasedProductByCode</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#now" target="_self" >unknown</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getTransportedProductByCode"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>getTransportedProductByCode</b></span>
+                        <a href="#getTransportedProductByCode"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getTransportedProductByCode(currentUser: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>, code: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="245"
+                                    class="link-to-prism">src/products/services/product.service.ts:245</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>currentUser</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>code</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#now" target="_self" >unknown</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="update"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>update</b></span>
+                        <a href="#update"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>update(options: <a href="../entitys/ProductEntity.html" target="_self">FindOptionsWhere&lt;ProductEntity&gt;</a>, data: <a href="../entitys/ProductEntity.html" target="_self">Partial&lt;ProductEntity&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="316"
+                                    class="link-to-prism">src/products/services/product.service.ts:316</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>options</td>
+                                            <td>
+                                                            <code><a href="../entitys/ProductEntity.html" target="_self" >FindOptionsWhere&lt;ProductEntity&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>data</td>
+                                            <td>
+                                                            <code><a href="../entitys/ProductEntity.html" target="_self" >Partial&lt;ProductEntity&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { StorageService } from &#x27;@diginexhk/nestjs-storage&#x27;;
+import { BadRequestException, Injectable, NotFoundException, StreamableFile } from &#x27;@nestjs/common&#x27;;
+import AdmZip from &#x27;adm-zip&#x27;;
+import { Response } from &#x27;express&#x27;;
+import { FindManyOptions, FindOneOptions, FindOptionsWhere } from &#x27;typeorm&#x27;;
+import { setHeaderDownloadZipFile } from &#x27;~core/helpers/zip-file.helper&#x27;;
+import { TransactionTypeEnum } from &#x27;~events/enums/transaction-type.enum&#x27;;
+import { FacilityItemService } from &#x27;~events/services/facility-item.service&#x27;;
+import { ManualAddedProductType } from &#x27;~events/types/manual-added-product.type&#x27;;
+import { TimeRangeType } from &#x27;~events/types/time-range.type&#x27;;
+import { FacilityEntity } from &#x27;~facilities/entities/facility.entity&#x27;;
+import { getFileName } from &#x27;~history/helpers/download-file-name.helper&#x27;;
+import { ProductDefinitionService } from &#x27;~product-definitions/services/product-definition.service&#x27;;
+import { ProductEntity } from &#x27;~products/entities/product.entity&#x27;;
+import { formatProductData } from &#x27;~products/helpers/format-product-data.helper&#x27;;
+import { ProductRepository } from &#x27;~products/repositories/product.repository&#x27;;
+import { GetPurchasedProductByCode } from &#x27;~products/types/get-purchased-product-by-code.type&#x27;;
+import { QrCodeService } from &#x27;~qr-codes/services/qr-code.service&#x27;;
+import { PermissionEnum } from &#x27;~role-permissions/enums/permission.enum&#x27;;
+import { RolePermissionService } from &#x27;~role-permissions/services/role-permission.service&#x27;;
+import { UserEntity } from &#x27;~users/entities/user.entity&#x27;;
+
+@Injectable()
+export class ProductService {
+    constructor(
+        private storageService: StorageService,
+        private productRepo: ProductRepository,
+        private facilityItemService: FacilityItemService,
+        private qrCodeService: QrCodeService,
+        private rolePermissionService: RolePermissionService,
+        private productDefinitionService: ProductDefinitionService
+    ) {}
+
+    async createProduct(
+        facility: FacilityEntity,
+        manualAddedProduct: ManualAddedProductType,
+        isManualAdded: boolean &#x3D; false
+    ) {
+        const {
+            productDefinitionId,
+            code,
+            quantity,
+            quantityUnit,
+            additionalAttributes,
+            dnaIdentifier,
+            certifications,
+            verifiedRatio: { verifiedPercentage, notVerifiedPercentage }
+        } &#x3D; manualAddedProduct;
+
+        const product &#x3D; await this.productRepo.createOne({
+            productDefinitionId,
+            code,
+            quantity,
+            quantityUnit,
+            verifiedPercentage,
+            notVerifiedPercentage,
+            isManualAdded,
+            additionalAttributes,
+            createdFacilityId: facility.id,
+            certifications,
+            dnaIdentifier
+        });
+        await this.facilityItemService.createOne(facility, product);
+
+        return product;
+    }
+
+    async findFacilityProductByCode(facility: FacilityEntity, code: string) {
+        return this.productRepo.findFacilityProductByCode(facility, code);
+    }
+
+    async findFacilityProductsById(facility: FacilityEntity, productIds: string[], errorCallback?: () &#x3D;&gt; void) {
+        const [products, count] &#x3D; await this.productRepo.findFacilityProductsById(facility, productIds);
+
+        if (count !&#x3D;&#x3D; productIds.length) {
+            if (errorCallback) {
+                errorCallback();
+            }
+            throw new NotFoundException({ translate: &#x27;error.invalid_product_id&#x27; });
+        }
+
+        return products;
+    }
+
+    async getPurchasedProductByCode(option: GetPurchasedProductByCode) {
+        let product: ProductEntity;
+        const { currentUser, code, checkOwnFacility &#x3D; false, transactionType } &#x3D; option;
+        const productDefinitions &#x3D; await this.productDefinitionService.getPurchasedProductDefinitions(currentUser);
+        const productDefinitionIds &#x3D; productDefinitions.map(({ id }) &#x3D;&gt; id);
+
+        const canPurchaseByQrCode &#x3D; await this.rolePermissionService.hasPermission(
+            currentUser,
+            PermissionEnum.SCAN_QR_CODE_IN_PURCHASE
+        );
+
+        if (canPurchaseByQrCode) {
+            product &#x3D; await this.findProductByQrCode(code, productDefinitionIds);
+        }
+
+        if (!product) {
+            const permissions &#x3D; [PermissionEnum.INPUT_PRODUCT_ID_IN_PURCHASE];
+            if (transactionType &#x3D;&#x3D; TransactionTypeEnum.ASSIGN) {
+                permissions.push(PermissionEnum.MANUALLY_DEFINE_NEW_PRODUCT);
+            }
+            const canPurchaseByProductId &#x3D; await this.rolePermissionService.hasAnyPermissions(currentUser, permissions);
+
+            if (canPurchaseByProductId) {
+                product &#x3D; await this.findProductByCode(
+                    code,
+                    productDefinitionIds,
+                    transactionType &#x3D;&#x3D; TransactionTypeEnum.ASSIGN,
+                    checkOwnFacility ? currentUser.currentFacility : null
+                );
+            }
+        }
+
+        if (product) {
+            return this.checkAndReturnData({
+                facility: currentUser.currentFacility,
+                product,
+                checkOwnFacility,
+                transactionType
+            });
+        }
+
+        throw new NotFoundException({ translate: &#x27;error.product_id_invalid&#x27; });
+    }
+
+    private async findProductByQrCode(qrCode: string, purchasedProductDefinitionIds: string[]) {
+        const qrCodeEntity &#x3D; await this.qrCodeService.getAssignedQrCode(qrCode);
+
+        if (qrCodeEntity) {
+            return this.findProductById(qrCodeEntity.productId, purchasedProductDefinitionIds);
+        }
+    }
+
+    private async findProductByCode(
+        code: string,
+        purchasedProductDefinitionIds: string[],
+        isInputProduct: boolean &#x3D; false,
+        ownFacility: FacilityEntity &#x3D; null
+    ) {
+        const where: FindOptionsWhere&lt;ProductEntity&gt; &#x3D; { code };
+        if (!isInputProduct) {
+            where.isManualAdded &#x3D; false;
+        }
+
+        const products &#x3D; await this.productRepo.find({
+            where,
+            relations: [
+                &#x27;qrCode&#x27;,
+                &#x27;productDefinition&#x27;,
+                &#x27;productDefinition.productDefinitionAttributes&#x27;,
+                &#x27;productDefinition.productDefinitionAttributes.attribute&#x27;
+            ]
+        });
+
+        for (const product of products) {
+            if (ownFacility) {
+                const doesBelong &#x3D; await this.facilityItemService.isProductBelongToFacility(ownFacility, product);
+                if (!doesBelong) {
+                    continue;
+                }
+            }
+
+            if (product &amp;&amp; purchasedProductDefinitionIds.includes(product.productDefinitionId)) {
+                return product;
+            }
+        }
+    }
+
+    private async findProductById(id: string, productDefinitionIds: string[]) {
+        const product &#x3D; await this.productRepo.findById(id, {
+            relations: [
+                &#x27;qrCode&#x27;,
+                &#x27;productDefinition&#x27;,
+                &#x27;productDefinition.productDefinitionAttributes&#x27;,
+                &#x27;productDefinition.productDefinitionAttributes.attribute&#x27;
+            ]
+        });
+
+        if (product &amp;&amp; productDefinitionIds.includes(product.productDefinitionId)) {
+            return product;
+        }
+    }
+
+    private async checkAndReturnData(option: {
+        facility: FacilityEntity;
+        product: ProductEntity;
+        checkOwnFacility: boolean;
+        transactionType: TransactionTypeEnum;
+    }) {
+        const { facility, product, checkOwnFacility, transactionType } &#x3D; option;
+
+        if (checkOwnFacility) {
+            await this.doesProductBelongToFacility(facility, product);
+        }
+
+        if (transactionType &#x3D;&#x3D;&#x3D; TransactionTypeEnum.PURCHASE &amp;&amp; product.isPurchased) {
+            throw new BadRequestException({ translate: &#x27;validation.product_is_purchased&#x27; });
+        }
+
+        if (transactionType &#x3D;&#x3D;&#x3D; TransactionTypeEnum.ASSIGN &amp;&amp; product.isTransformed) {
+            throw new BadRequestException({ translate: &#x27;validation.product_is_assigned&#x27; });
+        }
+
+        return formatProductData(product);
+    }
+
+    async getFacilitySoldProductByCode(currentUser: UserEntity, code: string) {
+        let product: ProductEntity;
+        const productDefinitions &#x3D; await this.productDefinitionService.getSoldProductDefinitions(currentUser);
+        const productDefinitionIds &#x3D; productDefinitions.map(({ id }) &#x3D;&gt; id);
+
+        const canSellByQrCode &#x3D; await this.rolePermissionService.hasPermission(
+            currentUser,
+            PermissionEnum.SCAN_QR_CODE_IN_SALE
+        );
+        if (canSellByQrCode) {
+            const qrCodeEntity &#x3D; await this.qrCodeService.getAssignedQrCode(code);
+            if (qrCodeEntity) {
+                product &#x3D; await this.findProductById(qrCodeEntity.productId, productDefinitionIds);
+
+                if (product) {
+                    await this.doesProductBelongToFacility(currentUser.currentFacility, product);
+                    return formatProductData(product);
+                }
+            }
+        }
+
+        const canSellByProductId &#x3D; await this.rolePermissionService.hasPermission(
+            currentUser,
+            PermissionEnum.INPUT_PRODUCT_ID_IN_SALE
+        );
+        if (canSellByProductId) {
+            product &#x3D; await this.findProductByCode(code, productDefinitionIds, false, currentUser.currentFacility);
+            if (product) {
+                return formatProductData(product);
+            }
+        }
+
+        throw new NotFoundException({ translate: &#x27;error.product_id_invalid&#x27; });
+    }
+
+    async getTransportedProductByCode(currentUser: UserEntity, code: string) {
+        let product: ProductEntity;
+        const productDefinitions &#x3D; await this.productDefinitionService.getSoldProductDefinitions(currentUser);
+        const productDefinitionIds &#x3D; productDefinitions.map(({ id }) &#x3D;&gt; id);
+
+        const canSellByQrCode &#x3D; await this.rolePermissionService.hasPermission(
+            currentUser,
+            PermissionEnum.SCAN_QR_CODE_IN_TRANSPORT
+        );
+        if (canSellByQrCode) {
+            const qrCodeEntity &#x3D; await this.qrCodeService.getAssignedQrCode(code);
+            if (qrCodeEntity) {
+                product &#x3D; await this.findProductById(qrCodeEntity.productId, productDefinitionIds);
+
+                if (product) {
+                    await this.doesProductBelongToFacility(currentUser.currentFacility, product);
+                    return formatProductData(product);
+                }
+            }
+        }
+
+        const canSellByProductId &#x3D; await this.rolePermissionService.hasPermission(
+            currentUser,
+            PermissionEnum.INPUT_PRODUCT_ID_IN_TRANSPORT
+        );
+        if (canSellByProductId) {
+            product &#x3D; await this.findProductByCode(code, productDefinitionIds, false, currentUser.currentFacility);
+            if (product) {
+                return formatProductData(product);
+            }
+        }
+
+        throw new NotFoundException({ translate: &#x27;error.product_id_invalid&#x27; });
+    }
+
+    private async doesProductBelongToFacility(facility: FacilityEntity, product: ProductEntity) {
+        const doesBelong &#x3D; await this.facilityItemService.isProductBelongToFacility(facility, product);
+
+        if (!doesBelong) {
+            throw new NotFoundException({ translate: &#x27;error.product_id_invalid&#x27; });
+        }
+    }
+
+    getPurchaseCottonNotTransformed(
+        facility: FacilityEntity,
+        productDefinitionIds: string[],
+        timeRange: TimeRangeType&lt;Date&gt;
+    ): Promise&lt;ProductEntity[]&gt; {
+        return this.productRepo.getPurchaseCottonNotTransformed(facility, productDefinitionIds, timeRange);
+    }
+
+    exist(options: FindManyOptions&lt;ProductEntity&gt;): Promise&lt;boolean&gt; {
+        return this.productRepo.exist(options);
+    }
+
+    async findByIds(productIds: string[]) {
+        return this.productRepo.findByIds(productIds);
+    }
+
+    find(options: FindManyOptions&lt;ProductEntity&gt;): Promise&lt;ProductEntity[]&gt; {
+        return this.productRepo.find(options);
+    }
+
+    findOne(options: FindOneOptions&lt;ProductEntity&gt;): Promise&lt;ProductEntity&gt; {
+        return this.productRepo.findOne(options);
+    }
+
+    findOneByCode(code: string): Promise&lt;ProductEntity&gt; {
+        return this.productRepo.findOneBy({ code });
+    }
+
+    async update(options: FindOptionsWhere&lt;ProductEntity&gt;, data: Partial&lt;ProductEntity&gt;): Promise&lt;void&gt; {
+        await this.productRepo.update(options, data);
+    }
+
+    async downloadCertifications(id: string, res: Response) {
+        const { certifications } &#x3D; await this.productRepo.findOneOrFail({ select: [&#x27;certifications&#x27;], where: { id } });
+        if (!certifications.length) {
+            throw new BadRequestException({ translate: &#x27;error.product_certification_empty&#x27; });
+        }
+
+        const existingFiles: string[] &#x3D; [];
+
+        const zip &#x3D; new AdmZip();
+        for (const certification of certifications) {
+            const fileName &#x3D; getFileName(existingFiles, certification.fileName);
+            const buffer &#x3D; await this.storageService.getFileBuffer(certification.blobName);
+            zip.addFile(&#x60;certifications/${fileName}&#x60;, buffer);
+        }
+
+        setHeaderDownloadZipFile(res, &#x27;certifications&#x27;);
+        return new StreamableFile(zip.toBuffer()).getStream().pipe(res);
+    }
+
+    findPurchaseTransactionsByProductIds(ids: string[]) {
+        return this.productRepo.findPurchaseTransactionsByProductIds(ids);
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'ProductService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

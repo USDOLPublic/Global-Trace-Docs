@@ -1,0 +1,1327 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Global Trace BE documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">Global Trace BE documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Injectables</li>
+  <li class="breadcrumb-item" >SupplyChainNodeService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/supply-chains/services/supply-chain-node.service.ts</code>
+        </p>
+
+
+
+            <p class="comment">
+                <h3>Extends</h3>
+            </p>
+            <p class="comment">
+                        <code>TransactionService</code>
+            </p>
+
+
+            <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#checkForCycle" >checkForCycle</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#deleteSupplyChainMetadata" >deleteSupplyChainMetadata</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#deleteSupplyChainNodes" >deleteSupplyChainNodes</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getDeletionNodesImpact" >getDeletionNodesImpact</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getNodeImpacts" >getNodeImpacts</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getUpdateMetadataImpacts" >getUpdateMetadataImpacts</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#prepareNodeImpactParams" >prepareNodeImpactParams</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#processImpactNodes" >processImpactNodes</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#updateSupplyChainMetadata" >updateSupplyChainMetadata</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#validateRoleForSupplyChainNodeAddition" >validateRoleForSupplyChainNodeAddition</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(supplyChainNodeRepo: <a href="../classes/SupplyChainNodeRepository.html" target="_self">SupplyChainNodeRepository</a>, roleService: <a href="../injectables/RoleService.html" target="_self">RoleService</a>, supplyChainNodeMetadataRepo: <a href="../classes/SupplyChainNodeMetadataRepository.html" target="_self">SupplyChainNodeMetadataRepository</a>, calculateFieldService: <a href="../injectables/CalculateFieldService.html" target="_self">CalculateFieldService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/supply-chains/services/supply-chain-node.service.ts:16</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>supplyChainNodeRepo</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../classes/SupplyChainNodeRepository.html" target="_self" >SupplyChainNodeRepository</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>roleService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/RoleService.html" target="_self" >RoleService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>supplyChainNodeMetadataRepo</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../classes/SupplyChainNodeMetadataRepository.html" target="_self" >SupplyChainNodeMetadataRepository</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>calculateFieldService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CalculateFieldService.html" target="_self" >CalculateFieldService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="checkForCycle"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>checkForCycle</b></span>
+                        <a href="#checkForCycle"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>checkForCycle(roleId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, fromRoleId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, chainId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="26"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain-node.service.ts:26</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>roleId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>fromRoleId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>chainId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteSupplyChainMetadata"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>deleteSupplyChainMetadata</b></span>
+                        <a href="#deleteSupplyChainMetadata"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>deleteSupplyChainMetadata(metadataId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="174"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain-node.service.ts:174</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>metadataId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteSupplyChainNodes"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>deleteSupplyChainNodes</b></span>
+                        <a href="#deleteSupplyChainNodes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>deleteSupplyChainNodes(dto: <a href="../classes/DeleteSupplyChainNodesDto.html" target="_self">DeleteSupplyChainNodesDto</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="169"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain-node.service.ts:169</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>dto</td>
+                                            <td>
+                                                            <code><a href="../classes/DeleteSupplyChainNodesDto.html" target="_self" >DeleteSupplyChainNodesDto</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getDeletionNodesImpact"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>getDeletionNodesImpact</b></span>
+                        <a href="#getDeletionNodesImpact"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getDeletionNodesImpact(dto: <a href="../classes/DeleteSupplyChainNodesDto.html" target="_self">DeleteSupplyChainNodesDto</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="82"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain-node.service.ts:82</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>dto</td>
+                                            <td>
+                                                            <code><a href="../classes/DeleteSupplyChainNodesDto.html" target="_self" >DeleteSupplyChainNodesDto</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#NodeImpacts" target="_self" >Promise&lt;NodeImpacts&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getNodeImpacts"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>getNodeImpacts</b></span>
+                        <a href="#getNodeImpacts"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getNodeImpacts(params: <a href="../undefineds/GetNodeImpactsParams.html" target="_self">GetNodeImpactsParams</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="87"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain-node.service.ts:87</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>params</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#GetNodeImpactsParams" target="_self" >GetNodeImpactsParams</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#NodeImpacts" target="_self" >Promise&lt;NodeImpacts&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getUpdateMetadataImpacts"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>getUpdateMetadataImpacts</b></span>
+                        <a href="#getUpdateMetadataImpacts"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getUpdateMetadataImpacts(metadataId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, dto: <a href="../classes/UpdateSupplyChainNodeMetadataDto.html" target="_self">UpdateSupplyChainNodeMetadataDto</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="64"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain-node.service.ts:64</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>metadataId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>dto</td>
+                                            <td>
+                                                            <code><a href="../classes/UpdateSupplyChainNodeMetadataDto.html" target="_self" >UpdateSupplyChainNodeMetadataDto</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#NodeImpacts" target="_self" >Promise&lt;NodeImpacts&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="prepareNodeImpactParams"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>prepareNodeImpactParams</b></span>
+                        <a href="#prepareNodeImpactParams"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>prepareNodeImpactParams(params: <a href="../undefineds/GetNodeImpactsParams.html" target="_self">GetNodeImpactsParams</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="138"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain-node.service.ts:138</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>params</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#GetNodeImpactsParams" target="_self" >GetNodeImpactsParams</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;NodeImpactsParams&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="processImpactNodes"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>processImpactNodes</b></span>
+                        <a href="#processImpactNodes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>processImpactNodes(impacts: <a href="../undefineds/NodeImpacts.html" target="_self">NodeImpacts</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="157"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain-node.service.ts:157</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>impacts</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#NodeImpacts" target="_self" >NodeImpacts</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateSupplyChainMetadata"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>updateSupplyChainMetadata</b></span>
+                        <a href="#updateSupplyChainMetadata"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updateSupplyChainMetadata(metadataId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, dto: <a href="../classes/UpdateSupplyChainNodeMetadataDto.html" target="_self">UpdateSupplyChainNodeMetadataDto</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="182"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain-node.service.ts:182</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>metadataId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>dto</td>
+                                            <td>
+                                                            <code><a href="../classes/UpdateSupplyChainNodeMetadataDto.html" target="_self" >UpdateSupplyChainNodeMetadataDto</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateRoleForSupplyChainNodeAddition"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>validateRoleForSupplyChainNodeAddition</b></span>
+                        <a href="#validateRoleForSupplyChainNodeAddition"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateRoleForSupplyChainNodeAddition(roleId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, fromRoleId: string | null)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="46"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain-node.service.ts:46</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>roleId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>fromRoleId</td>
+                                            <td>
+                                                        <code>string | null</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { TransactionService } from &#x27;@diginexhk/nestjs-transaction&#x27;;
+import { BadRequestException, Injectable } from &#x27;@nestjs/common&#x27;;
+import { concat, difference, groupBy, isEmpty, isNil, keyBy, uniq } from &#x27;lodash&#x27;;
+import { CalculateFieldService } from &#x27;~calculate-field/services/calculate-field.service&#x27;;
+import { RoleTypeEnum } from &#x27;~role-permissions/enums/role-type.enum&#x27;;
+import { RoleService } from &#x27;~role-permissions/services/role.service&#x27;;
+import { SupplyChainNodeEntity } from &#x27;~supply-chains/entities/supply-chain-node.entity&#x27;;
+import { DeleteSupplyChainNodesDto } from &#x27;~supply-chains/http/dto/delete-supply-chain-nodes.dto&#x27;;
+import { UpdateSupplyChainNodeMetadataDto } from &#x27;~supply-chains/http/dto/update-supply-chain-node-metadata.dto&#x27;;
+import { SupplyChainNodeMetadataRepository } from &#x27;~supply-chains/repositories/supply-chain-node-metadata.repository&#x27;;
+import { SupplyChainNodeRepository } from &#x27;~supply-chains/repositories/supply-chain-node.repository&#x27;;
+import { GetNodeImpactsParams, NodeImpactsParams } from &#x27;~supply-chains/types/get-node-impacts-params.dto&#x27;;
+import { NodeImpacts } from &#x27;~supply-chains/types/node-impacts.dto&#x27;;
+
+@Injectable()
+export class SupplyChainNodeService extends TransactionService {
+    constructor(
+        private supplyChainNodeRepo: SupplyChainNodeRepository,
+        private roleService: RoleService,
+        private supplyChainNodeMetadataRepo: SupplyChainNodeMetadataRepository,
+        private calculateFieldService: CalculateFieldService
+    ) {
+        super();
+    }
+
+    async checkForCycle(roleId: string, fromRoleId: string, chainId: string): Promise&lt;void&gt; {
+        const traverseAncestors &#x3D; async (currentRoleId: string): Promise&lt;void&gt; &#x3D;&gt; {
+            if (currentRoleId &#x3D;&#x3D;&#x3D; roleId) {
+                throw new BadRequestException({ translate: &#x27;validation.cycle_detected&#x27; });
+            }
+
+            const parentNodes &#x3D; await this.supplyChainNodeRepo.find({
+                where: { roleId: currentRoleId, chainId }
+            });
+
+            for (const parentNode of parentNodes) {
+                if (parentNode?.fromRoleId) {
+                    await traverseAncestors(parentNode.fromRoleId);
+                }
+            }
+        };
+
+        await traverseAncestors(fromRoleId);
+    }
+
+    async validateRoleForSupplyChainNodeAddition(roleId: string, fromRoleId: string | null): Promise&lt;void&gt; {
+        const role &#x3D; await this.roleService.findRoleById(roleId);
+        const node &#x3D; await this.supplyChainNodeRepo.findOneBy({ roleId });
+
+        if (role.type !&#x3D;&#x3D; RoleTypeEnum.PRODUCT) {
+            throw new BadRequestException({ translate: &#x27;validation.supplier_not_exist_in_supply_chain_map&#x27; });
+        }
+        if (isNil(fromRoleId) &amp;&amp; !role.isRawMaterialExtractor) {
+            throw new BadRequestException({ translate: &#x27;validation.this_role_cannot_initiate_a_chain&#x27; });
+        }
+        if (!isNil(fromRoleId) &amp;&amp; role.isRawMaterialExtractor) {
+            throw new BadRequestException({ translate: &#x27;validation.this_role_cannot_be_added_to_downstream&#x27; });
+        }
+        if (isNil(fromRoleId) &amp;&amp; node) {
+            throw new BadRequestException({ translate: &#x27;validation.this_role_cannot_initiate_a_chain&#x27; });
+        }
+    }
+
+    async getUpdateMetadataImpacts(metadataId: string, dto: UpdateSupplyChainNodeMetadataDto): Promise&lt;NodeImpacts&gt; {
+        const metadata &#x3D; await this.supplyChainNodeMetadataRepo.findById(metadataId);
+        const nodes &#x3D; await this.supplyChainNodeRepo.findBy({ chainId: metadata.chainId, roleId: metadata.roleId });
+        const nodeIds &#x3D; nodes.map((node) &#x3D;&gt; node.id);
+        const outputProductDefinitionIds &#x3D; uniq(nodes.flatMap((node) &#x3D;&gt; node.outputProductDefinitionIds));
+        const hasImpact &#x3D; difference(outputProductDefinitionIds, dto.outputProductDefinitionIds).length &gt; 0;
+
+        if (isEmpty(dto.outputProductDefinitionIds)) {
+            return this.getNodeImpacts({ chainId: metadata.chainId, deleteLineIds: nodeIds });
+        }
+
+        if (!hasImpact) {
+            return { deletedLineIds: [], deletedNodeIds: [], impactNodeIds: [] };
+        }
+
+        return this.getNodeImpacts({ chainId: metadata.chainId, impactNodeIds: [metadata.id] });
+    }
+
+    async getDeletionNodesImpact(dto: DeleteSupplyChainNodesDto): Promise&lt;NodeImpacts&gt; {
+        return this.getNodeImpacts({ chainId: dto.chainId, deleteLineIds: dto.nodeIds });
+    }
+
+    // eslint-disable-next-line sonarjs/cognitive-complexity
+    async getNodeImpacts(params: GetNodeImpactsParams): Promise&lt;NodeImpacts&gt; {
+        const { metadataMap, nodesGroup, parentNodesGroup, rootNodes } &#x3D; await this.prepareNodeImpactParams(params);
+
+        const deletedLineIds &#x3D; new Set(params.deleteLineIds);
+        const impactNodeIds &#x3D; new Set(params.impactNodeIds);
+        const deletedNodeIds &#x3D; new Set&lt;string&gt;();
+        const visitedNodeIds &#x3D; new Set&lt;string&gt;();
+        const traversedNodeIds &#x3D; new Set&lt;string&gt;();
+
+        const traverse &#x3D; (node: SupplyChainNodeEntity): void &#x3D;&gt; {
+            const metadata &#x3D; metadataMap[node.roleId];
+            const parentNodes &#x3D; nodesGroup[node.roleId].filter((node) &#x3D;&gt; !deletedLineIds.has(node.id));
+            const nextNodes &#x3D; parentNodesGroup[node.roleId] || [];
+            const isImpact &#x3D; nodesGroup[node.roleId].some(
+                (node) &#x3D;&gt; deletedLineIds.has(node.id) || impactNodeIds.has(metadata.id)
+            );
+            if (traversedNodeIds.has(metadata.id)) {
+                return;
+            }
+            if (visitedNodeIds.has(metadata.id)) {
+                throw new BadRequestException({ translate: &#x27;validation.cycle_detected&#x27; });
+            }
+            if (isEmpty(parentNodes)) {
+                deletedNodeIds.add(metadata.id);
+                impactNodeIds.delete(metadata.id);
+                for (const nextNode of nextNodes) {
+                    const metadataId &#x3D; metadataMap[nextNode.roleId].id;
+                    visitedNodeIds.delete(metadataId);
+                    traversedNodeIds.delete(metadataId);
+                    deletedLineIds.add(nextNode.id);
+                }
+            } else if (isImpact) {
+                impactNodeIds.add(metadata.id);
+                for (const nextNode of nextNodes) {
+                    impactNodeIds.add(metadataMap[nextNode.roleId].id);
+                }
+            }
+            visitedNodeIds.add(metadata.id);
+            for (const nextNode of nextNodes) traverse(nextNode);
+            traversedNodeIds.add(metadata.id);
+        };
+
+        for (const rootNode of rootNodes) traverse(rootNode);
+
+        return {
+            deletedLineIds: Array.from(deletedLineIds),
+            deletedNodeIds: Array.from(deletedNodeIds),
+            impactNodeIds: Array.from(impactNodeIds)
+        };
+    }
+
+    private async prepareNodeImpactParams(params: GetNodeImpactsParams): Promise&lt;NodeImpactsParams&gt; {
+        const [metadataList, nodes] &#x3D; await Promise.all([
+            this.supplyChainNodeMetadataRepo.findBy({ chainId: params.chainId }),
+            this.supplyChainNodeRepo.findBy({ chainId: params.chainId })
+        ]);
+
+        const metadataMap &#x3D; keyBy(metadataList, (metadata) &#x3D;&gt; metadata.roleId);
+        const nodesGroup &#x3D; groupBy(nodes, (node) &#x3D;&gt; node.roleId);
+        const parentNodesGroup &#x3D; groupBy(nodes, (node) &#x3D;&gt; node.fromRoleId);
+        const rootNodes &#x3D; nodes.filter((node) &#x3D;&gt; isNil(node.fromRoleId));
+
+        return {
+            metadataMap,
+            nodesGroup,
+            parentNodesGroup,
+            rootNodes
+        };
+    }
+
+    async processImpactNodes(impacts: NodeImpacts): Promise&lt;void&gt; {
+        const { deletedLineIds, deletedNodeIds, impactNodeIds } &#x3D; impacts;
+        if (!isEmpty(deletedLineIds)) {
+            await this.supplyChainNodeRepo.delete(deletedLineIds);
+        }
+
+        await this.calculateFieldService.deleteCalculateFields(concat(impactNodeIds, deletedNodeIds));
+        if (!isEmpty(deletedNodeIds)) {
+            await this.supplyChainNodeMetadataRepo.delete(deletedNodeIds);
+        }
+    }
+
+    async deleteSupplyChainNodes(dto: DeleteSupplyChainNodesDto): Promise&lt;void&gt; {
+        const nodeImpacts &#x3D; await this.getNodeImpacts({ chainId: dto.chainId, deleteLineIds: dto.nodeIds });
+        await this.processImpactNodes(nodeImpacts);
+    }
+
+    async deleteSupplyChainMetadata(metadataId: string): Promise&lt;void&gt; {
+        const { roleId, chainId } &#x3D; await this.supplyChainNodeMetadataRepo.findById(metadataId);
+        const nodes &#x3D; await this.supplyChainNodeRepo.findBy({ roleId, chainId });
+        const nodeIds &#x3D; nodes.map((node) &#x3D;&gt; node.id);
+        const nodeImpacts &#x3D; await this.getNodeImpacts({ chainId, deleteLineIds: nodeIds });
+        await this.processImpactNodes(nodeImpacts);
+    }
+
+    async updateSupplyChainMetadata(metadataId: string, dto: UpdateSupplyChainNodeMetadataDto): Promise&lt;void&gt; {
+        const metadata &#x3D; await this.supplyChainNodeMetadataRepo.findById(metadataId);
+        const nodeImpacts &#x3D; await this.getUpdateMetadataImpacts(metadataId, dto);
+        await this.processImpactNodes(nodeImpacts);
+
+        if (!nodeImpacts.deletedNodeIds.includes(metadataId)) {
+            await this.supplyChainNodeMetadataRepo.update({ id: metadataId }, { position: dto.position });
+            await this.supplyChainNodeRepo.update(
+                { roleId: metadata.roleId },
+                { outputProductDefinitionIds: dto.outputProductDefinitionIds }
+            );
+        }
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'SupplyChainNodeService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

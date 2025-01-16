@@ -1,0 +1,1627 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Global Trace BE documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">Global Trace BE documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Injectables</li>
+  <li class="breadcrumb-item" >PdfExportService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/pdf-exports/services/pdf-export.service.ts</code>
+        </p>
+
+
+
+
+
+            <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#convertWeb2Pdf" >convertWeb2Pdf</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#generateHomePageData" >generateHomePageData</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#generatePdf" >generatePdf</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#generateSupplierDetailPdf" >generateSupplierDetailPdf</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#generateSupplierMappingData" >generateSupplierMappingData</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#getBufferFileWeb2Pdf" >getBufferFileWeb2Pdf</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getExternalRiskIndicators" >getExternalRiskIndicators</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getPdfData" >getPdfData</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#getProductRiskListingsItems" >getProductRiskListingsItems</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getTracedSupplierIds" >getTracedSupplierIds</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(httpService: HttpService, cacheManager: Cache, orderService: <a href="../injectables/OrderService.html" target="_self">OrderService</a>, orderTraceService: <a href="../injectables/OrderTraceService.html" target="_self">OrderTraceService</a>, pdfExportTracingObjectService: <a href="../injectables/PdfExportTracingObjectService.html" target="_self">PdfExportTracingObjectService</a>, facilityService: <a href="../injectables/FacilityService.html" target="_self">FacilityService</a>, facilityRiskFilerService: <a href="../injectables/FacilityRiskFilerService.html" target="_self">FacilityRiskFilerService</a>, categoryService: <a href="../injectables/CategoryService.html" target="_self">CategoryService</a>, riskAssessmentService: <a href="../injectables/RiskAssessmentService.html" target="_self">RiskAssessmentService</a>, facilityRiskService: <a href="../injectables/FacilityRiskService.html" target="_self">FacilityRiskService</a>, commodityRiskService: <a href="../injectables/CommodityRiskService.html" target="_self">CommodityRiskService</a>, supplyChainTierService: <a href="../injectables/SupplyChainTierService.html" target="_self">SupplyChainTierService</a>, facilityOperationService: <a href="../injectables/FacilityOperationService.html" target="_self">FacilityOperationService</a>, businessDetailService: <a href="../injectables/BusinessDetailService.html" target="_self">BusinessDetailService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/pdf-exports/services/pdf-export.service.ts:41</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>httpService</td>
+                                                  
+                                                        <td>
+                                                                    <code>HttpService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>cacheManager</td>
+                                                  
+                                                        <td>
+                                                                    <code>Cache</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>orderService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/OrderService.html" target="_self" >OrderService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>orderTraceService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/OrderTraceService.html" target="_self" >OrderTraceService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>pdfExportTracingObjectService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/PdfExportTracingObjectService.html" target="_self" >PdfExportTracingObjectService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>facilityService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/FacilityService.html" target="_self" >FacilityService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>facilityRiskFilerService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/FacilityRiskFilerService.html" target="_self" >FacilityRiskFilerService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>categoryService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CategoryService.html" target="_self" >CategoryService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>riskAssessmentService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/RiskAssessmentService.html" target="_self" >RiskAssessmentService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>facilityRiskService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/FacilityRiskService.html" target="_self" >FacilityRiskService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>commodityRiskService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CommodityRiskService.html" target="_self" >CommodityRiskService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>supplyChainTierService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SupplyChainTierService.html" target="_self" >SupplyChainTierService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>facilityOperationService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/FacilityOperationService.html" target="_self" >FacilityOperationService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>businessDetailService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/BusinessDetailService.html" target="_self" >BusinessDetailService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="convertWeb2Pdf"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>convertWeb2Pdf</b></span>
+                        <a href="#convertWeb2Pdf"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>convertWeb2Pdf(token: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, timezone: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, pdfPreview: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, attemptCount: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="147"
+                                    class="link-to-prism">src/pdf-exports/services/pdf-export.service.ts:147</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Default value</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>token</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+                                            <td>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                                <td>timezone</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+                                            <td>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                                <td>pdfPreview</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+                                            <td>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                                <td>attemptCount</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+                                            <td>
+                                                    <code>1</code>
+                                            </td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#now" target="_self" >unknown</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="generateHomePageData"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>generateHomePageData</b></span>
+                        <a href="#generateHomePageData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>generateHomePageData(requester: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="173"
+                                    class="link-to-prism">src/pdf-exports/services/pdf-export.service.ts:173</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>requester</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#HomePageData" target="_self" >HomePageData</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="generatePdf"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>generatePdf</b></span>
+                        <a href="#generatePdf"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>generatePdf(orderId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, timezone: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, user: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>, language?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="68"
+                                    class="link-to-prism">src/pdf-exports/services/pdf-export.service.ts:68</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>orderId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>timezone</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>user</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>language</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    Yes
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;Buffer&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="generateSupplierDetailPdf"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>generateSupplierDetailPdf</b></span>
+                        <a href="#generateSupplierDetailPdf"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>generateSupplierDetailPdf(supplierId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, filters: <a href="../classes/FacilityRiskFilterDto.html" target="_self">FacilityRiskFilterDto</a>, timezone: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, language: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="116"
+                                    class="link-to-prism">src/pdf-exports/services/pdf-export.service.ts:116</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>supplierId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>filters</td>
+                                            <td>
+                                                            <code><a href="../classes/FacilityRiskFilterDto.html" target="_self" >FacilityRiskFilterDto</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>timezone</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>language</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;Buffer&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="generateSupplierMappingData"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>generateSupplierMappingData</b></span>
+                        <a href="#generateSupplierMappingData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>generateSupplierMappingData(user: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>, orderId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="177"
+                                    class="link-to-prism">src/pdf-exports/services/pdf-export.service.ts:177</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>user</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>orderId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#SupplierMappingData" target="_self" >Promise&lt;SupplierMappingData&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getBufferFileWeb2Pdf"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>getBufferFileWeb2Pdf</b></span>
+                        <a href="#getBufferFileWeb2Pdf"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getBufferFileWeb2Pdf(token: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, timezone: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, pdfPreview: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="136"
+                                    class="link-to-prism">src/pdf-exports/services/pdf-export.service.ts:136</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>token</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>timezone</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>pdfPreview</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#now" target="_self" >unknown</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getExternalRiskIndicators"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>getExternalRiskIndicators</b></span>
+                        <a href="#getExternalRiskIndicators"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getExternalRiskIndicators(tracingObjects: <a href="../undefineds/TracingSupplierType.html" target="_self">TracingSupplierType[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="187"
+                                    class="link-to-prism">src/pdf-exports/services/pdf-export.service.ts:187</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>tracingObjects</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#TracingSupplierType" target="_self" >TracingSupplierType[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;ExternalRiskIndicatorGroup[]&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPdfData"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>getPdfData</b></span>
+                        <a href="#getPdfData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getPdfData(token: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="59"
+                                    class="link-to-prism">src/pdf-exports/services/pdf-export.service.ts:59</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>token</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#now" target="_self" >unknown</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getProductRiskListingsItems"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>getProductRiskListingsItems</b></span>
+                        <a href="#getProductRiskListingsItems"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getProductRiskListingsItems(groupedSuppliers: <a href="../entitys/FacilityEntity.html" target="_self">Dictionary&lt;FacilityEntity[]&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="238"
+                                    class="link-to-prism">src/pdf-exports/services/pdf-export.service.ts:238</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>groupedSuppliers</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >Dictionary&lt;FacilityEntity[]&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#RiskItemType" target="_self" >Promise&lt;RiskItemType[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getTracedSupplierIds"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>getTracedSupplierIds</b></span>
+                        <a href="#getTracedSupplierIds"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getTracedSupplierIds(tracingObjects: <a href="../undefineds/TracingSupplierType.html" target="_self">TracingSupplierType[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="106"
+                                    class="link-to-prism">src/pdf-exports/services/pdf-export.service.ts:106</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>tracingObjects</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#TracingSupplierType" target="_self" >TracingSupplierType[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>string[]</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { HttpService } from &#x27;@nestjs/axios&#x27;;
+import { Inject, Injectable, NotFoundException } from &#x27;@nestjs/common&#x27;;
+import { Cache } from &#x27;cache-manager&#x27;;
+import { lastValueFrom } from &#x27;rxjs&#x27;;
+import { env } from &#x27;~config/env.config&#x27;;
+import { I18nHelper } from &#x27;~core/helpers/i18n.helper&#x27;;
+import { makeAToken } from &#x27;~core/helpers/string.helper&#x27;;
+import { FacilityService } from &#x27;~facilities/services/facility.service&#x27;;
+import { OrderTraceService } from &#x27;~order/services/order-trace.service&#x27;;
+import { OrderService } from &#x27;~order/services/order.service&#x27;;
+import {
+    DEFAULT_TOKEN_PDF,
+    DEFAULT_TOKEN_SUPPLIER_DETAIL_PDF
+} from &#x27;~pdf-exports/constants/default-token-pdf.constant&#x27;;
+import { TTL } from &#x27;~pdf-exports/constants/pdf-export.constant&#x27;;
+import { PREVIEW_PDF, SUPPLIER_DETAIL_PREVIEW_PDF } from &#x27;~pdf-exports/constants/pdf-preview.constant&#x27;;
+import { SupplierMappingData } from &#x27;~pdf-exports/types/supplier-mapping-data.type&#x27;;
+import { UserEntity } from &#x27;~users/entities/user.entity&#x27;;
+import { PdfExportTracingObjectService } from &#x27;./pdf-export-tracing-object.service&#x27;;
+import { FacilityRiskFilterDto } from &#x27;~risk-assessments/http/dto/facility-risk-filter.dto&#x27;;
+import { FacilityRiskFilerService } from &#x27;~facilities/services/facility-risk-filter.service&#x27;;
+import { HomePageData } from &#x27;~pdf-exports/types/homepage-data.type&#x27;;
+import { TracingSupplierType } from &#x27;~order/types/tracing-supplier.type&#x27;;
+import { Dictionary, first, groupBy } from &#x27;lodash&#x27;;
+import { FacilityEntity } from &#x27;~facilities/entities/facility.entity&#x27;;
+import { RiskItemType } from &#x27;~risk-assessments/types/risk-item.type&#x27;;
+import { RiskSourceEnum } from &#x27;~risk-assessments/enums/risk-source.enum&#x27;;
+import { CategoryService } from &#x27;~categories/services/category.service&#x27;;
+import { RiskAssessmentService } from &#x27;~risk-assessments/services/risk-assessment.service&#x27;;
+import { FacilityRiskService } from &#x27;~risk-assessments/services/facility-risk.service&#x27;;
+import { CategoryTypeEnum } from &#x27;~categories/enums/category-type.enum&#x27;;
+import { ExternalRiskIndicatorGroup } from &#x27;~pdf-exports/types/external-risk-indicator-group.type&#x27;;
+import { CommodityRiskService } from &#x27;~commodity-risks/services/commodity-risk.service&#x27;;
+import { In } from &#x27;typeorm&#x27;;
+import { CACHE_MANAGER } from &#x27;@nestjs/cache-manager&#x27;;
+import { SupplyChainTierService } from &#x27;~supply-chains/services/supply-chain-tier.service&#x27;;
+import { FacilityOperationService } from &#x27;~facilities/services/facility-operation.service&#x27;;
+import { BusinessDetailService } from &#x27;~site-details/services/business-detail.service&#x27;;
+
+@Injectable()
+export class PdfExportService {
+    constructor(
+        private httpService: HttpService,
+        @Inject(CACHE_MANAGER) private cacheManager: Cache,
+        private orderService: OrderService,
+        private orderTraceService: OrderTraceService,
+        private pdfExportTracingObjectService: PdfExportTracingObjectService,
+        private facilityService: FacilityService,
+        private facilityRiskFilerService: FacilityRiskFilerService,
+        private categoryService: CategoryService,
+        private riskAssessmentService: RiskAssessmentService,
+        private facilityRiskService: FacilityRiskService,
+        private commodityRiskService: CommodityRiskService,
+        private supplyChainTierService: SupplyChainTierService,
+        private facilityOperationService: FacilityOperationService,
+        private businessDetailService: BusinessDetailService
+    ) {}
+
+    async getPdfData(token: string) {
+        const data: string &#x3D; await this.cacheManager.get(token);
+        if (!data) {
+            throw new NotFoundException({ translate: &#x27;error.not_found.Token&#x27; });
+        }
+
+        return JSON.parse(data);
+    }
+
+    async generatePdf(orderId: string, timezone: string, user: UserEntity, language?: string): Promise&lt;Buffer&gt; {
+        const token &#x3D; env.APP_ENV &#x3D;&#x3D;&#x3D; &#x27;development&#x27; ? DEFAULT_TOKEN_PDF : makeAToken();
+        const [homePage, order, supplierMapping, tracingObjects, tiers] &#x3D; await Promise.all([
+            this.generateHomePageData(user),
+            this.orderService.getOrderById(user, orderId),
+            this.generateSupplierMappingData(user, orderId),
+            this.pdfExportTracingObjectService.generateTracingData(user, orderId),
+            this.supplyChainTierService.getTiers(user.role, true)
+        ]);
+
+        const countByRiskLevel &#x3D; this.pdfExportTracingObjectService.countFacilitiesByRiskLevel(tracingObjects);
+        const topFourIssues &#x3D; await this.pdfExportTracingObjectService.getTopFourIssues(tracingObjects);
+
+        const externalRiskIndicators &#x3D; await this.getExternalRiskIndicators(tracingObjects);
+        const tracedSupplierIds &#x3D; this.getTracedSupplierIds(tracingObjects);
+        const dataForMapExternalInfo &#x3D;
+            await this.facilityOperationService.findDataForMapExternalInfo(tracedSupplierIds);
+
+        for (const tracingObject of tracingObjects) {
+            if (tracingObject.supplier) {
+                I18nHelper.translateFacilityLocation(tracingObject.supplier);
+                this.facilityOperationService.mapWithAllExternalInfo(tracingObject.supplier, dataForMapExternalInfo);
+            }
+        }
+
+        const pdfData &#x3D; {
+            homePage,
+            assessment: { order, countByRiskLevel, topFourIssues, externalRiskIndicators },
+            supplierMapping,
+            tracingObjects,
+            language,
+            tiers
+        };
+
+        await this.cacheManager.set(token, JSON.stringify({ pdfData }), TTL);
+        return this.getBufferFileWeb2Pdf(token, timezone, PREVIEW_PDF);
+    }
+
+    private getTracedSupplierIds(tracingObjects: TracingSupplierType[]): string[] {
+        return tracingObjects.reduce((acc, { supplier }) &#x3D;&gt; {
+            if (supplier) {
+                acc.push(supplier.id);
+            }
+
+            return acc;
+        }, []);
+    }
+
+    async generateSupplierDetailPdf(
+        supplierId: string,
+        filters: FacilityRiskFilterDto,
+        timezone: string,
+        language: string
+    ): Promise&lt;Buffer&gt; {
+        const token &#x3D; env.APP_ENV &#x3D;&#x3D;&#x3D; &#x27;development&#x27; ? DEFAULT_TOKEN_SUPPLIER_DETAIL_PDF : makeAToken();
+        const supplierDetail &#x3D; await this.facilityService.findInformationSupplierById(supplierId, filters);
+        const filterParams &#x3D; await this.facilityRiskFilerService.getFilterParams(filters);
+
+        const pdfData &#x3D; {
+            supplierDetail,
+            filterParams,
+            language
+        };
+
+        await this.cacheManager.set(token, JSON.stringify({ pdfData }), TTL);
+        return this.getBufferFileWeb2Pdf(token, timezone, SUPPLIER_DETAIL_PREVIEW_PDF);
+    }
+
+    private async getBufferFileWeb2Pdf(token: string, timezone: string, pdfPreview: string) {
+        try {
+            const { data } &#x3D; await this.convertWeb2Pdf(token, timezone, pdfPreview);
+            return data;
+        } finally {
+            if (env.APP_ENV !&#x3D;&#x3D; &#x27;development&#x27;) {
+                await this.cacheManager.del(token);
+            }
+        }
+    }
+
+    private async convertWeb2Pdf(token: string, timezone: string, pdfPreview: string, attemptCount: number &#x3D; 1) {
+        try {
+            let convertedPageUrl &#x3D; &#x60;${env.WEB_URL}/${pdfPreview}?token&#x3D;${token}&#x60;;
+
+            return await lastValueFrom(
+                this.httpService.post(
+                    &#x60;${env.WEB_2_PDF_API_URL}/pdf/converts&#x60;,
+                    {
+                        url: convertedPageUrl,
+                        waitFunction: &#x27;window.isLoadPdfCompleted&#x27;,
+                        timezone
+                    },
+                    //eslint-disable-next-line @typescript-eslint/naming-convention
+                    { headers: { &#x27;api-key&#x27;: env.WEB_2_PDF_API_KEY }, responseType: &#x27;arraybuffer&#x27; }
+                )
+            );
+        } catch (error) {
+            console.error(error.response || error);
+            if (attemptCount &gt; 3) {
+                throw error;
+            }
+
+            await this.convertWeb2Pdf(token, timezone, pdfPreview, attemptCount + 1);
+        }
+    }
+
+    private generateHomePageData(requester: UserEntity): HomePageData {
+        return { ...requester.currentFacility, phoneNumber: requester.phoneNumber };
+    }
+
+    private async generateSupplierMappingData(user: UserEntity, orderId: string): Promise&lt;SupplierMappingData&gt; {
+        const [traceMappingSuppliers, traceResultList, orderSuppliers] &#x3D; await Promise.all([
+            this.orderTraceService.getTraceResultMapping(user, orderId),
+            this.orderTraceService.getTraceResultList(user, orderId),
+            this.orderTraceService.getSupplierList(user, orderId)
+        ]);
+
+        return { traceMappingSuppliers, traceResultList, orderSuppliers };
+    }
+
+    async getExternalRiskIndicators(tracingObjects: TracingSupplierType[]): Promise&lt;ExternalRiskIndicatorGroup[]&gt; {
+        const suppliers &#x3D; tracingObjects.reduce((acc, { supplier }) &#x3D;&gt; {
+            if (supplier) {
+                acc.push(supplier);
+            }
+            return acc;
+        }, []);
+        const groupedSuppliers &#x3D; groupBy(suppliers, &#x27;country.country&#x27;);
+        const [riskMethodology, goodRiskItems, externalRiskIndicatorCategories] &#x3D; await Promise.all([
+            this.riskAssessmentService.getRiskAssessment(),
+            this.getProductRiskListingsItems(groupedSuppliers),
+            this.categoryService.all({ type: CategoryTypeEnum.EXTERNAL_RISK_INDICATOR })
+        ]);
+        const groupedRiskItemsByCountry &#x3D; groupBy(goodRiskItems, ({ country }) &#x3D;&gt; country);
+        const externalRiskIndicatorGroup: ExternalRiskIndicatorGroup[] &#x3D; [];
+
+        for (const [country, suppliers] of Object.entries(groupedSuppliers)) {
+            const riskItemsByCountry &#x3D; groupedRiskItemsByCountry[country];
+            const groupedRiskItemsByGood &#x3D; groupBy(riskItemsByCountry, ({ additionData }) &#x3D;&gt; additionData.good);
+
+            const riskIndicatorGroup &#x3D; Object.entries(groupedRiskItemsByGood).flatMap(([good, riskItemsByGood]) &#x3D;&gt; {
+                const groupedRiskItemsByCategory &#x3D; groupBy(riskItemsByGood, ({ indicator }) &#x3D;&gt; indicator?.categoryId);
+                const riskIndicators &#x3D; this.facilityRiskService.getAndCalculateExternalRiskIndicators(
+                    groupedRiskItemsByCategory,
+                    riskMethodology,
+                    first(suppliers)
+                );
+                return {
+                    good,
+                    riskIndicators: this.facilityService.mapExternalRiskIndicators(
+                        riskIndicators,
+                        externalRiskIndicatorCategories
+                    )
+                };
+            });
+
+            const externalRiskIndicators &#x3D; {
+                countryRisk: {
+                    country: first(suppliers)?.country,
+                    risk: await this.facilityRiskService.getCountryRisk(first(suppliers)),
+                    category: externalRiskIndicatorCategories.find(({ name }) &#x3D;&gt; name &#x3D;&#x3D;&#x3D; &#x27;Country based risk&#x27;)
+                },
+                riskIndicatorGroup
+            };
+
+            externalRiskIndicatorGroup.push(externalRiskIndicators);
+        }
+
+        return externalRiskIndicatorGroup;
+    }
+
+    private async getProductRiskListingsItems(groupedSuppliers: Dictionary&lt;FacilityEntity[]&gt;): Promise&lt;RiskItemType[]&gt; {
+        const promisedGoodRiskItemGroup &#x3D; [];
+
+        for (const suppliers of Object.values(groupedSuppliers)) {
+            let goods: string[] &#x3D; [];
+            for (const supplier of suppliers) {
+                if (supplier.type?.isRawMaterialExtractor) {
+                    const supplierGoods &#x3D; await this.businessDetailService.getSelectedGoods(supplier.typeId);
+                    if (supplierGoods?.length) {
+                        goods &#x3D; goods.concat(supplierGoods);
+                    }
+                } else if (supplier.goods?.length) {
+                    goods &#x3D; goods.concat(supplier.goods);
+                }
+            }
+
+            const countryId &#x3D; first(suppliers)?.country?.id;
+            if (!countryId || !goods.length) {
+                continue;
+            }
+
+            promisedGoodRiskItemGroup.push(
+                this.commodityRiskService.find({
+                    where: { countryId, commodity: In(goods) },
+                    relations: [&#x27;country&#x27;, &#x27;subIndicator&#x27;, &#x27;subIndicator.indicator&#x27;, &#x27;subIndicator.indicator.category&#x27;]
+                })
+            );
+        }
+
+        const goodRiskItemGroup &#x3D; await Promise.all(promisedGoodRiskItemGroup);
+
+        return goodRiskItemGroup
+            .flatMap((goodRiskItems) &#x3D;&gt;
+                goodRiskItems.map((goodRiskItem) &#x3D;&gt; ({
+                    ...goodRiskItem,
+                    country: goodRiskItem.country.country,
+                    indicator: goodRiskItem.subIndicator?.indicator,
+                    source: RiskSourceEnum.PRODUCT_RISK_LISTINGS,
+                    additionData: { good: goodRiskItem.commodity }
+                }))
+            )
+            .filter(({ indicator, subIndicator, severity }) &#x3D;&gt; severity &amp;&amp; indicator &amp;&amp; subIndicator);
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'PdfExportService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

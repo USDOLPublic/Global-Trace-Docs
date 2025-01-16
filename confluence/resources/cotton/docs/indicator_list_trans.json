@@ -1,0 +1,1793 @@
+[
+  {
+    "id": "5729561f-f5d8-4263-9780-8067fbffa957",
+    "name": "Labor",
+    "translation": {
+      "en": "Labor",
+      "ur": "مزدور"
+    },
+    "index": 0
+  },
+  {
+    "id": "1b29d6f8-f506-459d-868f-011b6cdd65e2",
+    "name": "Occupational Safety & Health",
+    "translation": {
+      "en": "Occupational Safety & Health",
+      "ur": "پیشہ ورانہ حفاظت اور صحت"
+    },
+    "index": 1
+  },
+  {
+    "id": "933bf43f-71a9-47b0-9f0b-daba89314e5b",
+    "name": "Due Diligence Management System",
+    "translation": {
+      "en": "Due Diligence Management System",
+      "ur": "ڈیو ڈیلیجنس مینجمنٹ سسٹم"
+    },
+    "index": 2
+  },
+  {
+    "id": "db9e6e3b-920c-4871-b8c2-77a32ad370be",
+    "name": "Product",
+    "translation": {
+      "en": "Product",
+      "ur": "پروڈکٹ"
+    },
+    "index": 3
+  },
+  {
+    "id": "7a81d1bf-0c10-47da-b97a-59411fdb0354",
+    "name": "Freedom of Association",
+    "translation": {
+      "en": "Freedom of Association",
+      "ur": "سوسائٹی کی آزادی"
+    },
+    "index": 4
+  },
+  {
+    "id": "83f52169-f499-45dc-af2e-59bf82d33434",
+    "name": "Discrimination",
+    "translation": {
+      "en": "Discrimination",
+      "ur": "امتیازی سلوک"
+    },
+    "index": 6
+  },
+  {
+    "id": "cfd62b65-5c37-455e-a488-4f44e8050cd5",
+    "name": "Induced addiction to illegal substances",
+    "translation": {
+      "en": "Induced addiction to illegal substances",
+      "ur": "غیر قانونی مادوں کی حوصلہ افزائی کی لت"
+    },
+    "index": 7
+  },
+  {
+    "id": "46a643e3-372a-4d63-baf7-37b7c26b7763",
+    "name": "Abuse of vulnerability",
+    "translation": {
+      "en": "Abuse of vulnerability",
+      "ur": "کمزوری کا غلط استعمال"
+    },
+    "index": 8
+  },
+  {
+    "id": "26259c05-5e8e-41ef-ab8c-f269f242ba33",
+    "name": "Internal or foreign migrants",
+    "translation": {
+      "en": "Internal or foreign migrants",
+      "ur": "اندرونی یا غیر ملکی تارکین وطن"
+    },
+    "index": 9
+  },
+  {
+    "id": "3ca9794e-d30c-4d7f-bcc8-5d1bda07439a",
+    "name": "Minority groups",
+    "translation": {
+      "en": "Minority groups",
+      "ur": "اقلیتی گروہ"
+    },
+    "index": 10
+  },
+  {
+    "id": "1e241ae2-4c1e-4eea-9ca2-877c0ddce0d0",
+    "name": "Multiple dependency on employer (jobs for relatives, housing)",
+    "translation": {
+      "en": "Multiple dependency on employer (jobs for relatives, housing)",
+      "ur": "آجر پر متعدد انحصار (رشتہ داروں کے لیے ملازمتیں، رہائش)"
+    },
+    "index": 11
+  },
+  {
+    "id": "8cb70019-e559-49e9-bb4c-288b4af752d7",
+    "name": "Pre-existence of a dependency relationship with employer",
+    "translation": {
+      "en": "Pre-existence of a dependency relationship with employer",
+      "ur": "آجر کے ساتھ انحصار کے تعلقات کا پہلے سے وجود"
+    },
+    "index": 12
+  },
+  {
+    "id": "f067848a-0945-4d68-9aa5-69933fcefbda",
+    "name": "Religious retribution",
+    "translation": {
+      "en": "Religious retribution",
+      "ur": "مذہبی انتقام"
+    },
+    "index": 13
+  },
+  {
+    "id": "a36a9023-d8b7-4be7-9002-3a63165acabe",
+    "name": "Seasonal or temporary labor",
+    "translation": {
+      "en": "Seasonal or temporary labor",
+      "ur": "موسمی یا عارضی مشقت"
+    },
+    "index": 14
+  },
+  {
+    "id": "76804122-6b4d-4699-8f02-01f9dbc1d632",
+    "name": "Abusive working and living conditions",
+    "translation": {
+      "en": "Abusive working and living conditions",
+      "ur": "غلط کام کرنے اور رہنے کے حالات"
+    },
+    "index": 15
+  },
+  {
+    "id": "30ceb0d9-caca-4b10-80f3-a3467f88fced",
+    "name": "Accommodation does not comply with health, safety, and occupation requirements",
+    "translation": {
+      "en": "Accommodation does not comply with health, safety, and occupation requirements",
+      "ur": "رہائش صحت، حفاظت اور پیشے کے تقاضوں کی تعمیل نہیں کرتی ہے۔"
+    },
+    "index": 16
+  },
+  {
+    "id": "b9e22e0f-273f-417c-8f58-26351412d2fe",
+    "name": "Alternate forms of punishment (depriation of food, water, sleep)",
+    "translation": {
+      "en": "Alternate forms of punishment (depriation of food, water, sleep)",
+      "ur": "سزا کی متبادل شکلیں (کھانے، پانی، نیند سے محرومی)"
+    },
+    "index": 17
+  },
+  {
+    "id": "73e1efc9-80fe-4c2c-b35c-8dfa1aca25db",
+    "name": "Bonded labor",
+    "translation": {
+      "en": "Bonded labor",
+      "ur": "باونڈڈلیبر"
+    },
+    "index": 18
+  },
+  {
+    "id": "c69e24b8-1d6a-4374-a961-86507f843a26",
+    "name": "Constant surveillance",
+    "translation": {
+      "en": "Constant surveillance",
+      "ur": "مسلسل نگرانی"
+    },
+    "index": 19
+  },
+  {
+    "id": "d2576e71-7b05-42f1-93dd-be1c2c94d2e4",
+    "name": "Deterioration in working conditions",
+    "translation": {
+      "en": "Deterioration in working conditions",
+      "ur": "کام کے حالات میں بگاڑ"
+    },
+    "index": 20
+  },
+  {
+    "id": "20da15dd-12ad-4531-aa1c-c48d810c0382",
+    "name": "Extra work for breaching labor discipline",
+    "translation": {
+      "en": "Extra work for breaching labor discipline",
+      "ur": "لیبر ڈسپلن کی خلاف ورزی کے لیے اضافی کام"
+    },
+    "index": 21
+  },
+  {
+    "id": "9b997d18-f2ba-44bb-844e-d0811d650cfc",
+    "name": "Forced engagement in illicit activities",
+    "translation": {
+      "en": "Forced engagement in illicit activities",
+      "ur": "غیر قانونی سرگرمیوں میں زبردستی ملوث ہونا"
+    },
+    "index": 22
+  },
+  {
+    "id": "e06ba0d7-389b-4e4a-8cd5-f29bd9f8615f",
+    "name": "Inadequate fire saftey equipment and training",
+    "translation": {
+      "en": "Inadequate fire saftey equipment and training",
+      "ur": "آگ سے بچاؤ کے آلات اور تربیت ناکافی ہے۔"
+    },
+    "index": 23
+  },
+  {
+    "id": "18253d23-f620-4c81-9777-56a0080677a5",
+    "name": "Inadequate lighting in facility",
+    "translation": {
+      "en": "Inadequate lighting in facility",
+      "ur": "سہولت  یا فیکٹری میں ناکافی روشنی"
+    },
+    "index": 24
+  },
+  {
+    "id": "c3934ef0-5776-4405-8471-65aec6725cff",
+    "name": "Inadequate medical assistance for work-related accidents",
+    "translation": {
+      "en": "Inadequate medical assistance for work-related accidents",
+      "ur": "کام سے متعلق حادثات کے لیے ناکافی طبی امداد"
+    },
+    "index": 25
+  },
+  {
+    "id": "b9cba8a9-25cd-4aa8-bbcf-cddd64b2aefa",
+    "name": "Inadequate safety railings on raised platforms",
+    "translation": {
+      "en": "Inadequate safety railings on raised platforms",
+      "ur": " بلندی پر بنائے گئے پلیٹ فارمز پر ناکافی حفاظتی ریلنگ"
+    },
+    "index": 26
+  },
+  {
+    "id": "f7342cd6-6aa4-440a-a19e-bd976d743a6d",
+    "name": "Inadequate shiedling from rotating or moving components",
+    "translation": {
+      "en": "Inadequate shiedling from rotating or moving components",
+      "ur": "گھومنے یا حرکت کرنے والے اجزاء سے ناکافی شیڈنگ"
+    },
+    "index": 27
+  },
+  {
+    "id": "38a98c7f-bd09-47c2-af5c-7c8de1aedcb5",
+    "name": "Inadequate training for specialised machinery",
+    "translation": {
+      "en": "Inadequate training for specialised machinery",
+      "ur": "خصوصی مشینری کے لیے ناکافی تربیت"
+    },
+    "index": 28
+  },
+  {
+    "id": "e27785f4-7dc9-40da-b6a9-b71dade17ae4",
+    "name": "Locked in workplace or living quarters",
+    "translation": {
+      "en": "Locked in workplace or living quarters",
+      "ur": "کام کی جگہ یا رہنے والے کوارٹرز میں بند"
+    },
+    "index": 29
+  },
+  {
+    "id": "0a993843-8ccc-40ef-846b-beab744dece3",
+    "name": "Inadequate training for use of chemicals and hazardous substances",
+    "translation": {
+      "en": "Inadequate training for use of chemicals and hazardous substances",
+      "ur": "کیمیکلز اور خطرناک مادوں کے استعمال کے لیے ناکافی تربیت"
+    },
+    "index": 30
+  },
+  {
+    "id": "b35efc8d-a281-4974-a2ba-6bebe211484a",
+    "name": "Inadequate provision of PPE (e.g. dust masks, ear protection)",
+    "translation": {
+      "en": "Inadequate provision of PPE (e.g. dust masks, ear protection)",
+      "ur": "پی پی ای کی ناکافی فراہمی (مثلاً ڈسٹ ماسک، کان کی حفاظت)"
+    },
+    "index": 31
+  },
+  {
+    "id": "03d377db-024f-4953-a5fc-7d4cc21c3cd0",
+    "name": "Legally insufficient rest periods after consecutive hours of work",
+    "translation": {
+      "en": "Legally insufficient rest periods after consecutive hours of work",
+      "ur": "مسلسل کام کے گھنٹوں کے بعد قانونی طور پر ناکافی آرام کی مدت"
+    },
+    "index": 32
+  },
+  {
+    "id": "d18b2277-6741-420f-a486-a213bc92ccad",
+    "name": "No changes to work duties after sickness or injury",
+    "translation": {
+      "en": "No changes to work duties after sickness or injury",
+      "ur": "بیماری یا چوٹ کے بعد کام کے فرائض میں کوئی تبدیلی نہیں۔"
+    },
+    "index": 33
+  },
+  {
+    "id": "cb926cc2-1f7b-47a1-90c8-e55a83aa1a63",
+    "name": "No changes to work duties for pregnant workers",
+    "translation": {
+      "en": "No changes to work duties for pregnant workers",
+      "ur": "حاملہ کارکنوں کے لیے کام کے فرائض میں کوئی تبدیلی نہیں کی گئی۔"
+    },
+    "index": 34
+  },
+  {
+    "id": "a7c00c88-28fb-43b1-921c-124fb0537aba",
+    "name": "No freedom to resign in accordance with legal requirements",
+    "translation": {
+      "en": "No freedom to resign in accordance with legal requirements",
+      "ur": "قانونی تقاضوں کے مطابق استعفیٰ دینے کی آزادی نہیں۔"
+    },
+    "index": 35
+  },
+  {
+    "id": "e6a1b3f8-bf2e-4322-a7d7-f07892605380",
+    "name": "No or low mechanization in workplace",
+    "translation": {
+      "en": "No or low mechanization in workplace",
+      "ur": "کام کی جگہ پر میکانائزیشن نہیں یا کم ہے۔"
+    },
+    "index": 36
+  },
+  {
+    "id": "5a37c507-d81e-47dc-a16b-a1fcfeea97e7",
+    "name": "No or low occurrences of standards-based audits",
+    "translation": {
+      "en": "No or low occurrences of standards-based audits",
+      "ur": "معیارات پر مبنی آڈٹ کی کوئی یا کم موجودگی"
+    },
+    "index": 37
+  },
+  {
+    "id": "7387ad85-b86e-4856-bdd4-39be6456d9ed",
+    "name": "Reduced freedom to terminate contract after training or other benefit paid by employer",
+    "translation": {
+      "en": "Reduced freedom to terminate contract after training or other benefit paid by employer",
+      "ur": "تربیت یا آجر کے ذریعہ ادا کردہ دیگر فوائد کے بعد معاہدہ ختم کرنے کی آزادی میں کمی"
+    },
+    "index": 38
+  },
+  {
+    "id": "0a58842e-8d5e-4c7c-a60e-16dd165296ff",
+    "name": "Removal of rights or privileges",
+    "translation": {
+      "en": "Removal of rights or privileges",
+      "ur": "حقوق یا مراعات کا خاتمہ"
+    },
+    "index": 39
+  },
+  {
+    "id": "6c96b3d3-7cda-431c-9cf5-39a0a295621b",
+    "name": "Verbal working arrangements/no written agreement",
+    "translation": {
+      "en": "Verbal working arrangements/no written agreement",
+      "ur": "زبانی کام کے انتظامات/کوئی تحریری معاہدہ نہیں۔"
+    },
+    "index": 40
+  },
+  {
+    "id": "6d85adfc-75e2-4e97-a60a-96098153572a",
+    "name": "Workers are focred to engage in work that is unreasonably hazardous",
+    "translation": {
+      "en": "Workers are focred to engage in work that is unreasonably hazardous",
+      "ur": "کارکنوں کو ایسے کام میں مشغول کرنے پر مجبور کیا جاتا ہے جو غیر معقول حد تک خطرناک ہو۔"
+    },
+    "index": 41
+  },
+  {
+    "id": "cf6b5cd1-0147-40ef-90ce-11ae90c862f4",
+    "name": "Workers are forced to engage in work under extreme environmental conditions",
+    "translation": {
+      "en": "Workers are forced to engage in work under extreme environmental conditions",
+      "ur": "مزدور انتہائی ماحولیاتی حالات میں کام میں مشغول ہونے پر مجبور ہیں۔"
+    },
+    "index": 42
+  },
+  {
+    "id": "ab2b9069-fc5c-4e1a-92f2-cab0827fdb52",
+    "name": "Workers are not trained on emergency preparedness",
+    "translation": {
+      "en": "Workers are not trained on emergency preparedness",
+      "ur": "کارکنوں کو ہنگامی تیاریوں کی تربیت نہیں دی جاتی"
+    },
+    "index": 43
+  },
+  {
+    "id": "43a1c785-83f1-48eb-8cc3-cc888d8263b6",
+    "name": "Identity or travel documents kept by employer (suggestion that it may be returned)",
+    "translation": {
+      "en": "Identity or travel documents kept by employer (suggestion that it may be returned)",
+      "ur": "آجر کی طرف سے رکھی گئی شناخت یا سفری دستاویزات (تجویز کہ اسے واپس کیا جا سکتا ہے)"
+    },
+    "index": 44
+  },
+  {
+    "id": "dc7c5aa9-d702-47c4-91db-fa46ab0b7169",
+    "name": "Workers are punished if they remove themselves from work situations that they believe present an imminent and serious danger to health",
+    "translation": {
+      "en": "Workers are punished if they remove themselves from work situations that they believe present an imminent and serious danger to health",
+      "ur": "کارکنوں کو سزا دی جاتی ہے اگر وہ اپنے آپ کو کام کے حالات سے ہٹاتے ہیں جن کے بارے میں ان کے خیال میں صحت کے لیے ایک نا گزیر اور سنگین خطرہ ہے۔"
+    },
+    "index": 45
+  },
+  {
+    "id": "0c92d9d0-eabc-4557-9198-68a2b421bb9d",
+    "name": "Workplace does not comply with health, safety, and occupation requirements",
+    "translation": {
+      "en": "Workplace does not comply with health, safety, and occupation requirements",
+      "ur": "کام کی جگہ صحت، حفاظت اور پیشے کے تقاضوں کی تعمیل نہیں کرتی ہے۔"
+    },
+    "index": 46
+  },
+  {
+    "id": "dcd21405-be59-41c7-ba12-243fc115aa5e",
+    "name": "Workplace is not designed for emergency evacuation (e.g. locked emergency exits)",
+    "translation": {
+      "en": "Workplace is not designed for emergency evacuation (e.g. locked emergency exits)",
+      "ur": "کام کی جگہ کو ہنگامی انخلاء کے لیے ڈیزائن نہیں کیا گیا ہے (مثلاً لاک ایمرجنسی ایگزٹ)"
+    },
+    "index": 47
+  },
+  {
+    "id": "b8c4cb3d-7050-4383-8cd5-1e8f45b0b232",
+    "name": "Child labor",
+    "translation": {
+      "en": "Child labor",
+      "ur": "بچوں سے مشقت لینا"
+    },
+    "index": 48
+  },
+  {
+    "id": "b7f51d44-f482-4448-801d-9349e64c8e68",
+    "name": "Child paid less than adults for same work",
+    "translation": {
+      "en": "Child paid less than adults for same work",
+      "ur": "بچے کو ایک ہی کام کے لیے بالغوں سے کم معاوضہ ملتا ہے۔"
+    },
+    "index": 49
+  },
+  {
+    "id": "824faa97-a7b2-4d88-818d-56e24a901389",
+    "name": "Child paid little or nothing",
+    "translation": {
+      "en": "Child paid little or nothing",
+      "ur": "بچے کو بہت کم یا کچھ نہیں دیا۔"
+    },
+    "index": 50
+  },
+  {
+    "id": "65708162-79fa-4c05-9d33-ed149a3a13b6",
+    "name": "Child working during school hours",
+    "translation": {
+      "en": "Child working during school hours",
+      "ur": "اسکول کے اوقات میں کام کرنے والا بچہ"
+    },
+    "index": 51
+  },
+  {
+    "id": "5311a91c-2170-4ecd-9a51-1b83d191150b",
+    "name": "Children within facility but not working",
+    "translation": {
+      "en": "Children within facility but not working",
+      "ur": "بچے سہولت کے اندر ہیں لیکن کام نہیں کر رہے ہیں۔"
+    },
+    "index": 52
+  },
+  {
+    "id": "a6e9c682-c203-4fd4-88da-6d1f37a9a37d",
+    "name": "Children within facility for food provision",
+    "translation": {
+      "en": "Children within facility for food provision",
+      "ur": "خوراک کی فراہمی کے لیے سہولت کے اندر بچے"
+    },
+    "index": 53
+  },
+  {
+    "id": "5ad225bc-fff4-44b6-92dc-583ea806486e",
+    "name": "Children working alongside family member(s)",
+    "translation": {
+      "en": "Children working alongside family member(s)",
+      "ur": "خاندان کے ارکان کے ساتھ کام کرنے والے بچے"
+    },
+    "index": 54
+  },
+  {
+    "id": "5e08e431-0bce-4dd8-9e9d-a771a35f229a",
+    "name": "Children working in isolation from family",
+    "translation": {
+      "en": "Children working in isolation from family",
+      "ur": "خاندان سے الگ تھلگ کام کرنے والے بچے"
+    },
+    "index": 55
+  },
+  {
+    "id": "20496bb6-048a-4797-a21f-55daed5c2749",
+    "name": "Hazardous work",
+    "translation": {
+      "en": "Hazardous work",
+      "ur": "خطر ناک کام"
+    },
+    "index": 56
+  },
+  {
+    "id": "5cdcabae-1651-42eb-a199-e34f330f6253",
+    "name": "Lax system to verify age of worker",
+    "translation": {
+      "en": "Lax system to verify age of worker",
+      "ur": "ورکر کی عمر کی تصدیق کے لیے کمزور نظام"
+    },
+    "index": 57
+  },
+  {
+    "id": "82c96941-88b8-4fda-a0ae-356b831fe874",
+    "name": "Migrant child",
+    "translation": {
+      "en": "Migrant child",
+      "ur": "مہاجر بچہ"
+    },
+    "index": 58
+  },
+  {
+    "id": "86327ea6-7711-420a-ac7d-55003878ddc2",
+    "name": "No system to verify age of workers",
+    "translation": {
+      "en": "No system to verify age of workers",
+      "ur": "کارکنوں کی عمر کی تصدیق کا کوئی نظام نہیں۔"
+    },
+    "index": 59
+  },
+  {
+    "id": "a505a12e-1932-4b49-8e7c-d2b69ab561ad",
+    "name": "Non hazardous work",
+    "translation": {
+      "en": "Non hazardous work",
+      "ur": "غیر  خطر ناک  کام"
+    },
+    "index": 60
+  },
+  {
+    "id": "d83ec20d-20a2-427d-bc31-3d2d9d953b24",
+    "name": "Work at night",
+    "translation": {
+      "en": "Work at night",
+      "ur": "رات کو کام کرنا"
+    },
+    "index": 61
+  },
+  {
+    "id": "e29c7a42-3895-46ab-8d41-1b43870be171",
+    "name": "Work longer hours than allowed by law",
+    "translation": {
+      "en": "Work longer hours than allowed by law",
+      "ur": "قانون طور پر درج وقت سے زیادہ  کام کروانا۔"
+    },
+    "index": 62
+  },
+  {
+    "id": "86500804-5ad8-4705-9919-7f6263d9553b",
+    "name": "Workers aged under 15",
+    "translation": {
+      "en": "Workers aged under 15",
+      "ur": " پندرہ  سال سے کم عمر کے کارکن"
+    },
+    "index": 63
+  },
+  {
+    "id": "ca9181ff-c92f-4416-9403-c77d98fa4d7b",
+    "name": "Goods produced with child labor (ILAB List of Goods)",
+    "translation": {
+      "en": "Goods produced with child labor (ILAB List of Goods)",
+      "ur": "چائلڈ لیبر کے ساتھ تیار کردہ سامان (ILAB سامان کی فہرست)"
+    },
+    "index": 64
+  },
+  {
+    "id": "5b42268b-7029-456d-b3d4-bb8cee6b60e8",
+    "name": "Debt bondage",
+    "translation": {
+      "en": "Debt bondage",
+      "ur": "قرض کی غلامی ۔"
+    },
+    "index": 65
+  },
+  {
+    "id": "7f3b5a3b-d5f7-4ba9-9de0-77a4ce220990",
+    "name": "Forced to work for indeterminate period in order to repay outstanding debt or wage advances",
+    "translation": {
+      "en": "Forced to work for indeterminate period in order to repay outstanding debt or wage advances",
+      "ur": "بقایا قرض یا اجرت کی پیشگی ادائیگی کے لیے غیر معینہ مدت کے لیے کام کرنے پر مجبور"
+    },
+    "index": 66
+  },
+  {
+    "id": "5e2176ba-efef-4a4b-a200-ce7987080940",
+    "name": "Paying off debt to the cooperative, association, buyer or permit holder, and all or most of their income is used to pay back their debts",
+    "translation": {
+      "en": "Paying off debt to the cooperative, association, buyer or permit holder, and all or most of their income is used to pay back their debts",
+      "ur": "کوآپریٹو، ایسوسی ایشن، خریدار یا پرمٹ ہولڈر کو قرض کی ادائیگی، اوران کی تمام یا زیادہ تر آمدنی ان کے قرضوں کی ادائیگی کے لیے استعمال ہوتی ہے۔"
+    },
+    "index": 67
+  },
+  {
+    "id": "5ff85829-5422-4bce-a376-1fd7adad0928",
+    "name": "Paying off debt to the cooperative, association, buyer or permit holder, and their debt has increased over time proportional to their income",
+    "translation": {
+      "en": "Paying off debt to the cooperative, association, buyer or permit holder, and their debt has increased over time proportional to their income",
+      "ur": "کوآپریٹو، ایسوسی ایشن، خریدار یا پرمٹ ہولڈر کو قرض کی ادائیگی، اور ان کا قرض ان کی آمدنی کے متناسب وقت کے ساتھ بڑھتا گیا"
+    },
+    "index": 68
+  },
+  {
+    "id": "3aa1b63c-bec4-4af3-b8d1-280c650b650c",
+    "name": "Contractors charge worker advanced fees or share of crop",
+    "translation": {
+      "en": "Contractors charge worker advanced fees or share of crop",
+      "ur": "ٹھیکیدار کارکن سے ایڈوانس فیس یا فصل کا حصہ وصول کرتے ہیں۔"
+    },
+    "index": 69
+  },
+  {
+    "id": "ebae9805-31a2-4620-8987-fc0c9b2f4a51",
+    "name": "Landowner making advanced payment to worker",
+    "translation": {
+      "en": "Landowner making advanced payment to worker",
+      "ur": "زمین کا مالک مزدور کو پیشگی ادائیگی کر رہا ہے۔"
+    },
+    "index": 70
+  },
+  {
+    "id": "eb82dd6a-74d7-4bd2-bdf4-3f829774a172",
+    "name": "Deception",
+    "translation": {
+      "en": "Deception",
+      "ur": "دھوکہ"
+    },
+    "index": 71
+  },
+  {
+    "id": "8ca33810-c2d2-49e8-9906-d09917fdc320",
+    "name": "Deception about job location or employer",
+    "translation": {
+      "en": "Deception about job location or employer",
+      "ur": "ملازمت کے مقام یا آجر کے بارے میں دھوکہ"
+    },
+    "index": 72
+  },
+  {
+    "id": "3cb1d4e1-8887-49ee-bf8d-a3eee9cb0415",
+    "name": "Deception about nature of the work",
+    "translation": {
+      "en": "Deception about nature of the work",
+      "ur": "کام کی نوعیت کے بارے میں دھوکہ"
+    },
+    "index": 73
+  },
+  {
+    "id": "05ef7305-1277-4277-b842-2174140d0f1c",
+    "name": "Deception about wages or earnings",
+    "translation": {
+      "en": "Deception about wages or earnings",
+      "ur": "اجرت یا کمائی کے بارے میں دھوکہ"
+    },
+    "index": 74
+  },
+  {
+    "id": "d805408e-2b48-4adb-ac21-259d70897df6",
+    "name": "Forced to work for employer's private home or family",
+    "translation": {
+      "en": "Forced to work for employer's private home or family",
+      "ur": "آجر کے نجی گھر یا خاندان کے لیے کام کرنے پر مجبور"
+    },
+    "index": 75
+  },
+  {
+    "id": "18cd872b-cf97-45bf-9d27-6520a7f9e47b",
+    "name": "Deceptive recruitment (regarding working conditions, content or legality of employment contract, housing and living conditions, legal documentation or acquisition of legal migrant status, job location or employer, wages/ earning)",
+    "translation": {
+      "en": "Deceptive recruitment (regarding working conditions, content or legality of employment contract, housing and living conditions, legal documentation or acquisition of legal migrant status, job location or employer, wages/ earning)",
+      "ur": "دھوکہ دہی بھرتی (کام کرنے کے حالات، ملازمت کے معاہدے کے مواد یا قانونی حیثیت، رہائش اور رہنے کے حالات، قانونی دستاویزات یا قانونی تارکین وطن کی حیثیت کے حصول، ملازمت کا مقام یا آجر، اجرت/کمائی کے بارے میں)"
+    },
+    "index": 76
+  },
+  {
+    "id": "9599b2d3-c4c0-4072-95dd-600b072d7aa0",
+    "name": "Withholding wages",
+    "translation": {
+      "en": "Withholding wages",
+      "ur": "اجرتوں کو روکنا"
+    },
+    "index": 77
+  },
+  {
+    "id": "d37951a5-8b36-445c-b954-4f37364aa906",
+    "name": "Financial penalties",
+    "translation": {
+      "en": "Financial penalties",
+      "ur": "مالی جرمانے"
+    },
+    "index": 78
+  },
+  {
+    "id": "ec467535-240d-4589-a806-93d69431668c",
+    "name": "Wages paid to workers are not what was promised at the time of employment, are withheld as a form of discipline, contain illegal deductions, are not paid on time or directly to the worker, or workers go longer than one month without being paid",
+    "translation": {
+      "en": "Wages paid to workers are not what was promised at the time of employment, are withheld as a form of discipline, contain illegal deductions, are not paid on time or directly to the worker, or workers go longer than one month without being paid",
+      "ur": "مزدوروں کو ادا کی جانے والی اجرت وہ نہیں ہے جس کا وعدہ ملازمت کے وقت کیا گیا تھا، نظم و ضبط کی ایک شکل کے طور پر روکا جاتا ہے، غیر قانونی کٹوتیوں پر مشتمل ہوتا ہے، وقت پر یا براہ راست کارکنکو ادائیگی نہیں کی جاتی ہے، یا مزدوروں کو ایک ماہ سے زیادہ وقت تک تنخواہ نہیں دی جاتی ہے۔"
+    },
+    "index": 79
+  },
+  {
+    "id": "7423307e-0e6f-45a5-a120-2fd6404b1e53",
+    "name": "Excessive Overtime",
+    "translation": {
+      "en": "Excessive Overtime",
+      "ur": "ضرورت سے زیادہ اوور ٹائم"
+    },
+    "index": 80
+  },
+  {
+    "id": "ebbbe03c-0525-437b-b609-5509f3e6b175",
+    "name": "Forced overtime beyond legal limits",
+    "translation": {
+      "en": "Forced overtime beyond legal limits",
+      "ur": "قانونی حدود سے باہر جبری اوور ٹائم"
+    },
+    "index": 81
+  },
+  {
+    "id": "2353f78b-23ce-4eb9-b9ec-dc5a14e22fd1",
+    "name": "Forced to work on call (day and night)",
+    "translation": {
+      "en": "Forced to work on call (day and night)",
+      "ur": "زبردستی کام کیلئے بلانا (دن اور رات) میں"
+    },
+    "index": 82
+  },
+  {
+    "id": "2a67f1b0-5068-4779-943c-778171114b99",
+    "name": "Forced to work overtime under threats of penalty",
+    "translation": {
+      "en": "Forced to work overtime under threats of penalty",
+      "ur": "جرمانے کی دھمکیوں کے تحت اوور ٹائم کام کرنے پر مجبور"
+    },
+    "index": 83
+  },
+  {
+    "id": "c7d815ae-ce63-4cbb-839c-2655e2c61c23",
+    "name": "Rest periods are less than 10 hours in a 24-hour period, 77 hours in a 7 day period, or legal requirements for breaks are not followed",
+    "translation": {
+      "en": "Rest periods are less than 10 hours in a 24-hour period, 77 hours in a 7 day period, or legal requirements for breaks are not followed",
+      "ur": "آرام کی مدت 24 گھنٹے کی مدت میں 10 گھنٹے سے کم ہے، 7 دن کی مدت میں 77 گھنٹے، یا وقفے کے لیے قانونی تقاضوں پر عمل نہیں کیا جاتا ہے۔"
+    },
+    "index": 84
+  },
+  {
+    "id": "2c3fa31e-081d-445b-a8b6-a4337b73203d",
+    "name": "Forced Labor",
+    "translation": {
+      "en": "Forced Labor",
+      "ur": "جبری مشقت"
+    },
+    "index": 85
+  },
+  {
+    "id": "f53042d8-ab91-473d-8a65-b96381bfdf5c",
+    "name": "Goods produced with forced labor (ILAB List of Goods)",
+    "translation": {
+      "en": "Goods produced with forced labor (ILAB List of Goods)",
+      "ur": "جبری مشقت کے ساتھ تیار کردہ سامان (آلات کی ILAB فہرست)"
+    },
+    "index": 86
+  },
+  {
+    "id": "2e25f8a9-9ad8-426a-ab3e-d8b443adf362",
+    "name": "Intimidation and threats",
+    "translation": {
+      "en": "Intimidation and threats",
+      "ur": "ڈرانا دھمکانا"
+    },
+    "index": 87
+  },
+  {
+    "id": "4c07a86b-e2ef-4b70-93e1-d04efed59aff",
+    "name": "Blackmail",
+    "translation": {
+      "en": "Blackmail",
+      "ur": "بلیک میل کرنا"
+    },
+    "index": 88
+  },
+  {
+    "id": "1b518d05-0828-4adb-ae9a-064696ff06f0",
+    "name": "Forced work as punishment for participation in a strike",
+    "translation": {
+      "en": "Forced work as punishment for participation in a strike",
+      "ur": "ہڑتال میں شرکت کی سزا کے طور پر جبری کام"
+    },
+    "index": 89
+  },
+  {
+    "id": "d28297bd-624c-4d26-b2a9-6bf14c58bdb9",
+    "name": "Other coercive tactics",
+    "translation": {
+      "en": "Other coercive tactics",
+      "ur": "دیگر زبردستی کے حربے"
+    },
+    "index": 90
+  },
+  {
+    "id": "3e10192b-74c3-4ffc-b17f-869978b1dc4b",
+    "name": "Threats against family members",
+    "translation": {
+      "en": "Threats against family members",
+      "ur": "گھر والوں کو دھمکیاں"
+    },
+    "index": 91
+  },
+  {
+    "id": "4b159e4f-e881-4ce4-9d49-160e7fb9cee1",
+    "name": "Threats of  deportation, visa cancellation, or reporting to authorities",
+    "translation": {
+      "en": "Threats of  deportation, visa cancellation, or reporting to authorities",
+      "ur": "ملک بدری، ویزا منسوخی، یا حکام کو رپورٹ کرنے کی دھمکیاں"
+    },
+    "index": 92
+  },
+  {
+    "id": "dcea5a38-025b-4cd5-8553-d8202c7d2b1f",
+    "name": "Violence or threats of violence for engaging in union activities",
+    "translation": {
+      "en": "Violence or threats of violence for engaging in union activities",
+      "ur": "یونین کی سرگرمیوں میں شامل ہونے پر تشدد یا تشدد کی دھمکیاں"
+    },
+    "index": 93
+  },
+  {
+    "id": "7d669281-ccc1-455e-9831-0248665b7fc0",
+    "name": "Violence or threats of violence to intimidate workers",
+    "translation": {
+      "en": "Violence or threats of violence to intimidate workers",
+      "ur": "کارکنوں کو ڈرانے کے لیے تشدد یا تشدد کی دھمکیاں"
+    },
+    "index": 94
+  },
+  {
+    "id": "d78130aa-67ce-4587-afc4-2abffe2505dd",
+    "name": "Workers are not free to terminate their employment with reasonable notice, and to leave their jobs when their contract expires",
+    "translation": {
+      "en": "Workers are not free to terminate their employment with reasonable notice, and to leave their jobs when their contract expires",
+      "ur": "کارکنان مناسب نوٹس کے ساتھ اپنی ملازمت ختم کرنے، اور ان کا معاہدہ ختم ہونے پر ملازمت چھوڑنے کے لیے آزاد نہیں ہیں۔"
+    },
+    "index": 95
+  },
+  {
+    "id": "1b4eb46d-4694-4d6a-856b-81e22ff2d9ae",
+    "name": "Isolation",
+    "translation": {
+      "en": "Isolation",
+      "ur": "علیحدگی"
+    },
+    "index": 96
+  },
+  {
+    "id": "b15e4591-400f-44db-a7bb-ce031676e32e",
+    "name": "Confiscation of mobile phones outside of work hours",
+    "translation": {
+      "en": "Confiscation of mobile phones outside of work hours",
+      "ur": "کام کے اوقات سے باہر موبائل فون ضبط کرنا"
+    },
+    "index": 97
+  },
+  {
+    "id": "d3764bf5-beb5-40d7-8895-a6455b6471e2",
+    "name": "Worker performing duties isolated from other workers",
+    "translation": {
+      "en": "Worker performing duties isolated from other workers",
+      "ur": "ڈیوٹی انجام دینے والا کارکن دوسرے کارکنوں سے الگ تھلگ"
+    },
+    "index": 98
+  },
+  {
+    "id": "48051aef-deac-475b-9d86-7ffda1f121fd",
+    "name": "Prison Labor",
+    "translation": {
+      "en": "Prison Labor",
+      "ur": "جیل کی مشقت"
+    },
+    "index": 99
+  },
+  {
+    "id": "eb465945-82dc-42fd-a84c-610ce921cf51",
+    "name": "Prisoners have not freely consented to work; or they do not receive similar treatment to non-prison workers.",
+    "translation": {
+      "en": "Prisoners have not freely consented to work; or they do not receive similar treatment to non-prison workers.",
+      "ur": "قیدیوں نے آزادانہ طور پر کام کرنے کی رضامندی نہیں دی ہے۔ یا وہ غیر جیل کارکنوں کے ساتھ ایسا سلوک نہیں کرتے ہیں۔"
+    },
+    "index": 100
+  },
+  {
+    "id": "397e7c2d-3ab7-4669-8446-dd2d0bfa747e",
+    "name": "Physical and sexual violence",
+    "translation": {
+      "en": "Physical and sexual violence",
+      "ur": "جسمانی اور جنسی تشدد"
+    },
+    "index": 101
+  },
+  {
+    "id": "6c972fec-8e43-4b04-a37c-dfde9b61beef",
+    "name": "Physical violence",
+    "translation": {
+      "en": "Physical violence",
+      "ur": "جسمانی تشدد"
+    },
+    "index": 102
+  },
+  {
+    "id": "a272c33f-a339-4e64-8802-e6dfb578937b",
+    "name": "Sexual harrassment (e.g. unwanted sexual advances, comments, jokes)",
+    "translation": {
+      "en": "Sexual harrassment (e.g. unwanted sexual advances, comments, jokes)",
+      "ur": "جنسی طور پر ہراساں کرنا (مثلاً ناپسندیدہ جنسی پیش رفت، تبصرے، لطیفے)"
+    },
+    "index": 103
+  },
+  {
+    "id": "c359a6c4-b912-41bb-9df8-0cd449e8fce9",
+    "name": "Sexual violence (e.g. physical acts of a sexual nature)",
+    "translation": {
+      "en": "Sexual violence (e.g. physical acts of a sexual nature)",
+      "ur": "جنسی تشدد (مثلاً جنسی نوعیت کے جسمانی اعمال)"
+    },
+    "index": 104
+  },
+  {
+    "id": "df8be91b-4403-4990-a9e3-34f13afd70da",
+    "name": "Violence against workers in front of other workers",
+    "translation": {
+      "en": "Violence against workers in front of other workers",
+      "ur": "دوسرے کارکنوں کے سامنے کارکنوں پر تشدد"
+    },
+    "index": 105
+  },
+  {
+    "id": "f2a0aad8-f547-4896-8b50-456eeab2b643",
+    "name": "Restriction of movement",
+    "translation": {
+      "en": "Restriction of movement",
+      "ur": "نقل و حرکت پر پابندی"
+    },
+    "index": 106
+  },
+  {
+    "id": "2035db08-6e86-417c-b00b-56b11784fa93",
+    "name": "Employer restricts workers from leaving the workplace, dormitories, or industrial zone",
+    "translation": {
+      "en": "Employer restricts workers from leaving the workplace, dormitories, or industrial zone",
+      "ur": "آجر کارکنوں کو کام کی جگہ، ہاسٹلری، یا صنعتی زون چھوڑنے سے روکتا ہے۔"
+    },
+    "index": 107
+  },
+  {
+    "id": "c0521d3f-91da-465d-8292-b29f38978487",
+    "name": "Limited freedom of movement and communication",
+    "translation": {
+      "en": "Limited freedom of movement and communication",
+      "ur": "نقل و حرکت اور مواصلات کی محدود آزادی"
+    },
+    "index": 108
+  },
+  {
+    "id": "a1986bd3-304c-40d5-8372-03e7da88ef4e",
+    "name": "Retention of identity document",
+    "translation": {
+      "en": "Retention of identity document",
+      "ur": "شناختی دستاویز کو برقرار رکھنا"
+    },
+    "index": 109
+  },
+  {
+    "id": "c3852ca1-8d1b-4a31-91ac-ae566ce30e35",
+    "name": "Identity or travel documents confiscated",
+    "translation": {
+      "en": "Identity or travel documents confiscated",
+      "ur": "شناختی یا سفری دستاویزات ضبط"
+    },
+    "index": 110
+  },
+  {
+    "id": "4d4f510a-0c63-4708-9e9b-ab1c513ac3ac",
+    "name": "Inaccurate wage payment details",
+    "translation": {
+      "en": "Inaccurate wage payment details",
+      "ur": "اجرت کی ادائیگی کی غلط تفصیلات"
+    },
+    "index": 111
+  },
+  {
+    "id": "9e4dd0bf-69ff-49a6-9a99-3069be1f6c2a",
+    "name": "Incorrect payment for legally required leave",
+    "translation": {
+      "en": "Incorrect payment for legally required leave",
+      "ur": "قانونی طور پر مطلوبہ چھٹی کے لیے غلط ادائیگی"
+    },
+    "index": 112
+  },
+  {
+    "id": "db147786-114e-47b3-8d12-ef572d0641ef",
+    "name": "Incorrect payment for overtime",
+    "translation": {
+      "en": "Incorrect payment for overtime",
+      "ur": "اوور ٹائم کے لیے غلط ادائیگی"
+    },
+    "index": 113
+  },
+  {
+    "id": "9b72987d-a4be-47c0-8d7d-b1ea41633b1b",
+    "name": "Late payment of wages (after work is completed)",
+    "translation": {
+      "en": "Late payment of wages (after work is completed)",
+      "ur": "اجرت کی تاخیر سے ادائیگی (کام مکمل ہونے کے بعد)"
+    },
+    "index": 114
+  },
+  {
+    "id": "d14372a4-9fe1-4bfe-bf43-800dc5d7b56b",
+    "name": "Late payment of wages until work is completed",
+    "translation": {
+      "en": "Late payment of wages until work is completed",
+      "ur": "کام مکمل ہونے تک اجرت کی ادائیگی میں تاخیر"
+    },
+    "index": 115
+  },
+  {
+    "id": "2608ec1d-b4e7-4e9d-8012-c23eb6d2e47d",
+    "name": "Unauthorized wage deductions",
+    "translation": {
+      "en": "Unauthorized wage deductions",
+      "ur": "غیر مجاز اجرت میں کٹوتیاں"
+    },
+    "index": 116
+  },
+  {
+    "id": "46e9dafa-3b66-4d46-a7bf-bdec800c9980",
+    "name": "Wages withheld as a commission for recruiter",
+    "translation": {
+      "en": "Wages withheld as a commission for recruiter",
+      "ur": "بھرتی کرنے والے کے لیے بطور کمیشن اجرت روک لی گئی۔"
+    },
+    "index": 117
+  },
+  {
+    "id": "0f856de7-9327-4f2d-bab5-b6086732b8b5",
+    "name": "Withholding of assets (cash or other)",
+    "translation": {
+      "en": "Withholding of assets (cash or other)",
+      "ur": "اثاثوں کی روک تھام (نقد یا دیگر)"
+    },
+    "index": 118
+  },
+  {
+    "id": "8062177a-4c64-495b-9065-e427e54a3dbb",
+    "name": "Withholding of wages",
+    "translation": {
+      "en": "Withholding of wages",
+      "ur": "اجرت روکنا"
+    },
+    "index": 119
+  },
+  {
+    "id": "ce498dbb-4d4c-4d20-854d-1df8288721fc",
+    "name": "Raw material extraction",
+    "translation": {
+      "en": "Raw material extraction",
+      "ur": "خام مال نکالنا"
+    },
+    "index": 120
+  },
+  {
+    "id": "fecc5b6a-2471-4051-bacd-e2e00c380f84",
+    "name": "Product Documentation",
+    "translation": {
+      "en": "Product Documentation",
+      "ur": "پروڈکٹ کی دستاویزات"
+    },
+    "index": 121
+  },
+  {
+    "id": "be67e755-ef01-4ae0-90e2-6ad8f28bb656",
+    "name": "Incomplete documentation on product origin",
+    "translation": {
+      "en": "Incomplete documentation on product origin",
+      "ur": "پروڈکٹ کے اصل مقام کی نامکمل دستاویزات"
+    },
+    "index": 122
+  },
+  {
+    "id": "a3a7e685-a6c4-4881-a250-2475f7b67f42",
+    "name": "Incomplete documentation on purchases",
+    "translation": {
+      "en": "Incomplete documentation on purchases",
+      "ur": "خریداری پر نامکمل دستاویزات"
+    },
+    "index": 123
+  },
+  {
+    "id": "d61df853-d3bc-4780-b568-91087b509c32",
+    "name": "Incomplete documentation on sales",
+    "translation": {
+      "en": "Incomplete documentation on sales",
+      "ur": "فروخت پر نامکمل دستاویزات"
+    },
+    "index": 124
+  },
+  {
+    "id": "7cf44baa-6c94-4353-90f0-4357c96a0e2e",
+    "name": "Incomplete documentation on transport",
+    "translation": {
+      "en": "Incomplete documentation on transport",
+      "ur": "نقل و حمل سے متعلق نامکمل دستاویزات"
+    },
+    "index": 125
+  },
+  {
+    "id": "4f3d813b-a9ff-48df-9b5b-1cc618a7f38c",
+    "name": "Supplier procedures",
+    "translation": {
+      "en": "Supplier procedures",
+      "ur": "سپلائر کا طریقہ کار"
+    },
+    "index": 126
+  },
+  {
+    "id": "b8a05706-41b7-46e8-9837-3efd9e5e8e55",
+    "name": "Incomplete policy of disclosing suppliers",
+    "translation": {
+      "en": "Incomplete policy of disclosing suppliers",
+      "ur": "فراہم کنندگان کو ظاہر کرنے کی نامکمل پالیسی"
+    },
+    "index": 127
+  },
+  {
+    "id": "a21a700b-1a0b-4462-b48e-24e931e3ad28",
+    "name": "Incomplete policy of disclosing sub-contractors",
+    "translation": {
+      "en": "Incomplete policy of disclosing sub-contractors",
+      "ur": "ذیلی ٹھیکیداروں کو ظاہر کرنے کی نامکمل پالیسی"
+    },
+    "index": 128
+  },
+  {
+    "id": "63a09e00-6e1a-4c54-9be6-382f0090766a",
+    "name": "Limited use of product tracking systems",
+    "translation": {
+      "en": "Limited use of product tracking systems",
+      "ur": "پروڈکٹ ٹریکنگ سسٹمز کا محدود استعمال"
+    },
+    "index": 129
+  },
+  {
+    "id": "ca11ec8f-f51e-49de-b905-2c5290b1183f",
+    "name": "Does not require suppliers to exercise due diligence over the cotton supply chain in accordance with the OECD Due Diligence Guidance",
+    "translation": {
+      "en": "Does not require suppliers to exercise due diligence over the cotton supply chain in accordance with the OECD Due Diligence Guidance",
+      "ur": "او ای سی ڈی ڈیو ڈیلیجنس گائیڈینس کے مطابق سپلائی  کرنے والوں کو کپاس کی سپلائی چین پر مستعدی سے کام لینے کی ضرورت نہیں ہے۔"
+    },
+    "index": 130
+  },
+  {
+    "id": "5b479ffa-db04-4a4a-bcda-dca93e9a918b",
+    "name": "Review process does not include corrective action management in a way that can mitigate risks with a mechanism to track indicators of improvement",
+    "translation": {
+      "en": "Review process does not include corrective action management in a way that can mitigate risks with a mechanism to track indicators of improvement",
+      "ur": "جائزہ کے عمل میں اصلاحی کارروائی کا انتظام اس طرح شامل نہیں ہے جو بہتری کے اشاریوں کو ٹریک کرنے کے طریقہ کار سے خطرات کو کم کر سکے۔"
+    },
+    "index": 131
+  },
+  {
+    "id": "1e877b00-d22b-4bd3-9ff2-6891054c538e",
+    "name": "Failure to embed responsible business conduct in enterprise policy and management system",
+    "translation": {
+      "en": "Failure to embed responsible business conduct in enterprise policy and management system",
+      "ur": "انٹرپرائز پالیسی اور انتظامی نظام میں ذمہ دار کاروباری طرز عمل کو سرایت کرنے میں ناکامی۔"
+    },
+    "index": 132
+  },
+  {
+    "id": "719ad93d-d19f-4b5b-8fcd-7a1f657a6f6d",
+    "name": "Audit",
+    "translation": {
+      "en": "Audit",
+      "ur": "آڈٹ"
+    },
+    "index": 133
+  },
+  {
+    "id": "78933f75-cec5-472e-ad63-c108e113fcfb",
+    "name": "Missing audit",
+    "translation": {
+      "en": "Missing audit",
+      "ur": "نا مکمل آڈٹ"
+    },
+    "index": 134
+  },
+  {
+    "id": "34cfbe26-e188-4c44-a456-bf560a21ad42",
+    "name": "Product Testing",
+    "translation": {
+      "en": "Product Testing",
+      "ur": "مصنوعات کی جانچ"
+    },
+    "index": 135
+  },
+  {
+    "id": "6272a77d-10d7-4293-b3ac-83a4dfaab587",
+    "name": "Failed DNA Test",
+    "translation": {
+      "en": "Failed DNA Test",
+      "ur": "ڈی این اے ٹیسٹ میں ناکام"
+    },
+    "index": 136
+  },
+  {
+    "id": "069725a6-45dc-49ae-9bfe-0a0e9af51c4f",
+    "name": "OECD Guidance for RBC",
+    "translation": {
+      "en": "OECD Guidance for RBC",
+      "ur": "او ای سی ڈی گائیدنس کیلئے آر بی سی"
+    },
+    "index": 137
+  },
+  {
+    "id": "ba4735c0-933a-4cfb-92f5-070f957cd785",
+    "name": "No record / inventory on the use and storage of hazardous substances",
+    "translation": {
+      "en": "No record / inventory on the use and storage of hazardous substances",
+      "ur": "خطرناک مادوں کے استعمال اور ذخیرہ کرنے کا کوئی ریکارڈ/ انوینٹری نہیں۔"
+    },
+    "index": 138
+  },
+  {
+    "id": "a5c6e8fb-68b4-41ab-b051-f47ea506a76b",
+    "name": "Inadequate Implementaion of Step 1. Embed responsible business conduct in enterprise policy and management systems",
+    "translation": {
+      "en": "Inadequate Implementaion of Step 1. Embed responsible business conduct in enterprise policy and management systems",
+      "ur": "مرحلہ 1 کا ناکافی نفاذ۔ ذمہ دار کاروبار کو شامل کریں۔انٹرپرائز کی پالیسی اور انتظامی امور  میں "
+    },
+    "index": 139
+  },
+  {
+    "id": "e53cfc8d-df7c-4b33-8ab8-15bac0517fb6",
+    "name": "Inadequate Implementaion of Step 2. Identify actual and potential harms in the enterprise’s own operations and in its supply chain",
+    "translation": {
+      "en": "Inadequate Implementaion of Step 2. Identify actual and potential harms in the enterprise’s own operations and in its supply chain",
+      "ur": "مرحلہ 2 کا ناکافی نفاذ۔ انٹرپرائز کے اپنے آپریشنز اور اس کی سپلائی چین میں اصل اور ممکنہ نقصانات کی نشاندہی کریں۔"
+    },
+    "index": 140
+  },
+  {
+    "id": "c33b186c-4044-4a55-9d77-e3c97ffca8c2",
+    "name": "Inadequate Implementaion of Step 3. Cease, prevent or mitigate harm in the enterprise’s own operations and in its supply chain",
+    "translation": {
+      "en": "Inadequate Implementaion of Step 3. Cease, prevent or mitigate harm in the enterprise’s own operations and in its supply chain",
+      "ur": "مرحلہ 3 کا ناکافی نفاذ۔ انٹرپرائز کے اپنے کاموں اور اس کی سپلائی چین میں نقصان کو روکنا، روکنا یا کم کرنا"
+    },
+    "index": 141
+  },
+  {
+    "id": "0ebb9a4f-8cfa-4373-b759-e3dfc82c1594",
+    "name": "Inadequate Implementaion of Step  4. Track Risks and Impacts",
+    "translation": {
+      "en": "Inadequate Implementaion of Step  4. Track Risks and Impacts",
+      "ur": "مرحلہ 4 کا ناکافی نفاذ۔ خطرات اور اثرات کو ٹریک کریں۔"
+    },
+    "index": 142
+  },
+  {
+    "id": "771f9352-3769-42bc-b0af-0aa39c2411b7",
+    "name": "Worker protection",
+    "translation": {
+      "en": "Worker protection",
+      "ur": "کارکن تحفظ"
+    },
+    "index": 143
+  },
+  {
+    "id": "18c49a5b-cdc0-4c0c-8448-d244c64b1c70",
+    "name": "Inadequate Implementaion of Step  5. Communicate",
+    "translation": {
+      "en": "Inadequate Implementaion of Step  5. Communicate",
+      "ur": "مرحلہ 5 کا ناکافی نفاذ۔ بات چیت کریں۔"
+    },
+    "index": 144
+  },
+  {
+    "id": "3dc6bc37-687b-4ba9-b1e5-a3a5389ecb13",
+    "name": "Inadequate Implementaion of Step 6. Provide for or co-operate in remediation when appropriate",
+    "translation": {
+      "en": "Inadequate Implementaion of Step 6. Provide for or co-operate in remediation when appropriate",
+      "ur": "مرحلہ 6 کا ناکافی نفاذ۔ جب مناسب ہو تو تدارک کے لیے فراہم کریں یا تعاون کریں"
+    },
+    "index": 145
+  },
+  {
+    "id": "2f8ca629-04b7-4f77-b5a9-474fae8311ef",
+    "name": "Union operations",
+    "translation": {
+      "en": "Union operations",
+      "ur": "یونین آپریشنز"
+    },
+    "index": 146
+  },
+  {
+    "id": "59005932-79ad-4e78-b739-2130e84d32b8",
+    "name": "Worker representatives do not have access to workers in the workplace",
+    "translation": {
+      "en": "Worker representatives do not have access to workers in the workplace",
+      "ur": "ورکر نمائندوں کو کام کی جگہ پر کارکنوں تک رسائی نہیں ہے۔"
+    },
+    "index": 147
+  },
+  {
+    "id": "e7df0568-a4ce-4f0d-8d9b-2ff65d23a68a",
+    "name": "Worker unions and associations are not allowed in the workplace",
+    "translation": {
+      "en": "Worker unions and associations are not allowed in the workplace",
+      "ur": "ورکر یونینوں اور انجمنوں کو کام کی جگہ پر جانے کی اجازت نہیں ہے۔"
+    },
+    "index": 148
+  },
+  {
+    "id": "07aba1af-2196-4358-8b57-231a38768e31",
+    "name": "Workers are not free to meet without management present",
+    "translation": {
+      "en": "Workers are not free to meet without management present",
+      "ur": "انتظامیہ کی موجودگی کے بغیر کارکنان سے ملنے کے لیے آزاد نہیں۔"
+    },
+    "index": 149
+  },
+  {
+    "id": "10b8d30a-26fd-4f44-964c-0a7e48dda3f6",
+    "name": "Collective bargaining",
+    "translation": {
+      "en": "Collective bargaining",
+      "ur": "اجتمائی سودے بازی"
+    },
+    "index": 150
+  },
+  {
+    "id": "cdc97a4c-2bce-4210-b1f8-9062e9f69ba3",
+    "name": "Collective bargaining agreements not in effect in the enterprise",
+    "translation": {
+      "en": "Collective bargaining agreements not in effect in the enterprise",
+      "ur": "اجتماعی سودے بازی کے معاہدے انٹرپرائز میں نافذ العمل نہیں ہیں۔"
+    },
+    "index": 151
+  },
+  {
+    "id": "8cc7bee7-8a5d-45b8-8b24-8165de74ef44",
+    "name": "Employer does not consult with worker organizations where legally required",
+    "translation": {
+      "en": "Employer does not consult with worker organizations where legally required",
+      "ur": "جہاں قانونی طور پر ضرورت ہو آجر کارکن تنظیموں سے مشورہ نہیں کرتا ہے۔"
+    },
+    "index": 152
+  },
+  {
+    "id": "7af898d1-a949-490b-a869-f29cced89dd6",
+    "name": "Interference and discrimination",
+    "translation": {
+      "en": "Interference and discrimination",
+      "ur": "مداخلت اور امتیازی سلوک"
+    },
+    "index": 153
+  },
+  {
+    "id": "fe499636-e16e-43bb-afd6-f385fc07c4e3",
+    "name": "Employer threatens, intimidates, harrasses or punishes workers who join a union or engage in union activities",
+    "translation": {
+      "en": "Employer threatens, intimidates, harrasses or punishes workers who join a union or engage in union activities",
+      "ur": "آجر ان کارکنوں کو دھمکی دیتا ہے، ڈراتا ہے، ہراساں کرتا ہے یا سزا دیتا ہے جو یونین میں شامل ہوتے ہیں یا یونین کی سرگرمیوں میں شامل ہوتے ہیں۔"
+    },
+    "index": 154
+  },
+  {
+    "id": "3153caf6-8194-4283-aec7-7d1605b3b3a3",
+    "name": "Employer interferes with, manipulates, or controls the worker organization",
+    "translation": {
+      "en": "Employer interferes with, manipulates, or controls the worker organization",
+      "ur": "آجر کارکن کی تنظیم میں مداخلت کرتا ہے، ہیرا پھیری کرتا ہے یا اسے کنٹرول کرتا ہے۔"
+    },
+    "index": 155
+  },
+  {
+    "id": "5959d004-548a-451b-a243-3cd80649ccb6",
+    "name": "Employment and occupation",
+    "translation": {
+      "en": "Employment and occupation",
+      "ur": "ملازمت اور پیشہ"
+    },
+    "index": 156
+  },
+  {
+    "id": "7c1916c3-51a1-466c-b9e8-27810f63d3a2",
+    "name": "Discrimination in access to training",
+    "translation": {
+      "en": "Discrimination in access to training",
+      "ur": "تربیت تک رسائی میں امتیازی سلوک"
+    },
+    "index": 157
+  },
+  {
+    "id": "5ace00e3-901a-42e4-98ec-0537598ce88d",
+    "name": "Discrimination in access to employment",
+    "translation": {
+      "en": "Discrimination in access to employment",
+      "ur": "ملازمت تک رسائی میں امتیازی سلوک"
+    },
+    "index": 158
+  },
+  {
+    "id": "f6b6c1c5-e52d-44d9-8ceb-5ba4604bf7e8",
+    "name": "Discrimination in access to particular occupations",
+    "translation": {
+      "en": "Discrimination in access to particular occupations",
+      "ur": "مخصوص پیشوں تک رسائی میں امتیازی سلوک"
+    },
+    "index": 159
+  },
+  {
+    "id": "c62718a9-b50f-47ad-ae9e-7428bb39d419",
+    "name": "Discrimination in terms and conditions of employment",
+    "translation": {
+      "en": "Discrimination in terms and conditions of employment",
+      "ur": "ملازمت کی شرائط و ضوابط میں امتیازی سلوک"
+    },
+    "index": 160
+  },
+  {
+    "id": "cac7a165-38bd-4ed9-89b7-1f1b8fb4663b",
+    "name": "Management systems",
+    "translation": {
+      "en": "Management systems",
+      "ur": "مینجمنٹ سسٹمز"
+    },
+    "index": 161
+  },
+  {
+    "id": "104c74f7-5ca1-4c5c-af5b-4fe14dcbbff5",
+    "name": "No records of work-related accidents and diseases",
+    "translation": {
+      "en": "No records of work-related accidents and diseases",
+      "ur": "کام سے متعلق حادثات اور بیماریوں کا کوئی ریکارڈ نہیں۔"
+    },
+    "index": 162
+  },
+  {
+    "id": "d0692eda-2c89-4efb-8568-d53c758682a5",
+    "name": "No written OSH policy",
+    "translation": {
+      "en": "No written OSH policy",
+      "ur": "کوئی تحریری او ایس ایچ پالیسی نہیں ہے۔"
+    },
+    "index": 163
+  },
+  {
+    "id": "d565b2d1-3a59-4893-941c-71baced6451e",
+    "name": "No legally required construction / building permits",
+    "translation": {
+      "en": "No legally required construction / building permits",
+      "ur": "کوئی قانونی طور پر درکار تعمیر / عمارت کے اجازت نامے نہیں ہیں۔"
+    },
+    "index": 164
+  },
+  {
+    "id": "fddcc9e3-1dc5-4c72-8aa0-b07d5125ecc2",
+    "name": "Inadequate hazard / risk management and control procedure",
+    "translation": {
+      "en": "Inadequate hazard / risk management and control procedure",
+      "ur": "ناکافی خطرہ / رسک مینجمنٹ اور کنٹرول کا طریقہ کار"
+    },
+    "index": 165
+  },
+  {
+    "id": "92f9b675-1ee4-4af6-9e6d-5e66f8ea51f4",
+    "name": "Inadequate accident investigation procedure",
+    "translation": {
+      "en": "Inadequate accident investigation procedure",
+      "ur": "حادثے کی تفتیش کا طریقہ کار ناکافی ہے۔"
+    },
+    "index": 166
+  },
+  {
+    "id": "7cb4c9c7-ef02-4532-89c9-3ab6c9652985",
+    "name": "Inadequate assignment of accountability to management for carrying out health and safety responsibilities",
+    "translation": {
+      "en": "Inadequate assignment of accountability to management for carrying out health and safety responsibilities",
+      "ur": "صحت اور حفاظت کی ذمہ داریاں نبھانے کے لیے انتظامیہ کو جوابدہی کی ناکافی تفویض"
+    },
+    "index": 167
+  },
+  {
+    "id": "99287b31-78db-44ab-88bd-6b0890644efe",
+    "name": "Chemicals and hazardous material",
+    "translation": {
+      "en": "Chemicals and hazardous material",
+      "ur": "کیمیکل اور خطرناک مواد"
+    },
+    "index": 168
+  },
+  {
+    "id": "17a9a4a2-cff0-4fd3-9714-3dd9138cfb84",
+    "name": "Inadequate communication and implementation of OSH policies and procedures",
+    "translation": {
+      "en": "Inadequate communication and implementation of OSH policies and procedures",
+      "ur": "ناکافی مواصلات اور او ایس ایچ پالیسیوں اور طریقہ کار کا نفاذ"
+    },
+    "index": 169
+  },
+  {
+    "id": "a622fbc9-4811-4864-9427-39aae546f341",
+    "name": "No action to assess, monitor, prevent, and limit workers' exposure to chemicals and hazardous substances",
+    "translation": {
+      "en": "No action to assess, monitor, prevent, and limit workers' exposure to chemicals and hazardous substances",
+      "ur": "کیمیکلز اور خطرناک مادوں سے کارکنوں کی نمائش کا اندازہ لگانے، نگرانی کرنے، روکنے اور محدود کرنے کے لیے کوئی کارروائی نہیں"
+    },
+    "index": 170
+  },
+  {
+    "id": "c59cca65-89fd-4673-9d03-4746605f0a45",
+    "name": "Inadequate training for use of chemicals and hazardous substances",
+    "translation": {
+      "en": "Inadequate training for use of chemicals and hazardous substances",
+      "ur": "کیمیکلز اور خطرناک مادوں کے استعمال کے لیے ناکافی تربیت"
+    },
+    "index": 171
+  },
+  {
+    "id": "47baf8ec-a1ef-4561-a4db-241ecf01fabd",
+    "name": "Hazardous conditions",
+    "translation": {
+      "en": "Hazardous conditions",
+      "ur": "خطرناک حالات"
+    },
+    "index": 172
+  },
+  {
+    "id": "d10e2246-1696-4146-bc5d-d3a9f9d7fae7",
+    "name": "Workers are focred to engage in work that is unreasonably hazardous",
+    "translation": {
+      "en": "Workers are focred to engage in work that is unreasonably hazardous",
+      "ur": "کارکنوں کو ایسے کام میں مشغول کرنے پر مجبور کیا جاتا ہے جو غیر معقول حد تک خطرناک ہو۔"
+    },
+    "index": 173
+  },
+  {
+    "id": "b122abff-b103-4d98-b831-feadde5f775c",
+    "name": "Workers are forced to engage in work under extreme environmental conditions",
+    "translation": {
+      "en": "Workers are forced to engage in work under extreme environmental conditions",
+      "ur": "مزدور انتہائی ماحولیاتی حالات میں کام میں مشغول ہونے پر مجبور ہیں۔"
+    },
+    "index": 174
+  },
+  {
+    "id": "8feecb47-6967-4856-adc3-afba99e1a68f",
+    "name": "Workers are not provided with facilities to support safe work practices",
+    "translation": {
+      "en": "Workers are not provided with facilities to support safe work practices",
+      "ur": "ورکرز کو کام کے محفوظ طریقوں کی حمایت کے لیے سہولیات فراہم نہیں کی جاتی ہیں۔"
+    },
+    "index": 175
+  },
+  {
+    "id": "e033819f-4101-4ef3-a0d5-6a399913e8b0",
+    "name": "Workers are punished if they remove themselves from work situations that they believe present an imminent and serious danger to health",
+    "translation": {
+      "en": "Workers are punished if they remove themselves from work situations that they believe present an imminent and serious danger to health",
+      "ur": "کارکنوں کو سزا دی جاتی ہے اگر وہ اپنے آپ کو کام کے حالات سے ہٹاتے ہیں جن کے بارے میں ان کے خیال میں صحت کے لیے ایک نا گزیر اور سنگین خطرہ ہے۔"
+    },
+    "index": 176
+  },
+  {
+    "id": "6f61c2ff-9cfb-48c1-b4c3-977132ce2b0d",
+    "name": "Workers are not training or encouraged to properly use personal protective cloithing and equipment",
+    "translation": {
+      "en": "Workers are not training or encouraged to properly use personal protective cloithing and equipment",
+      "ur": "کارکنوں کو ذاتی حفاظتی لباس اور آلات کو صحیح طریقے سے استعمال کرنے کی تربیت یا حوصلہ افزائی نہیں کی جاتی ہے۔"
+    },
+    "index": 177
+  },
+  {
+    "id": "65164799-6e11-49fc-9b91-4f172eba3ba0",
+    "name": "Worker accommodation",
+    "translation": {
+      "en": "Worker accommodation",
+      "ur": "ورکرز کی رہائش"
+    },
+    "index": 178
+  },
+  {
+    "id": "1d139c21-6feb-467a-a23f-c34489854c01",
+    "name": "Accommodation does not comply with health, safety, and occupation requirements",
+    "translation": {
+      "en": "Accommodation does not comply with health, safety, and occupation requirements",
+      "ur": "رہائش صحت، حفاظت اور پیشے کے تقاضوں کی تعمیل نہیں کرتی ہے۔"
+    },
+    "index": 179
+  },
+  {
+    "id": "d2c03dc7-23a9-49e9-aae8-12cd72b2e85c",
+    "name": "Emergency preparedness",
+    "translation": {
+      "en": "Emergency preparedness",
+      "ur": "ہنگامی تیاری"
+    },
+    "index": 180
+  },
+  {
+    "id": "05da60c1-ea06-43b6-a3e0-ef7673b2f4c6",
+    "name": "Employer does not have an active emergency preparedness plan",
+    "translation": {
+      "en": "Employer does not have an active emergency preparedness plan",
+      "ur": "آجر کے پاس ہنگامی تیاری کا کوئی فعال منصوبہ نہیں ہے۔"
+    },
+    "index": 181
+  },
+  {
+    "id": "ed2525c6-61a9-4086-833d-e74994db8db3",
+    "name": "Workplace does not have sufficient equipment to implement an emergency preparedness plan",
+    "translation": {
+      "en": "Workplace does not have sufficient equipment to implement an emergency preparedness plan",
+      "ur": "کام کی جگہ پر ہنگامی تیاری کے منصوبے کو نافذ کرنے کے لیے کافی سامان نہیں ہے۔"
+    },
+    "index": 182
+  },
+  {
+    "id": "0638d785-2a65-4acc-ab3c-e0105da98716",
+    "name": "Workers are not trained on emergency preparedness",
+    "translation": {
+      "en": "Workers are not trained on emergency preparedness",
+      "ur": "کارکنوں کو ہنگامی تیاریوں کی تربیت نہیں دی جاتی"
+    },
+    "index": 183
+  },
+  {
+    "id": "a2fd3a72-2000-4798-87ed-e426ee2562e0",
+    "name": "Facilities are not adequately designed for emergency evacuation",
+    "translation": {
+      "en": "Facilities are not adequately designed for emergency evacuation",
+      "ur": "ہنگامی انخلاء کے لیے سہولیات مناسب طریقے سے تیار نہیں کی گئی ہیں۔"
+    },
+    "index": 184
+  },
+  {
+    "id": "158e7f04-07e7-41fb-92a4-32f29d1220dd",
+    "name": "Emergency exits are not accessible, are obstructed, or locked during working hours (including overtime)",
+    "translation": {
+      "en": "Emergency exits are not accessible, are obstructed, or locked during working hours (including overtime)",
+      "ur": "کام کے اوقات کے دوران ہنگامی اخراج قابل رسائی نہیں ہیں، رکاوٹ ہیں، یا مقفل ہیں (بشمول اوور ٹائم)"
+    },
+    "index": 185
+  },
+  {
+    "id": "c361ed6e-0080-463d-8f71-80c365171052",
+    "name": "Manual Labor",
+    "translation": {
+      "en": "Manual Labor",
+      "ur": "دستی مزدوری"
+    },
+    "index": 186
+  },
+  {
+    "id": "06fdeae5-4a49-4f3a-9791-f3ea7ab03c2b",
+    "name": "Inadequate provision of PPE (e.g. dust masks, ear protection)",
+    "translation": {
+      "en": "Inadequate provision of PPE (e.g. dust masks, ear protection)",
+      "ur": "پی پی ای کی ناکافی فراہمی (مثلاً ڈسٹ ماسک، کان کی حفاظت)"
+    },
+    "index": 187
+  },
+  {
+    "id": "f10f8184-dfc4-4e2f-9433-f2c46cfc3449",
+    "name": "Gender or gender identity",
+    "translation": {
+      "en": "Gender or gender identity",
+      "ur": "جنس یا صنفی شناخت"
+    },
+    "index": 188
+  },
+  {
+    "id": "5c875407-1a50-4bee-a24f-170f922b8765",
+    "name": "Age",
+    "translation": {
+      "en": "Age",
+      "ur": "عمر"
+    },
+    "index": 189
+  },
+  {
+    "id": "d364f5c6-b240-47e0-90bd-2656709eaacb",
+    "name": "Creation of situation of dependency relationship with employer",
+    "translation": {
+      "en": "Creation of situation of dependency relationship with employer",
+      "ur": "آجر کے ساتھ انحصار کے تعلقات کی صورتحال کی تخلیق"
+    },
+    "index": 190
+  },
+  {
+    "id": "f7496659-0da9-4b23-bb75-ff87a2e8503e",
+    "name": "Retribution based on gender, minority status, other",
+    "translation": {
+      "en": "Retribution based on gender, minority status, other",
+      "ur": "جنس، اقلیتی حیثیت، دیگر کی بنیاد پر بدلہ"
+    },
+    "index": 191
+  },
+  {
+    "id": "388ed335-5635-48d3-8a4e-49c9977a0f05",
+    "name": "Forced overtime",
+    "translation": {
+      "en": "Forced overtime",
+      "ur": "زبردستی اوور ٹائم"
+    },
+    "index": 192
+  },
+  {
+    "id": "1729930b-d118-448d-abfa-deefe2a52b52",
+    "name": "Forced sex for housing and pay",
+    "translation": {
+      "en": "Forced sex for housing and pay",
+      "ur": "رہائش اور تنخواہ کے لیے زبردستی جنسی تعلقات"
+    },
+    "index": 193
+  },
+  {
+    "id": "2cb2d325-668f-4c11-8be1-b769620c33cd",
+    "name": "Retribution",
+    "translation": {
+      "en": "Retribution",
+      "ur": "بدلہ"
+    },
+    "index": 194
+  },
+  {
+    "id": "1a1ce6c5-53bb-4199-b405-8a4d9a8cfa16",
+    "name": "Physical and sexual intimidation and abuse",
+    "translation": {
+      "en": "Physical and sexual intimidation and abuse",
+      "ur": "جسمانی اور جنسی دھمکیاں اور بدسلوکی"
+    },
+    "index": 195
+  },
+  {
+    "id": "cbd41cd8-1e1a-4e52-814d-5c09e2b9ed4c",
+    "name": "Psycholocal abuse and intimidation and use of threats and punishment",
+    "translation": {
+      "en": "Psycholocal abuse and intimidation and use of threats and punishment",
+      "ur": "نفسیاتی بدسلوکی اور دھمکیاں اور دھمکیوں اور سزا کا استعمال"
+    },
+    "index": 196
+  },
+  {
+    "id": "33bcd234-c373-4534-bd37-98ce1fb8f1f5",
+    "name": "Children working at night or times restricted by law",
+    "translation": {
+      "en": "Children working at night or times restricted by law",
+      "ur": "رات کو کام کرنے والے بچے یا اوقات قانون کے ذریعہ ممنوع ہیں۔"
+    },
+    "index": 197
+  },
+  {
+    "id": "2ecd093c-0379-4bcb-acc7-b69334b1e890",
+    "name": "Persons under the age of 18 (children) performing hazardous tasks per national law and in compliance with ILO 182 hazardous tasks list",
+    "translation": {
+      "en": "Persons under the age of 18 (children) performing hazardous tasks per national law and in compliance with ILO 182 hazardous tasks list",
+      "ur": "اٹھارہ سال سے کم عمر کے افراد (بچے) قومی قانون کے مطابق اور ILO 182 کے خطرناک کاموں کی فہرست کے مطابق خطرناک کام انجام دیتے ہیں۔"
+    },
+    "index": 198
+  },
+  {
+    "id": "cbb99ef6-f8cb-4824-a39d-21c693c5c07c",
+    "name": "Restiction of movement",
+    "translation": {
+      "en": "Restiction of movement",
+      "ur": "نقل و حرکت پر پابندی"
+    },
+    "index": 202
+  }
+]

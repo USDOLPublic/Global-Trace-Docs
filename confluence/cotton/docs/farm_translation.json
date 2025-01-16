@@ -1,0 +1,1012 @@
+[
+    {
+        "title": {
+            "en": "Is the total facility size 1.9 Hectares or less?",
+            "ur": "کیا کُل فارم سائز 1.9ہیکٹیئر ہے یا کم ہے؟"
+        },
+        "questionId": "d647151a-7eab-4687-8d01-0e7901c53a06",
+        "index": 1,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "cfb6071c-2f44-4e45-b01d-ac67dd2ac436"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "34d5b835-d317-422c-8161-33fd0b66a4c3"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Have there been any OSH incidents identified at a local health clinic  involving anyone under the age of 18, injured at work in a facility?",
+            "ur": "کیا کسی مقامی ہیلتھ کلینک میں OSH کے ایسے واقعات کی نشاندہی ہوئی ہے جس میں 18 سال سے کم عمر کا کوئی بھی شخص شامل ہو، جو کپاس کے فارم میں کام کےدوران زخمی ہوا ہو؟"
+        },
+        "questionId": "59b12fc7-ae67-4bcc-a596-0cde68cbe934",
+        "index": 2,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "df98f034-ba6c-45d8-9628-6d21d5150493"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "e0c9d68a-4d74-45ed-aa28-1c2c27dc7c34"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Is there a primary and secondary schools in this community?",
+            "ur": "کیا اس کمیونٹی میں کوئی پرائمری اور سیکنڈری اسکول ہے؟"
+        },
+        "questionId": "b879ea84-3748-4797-8484-4534305c4b3b",
+        "index": 3,
+        "questionResponses": [
+            {
+                "option": "Yes - Primary only",
+                "translation": {
+                    "en": "Yes - Primary only",
+                    "ur": "ہاں - صرف پرائمری"
+                },
+                "questionResponseId": "8b4db7b6-3416-4e44-adca-9c31b72653ed"
+            },
+            {
+                "option": "Yes - both",
+                "translation": {
+                    "en": "Yes - both",
+                    "ur": "ہاں - دونوں"
+                },
+                "questionResponseId": "f96b6f4c-4378-4add-8df6-e3dca7db7548"
+            },
+            {
+                "option": "Yes - Secondary only",
+                "translation": {
+                    "en": "Yes - Secondary only",
+                    "ur": "ہاں - صرف سیکنڈری"
+                },
+                "questionResponseId": "40571bb4-ca9f-4dd2-b063-053b139f1914"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "37e8aa08-7e12-435f-afb8-be2579d17b18"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "What is the total number of male workers (excluding management) at the facility?",
+            "ur": "فارم میں مرد ورکرز کی  کُل تعداد کتنی ہے؟( فارم انتظامیہ کے بغیر)"
+        },
+        "questionId": "53e9b440-1eea-4220-b13b-f206e9a31e47",
+        "index": 4
+    },
+    {
+        "title": {
+            "en": "Is there a school feeding programme at primary school level?",
+            "ur": "کیا پرائمری اسکول کی سطح پر اسکول فیڈنگ پروگرام ہے؟"
+        },
+        "questionId": "44805818-fddc-490b-9903-8461724f7a0b",
+        "index": 5,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "5b095784-9f52-4b2d-9021-5b89a60c7950"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "877e4238-3b33-4b8d-b3fd-f627567729be"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "What is the total number of female workers (excluding management) at the facility?",
+            "ur": "فارم میں  خواتین ورکرز کی  کُل تعداد کتنی ہے؟(انتظامیہ کے بغیر)"
+        },
+        "questionId": "670637ed-e441-48ef-9903-6f89f3f728d7",
+        "index": 6
+    },
+    {
+        "title": {
+            "en": "Is there connection to the mobile phone network in this community?",
+            "ur": "کیا اس کمیونٹی میں موبائل فون نیٹ ورک سے کنکشن ہے؟"
+        },
+        "questionId": "c9daeed9-0840-43fd-9b2f-23c2a15420d3",
+        "index": 7,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "41e86b2d-1906-4dc0-a83c-2eebf2aceb53"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "b79e72fb-4b86-41d2-80d5-dae7d0cc4ba8"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "What percent of management (including trainers, supervisors, and/or other high-level functions) at the facility are women?",
+            "ur": "سائٹ پر منیجمنٹ کا کتنے  فیصد خواتین ہیں؟(بشمول ٹرینرز، سپروائزرز، اور یا دوسرے ہائی لیول فنگشنز)"
+        },
+        "questionId": "c7f9149c-f838-41f2-b6ea-dc0ef4c194a3",
+        "index": 8,
+        "questionResponses": [
+            {
+                "option": "More than 40%",
+                "translation": {
+                    "en": "More than 40%",
+                    "ur": "چالیس فی صد سے زیادہ"
+                },
+                "questionResponseId": "2bcf4a25-9fb8-4970-8f21-4294378f8107"
+            },
+            {
+                "option": "Less than 40%",
+                "translation": {
+                    "en": "Less than 40%",
+                    "ur": "چالیس فی صد سے کم"
+                },
+                "questionResponseId": "03153d8f-bf23-4c2f-b793-8b12a83ad79a"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Does cotton production mostly rely on manual labor for any of the following activities: land preparation, sowing, weeding, or harvest?",
+            "ur": "زمین کی تیاری، بجائی، گھاس یا کٹائی کیلئے کیا کپاس کی پیداوار زیادہ تر دستی لیبر پر انحصار کرتی ہے؟"
+        },
+        "questionId": "aaa70ff0-c21d-4e0f-a22e-6ab433fb50aa",
+        "index": 9,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "6077846c-0b9e-4fa2-8524-f673c74dd398"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "bb8ef826-31a4-47a6-9634-7e187edd47c7"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Is casual adult labor available in this community?",
+            "ur": "کیا اس کمیونٹی میں  عارضی/وقتی بالغ مزدوری دستیاب ہے؟"
+        },
+        "questionId": "b6e67276-9701-4db4-8d19-0dcb644bbf95",
+        "index": 10,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "960b1b22-c22f-4bee-b107-cc2390f73a4c"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "2f1e42f6-3360-4ace-b11b-a41d229e75b4"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Does the facility have any tenant workers (landlords give land against fixed annual rent)?",
+            "ur": "کیا فارم میں کرایہ دار مزدور ہیں؟(مالک زمین مقررہ سالانہ کرایہ دیتا ہے)"
+        },
+        "questionId": "a76fdd6c-e451-4bbc-a0b7-a8f12276d9bf",
+        "index": 11,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "c52f8e98-045b-49a8-8c51-79348e35b70f"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "1a1e6d4f-384e-42d3-a92b-bb16a0c0ca2f"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "If there are tenant workers, do any children (under age of 18) live at the site with their parents?",
+            "ur": "کیا کرایہ دار مزدوروں میں اٹھارہ سال سے کم عمر بچے سائٹ پر اپنے والدین کے ساتھ رہتے ہیں؟"
+        },
+        "questionId": "a3f3322a-062b-48dd-b028-90232db61b00",
+        "index": 12,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "09897ae9-29f0-4128-b83a-430ee4cecef4"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "0fbc132c-d65f-4b90-9537-29da16eea1dd"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Does the facility have any partnerships with sharecropper (hari) workers?  (i.e. the land and all expenditures are contributed by the farmer, and all labor work is done by the tenant/hari, and the tenant/hari gets a share of the profit)",
+            "ur": "کیا فارم کا حصہ دار (ہاری) ورکرز کے ساتھ کوئی شراکت ہے؟ (یعنی زمین اور تمام اخراجات کسان کے ذریعے ادا کیے جاتے ہیں، اور تمام مزدوری کا کام کرایہ دار/ہاری کرتا ہے، اور کرایہ دار/ہاری کو منافع کا حصہ ملتا ہے)"
+        },
+        "questionId": "770eb898-09c8-4198-8466-15f26607a1d3",
+        "index": 13,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "16f92d47-ea98-48af-a5a8-b8dc2c6e853f"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "bc62eb99-f819-4979-b0a8-81d80e606dcb"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "If there are sharecropper workers, do any children (under age of 18) live at the site with their parents?",
+            "ur": "اگر حصص کاشت کرنے والے کارکن ہیں، کیا کوئی بچہ (18 سال سے کم عمر) اپنے والدین کے ساتھ سائٹ پر رہتا ہے؟"
+        },
+        "questionId": "cc31270a-8a2d-438b-beff-4d2c8e74cb1f",
+        "index": 14,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "d16c05af-7c86-47b3-9eb1-ad300b58dbf0"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "167ae318-c8c8-4665-be78-5e4137f10fbf"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Does the facility rely on seasonal or temporary workers at some point during the season (i.e. harvest)?",
+            "ur": "کیا کپاس کے فارم موسم (یعنی فصل کی کٹائی/چنائی) کے دوران کسی وقت موسمی یا عارضی کارکنوں پر انحصار کرتے ہیں؟"
+        },
+        "questionId": "bd8b1b28-18de-48ee-90de-d0ff9375a916",
+        "index": 15,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "1a682934-8e30-4e49-b65c-977674ef3819"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "2f3e91cb-e5f7-4e64-aa02-46a92a17368d"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Do workers often travel from different regions/provinces/states for the purpose of working on the facility? [e.g. Nomadic haris including Bheels and Parkari Kolhis]",
+            "ur": "کیا کارکن اکثر سائٹ پر کام کرنے کے مقصد سے مختلف علاقوں/صوبوں/ریاستوں سے سفر کرتے ہیں؟ [مثلاً خانہ بدوش ہاری بشمول بھیل اور پارکاری کولہی]"
+        },
+        "questionId": "bd327074-1fd8-4363-a3cb-451abb3562b2",
+        "index": 16,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "19026c87-ff7a-4f56-9214-d6315f1bb28a"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "2816383f-ba15-485d-986c-c623118209a3"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "If yes(workers comes from different regions), do any of these workers bring their children?",
+            "ur": "اگر (مزدور مختلف علاقوں سے آتے ہیں) تو کیا ان میں سے کوئی کارکن اپنے بچوں کو لاتا ہے؟"
+        },
+        "questionId": "371e2443-770d-47a2-ab3a-ccb71cdf7d3e",
+        "index": 17,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "04dc961c-74c7-40ce-adcb-64ea362e03cc"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "2aff4568-47cf-4499-baa7-b4c975896265"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Do international migrants work on the facility?",
+            "ur": "کیا بین الاقوامی تارکین وطن کپاس کے فارم پر کام کرتے ہیں؟"
+        },
+        "questionId": "913e519f-4b2b-4faa-a54d-56a74993f5cb",
+        "index": 18,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "48d3f978-8c10-4063-b26a-cf0efc2a9256"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "c1ee199b-793c-48ef-87f5-870d08cad9ba"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Are there groups of workers working on facility who speak a different language or belong to a different religious, ethnic, or social group than their employers? (e.g. Christian and Hindu Dalits)",
+            "ur": "کیا کپاس کے فارموں پر کام کرنے والے کارکنوں کے ایسے گروپ ہیں جو مختلف زبان بولتے ہیں یا اپنے آجروں سے مختلف مذہبی، نسلی، یا سماجی گروہ سے تعلق رکھتے ہیں؟ (مثلاً عیسائی اور ہندو دلت)"
+        },
+        "questionId": "7f2b0dce-f893-46c0-9e13-fe784975867f",
+        "index": 19,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "9b300da9-c98e-46ac-a700-ac150177fd78"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "3049c772-242b-447c-94c0-cdfaecee9d5f"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Are workers provided loans or wage advances by farmers or labor recruiters?",
+            "ur": "کیا مزدوروں کو کسانوں یا مزدور بھرتی کرنے والوں کے ذریعہ قرض یا اجرت کی پیشگی فراہم کی جاتی ہے؟"
+        },
+        "questionId": "475e49dd-99e1-4bfc-93ef-5fa81ed99e79",
+        "index": 20,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "4ece6866-c0d0-4574-8adb-3f7f7ffb90fe"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "7553a35e-945e-431c-aa83-38c3725c5128"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Are labor recruiters/intermediaries involved in hiring or supplying any workers to the facility?",
+            "ur": "کیا مزدور بھرتی کرنے والے/بمڈل مین کپاس کی پیداوار کے لیے کسی مزدور کو بھرتی کرنے یا سپلائی کرنے میں شامل ہیں؟"
+        },
+        "questionId": "29ce0bce-2711-4135-a8cd-54fe44dd1ebe",
+        "index": 21,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "ef5939a3-ea06-4629-97de-1ac12d34345a"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "cec5d865-3e64-476a-8def-ae622d4db1b9"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Is accommodation (temporary or permenant) provided to any workers by farmers or labor recruiters?",
+            "ur": "کیا کسانوں یا مزدور بھرتی کرنے والوں کی طرف سے کسی کارکن کو رہائش (عارضی یا مستقل) فراہم کی جاتی ہے؟"
+        },
+        "questionId": "32460490-7423-47a3-bc95-3a24a66442f2",
+        "index": 22,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "3443026e-04d8-4f12-8e8c-c38022b3e8c2"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "49a516e9-ee3d-4498-8eec-c21c00de97e7"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "If accommodation is provided, do any children (under age of 18) live at the site with their parents?",
+            "ur": "اگر رہائش فراہم کی جاتی ہے، کیا کوئی بچہ (18 سال سے کم عمر) اپنے والدین کے ساتھ سائٹ پر رہتا ہے؟"
+        },
+        "questionId": "f31b6e47-9e62-4feb-9282-d79995482036",
+        "index": 23,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "5be8794e-6b24-499a-8d2e-154527e329fe"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "6fbfa399-d485-4735-b23f-cb37899292e3"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Does the site require proof of age and does it make note of this when hiring workers?",
+            "ur": "کیا سائٹ کو عمر کا ثبوت درکار ہے اور کیا وہ کارکنوں کو ملازمت دیتے وقت اس بات کو نوٹ کرتی ہے؟"
+        },
+        "questionId": "cf865d8f-08c8-4137-91ce-9ec45bbf1fb9",
+        "index": 24,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "883726ae-d225-430b-b8cf-9c212b38f6f2"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "8b0afd1a-af9c-4e48-99ff-25e6c4a6eb2d"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Does anyone under the age of 18 work at the site?",
+            "ur": "کیا 18 سال سے کم عمر کوئی بھی سائٹ پر کام کرتا ہے؟"
+        },
+        "questionId": "fbfd3983-e5aa-4238-9d9e-c041c9ccd45f",
+        "index": 25,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "bbd51113-8e46-4fb7-b1e2-71118cabf68e"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "71a6314b-c456-4e46-878f-1fedaf4eb895"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "If yes(<18 years), does workers under age of 8 work at the facility?",
+            "ur": "اگر ہاں (18 سال سے کم عمر)، کیا 8 سال سے کم عمر کے کارکن فارم پر کام کرتے ہیں؟"
+        },
+        "questionId": "d10eccad-2df5-47c0-81eb-f75f6f1b1abc",
+        "index": 26,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "018ef0c5-4c77-42ca-95ca-2785f7ac1d9e"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "938a2eee-bf6a-4ccc-b9e8-54ddf3fe86be"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "If yes(<18 years), does workers in the 8-11 age group work at the facility?",
+            "ur": "اگر ہاں (18 سال)، کیا 8-11 سال کی عمر کے کارکن فارم پر کام کرتے ہیں؟"
+        },
+        "questionId": "8c2bc9c7-11c7-4a52-b53a-b6c27c686793",
+        "index": 27,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "1fbd70bc-9fcb-45ae-bdac-97b8550d9f44"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "958779be-c026-49f5-aa9d-3add365d6641"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "If yes(<18 years), does workers in the 12-15 age group work at the facility?",
+            "ur": "اگر ہاں (18 سال سے کم عمر)، کیا 12-15 سال کی عمر کے کارکن فارم پر کام کرتے ہیں؟"
+        },
+        "questionId": "0529e73b-be17-429e-a9cf-dd841fe486c8",
+        "index": 28,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "4cf75dda-4cd7-46ba-8b05-732562222941"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "6a0977b0-e5a3-4e1a-830d-68a21c3bd677"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "If yes(<18 years), does workers in the 16-17 age group work at the facility?",
+            "ur": "اگر ہاں (18 سال سے کم عمر)، کیا 16-17 سال کی عمر کے کارکن فارم پر کام کرتے ہیں؟"
+        },
+        "questionId": "02cf2fb2-fa4e-4513-88e2-54f82ffe0c49",
+        "index": 29,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "2b72afe1-4364-416b-8b2d-0548aa8c5b90"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "496dbd5d-ad99-46a9-b918-754272675217"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "If yes(<18 years), do all of the young workers below school leaving age (16) also attend school?",
+            "ur": "اگر ہاں (18 سال سے کم عمر)، کیا اسکول چھوڑنے کی عمر (16) سے کم عمر کے تمام نوجوان کارکن بھی اسکول جاتے ہیں؟"
+        },
+        "questionId": "2c194b3d-5e1d-4208-b40c-53af9e039867",
+        "index": 30,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "114e03bb-1219-41d8-ac7e-58a23418f6dd"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "952d6b58-5d7b-4d18-8d89-37bcafdd185c"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "If yes(<18 years), has management identified any tasks, processes or other working conditions that could be hazardous to young workers?",
+            "ur": "اگر ہاں (18 سال سے کم عمر)، کیا انتظامیہ نے کسی ایسے کام، عمل یا کام کے دیگر حالات کی نشاندہی کی ہے جو نوجوان کارکنوں کے لیے خطرناک ہو سکتے ہیں؟"
+        },
+        "questionId": "ce509441-ed92-4612-967b-ffcdb88007e0",
+        "index": 31,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "4c4a451d-ce9c-463e-bbdb-0f5cf6b3c1b7"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "bec65b0c-0e51-41ef-bcbd-c9688cb09fd1"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "If yes, do any young workers do the following?\n- Work in excess of seven hours a day and 42 hours a week. \n- Work overnight shifts \n-Exposure to chemicals or other noxious substances\n- Heavy lifting \n- Exposure to heavy or dangerous machinery or tools\n- Any other conditions that can be considered hazardous",
+            "ur": "کیا کوئی نوجوان کارکن مندرجہ ذیل کام کرتا ہے؟\n- دن میں سات گھنٹے اور ہفتے میں 42 گھنٹے سے زیادہ کام کریں۔\n- رات بھر کی شفٹوں میں کام کریں (شام 7 بجے سے صبح 8 بجے کے درمیان) کپاس کے ریشے کے سامنے\n- کیمیکلز یا دیگر نقصان دہ مادوں کی موجودگی\n- بھاری وزن اٹھانا\n- بھاری یا خطرناک مشینری یا اوزار کے ساتھ\n- کوئی دوسری شرائط جو خطرناک سمجھی جا سکتی ہیں"
+            },
+        "questionId": "caefdb40-3b71-4ab3-b517-717e42030e31",
+        "index": 32,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "2b41a225-242d-4946-aa05-3e950e21f30f"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "52cd8419-bdbc-40b2-99da-64edbd18ac6d"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Does the facility recognise any trade unions?",
+            "ur": "کیا فارم کسی ٹریڈ یونین کو تسلیم کرتا ہے؟"
+        },
+        "questionId": "bc822c6b-2ec3-4543-8e6f-978a86c43624",
+        "index": 33,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "ac9bd3fa-b5e7-4b4c-b7d3-b4993c23b601"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "cbae1242-92b8-4d68-93ae-0d7b37ceedf3"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "If yes(facility recognise trade unions), what % of the workforce is unionised?",
+            "ur": "اگر ہاں (فارم ٹریڈ یونینوں کو تسلیم کرتے ہیں)، ورک فورس کا کتنا فیصد یونین پر مشتمل ہے؟"
+        },
+        "questionId": "72dac3cb-b0f8-4851-9c6c-d3124d63f489",
+        "index": 34,
+        "questionResponses": [
+            {
+                "option": "0%",
+                "translation": {
+                    "en": "0%",
+                    "ur": "0%"
+                },
+                "questionResponseId": "107a6eb4-824a-4be5-8996-155c6412d991"
+            },
+            {
+                "option": "1% - 50%",
+                "translation": {
+                    "en": "1% - 50%",
+                    "ur": "1% - 50%"
+                },
+                "questionResponseId": "c8982620-6421-49fd-b74e-1bb5271e3e5c"
+            },
+            {
+                "option": ">50%",
+                "translation": {
+                    "en": ">50%",
+                    "ur": ">50%"
+                },
+                "questionResponseId": "5d5014fb-5786-468b-be45-8a91be139825"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "If yes(facility recognise trade unions), what % of the workforce is covered by collective bargaining agreements?",
+            "ur": "اگر ہاں (فارم ٹریڈ یونینوں کو تسلیم کرتے ہیں)، تو کتنے فیصد افرادی قوت کو اجتماعی سودے بازی کے معاہدوں میں شامل کیا جاتا ہے؟"
+        },
+        "questionId": "372032da-9046-4efd-bc5f-fa9e3d90c6a8",
+        "index": 35,
+        "questionResponses": [
+            {
+                "option": "0%",
+                "translation": {
+                    "en": "0%",
+                    "ur": "0%"
+                },
+                "questionResponseId": "c6009a08-1b73-429f-a121-a520c5da639e"
+            },
+            {
+                "option": "1% - 50%",
+                "translation": {
+                    "en": "1% - 50%",
+                    "ur": "1% - 50%"
+                },
+                "questionResponseId": "04c20d4b-d7c5-4ca3-ac3e-56c637878710"
+            },
+            {
+                "option": ">50%",
+                "translation": {
+                    "en": ">50%",
+                    "ur": ">50%"
+                },
+                "questionResponseId": "6b9eb117-6631-4411-918f-012352d2cc7b"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Does the facility provide all workers with health and safety training, such as use of safe spraying techniques and appropriate use of equipment?",
+            "ur": "کیا فارم تمام کارکنوں کو صحت اور حفاظت کی تربیت فراہم کرتا ہے، جیسے محفوظ سپرے کی تکنیکوں کا استعمال اور آلات کا مناسب استعمال؟"
+        },
+        "questionId": "bf639fe1-6e8e-45b6-8bf6-76cf737caaec",
+        "index": 36,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "7912af90-ad2d-4362-a5a1-3a5c496013f4"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "fdcd2c10-94b0-42fe-8b13-0fe158594c68"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Does the facility provide all workers with protective clothing and personal protective equipment (PPE), and train them in how and when to use it?",
+            "ur": "کیا فارم تمام کارکنوں کو حفاظتی لباس اور ذاتی حفاظتی سامان (پی پی ای) فراہم کرتا ہے، اور انہیں تربیت دیتا ہے کہ اسے کیسے اور کب استعمال کرنا ہے؟"
+        },
+        "questionId": "fa3ba04b-5865-4ed6-9e8a-a1508458565b",
+        "index": 37,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "f3cd2941-ab32-4f9b-b764-e666f96d2e04"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "5255e2be-4eee-4740-aff5-7a9191d511da"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Does the facility provide professional/knowledge development training to workers? (this does not include health and safety training)",
+            "ur": "کیا فارم کارکنوں کو پیشہ ورانہ/علمی ترقی کی تربیت فراہم کرتا ہے؟ (اس میں صحت اور حفاظت کی تربیت شامل نہیں ہے)"
+        },
+        "questionId": "86b60f93-4061-48fa-9045-7776813c8686",
+        "index": 38,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "24c75d3b-5066-4777-90f7-77de9fb4432f"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "e19e4371-56ab-4bd2-ab0e-969b77f47b1b"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "If yes(facility providing professional/knowledge development training), what % of workers participating in this training in the last 12 months were women?",
+            "ur": "اگر ہاں (پیشہ ورانہ/علمی ترقی کی تربیت فراہم کرنے والا فارم)، تو پچھلے 12 مہینوں میں اس تربیت میں حصہ لینے والے کارکنوں کی کتنی فیصد خواتین تھیں؟"
+        },
+        "questionId": "290bef6c-d355-49bb-b01c-6a950a289510",
+        "index": 39,
+        "questionResponses": [
+            {
+                "option": "Less than 40%",
+                "translation": {
+                    "en": "Less than 40%",
+                    "ur": "چالیس فی صد سے کم"
+                },
+                "questionResponseId": "887e0fac-d796-42ea-a239-529e8020bd81"
+            },
+            {
+                "option": "More than 40%",
+                "translation": {
+                    "en": "More than 40%",
+                    "ur": "چالیس فی صد سے زیادہ"
+                },
+                "questionResponseId": "69f6a987-90a9-41a8-bfca-c445292c77de"
+            }
+        ]
+    }
+]

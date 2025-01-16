@@ -1,0 +1,1877 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Global Trace BE documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">Global Trace BE documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Injectables</li>
+  <li class="breadcrumb-item" >ValidateFacilityGroupService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/facilities/services/import/validate-facility-group.service.ts</code>
+        </p>
+
+
+
+            <p class="comment">
+                <h3>Extends</h3>
+            </p>
+            <p class="comment">
+                        <code>TransactionService</code>
+            </p>
+
+
+            <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#checkEmptyAnswer" >checkEmptyAnswer</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#convertFacilityDefaultErrors" >convertFacilityDefaultErrors</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#hasExcelErrors" >hasExcelErrors</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#uploadAndValidateTemplate" >uploadAndValidateTemplate</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#uploadFile" >uploadFile</a>
+                            </li>
+                            <li>
+                                <a href="#validateCommunityRisk" >validateCommunityRisk</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#validateCompleteSaq" >validateCompleteSaq</a>
+                            </li>
+                            <li>
+                                <a href="#validateFarmIds" >validateFarmIds</a>
+                            </li>
+                            <li>
+                                <a href="#validateFarmLevelRisk" >validateFarmLevelRisk</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#validateInstruction" >validateInstruction</a>
+                            </li>
+                            <li>
+                                <a href="#validateLatLong" >validateLatLong</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#validationByGoToTypeEnd" >validationByGoToTypeEnd</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#validSelfAssessments" >validSelfAssessments</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(fileService: <a href="../injectables/FileService.html" target="_self">FileService</a>, facilityGroupExcelService: <a href="../injectables/FacilityGroupExcelService.html" target="_self">FacilityGroupExcelService</a>, storageService: StorageService, selfAssessmentGroupService: <a href="../injectables/SelfAssessmentGroupService.html" target="_self">SelfAssessmentGroupService</a>, validateImportTemplateUtilService: <a href="../injectables/ValidateImportTemplateUtilService.html" target="_self">ValidateImportTemplateUtilService</a>, facilityGroupService: <a href="../injectables/FacilityGroupService.html" target="_self">FacilityGroupService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/facilities/services/import/validate-facility-group.service.ts:31</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>fileService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/FileService.html" target="_self" >FileService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>facilityGroupExcelService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/FacilityGroupExcelService.html" target="_self" >FacilityGroupExcelService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>storageService</td>
+                                                  
+                                                        <td>
+                                                                    <code>StorageService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>selfAssessmentGroupService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SelfAssessmentGroupService.html" target="_self" >SelfAssessmentGroupService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>validateImportTemplateUtilService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ValidateImportTemplateUtilService.html" target="_self" >ValidateImportTemplateUtilService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>facilityGroupService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/FacilityGroupService.html" target="_self" >FacilityGroupService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="checkEmptyAnswer"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>checkEmptyAnswer</b></span>
+                        <a href="#checkEmptyAnswer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>checkEmptyAnswer(questions: <a href="../entitys/SelfAssessmentQuestionEntity.html" target="_self">SelfAssessmentQuestionEntity[]</a>, farm: <a href="../undefineds/FarmLevelRiskExcelData.html" target="_self">FarmLevelRiskExcelData</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="324"
+                                    class="link-to-prism">src/facilities/services/import/validate-facility-group.service.ts:324</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>questions</td>
+                                            <td>
+                                                            <code><a href="../entitys/SelfAssessmentQuestionEntity.html" target="_self" >SelfAssessmentQuestionEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>farm</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#FarmLevelRiskExcelData" target="_self" >FarmLevelRiskExcelData</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="convertFacilityDefaultErrors"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>convertFacilityDefaultErrors</b></span>
+                        <a href="#convertFacilityDefaultErrors"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>convertFacilityDefaultErrors(errors: FileValidationError[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="351"
+                                    class="link-to-prism">src/facilities/services/import/validate-facility-group.service.ts:351</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>errors</td>
+                                            <td>
+                                                        <code>FileValidationError[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hasExcelErrors"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>hasExcelErrors</b></span>
+                        <a href="#hasExcelErrors"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>hasExcelErrors(validationSheetErrors: <a href="../undefineds/ValidationSheetErrors.html" target="_self">ValidationSheetErrors</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="92"
+                                    class="link-to-prism">src/facilities/services/import/validate-facility-group.service.ts:92</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>validationSheetErrors</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#ValidationSheetErrors" target="_self" >ValidationSheetErrors</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="uploadAndValidateTemplate"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>uploadAndValidateTemplate</b></span>
+                        <a href="#uploadAndValidateTemplate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>uploadAndValidateTemplate(file: Express.Multer.File, roleId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, facilityGroupId?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, isUpdating: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="43"
+                                    class="link-to-prism">src/facilities/services/import/validate-facility-group.service.ts:43</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Default value</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>file</td>
+                                            <td>
+                                                        <code>Express.Multer.File</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+                                            <td>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                                <td>roleId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+                                            <td>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                                <td>facilityGroupId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    Yes
+                                            </td>
+
+                                            <td>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                                <td>isUpdating</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+                                            <td>
+                                                    <code>false</code>
+                                            </td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#ImportingFarmGroupResultType" target="_self" >Promise&lt;ImportingFarmGroupResultType&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="uploadFile"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>uploadFile</b></span>
+                        <a href="#uploadFile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>uploadFile(file: Express.Multer.File)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="346"
+                                    class="link-to-prism">src/facilities/services/import/validate-facility-group.service.ts:346</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>file</td>
+                                            <td>
+                                                        <code>Express.Multer.File</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/FileEntity.html" target="_self" >Promise&lt;FileEntity&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateCommunityRisk"></a>
+                    <span class="name">
+                        <span ><b>validateCommunityRisk</b></span>
+                        <a href="#validateCommunityRisk"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>validateCommunityRisk(communityRisk: <a href="../undefineds/ValidExcelQuestionData.html" target="_self">ValidExcelQuestionData</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="175"
+                                    class="link-to-prism">src/facilities/services/import/validate-facility-group.service.ts:175</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>communityRisk</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#ValidExcelQuestionData" target="_self" >ValidExcelQuestionData</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>{ communityRiskTotalItems: number; validatedCommunityRiskItemCount: number; validationCommunityRiskErrors: {}; }</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateCompleteSaq"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>validateCompleteSaq</b></span>
+                        <a href="#validateCompleteSaq"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateCompleteSaq(farmLevelRisk: <a href="../undefineds/FarmLevelRiskExcelData.html" target="_self">FarmLevelRiskExcelData[]</a>, groups: <a href="../entitys/SelfAssessmentGroupEntity.html" target="_self">SelfAssessmentGroupEntity[]</a>, errors: <a href="../undefineds/FileDataValidationType.html" target="_self">FileDataValidationType[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="114"
+                                    class="link-to-prism">src/facilities/services/import/validate-facility-group.service.ts:114</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>farmLevelRisk</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#FarmLevelRiskExcelData" target="_self" >FarmLevelRiskExcelData[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>groups</td>
+                                            <td>
+                                                            <code><a href="../entitys/SelfAssessmentGroupEntity.html" target="_self" >SelfAssessmentGroupEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>errors</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#FileDataValidationType" target="_self" >FileDataValidationType[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#now" target="_self" >unknown</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateFarmIds"></a>
+                    <span class="name">
+                        <span ><b>validateFarmIds</b></span>
+                        <a href="#validateFarmIds"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>validateFarmIds(errors: <a href="../undefineds/FileDataValidationType.html" target="_self">FileDataValidationType[]</a>, farms: <a href="../undefineds/FarmLevelRiskExcelData.html" target="_self">FarmLevelRiskExcelData[]</a>, farmId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, rowIndex: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="268"
+                                    class="link-to-prism">src/facilities/services/import/validate-facility-group.service.ts:268</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>errors</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#FileDataValidationType" target="_self" >FileDataValidationType[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>farms</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#FarmLevelRiskExcelData" target="_self" >FarmLevelRiskExcelData[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>farmId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>rowIndex</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateFarmLevelRisk"></a>
+                    <span class="name">
+                        <span ><b>validateFarmLevelRisk</b></span>
+                        <a href="#validateFarmLevelRisk"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>validateFarmLevelRisk(farms: <a href="../undefineds/FarmLevelRiskExcelData.html" target="_self">FarmLevelRiskExcelData[]</a>, isGoToTypeEnd: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="194"
+                                    class="link-to-prism">src/facilities/services/import/validate-facility-group.service.ts:194</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>farms</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#FarmLevelRiskExcelData" target="_self" >FarmLevelRiskExcelData[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>isGoToTypeEnd</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#ImportingFarmLevelRiskResultType" target="_self" >ImportingFarmLevelRiskResultType</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateInstruction"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>validateInstruction</b></span>
+                        <a href="#validateInstruction"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateInstruction(instruction: <a href="../undefineds/InstructionExcelType.html" target="_self">InstructionExcelType</a>, facilityGroupId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, isUpdating: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="140"
+                                    class="link-to-prism">src/facilities/services/import/validate-facility-group.service.ts:140</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>instruction</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#InstructionExcelType" target="_self" >InstructionExcelType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>facilityGroupId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>isUpdating</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#now" target="_self" >unknown</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateLatLong"></a>
+                    <span class="name">
+                        <span ><b>validateLatLong</b></span>
+                        <a href="#validateLatLong"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>validateLatLong(errors: <a href="../undefineds/FileDataValidationType.html" target="_self">FileDataValidationType[]</a>, undefined: <a href="../undefineds/CoordinateType.html" target="_self">CoordinateType</a>, rowIndex: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="302"
+                                    class="link-to-prism">src/facilities/services/import/validate-facility-group.service.ts:302</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>errors</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#FileDataValidationType" target="_self" >FileDataValidationType[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#CoordinateType" target="_self" >CoordinateType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>rowIndex</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validationByGoToTypeEnd"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>validationByGoToTypeEnd</b></span>
+                        <a href="#validationByGoToTypeEnd"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validationByGoToTypeEnd(fileDataValid: <a href="../undefineds/FileDataValidationType.html" target="_self">FileDataValidationType</a>, farm: <a href="../undefineds/FarmLevelRiskExcelData.html" target="_self">FarmLevelRiskExcelData</a>, rowIndex: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, isGoToTypeEnd: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="232"
+                                    class="link-to-prism">src/facilities/services/import/validate-facility-group.service.ts:232</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>fileDataValid</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#FileDataValidationType" target="_self" >FileDataValidationType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>farm</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#FarmLevelRiskExcelData" target="_self" >FarmLevelRiskExcelData</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>rowIndex</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>isGoToTypeEnd</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#FileDataValidationType" target="_self" >FileDataValidationType</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validSelfAssessments"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>validSelfAssessments</b></span>
+                        <a href="#validSelfAssessments"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validSelfAssessments(selfAssessment: <a href="../undefineds/ValidExcelQuestionData.html" target="_self">ValidExcelQuestionData</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="254"
+                                    class="link-to-prism">src/facilities/services/import/validate-facility-group.service.ts:254</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>selfAssessment</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#ValidExcelQuestionData" target="_self" >ValidExcelQuestionData</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>{}</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { TransactionService } from &#x27;@diginexhk/nestjs-transaction&#x27;;
+import { Injectable } from &#x27;@nestjs/common&#x27;;
+import {
+    ImportingFarmGroupResultType,
+    ImportingFarmLevelRiskResultType
+} from &#x27;~facilities/types/facility-groups/importing-farm-group-result.type&#x27;;
+import { flatMap, map, omit, sortBy } from &#x27;lodash&#x27;;
+import { FarmLevelRiskExcelData } from &#x27;~facilities/types/facility-groups/xlsx-farm-level-risk-data.type&#x27;;
+import { FileEntity } from &#x27;~files/entities/file.entity&#x27;;
+import { FileService } from &#x27;~files/services/file.service&#x27;;
+import { StorageService } from &#x27;@diginexhk/nestjs-storage&#x27;;
+import { FileDataValidationType, FileValidationError } from &#x27;~files/types/file-data-validation.type&#x27;;
+import { addErrorValidation } from &#x27;~files/helpers/add-error-validation.helper&#x27;;
+import { ErrorTypeEnum } from &#x27;~files/enums/error-type.enum&#x27;;
+import { SHEET_1, SHEET_2, SHEET_3 } from &#x27;~facilities/constants/farm-group-template.constants&#x27;;
+import { CoordinateType } from &#x27;~facilities/types/coordinates.type&#x27;;
+import { isLatLong } from &#x27;~core/helpers/is-lat-long.hepler&#x27;;
+import { SelfAssessmentQuestionEntity } from &#x27;~self-assessments/entities/self-assessment-question.entity&#x27;;
+import { SelfAssessmentGroupService } from &#x27;~self-assessments/services/self-assessment-group.service&#x27;;
+import { FacilityGroupExcelService } from &#x27;~facilities/services/import/facility-group-excel.service&#x27;;
+import { ValidExcelQuestionData } from &#x27;~facilities/types/facility-groups/valid-excel-question-data.type&#x27;;
+import { ValidateImportTemplateUtilService } from &#x27;./validate-import-template-util.service&#x27;;
+import { SelfAssessmentGroupEntity } from &#x27;~self-assessments/entities/self-assessment-group.entity&#x27;;
+import { InstructionExcelType } from &#x27;~facilities/types/facility-groups/instruction-excel.type&#x27;;
+import { FacilityGroupService } from &#x27;../facility-group.service&#x27;;
+import { capitalizeFirstWord } from &#x27;~core/helpers/string.helper&#x27;;
+import { GoToTypeEnum } from &#x27;~self-assessments/enums/go-to-type.enum&#x27;;
+import { ValidationSheetErrors } from &#x27;~facilities/types/facility-groups/validation-sheet-error.type&#x27;;
+
+@Injectable()
+export class ValidateFacilityGroupService extends TransactionService {
+    constructor(
+        private fileService: FileService,
+        private facilityGroupExcelService: FacilityGroupExcelService,
+        private storageService: StorageService,
+        private selfAssessmentGroupService: SelfAssessmentGroupService,
+        private validateImportTemplateUtilService: ValidateImportTemplateUtilService,
+        private facilityGroupService: FacilityGroupService
+    ) {
+        super();
+    }
+
+    async uploadAndValidateTemplate(
+        file: Express.Multer.File,
+        roleId: string,
+        facilityGroupId?: string,
+        isUpdating: boolean &#x3D; false
+    ): Promise&lt;ImportingFarmGroupResultType&gt; {
+        await this.facilityGroupService.validRoleCompleteProfile(roleId);
+        const groups &#x3D; await this.selfAssessmentGroupService.getSelfAssessmentGroupByRoleId(roleId);
+        const { instruction, farmLevelRisk, communityRisk } &#x3D; await this.facilityGroupExcelService.parseXlsx({
+            file,
+            groups,
+            isParsingForUpdate: isUpdating,
+            includeEmpty: true
+        });
+        const isGoToTypeEnd &#x3D; Object.values(communityRisk).some((question) &#x3D;&gt; question.goToType &#x3D;&#x3D;&#x3D; GoToTypeEnum.END);
+        const { instructionTotalItems, validatedInstructionCount, validationInstructionErrors } &#x3D;
+            await this.validateInstruction(instruction, facilityGroupId, isUpdating);
+        const { communityRiskTotalItems, validationCommunityRiskErrors, validatedCommunityRiskItemCount } &#x3D;
+            this.validateCommunityRisk(communityRisk as ValidExcelQuestionData);
+        const { farmLevelRiskTotalItems, validationFarmLevelRiskErrors, validatedFarmLevelRiskItemCount } &#x3D;
+            this.validateFarmLevelRisk(farmLevelRisk as FarmLevelRiskExcelData[], isGoToTypeEnd);
+        if (!validationCommunityRiskErrors.length) {
+            await this.validateCompleteSaq(
+                farmLevelRisk as FarmLevelRiskExcelData[],
+                groups,
+                validationFarmLevelRiskErrors
+            );
+        }
+        const hasExcelErrors &#x3D; this.hasExcelErrors({
+            validationInstructionErrors,
+            validationFarmLevelRiskErrors,
+            validationCommunityRiskErrors
+        });
+        let fileId: string;
+        if (!hasExcelErrors) {
+            fileId &#x3D; (await this.uploadFile(file)).id;
+        }
+        return {
+            fileId,
+            totalItems: farmLevelRiskTotalItems + communityRiskTotalItems + instructionTotalItems,
+            validatedItemCount:
+                validatedFarmLevelRiskItemCount + validatedCommunityRiskItemCount + validatedInstructionCount,
+            validationErrors: sortBy(
+                [...validationInstructionErrors, ...validationCommunityRiskErrors, ...validationFarmLevelRiskErrors],
+                [&#x27;index&#x27;]
+            )
+        };
+    }
+
+    private hasExcelErrors(validationSheetErrors: ValidationSheetErrors): boolean {
+        for (const validError of validationSheetErrors.validationInstructionErrors) {
+            if (validError.errors.length) {
+                return true;
+            }
+        }
+
+        for (const validError of validationSheetErrors.validationFarmLevelRiskErrors) {
+            if (validError.errors.length) {
+                return true;
+            }
+        }
+
+        for (const validError of validationSheetErrors.validationCommunityRiskErrors) {
+            if (validError.errors.length) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    async validateCompleteSaq(
+        farmLevelRisk: FarmLevelRiskExcelData[],
+        groups: SelfAssessmentGroupEntity[],
+        errors: FileDataValidationType[]
+    ) {
+        const questions &#x3D; flatMap(groups, &#x27;questions&#x27;);
+        for (let i &#x3D; 0; i &lt; farmLevelRisk.length; i++) {
+            const rowIndex &#x3D; i + 2;
+            const farm &#x3D; farmLevelRisk[i];
+            const isEmptyAnswer &#x3D; this.checkEmptyAnswer(questions, farm);
+
+            if (isEmptyAnswer) {
+                addErrorValidation({
+                    currentListErrors: errors,
+                    errorType: ErrorTypeEnum.SAQ_HAS_NOT_COMPLETE,
+                    currentRowIndex: rowIndex,
+                    errors: [],
+                    sheet: SHEET_3,
+                    isBlankRow: farm.isBlankRow
+                });
+            }
+        }
+
+        return errors;
+    }
+
+    async validateInstruction(instruction: InstructionExcelType, facilityGroupId: string, isUpdating: boolean) {
+        const errors: FileDataValidationType[] &#x3D; [
+            {
+                index: 1,
+                errors: [],
+                isShowRow: false,
+                sheet: SHEET_1
+            }
+        ];
+        const { error } &#x3D; this.validateImportTemplateUtilService
+            .getInstructionSchemaValidation()
+            .validate(instruction, { abortEarly: false });
+        if (error) {
+            addErrorValidation({
+                currentListErrors: errors,
+                errorType: ErrorTypeEnum.JOI,
+                currentRowIndex: 1,
+                errors: error.details,
+                sheet: SHEET_1
+            });
+        }
+        await this.validateImportTemplateUtilService.validInstructionValue(
+            instruction,
+            errors,
+            facilityGroupId,
+            isUpdating
+        );
+
+        return {
+            instructionTotalItems: 1,
+            validatedInstructionCount: errors[0].errors.length ? 0 : 1,
+            validationInstructionErrors: errors
+        };
+    }
+
+    validateCommunityRisk(communityRisk: ValidExcelQuestionData) {
+        const errors: FileValidationError[] &#x3D; [];
+        const firstQuestionId &#x3D; Object.keys(communityRisk)[0];
+        this.validateImportTemplateUtilService.validateAnswers(communityRisk, communityRisk[firstQuestionId], errors);
+
+        return {
+            communityRiskTotalItems: 1,
+            validatedCommunityRiskItemCount: errors.length ? 0 : 1,
+            validationCommunityRiskErrors: [
+                {
+                    index: 2,
+                    errors,
+                    isShowRow: true,
+                    sheet: SHEET_2
+                }
+            ]
+        };
+    }
+
+    validateFarmLevelRisk(farms: FarmLevelRiskExcelData[], isGoToTypeEnd: boolean): ImportingFarmLevelRiskResultType {
+        let fileDataValid: FileDataValidationType[] &#x3D; [];
+        let validatedFarmLevelRiskItemCount &#x3D; 0;
+        const farmsLevelRiskOmit &#x3D; map(farms as FarmLevelRiskExcelData[], (farm: FarmLevelRiskExcelData) &#x3D;&gt;
+            omit(farm, [&#x27;selfAssessments&#x27;])
+        );
+        for (let i &#x3D; 0; i &lt; farmsLevelRiskOmit.length; i++) {
+            const farm &#x3D; farmsLevelRiskOmit[i];
+            const rowIndex &#x3D; farm.rowIndex;
+            if (!farm.isBlankRow) {
+                const { error } &#x3D; this.validateImportTemplateUtilService
+                    .getFarmLevelRiskSchemaValidation()
+                    .validate(omit(farm, &#x27;rowIndex&#x27;), { abortEarly: false });
+                this.validateFarmIds(fileDataValid, farmsLevelRiskOmit, farm.id, i + 2);
+                if (error) {
+                    addErrorValidation({
+                        currentListErrors: fileDataValid,
+                        errorType: ErrorTypeEnum.JOI,
+                        currentRowIndex: rowIndex,
+                        errors: error.details,
+                        sheet: SHEET_3
+                    });
+                }
+
+                fileDataValid[i] &#x3D; this.validationByGoToTypeEnd(fileDataValid[i], farms[i], rowIndex, isGoToTypeEnd);
+                if (!fileDataValid[i].errors.length) {
+                    validatedFarmLevelRiskItemCount++;
+                }
+            }
+        }
+
+        return {
+            farmLevelRiskTotalItems: farms.filter(({ isBlankRow }) &#x3D;&gt; !isBlankRow).length,
+            validatedFarmLevelRiskItemCount,
+            validationFarmLevelRiskErrors: fileDataValid
+        };
+    }
+
+    private validationByGoToTypeEnd(
+        fileDataValid: FileDataValidationType,
+        farm: FarmLevelRiskExcelData,
+        rowIndex: number,
+        isGoToTypeEnd: boolean
+    ): FileDataValidationType {
+        if (!isGoToTypeEnd) {
+            const selfAssessment &#x3D; farm.selfAssessments as ValidExcelQuestionData;
+            const validationErrors &#x3D; this.validSelfAssessments(selfAssessment);
+            fileDataValid &#x3D; {
+                index: rowIndex,
+                errors: fileDataValid
+                    ? [...this.convertFacilityDefaultErrors(fileDataValid.errors), ...validationErrors]
+                    : validationErrors,
+                isShowRow: true,
+                sheet: SHEET_3
+            };
+        }
+
+        return fileDataValid;
+    }
+
+    private validSelfAssessments(selfAssessment: ValidExcelQuestionData) {
+        const validationErrors: FileValidationError[] &#x3D; [];
+        if (Object.values(selfAssessment).length) {
+            const firstQuestionId &#x3D; Object.keys(selfAssessment)[0];
+            this.validateImportTemplateUtilService.validateAnswers(
+                selfAssessment,
+                selfAssessment[firstQuestionId],
+                validationErrors
+            );
+        }
+
+        return validationErrors;
+    }
+
+    validateFarmIds(
+        errors: FileDataValidationType[],
+        farms: FarmLevelRiskExcelData[],
+        farmId: string,
+        rowIndex: number
+    ): boolean {
+        let isValidation &#x3D; true;
+        if (Number.isNaN(+farmId)) {
+            addErrorValidation({
+                currentListErrors: errors,
+                errorType: ErrorTypeEnum.INVALID_FARM_ID,
+                currentRowIndex: rowIndex,
+                sheet: SHEET_3
+            });
+
+            isValidation &#x3D; false;
+        }
+
+        const isDuplicatedId &#x3D; !!farms.find(({ id }, index) &#x3D;&gt; id &#x3D;&#x3D;&#x3D; farmId &amp;&amp; index &lt; rowIndex - 2);
+        if (isDuplicatedId) {
+            addErrorValidation({
+                currentListErrors: errors,
+                errorType: ErrorTypeEnum.DUPLICATED_ID_IN_FARM_TEMPLATE,
+                currentRowIndex: rowIndex,
+                currentValue: farmId,
+                sheet: SHEET_3
+            });
+
+            isValidation &#x3D; false;
+        }
+
+        return isValidation;
+    }
+
+    validateLatLong(
+        errors: FileDataValidationType[],
+        { latitude, longitude }: CoordinateType,
+        rowIndex: number
+    ): boolean {
+        const latLongPair &#x3D; &#x60;${latitude},${longitude}&#x60;;
+
+        if (!isLatLong(latLongPair)) {
+            addErrorValidation({
+                currentListErrors: errors,
+                errorType: ErrorTypeEnum.INVALID_COORDINATE,
+                currentRowIndex: rowIndex,
+                currentValue: latLongPair,
+                sheet: SHEET_3
+            });
+
+            return false;
+        }
+
+        return true;
+    }
+
+    private checkEmptyAnswer(questions: SelfAssessmentQuestionEntity[], farm: FarmLevelRiskExcelData) {
+        const values &#x3D; Object.values(farm.selfAssessments);
+        const countNotEmptyValues &#x3D; values.filter((value) &#x3D;&gt; value).length;
+        if (countNotEmptyValues &#x3D;&#x3D;&#x3D; 1) {
+            return false;
+        }
+        for (const question of questions) {
+            const answer &#x3D; farm.selfAssessments[question.id];
+            if (
+                question.conditions &amp;&amp;
+                question.conditions[0].answer &#x3D;&#x3D;&#x3D;
+                    farm.selfAssessments[question.conditions[0].questionId]?.toString()?.toLocaleLowerCase() &amp;&amp;
+                answer &#x3D;&#x3D;&#x3D; &#x27;&#x27;
+            ) {
+                return true;
+            }
+            if (!question.conditions &amp;&amp; answer &#x3D;&#x3D;&#x3D; &#x27;&#x27;) {
+                return true;
+            }
+        }
+    }
+
+    private async uploadFile(file: Express.Multer.File): Promise&lt;FileEntity&gt; {
+        const fileUpload &#x3D; await this.storageService.uploadFile({ file, fileName: file.originalname });
+        return this.fileService.createOne(fileUpload.blobName);
+    }
+
+    private convertFacilityDefaultErrors(errors: FileValidationError[]) {
+        return errors.map((error) &#x3D;&gt; {
+            return {
+                ...error,
+                key: capitalizeFirstWord(error.key),
+                isBlankRow: false,
+                isShowKey: false
+            };
+        });
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'ValidateFacilityGroupService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

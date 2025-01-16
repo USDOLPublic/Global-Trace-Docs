@@ -1,0 +1,2414 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Global Trace BE documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">Global Trace BE documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Injectables</li>
+  <li class="breadcrumb-item" >CategoryService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/categories/services/category.service.ts</code>
+        </p>
+
+
+
+            <p class="comment">
+                <h3>Extends</h3>
+            </p>
+            <p class="comment">
+                        <code>TransactionService</code>
+            </p>
+
+
+            <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#all" >all</a>
+                            </li>
+                            <li>
+                                <a href="#count" >count</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#createCategories" >createCategories</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#createIndicators" >createIndicators</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#createNestedCategories" >createNestedCategories</a>
+                            </li>
+                            <li>
+                                <a href="#createOne" >createOne</a>
+                            </li>
+                            <li>
+                                <a href="#exist" >exist</a>
+                            </li>
+                            <li>
+                                <a href="#existsSubAndIndicatorPairById" >existsSubAndIndicatorPairById</a>
+                            </li>
+                            <li>
+                                <a href="#find" >find</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#findAndMapCategoriesAndIndicators" >findAndMapCategoriesAndIndicators</a>
+                            </li>
+                            <li>
+                                <a href="#findByIds" >findByIds</a>
+                            </li>
+                            <li>
+                                <a href="#findIndicatorsByCategoryId" >findIndicatorsByCategoryId</a>
+                            </li>
+                            <li>
+                                <a href="#findOneBy" >findOneBy</a>
+                            </li>
+                            <li>
+                                <a href="#findOneOrFail" >findOneOrFail</a>
+                            </li>
+                            <li>
+                                <a href="#getAllNestedCategories" >getAllNestedCategories</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getCategoryAndIndicatorNames" >getCategoryAndIndicatorNames</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getComboIndicatorAndSubIndicator" >getComboIndicatorAndSubIndicator</a>
+                            </li>
+                            <li>
+                                <a href="#getDnaRiskIndicator" >getDnaRiskIndicator</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getSettingCategories" >getSettingCategories</a>
+                            </li>
+                            <li>
+                                <a href="#saveOne" >saveOne</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#settingIconCategory" >settingIconCategory</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#softDelete" >softDelete</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#update" >update</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#updateBy" >updateBy</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#updateOrFail" >updateOrFail</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                                <span class="modifier">Public</span>
+                        <code>constructor(categoryRepo: <a href="../classes/CategoryRepository.html" target="_self">CategoryRepository</a>, categoryValidationService: <a href="../injectables/CategoryValidationService.html" target="_self">CategoryValidationService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/categories/services/category.service.ts:20</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>categoryRepo</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../classes/CategoryRepository.html" target="_self" >CategoryRepository</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>categoryValidationService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CategoryValidationService.html" target="_self" >CategoryValidationService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="all"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>all</b></span>
+                        <a href="#all"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>all(dto: <a href="../classes/CategoryFilterDto.html" target="_self">CategoryFilterDto</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="28"
+                                    class="link-to-prism">src/categories/services/category.service.ts:28</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>dto</td>
+                                            <td>
+                                                            <code><a href="../classes/CategoryFilterDto.html" target="_self" >CategoryFilterDto</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/CategoryEntity.html" target="_self" >Promise&lt;CategoryEntity[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="count"></a>
+                    <span class="name">
+                        <span ><b>count</b></span>
+                        <a href="#count"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>count(conditions: <a href="../entitys/CategoryEntity.html" target="_self">FindManyOptions&lt;CategoryEntity&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="71"
+                                    class="link-to-prism">src/categories/services/category.service.ts:71</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>conditions</td>
+                                            <td>
+                                                            <code><a href="../entitys/CategoryEntity.html" target="_self" >FindManyOptions&lt;CategoryEntity&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;number&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createCategories"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>createCategories</b></span>
+                        <a href="#createCategories"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createCategories(categories: <a href="../classes/CreateNestedCategory.html" target="_self">CreateNestedCategory[]</a>, mappedExistedCategories: <a href="../entitys/CategoryEntity.html" target="_self">Dictionary&lt;CategoryEntity&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="209"
+                                    class="link-to-prism">src/categories/services/category.service.ts:209</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>categories</td>
+                                            <td>
+                                                            <code><a href="../classes/CreateNestedCategory.html" target="_self" >CreateNestedCategory[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>mappedExistedCategories</td>
+                                            <td>
+                                                            <code><a href="../entitys/CategoryEntity.html" target="_self" >Dictionary&lt;CategoryEntity&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#CategoryWithIndicators" target="_self" >Promise&lt;CategoryWithIndicators[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createIndicators"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>createIndicators</b></span>
+                        <a href="#createIndicators"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createIndicators(createdCategories: <a href="../undefineds/CategoryWithIndicators.html" target="_self">CategoryWithIndicators[]</a>, mappedExistedIndicators: <a href="../entitys/CategoryEntity.html" target="_self">Dictionary&lt;CategoryEntity&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="234"
+                                    class="link-to-prism">src/categories/services/category.service.ts:234</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>createdCategories</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#CategoryWithIndicators" target="_self" >CategoryWithIndicators[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>mappedExistedIndicators</td>
+                                            <td>
+                                                            <code><a href="../entitys/CategoryEntity.html" target="_self" >Dictionary&lt;CategoryEntity&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#IndicatorWithSubIndicators" target="_self" >Promise&lt;IndicatorWithSubIndicators[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createNestedCategories"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>createNestedCategories</b></span>
+                        <a href="#createNestedCategories"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createNestedCategories(undefined: <a href="../classes/CreateNestedCategories.html" target="_self">CreateNestedCategories</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="163"
+                                    class="link-to-prism">src/categories/services/category.service.ts:163</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                            <code><a href="../classes/CreateNestedCategories.html" target="_self" >CreateNestedCategories</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/CategoryEntity.html" target="_self" >Promise&lt;CategoryEntity[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createOne"></a>
+                    <span class="name">
+                        <span ><b>createOne</b></span>
+                        <a href="#createOne"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>createOne(data: <a href="../entitys/CategoryEntity.html" target="_self">Partial&lt;CategoryEntity&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="87"
+                                    class="link-to-prism">src/categories/services/category.service.ts:87</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>data</td>
+                                            <td>
+                                                            <code><a href="../entitys/CategoryEntity.html" target="_self" >Partial&lt;CategoryEntity&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/CategoryEntity.html" target="_self" >Promise&lt;CategoryEntity&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="exist"></a>
+                    <span class="name">
+                        <span ><b>exist</b></span>
+                        <a href="#exist"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>exist(options: <a href="../entitys/CategoryEntity.html" target="_self">FindManyOptions&lt;CategoryEntity&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="99"
+                                    class="link-to-prism">src/categories/services/category.service.ts:99</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>options</td>
+                                            <td>
+                                                            <code><a href="../entitys/CategoryEntity.html" target="_self" >FindManyOptions&lt;CategoryEntity&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;boolean&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="existsSubAndIndicatorPairById"></a>
+                    <span class="name">
+                        <span ><b>existsSubAndIndicatorPairById</b></span>
+                        <a href="#existsSubAndIndicatorPairById"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>existsSubAndIndicatorPairById(indicatorId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, subIndicatorId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="291"
+                                    class="link-to-prism">src/categories/services/category.service.ts:291</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>indicatorId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>subIndicatorId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;boolean&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="find"></a>
+                    <span class="name">
+                        <span ><b>find</b></span>
+                        <a href="#find"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>find(options: <a href="../entitys/CategoryEntity.html" target="_self">FindManyOptions&lt;CategoryEntity&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="51"
+                                    class="link-to-prism">src/categories/services/category.service.ts:51</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>options</td>
+                                            <td>
+                                                            <code><a href="../entitys/CategoryEntity.html" target="_self" >FindManyOptions&lt;CategoryEntity&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/CategoryEntity.html" target="_self" >Promise&lt;CategoryEntity[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findAndMapCategoriesAndIndicators"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>findAndMapCategoriesAndIndicators</b></span>
+                        <a href="#findAndMapCategoriesAndIndicators"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>findAndMapCategoriesAndIndicators(categoryNames: string[], indicatorNames: string[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="261"
+                                    class="link-to-prism">src/categories/services/category.service.ts:261</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>categoryNames</td>
+                                            <td>
+                                                        <code>string[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>indicatorNames</td>
+                                            <td>
+                                                        <code>string[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#MappedCategoriesAndIndicators" target="_self" >Promise&lt;MappedCategoriesAndIndicators&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findByIds"></a>
+                    <span class="name">
+                        <span ><b>findByIds</b></span>
+                        <a href="#findByIds"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>findByIds(ids: string[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="67"
+                                    class="link-to-prism">src/categories/services/category.service.ts:67</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>ids</td>
+                                            <td>
+                                                        <code>string[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/CategoryEntity.html" target="_self" >Promise&lt;CategoryEntity[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findIndicatorsByCategoryId"></a>
+                    <span class="name">
+                        <span ><b>findIndicatorsByCategoryId</b></span>
+                        <a href="#findIndicatorsByCategoryId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>findIndicatorsByCategoryId(categoryId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="295"
+                                    class="link-to-prism">src/categories/services/category.service.ts:295</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>categoryId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/CategoryEntity.html" target="_self" >Promise&lt;CategoryEntity[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findOneBy"></a>
+                    <span class="name">
+                        <span ><b>findOneBy</b></span>
+                        <a href="#findOneBy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>findOneBy(options: <a href="../entitys/CategoryEntity.html" target="_self">FindOptionsWhere&lt;CategoryEntity&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="63"
+                                    class="link-to-prism">src/categories/services/category.service.ts:63</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>options</td>
+                                            <td>
+                                                            <code><a href="../entitys/CategoryEntity.html" target="_self" >FindOptionsWhere&lt;CategoryEntity&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/CategoryEntity.html" target="_self" >Promise&lt;CategoryEntity&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findOneOrFail"></a>
+                    <span class="name">
+                        <span ><b>findOneOrFail</b></span>
+                        <a href="#findOneOrFail"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>findOneOrFail(options: <a href="../entitys/CategoryEntity.html" target="_self">FindOneOptions&lt;CategoryEntity&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="55"
+                                    class="link-to-prism">src/categories/services/category.service.ts:55</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>options</td>
+                                            <td>
+                                                            <code><a href="../entitys/CategoryEntity.html" target="_self" >FindOneOptions&lt;CategoryEntity&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/CategoryEntity.html" target="_self" >Promise&lt;CategoryEntity&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAllNestedCategories"></a>
+                    <span class="name">
+                        <span ><b>getAllNestedCategories</b></span>
+                        <a href="#getAllNestedCategories"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAllNestedCategories()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="159"
+                                    class="link-to-prism">src/categories/services/category.service.ts:159</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/CategoryEntity.html" target="_self" >Promise&lt;CategoryEntity[]&gt;</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getCategoryAndIndicatorNames"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>getCategoryAndIndicatorNames</b></span>
+                        <a href="#getCategoryAndIndicatorNames"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getCategoryAndIndicatorNames(categories: <a href="../classes/CreateNestedCategory.html" target="_self">CreateNestedCategory[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="280"
+                                    class="link-to-prism">src/categories/services/category.service.ts:280</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>categories</td>
+                                            <td>
+                                                            <code><a href="../classes/CreateNestedCategory.html" target="_self" >CreateNestedCategory[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>[][]</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getComboIndicatorAndSubIndicator"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>getComboIndicatorAndSubIndicator</b></span>
+                        <a href="#getComboIndicatorAndSubIndicator"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getComboIndicatorAndSubIndicator(indicatorName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, subIndicatorName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="103"
+                                    class="link-to-prism">src/categories/services/category.service.ts:103</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>indicatorName</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>subIndicatorName</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;literal type&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getDnaRiskIndicator"></a>
+                    <span class="name">
+                        <span ><b>getDnaRiskIndicator</b></span>
+                        <a href="#getDnaRiskIndicator"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getDnaRiskIndicator()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="91"
+                                    class="link-to-prism">src/categories/services/category.service.ts:91</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;literal type&gt;</code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSettingCategories"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>getSettingCategories</b></span>
+                        <a href="#getSettingCategories"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getSettingCategories()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="126"
+                                    class="link-to-prism">src/categories/services/category.service.ts:126</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/CategoryEntity.html" target="_self" >Promise&lt;CategoryEntity[]&gt;</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveOne"></a>
+                    <span class="name">
+                        <span ><b>saveOne</b></span>
+                        <a href="#saveOne"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>saveOne(data: <a href="../entitys/CategoryEntity.html" target="_self">Partial&lt;CategoryEntity&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="59"
+                                    class="link-to-prism">src/categories/services/category.service.ts:59</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>data</td>
+                                            <td>
+                                                            <code><a href="../entitys/CategoryEntity.html" target="_self" >Partial&lt;CategoryEntity&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/CategoryEntity.html" target="_self" >Promise&lt;CategoryEntity&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="settingIconCategory"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>settingIconCategory</b></span>
+                        <a href="#settingIconCategory"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>settingIconCategory(undefined: <a href="../classes/SettingIconCategoriesDto.html" target="_self">SettingIconCategoriesDto</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="137"
+                                    class="link-to-prism">src/categories/services/category.service.ts:137</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                            <code><a href="../classes/SettingIconCategoriesDto.html" target="_self" >SettingIconCategoriesDto</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="softDelete"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>softDelete</b></span>
+                        <a href="#softDelete"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>softDelete(options: <a href="../entitys/CategoryEntity.html" target="_self">FindOptionsWhere&lt;CategoryEntity&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="95"
+                                    class="link-to-prism">src/categories/services/category.service.ts:95</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>options</td>
+                                            <td>
+                                                            <code><a href="../entitys/CategoryEntity.html" target="_self" >FindOptionsWhere&lt;CategoryEntity&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="update"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>update</b></span>
+                        <a href="#update"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>update(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, data: <a href="../entitys/CategoryEntity.html" target="_self">Partial&lt;CategoryEntity&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="79"
+                                    class="link-to-prism">src/categories/services/category.service.ts:79</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>id</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>data</td>
+                                            <td>
+                                                            <code><a href="../entitys/CategoryEntity.html" target="_self" >Partial&lt;CategoryEntity&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateBy"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>updateBy</b></span>
+                        <a href="#updateBy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updateBy(options: <a href="../entitys/CategoryEntity.html" target="_self">FindOptionsWhere&lt;CategoryEntity&gt;</a>, data: <a href="../entitys/CategoryEntity.html" target="_self">Partial&lt;CategoryEntity&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="83"
+                                    class="link-to-prism">src/categories/services/category.service.ts:83</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>options</td>
+                                            <td>
+                                                            <code><a href="../entitys/CategoryEntity.html" target="_self" >FindOptionsWhere&lt;CategoryEntity&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>data</td>
+                                            <td>
+                                                            <code><a href="../entitys/CategoryEntity.html" target="_self" >Partial&lt;CategoryEntity&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateOrFail"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>updateOrFail</b></span>
+                        <a href="#updateOrFail"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updateOrFail(conditions: <a href="../entitys/CategoryEntity.html" target="_self">FindOptionsWhere&lt;CategoryEntity&gt;</a>, data: <a href="../entitys/CategoryEntity.html" target="_self">Partial&lt;CategoryEntity&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="75"
+                                    class="link-to-prism">src/categories/services/category.service.ts:75</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>conditions</td>
+                                            <td>
+                                                            <code><a href="../entitys/CategoryEntity.html" target="_self" >FindOptionsWhere&lt;CategoryEntity&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>data</td>
+                                            <td>
+                                                            <code><a href="../entitys/CategoryEntity.html" target="_self" >Partial&lt;CategoryEntity&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { BadRequestException, Injectable } from &#x27;@nestjs/common&#x27;;
+import { CategoryEntity } from &#x27;~categories/entities/category.entity&#x27;;
+import { CategoryFilterDto } from &#x27;~categories/http/dto/category-filter.dto&#x27;;
+import { CategoryRepository } from &#x27;../repositories/category.repository&#x27;;
+import { FindOptionsWhere } from &#x27;typeorm/find-options/FindOptionsWhere&#x27;;
+import { CategoryTypeEnum } from &#x27;~categories/enums/category-type.enum&#x27;;
+import { FindManyOptions, FindOneOptions, ILike, In, Not } from &#x27;typeorm&#x27;;
+import { DNA_RISK_INDICATOR, DNA_RISK_SUB_INDICATOR } from &#x27;~risk-assessments/constants/dna-risk.constant&#x27;;
+import { SettingIconCategoriesDto } from &#x27;~categories/http/dto/setting-icon-categories.dto&#x27;;
+import { Dictionary, groupBy, isEmpty, keyBy, omit } from &#x27;lodash&#x27;;
+import { TransactionService } from &#x27;@diginexhk/nestjs-transaction&#x27;;
+import { ValidationError } from &#x27;@diginexhk/nestjs-exception&#x27;;
+import { CategoryWithIndicators } from &#x27;~categories/types/category-with-indicators.type&#x27;;
+import { IndicatorWithSubIndicators } from &#x27;~categories/types/indicator-with-sub-indicators.type&#x27;;
+import { MappedCategoriesAndIndicators } from &#x27;~categories/types/mapped-categories-and-subindicator.type&#x27;;
+import { CategoryValidationService } from &#x27;./category-validation.service&#x27;;
+import { CreateNestedCategories, CreateNestedCategory } from &#x27;~category-utils/http/dto/create-nested-categories.dto&#x27;;
+
+@Injectable()
+export class CategoryService extends TransactionService {
+    public constructor(
+        private categoryRepo: CategoryRepository,
+        private categoryValidationService: CategoryValidationService
+    ) {
+        super();
+    }
+
+    async all(dto: CategoryFilterDto): Promise&lt;CategoryEntity[]&gt; {
+        const whereConditions: FindOptionsWhere&lt;CategoryEntity&gt; &#x3D; {};
+
+        if (dto.type) {
+            whereConditions[&#x27;type&#x27;] &#x3D; dto.type;
+
+            const ignoreIds &#x3D; await this.categoryRepo.getIgnoreCategoryIds(dto.type);
+            if (!isEmpty(ignoreIds)) {
+                whereConditions[&#x27;id&#x27;] &#x3D; Not(In(ignoreIds));
+            }
+        }
+
+        if (!isEmpty(dto.parentIds)) {
+            whereConditions[&#x27;parentId&#x27;] &#x3D; In(dto?.parentIds);
+        }
+
+        return this.categoryRepo.find({
+            relations: [&#x27;category&#x27;],
+            where: whereConditions,
+            order: { name: &#x27;ASC&#x27; }
+        });
+    }
+
+    find(options: FindManyOptions&lt;CategoryEntity&gt;): Promise&lt;CategoryEntity[]&gt; {
+        return this.categoryRepo.find(options);
+    }
+
+    findOneOrFail(options: FindOneOptions&lt;CategoryEntity&gt;): Promise&lt;CategoryEntity&gt; {
+        return this.categoryRepo.findOneOrFail(options);
+    }
+
+    saveOne(data: Partial&lt;CategoryEntity&gt;): Promise&lt;CategoryEntity&gt; {
+        return this.categoryRepo.save(data);
+    }
+
+    findOneBy(options: FindOptionsWhere&lt;CategoryEntity&gt;): Promise&lt;CategoryEntity&gt; {
+        return this.categoryRepo.findOneBy(options);
+    }
+
+    findByIds(ids: string[]): Promise&lt;CategoryEntity[]&gt; {
+        return this.categoryRepo.findByIds(ids);
+    }
+
+    count(conditions: FindManyOptions&lt;CategoryEntity&gt;): Promise&lt;number&gt; {
+        return this.categoryRepo.count(conditions);
+    }
+
+    async updateOrFail(conditions: FindOptionsWhere&lt;CategoryEntity&gt;, data: Partial&lt;CategoryEntity&gt;): Promise&lt;void&gt; {
+        await this.categoryRepo.updateOrFail(conditions, data);
+    }
+
+    async update(id: string, data: Partial&lt;CategoryEntity&gt;): Promise&lt;void&gt; {
+        await this.categoryRepo.update(id, data);
+    }
+
+    async updateBy(options: FindOptionsWhere&lt;CategoryEntity&gt;, data: Partial&lt;CategoryEntity&gt;): Promise&lt;void&gt; {
+        await this.categoryRepo.update(options, data);
+    }
+
+    createOne(data: Partial&lt;CategoryEntity&gt;): Promise&lt;CategoryEntity&gt; {
+        return this.categoryRepo.createOne(data);
+    }
+
+    getDnaRiskIndicator(): Promise&lt;{ indicator: CategoryEntity; subIndicator: CategoryEntity }&gt; {
+        return this.getComboIndicatorAndSubIndicator(DNA_RISK_INDICATOR, DNA_RISK_SUB_INDICATOR);
+    }
+
+    async softDelete(options: FindOptionsWhere&lt;CategoryEntity&gt;): Promise&lt;void&gt; {
+        await this.categoryRepo.softDelete(options);
+    }
+
+    exist(options: FindManyOptions&lt;CategoryEntity&gt;): Promise&lt;boolean&gt; {
+        return this.categoryRepo.exist(options);
+    }
+
+    async getComboIndicatorAndSubIndicator(
+        indicatorName: string,
+        subIndicatorName: string
+    ): Promise&lt;{ indicator: CategoryEntity; subIndicator: CategoryEntity }&gt; {
+        const indicator &#x3D; await this.categoryRepo.findOne({
+            where: {
+                name: ILike(indicatorName),
+                type: CategoryTypeEnum.INDICATOR
+            },
+            relations: [&#x27;category&#x27;]
+        });
+        let subIndicator: CategoryEntity;
+
+        if (indicator) {
+            subIndicator &#x3D; await this.categoryRepo.findOneBy({
+                name: ILike(subIndicatorName),
+                type: CategoryTypeEnum.SUB_INDICATOR,
+                parentId: indicator.id
+            });
+        }
+        return { indicator, subIndicator };
+    }
+
+    async getSettingCategories(): Promise&lt;CategoryEntity[]&gt; {
+        const conditions &#x3D; { type: In([CategoryTypeEnum.CATEGORY, CategoryTypeEnum.EXTERNAL_RISK_INDICATOR]) };
+
+        const ignoreIds &#x3D; await this.categoryRepo.getIgnoreCategoryIds(CategoryTypeEnum.CATEGORY);
+        if (!isEmpty(ignoreIds)) {
+            conditions[&#x27;id&#x27;] &#x3D; Not(In(ignoreIds));
+        }
+
+        return this.categoryRepo.find({ where: conditions });
+    }
+
+    async settingIconCategory({ settingIconCategories }: SettingIconCategoriesDto): Promise&lt;void&gt; {
+        const categoryIds &#x3D; settingIconCategories.map(({ categoryId }) &#x3D;&gt; categoryId);
+        const existedCategories &#x3D; await this.categoryRepo.find({
+            where: {
+                id: In(categoryIds),
+                type: In([CategoryTypeEnum.CATEGORY, CategoryTypeEnum.EXTERNAL_RISK_INDICATOR])
+            }
+        });
+
+        if (categoryIds.length !&#x3D;&#x3D; existedCategories.length) {
+            throw new BadRequestException({ translate: &#x27;error.invalid_icon_category&#x27; });
+        }
+
+        const mappedCategories &#x3D; keyBy(settingIconCategories, &#x27;categoryId&#x27;);
+        const preparedCategories &#x3D; existedCategories.map((category) &#x3D;&gt; ({
+            ...category,
+            icon: mappedCategories[category.id]?.icon || null
+        }));
+
+        await this.categoryRepo.save(preparedCategories);
+    }
+
+    getAllNestedCategories(): Promise&lt;CategoryEntity[]&gt; {
+        return this.categoryRepo.getAllNestedCategories();
+    }
+
+    async createNestedCategories({ categories }: CreateNestedCategories): Promise&lt;CategoryEntity[]&gt; {
+        const errors: ValidationError[] &#x3D; [];
+        await this.categoryValidationService.validateUniqueSubAndIndicatorPairs(categories, errors);
+        const [categoryNames, indicatorNames] &#x3D; this.getCategoryAndIndicatorNames(categories);
+
+        await this.categoryValidationService.validateIndicatorBelongToOtherCategories(
+            indicatorNames,
+            categories,
+            errors
+        );
+        this.categoryValidationService.validateDuplicatedNames(categoryNames, indicatorNames, errors);
+        this.categoryValidationService.validateDuplicatedSubIndicatorNames(categories, errors);
+
+        const { mappedExistedCategories, mappedExistedIndicators } &#x3D; await this.findAndMapCategoriesAndIndicators(
+            categoryNames,
+            indicatorNames
+        );
+
+        const createdCategories &#x3D; await this.createCategories(categories, mappedExistedCategories);
+        const createdIndicators &#x3D; await this.createIndicators(createdCategories, mappedExistedIndicators);
+
+        const preparedSubIndicators &#x3D; createdIndicators.flatMap(({ id: parentId, categoryId, subIndicators }) &#x3D;&gt; {
+            return subIndicators.map((subIndicator) &#x3D;&gt; ({
+                ...subIndicator,
+                parentId,
+                categoryId,
+                type: CategoryTypeEnum.SUB_INDICATOR
+            }));
+        });
+
+        const createdSubIndicators &#x3D; await this.categoryRepo.save(preparedSubIndicators);
+        const groupedIndicators &#x3D; groupBy(createdIndicators, &#x27;categoryId&#x27;);
+        const groupedSubIndicators &#x3D; groupBy(createdSubIndicators, &#x27;parentId&#x27;);
+
+        return createdCategories.map(
+            (category) &#x3D;&gt;
+                ({
+                    ...omit(category, &#x27;indicators&#x27;),
+                    indicators: groupedIndicators[category.id].map((indicator) &#x3D;&gt; ({
+                        ...omit(indicator, &#x27;subIndicators&#x27;),
+                        subIndicators: groupedSubIndicators[indicator.id]
+                    }))
+                }) as CategoryEntity
+        );
+    }
+
+    private async createCategories(
+        categories: CreateNestedCategory[],
+        mappedExistedCategories: Dictionary&lt;CategoryEntity&gt;
+    ): Promise&lt;CategoryWithIndicators[]&gt; {
+        const [existedCategories, preparedCategories] &#x3D; categories.reduce(
+            (acc, category) &#x3D;&gt; {
+                const existedCategory &#x3D; mappedExistedCategories[category.name];
+                if (existedCategory) {
+                    acc[0].push({ ...existedCategory, indicators: category.indicators });
+                } else {
+                    acc[1].push({
+                        ...category,
+                        type: CategoryTypeEnum.CATEGORY
+                    });
+                }
+                return acc;
+            },
+            [[], []]
+        );
+
+        const createdCategories &#x3D; await this.categoryRepo.save(preparedCategories);
+
+        return existedCategories.concat(createdCategories);
+    }
+
+    private async createIndicators(
+        createdCategories: CategoryWithIndicators[],
+        mappedExistedIndicators: Dictionary&lt;CategoryEntity&gt;
+    ): Promise&lt;IndicatorWithSubIndicators[]&gt; {
+        const preparedIndicators &#x3D; [];
+        const existedIndicators &#x3D; [];
+
+        for (const { id: categoryId, indicators } of createdCategories) {
+            for (const indicator of indicators) {
+                const existedIndicator &#x3D; mappedExistedIndicators[indicator.name];
+                if (existedIndicator) {
+                    existedIndicators.push({ ...existedIndicator, subIndicators: indicator.subIndicators });
+                } else {
+                    preparedIndicators.push({
+                        ...indicator,
+                        categoryId,
+                        id: mappedExistedIndicators[indicator.name]?.id,
+                        type: CategoryTypeEnum.INDICATOR
+                    });
+                }
+            }
+        }
+        const createdIndicators &#x3D; await this.categoryRepo.save(preparedIndicators);
+
+        return existedIndicators.concat(createdIndicators);
+    }
+
+    private async findAndMapCategoriesAndIndicators(
+        categoryNames: string[],
+        indicatorNames: string[]
+    ): Promise&lt;MappedCategoriesAndIndicators&gt; {
+        const [existedCategories, existedIndicators] &#x3D; await Promise.all([
+            this.categoryRepo.find({
+                where: { type: CategoryTypeEnum.CATEGORY, name: In(categoryNames) }
+            }),
+            this.categoryRepo.find({
+                where: { type: CategoryTypeEnum.INDICATOR, name: In(indicatorNames) }
+            })
+        ]);
+
+        return {
+            mappedExistedCategories: keyBy(existedCategories, &#x27;name&#x27;),
+            mappedExistedIndicators: keyBy(existedIndicators, &#x27;name&#x27;)
+        };
+    }
+
+    private getCategoryAndIndicatorNames(categories: CreateNestedCategory[]): string[][] {
+        return categories.reduce(
+            (acc, category) &#x3D;&gt; {
+                acc[0].push(category.name);
+                acc[1].push(...category.indicators.map(({ name }) &#x3D;&gt; name));
+                return acc;
+            },
+            [[] as string[], [] as string[]]
+        );
+    }
+
+    existsSubAndIndicatorPairById(indicatorId: string, subIndicatorId: string): Promise&lt;boolean&gt; {
+        return this.categoryRepo.existsSubAndIndicatorPairById(indicatorId, subIndicatorId);
+    }
+
+    findIndicatorsByCategoryId(categoryId: string): Promise&lt;CategoryEntity[]&gt; {
+        return this.categoryRepo.findIndicatorsByCategoryId(categoryId);
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'CategoryService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

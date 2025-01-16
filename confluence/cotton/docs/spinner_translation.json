@@ -1,0 +1,1712 @@
+[
+    {
+        "title": {
+            "en": "What are the finished products you produce?",
+            "ur": "آپ کی تیار کردہ مصنوعات کیا ہیں؟"
+        },
+        "questionId": "0253b16e-1f3d-46d1-bae0-a23e3c74c481",
+        "index": 1,
+        "questionResponses": [
+            {
+                "option": "Yarn & threads",
+                "translation": {
+                    "en": "Yarn & threads",
+                    "ur": "سوت اور دھاگہ"
+                },
+                "questionResponseId": "7afcd75b-729f-4def-8297-cc041903bc82"
+            },
+            {
+                "option": "Baled cotton",
+                "translation": {
+                    "en": "Baled cotton",
+                    "ur": "روئی کی بیل"
+                },
+                "questionResponseId": "759efdbc-e2e9-4e7c-b1c8-8e5e79b33f0f"
+            },
+            {
+                "option": "Fabric (weaving)",
+                "translation": {
+                    "en": "Fabric (weaving)",
+                    "ur": "کپڑا (بنائی)"
+                },
+                "questionResponseId": "48694648-b636-421f-95c4-6e400f656fa0"
+            },
+            {
+                "option": "Fabric (non-woven)",
+                "translation": {
+                    "en": "Fabric (non-woven)",
+                    "ur": "فیبرک (غیر بنے ہوئے)"
+                },
+                "questionResponseId": "31b36f2c-6918-4be3-9809-0c3b751131c1"
+            },
+            {
+                "option": "Fabric (knitting)",
+                "translation": {
+                    "en": "Fabric (knitting)",
+                    "ur": "کپڑا (بننا)"
+                },
+                "questionResponseId": "be0c877e-a783-4d22-a306-84d076b6c7c3"
+            },
+            {
+                "option": "Finished fabric (textile)",
+                "translation": {
+                    "en": "Finished fabric (textile)",
+                    "ur": "تیار شدہتیار شدہ کپڑا(ٹیکسٹائل)"
+                },
+                "questionResponseId": "70010a5c-04c0-4587-b0bc-b2ac44ac95ad"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "What is the total number of workers (excluding management) at the site?",
+            "ur": "سائٹ پر کارکنوں کی کل تعداد (منیجمنٹ کو چھوڑ کر) کتنی ہے؟"
+        },
+        "questionId": "d299149b-4d89-48f7-943f-3183de2afcea",
+        "index": 2,
+        "questionResponses": [
+            {
+                "option": "Men: Numeric",
+                "translation": {
+                    "en": "Men: Numeric",
+                    "ur": "نمبر"
+                },
+                "questionResponseId": "7612180a-3634-42fe-9284-0f743be73423"
+            },
+            {
+                "option": "Women: Numeric",
+                "translation": {
+                    "en": "Women: Numeric",
+                    "ur": "نمبر"
+                },
+                "questionResponseId": "0f3fb2e9-1b9e-4c0b-a23f-fde12ab406d9"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "What percent of management (including trainers, supervisors, and/or other high level functions) at the site are women?",
+            "ur": "سائٹ پر کتنے فیصد مینجمنٹ (بشمول ٹرینرز، سپروائزرز، اور/یا دیگر اعلیٰ سطحی کام) خواتین ہیں؟"
+        },
+        "questionId": "6031b59f-90ea-43b7-8293-8c6c8c96a026",
+        "index": 3,
+        "questionResponses": [
+            {
+                "option": "Less than 40%",
+                "translation": {
+                    "en": "Less than 40%",
+                    "ur": "چالیس فی صد سے کم"
+                },
+                "questionResponseId": "c064c37f-4783-4967-88dd-5252a26bf2bf"
+            },
+            {
+                "option": "More than 40%",
+                "translation": {
+                    "en": "More than 40%",
+                    "ur": "چالیس فی صد سے زیادہ"
+                },
+                "questionResponseId": "a3275ac1-dd0e-445d-bb6c-5029dd669d4f"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Please indicate all production processes conducted in your site/in-house",
+            "ur": "براہ کرم آپ کی سائٹ/ان-ہاؤس میں کیے گئے تمام پروڈکشن کے عمل کی نشاندہی کریں۔"
+        },
+        "questionId": "2e862615-50c6-4db7-9d0b-f65d1dd8385a",
+        "index": 4,
+        "questionResponses": [
+            {
+                "option": "Beaming",
+                "translation": {
+                    "en": "Beaming",
+                    "ur": "بیمنگ"
+                },
+                "questionResponseId": "f002b6a6-754e-4dd6-904d-9f3b0a6b6f05"
+            },
+            {
+                "option": "Slashing",
+                "translation": {
+                    "en": "Slashing",
+                    "ur": "سلیشنگ"
+                },
+                "questionResponseId": "4dfca965-f770-499e-a76e-6ad72efdac06"
+            },
+            {
+                "option": "Warping",
+                "translation": {
+                    "en": "Warping",
+                    "ur": "وارپنگ"
+                },
+                "questionResponseId": "2e52d3a7-5e18-4d7e-a474-6fb38d4f5e79"
+            },
+            {
+                "option": "Weaving",
+                "translation": {
+                    "en": "Weaving",
+                    "ur": "بنائی"
+                },
+                "questionResponseId": "aa2303b2-afc0-47ce-8590-aaa6441bd32e"
+            },
+            {
+                "option": "Knitting",
+                "translation": {
+                    "en": "Knitting",
+                    "ur": "بُنائی"
+                },
+                "questionResponseId": "7acace9e-1393-47ab-91b5-6397d3742a1e"
+            },
+            {
+                "option": "Plating",
+                "translation": {
+                    "en": "Plating",
+                    "ur": "پلیٹنگ"
+                },
+                "questionResponseId": "fb019732-1af7-4340-bf14-0c8b3a140488"
+            },
+            {
+                "option": "Spraying",
+                "translation": {
+                    "en": "Spraying",
+                    "ur": "سپرے کرنا"
+                },
+                "questionResponseId": "8fa1b798-16a6-4a61-b3cd-3e6841db47e1"
+            },
+            {
+                "option": "Silk-screen",
+                "translation": {
+                    "en": "Silk-screen",
+                    "ur": "سلک اسکرین"
+                },
+                "questionResponseId": "e7c6797f-099f-439c-b648-b2e209b8b001"
+            },
+            {
+                "option": "Washing",
+                "translation": {
+                    "en": "Washing",
+                    "ur": "دھونا"
+                },
+                "questionResponseId": "43bd4656-9426-4b61-84ed-aab44387ca87"
+            },
+            {
+                "option": "Embroidery",
+                "translation": {
+                    "en": "Embroidery",
+                    "ur": "کڑھائی"
+                },
+                "questionResponseId": "fd16c9aa-d10e-4c4c-b808-8844ec35d245"
+            },
+            {
+                "option": "Printing",
+                "translation": {
+                    "en": "Printing",
+                    "ur": "پرنٹنگ"
+                },
+                "questionResponseId": "d60cc4be-3735-4d29-89c1-72eb3cdc8c68"
+            },
+            {
+                "option": "Dyeing",
+                "translation": {
+                    "en": "Dyeing",
+                    "ur": "رنگائی"
+                },
+                "questionResponseId": "5afb1ea7-0d75-4f50-9c96-026b32bd54c9"
+            },
+            {
+                "option": "Packaging",
+                "translation": {
+                    "en": "Packaging",
+                    "ur": "پیکیجنگ"
+                },
+                "questionResponseId": "bf7e0405-82d8-4040-bc06-e118c265e4ac"
+            },
+            {
+                "option": "Linking",
+                "translation": {
+                    "en": "Linking",
+                    "ur": "جوڑنا"
+                },
+                "questionResponseId": "9e4eedff-24af-44f7-8fe2-decea652ca31"
+            },
+            {
+                "option": "Finishing",
+                "translation": {
+                    "en": "Finishing",
+                    "ur": "مصنوعات کی تکمیل"
+                },
+                "questionResponseId": "20343677-31d5-44fa-9d4b-17262ca1ffcb"
+            },
+            {
+                "option": "Other production process(Please specify)",
+                "translation": {
+                    "en": "Other production process(Please specify)",
+                    "ur": "دیگر پیداواری عمل (براہ کرم وضاحت کریں)"
+                },
+                "questionResponseId": "2d284449-4696-450d-b765-0aebab00ccb7"
+            },
+            {
+                "option": "Weaving",
+                "translation": {
+                    "en": "Weaving",
+                    "ur": "بنائی"
+                },
+                "questionResponseId": "318e5bf1-8c77-4ac0-aa7c-e8a7a70c2400"
+            },
+            {
+                "option": "Denting",
+                "translation": {
+                    "en": "Denting",
+                    "ur": "ڈینٹنگ"
+                },
+                "questionResponseId": "612bc7c9-3bd6-4c67-9020-a2f5dda6d97e"
+            },
+            {
+                "option": "Drafting",
+                "translation": {
+                    "en": "Drafting",
+                    "ur": "ڈرافٹنگ"
+                },
+                "questionResponseId": "fe053490-cb6c-44fd-8492-a7fac859d60b"
+            },
+            {
+                "option": "Sewing",
+                "translation": {
+                    "en": "Sewing",
+                    "ur": "سلائی"
+                },
+                "questionResponseId": "31e44b54-d2ca-4b40-b639-df784e0b0889"
+            },
+            {
+                "option": "Cutting",
+                "translation": {
+                    "en": "Cutting",
+                    "ur": "کاٹنا"
+                },
+                "questionResponseId": "99221706-42d8-4d8f-9613-9c2296acda2e"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Please provide more information on the materials & components you source",
+            "ur": "براہ کرم اپنے ذریعہ کردہ مواد اور اجزاء کے بارے میں مزید معلومات فراہم کریں۔"
+        },
+        "questionId": "26ae0ea2-fb24-45cf-b6a9-8de2d08bc2e9",
+        "index": 5,
+        "questionResponses": [
+            {
+                "option": "Packaging materials",
+                "translation": {
+                    "en": "Packaging materials",
+                    "ur": "پیکیجنگ مواد"
+                },
+                "questionResponseId": "8763816e-280b-4d44-b50b-5491f1c0df31"
+            },
+            {
+                "option": "Other (Please specify)",
+                "translation": {
+                    "en": "Other (Please specify)",
+                    "ur": "دیگر(وضاحت براہ مہربانی)"
+                },
+                "questionResponseId": "470e9f54-2b6a-49b4-9225-3857b5e50b02"
+            },
+            {
+                "option": "Accessories (e.g. zipper, buttons and labels)",
+                "translation": {
+                    "en": "Accessories (e.g. zipper, buttons and labels)",
+                    "ur": "لوازمات (مثلاً زپر، بٹن اور لیبل)"
+                },
+                "questionResponseId": "b2e631d8-6ea1-441a-b4ba-1ea375d17ba5"
+            },
+            {
+                "option": "Synthetic leather & natural leather",
+                "translation": {
+                    "en": "Synthetic leather & natural leather",
+                    "ur": "مصنوعی چمڑا اور قدرتی چمڑا"
+                },
+                "questionResponseId": "45ae0c6c-3cc9-4695-80bd-abe43cb53f12"
+            },
+            {
+                "option": "Synthetic fibre / man-made fibre (e.g. viscose, modal)",
+                "translation": {
+                    "en": "Synthetic fibre / man-made fibre (e.g. viscose, modal)",
+                    "ur": "مصنوعی ریشہ / انسان ساختہ فائبر (جیسے ویسکوز، موڈل)"
+                },
+                "questionResponseId": "a6e5e92d-e79c-48d4-85e6-d33a954ea142"
+            },
+            {
+                "option": "Dyeing & finishing & printing chemicals Wood pulp",
+                "translation": {
+                    "en": "Dyeing & finishing & printing chemicals Wood pulp",
+                    "ur": "رنگنے اور فنشنگ اور پرنٹنگ کیمیکل لکڑی کاگودا"
+                },
+                "questionResponseId": "aea82eb7-369a-4042-af6c-433d974c33c5"
+            },
+            {
+                "option": "Yarn & threads",
+                "translation": {
+                    "en": "Yarn & threads",
+                    "ur": "وت اور دھاگہ"
+                },
+                "questionResponseId": "7da4abec-56c1-4dd0-a2e8-ae08e0643a35"
+            },
+            {
+                "option": "Fabric (non-woven)",
+                "translation": {
+                    "en": "Fabric (non-woven)",
+                    "ur": "فیبرک (غیر بنے ہوئے)"
+                },
+                "questionResponseId": "dd333480-070d-4627-96cf-94c94d38f500"
+            },
+            {
+                "option": "Fabric (weaving)",
+                "translation": {
+                    "en": "Fabric (weaving)",
+                    "ur": "کپڑا (بنائی)"
+                },
+                "questionResponseId": "2251d4ae-4a86-4762-a164-d2f76051a68a"
+            },
+            {
+                "option": "Fabric (knitting)",
+                "translation": {
+                    "en": "Fabric (knitting)",
+                    "ur": "کپڑا (بننا)"
+                },
+                "questionResponseId": "44abb9da-671d-4600-93b2-1b605f94f6c2"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Does cotton processing  rely on manual labor, including for any of the following activities: sorting and spreading cotton on platforms, throwing cotton into machines and push the bales out of the factory, removing cotton seed etc.?",
+            "ur": "کیا کپاس کی پروسیسنگ دستی مشقت پر انحصار کرتی ہے، بشمول درج ذیل میں سے کسی ایک سرگرمی کے لیے: پلیٹ فارم پر کپاس کو چھانٹنا اور پھیلانا، کپاس کو مشینوں میں پھینکنا اور گانٹھوں کو فیکٹری سے باہر دھکیلنا، کپاس کے بیج کو ہٹانا وغیرہ؟"
+        },
+        "questionId": "fce9407e-dcc2-4d24-999a-070f2634c439",
+        "index": 6,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "afb4f1e1-e415-47d7-8185-e147b0639b4f"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "f65f14e8-fed5-4b62-9fbd-8a23e011613e"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Do you purchase  cotton in part or in whole from artis (middlemen)?",
+            "ur": "کیا آپ کسی  مڈل مین سے جزوی یا مکمل طور پر کپاس خریدتے ہیں؟ (مثلاً مڈل مین یا آڑھتی)"
+        },
+        "questionId": "e228016a-4bb5-40e1-a24a-44be5df7119f",
+        "index": 7,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "0172930d-eab0-4e43-824f-9efcd4a0b43d"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "07afdbec-e2c0-4357-98a9-eed7f0a84219"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Do you rely on seasonal or temporary workers?",
+            "ur": "کیا آپ موسمی یا عارضی کارکنوں پر بھروسہ کرتے ہیں؟"
+        },
+        "questionId": "4eaae58b-5560-4202-9497-b4e2a494b988",
+        "index": 8,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "6c5dd775-c5d8-49b5-bea4-f7ff826dcc7d"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "ce15fd37-87a3-48e8-b6d4-602d00db7a97"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Do you know which countries your production input (raw materials and materials & components) originates from?",
+            "ur": "کیا آپ جانتے ہیں کہ آپ کا پروڈکشن ان پٹ (خام مال اور مواد اور اجزاء) کن ممالک سے آتا ہے؟"
+        },
+        "questionId": "35fdad8a-34e1-4870-91d8-801136535b91",
+        "index": 9,
+        "questionResponses": [
+            {
+                "option": "No, we don’t know the country of origin of any of the raw materials, materials & components we sourced",
+                "translation": {
+                    "en": "No, we don’t know the country of origin of any of the raw materials, materials & components we sourced",
+                    "ur": "نہیں، ہم نہیں جانتے کہ ہم نے جو خام مال، مواد اور اجزاء حاصل کیے ہیں ان میں سے کسی کی اصل ملک کہاں ہے"
+                },
+                "questionResponseId": "71c5196b-7053-4083-8dea-c0ec272fbd04"
+            },
+            {
+                "option": "Yes, we know some of the country of origin of raw materials and materials & components",
+                "translation": {
+                    "en": "Yes, we know some of the country of origin of raw materials and materials & components",
+                    "ur": "جی ہاں، ہم خام مال اور مواد اور اجزاء کے اصل ملک میں سے کچھ جانتے ہیں۔"
+                },
+                "questionResponseId": "33ec178a-3785-438a-b404-979e5494f10a"
+            },
+            {
+                "option": "Yes, we know the country of origin of all raw materials and materials & components",
+                "translation": {
+                    "en": "Yes, we know the country of origin of all raw materials and materials & components",
+                    "ur": "جی ہاں، ہم تمام خام مال اور مواد اور اجزاء کی اصل کا ملک جانتے ہیں۔"
+                },
+                "questionResponseId": "7138c23e-90a7-4b60-9867-cd7c9d97b2a7"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Do workers often travel from different regions/provinces/states for the purpose of working at the facility? [e.g. Nomadic haris including Bheels and Parkari Kolhis]",
+            "ur": "کیا ورکرز اکثر جنرز میں کام کرنے کے مقصد سے مختلف علاقوں/صوبوں/ریاستوں سے سفر کرتے ہیں؟ [مثلاً خانہ بدوش ہاری بشمول بھیل اور پارکاری کولہی]"
+        },
+        "questionId": "95be8ffb-2faf-42c2-8f93-ab6c80ea8b30",
+        "index": 10,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "31140944-09d0-4611-bf12-8e54cbee8b7c"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "d073de5f-43d1-486a-9f9e-7c192c4da857"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Do you import any cotton (in part or in whole) from any of the following countries? (Benin, Burkina Faso, China, India, Kazakhstan, Pakistan, Tajikistan, Turkmenistan, and Uzbekistan)",
+            "ur": "کیا آپ مندرجہ ذیل میں سے کسی بھی ملک سے روئی سے بنا کوئی دھاگہ درآمد کرتے ہیں (جزوی طور پر یا مکمل طور پر)؟ (بینن، برکینا فاسو، چین، بھارت، قازقستان، پاکستان، تاجکستان، ترکمانستان، اور ازبکستان)"
+        },
+        "questionId": "a5468edd-758c-485c-9abe-1f7c6dc4562f",
+        "index": 11,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "c4764953-4a49-4658-8265-ff9c2c62f572"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "28159c1e-078c-40ec-b7c9-30b8fdfee076"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Do international migrants work in the site?",
+            "ur": "کیا بین الاقوامی تارکین وطن سائٹ پر کام کرتے ہیں؟"
+        },
+        "questionId": "bbb5549c-abc5-4650-80da-788ee2fca4a8",
+        "index": 12,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "4f62e6cc-fe22-485d-8a5e-491b158520a1"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "76512ede-a84c-4788-aa69-adf419deddcc"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Does your company have a policy requiring your suppliers to disclose all suppliers and subcontractors they use?",
+            "ur": "کیا آپ کی کمپنی کے پاس کوئی ایسی پالیسی ہے جس میں آپ کے سپلائرز کو ان تمام سپلائرز اور ذیلی ٹھیکیداروں کو ظاہر کرنے کی ضرورت ہے جنسے  وہ کام کرتے ہیں؟"
+        },
+        "questionId": "b84f0c12-f171-4c8f-bd8d-16f54e1106aa",
+        "index": 13,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "39ba6e26-9ad7-4906-b44a-4dbd049d8174"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "fe5e588d-bea9-4d14-a9b4-66a63a95d8dd"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Are there groups of workers working at the ginners who speak a different language or belong to a different religious, ethnic, or social group than their employers? (e.g. Christian and Hindu Dalits) or who are illiterate ?",
+            "ur": "کیا جننگ میں کام کرنے والوں کے ایسے گروپ ہیں جو مختلف زبان بولتے ہیں یا اپنے آجروں سے مختلف مذہبی، نسلی، یا سماجی گروپ سے تعلق رکھتے ہیں؟ (جیسے عیسائی اور ہندو دلت) یا جو ناخواندہ ہیں؟"
+        },
+        "questionId": "1f89bc1c-3454-435c-98a9-b7d4e44e2b1b",
+        "index": 14,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "c2ce85b7-3785-417c-ab2c-8fb1c1af977d"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "26c13440-aa0e-4055-8338-6c7cbd12acc3"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Do you use paper based system to track material from warehouse incoming goods, through production to warehouse outgoing goods?",
+            "ur": "کیا آپ گودام میں آنے والے سامان سے لے کر پیداوار کے ذریعے گودام سے باہر جانے والے سامان کو ٹریک کرنے کے لیے کاغذ پر مبنی نظام استعمال کرتے ہیں؟"
+        },
+        "questionId": "9f39e3c1-ba04-40b5-be22-908e50cf955f",
+        "index": 15,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "b24edad9-8f78-454c-8686-40cce76d9214"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "9bb8e7c9-cd6d-44eb-b74d-71d0ca6cd774"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Are workers provided loans or wage advances by the facility owner or labor recruiters?",
+            "ur": "کیا مزدوروں کو جنر یا مزدور بھرتی کرنے والوں کے ذریعہ قرض یا اجرت کی پیشگی فراہم کی جاتی ہے؟"
+        },
+        "questionId": "6d9fbfe7-b680-4556-8052-f37cdf55ca8c",
+        "index": 16,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "74923985-3adf-41b2-be67-bd8758a6a933"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "13f14aaa-7d2f-4e1f-b8bf-f672a790bb76"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Are labor recruiters/intermediaries involved in hiring or supplying any workers for the facility?",
+            "ur": "کیا مزدور بھرتی کرنے والے/بیچولی جنر کے لیے کسی کارکن کی خدمات حاصل کرنے یا سپلائی کرنے میں ملوث ہیں؟"
+        },
+        "questionId": "d1180e8d-3a6c-42af-a8fb-40cdc586fbb5",
+        "index": 17,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "eaa579ae-7834-4a6e-84ea-544e7710b813"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "2ac646dc-46de-40cd-971b-e2a587a29535"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Do you use spreadsheets to track material from warehouse incoming goods, through production to warehouse outgoing goods?",
+            "ur": "کیا آپ گودام میں آنے والے سامان سے لے کر پیداوار کے ذریعے گودام سے باہر جانے والے سامان کو ٹریک کرنے کے لیے اسپریڈ شیٹس کا استعمال کرتے ہیں؟"
+        },
+        "questionId": "0151ca61-c93d-4a48-b175-a7f625319eac",
+        "index": 18,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "59d51031-8f60-4bc7-9e6c-f0879e303952"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "8b2a5fe1-6ef4-4e4d-a655-083ae498c52d"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "What systems do you use to track material from warehouse incoming goods, through production to warehouse outgoing goods?",
+            "ur": "گودام میں آنے والے سامان سے لے کر پیداوار کے ذریعے گودام سے باہر جانے والے سامان تک مواد کو ٹریک کرنے کے لیے آپ کون سے نظام استعمال کرتے ہیں؟"
+        },
+        "questionId": "5c50b021-7b98-40a2-ba67-099887aef36a",
+        "index": 19,
+        "questionResponses": [
+            {
+                "option": "Barcode",
+                "translation": {
+                    "en": "Barcode",
+                    "ur": "بارکوڈ"
+                },
+                "questionResponseId": "ac5ef9d9-b0c4-420d-b045-30a12de870f7"
+            },
+            {
+                "option": "Other (Please specify)",
+                "translation": {
+                    "en": "Other (Please specify)",
+                    "ur": "دوسرے (براہ کرم وضاحت کریں)"
+                },
+                "questionResponseId": "f76ae741-b0ab-4667-a4cf-4f01667580af"
+            },
+            {
+                "option": "Enterprise Resource Planning /Warehouse management system",
+                "translation": {
+                    "en": "Enterprise Resource Planning /Warehouse management system",
+                    "ur": "انٹرپرائز ریسورس پلاننگ / ویئر ہاؤس مینجمنٹ سسٹم"
+                },
+                "questionResponseId": "94ab3ec0-36a9-4849-bfb6-02dcdc52c187"
+            },
+            {
+                "option": "RFID",
+                "translation": {
+                    "en": "RFID",
+                    "ur": "ر ایف آئی ڈی"
+                },
+                "questionResponseId": "40df6832-d7b7-4a5e-9571-ce47dab46f29"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Is accommodation (temporary or permenant) provided to any workers by the facility or labor recruiters?",
+            "ur": "کیا جنر یا مزدور بھرتی کرنے والوں کے ذریعہ کسی بھی کارکن کو رہائش (عارضی یا مستقل) فراہم کی جاتی ہے؟"
+        },
+        "questionId": "0f28bfc1-22c5-4198-8805-a0e0057b14c7",
+        "index": 20,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "ffdfb307-055a-4fb6-bd8a-27116a8efa60"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "47c27f5a-c2c8-4882-ab31-c87b12aadfab"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Do any children (under age of 18) live at the site with their parents?",
+            "ur": "کیا کوئی بچہ (18 سال سے کم عمر) اپنے والدین کے ساتھ سائٹ پر رہتا ہے؟"
+        },
+        "questionId": "a5836dd8-d720-4f4f-b098-7abf6d619303",
+        "index": 21,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "b07c58ce-9d39-4a7f-8103-5def80990d31"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "7a7acbcc-ce67-4d34-9fad-6d3f7b222a6c"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Please select the purchase documents that your facility maintain",
+            "ur": "براہ کرم خریداری کے وہ دستاویزات منتخب کریں جنہیں آپ کی سہولت برقرار رکھتی ہے۔"
+        },
+        "questionId": "c8ae376f-a645-4a05-808c-031c55b8f8a4",
+        "index": 22,
+        "questionResponses": [
+            {
+                "option": "Purchase orders",
+                "translation": {
+                    "en": "Purchase orders",
+                    "ur": "خریداری کے احکامات"
+                },
+                "questionResponseId": "2227d01e-29d5-4cc2-884c-10a327cd1973"
+            },
+            {
+                "option": "Commercial invoice",
+                "translation": {
+                    "en": "Commercial invoice",
+                    "ur": "تجارتی رسید"
+                },
+                "questionResponseId": "3a40812e-304f-4574-9d7e-c3f27e6eeb00"
+            },
+            {
+                "option": "Requests for quotations and quotations",
+                "translation": {
+                    "en": "Requests for quotations and quotations",
+                    "ur": "کوٹیشنز اور کوٹیشنز کی درخواستیں۔"
+                },
+                "questionResponseId": "8349129f-6fd6-467b-80f5-406637c1f64a"
+            },
+            {
+                "option": "Bills of lading",
+                "translation": {
+                    "en": "Bills of lading",
+                    "ur": "لڈنگ کے بل"
+                },
+                "questionResponseId": "c78e2910-a2bf-4be9-a22e-3df55bccca83"
+            },
+            {
+                "option": "Export packing lists",
+                "translation": {
+                    "en": "Export packing lists",
+                    "ur": "رآمدی پیکنگ کی فہرستیں"
+                },
+                "questionResponseId": "ca2c5306-2dc3-4161-a58b-fd32eb183383"
+            },
+            {
+                "option": "Airway/vessel bills",
+                "translation": {
+                    "en": "Airway/vessel bills",
+                    "ur": "ایئر وے / جہاز کے بل اصل کے"
+                },
+                "questionResponseId": "73e220f7-64fe-4d3b-8ae6-0067fb623fe1"
+            },
+            {
+                "option": "Certificates of origin",
+                "translation": {
+                    "en": "Certificates of origin",
+                    "ur": "مقامی سرٹیفکیٹ"
+                },
+                "questionResponseId": "2b0945d2-7a24-4b22-bf74-961e0132ecd7"
+            },
+            {
+                "option": "Other (Please specify)",
+                "translation": {
+                    "en": "Other (Please specify)",
+                    "ur": "دیگر (وضاحت براہ مہربانی)"
+                },
+                "questionResponseId": "f2f4c006-cf28-450f-b6fe-573cae0cd4f9"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Do you require proof of age of workers and does it make note of this when hiring workers?",
+            "ur": "کیا آپ کو ورکرز کی عمر کا ثبوت درکار ہے اور کیا ورکرز کی خدمات حاصل کرتے وقت اس کو نوٹ کیا جاتا ہے؟"
+        },
+        "questionId": "1dda3e4d-ae45-4173-a5ba-b82118d19c41",
+        "index": 23,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "53329e5d-0d53-45d0-8def-9998df5cd7ab"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "4279021e-ef46-40b7-a5b3-0ecf0458c3a8"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Please select the sales documents that your facility maintain",
+            "ur": "براہ کرم سیلز کے وہ دستاویزات منتخب کریں جنہیں آپ کی سہولت برقرار رکھتی ہے۔"
+        },
+        "questionId": "022e7254-e704-42fe-8c6e-81cf94322f3a",
+        "index": 24,
+        "questionResponses": [
+            {
+                "option": "Purchase orders",
+                "translation": {
+                    "en": "Purchase orders",
+                    "ur": "ریداری کے احکامات"
+                },
+                "questionResponseId": "8436a616-e23c-4d81-897d-0da680780210"
+            },
+            {
+                "option": "Certificates of origin",
+                "translation": {
+                    "en": "Certificates of origin",
+                    "ur": "امی سرٹیفکیٹ"
+                },
+                "questionResponseId": "1c94e5c0-d463-49ce-8fba-08698d11aeb0"
+            },
+            {
+                "option": "Other (Please specify)",
+                "translation": {
+                    "en": "Other (Please specify)",
+                    "ur": "گر (وضاحت براہ مہربانی)"
+                },
+                "questionResponseId": "7bfd3bd1-cb73-4f64-9153-3b0fdb77d6b8"
+            },
+            {
+                "option": "Bills of lading",
+                "translation": {
+                    "en": "Bills of lading",
+                    "ur": "لڈنگ کے بل"
+                },
+                "questionResponseId": "953adc97-fabd-4f89-b4ae-a2529fb37848"
+            },
+            {
+                "option": "Export packing lists",
+                "translation": {
+                    "en": "Export packing lists",
+                    "ur": "مدی پیکنگ کی فہرستیں"
+                },
+                "questionResponseId": "e3c0b35d-9370-454c-ba16-355d20728a6b"
+            },
+            {
+                "option": "Airway/vessel bills",
+                "translation": {
+                    "en": "Airway/vessel bills",
+                    "ur": "ایئر وے / جہاز کے بل اصل کے"
+                },
+                "questionResponseId": "985d47b7-f12d-4271-9645-7e3975ac1ae7"
+            },
+            {
+                "option": "Commercial invoice",
+                "translation": {
+                    "en": "Commercial invoice",
+                    "ur": "تجارتی رسید"
+                },
+                "questionResponseId": "a0899ecc-6aac-40e1-a742-8450a9297743"
+            },
+            {
+                "option": "Requests for quotations and quotations",
+                "translation": {
+                    "en": "Requests for quotations and quotations",
+                    "ur": "کوٹیشنز اور کوٹیشنز کی درخواستیں۔"
+                },
+                "questionResponseId": "414322d2-85c8-405f-a2b1-9b0c700eea94"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Does anyone under the age of 18 work at the site?",
+            "ur": "کیا 18 سال سے کم عمر کوئی بھی سائٹ پر کام کرتا ہے؟"
+        },
+        "questionId": "d59d365b-7b0c-4c10-b892-e7eeb4ae1d8d",
+        "index": 25,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "d174efbf-205f-48e8-b287-8d1fbb266b50"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "ef7ee763-fcb3-4408-a4d7-e81a7ffa37fd"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Please select the transport documents that your facility maintain",
+            "ur": "براہ کرم نقل و حمل کے وہ دستاویزات منتخب کریں جو آپ کی سہولت برقرار رکھتی ہیں۔"
+        },
+        "questionId": "e7497108-b09b-4fb7-8d27-1be7d018eb1f",
+        "index": 26,
+        "questionResponses": [
+            {
+                "option": "Airway/vessel bills",
+                "translation": {
+                    "en": "Airway/vessel bills",
+                    "ur": "ایئر وے / جہاز کے بل اصل کے"
+                },
+                "questionResponseId": "8a62fb63-02fc-4702-ae1a-00de2f4ed231"
+            },
+            {
+                "option": "Bills of lading",
+                "translation": {
+                    "en": "Bills of lading",
+                    "ur": "لڈنگ کے بل"
+                },
+                "questionResponseId": "a077a978-78c9-4f69-abbf-aefa7e23b3d1"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Please select age categories of those working at the site:",
+            "ur": "براہ کرم سائٹ پر کام کرنے والوں کی عمر کے زمرے منتخب کریں:"
+        },
+        "questionId": "11033d2f-0038-485e-854d-0210096c3f63",
+        "index": 27,
+        "questionResponses": [
+            {
+                "option": "16-17",
+                "translation": {
+                    "en": "16-17",
+                    "ur": "16-17"
+                },
+                "questionResponseId": "84352b4f-27b3-457f-8d78-2ca461979c8e"
+            },
+            {
+                "option": "12-15",
+                "translation": {
+                    "en": "12-15",
+                    "ur": "12-15"
+                },
+                "questionResponseId": "55bf6648-a807-40db-823a-be32100282b7"
+            },
+            {
+                "option": "8-11",
+                "translation": {
+                    "en": "8-11",
+                    "ur": "8-11"
+                },
+                "questionResponseId": "3475a861-efb9-41be-a9a4-9c53475f2878"
+            },
+            {
+                "option": "Under 8",
+                "translation": {
+                    "en": "Under 8",
+                    "ur": "آٹھ سال سے کم عمر"
+                },
+                "questionResponseId": "0c0bb19d-709d-4638-9557-55bba6be5499"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "What other documents does the facility maintain?",
+            "ur": "سہولت کن دیگر دستاویزات کو برقرار رکھتی ہے؟"
+        },
+        "questionId": "1cd7440b-98c9-4131-8d7e-53a59632f779",
+        "index": 28,
+        "questionResponses": [
+            {
+                "option": "Manufacturing / process control",
+                "translation": {
+                    "en": "Manufacturing / process control",
+                    "ur": "مینوفیکچرنگ / پروسیسنگ کنٹرول"
+                },
+                "questionResponseId": "1977783c-9e3e-4b83-85c6-2fe69bef9b75"
+            },
+            {
+                "option": "Finished good warehousing",
+                "translation": {
+                    "en": "Finished good warehousing",
+                    "ur": "تیارسامان کا گودام ریکارڈ۔"
+                },
+                "questionResponseId": "074ad0c8-99e2-4ba8-8220-84800787ef26"
+            },
+            {
+                "option": "Other (Please specify)",
+                "translation": {
+                    "en": "Other (Please specify)",
+                    "ur": "دیگر (وضاحت براہ مہربانی)"
+                },
+                "questionResponseId": "87d81dd3-b76c-4d35-acf8-d8c7fa1ea677"
+            },
+            {
+                "option": "Dock/warehouse receipts",
+                "translation": {
+                    "en": "Dock/warehouse receipts",
+                    "ur": "گودام کی رسیدیں"
+                },
+                "questionResponseId": "b37dfe8e-3e75-4a90-8275-0cf3de80d85f"
+            },
+            {
+                "option": "Warehouse inventory control",
+                "translation": {
+                    "en": "Warehouse inventory control",
+                    "ur": "گودام انوینٹری کنٹرول"
+                },
+                "questionResponseId": "8aace479-a056-4541-a4f8-c59b2ff303a3"
+            },
+            {
+                "option": "Production records which should be able show input and output of no longer than one day",
+                "translation": {
+                    "en": "Production records which should be able show input and output of no longer than one day",
+                    "ur": "پیداواری ریکارڈ جو ایک دن سے زیادہ کا ان پٹ اور آؤٹ پٹ دکھانے کے قابل ہونا چاہی"
+                },
+                "questionResponseId": "4f61bc32-f60d-4a40-98a6-5130cd931218"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Do all of the young workers below school leaving age (16) also attend school?",
+            "ur": "کیا اسکول چھوڑنے کی عمر (16) سے کم عمر کے تمام نوجوان کارکن بھی اسکول جاتے ہیں؟"
+        },
+        "questionId": "d4fc55af-3332-4cbe-b29f-2dfaf3a82b0b",
+        "index": 29,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "9746b856-7b06-4d59-ac66-33522fe528cb"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "ca6d0b33-0e3e-49fb-b353-0d52deeb9481"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Average number of outputs (i.e. #units/pieces) produced per month?",
+            "ur": "ہر ماہ پیداوار کی اوسط تعداد (یعنی #units/pieces)؟"
+        },
+        "questionId": "a835b9d1-7a79-467c-a1ef-91fea4b28da3",
+        "index": 30,
+        "questionResponses": [
+            {
+                "option": "Numeric, unit of measurement",
+                "translation": {
+                    "en": "Numeric, unit of measurement",
+                    "ur": "عددی، پیمائش کی اکائی"
+                },
+                "questionResponseId": "c325b6d2-cdaa-4990-9887-32b5926bfe14"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Has management identified any tasks, processes or other working conditions that could be hazardous to young workers?",
+            "ur": "کیا انتظامیہ نے کسی ایسے کام، عمل یا کام کے دیگر حالات کی نشاندہی کی ہے جو نوجوان کارکنوں کے لیے خطرناک ہو سکتی ہے؟"
+        },
+        "questionId": "996e0935-d934-4007-b470-70ff7ba075c2",
+        "index": 31,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "b31d5211-0336-4fe4-b911-fd3daa975d66"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "a3841264-3d3b-48fc-a713-0b6ea77f8e0b"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Does your facility participates in any cotton certification schemes?",
+            "ur": "کیا آپ کی سہولت کسی کاٹن سرٹیفیکیشن اسکیموں میں حصہ لیتی ہے؟"
+        },
+        "questionId": "cbc1af75-a6a2-4e73-a455-5a3eb19995bf",
+        "index": 32,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "7f76dd17-658d-42ef-a35d-32bba02543d7"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "658146bd-e55f-46b4-a002-d93095d13cf9"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Please select all certification schemes your site participates in:",
+            "ur": "براہ کرم تمام سرٹیفیکیشن اسکیموں کو من:تخب کریں جن میں آپ کی سائٹ حصہ لیتی ہے"
+        },
+        "questionId": "92a2b2da-eeca-40d9-bb66-545d5163f86b",
+        "index": 33,
+        "questionResponses": [
+            {
+                "option": "GRS",
+                "translation": {
+                    "en": "GRS",
+                    "ur": "جی آر ایس"
+                },
+                "questionResponseId": "35f40cde-1593-49e4-a853-c25409ce99a7"
+            },
+            {
+                "option": "BCI",
+                "translation": {
+                    "en": "BCI",
+                    "ur": "بی سی آئی"
+                },
+                "questionResponseId": "7ea87cb4-bf91-4433-bbc7-45f64a4e4cc7"
+            },
+            {
+                "option": "GOTS",
+                "translation": {
+                    "en": "GOTS",
+                    "ur": "جی او ٹی ایس"
+                },
+                "questionResponseId": "05850163-4f2c-4001-b94a-74d3a0d65683"
+            },
+            {
+                "option": "Organic cotton",
+                "translation": {
+                    "en": "Organic cotton",
+                    "ur": "یاتی کپاس"
+                },
+                "questionResponseId": "849c9931-ee03-4682-8514-08226d5b4df6"
+            },
+            {
+                "option": "Leather Working Group",
+                "translation": {
+                    "en": "Leather Working Group",
+                    "ur": "لیدر ورکنگ گروپ"
+                },
+                "questionResponseId": "90f912cb-9707-4141-a455-4104783c9029"
+            },
+            {
+                "option": "Organic Cotton",
+                "translation": {
+                    "en": "Organic Cotton",
+                    "ur": "یاتی کپاس"
+                },
+                "questionResponseId": "6b2d628d-1573-46a9-bed6-67657127ad53"
+            },
+            {
+                "option": "OEKO Tex",
+                "translation": {
+                    "en": "OEKO Tex",
+                    "ur": "او ای کے او ٹیکس"
+                },
+                "questionResponseId": "f31bcb3d-4e55-4fbe-b234-a6bb310a2be3"
+            },
+            {
+                "option": "Other (Please specify)",
+                "translation": {
+                    "en": "Other (Please specify)",
+                    "ur": "دیگر(وضاحت براہ مہربانی)"
+                },
+                "questionResponseId": "d89b346b-1609-485e-a371-950bede1b2ea"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Do any young workers do the following?\n- Work in excess of seven hours a day and 42 hours a week. \n- Work overnight shifts (between 7 p.m. and 8 a.m.)\n- Exposure to cotton fibre\n- Exposure to chemicals or other noxious substances\n- Heavy lifting \n- Exposure to heavy or dangerous machinery or tools\n- Any other conditions that can be considered hazardous",
+            "ur": "کیا کوئی نوجوان کارکن مندرجہ ذیل کام کرتا ہے؟\n- دن میں سات گھنٹے اور ہفتے میں 42 گھنٹے سے زیادہ کام کریں۔\n- رات بھر کی شفٹوں میں کام کریں (شام 7 بجے سے صبح 8 بجے کے درمیان) کپاس کے ریشے کے سامنے\n- کیمیکلز یا دیگر نقصان دہ مادوں کی موجودگی\n- بھاری وزن اٹھانا\n- بھاری یا خطرناک مشینری یا اوزار کے ساتھ\n- کوئی دوسری شرائط جو خطرناک سمجھی جا سکتی ہیں"
+        },
+        "questionId": "ed5b0b61-8cc4-4c5f-ad8c-2521ea3a590a",
+        "index": 34,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "a5a94095-f6ef-4415-af50-7fc87340d7ed"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "b78cf68b-1dd1-4047-8b5a-59e8ac5c320e"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Does the facility recognise any trade unions?",
+            "ur": "کیا جنر کسی ٹریڈ یونین کو تسلیم کرتا ہے؟"
+        },
+        "questionId": "d3fd0634-5910-4919-9bea-dc98babfc2ae",
+        "index": 35,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "541f7568-c0fd-4784-887b-11ca24753d94"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "4d090736-6473-4621-92fb-57102aa9f96a"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Has this facility been audited against any cotton standards?",
+            "ur": "کیا اس سہولت کا روئی کے کسی معیار کے خلاف آڈٹ کیا گیا ہے؟"
+        },
+        "questionId": "54f70c56-2e27-4a9d-818a-a775d6a62946",
+        "index": 36,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "0ca806e3-e363-4e2e-9a69-7ce8a7fd77a8"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "2aa9f26a-55bb-4054-9974-912af7324f53"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Please select all cotton standards that you  have been audited against:",
+            "ur": "براہ کرم روئی کے تمام معیارات کو منتخب کریں جن کے خلاف آپ کا آڈٹ کیا گیا ہے۔"
+        },
+        "questionId": "ed8145d5-de56-4f5e-b787-e98224026083",
+        "index": 37,
+        "questionResponses": [
+            {
+                "option": "Other (Please specify)",
+                "translation": {
+                    "en": "Other (Please specify)",
+                    "ur": "دیگر (وضاحت براہ مہربانی)"
+                },
+                "questionResponseId": "765a881a-4e02-4c8c-b59f-43f480bec48d"
+            },
+            {
+                "option": "BEPI",
+                "translation": {
+                    "en": "BEPI",
+                    "ur": "بی ای پی آئی"
+                },
+                "questionResponseId": "0dfaf11c-49ef-4903-ad33-ba79eedfba8b"
+            },
+            {
+                "option": "ISO 14001",
+                "translation": {
+                    "en": "ISO 14001",
+                    "ur": "آئی ایس او 14001"
+                },
+                "questionResponseId": "f6289654-04d2-4951-b93f-382c7e27d958"
+            },
+            {
+                "option": "BSCI",
+                "translation": {
+                    "en": "BSCI",
+                    "ur": "بی ایس سی آئی"
+                },
+                "questionResponseId": "e3c79077-a34c-42ff-9b20-760a8454f9f7"
+            },
+            {
+                "option": "IETP (ICTI)",
+                "translation": {
+                    "en": "IETP (ICTI)",
+                    "ur": "آئی ای ٹی پی(آئی سی ٹی آئی)"
+                },
+                "questionResponseId": "6e187842-4f55-4359-9817-159e9c06943c"
+            },
+            {
+                "option": "SMETA",
+                "translation": {
+                    "en": "SMETA",
+                    "ur": "ایس این ای ٹی اے"
+                },
+                "questionResponseId": "f295eb88-9cc5-4b8e-8852-c8afd544efeb"
+            },
+            {
+                "option": "Better Work",
+                "translation": {
+                    "en": "Better Work",
+                    "ur": "بیٹر ورک"
+                },
+                "questionResponseId": "d2dea38b-e72e-4893-aad1-8976928252d2"
+            },
+            {
+                "option": "OHSAS 18001",
+                "translation": {
+                    "en": "OHSAS 18001",
+                    "ur": "او ایچ ایس اے ایس 18001"
+                },
+                "questionResponseId": "09f4227d-888e-48d9-8332-c304d7909b7d"
+            },
+            {
+                "option": "RBA (EICC)",
+                "translation": {
+                    "en": "RBA (EICC)",
+                    "ur": "آر بی اے(ای آئی سی سی)"
+                },
+                "questionResponseId": "5575abf2-4c51-49c0-84c0-30203042a427"
+            },
+            {
+                "option": "SLCP",
+                "translation": {
+                    "en": "SLCP",
+                    "ur": "ایس ایل سی پی"
+                },
+                "questionResponseId": "247c011a-ba45-498a-af90-65b84d6ca0fb"
+            },
+            {
+                "option": "HIGG FEM",
+                "translation": {
+                    "en": "HIGG FEM",
+                    "ur": "ایچ آئی جی جی ایف ای ایم"
+                },
+                "questionResponseId": "5af8ef80-1c12-4308-87c4-1fcbc2868468"
+            },
+            {
+                "option": "WRAP",
+                "translation": {
+                    "en": "WRAP",
+                    "ur": "ڈبلیو آر اے پی"
+                },
+                "questionResponseId": "b74f9e43-ded0-4efc-89ee-d1265ec54122"
+            },
+            {
+                "option": "WCA",
+                "translation": {
+                    "en": "WCA",
+                    "ur": "ڈبلیو سی اے"
+                },
+                "questionResponseId": "9cf7b7da-0974-4cb9-88d7-78163d22a35d"
+            },
+            {
+                "option": "ICS",
+                "translation": {
+                    "en": "ICS",
+                    "ur": "آئی سی ایس"
+                },
+                "questionResponseId": "768665b9-b411-4db6-bcff-a414bd1ede60"
+            },
+            {
+                "option": "YESS",
+                "translation": {
+                    "en": "YESS",
+                    "ur": "وائی ای ایس ایس"
+                },
+                "questionResponseId": "8bd85582-c1f5-45cc-952d-8c2788b8f9be"
+            },
+            {
+                "option": "SA 8000",
+                "translation": {
+                    "en": "SA 8000",
+                    "ur": "ایس اے8000"
+                },
+                "questionResponseId": "1e283f44-7fa8-432a-826e-a6e78bfba74b"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "What % of the workforce is unionised?",
+            "ur": "افرادی قوت کا کتنا فیصد یونینائزڈ ہے؟"
+        },
+        "questionId": "9157d3f7-02ba-41e5-8b71-829799b90963",
+        "index": 38,
+        "questionResponses": [
+            {
+                "option": "0",
+                "translation": {
+                    "en": "0%",
+                    "ur": "0%"
+                },
+                "questionResponseId": "0e7f618c-1d38-4603-b311-2194e0a2b52a"
+            },
+            {
+                "option": "1% - 50%",
+                "translation": {
+                    "en": "1% - 50%",
+                    "ur": "1% - 50%"
+                },
+                "questionResponseId": "210a7538-d41d-4704-82de-536cc4aca7d1"
+            },
+            {
+                "option": ">50%",
+                "translation": {
+                    "en": ">50%",
+                    "ur": ">50%"
+                },
+                "questionResponseId": "312fb2ff-9728-4b15-b8bc-afb8179b2558"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "What % of the workforce is covered by collective bargaining agreements?",
+            "ur": "اجتماعی سودے بازی کے معاہدوں میں کتنے فیصد افرادی قوت کا احاطہ کیا جاتا ہے؟"
+        },
+        "questionId": "ace23ed2-74c7-4133-952e-9d9bea37c0b7",
+        "index": 39,
+        "questionResponses": [
+            {
+                "option": "0",
+                "translation": {
+                    "en": "0%",
+                    "ur": "0%"
+                },
+                "questionResponseId": "ec4ddbd0-e17f-47c2-94dc-c5e8d20285c6"
+            },
+            {
+                "option": "1% - 50%",
+                "translation": {
+                    "en": "1% - 50%",
+                    "ur": "1% - 50%"
+                },
+                "questionResponseId": "fba7bc35-97dc-42ba-ab44-1e335dc7de1d"
+            },
+            {
+                "option": ">50%",
+                "translation": {
+                    "en": ">50%",
+                    "ur": ">50%"
+                },
+                "questionResponseId": "6877ebb8-ab9b-458e-81af-0757c65bdb82"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "How often are workers given health and safety training, such as appropriate use of equipment and use of personal protective equipment (PPE)?",
+            "ur": "کارکنوں کو کتنی بار صحت اور حفاظت کی تربیت دی جاتی ہے، جیسے آلات کا مناسب استعمال اور ذاتی حفاظتی سامان (PPE) کا استعمال؟"
+        },
+        "questionId": "9cc98889-98a1-4f15-a01f-5a1d855db62f",
+        "index": 40,
+        "questionResponses": [
+            {
+                "option": "We do not provide workers with health and safety training, as they are already very familiar with health and safety",
+                "translation": {
+                    "en": "We do not provide workers with health and safety training, as they are already very familiar with health and safety",
+                    "ur": "ہم کارکنوں کو صحت اور حفاظت کی تربیت فراہم نہیں کرتے، کیونکہ وہ صحت اور حفاظت سے پہلے ہی بہت واقف ہیں۔"
+                },
+                "questionResponseId": "a10bee0e-23e0-4d17-83c7-830f7131f4c5"
+            },
+            {
+                "option": "We provide new workers with health and safety training when they join",
+                "translation": {
+                    "en": "We provide new workers with health and safety training when they join",
+                    "ur": "ہم نئے کارکنوں کے شامل ہونے پر صحت اور حفاظت کی تربیت فراہم کرتے ہیں۔"
+                },
+                "questionResponseId": "a389872b-8b65-46b1-9bce-e73c3a4392c7"
+            },
+            {
+                "option": "We provide all workers with health and safety training at least once per year",
+                "translation": {
+                    "en": "We provide all workers with health and safety training at least once per year",
+                    "ur": "ہم تمام کارکنوں کو سال میں کم از کم ایک بار صحت اور حفاظتی تربیت فراہم کرتے ہیں۔"
+                },
+                "questionResponseId": "4b4e5778-af00-43bf-a5ed-2b2063785feb"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Do workers have to wear protective clothing and personal protective equipment (PPE) for any tasks at the site?",
+            "ur": "کیا کارکنوں کو سائٹ پر کسی کام کے لیے حفاظتی لباس اور ذاتی حفاظتی سامان (PPE) پہننا ہوگا؟"
+        },
+        "questionId": "ea63920d-e563-462e-95a7-c7842d9207ef",
+        "index": 41,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "5f031bf8-9df7-4bda-b3bd-823e4e0b036d"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "d9557754-dc81-4674-adc4-a710bd22b65f"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Does the company provide professional/knowledge development training to workers? (this does not include health and safety training)",
+            "ur": "کیا کمپنی کارکنوں کو پیشہ ورانہ/علمی ترقی کی تربیت فراہم کرتی ہے؟ (اس میں صحت اور حفاظت کی تربیت شامل نہیں ہے)"
+        },
+        "questionId": "ebec81eb-9a0a-417a-8a3d-0eb4cbb9eb0d",
+        "index": 42,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "ur": "جی ہاں"
+                },
+                "questionResponseId": "e56d0e66-533c-42ec-8cec-35ebca486123"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "ur": "جی نہیں"
+                },
+                "questionResponseId": "d4318354-c74d-4500-9385-68c96e35e231"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "What % of workers participating in this training in the last 12 months were women?",
+            "ur": "پچھلے 12 مہینوں میں اس ٹریننگ میں حصہ لینے والے کارکنوں میں سے کتنے فیصد خواتین تھیں؟"
+        },
+        "questionId": "d7c25e79-a494-447b-b691-b184bd550422",
+        "index": 43,
+        "questionResponses": [
+            {
+                "option": "More than 40%",
+                "translation": {
+                    "en": "More than 40%",
+                    "ur": "الیس فی صد سے زیادہ"
+                },
+                "questionResponseId": "98cb115a-46ba-4fd2-8efb-b2cc6aa55dbb"
+            },
+            {
+                "option": "Less than 40%",
+                "translation": {
+                    "en": "Less than 40%",
+                    "ur": "چالیس فی صد سے کم"
+                },
+                "questionResponseId": "6af906a2-7576-4968-acd3-2fbe99b74e4e"
+            }
+        ]
+    }
+]

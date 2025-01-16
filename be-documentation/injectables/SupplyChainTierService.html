@@ -1,0 +1,1045 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Global Trace BE documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">Global Trace BE documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Injectables</li>
+  <li class="breadcrumb-item" >SupplyChainTierService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/supply-chains/services/supply-chain-tier.service.ts</code>
+        </p>
+
+
+
+            <p class="comment">
+                <h3>Extends</h3>
+            </p>
+            <p class="comment">
+                        <code>TransactionService</code>
+            </p>
+
+
+            <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#filterChainsContainingRoleId" >filterChainsContainingRoleId</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getAllNestedChildrenTiers" >getAllNestedChildrenTiers</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getBrandTiers" >getBrandTiers</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getMaxLevel" >getMaxLevel</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#getNodes" >getNodes</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getTiers" >getTiers</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#groupTiersByLevel" >groupTiersByLevel</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(supplyChainNodeRepo: <a href="../classes/SupplyChainNodeRepository.html" target="_self">SupplyChainNodeRepository</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/supply-chains/services/supply-chain-tier.service.ts:12</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>supplyChainNodeRepo</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../classes/SupplyChainNodeRepository.html" target="_self" >SupplyChainNodeRepository</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="filterChainsContainingRoleId"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>filterChainsContainingRoleId</b></span>
+                        <a href="#filterChainsContainingRoleId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>filterChainsContainingRoleId(nodes: <a href="../undefineds/Tier.html" target="_self">Tier[]</a>, roleId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="71"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain-tier.service.ts:71</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>nodes</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#Tier" target="_self" >Tier[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>roleId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#Tier" target="_self" >Tier[]</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAllNestedChildrenTiers"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>getAllNestedChildrenTiers</b></span>
+                        <a href="#getAllNestedChildrenTiers"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getAllNestedChildrenTiers(nodes: <a href="../entitys/SupplyChainNodeEntity.html" target="_self">SupplyChainNodeEntity[]</a>, nodeFromRoleId: string | null, nodeChainId: string | null, level: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="47"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain-tier.service.ts:47</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Default value</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>nodes</td>
+                                            <td>
+                                                            <code><a href="../entitys/SupplyChainNodeEntity.html" target="_self" >SupplyChainNodeEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+                                            <td>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                                <td>nodeFromRoleId</td>
+                                            <td>
+                                                        <code>string | null</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+                                            <td>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                                <td>nodeChainId</td>
+                                            <td>
+                                                        <code>string | null</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+                                            <td>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                                <td>level</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+                                            <td>
+                                                    <code>1</code>
+                                            </td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#Tier" target="_self" >Tier[]</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getBrandTiers"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>getBrandTiers</b></span>
+                        <a href="#getBrandTiers"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getBrandTiers(role: <a href="../entitys/RoleEntity.html" target="_self">RoleEntity</a>, doesAddBrand: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>, getAllNestedChildren: <a href="../undefineds/Tier.html" target="_self">Tier[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="30"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain-tier.service.ts:30</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>role</td>
+                                            <td>
+                                                            <code><a href="../entitys/RoleEntity.html" target="_self" >RoleEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>doesAddBrand</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>getAllNestedChildren</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#Tier" target="_self" >Tier[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>{}</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getMaxLevel"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>getMaxLevel</b></span>
+                        <a href="#getMaxLevel"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getMaxLevel(node: <a href="../undefineds/Tier.html" target="_self">Tier</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="124"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain-tier.service.ts:124</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>node</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#Tier" target="_self" >Tier</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getNodes"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>getNodes</b></span>
+                        <a href="#getNodes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getNodes(options: <a href="../entitys/SupplyChainNodeEntity.html" target="_self">FindManyOptions&lt;SupplyChainNodeEntity&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="39"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain-tier.service.ts:39</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Default value</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>options</td>
+                                            <td>
+                                                            <code><a href="../entitys/SupplyChainNodeEntity.html" target="_self" >FindManyOptions&lt;SupplyChainNodeEntity&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+                                            <td>
+                                                    <code>{}</code>
+                                            </td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/SupplyChainNodeEntity.html" target="_self" >Promise&lt;SupplyChainNodeEntity[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getTiers"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>getTiers</b></span>
+                        <a href="#getTiers"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getTiers(role: <a href="../entitys/RoleEntity.html" target="_self">RoleEntity</a>, doesAddBrand: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="17"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain-tier.service.ts:17</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>role</td>
+                                            <td>
+                                                            <code><a href="../entitys/RoleEntity.html" target="_self" >RoleEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>doesAddBrand</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;[][]&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="groupTiersByLevel"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>groupTiersByLevel</b></span>
+                        <a href="#groupTiersByLevel"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>groupTiersByLevel(nestedChildrenTiers: <a href="../undefineds/Tier.html" target="_self">Tier[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="91"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain-tier.service.ts:91</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>nestedChildrenTiers</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#Tier" target="_self" >Tier[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>[][]</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { TransactionService } from &#x27;@diginexhk/nestjs-transaction&#x27;;
+import { Injectable } from &#x27;@nestjs/common&#x27;;
+import { isEmpty, pick } from &#x27;lodash&#x27;;
+import { FindManyOptions } from &#x27;typeorm&#x27;;
+import { RoleEntity } from &#x27;~role-permissions/entities/role.entity&#x27;;
+import { RoleTypeEnum } from &#x27;~role-permissions/enums/role-type.enum&#x27;;
+import { SupplyChainNodeEntity } from &#x27;~supply-chains/entities/supply-chain-node.entity&#x27;;
+import { SupplyChainNodeRepository } from &#x27;~supply-chains/repositories/supply-chain-node.repository&#x27;;
+import { Tier } from &#x27;~supply-chains/types/tier.type&#x27;;
+
+@Injectable()
+export class SupplyChainTierService extends TransactionService {
+    constructor(private supplyChainNodeRepo: SupplyChainNodeRepository) {
+        super();
+    }
+
+    async getTiers(role: RoleEntity, doesAddBrand: boolean): Promise&lt;Tier[][]&gt; {
+        const nodes &#x3D; await this.getNodes();
+        const getAllNestedChildren &#x3D; this.getAllNestedChildrenTiers(nodes, null, null, 0);
+
+        if (role.type &#x3D;&#x3D;&#x3D; RoleTypeEnum.BRAND) {
+            return this.getBrandTiers(role, doesAddBrand, getAllNestedChildren);
+        }
+
+        const chainsContainingRoleId &#x3D; this.filterChainsContainingRoleId(getAllNestedChildren, role.id);
+        const orderNestedChildren &#x3D; chainsContainingRoleId.sort((a, b) &#x3D;&gt; this.getMaxLevel(b) - this.getMaxLevel(a));
+        return this.groupTiersByLevel(orderNestedChildren);
+    }
+
+    private getBrandTiers(role: RoleEntity, doesAddBrand: boolean, getAllNestedChildren: Tier[]) {
+        const orderNestedChildren &#x3D; getAllNestedChildren.sort((a, b) &#x3D;&gt; this.getMaxLevel(b) - this.getMaxLevel(a));
+        const groupedTiers &#x3D; this.groupTiersByLevel(orderNestedChildren);
+        if (doesAddBrand) {
+            return [[pick(role, [&#x27;id&#x27;, &#x27;name&#x27;])], ...groupedTiers];
+        }
+        return groupedTiers;
+    }
+
+    private async getNodes(options: FindManyOptions&lt;SupplyChainNodeEntity&gt; &#x3D; {}): Promise&lt;SupplyChainNodeEntity[]&gt; {
+        const supplyChainNodes &#x3D; await this.supplyChainNodeRepo.find({
+            ...options,
+            relations: [&#x27;role&#x27;, &#x27;fromRole&#x27;]
+        });
+        return supplyChainNodes.filter(({ role, fromRole, fromRoleId }) &#x3D;&gt; role &amp;&amp; (!fromRoleId || fromRole));
+    }
+
+    private getAllNestedChildrenTiers(
+        nodes: SupplyChainNodeEntity[],
+        nodeFromRoleId: string | null,
+        nodeChainId: string | null,
+        level: number &#x3D; 1
+    ): Tier[] {
+        let currentNodes: SupplyChainNodeEntity[] &#x3D; [];
+        if (!nodeChainId) {
+            currentNodes &#x3D; nodes.filter(({ fromRoleId }) &#x3D;&gt; fromRoleId &#x3D;&#x3D;&#x3D; nodeFromRoleId);
+        } else {
+            currentNodes &#x3D; nodes.filter(
+                ({ roleId, fromRoleId, chainId }) &#x3D;&gt;
+                    fromRoleId &#x3D;&#x3D;&#x3D; nodeFromRoleId &amp;&amp; chainId &#x3D;&#x3D;&#x3D; nodeChainId &amp;&amp; roleId !&#x3D;&#x3D; fromRoleId
+            );
+        }
+
+        return currentNodes.map((node) &#x3D;&gt; ({
+            name: node.role.name,
+            id: node.role.id,
+            children: this.getAllNestedChildrenTiers(nodes, node.role.id, node.chainId, level + 1),
+            level
+        }));
+    }
+
+    private filterChainsContainingRoleId(nodes: Tier[], roleId: string): Tier[] {
+        return nodes
+            .map((item) &#x3D;&gt; {
+                if (item.id &#x3D;&#x3D;&#x3D; roleId) {
+                    const newChildren &#x3D; item.children.map((child) &#x3D;&gt; ({ ...child, children: [] }));
+                    return { ...item, children: newChildren };
+                }
+
+                const filteredChildren &#x3D; this.filterChainsContainingRoleId(item.children || [], roleId);
+                if (filteredChildren.length &gt; 0) {
+                    return {
+                        ...item,
+                        children: filteredChildren
+                    };
+                }
+                return null;
+            })
+            .filter(Boolean);
+    }
+
+    private groupTiersByLevel(nestedChildrenTiers: Tier[]): Tier[][] {
+        const groupedLevels: Record&lt;number, Tier[]&gt; &#x3D; {};
+
+        const traverse &#x3D; (node: Tier) &#x3D;&gt; {
+            if (node.children) {
+                node.children &#x3D; node.children.sort((a, b) &#x3D;&gt; this.getMaxLevel(b) - this.getMaxLevel(a));
+            }
+
+            if (!groupedLevels[node.level]) {
+                groupedLevels[node.level] &#x3D; [];
+            }
+
+            if (node.level &amp;&amp; isEmpty(node.children)) {
+                const keys &#x3D; Object.keys(groupedLevels);
+                const lastKey &#x3D; keys[keys.length - 1];
+                if (!groupedLevels[lastKey].some(({ id }) &#x3D;&gt; id &#x3D;&#x3D;&#x3D; node.id)) {
+                    groupedLevels[lastKey].push({ id: node.id, name: node.name });
+                }
+            } else {
+                const nodeExists &#x3D; Object.values(groupedLevels).some((level) &#x3D;&gt;
+                    level.some((item) &#x3D;&gt; item.id &#x3D;&#x3D;&#x3D; node.id)
+                );
+                if (!nodeExists &amp;&amp; !groupedLevels[node.level].some(({ id }) &#x3D;&gt; id &#x3D;&#x3D;&#x3D; node.id)) {
+                    groupedLevels[node.level].push({ id: node.id, name: node.name });
+                }
+            }
+            node.children?.forEach(traverse);
+        };
+        nestedChildrenTiers.forEach(traverse);
+
+        return Object.values(groupedLevels).reverse();
+    }
+
+    private getMaxLevel(node: Tier): number {
+        if (!node.children || node.children.length &#x3D;&#x3D;&#x3D; 0) {
+            return node.level || 0;
+        }
+        return Math.max(node.level || 0, ...node.children.map((child) &#x3D;&gt; this.getMaxLevel(child)));
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'SupplyChainTierService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

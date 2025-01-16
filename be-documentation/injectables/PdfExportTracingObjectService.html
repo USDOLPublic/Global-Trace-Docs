@@ -1,0 +1,1848 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Global Trace BE documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">Global Trace BE documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Injectables</li>
+  <li class="breadcrumb-item" >PdfExportTracingObjectService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/pdf-exports/services/pdf-export-tracing-object.service.ts</code>
+        </p>
+
+
+
+
+
+            <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#canMapTransactionSell" >canMapTransactionSell</a>
+                            </li>
+                            <li>
+                                <a href="#countFacilitiesByRiskLevel" >countFacilitiesByRiskLevel</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#generateTracingData" >generateTracingData</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getNonFarmTransactions" >getNonFarmTransactions</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getNotLoggedSaleTransactions" >getNotLoggedSaleTransactions</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#getProducts" >getProducts</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getSaleLoggedProductIds" >getSaleLoggedProductIds</a>
+                            </li>
+                            <li>
+                                <a href="#getTopFourIssues" >getTopFourIssues</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#getTracingObjects" >getTracingObjects</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getTransactionFilter" >getTransactionFilter</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#getTransactions" >getTransactions</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getTransactionSellBySupplier" >getTransactionSellBySupplier</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#mappingTransactionOfBroker" >mappingTransactionOfBroker</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#mappingTransactionSell" >mappingTransactionSell</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(orderTraceService: <a href="../injectables/OrderTraceService.html" target="_self">OrderTraceService</a>, transactionHistoryService: <a href="../injectables/TransactionHistoryService.html" target="_self">TransactionHistoryService</a>, productService: <a href="../injectables/ProductService.html" target="_self">ProductService</a>, supplyChainService: <a href="../injectables/SupplyChainService.html" target="_self">SupplyChainService</a>, roleService: <a href="../injectables/RoleService.html" target="_self">RoleService</a>, facilityRiskService: <a href="../injectables/FacilityRiskService.html" target="_self">FacilityRiskService</a>, facilityRiskMapperService: <a href="../injectables/FacilityRiskMapperService.html" target="_self">FacilityRiskMapperService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/pdf-exports/services/pdf-export-tracing-object.service.ts:25</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>orderTraceService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/OrderTraceService.html" target="_self" >OrderTraceService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>transactionHistoryService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/TransactionHistoryService.html" target="_self" >TransactionHistoryService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>productService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ProductService.html" target="_self" >ProductService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>supplyChainService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SupplyChainService.html" target="_self" >SupplyChainService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>roleService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/RoleService.html" target="_self" >RoleService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>facilityRiskService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/FacilityRiskService.html" target="_self" >FacilityRiskService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>facilityRiskMapperService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/FacilityRiskMapperService.html" target="_self" >FacilityRiskMapperService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="canMapTransactionSell"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>canMapTransactionSell</b></span>
+                        <a href="#canMapTransactionSell"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>canMapTransactionSell(supplier: <a href="../entitys/FacilityEntity.html" target="_self">FacilityEntity</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="94"
+                                    class="link-to-prism">src/pdf-exports/services/pdf-export-tracing-object.service.ts:94</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>supplier</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >FacilityEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#now" target="_self" >unknown</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="countFacilitiesByRiskLevel"></a>
+                    <span class="name">
+                        <span ><b>countFacilitiesByRiskLevel</b></span>
+                        <a href="#countFacilitiesByRiskLevel"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>countFacilitiesByRiskLevel(tracingObjects: <a href="../undefineds/TracingSupplierType.html" target="_self">TracingSupplierType[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="269"
+                                    class="link-to-prism">src/pdf-exports/services/pdf-export-tracing-object.service.ts:269</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>tracingObjects</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#TracingSupplierType" target="_self" >TracingSupplierType[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="generateTracingData"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>generateTracingData</b></span>
+                        <a href="#generateTracingData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>generateTracingData(user: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>, orderId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="36"
+                                    class="link-to-prism">src/pdf-exports/services/pdf-export-tracing-object.service.ts:36</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>user</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>orderId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#now" target="_self" >unknown</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getNonFarmTransactions"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>getNonFarmTransactions</b></span>
+                        <a href="#getNonFarmTransactions"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getNonFarmTransactions(orderSuppliers: <a href="../undefineds/TracingSupplierType.html" target="_self">TracingSupplierType[]</a>, transactions: <a href="../classes/TransactionEntity.html" target="_self">TransactionEntity[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="172"
+                                    class="link-to-prism">src/pdf-exports/services/pdf-export-tracing-object.service.ts:172</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>orderSuppliers</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#TracingSupplierType" target="_self" >TracingSupplierType[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>transactions</td>
+                                            <td>
+                                                            <code><a href="../classes/TransactionEntity.html" target="_self" >TransactionEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../classes/TransactionEntity.html" target="_self" >TransactionEntity[]</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getNotLoggedSaleTransactions"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>getNotLoggedSaleTransactions</b></span>
+                        <a href="#getNotLoggedSaleTransactions"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getNotLoggedSaleTransactions(orderSupplier: <a href="../undefineds/TracingSupplierType.html" target="_self">TracingSupplierType</a>, orderSuppliers: <a href="../undefineds/TracingSupplierType.html" target="_self">TracingSupplierType[]</a>, products: <a href="../entitys/ProductEntity.html" target="_self">ProductEntity[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="219"
+                                    class="link-to-prism">src/pdf-exports/services/pdf-export-tracing-object.service.ts:219</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>orderSupplier</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#TracingSupplierType" target="_self" >TracingSupplierType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>orderSuppliers</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#TracingSupplierType" target="_self" >TracingSupplierType[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>products</td>
+                                            <td>
+                                                            <code><a href="../entitys/ProductEntity.html" target="_self" >ProductEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#NotLoggedSaleTransactionType" target="_self" >NotLoggedSaleTransactionType[]</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getProducts"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>getProducts</b></span>
+                        <a href="#getProducts"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getProducts(orderSuppliers: <a href="../undefineds/TracingSupplierType.html" target="_self">TracingSupplierType[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="213"
+                                    class="link-to-prism">src/pdf-exports/services/pdf-export-tracing-object.service.ts:213</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>orderSuppliers</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#TracingSupplierType" target="_self" >TracingSupplierType[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/ProductEntity.html" target="_self" >Promise&lt;ProductEntity[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSaleLoggedProductIds"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>getSaleLoggedProductIds</b></span>
+                        <a href="#getSaleLoggedProductIds"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getSaleLoggedProductIds(orderSuppliers: <a href="../undefineds/TracingSupplierType.html" target="_self">TracingSupplierType[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="249"
+                                    class="link-to-prism">src/pdf-exports/services/pdf-export-tracing-object.service.ts:249</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>orderSuppliers</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#TracingSupplierType" target="_self" >TracingSupplierType[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>string[]</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getTopFourIssues"></a>
+                    <span class="name">
+                        <span ><b>getTopFourIssues</b></span>
+                        <a href="#getTopFourIssues"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getTopFourIssues(tracingObjects: <a href="../undefineds/TracingSupplierType.html" target="_self">TracingSupplierType[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="278"
+                                    class="link-to-prism">src/pdf-exports/services/pdf-export-tracing-object.service.ts:278</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>tracingObjects</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#TracingSupplierType" target="_self" >TracingSupplierType[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getTracingObjects"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>getTracingObjects</b></span>
+                        <a href="#getTracingObjects"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getTracingObjects(tracingObjects: <a href="../undefineds/TracingSupplierType.html" target="_self">TracingSupplierType[]</a>, supplierTransactions: <a href="../undefineds/OrderSupplierGroupBySupplier.html" target="_self">OrderSupplierGroupBySupplier</a>, orderSuppliers: <a href="../undefineds/TracingSupplierType.html" target="_self">TracingSupplierType[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="47"
+                                    class="link-to-prism">src/pdf-exports/services/pdf-export-tracing-object.service.ts:47</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>tracingObjects</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#TracingSupplierType" target="_self" >TracingSupplierType[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>supplierTransactions</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#OrderSupplierGroupBySupplier" target="_self" >OrderSupplierGroupBySupplier</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>orderSuppliers</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#TracingSupplierType" target="_self" >TracingSupplierType[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#TracingSupplierType" target="_self" >Promise&lt;TracingSupplierType[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getTransactionFilter"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>getTransactionFilter</b></span>
+                        <a href="#getTransactionFilter"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getTransactionFilter(transactions: <a href="../classes/TransactionEntity.html" target="_self">TransactionEntity[]</a>, orderSupplier: <a href="../undefineds/TracingSupplierType.html" target="_self">TracingSupplierType</a>, orderSuppliers: <a href="../undefineds/TracingSupplierType.html" target="_self">TracingSupplierType[]</a>, supplierTransactions: <a href="../undefineds/OrderSupplierGroupBySupplier.html" target="_self">OrderSupplierGroupBySupplier</a>, supplierId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="107"
+                                    class="link-to-prism">src/pdf-exports/services/pdf-export-tracing-object.service.ts:107</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>transactions</td>
+                                            <td>
+                                                            <code><a href="../classes/TransactionEntity.html" target="_self" >TransactionEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>orderSupplier</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#TracingSupplierType" target="_self" >TracingSupplierType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>orderSuppliers</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#TracingSupplierType" target="_self" >TracingSupplierType[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>supplierTransactions</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#OrderSupplierGroupBySupplier" target="_self" >OrderSupplierGroupBySupplier</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>supplierId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../classes/TransactionEntity.html" target="_self" >TransactionEntity[]</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getTransactions"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>getTransactions</b></span>
+                        <a href="#getTransactions"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getTransactions(orderSuppliers: <a href="../undefineds/TracingSupplierType.html" target="_self">TracingSupplierType[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="189"
+                                    class="link-to-prism">src/pdf-exports/services/pdf-export-tracing-object.service.ts:189</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>orderSuppliers</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#TracingSupplierType" target="_self" >TracingSupplierType[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../classes/TransactionEntity.html" target="_self" >Promise&lt;TransactionEntity[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getTransactionSellBySupplier"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>getTransactionSellBySupplier</b></span>
+                        <a href="#getTransactionSellBySupplier"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getTransactionSellBySupplier(supplierTransactions: <a href="../undefineds/OrderSupplierGroupBySupplier.html" target="_self">OrderSupplierGroupBySupplier</a>, supplierId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, transactions: <a href="../classes/TransactionEntity.html" target="_self">TransactionEntity[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="128"
+                                    class="link-to-prism">src/pdf-exports/services/pdf-export-tracing-object.service.ts:128</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>supplierTransactions</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#OrderSupplierGroupBySupplier" target="_self" >OrderSupplierGroupBySupplier</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>supplierId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>transactions</td>
+                                            <td>
+                                                            <code><a href="../classes/TransactionEntity.html" target="_self" >TransactionEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../classes/TransactionEntity.html" target="_self" >TransactionEntity[]</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="mappingTransactionOfBroker"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>mappingTransactionOfBroker</b></span>
+                        <a href="#mappingTransactionOfBroker"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>mappingTransactionOfBroker(orderSupplier: <a href="../undefineds/TracingSupplierType.html" target="_self">TracingSupplierType</a>, transactionFilter: <a href="../classes/TransactionEntity.html" target="_self">TransactionEntity[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="156"
+                                    class="link-to-prism">src/pdf-exports/services/pdf-export-tracing-object.service.ts:156</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>orderSupplier</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#TracingSupplierType" target="_self" >TracingSupplierType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>transactionFilter</td>
+                                            <td>
+                                                            <code><a href="../classes/TransactionEntity.html" target="_self" >TransactionEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../classes/TransactionEntity.html" target="_self" >TransactionEntity[]</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="mappingTransactionSell"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>mappingTransactionSell</b></span>
+                        <a href="#mappingTransactionSell"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>mappingTransactionSell(orderSupplier: <a href="../undefineds/TracingSupplierType.html" target="_self">TracingSupplierType</a>, transactionFilter: <a href="../classes/TransactionEntity.html" target="_self">TransactionEntity[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="143"
+                                    class="link-to-prism">src/pdf-exports/services/pdf-export-tracing-object.service.ts:143</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>orderSupplier</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#TracingSupplierType" target="_self" >TracingSupplierType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>transactionFilter</td>
+                                            <td>
+                                                            <code><a href="../classes/TransactionEntity.html" target="_self" >TransactionEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../classes/TransactionEntity.html" target="_self" >TransactionEntity[]</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@nestjs/common&#x27;;
+import { countBy, groupBy, uniqBy } from &#x27;lodash&#x27;;
+import { IsNull } from &#x27;typeorm&#x27;;
+import { TransactionEntity } from &#x27;~events/entities/transaction.entity&#x27;;
+import { TransactionTypeEnum } from &#x27;~events/enums/transaction-type.enum&#x27;;
+import { TransactionHistoryService } from &#x27;~events/services/transaction/transaction-history.service&#x27;;
+import { FacilityEntity } from &#x27;~facilities/entities/facility.entity&#x27;;
+import { LOCATION_RELATIONS } from &#x27;~locations/constants/location-relations.constant&#x27;;
+import { TracingCategoryEnum } from &#x27;~order/enums/tracing-category.enum&#x27;;
+import { OrderTraceService } from &#x27;~order/services/order-trace.service&#x27;;
+import { TracingSupplierType } from &#x27;~order/types/tracing-supplier.type&#x27;;
+import { NotLoggedSaleTransactionType } from &#x27;~pdf-exports/types/not-logged-sale-transaction.type&#x27;;
+import { OrderSupplierGroupBySupplier } from &#x27;~pdf-exports/types/order-supplier-group-by-supplier.type&#x27;;
+import { ProductEntity } from &#x27;~products/entities/product.entity&#x27;;
+import { ProductService } from &#x27;~products/services/product.service&#x27;;
+import { FacilityRiskMapperService } from &#x27;~risk-assessments/services/facility-risk-mapper.service&#x27;;
+import { FacilityRiskService } from &#x27;~risk-assessments/services/facility-risk.service&#x27;;
+import { UserRoleEnum } from &#x27;~role-permissions/enums/user-role.enum&#x27;;
+import { RoleService } from &#x27;~role-permissions/services/role.service&#x27;;
+import { RiskScoreLevelEnum } from &#x27;~self-assessments/enums/risk-score-level.enum&#x27;;
+import { SupplyChainService } from &#x27;~supply-chains/services/supply-chain.service&#x27;;
+import { UserEntity } from &#x27;~users/entities/user.entity&#x27;;
+
+@Injectable()
+export class PdfExportTracingObjectService {
+    constructor(
+        private orderTraceService: OrderTraceService,
+        private transactionHistoryService: TransactionHistoryService,
+        private productService: ProductService,
+        private supplyChainService: SupplyChainService,
+        private roleService: RoleService,
+        private facilityRiskService: FacilityRiskService,
+        private facilityRiskMapperService: FacilityRiskMapperService
+    ) {}
+
+    async generateTracingData(user: UserEntity, orderId: string) {
+        const tracingObjectList &#x3D; await this.orderTraceService.getTracingObjectList(user, orderId);
+        const orderSuppliers &#x3D; tracingObjectList.filter(
+            (traceResult) &#x3D;&gt; traceResult.category &#x3D;&#x3D;&#x3D; TracingCategoryEnum.TRACED
+        );
+        const tracingObjects &#x3D; uniqBy(orderSuppliers, &#x27;supplier.id&#x27;);
+        const supplierTransactions: OrderSupplierGroupBySupplier &#x3D; groupBy(orderSuppliers, &#x27;supplier.id&#x27;);
+
+        return this.getTracingObjects(tracingObjects, supplierTransactions, orderSuppliers);
+    }
+
+    private async getTracingObjects(
+        tracingObjects: TracingSupplierType[],
+        supplierTransactions: OrderSupplierGroupBySupplier,
+        orderSuppliers: TracingSupplierType[]
+    ): Promise&lt;TracingSupplierType[]&gt; {
+        const products &#x3D; await this.getProducts(orderSuppliers);
+        const transactions &#x3D; await this.getTransactions(orderSuppliers);
+
+        for (const orderSupplier of tracingObjects) {
+            const supplierId &#x3D; orderSupplier.supplier?.id;
+            if (!supplierId) {
+                orderSupplier.transactions &#x3D; this.getNonFarmTransactions(orderSuppliers, transactions);
+                continue;
+            }
+
+            await orderSupplier.supplier.loadRelation(LOCATION_RELATIONS);
+
+            const transactionFilter &#x3D; this.getTransactionFilter(
+                transactions,
+                orderSupplier,
+                orderSuppliers,
+                supplierTransactions,
+                supplierId
+            );
+
+            const canMapTransactionSell &#x3D; await this.canMapTransactionSell(orderSupplier.supplier);
+            if (canMapTransactionSell) {
+                orderSupplier.transactions &#x3D; this.mappingTransactionSell(orderSupplier, transactions);
+                continue;
+            }
+
+            if (orderSupplier.supplier.typeName &#x3D;&#x3D;&#x3D; UserRoleEnum.BROKER) {
+                orderSupplier.transactions &#x3D; this.mappingTransactionOfBroker(orderSupplier, transactions);
+                continue;
+            }
+
+            orderSupplier.transactions &#x3D; transactionFilter;
+            (orderSupplier as any).notLoggedTransactions &#x3D; this.getNotLoggedSaleTransactions(
+                orderSupplier,
+                orderSuppliers,
+                products
+            );
+        }
+
+        return tracingObjects;
+    }
+
+    private async canMapTransactionSell(supplier: FacilityEntity) {
+        const supplyChainNode &#x3D; await this.supplyChainService.findSupplyChainNodeBy({
+            fromRoleId: IsNull(),
+            roleId: supplier.typeId
+        });
+
+        if (!supplyChainNode) return false;
+
+        const canRoleLogin &#x3D; await this.roleService.canRoleLogin(supplier.type);
+
+        return !canRoleLogin;
+    }
+
+    private getTransactionFilter(
+        transactions: TransactionEntity[],
+        orderSupplier: TracingSupplierType,
+        orderSuppliers: TracingSupplierType[],
+        supplierTransactions: OrderSupplierGroupBySupplier,
+        supplierId: string
+    ): TransactionEntity[] {
+        const orderByFromSuppliers &#x3D; orderSuppliers.filter((item) &#x3D;&gt; item.fromSupplierId &#x3D;&#x3D;&#x3D; orderSupplier.supplier.id);
+        const transactionIds &#x3D; orderByFromSuppliers.map(({ transactionId }) &#x3D;&gt; transactionId);
+        const transactionPurchaseBySupplier &#x3D; transactions.filter(
+            ({ id, type }) &#x3D;&gt; transactionIds.includes(id) &amp;&amp; type &#x3D;&#x3D;&#x3D; TransactionTypeEnum.PURCHASE
+        );
+        const transactionSellBySupplier &#x3D; this.getTransactionSellBySupplier(
+            supplierTransactions,
+            supplierId,
+            transactions
+        );
+
+        return [...transactionSellBySupplier, ...transactionPurchaseBySupplier];
+    }
+
+    private getTransactionSellBySupplier(
+        supplierTransactions: OrderSupplierGroupBySupplier,
+        supplierId: string,
+        transactions: TransactionEntity[]
+    ): TransactionEntity[] {
+        const transactionIdsBySupplier &#x3D; supplierTransactions[supplierId].map(({ transactionId }) &#x3D;&gt; transactionId);
+
+        return transactions.filter(
+            (transaction) &#x3D;&gt;
+                transactionIdsBySupplier.includes(transaction.id) &amp;&amp;
+                transaction.toFacilityId !&#x3D;&#x3D; supplierId &amp;&amp;
+                transaction.type &#x3D;&#x3D;&#x3D; TransactionTypeEnum.SELL
+        );
+    }
+
+    private mappingTransactionSell(
+        orderSupplier: TracingSupplierType,
+        transactionFilter: TransactionEntity[]
+    ): TransactionEntity[] {
+        const transactions &#x3D; [];
+        const transactionTier5 &#x3D; transactionFilter.filter((item) &#x3D;&gt; item.fromFacilityId &#x3D;&#x3D;&#x3D; orderSupplier.supplier.id);
+        for (const transaction of transactionTier5) {
+            transactions.push({ ...transaction, type: TransactionTypeEnum.SELL });
+        }
+
+        return transactions;
+    }
+
+    private mappingTransactionOfBroker(
+        orderSupplier: TracingSupplierType,
+        transactionFilter: TransactionEntity[]
+    ): TransactionEntity[] {
+        const transactions &#x3D; [];
+        const purchasedTransactions &#x3D; transactionFilter.filter(
+            (item) &#x3D;&gt; item.fromFacilityId &#x3D;&#x3D;&#x3D; orderSupplier.supplier.id
+        );
+
+        for (const transaction of purchasedTransactions) {
+            transactions.push({ ...transaction, type: TransactionTypeEnum.SELL });
+        }
+
+        return transactions;
+    }
+
+    private getNonFarmTransactions(
+        orderSuppliers: TracingSupplierType[],
+        transactions: TransactionEntity[]
+    ): TransactionEntity[] {
+        const transactionOfNonFarms &#x3D; [];
+
+        const orderByFromSuppliers &#x3D; orderSuppliers.filter((item) &#x3D;&gt; !item.supplier?.id);
+        const transactionIds &#x3D; orderByFromSuppliers.map(({ transactionId }) &#x3D;&gt; transactionId);
+        const transactionFilterList &#x3D; transactions.filter(({ id }) &#x3D;&gt; transactionIds.includes(id));
+
+        for (const transaction of transactionFilterList) {
+            transactionOfNonFarms.push({ ...transaction, type: TransactionTypeEnum.SELL });
+        }
+
+        return transactionOfNonFarms;
+    }
+
+    private async getTransactions(orderSuppliers: TracingSupplierType[]): Promise&lt;TransactionEntity[]&gt; {
+        const supplyChainNodes &#x3D; await this.supplyChainService.find({ where: {}, relations: [&#x27;fromRole&#x27;] });
+
+        const transactionIds: string[] &#x3D; [];
+        for (const orderSupplier of orderSuppliers) {
+            if (orderSupplier.transactionId) {
+                transactionIds.push(orderSupplier.transactionId);
+            }
+        }
+
+        const transactions &#x3D; await this.transactionHistoryService.getHistoryTransactionByIds(transactionIds);
+        for (const transaction of transactions) {
+            // to show text Non-participating [role] on tracing PDF
+            if (!transaction.fromFacility &amp;&amp; transaction.toFacility) {
+                const node &#x3D; supplyChainNodes.find(({ roleId }) &#x3D;&gt; roleId &#x3D;&#x3D;&#x3D; transaction.toFacility.typeId);
+                if (node) {
+                    (transaction as any).fromFacilityType &#x3D; node.fromRole;
+                }
+            }
+        }
+
+        return transactions;
+    }
+
+    private async getProducts(orderSuppliers: TracingSupplierType[]): Promise&lt;ProductEntity[]&gt; {
+        const productIds: string[] &#x3D; orderSuppliers.flatMap((supplier) &#x3D;&gt; supplier?.productIds || []);
+
+        return this.productService.findPurchaseTransactionsByProductIds(productIds);
+    }
+
+    private getNotLoggedSaleTransactions(
+        orderSupplier: TracingSupplierType,
+        orderSuppliers: TracingSupplierType[],
+        products: ProductEntity[]
+    ): NotLoggedSaleTransactionType[] {
+        const orderByFromSuppliers &#x3D; orderSuppliers.filter((item) &#x3D;&gt; item.supplier?.id &#x3D;&#x3D;&#x3D; orderSupplier.supplier.id);
+        const productIds &#x3D; orderByFromSuppliers.flatMap((supplier) &#x3D;&gt; supplier.productIds);
+
+        if (!productIds?.length) {
+            return [];
+        }
+
+        const loggedProductIds &#x3D; this.getSaleLoggedProductIds(orderByFromSuppliers);
+        const notLoggedProductIds &#x3D; productIds.filter((id) &#x3D;&gt; !loggedProductIds.includes(id));
+        const notLoggedProducts &#x3D; products.filter(({ id }) &#x3D;&gt; notLoggedProductIds.includes(id));
+
+        const group &#x3D; groupBy(
+            notLoggedProducts,
+            (notLoggedProduct) &#x3D;&gt; notLoggedProduct.transactionItems[0].transaction.id
+        );
+
+        return Object.entries(group).map(([, notLoggedProductGroup]) &#x3D;&gt; {
+            return {
+                toFacility: notLoggedProductGroup[0].transactionItems[0].transaction.toFacility,
+                products: notLoggedProductGroup,
+                transactedAt: notLoggedProductGroup[0].transactionItems[0].transaction.transactedAt
+            };
+        });
+    }
+
+    private getSaleLoggedProductIds(orderSuppliers: TracingSupplierType[]): string[] {
+        return orderSuppliers.reduce((previousValue, item) &#x3D;&gt; {
+            if (!item.transactions || !item.transactions.length) {
+                return previousValue;
+            }
+
+            const productIds: string[] &#x3D; [];
+            for (const transaction of item.transactions) {
+                if (transaction.type !&#x3D;&#x3D; TransactionTypeEnum.SELL) {
+                    continue;
+                }
+
+                for (const transactionItem of transaction.transactionItems) {
+                    productIds.push(transactionItem.entityId);
+                }
+            }
+            return previousValue.concat(productIds);
+        }, []);
+    }
+
+    countFacilitiesByRiskLevel(tracingObjects: TracingSupplierType[]) {
+        const riskSuppliers &#x3D; tracingObjects.filter(({ supplier }) &#x3D;&gt; supplier?.overallRiskLevel);
+        const riskLevelCount &#x3D; countBy(riskSuppliers, ({ supplier }) &#x3D;&gt; supplier.overallRiskLevel);
+        return Object.values(RiskScoreLevelEnum).map((riskLevel) &#x3D;&gt; ({
+            riskLevel,
+            count: riskLevelCount[riskLevel] ?? 0
+        }));
+    }
+
+    getTopFourIssues(tracingObjects: TracingSupplierType[]) {
+        const items &#x3D; tracingObjects
+            .filter(({ supplier }) &#x3D;&gt; supplier?.riskData?.data)
+            .flatMap(({ supplier }) &#x3D;&gt; this.facilityRiskMapperService.mapRiskGroup(supplier.riskData.data))
+            .filter(({ data }) &#x3D;&gt; data.length);
+
+        return this.facilityRiskService.getIssuesByOptions(items, 4);
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'PdfExportTracingObjectService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

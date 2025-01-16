@@ -1,0 +1,1913 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Global Trace BE documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">Global Trace BE documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Injectables</li>
+  <li class="breadcrumb-item" >SelfAssessmentQuestionService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/self-assessments/services/self-assessment-question.service.ts</code>
+        </p>
+
+
+
+            <p class="comment">
+                <h3>Extends</h3>
+            </p>
+            <p class="comment">
+                        <code>TransactionService</code>
+            </p>
+
+
+            <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#addValidationErrors" >addValidationErrors</a>
+                            </li>
+                            <li>
+                                <a href="#create" >create</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#findAndMapExistedQuestionGroup" >findAndMapExistedQuestionGroup</a>
+                            </li>
+                            <li>
+                                <a href="#findOneOrFail" >findOneOrFail</a>
+                            </li>
+                            <li>
+                                <a href="#findQuestionsIn" >findQuestionsIn</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getErrorsFromMessage" >getErrorsFromMessage</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getQuestionResponsesTranslations" >getQuestionResponsesTranslations</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getQuestionTranslations" >getQuestionTranslations</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getSelfAssessmentTranslations" >getSelfAssessmentTranslations</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#readSelfAssessmentsTranslationJsonFile" >readSelfAssessmentsTranslationJsonFile</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#translateSelfAssessments" >translateSelfAssessments</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#upsertFile" >upsertFile</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#validateAndPrepareAssessmentTranslations" >validateAndPrepareAssessmentTranslations</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#validateGroupTranslations" >validateGroupTranslations</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#validateQuestionResponseTranslations" >validateQuestionResponseTranslations</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#validateQuestionTranslations" >validateQuestionTranslations</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                                <span class="modifier">Public</span>
+                        <code>constructor(storageService: StorageService, selfAssessmentQuestionRepo: <a href="../classes/SelfAssessmentQuestionRepository.html" target="_self">SelfAssessmentQuestionRepository</a>, selfAssessmentQuestionResponseService: <a href="../injectables/SelfAssessmentQuestionResponseService.html" target="_self">SelfAssessmentQuestionResponseService</a>, selfAssessmentTranslationFileService: <a href="../injectables/SelfAssessmentTranslationFileService.html" target="_self">SelfAssessmentTranslationFileService</a>, selfAssessmentGroupService: <a href="../injectables/SelfAssessmentGroupService.html" target="_self">SelfAssessmentGroupService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/self-assessments/services/self-assessment-question.service.ts:33</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>storageService</td>
+                                                  
+                                                        <td>
+                                                                    <code>StorageService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>selfAssessmentQuestionRepo</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../classes/SelfAssessmentQuestionRepository.html" target="_self" >SelfAssessmentQuestionRepository</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>selfAssessmentQuestionResponseService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SelfAssessmentQuestionResponseService.html" target="_self" >SelfAssessmentQuestionResponseService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>selfAssessmentTranslationFileService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SelfAssessmentTranslationFileService.html" target="_self" >SelfAssessmentTranslationFileService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>selfAssessmentGroupService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SelfAssessmentGroupService.html" target="_self" >SelfAssessmentGroupService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addValidationErrors"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>addValidationErrors</b></span>
+                        <a href="#addValidationErrors"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>addValidationErrors(validationErrors: <a href="../s/lat.html" target="_self">SelfAssessmentTranslationValidationError[]</a>, errors: <a href="../s/lat.html" target="_self">TranslationValidationError[]</a>, index: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="258"
+                                    class="link-to-prism">src/self-assessments/services/self-assessment-question.service.ts:258</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>validationErrors</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/variables.html#lat" target="_self" >SelfAssessmentTranslationValidationError[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>errors</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/variables.html#lat" target="_self" >TranslationValidationError[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>index</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="create"></a>
+                    <span class="name">
+                        <span ><b>create</b></span>
+                        <a href="#create"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>create(data: <a href="../entitys/SelfAssessmentQuestionEntity.html" target="_self">QueryDeepPartialEntity&lt;SelfAssessmentQuestionEntity&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="56"
+                                    class="link-to-prism">src/self-assessments/services/self-assessment-question.service.ts:56</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>data</td>
+                                            <td>
+                                                            <code><a href="../entitys/SelfAssessmentQuestionEntity.html" target="_self" >QueryDeepPartialEntity&lt;SelfAssessmentQuestionEntity&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/SelfAssessmentQuestionEntity.html" target="_self" >Promise&lt;SelfAssessmentQuestionEntity&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findAndMapExistedQuestionGroup"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>findAndMapExistedQuestionGroup</b></span>
+                        <a href="#findAndMapExistedQuestionGroup"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>findAndMapExistedQuestionGroup(roleId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="273"
+                                    class="link-to-prism">src/self-assessments/services/self-assessment-question.service.ts:273</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>roleId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#MapExistedQuestionGroup" target="_self" >Promise&lt;MapExistedQuestionGroup&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findOneOrFail"></a>
+                    <span class="name">
+                        <span ><b>findOneOrFail</b></span>
+                        <a href="#findOneOrFail"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>findOneOrFail(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="45"
+                                    class="link-to-prism">src/self-assessments/services/self-assessment-question.service.ts:45</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>id</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/SelfAssessmentQuestionEntity.html" target="_self" >Promise&lt;SelfAssessmentQuestionEntity&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findQuestionsIn"></a>
+                    <span class="name">
+                        <span ><b>findQuestionsIn</b></span>
+                        <a href="#findQuestionsIn"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>findQuestionsIn(ids: string[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="49"
+                                    class="link-to-prism">src/self-assessments/services/self-assessment-question.service.ts:49</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>ids</td>
+                                            <td>
+                                                        <code>string[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/SelfAssessmentQuestionEntity.html" target="_self" >Promise&lt;SelfAssessmentQuestionEntity[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getErrorsFromMessage"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>getErrorsFromMessage</b></span>
+                        <a href="#getErrorsFromMessage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getErrorsFromMessage(message: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="320"
+                                    class="link-to-prism">src/self-assessments/services/self-assessment-question.service.ts:320</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>message</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/variables.html#lat" target="_self" >TranslationValidationError[]</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getQuestionResponsesTranslations"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>getQuestionResponsesTranslations</b></span>
+                        <a href="#getQuestionResponsesTranslations"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getQuestionResponsesTranslations(questionResponses: <a href="../entitys/SelfAssessmentQuestionResponseEntity.html" target="_self">SelfAssessmentQuestionResponseEntity[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="91"
+                                    class="link-to-prism">src/self-assessments/services/self-assessment-question.service.ts:91</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>questionResponses</td>
+                                            <td>
+                                                            <code><a href="../entitys/SelfAssessmentQuestionResponseEntity.html" target="_self" >SelfAssessmentQuestionResponseEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../classes/QuestionResponse.html" target="_self" >QuestionResponseTranslation[]</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getQuestionTranslations"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>getQuestionTranslations</b></span>
+                        <a href="#getQuestionTranslations"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getQuestionTranslations(questions: <a href="../entitys/SelfAssessmentQuestionEntity.html" target="_self">SelfAssessmentQuestionEntity[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="75"
+                                    class="link-to-prism">src/self-assessments/services/self-assessment-question.service.ts:75</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>questions</td>
+                                            <td>
+                                                            <code><a href="../entitys/SelfAssessmentQuestionEntity.html" target="_self" >SelfAssessmentQuestionEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/variables.html#lat" target="_self" >QuestionTranslation[]</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSelfAssessmentTranslations"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>getSelfAssessmentTranslations</b></span>
+                        <a href="#getSelfAssessmentTranslations"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getSelfAssessmentTranslations(roleId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="60"
+                                    class="link-to-prism">src/self-assessments/services/self-assessment-question.service.ts:60</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>roleId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/variables.html#lat" target="_self" >Promise&lt;SelfAssessmentGroupTranslation[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="readSelfAssessmentsTranslationJsonFile"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>readSelfAssessmentsTranslationJsonFile</b></span>
+                        <a href="#readSelfAssessmentsTranslationJsonFile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>readSelfAssessmentsTranslationJsonFile(file: Express.Multer.File)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="133"
+                                    class="link-to-prism">src/self-assessments/services/self-assessment-question.service.ts:133</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>file</td>
+                                            <td>
+                                                        <code>Express.Multer.File</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/variables.html#lat" target="_self" >SelfAssessmentGroupTranslation[]</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="translateSelfAssessments"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>translateSelfAssessments</b></span>
+                        <a href="#translateSelfAssessments"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>translateSelfAssessments(file: Express.Multer.File, roleId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="105"
+                                    class="link-to-prism">src/self-assessments/services/self-assessment-question.service.ts:105</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>file</td>
+                                            <td>
+                                                        <code>Express.Multer.File</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>roleId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#now" target="_self" >unknown</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="upsertFile"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>upsertFile</b></span>
+                        <a href="#upsertFile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>upsertFile(roleId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, file: Express.Multer.File)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="328"
+                                    class="link-to-prism">src/self-assessments/services/self-assessment-question.service.ts:328</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>roleId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>file</td>
+                                            <td>
+                                                        <code>Express.Multer.File</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/variables.html#lat" target="_self" >Promise&lt;SelfAssessmentTranslationFileEntity&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateAndPrepareAssessmentTranslations"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>validateAndPrepareAssessmentTranslations</b></span>
+                        <a href="#validateAndPrepareAssessmentTranslations"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateAndPrepareAssessmentTranslations(selfAssessmentGroupTranslations: <a href="../s/lat.html" target="_self">SelfAssessmentGroupTranslation[]</a>, roleId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="141"
+                                    class="link-to-prism">src/self-assessments/services/self-assessment-question.service.ts:141</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>selfAssessmentGroupTranslations</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/variables.html#lat" target="_self" >SelfAssessmentGroupTranslation[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>roleId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/variables.html#lat" target="_self" >Promise&lt;ValidateAndPrepareAssessmentTranslations&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateGroupTranslations"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>validateGroupTranslations</b></span>
+                        <a href="#validateGroupTranslations"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateGroupTranslations(undefined: <a href="../undefineds/ValidateTranslationParams.html" target="_self">ValidateTranslationParams</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="172"
+                                    class="link-to-prism">src/self-assessments/services/self-assessment-question.service.ts:172</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#ValidateTranslationParams" target="_self" >ValidateTranslationParams</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateQuestionResponseTranslations"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>validateQuestionResponseTranslations</b></span>
+                        <a href="#validateQuestionResponseTranslations"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateQuestionResponseTranslations(undefined: <a href="../undefineds/ValidateTranslationParams.html" target="_self">ValidateTranslationParams</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="290"
+                                    class="link-to-prism">src/self-assessments/services/self-assessment-question.service.ts:290</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#ValidateTranslationParams" target="_self" >ValidateTranslationParams</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateQuestionTranslations"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>validateQuestionTranslations</b></span>
+                        <a href="#validateQuestionTranslations"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateQuestionTranslations(undefined: <a href="../undefineds/ValidateTranslationParams.html" target="_self">ValidateTranslationParams</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="223"
+                                    class="link-to-prism">src/self-assessments/services/self-assessment-question.service.ts:223</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#ValidateTranslationParams" target="_self" >ValidateTranslationParams</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { trans } from &#x27;@diginexhk/nestjs-cls-translation&#x27;;
+import { StorageService } from &#x27;@diginexhk/nestjs-storage&#x27;;
+import { TransactionService } from &#x27;@diginexhk/nestjs-transaction&#x27;;
+import { BadRequestException, Inject, Injectable, forwardRef } from &#x27;@nestjs/common&#x27;;
+import { keyBy } from &#x27;lodash&#x27;;
+import { In } from &#x27;typeorm&#x27;;
+import { QueryDeepPartialEntity } from &#x27;typeorm/query-builder/QueryPartialEntity&#x27;;
+import { AVAILABLE_LANGUAGES } from &#x27;~core/constants/default-language.constant&#x27;;
+import { addMissingTranslations } from &#x27;~core/helpers/translation.helper&#x27;;
+import { SelfAssessmentQuestionResponseEntity } from &#x27;~self-assessments/entities/self-assessment-question-response.entity&#x27;;
+import { SelfAssessmentQuestionEntity } from &#x27;~self-assessments/entities/self-assessment-question.entity&#x27;;
+import { SelfAssessmentTranslationFileEntity } from &#x27;~self-assessments/entities/self-assessment-translation-file.entity&#x27;;
+import { SelfAssessmentQuestionRepository } from &#x27;~self-assessments/repositories/self-assessment-question.repository&#x27;;
+import { MapExistedQuestionGroup } from &#x27;~self-assessments/types/map-existed-question-group.type&#x27;;
+import {
+    SelfAssessmentTranslationValidationError,
+    TranslationValidationError
+} from &#x27;~self-assessments/types/self-assessment-translation-validation-error.type&#x27;;
+import {
+    QuestionResponseTranslation,
+    QuestionTranslation,
+    SelfAssessmentGroupTranslation
+} from &#x27;~self-assessments/types/self-assessment-translations.type&#x27;;
+import { ValidateAndPrepareAssessmentTranslations } from &#x27;~self-assessments/types/validate-and-prepare-assessment-translations.type&#x27;;
+import { ValidateTranslationParams } from &#x27;~self-assessments/types/validate-translation-params.type&#x27;;
+import { SelfAssessmentGroupService } from &#x27;./self-assessment-group.service&#x27;;
+import { SelfAssessmentQuestionResponseService } from &#x27;./self-assessment-question-response.service&#x27;;
+import { SelfAssessmentTranslationFileService } from &#x27;./self-assessment-translation-file.service&#x27;;
+import { SelfAssessmentGroupEntity } from &#x27;~self-assessments/entities/self-assessment-group.entity&#x27;;
+import { SelfAssessmentTranslationValidator } from &#x27;./validators/self-assessment-translation-validator&#x27;;
+
+@Injectable()
+export class SelfAssessmentQuestionService extends TransactionService {
+    public constructor(
+        private storageService: StorageService,
+        private selfAssessmentQuestionRepo: SelfAssessmentQuestionRepository,
+        private selfAssessmentQuestionResponseService: SelfAssessmentQuestionResponseService,
+        private selfAssessmentTranslationFileService: SelfAssessmentTranslationFileService,
+        @Inject(forwardRef(() &#x3D;&gt; SelfAssessmentGroupService))
+        private selfAssessmentGroupService: SelfAssessmentGroupService
+    ) {
+        super();
+    }
+
+    findOneOrFail(id: string): Promise&lt;SelfAssessmentQuestionEntity&gt; {
+        return this.selfAssessmentQuestionRepo.findById(id);
+    }
+
+    findQuestionsIn(ids: string[]): Promise&lt;SelfAssessmentQuestionEntity[]&gt; {
+        return this.selfAssessmentQuestionRepo.find({
+            where: { id: In(ids) },
+            order: { order: &#x27;ASC&#x27; }
+        });
+    }
+
+    create(data: QueryDeepPartialEntity&lt;SelfAssessmentQuestionEntity&gt;): Promise&lt;SelfAssessmentQuestionEntity&gt; {
+        return this.selfAssessmentQuestionRepo.createOne(data);
+    }
+
+    async getSelfAssessmentTranslations(roleId: string): Promise&lt;SelfAssessmentGroupTranslation[]&gt; {
+        const selfAssessmentGroups &#x3D; await this.selfAssessmentGroupService.getSelfAssessmentGroupByRoleId(roleId);
+        const selfAssessmentGroupTranslations &#x3D; selfAssessmentGroups.map(({ id: groupId, title, questions }, index) &#x3D;&gt; {
+            const questionTranslations &#x3D; this.getQuestionTranslations(questions);
+            return {
+                index: index + 1,
+                groupId,
+                title,
+                questions: addMissingTranslations(questionTranslations, &#x27;title&#x27;)
+            };
+        });
+
+        return addMissingTranslations(selfAssessmentGroupTranslations, &#x27;title&#x27;);
+    }
+
+    private getQuestionTranslations(questions: SelfAssessmentQuestionEntity[]): QuestionTranslation[] {
+        return questions.map(({ id: questionId, title, questionResponses }) &#x3D;&gt; {
+            const questionTranslation: QuestionTranslation &#x3D; {
+                title,
+                questionId
+            };
+
+            const hasResponse &#x3D; questionResponses.some(({ option }) &#x3D;&gt; option);
+            if (hasResponse) {
+                questionTranslation.questionResponses &#x3D; this.getQuestionResponsesTranslations(questionResponses);
+            }
+
+            return questionTranslation;
+        });
+    }
+
+    private getQuestionResponsesTranslations(
+        questionResponses: SelfAssessmentQuestionResponseEntity[]
+    ): QuestionResponseTranslation[] {
+        return questionResponses.map(({ id, option, translation }) &#x3D;&gt; {
+            for (const language of AVAILABLE_LANGUAGES) {
+                if (!translation.hasOwnProperty(language)) {
+                    translation[language] &#x3D; &#x27;&#x27;;
+                }
+            }
+
+            return { option, translation, questionResponseId: id };
+        });
+    }
+
+    async translateSelfAssessments(file: Express.Multer.File, roleId: string) {
+        const selfAssessmentGroupTranslations &#x3D; this.readSelfAssessmentsTranslationJsonFile(file);
+        if (!selfAssessmentGroupTranslations?.length) {
+            throw new BadRequestException({ translate: &#x27;error.invalid_self_assessment_translation_file&#x27; });
+        }
+        await this.upsertFile(roleId, file);
+
+        const {
+            validationErrors,
+            preparedQuestionTranslations,
+            preparedQuestionResponseTranslations,
+            preparedGroupTranslations
+        } &#x3D; await this.validateAndPrepareAssessmentTranslations(selfAssessmentGroupTranslations, roleId);
+
+        const updatedGroupTranslations &#x3D; await this.selfAssessmentGroupService.createMany(preparedGroupTranslations);
+        const updatedQuestionTranslations &#x3D; await this.selfAssessmentQuestionRepo.save(preparedQuestionTranslations);
+        const updatedQuestionResponseTranslations &#x3D; await this.selfAssessmentQuestionResponseService.saveMany(
+            preparedQuestionResponseTranslations
+        );
+
+        return {
+            validationErrors,
+            updatedQuestionTranslations,
+            updatedQuestionResponseTranslations,
+            updatedGroupTranslations
+        };
+    }
+
+    private readSelfAssessmentsTranslationJsonFile(file: Express.Multer.File): SelfAssessmentGroupTranslation[] {
+        try {
+            return JSON.parse(file.buffer.toString(&#x27;utf8&#x27;));
+        } catch (error) {
+            throw new BadRequestException({ translate: &#x27;error.invalid_self_assessment_translation_file&#x27; });
+        }
+    }
+
+    private async validateAndPrepareAssessmentTranslations(
+        selfAssessmentGroupTranslations: SelfAssessmentGroupTranslation[],
+        roleId: string
+    ): Promise&lt;ValidateAndPrepareAssessmentTranslations&gt; {
+        const validationErrors: SelfAssessmentTranslationValidationError[] &#x3D; [];
+        const preparedGroupTranslations: Partial&lt;SelfAssessmentGroupEntity&gt;[] &#x3D; [];
+        const preparedQuestionTranslations: Partial&lt;SelfAssessmentQuestionEntity&gt;[] &#x3D; [];
+        const preparedQuestionResponseTranslations: Partial&lt;SelfAssessmentQuestionResponseEntity&gt;[] &#x3D; [];
+
+        const { mappedExistedQuestions, mappedExistedQuestionResponses, mappedExistedGroups } &#x3D;
+            await this.findAndMapExistedQuestionGroup(roleId);
+
+        this.validateGroupTranslations({
+            validationErrors,
+            selfAssessmentGroupTranslations,
+            mappedExistedGroups,
+            mappedExistedQuestions,
+            mappedExistedQuestionResponses,
+            preparedGroupTranslations,
+            preparedQuestionResponseTranslations,
+            preparedQuestionTranslations
+        });
+
+        return {
+            validationErrors,
+            preparedQuestionTranslations,
+            preparedQuestionResponseTranslations,
+            preparedGroupTranslations
+        };
+    }
+
+    private validateGroupTranslations({
+        validationErrors,
+        selfAssessmentGroupTranslations,
+        mappedExistedGroups,
+        mappedExistedQuestions,
+        mappedExistedQuestionResponses,
+        preparedGroupTranslations,
+        preparedQuestionResponseTranslations,
+        preparedQuestionTranslations
+    }: ValidateTranslationParams): void {
+        for (const selfAssessmentGroup of selfAssessmentGroupTranslations) {
+            let errors: TranslationValidationError[] &#x3D; [];
+
+            const { error } &#x3D; new SelfAssessmentTranslationValidator().selfAssessmentTranslationSchema.validate(
+                selfAssessmentGroup,
+                {
+                    abortEarly: false
+                }
+            );
+
+            const existedGroup &#x3D; mappedExistedGroups[selfAssessmentGroup.groupId];
+            if (error) {
+                errors &#x3D; errors.concat(this.getErrorsFromMessage(error.message));
+            }
+
+            if (!existedGroup) {
+                errors.push({
+                    key: &#x60;groupId&#x60;,
+                    error: trans(&#x27;validation.The $property does not exist.&#x27;, { args: { property: &#x27;groupId&#x27; } }),
+                    isShowKey: false
+                });
+            }
+
+            if (!error &amp;&amp; existedGroup) {
+                preparedGroupTranslations.push({ ...existedGroup, title: selfAssessmentGroup.title });
+            }
+
+            this.validateQuestionTranslations({
+                errors,
+                error,
+                mappedExistedQuestionResponses,
+                preparedQuestionResponseTranslations,
+                mappedExistedQuestions,
+                preparedQuestionTranslations,
+                questions: selfAssessmentGroup.questions
+            });
+
+            this.addValidationErrors(validationErrors, errors, selfAssessmentGroup.index);
+        }
+    }
+
+    private validateQuestionTranslations({
+        error,
+        errors,
+        questions,
+        mappedExistedQuestions,
+        mappedExistedQuestionResponses,
+        preparedQuestionResponseTranslations,
+        preparedQuestionTranslations
+    }: ValidateTranslationParams): void {
+        for (const index in questions) {
+            const question &#x3D; questions[index];
+            const existedQuestion &#x3D; mappedExistedQuestions[question.questionId];
+
+            if (!existedQuestion) {
+                errors.push({
+                    key: &#x60;questions[${index}].questionId&#x60;,
+                    error: trans(&#x27;validation.The $property does not exist.&#x27;, { args: { property: &#x27;questionId&#x27; } }),
+                    isShowKey: false
+                });
+            }
+
+            if (!error &amp;&amp; existedQuestion) {
+                preparedQuestionTranslations.push({ ...existedQuestion, title: question.title });
+            }
+
+            this.validateQuestionResponseTranslations({
+                error,
+                errors,
+                mappedExistedQuestionResponses,
+                preparedQuestionResponseTranslations,
+                questionResponses: question.questionResponses
+            });
+        }
+    }
+
+    private addValidationErrors(
+        validationErrors: SelfAssessmentTranslationValidationError[],
+        errors: TranslationValidationError[],
+        index: number
+    ): void {
+        if (!errors.length) {
+            return;
+        }
+
+        validationErrors.push({
+            errors,
+            index
+        });
+    }
+
+    private async findAndMapExistedQuestionGroup(roleId: string): Promise&lt;MapExistedQuestionGroup&gt; {
+        const groups &#x3D; await this.selfAssessmentGroupService.find({ where: { roleId } });
+        const groupIds &#x3D; groups.map(({ id }) &#x3D;&gt; id);
+        const existedQuestions &#x3D; await this.selfAssessmentQuestionRepo.find({ where: { groupId: In(groupIds) } });
+
+        const existedQuestionIds &#x3D; existedQuestions.map(({ id }) &#x3D;&gt; id);
+        const existedQuestionResponses &#x3D; await this.selfAssessmentQuestionResponseService.find({
+            where: { selfAssessmentQuestionId: In(existedQuestionIds) }
+        });
+
+        return {
+            mappedExistedGroups: keyBy(groups, &#x27;id&#x27;),
+            mappedExistedQuestions: keyBy(existedQuestions, &#x27;id&#x27;),
+            mappedExistedQuestionResponses: keyBy(existedQuestionResponses, &#x27;id&#x27;)
+        };
+    }
+
+    private validateQuestionResponseTranslations({
+        error,
+        errors,
+        questionResponses,
+        mappedExistedQuestionResponses,
+        preparedQuestionResponseTranslations
+    }: ValidateTranslationParams): void {
+        for (const index in questionResponses) {
+            const questionResponse &#x3D; questionResponses[index];
+            const existedQuestionResponse &#x3D; mappedExistedQuestionResponses[questionResponse.questionResponseId];
+
+            if (!existedQuestionResponse) {
+                errors.push({
+                    key: &#x60;questionResponses[${index}].questionResponseId&#x60;,
+                    error: trans(&#x27;validation.The $property does not exist.&#x27;, {
+                        args: { property: &#x60;questionResponses[${index}]&#x60; }
+                    }),
+                    isShowKey: false
+                });
+            }
+
+            if (!error &amp;&amp; existedQuestionResponse) {
+                preparedQuestionResponseTranslations.push({
+                    ...existedQuestionResponse,
+                    translation: questionResponse.translation
+                });
+            }
+        }
+    }
+
+    private getErrorsFromMessage(message: string): TranslationValidationError[] {
+        return message.split(&#x27;. &#x27;).map((message) &#x3D;&gt; ({
+            key: message.match(/\\?&quot;(.*?)(?&lt;!\\)&quot;/gm)[0].replace(/\&quot;/g, &#x27;&#x27;),
+            error: message.trim().replace(/\&quot;/g, &#x27;&#x27;),
+            isShowKey: false
+        }));
+    }
+
+    private async upsertFile(roleId: string, file: Express.Multer.File): Promise&lt;SelfAssessmentTranslationFileEntity&gt; {
+        const { blobName } &#x3D; await this.storageService.uploadFile({ file });
+
+        const fileUpload &#x3D; {
+            fileName: file.originalname,
+            blobName
+        };
+
+        return this.selfAssessmentTranslationFileService.upsertByRoleId(roleId, fileUpload);
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'SelfAssessmentQuestionService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

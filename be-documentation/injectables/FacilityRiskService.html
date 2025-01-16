@@ -1,0 +1,2241 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Global Trace BE documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">Global Trace BE documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Injectables</li>
+  <li class="breadcrumb-item" >FacilityRiskService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/risk-assessments/services/facility-risk.service.ts</code>
+        </p>
+
+
+
+
+
+            <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#calculateRisk" >calculateRisk</a>
+                            </li>
+                            <li>
+                                <a href="#getAndCalculateExternalRiskIndicators" >getAndCalculateExternalRiskIndicators</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getCountryRisk" >getCountryRisk</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getExternalRiskIndicators" >getExternalRiskIndicators</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getFacilityRisk" >getFacilityRisk</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getIssuesByOptions" >getIssuesByOptions</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#getProductRiskListingsItems" >getProductRiskListingsItems</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#getRiskItems" >getRiskItems</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getRiskItemsCap" >getRiskItemsCap</a>
+                            </li>
+                            <li>
+                                <a href="#getRiskItemsGroup" >getRiskItemsGroup</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getSourceRiskData" >getSourceRiskData</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getSubIndicatorRiskData" >getSubIndicatorRiskData</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getSubIndicatorRiskItems" >getSubIndicatorRiskItems</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#handleCategoryRiskData" >handleCategoryRiskData</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#sortCategories" >sortCategories</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#sortIndicators" >sortIndicators</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#sortSubIndicators" >sortSubIndicators</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                                <span class="modifier">Public</span>
+                        <code>constructor(riskAssessmentService: <a href="../injectables/RiskAssessmentService.html" target="_self">RiskAssessmentService</a>, geographicalRiskLevelService: <a href="../injectables/GeographicalRiskLevelService.html" target="_self">GeographicalRiskLevelService</a>, grievanceReportRiskService: <a href="../injectables/GrievanceReportRiskService.html" target="_self">GrievanceReportRiskService</a>, dnaRiskService: <a href="../injectables/DnaRiskService.html" target="_self">DnaRiskService</a>, categoryService: <a href="../injectables/CategoryService.html" target="_self">CategoryService</a>, selfAssessmentQuestionRiskService: <a href="../injectables/SelfAssessmentQuestionRiskService.html" target="_self">SelfAssessmentQuestionRiskService</a>, capService: <a href="../injectables/CapService.html" target="_self">CapService</a>, facilityRiskCalculatorService: <a href="../injectables/FacilityRiskCalculatorService.html" target="_self">FacilityRiskCalculatorService</a>, commodityRiskService: <a href="../injectables/CommodityRiskService.html" target="_self">CommodityRiskService</a>, businessDetailService: <a href="../injectables/BusinessDetailService.html" target="_self">BusinessDetailService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/risk-assessments/services/facility-risk.service.ts:37</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>riskAssessmentService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/RiskAssessmentService.html" target="_self" >RiskAssessmentService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>geographicalRiskLevelService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/GeographicalRiskLevelService.html" target="_self" >GeographicalRiskLevelService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>grievanceReportRiskService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/GrievanceReportRiskService.html" target="_self" >GrievanceReportRiskService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>dnaRiskService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/DnaRiskService.html" target="_self" >DnaRiskService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>categoryService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CategoryService.html" target="_self" >CategoryService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>selfAssessmentQuestionRiskService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SelfAssessmentQuestionRiskService.html" target="_self" >SelfAssessmentQuestionRiskService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>capService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CapService.html" target="_self" >CapService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>facilityRiskCalculatorService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/FacilityRiskCalculatorService.html" target="_self" >FacilityRiskCalculatorService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>commodityRiskService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CommodityRiskService.html" target="_self" >CommodityRiskService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>businessDetailService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/BusinessDetailService.html" target="_self" >BusinessDetailService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="calculateRisk"></a>
+                    <span class="name">
+                        <span ><b>calculateRisk</b></span>
+                        <a href="#calculateRisk"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>calculateRisk(riskItems: ResultRiskItemType[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="395"
+                                    class="link-to-prism">src/risk-assessments/services/facility-risk.service.ts:395</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>riskItems</td>
+                                            <td>
+                                                        <code>ResultRiskItemType[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#RiskType" target="_self" >Promise&lt;RiskType&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAndCalculateExternalRiskIndicators"></a>
+                    <span class="name">
+                        <span ><b>getAndCalculateExternalRiskIndicators</b></span>
+                        <a href="#getAndCalculateExternalRiskIndicators"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAndCalculateExternalRiskIndicators(groupCategories: <a href="../undefineds/RiskItemType.html" target="_self">Dictionary&lt;RiskItemType[]&gt;</a>, riskMethodology: <a href="../entitys/RiskAssessmentEntity.html" target="_self">RiskAssessmentEntity</a>, facility: <a href="../entitys/FacilityEntity.html" target="_self">FacilityEntity</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="378"
+                                    class="link-to-prism">src/risk-assessments/services/facility-risk.service.ts:378</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>groupCategories</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#RiskItemType" target="_self" >Dictionary&lt;RiskItemType[]&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>riskMethodology</td>
+                                            <td>
+                                                            <code><a href="../entitys/RiskAssessmentEntity.html" target="_self" >RiskAssessmentEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>facility</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >FacilityEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#ExternalRiskIndicator" target="_self" >ExternalRiskIndicator[]</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getCountryRisk"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>getCountryRisk</b></span>
+                        <a href="#getCountryRisk"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getCountryRisk(facility: <a href="../entitys/FacilityEntity.html" target="_self">FacilityEntity</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="287"
+                                    class="link-to-prism">src/risk-assessments/services/facility-risk.service.ts:287</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>facility</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >FacilityEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#RiskType" target="_self" >Promise&lt;RiskType&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getExternalRiskIndicators"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>getExternalRiskIndicators</b></span>
+                        <a href="#getExternalRiskIndicators"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getExternalRiskIndicators(facility: <a href="../entitys/FacilityEntity.html" target="_self">FacilityEntity</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="361"
+                                    class="link-to-prism">src/risk-assessments/services/facility-risk.service.ts:361</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>facility</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >FacilityEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#ExternalRiskIndicator" target="_self" >Promise&lt;ExternalRiskIndicator[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getFacilityRisk"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>getFacilityRisk</b></span>
+                        <a href="#getFacilityRisk"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getFacilityRisk(facility: <a href="../entitys/FacilityEntity.html" target="_self">FacilityEntity</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="52"
+                                    class="link-to-prism">src/risk-assessments/services/facility-risk.service.ts:52</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>facility</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >FacilityEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;FacilityRiskType&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getIssuesByOptions"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>getIssuesByOptions</b></span>
+                        <a href="#getIssuesByOptions"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getIssuesByOptions(indicatorGroup: <a href="../undefineds/RiskGroup.html" target="_self">RiskGroup[]</a>, numberIssues: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="319"
+                                    class="link-to-prism">src/risk-assessments/services/facility-risk.service.ts:319</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>indicatorGroup</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#RiskGroup" target="_self" >RiskGroup[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>numberIssues</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#Issue" target="_self" >Promise&lt;Issue[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getProductRiskListingsItems"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>getProductRiskListingsItems</b></span>
+                        <a href="#getProductRiskListingsItems"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getProductRiskListingsItems(facility: <a href="../entitys/FacilityEntity.html" target="_self">FacilityEntity</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="264"
+                                    class="link-to-prism">src/risk-assessments/services/facility-risk.service.ts:264</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>facility</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >FacilityEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#RiskItemType" target="_self" >Promise&lt;RiskItemType[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getRiskItems"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>getRiskItems</b></span>
+                        <a href="#getRiskItems"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getRiskItems(facility: <a href="../entitys/FacilityEntity.html" target="_self">FacilityEntity</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="240"
+                                    class="link-to-prism">src/risk-assessments/services/facility-risk.service.ts:240</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>facility</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >FacilityEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#now" target="_self" >unknown</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getRiskItemsCap"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>getRiskItemsCap</b></span>
+                        <a href="#getRiskItemsCap"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getRiskItemsCap(groupCap: <a href="../entitys/CapEntity.html" target="_self">CapEntity</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="182"
+                                    class="link-to-prism">src/risk-assessments/services/facility-risk.service.ts:182</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>groupCap</td>
+                                            <td>
+                                                            <code><a href="../entitys/CapEntity.html" target="_self" >CapEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#ResultRiskItemType" target="_self" >ResultRiskItemType</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getRiskItemsGroup"></a>
+                    <span class="name">
+                        <span ><b>getRiskItemsGroup</b></span>
+                        <a href="#getRiskItemsGroup"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getRiskItemsGroup(facility: <a href="../entitys/FacilityEntity.html" target="_self">FacilityEntity</a>, groupSubIndicator: <a href="../undefineds/RiskItemType.html" target="_self">RiskItemType</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="161"
+                                    class="link-to-prism">src/risk-assessments/services/facility-risk.service.ts:161</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>facility</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >FacilityEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>groupSubIndicator</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#RiskItemType" target="_self" >RiskItemType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#ResultRiskItemType" target="_self" >ResultRiskItemType</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSourceRiskData"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>getSourceRiskData</b></span>
+                        <a href="#getSourceRiskData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getSourceRiskData(riskMethodology: <a href="../entitys/RiskAssessmentEntity.html" target="_self">RiskAssessmentEntity</a>, riskItems: ResultRiskItemType[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="114"
+                                    class="link-to-prism">src/risk-assessments/services/facility-risk.service.ts:114</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>riskMethodology</td>
+                                            <td>
+                                                            <code><a href="../entitys/RiskAssessmentEntity.html" target="_self" >RiskAssessmentEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>riskItems</td>
+                                            <td>
+                                                        <code>ResultRiskItemType[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>SourceRiskType[]</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSubIndicatorRiskData"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>getSubIndicatorRiskData</b></span>
+                        <a href="#getSubIndicatorRiskData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getSubIndicatorRiskData(facility: <a href="../entitys/FacilityEntity.html" target="_self">FacilityEntity</a>, riskMethodology: <a href="../entitys/RiskAssessmentEntity.html" target="_self">RiskAssessmentEntity</a>, groupIndicator: <a href="../undefineds/RiskItemType.html" target="_self">RiskItemType[]</a>, caps: <a href="../entitys/CapEntity.html" target="_self">CapEntity[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="210"
+                                    class="link-to-prism">src/risk-assessments/services/facility-risk.service.ts:210</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>facility</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >FacilityEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>riskMethodology</td>
+                                            <td>
+                                                            <code><a href="../entitys/RiskAssessmentEntity.html" target="_self" >RiskAssessmentEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>groupIndicator</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#RiskItemType" target="_self" >RiskItemType[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>caps</td>
+                                            <td>
+                                                            <code><a href="../entitys/CapEntity.html" target="_self" >CapEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>SubIndicatorRiskType[]</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSubIndicatorRiskItems"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>getSubIndicatorRiskItems</b></span>
+                        <a href="#getSubIndicatorRiskItems"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getSubIndicatorRiskItems(facility: <a href="../entitys/FacilityEntity.html" target="_self">FacilityEntity</a>, groupSubIndicator: <a href="../undefineds/RiskItemType.html" target="_self">RiskItemType[]</a>, groupCaps: <a href="../entitys/CapEntity.html" target="_self">CapEntity[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="134"
+                                    class="link-to-prism">src/risk-assessments/services/facility-risk.service.ts:134</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Default value</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>facility</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >FacilityEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+                                            <td>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                                <td>groupSubIndicator</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#RiskItemType" target="_self" >RiskItemType[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+                                            <td>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                                <td>groupCaps</td>
+                                            <td>
+                                                            <code><a href="../entitys/CapEntity.html" target="_self" >CapEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+                                            <td>
+                                                    <code>[]</code>
+                                            </td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#SubIndicatorRiskItemType" target="_self" >SubIndicatorRiskItemType</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleCategoryRiskData"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>handleCategoryRiskData</b></span>
+                        <a href="#handleCategoryRiskData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>handleCategoryRiskData(facility: <a href="../entitys/FacilityEntity.html" target="_self">FacilityEntity</a>, groupCategories: <a href="../undefineds/RiskItemType.html" target="_self">Dictionary&lt;RiskItemType[]&gt;</a>, riskMethodology: <a href="../entitys/RiskAssessmentEntity.html" target="_self">RiskAssessmentEntity</a>, caps: <a href="../entitys/CapEntity.html" target="_self">CapEntity[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="72"
+                                    class="link-to-prism">src/risk-assessments/services/facility-risk.service.ts:72</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>facility</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >FacilityEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>groupCategories</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#RiskItemType" target="_self" >Dictionary&lt;RiskItemType[]&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>riskMethodology</td>
+                                            <td>
+                                                            <code><a href="../entitys/RiskAssessmentEntity.html" target="_self" >RiskAssessmentEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>caps</td>
+                                            <td>
+                                                            <code><a href="../entitys/CapEntity.html" target="_self" >CapEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>CategoryRiskType[]</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sortCategories"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>sortCategories</b></span>
+                        <a href="#sortCategories"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>sortCategories(a: <a href="../undefineds/CategoryRiskType.html" target="_self">CategoryRiskType</a>, b: <a href="../undefineds/CategoryRiskType.html" target="_self">CategoryRiskType</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="295"
+                                    class="link-to-prism">src/risk-assessments/services/facility-risk.service.ts:295</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>a</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#CategoryRiskType" target="_self" >CategoryRiskType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>b</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#CategoryRiskType" target="_self" >CategoryRiskType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sortIndicators"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>sortIndicators</b></span>
+                        <a href="#sortIndicators"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>sortIndicators(a: <a href="../undefineds/IndicatorRiskType.html" target="_self">IndicatorRiskType</a>, b: <a href="../undefineds/IndicatorRiskType.html" target="_self">IndicatorRiskType</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="303"
+                                    class="link-to-prism">src/risk-assessments/services/facility-risk.service.ts:303</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>a</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#IndicatorRiskType" target="_self" >IndicatorRiskType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>b</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#IndicatorRiskType" target="_self" >IndicatorRiskType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sortSubIndicators"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>sortSubIndicators</b></span>
+                        <a href="#sortSubIndicators"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>sortSubIndicators(a: <a href="../undefineds/SubIndicatorRiskType.html" target="_self">SubIndicatorRiskType</a>, b: <a href="../undefineds/SubIndicatorRiskType.html" target="_self">SubIndicatorRiskType</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="311"
+                                    class="link-to-prism">src/risk-assessments/services/facility-risk.service.ts:311</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>a</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#SubIndicatorRiskType" target="_self" >SubIndicatorRiskType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>b</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#SubIndicatorRiskType" target="_self" >SubIndicatorRiskType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Inject, Injectable, forwardRef } from &#x27;@nestjs/common&#x27;;
+import { Dictionary, groupBy, isNumber, keyBy, maxBy, orderBy, isNull } from &#x27;lodash&#x27;;
+import { CategoryService } from &#x27;~categories/services/category.service&#x27;;
+import { DnaRiskService } from &#x27;~dna-testing/services/dna-risk.service&#x27;;
+import { FacilityEntity } from &#x27;~facilities/entities/facility.entity&#x27;;
+import { AdditionalRoleEnum } from &#x27;~facilities/enums/additional-role.enum&#x27;;
+import { GrievanceReportRiskService } from &#x27;~grievance-report/services/grievance-report-risk.service&#x27;;
+import { RiskAssessmentEntity } from &#x27;~risk-assessments/entities/risk-assessment.entity&#x27;;
+import { RiskSourceEnum } from &#x27;~risk-assessments/enums/risk-source.enum&#x27;;
+import { RISK_LEVEL_VALUE, convertRiskLevel } from &#x27;~risk-assessments/helpers/convert-risk-level.helper&#x27;;
+import { CategoryRiskType } from &#x27;~risk-assessments/types/category-risk.type&#x27;;
+import { FacilityRiskType } from &#x27;~risk-assessments/types/facility-risk.type&#x27;;
+import { IndicatorRiskType } from &#x27;~risk-assessments/types/indicator-risk.type&#x27;;
+import { ResultRiskItemType } from &#x27;~risk-assessments/types/result-risk-item.type&#x27;;
+import { RiskItemType } from &#x27;~risk-assessments/types/risk-item.type&#x27;;
+import { RiskType } from &#x27;~risk-assessments/types/risk.type&#x27;;
+import { SourceRiskType } from &#x27;~risk-assessments/types/source-risk.type&#x27;;
+import { SubIndicatorRiskType } from &#x27;~risk-assessments/types/sub-indicator-risk.type&#x27;;
+import { GeographicalRiskLevelService } from &#x27;~geographical-risk-levels/services/geographical-risk-level.service&#x27;;
+import { SelfAssessmentQuestionRiskService } from &#x27;~self-assessments/services/self-assessment-question-risk.service&#x27;;
+import { RiskAssessmentService } from &#x27;./risk-assessment.service&#x27;;
+import { CapService } from &#x27;~corrective-action-plans/services/cap.service&#x27;;
+import { CapEntity } from &#x27;~corrective-action-plans/entities/cap.entity&#x27;;
+import { RiskScoreLevelEnum } from &#x27;~self-assessments/enums/risk-score-level.enum&#x27;;
+import { RiskGroup } from &#x27;~risk-assessments/types/risk-group.type&#x27;;
+import { Issue } from &#x27;~risk-assessments/types/issue.type&#x27;;
+import { FacilityRiskCalculatorService } from &#x27;./facility-risk-calculator.service&#x27;;
+import { ExternalRiskIndicator } from &#x27;~risk-assessments/types/external-risk-indicator.type&#x27;;
+import { SubIndicatorRiskItemType } from &#x27;~risk-assessments/types/sub-indicator-risk-item.type&#x27;;
+import { loadRelations } from &#x27;@diginexhk/typeorm-helper&#x27;;
+import { In } from &#x27;typeorm&#x27;;
+import { CommodityRiskService } from &#x27;~commodity-risks/services/commodity-risk.service&#x27;;
+import { SeverityEnum } from &#x27;~grievance-report/enums/severity.enum&#x27;;
+import { BusinessDetailService } from &#x27;~site-details/services/business-detail.service&#x27;;
+
+@Injectable()
+export class FacilityRiskService {
+    public constructor(
+        private riskAssessmentService: RiskAssessmentService,
+        private geographicalRiskLevelService: GeographicalRiskLevelService,
+        @Inject(forwardRef(() &#x3D;&gt; GrievanceReportRiskService))
+        private grievanceReportRiskService: GrievanceReportRiskService,
+        private dnaRiskService: DnaRiskService,
+        private categoryService: CategoryService,
+        private selfAssessmentQuestionRiskService: SelfAssessmentQuestionRiskService,
+        @Inject(forwardRef(() &#x3D;&gt; CapService)) private capService: CapService,
+        private facilityRiskCalculatorService: FacilityRiskCalculatorService,
+        private commodityRiskService: CommodityRiskService,
+        private businessDetailService: BusinessDetailService
+    ) {}
+
+    async getFacilityRisk(facility: FacilityEntity): Promise&lt;FacilityRiskType&gt; {
+        const riskMethodology &#x3D; await this.riskAssessmentService.getRiskAssessment();
+        const countryRisk &#x3D; await this.getCountryRisk(facility);
+        const riskItems &#x3D; await this.getRiskItems(facility);
+        const subIndicatorIds &#x3D; riskItems.map(({ subIndicator }) &#x3D;&gt; subIndicator.id);
+        const caps &#x3D; await this.capService.getCapBySubIndicatorIds(facility.id, subIndicatorIds);
+        const groupCategories &#x3D; groupBy(riskItems, ({ indicator }) &#x3D;&gt; indicator.categoryId);
+        const data &#x3D; this.handleCategoryRiskData(facility, groupCategories, riskMethodology, caps);
+        const overallScore &#x3D; this.facilityRiskCalculatorService.calculateRiskScore(
+            riskMethodology,
+            data.flatMap(({ indicatorRiskData }) &#x3D;&gt;
+                indicatorRiskData.flatMap(({ subIndicatorRiskData }) &#x3D;&gt;
+                    subIndicatorRiskData.flatMap(({ dataRisksCalculate }) &#x3D;&gt; dataRisksCalculate)
+                )
+            )
+        );
+        const overallRisk: RiskType &#x3D; { score: overallScore, level: convertRiskLevel(overallScore) };
+        return { overallRisk, countryRisk, data };
+    }
+
+    private handleCategoryRiskData(
+        facility: FacilityEntity,
+        groupCategories: Dictionary&lt;RiskItemType[]&gt;,
+        riskMethodology: RiskAssessmentEntity,
+        caps: CapEntity[]
+    ): CategoryRiskType[] {
+        return Object.entries(groupCategories)
+            .map(([categoryId, groupCategory]) &#x3D;&gt; {
+                const groupIndicators &#x3D; groupBy(groupCategory, ({ indicator }) &#x3D;&gt; indicator.id);
+                const indicatorRiskData &#x3D; Object.entries(groupIndicators)
+                    .map(([indicatorId, groupIndicator]) &#x3D;&gt; {
+                        const subIndicatorRiskData &#x3D; this.getSubIndicatorRiskData(
+                            facility,
+                            riskMethodology,
+                            groupIndicator,
+                            caps
+                        );
+                        const score &#x3D; this.facilityRiskCalculatorService.calculateRiskScore(
+                            riskMethodology,
+                            subIndicatorRiskData.flatMap(({ dataRisksCalculate }) &#x3D;&gt; dataRisksCalculate)
+                        );
+                        const level &#x3D; convertRiskLevel(score);
+                        return { indicator: groupIndicator[0].indicator, risk: { score, level }, subIndicatorRiskData };
+                    })
+                    .sort(this.sortIndicators);
+
+                const items &#x3D; indicatorRiskData.flatMap(({ subIndicatorRiskData }) &#x3D;&gt;
+                    subIndicatorRiskData.flatMap(({ dataRisksCalculate }) &#x3D;&gt; dataRisksCalculate)
+                );
+                const sourceRiskData &#x3D; this.getSourceRiskData(riskMethodology, items);
+                const score &#x3D; this.facilityRiskCalculatorService.calculateRiskScore(riskMethodology, items);
+                const level &#x3D; convertRiskLevel(score);
+                return {
+                    category: groupCategory[0].indicator.category,
+                    risk: { score, level },
+                    indicatorRiskData,
+                    sourceRiskData
+                };
+            })
+            .sort(this.sortCategories);
+    }
+
+    private getSourceRiskData(
+        riskMethodology: RiskAssessmentEntity,
+        riskItems: ResultRiskItemType[]
+    ): SourceRiskType[] {
+        const groupSources &#x3D; groupBy(riskItems, ({ source }) &#x3D;&gt; source);
+        return Object.entries(groupSources)
+            .map(([source, groupSource]) &#x3D;&gt; {
+                const score &#x3D; this.facilityRiskCalculatorService.calculateRiskScore(riskMethodology, groupSource);
+                const level &#x3D; convertRiskLevel(score);
+                return { source, risk: { score, level } };
+            })
+            .sort((a, b) &#x3D;&gt; {
+                const result &#x3D; RISK_LEVEL_VALUE[a.risk.level] - RISK_LEVEL_VALUE[b.risk.level];
+                if (result !&#x3D;&#x3D; 0) {
+                    return result;
+                }
+                return a.source.localeCompare(b.source);
+            });
+    }
+
+    private getSubIndicatorRiskItems(
+        facility: FacilityEntity,
+        groupSubIndicator: RiskItemType[],
+        groupCaps: CapEntity[] &#x3D; []
+    ): SubIndicatorRiskItemType {
+        const riskItemsGroup &#x3D; groupSubIndicator.map((item) &#x3D;&gt; this.getRiskItemsGroup(facility, item));
+        const riskItemsCap &#x3D; groupCaps.map((item) &#x3D;&gt; this.getRiskItemsCap(item));
+        const data &#x3D; riskItemsGroup.concat(riskItemsCap).sort((a, b) &#x3D;&gt; b.createdAt - a.createdAt);
+        const capLatestRiskScoreIndex &#x3D; data.findIndex(
+            (item) &#x3D;&gt; item.source &#x3D;&#x3D;&#x3D; RiskSourceEnum.CAP &amp;&amp; item.risk.level !&#x3D;&#x3D; RiskScoreLevelEnum.NO_WEIGHT
+        );
+        if (capLatestRiskScoreIndex !&#x3D;&#x3D; -1) {
+            return {
+                data,
+                dataRisksCalculate: data.filter(
+                    (item, index) &#x3D;&gt;
+                        index &lt;&#x3D; capLatestRiskScoreIndex &amp;&amp; item.risk.level !&#x3D;&#x3D; RiskScoreLevelEnum.NO_WEIGHT
+                )
+            };
+        }
+
+        return {
+            data,
+            dataRisksCalculate: riskItemsGroup.sort((a, b) &#x3D;&gt; b.createdAt - a.createdAt)
+        };
+    }
+
+    getRiskItemsGroup(facility: FacilityEntity, groupSubIndicator: RiskItemType): ResultRiskItemType {
+        const { createdAt, source, role, severity, subIndicator, facilityId } &#x3D; groupSubIndicator;
+        const isSourceIncidentReport &#x3D; source &#x3D;&#x3D;&#x3D; RiskSourceEnum.INCIDENT_REPORT;
+        let score &#x3D; severity * subIndicator.riskSeverity;
+        let note &#x3D; this.facilityRiskCalculatorService.getNote(groupSubIndicator);
+        if (source &#x3D;&#x3D;&#x3D; RiskSourceEnum.SAQ) {
+            note &#x3D; note.replace(/([^?]*\?)/g, &#x27;&lt;i&gt;$1&lt;/i&gt;&#x27;);
+            if (severity &#x3D;&#x3D;&#x3D; SeverityEnum.NO_WEIGHT) {
+                score &#x3D; 1;
+            }
+        }
+        return {
+            createdAt,
+            source: isSourceIncidentReport ? role.name : source,
+            roleId: isSourceIncidentReport ? role.id : null,
+            risk: { score, level: convertRiskLevel(score) },
+            note,
+            isIndirect: facilityId &amp;&amp; facilityId !&#x3D;&#x3D; facility.id
+        };
+    }
+
+    private getRiskItemsCap(groupCap: CapEntity): ResultRiskItemType {
+        const { createdAt, action, riskScoreLevel, id, parentId, status } &#x3D; groupCap;
+        const score &#x3D; parentId ? this.facilityRiskCalculatorService.getScoreCap(riskScoreLevel) : 0;
+        const level &#x3D; convertRiskLevel(score);
+        let note &#x3D; action;
+        if (level !&#x3D;&#x3D; RiskScoreLevelEnum.NO_WEIGHT) {
+            note &#x3D;
+                &#x27;Evidence accepted of completion of corrective actions.&lt;strong&gt; New risk level assigned: &#x27; +
+                riskScoreLevel +
+                &#x27; risk &lt;/strong&gt;&#x27;;
+        } else if (groupCap?.creator) {
+            note &#x3D; &#x27;Improvement Plan assigned by &#x27; + groupCap.creator.facilities[0].name;
+        }
+        return {
+            createdAt,
+            source: RiskSourceEnum.CAP,
+            roleId: null,
+            risk: {
+                score,
+                level
+            },
+            note,
+            isIndirect: false,
+            capId: id,
+            status
+        };
+    }
+
+    private getSubIndicatorRiskData(
+        facility: FacilityEntity,
+        riskMethodology: RiskAssessmentEntity,
+        groupIndicator: RiskItemType[],
+        caps: CapEntity[]
+    ): SubIndicatorRiskType[] {
+        const groupSubIndicators &#x3D; groupBy(groupIndicator, ({ subIndicator }) &#x3D;&gt; subIndicator.id);
+        const groupCaps &#x3D; groupBy(caps, (item) &#x3D;&gt; item.subIndicatorId);
+        return Object.entries(groupSubIndicators)
+            .map(([subIndicatorId, groupSubIndicator]) &#x3D;&gt; {
+                const { data, dataRisksCalculate } &#x3D; this.getSubIndicatorRiskItems(
+                    facility,
+                    groupSubIndicator,
+                    groupCaps[subIndicatorId]
+                );
+                const score &#x3D; this.facilityRiskCalculatorService.calculateRiskScore(
+                    riskMethodology,
+                    dataRisksCalculate
+                );
+                const level &#x3D; convertRiskLevel(score);
+                return {
+                    subIndicator: groupSubIndicator[0].subIndicator,
+                    risk: { score, level },
+                    data,
+                    dataRisksCalculate
+                };
+            })
+            .sort(this.sortSubIndicators);
+    }
+
+    private async getRiskItems(facility: FacilityEntity) {
+        const facilityIds &#x3D; [facility.id];
+        if (facility.additionalRole &#x3D;&#x3D;&#x3D; AdditionalRoleEnum.FARM_GROUP) {
+            await facility.loadRelation(&#x27;farms&#x27;);
+            facility.farms.forEach((farm) &#x3D;&gt; {
+                facilityIds.push(farm.id);
+            });
+        }
+        const reportFacilityIds &#x3D; [...facilityIds];
+        if (facility.farmGroupId) {
+            reportFacilityIds.push(facility.farmGroupId);
+        }
+        const [dnaRiskItems, goodRiskItems, reportRiskItems, saqRiskItem] &#x3D; await Promise.all([
+            this.dnaRiskService.getDnaRiskItems(facilityIds),
+            this.getProductRiskListingsItems(facility),
+            this.grievanceReportRiskService.getRiskItems(reportFacilityIds),
+            this.selfAssessmentQuestionRiskService.getRiskItems(facilityIds)
+        ]);
+        const riskItems &#x3D; dnaRiskItems.concat(goodRiskItems, reportRiskItems, saqRiskItem);
+        return riskItems.filter(
+            ({ indicator, subIndicator, severity }) &#x3D;&gt; !isNull(severity) &amp;&amp; indicator &amp;&amp; subIndicator
+        );
+    }
+
+    private async getProductRiskListingsItems(facility: FacilityEntity): Promise&lt;RiskItemType[]&gt; {
+        let goods: string[] &#x3D; facility.goods;
+        if (facility.type?.isRawMaterialExtractor) {
+            goods &#x3D; await this.businessDetailService.getSelectedGoods(facility.typeId);
+        }
+
+        if (!facility.country?.id || !goods?.length) {
+            return [];
+        }
+        const goodRiskItems &#x3D; await this.commodityRiskService.find({
+            where: { countryId: facility.country.id, commodity: In(goods) },
+            relations: [&#x27;country&#x27;, &#x27;subIndicator&#x27;, &#x27;subIndicator.indicator&#x27;, &#x27;subIndicator.indicator.category&#x27;]
+        });
+        return goodRiskItems.map((goodRiskItem) &#x3D;&gt; ({
+            subIndicator: goodRiskItem.subIndicator,
+            severity: goodRiskItem.severity,
+            indicator: goodRiskItem.subIndicator?.indicator,
+            source: RiskSourceEnum.PRODUCT_RISK_LISTINGS,
+            createdAt: facility.createdAt,
+            additionData: { good: goodRiskItem.commodity }
+        }));
+    }
+
+    async getCountryRisk(facility: FacilityEntity): Promise&lt;RiskType&gt; {
+        const score &#x3D; await this.geographicalRiskLevelService.getCountryRiskScore(facility);
+        return {
+            score,
+            level: isNumber(score) ? convertRiskLevel((score * 15) / 100) : null
+        };
+    }
+
+    private sortCategories(a: CategoryRiskType, b: CategoryRiskType): number {
+        const result &#x3D; RISK_LEVEL_VALUE[a.risk.level] - RISK_LEVEL_VALUE[b.risk.level];
+        if (result !&#x3D;&#x3D; 0) {
+            return result;
+        }
+        return a.category.name.localeCompare(b.category.name);
+    }
+
+    private sortIndicators(a: IndicatorRiskType, b: IndicatorRiskType): number {
+        const result &#x3D; RISK_LEVEL_VALUE[a.risk.level] - RISK_LEVEL_VALUE[b.risk.level];
+        if (result !&#x3D;&#x3D; 0) {
+            return result;
+        }
+        return a.indicator.name.localeCompare(b.indicator.name);
+    }
+
+    private sortSubIndicators(a: SubIndicatorRiskType, b: SubIndicatorRiskType): number {
+        const result &#x3D; RISK_LEVEL_VALUE[a.risk.level] - RISK_LEVEL_VALUE[b.risk.level];
+        if (result !&#x3D;&#x3D; 0) {
+            return result;
+        }
+        return a.subIndicator.name.localeCompare(b.subIndicator.name);
+    }
+
+    async getIssuesByOptions(indicatorGroup: RiskGroup[], numberIssues: number): Promise&lt;Issue[]&gt; {
+        const groupSubIndicators &#x3D; groupBy(indicatorGroup, ({ subIndicator }) &#x3D;&gt; subIndicator.id);
+        const issues &#x3D; Object.entries(groupSubIndicators).map(([, groupSubIndicator]) &#x3D;&gt; {
+            const riskItems &#x3D; groupSubIndicator.flatMap(({ data }) &#x3D;&gt; data);
+            const risk &#x3D; maxBy(riskItems, ({ risk }) &#x3D;&gt; risk.score).risk;
+            const count &#x3D; this.facilityRiskCalculatorService.countByRiskLevels(riskItems);
+            return {
+                indicator: groupSubIndicator[0].indicator,
+                subIndicator: groupSubIndicator[0].subIndicator,
+                risk,
+                count
+            };
+        });
+        issues.sort((a, b) &#x3D;&gt; {
+            if (b.count.extreme !&#x3D;&#x3D; a.count.extreme) {
+                return b.count.extreme - a.count.extreme;
+            } else if (b.count.high !&#x3D;&#x3D; a.count.high) {
+                return b.count.high - a.count.high;
+            } else if (b.count.medium !&#x3D;&#x3D; a.count.medium) {
+                return b.count.medium - a.count.medium;
+            } else if (b.count.low !&#x3D;&#x3D; a.count.low) {
+                return b.count.low - a.count.low;
+            }
+            const compareIndicatorName &#x3D; a.indicator.name.localeCompare(b.indicator.name);
+            if (compareIndicatorName !&#x3D;&#x3D; 0) {
+                return compareIndicatorName;
+            }
+            return a.subIndicator.name.localeCompare(b.subIndicator.name);
+        });
+
+        const topIssues &#x3D; issues.slice(0, numberIssues);
+        const ids &#x3D; topIssues.flatMap(({ indicator, subIndicator }) &#x3D;&gt; [indicator.id, subIndicator.id]);
+        const categories &#x3D; await this.categoryService.findByIds(ids);
+        await loadRelations(categories, [&#x27;category&#x27;]);
+        const mapCategory &#x3D; keyBy(categories, &#x27;id&#x27;);
+        return topIssues.map((issue) &#x3D;&gt; {
+            issue.indicator &#x3D; mapCategory[issue.indicator.id];
+            issue.subIndicator &#x3D; mapCategory[issue.subIndicator.id];
+            return issue;
+        });
+    }
+
+    async getExternalRiskIndicators(facility: FacilityEntity): Promise&lt;ExternalRiskIndicator[]&gt; {
+        const [riskMethodology, goodRiskItems] &#x3D; await Promise.all([
+            this.riskAssessmentService.getRiskAssessment(),
+            this.getProductRiskListingsItems(facility)
+        ]);
+        const invalidGoodRiskItems &#x3D; goodRiskItems.filter(
+            ({ indicator, subIndicator, severity }) &#x3D;&gt; severity &amp;&amp; indicator &amp;&amp; subIndicator
+        );
+
+        if (!invalidGoodRiskItems.length) {
+            return [];
+        }
+        const groupCategories &#x3D; groupBy(invalidGoodRiskItems, ({ indicator }) &#x3D;&gt; indicator?.categoryId);
+
+        return this.getAndCalculateExternalRiskIndicators(groupCategories, riskMethodology, facility);
+    }
+
+    getAndCalculateExternalRiskIndicators(
+        groupCategories: Dictionary&lt;RiskItemType[]&gt;,
+        riskMethodology: RiskAssessmentEntity,
+        facility: FacilityEntity
+    ): ExternalRiskIndicator[] {
+        const externalRiskIndicators &#x3D; Object.entries(groupCategories).flatMap(([, groupCategory]) &#x3D;&gt; {
+            const subIndicatorsRiskData &#x3D; this.getSubIndicatorRiskData(facility, riskMethodology, groupCategory, []);
+            return subIndicatorsRiskData.map((subIndicatorRiskData) &#x3D;&gt; ({
+                indicator: subIndicatorRiskData.subIndicator.indicator,
+                subIndicator: subIndicatorRiskData.subIndicator,
+                risk: subIndicatorRiskData.risk,
+                good: subIndicatorRiskData.data[0].note
+            }));
+        });
+        return orderBy(externalRiskIndicators, [&#x27;indicator.name&#x27;], &#x27;asc&#x27;);
+    }
+
+    calculateRisk(riskItems: ResultRiskItemType[]): Promise&lt;RiskType&gt; {
+        return this.facilityRiskCalculatorService.calculateRisk(riskItems);
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'FacilityRiskService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,1495 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Global Trace BE documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">Global Trace BE documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Injectables</li>
+  <li class="breadcrumb-item" >BrokerPartnerService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/business-partners/services/broker-partner.service.ts</code>
+        </p>
+
+
+
+            <p class="comment">
+                <h3>Extends</h3>
+            </p>
+            <p class="comment">
+                        <code>TransactionService</code>
+            </p>
+
+
+            <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#addBrokerPartners" >addBrokerPartners</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#canInviteExistingBroker" >canInviteExistingBroker</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#checkInviteBrokerPartner" >checkInviteBrokerPartner</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#checkValidateUniqueEmailAndPhoneNumber" >checkValidateUniqueEmailAndPhoneNumber</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#createBrokerFacility" >createBrokerFacility</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#hasAllValidAddingPartner" >hasAllValidAddingPartner</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#hasAllValidRoleId" >hasAllValidRoleId</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#inviteBrokerPartner" >inviteBrokerPartner</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#searchBrokerFacilities" >searchBrokerFacilities</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#searchBrokerPartners" >searchBrokerPartners</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                                <span class="modifier">Public</span>
+                        <code>constructor(facilityService: <a href="../injectables/FacilityService.html" target="_self">FacilityService</a>, actorService: <a href="../injectables/ActorService.html" target="_self">ActorService</a>, userService: <a href="../injectables/UserService.html" target="_self">UserService</a>, roleService: <a href="../injectables/RoleService.html" target="_self">RoleService</a>, supplyChainService: <a href="../injectables/SupplyChainService.html" target="_self">SupplyChainService</a>, facilityPartnerService: <a href="../injectables/FacilityPartnerService.html" target="_self">FacilityPartnerService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/business-partners/services/broker-partner.service.ts:18</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>facilityService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/FacilityService.html" target="_self" >FacilityService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>actorService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ActorService.html" target="_self" >ActorService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>userService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UserService.html" target="_self" >UserService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>roleService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/RoleService.html" target="_self" >RoleService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>supplyChainService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SupplyChainService.html" target="_self" >SupplyChainService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>facilityPartnerService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/FacilityPartnerService.html" target="_self" >FacilityPartnerService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addBrokerPartners"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>addBrokerPartners</b></span>
+                        <a href="#addBrokerPartners"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>addBrokerPartners(requester: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>, dto: <a href="../classes/InviteBrokerPartnerDto.html" target="_self">InviteBrokerPartnerDto</a>, brokerFacility: <a href="../entitys/FacilityEntity.html" target="_self">FacilityEntity</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="71"
+                                    class="link-to-prism">src/business-partners/services/broker-partner.service.ts:71</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>requester</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>dto</td>
+                                            <td>
+                                                            <code><a href="../classes/InviteBrokerPartnerDto.html" target="_self" >InviteBrokerPartnerDto</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>brokerFacility</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >FacilityEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="canInviteExistingBroker"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>canInviteExistingBroker</b></span>
+                        <a href="#canInviteExistingBroker"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>canInviteExistingBroker(broker: <a href="../entitys/FacilityEntity.html" target="_self">FacilityEntity</a>, allowedPartnerRoleIds: string[], dto: <a href="../classes/InviteBrokerPartnerDto.html" target="_self">InviteBrokerPartnerDto</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="169"
+                                    class="link-to-prism">src/business-partners/services/broker-partner.service.ts:169</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>broker</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >FacilityEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>allowedPartnerRoleIds</td>
+                                            <td>
+                                                        <code>string[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>dto</td>
+                                            <td>
+                                                            <code><a href="../classes/InviteBrokerPartnerDto.html" target="_self" >InviteBrokerPartnerDto</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;boolean&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="checkInviteBrokerPartner"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>checkInviteBrokerPartner</b></span>
+                        <a href="#checkInviteBrokerPartner"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>checkInviteBrokerPartner(requester: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>, dto: <a href="../classes/InviteBrokerPartnerDto.html" target="_self">InviteBrokerPartnerDto</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="149"
+                                    class="link-to-prism">src/business-partners/services/broker-partner.service.ts:149</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>requester</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>dto</td>
+                                            <td>
+                                                            <code><a href="../classes/InviteBrokerPartnerDto.html" target="_self" >InviteBrokerPartnerDto</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="checkValidateUniqueEmailAndPhoneNumber"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>checkValidateUniqueEmailAndPhoneNumber</b></span>
+                        <a href="#checkValidateUniqueEmailAndPhoneNumber"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>checkValidateUniqueEmailAndPhoneNumber(dto: <a href="../classes/InviteBrokerPartnerDto.html" target="_self">InviteBrokerPartnerDto</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="217"
+                                    class="link-to-prism">src/business-partners/services/broker-partner.service.ts:217</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>dto</td>
+                                            <td>
+                                                            <code><a href="../classes/InviteBrokerPartnerDto.html" target="_self" >InviteBrokerPartnerDto</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createBrokerFacility"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>createBrokerFacility</b></span>
+                        <a href="#createBrokerFacility"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createBrokerFacility(requester: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>, dto: <a href="../classes/InviteBrokerPartnerDto.html" target="_self">InviteBrokerPartnerDto</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="121"
+                                    class="link-to-prism">src/business-partners/services/broker-partner.service.ts:121</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>requester</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>dto</td>
+                                            <td>
+                                                            <code><a href="../classes/InviteBrokerPartnerDto.html" target="_self" >InviteBrokerPartnerDto</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#FacilityPartnerCreatedResultType" target="_self" >Promise&lt;FacilityPartnerCreatedResultType&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hasAllValidAddingPartner"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>hasAllValidAddingPartner</b></span>
+                        <a href="#hasAllValidAddingPartner"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>hasAllValidAddingPartner(dto: <a href="../classes/InviteBrokerPartnerDto.html" target="_self">InviteBrokerPartnerDto</a>, allowedPartnerRoleIds: string[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="185"
+                                    class="link-to-prism">src/business-partners/services/broker-partner.service.ts:185</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>dto</td>
+                                            <td>
+                                                            <code><a href="../classes/InviteBrokerPartnerDto.html" target="_self" >InviteBrokerPartnerDto</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>allowedPartnerRoleIds</td>
+                                            <td>
+                                                        <code>string[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;boolean&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hasAllValidRoleId"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>hasAllValidRoleId</b></span>
+                        <a href="#hasAllValidRoleId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>hasAllValidRoleId(partnerRoleIds: string[], allowedPartnerRoleIds: string[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="208"
+                                    class="link-to-prism">src/business-partners/services/broker-partner.service.ts:208</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>partnerRoleIds</td>
+                                            <td>
+                                                        <code>string[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>allowedPartnerRoleIds</td>
+                                            <td>
+                                                        <code>string[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="inviteBrokerPartner"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>inviteBrokerPartner</b></span>
+                        <a href="#inviteBrokerPartner"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>inviteBrokerPartner(requester: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>, dto: <a href="../classes/InviteBrokerPartnerDto.html" target="_self">InviteBrokerPartnerDto</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="50"
+                                    class="link-to-prism">src/business-partners/services/broker-partner.service.ts:50</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>requester</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>dto</td>
+                                            <td>
+                                                            <code><a href="../classes/InviteBrokerPartnerDto.html" target="_self" >InviteBrokerPartnerDto</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#now" target="_self" >unknown</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="searchBrokerFacilities"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>searchBrokerFacilities</b></span>
+                        <a href="#searchBrokerFacilities"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>searchBrokerFacilities(user: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>, key: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="30"
+                                    class="link-to-prism">src/business-partners/services/broker-partner.service.ts:30</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>user</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>key</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/FacilityEntity.html" target="_self" >Promise&lt;FacilityEntity[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="searchBrokerPartners"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>searchBrokerPartners</b></span>
+                        <a href="#searchBrokerPartners"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>searchBrokerPartners(user: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>, key: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="40"
+                                    class="link-to-prism">src/business-partners/services/broker-partner.service.ts:40</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>user</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>key</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/FacilityEntity.html" target="_self" >Promise&lt;FacilityEntity[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ValidateException } from &#x27;@diginexhk/nestjs-exception&#x27;;
+import { TransactionService } from &#x27;@diginexhk/nestjs-transaction&#x27;;
+import { BadRequestException, Injectable } from &#x27;@nestjs/common&#x27;;
+import { isEmpty } from &#x27;lodash&#x27;;
+import { InviteBrokerPartnerDto } from &#x27;~business-partners/http/dto/invite-broker-partner.dto&#x27;;
+import { FacilityEntity } from &#x27;~facilities/entities/facility.entity&#x27;;
+import { FacilityPartnerService } from &#x27;~facilities/services/facility-partner.service&#x27;;
+import { FacilityService } from &#x27;~facilities/services/facility.service&#x27;;
+import { UserRoleEnum } from &#x27;~role-permissions/enums/user-role.enum&#x27;;
+import { RoleService } from &#x27;~role-permissions/services/role.service&#x27;;
+import { SupplyChainService } from &#x27;~supply-chains/services/supply-chain.service&#x27;;
+import { UserEntity } from &#x27;~users/entities/user.entity&#x27;;
+import { ActorService } from &#x27;~users/services/actor.service&#x27;;
+import { UserService } from &#x27;~users/services/user.service&#x27;;
+import { FacilityPartnerCreatedResultType } from &#x27;~users/types/facility-partner-created-result.type&#x27;;
+
+@Injectable()
+export class BrokerPartnerService extends TransactionService {
+    public constructor(
+        private facilityService: FacilityService,
+        private actorService: ActorService,
+        private userService: UserService,
+        private roleService: RoleService,
+        private supplyChainService: SupplyChainService,
+        private facilityPartnerService: FacilityPartnerService
+    ) {
+        super();
+    }
+
+    async searchBrokerFacilities(user: UserEntity, key: string): Promise&lt;FacilityEntity[]&gt; {
+        const roleEntity &#x3D; await this.roleService.findRoleByName(UserRoleEnum.BROKER);
+        return this.facilityService.searchExitingFacilities({
+            partnerRoleIds: [roleEntity.id],
+            ownerFacility: user.currentFacility,
+            key,
+            isExcludeAddedPartners: true
+        });
+    }
+
+    async searchBrokerPartners(user: UserEntity, key: string): Promise&lt;FacilityEntity[]&gt; {
+        const partnerRoleIds &#x3D; await this.supplyChainService.getPartnerRoleIds(user.roleId);
+        return this.facilityService.searchExitingFacilities({
+            partnerRoleIds,
+            ownerFacility: user.currentFacility,
+            key,
+            isExcludeAddedPartners: false
+        });
+    }
+
+    async inviteBrokerPartner(requester: UserEntity, dto: InviteBrokerPartnerDto) {
+        await this.checkInviteBrokerPartner(requester, dto);
+        this.checkValidateUniqueEmailAndPhoneNumber(dto);
+
+        const { facilityPartner: broker, contactor } &#x3D; await this.createBrokerFacility(requester, dto);
+
+        await this.facilityPartnerService.addFacilityPartner({
+            ownerFacility: requester.currentFacility,
+            baseFacility: requester.currentFacility,
+            facilityPartner: broker,
+            creatorId: requester.id
+        });
+
+        await this.addBrokerPartners(requester, dto, broker);
+        if (requester.currentFacility) {
+            await this.facilityService.updateLastAddedPartnerAt(requester.currentFacility.id);
+        }
+
+        return contactor;
+    }
+
+    private async addBrokerPartners(
+        requester: UserEntity,
+        dto: InviteBrokerPartnerDto,
+        brokerFacility: FacilityEntity
+    ) {
+        if (!dto.partners?.length) {
+            return;
+        }
+
+        const result &#x3D; await Promise.all(
+            dto.partners.map(async (partner) &#x3D;&gt; {
+                let facility: FacilityEntity;
+                let contactor: UserEntity;
+                let isAddNew &#x3D; false;
+
+                if (partner.facilityId) {
+                    facility &#x3D; await this.facilityService.findById(partner.facilityId, {
+                        relations: [&#x27;users&#x27;, &#x27;users.role&#x27;, &#x27;users.permissions&#x27;, &#x27;type&#x27;]
+                    });
+                    contactor &#x3D; facility.firstAdmin;
+                } else {
+                    isAddNew &#x3D; true;
+                    const role &#x3D; await this.roleService.findRoleById(partner.partnerInformation.roleId);
+                    facility &#x3D; await this.facilityService.createOne({
+                        ...partner.partnerInformation,
+                        typeId: partner.partnerInformation.roleId,
+                        chainOfCustody: role.chainOfCustody
+                    });
+                    contactor &#x3D; await this.actorService.createFacilityContactor(
+                        requester,
+                        role,
+                        partner.userInformation,
+                        facility
+                    );
+                }
+
+                await this.facilityPartnerService.addFacilityPartner({
+                    ownerFacility: brokerFacility,
+                    baseFacility: brokerFacility,
+                    facilityPartner: facility,
+                    creatorId: requester.id
+                });
+                return { facility, contactor, isAddNew };
+            })
+        );
+
+        const newItems &#x3D; result.filter((item) &#x3D;&gt; item.isAddNew);
+        await Promise.all(newItems.map(({ contactor }) &#x3D;&gt; this.userService.sendInvitationMail(requester, contactor)));
+    }
+
+    private async createBrokerFacility(
+        requester: UserEntity,
+        dto: InviteBrokerPartnerDto
+    ): Promise&lt;FacilityPartnerCreatedResultType&gt; {
+        const { facilityId, userInformation, brokerInformation } &#x3D; dto;
+
+        let broker: FacilityEntity | undefined;
+        let contactor: UserEntity | undefined;
+
+        if (facilityId) {
+            broker &#x3D; await this.facilityService.findById(facilityId, {
+                relations: [&#x27;users&#x27;, &#x27;users.role&#x27;, &#x27;users.permissions&#x27;, &#x27;type&#x27;]
+            });
+            contactor &#x3D; broker.firstAdmin;
+        } else {
+            const roleEntity &#x3D; await this.roleService.findRoleByName(UserRoleEnum.BROKER);
+
+            broker &#x3D; await this.facilityService.createOne({
+                ...brokerInformation,
+                typeId: roleEntity.id,
+                chainOfCustody: roleEntity.chainOfCustody
+            });
+            contactor &#x3D; await this.actorService.createFacilityContactor(requester, roleEntity, userInformation, broker);
+        }
+
+        return { facilityPartner: broker, contactor };
+    }
+
+    private async checkInviteBrokerPartner(requester: UserEntity, dto: InviteBrokerPartnerDto): Promise&lt;void&gt; {
+        const allowedPartnerRoleIds &#x3D; await this.supplyChainService.getPartnerRoleIds(requester.roleId);
+
+        let canInvite &#x3D; false;
+        if (dto.facilityId) {
+            const broker &#x3D; await this.facilityService.findById(dto.facilityId, { relations: [&#x27;type&#x27;] });
+            if (broker.typeName !&#x3D;&#x3D; UserRoleEnum.BROKER) {
+                throw new BadRequestException({ translate: &#x27;validation.can_not_invite_this_role&#x27; });
+            }
+
+            canInvite &#x3D; await this.canInviteExistingBroker(broker, allowedPartnerRoleIds, dto);
+        } else if (dto.partners?.length) {
+            canInvite &#x3D; await this.hasAllValidAddingPartner(dto, allowedPartnerRoleIds);
+        }
+
+        if (!canInvite) {
+            throw new BadRequestException({ translate: &#x27;validation.can_not_invite_this_role&#x27; });
+        }
+    }
+
+    private async canInviteExistingBroker(
+        broker: FacilityEntity,
+        allowedPartnerRoleIds: string[],
+        dto: InviteBrokerPartnerDto
+    ): Promise&lt;boolean&gt; {
+        if (dto.partners?.length) {
+            return this.hasAllValidAddingPartner(dto, allowedPartnerRoleIds);
+        }
+
+        const validPartners &#x3D; await this.facilityPartnerService.getFacilityPartnersByTypeIds(
+            broker,
+            allowedPartnerRoleIds
+        );
+        return validPartners.length &gt; 0;
+    }
+
+    private async hasAllValidAddingPartner(
+        dto: InviteBrokerPartnerDto,
+        allowedPartnerRoleIds: string[]
+    ): Promise&lt;boolean&gt; {
+        const existingPartnerIds &#x3D; (dto.partners || [])
+            .filter((partner) &#x3D;&gt; partner.facilityId)
+            .map(({ facilityId }) &#x3D;&gt; facilityId);
+        if (existingPartnerIds.length) {
+            const facilities &#x3D; await this.facilityService.findByIds(existingPartnerIds, { relations: [&#x27;type&#x27;] });
+
+            const partnerRoleIds &#x3D; facilities.map((facility) &#x3D;&gt; facility.typeId);
+            const canInvite &#x3D; await this.hasAllValidRoleId(partnerRoleIds, allowedPartnerRoleIds);
+            if (!canInvite) {
+                return false;
+            }
+        }
+
+        const newPartnerRoleIds &#x3D; dto.partners
+            .filter((partner) &#x3D;&gt; !partner.facilityId)
+            .map((facility) &#x3D;&gt; facility.partnerInformation.roleId);
+        return this.hasAllValidRoleId(newPartnerRoleIds, allowedPartnerRoleIds);
+    }
+
+    private hasAllValidRoleId(partnerRoleIds: string[], allowedPartnerRoleIds: string[]): boolean {
+        for (const partnerRoleId of partnerRoleIds) {
+            if (!allowedPartnerRoleIds.includes(partnerRoleId)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private checkValidateUniqueEmailAndPhoneNumber(dto: InviteBrokerPartnerDto) {
+        if (isEmpty(dto.partners)) {
+            return;
+        }
+        for (const partner of dto.partners) {
+            if (dto.facilityId || partner.facilityId) {
+                continue;
+            }
+
+            if (dto.userInformation.email &#x3D;&#x3D;&#x3D; partner.userInformation.email) {
+                throw new ValidateException([
+                    {
+                        property: &#x27;email&#x27;,
+                        constraints: {
+                            invalidField: {
+                                message: &#x27;The Email of broker is duplicated with the brokers partner.&#x27;,
+                                detail: {}
+                            } as any
+                        }
+                    }
+                ]);
+            }
+
+            if (
+                dto.userInformation.phoneNumber &amp;&amp;
+                dto.userInformation.phoneNumber &#x3D;&#x3D;&#x3D; partner.userInformation.phoneNumber
+            ) {
+                throw new ValidateException([
+                    {
+                        property: &#x27;phoneNumber&#x27;,
+                        constraints: {
+                            invalidField: {
+                                message: &#x27;The phone number of broker is duplicated with the brokers partner.&#x27;,
+                                detail: {}
+                            } as any
+                        }
+                    }
+                ]);
+            }
+        }
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'BrokerPartnerService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

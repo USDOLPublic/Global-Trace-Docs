@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>6. Risk assessment - Global Trace</title>
+<meta name="generator" content="Hugo 0.125.1">
+<link href="./index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="https://globaltrace-docs.uat.dgnx.io/confluence/risk_assessment/">
+<link rel="stylesheet" href="https://globaltrace-docs.uat.dgnx.io/confluence/css/theme.min.css">
+<link rel="stylesheet" href="https://globaltrace-docs.uat.dgnx.io/confluence/css/chroma.min.css">
+<script defer src="./js/fontawesome6/all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js" integrity="sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha256-4XodgW4TwIJuDtf+v6vDJ39FVxI0veC/kSCCmnFp7ck=" crossorigin="anonymous"></script>
+<script src="https://globaltrace-docs.uat.dgnx.io/confluence/js/bundle.js"></script><style>
+:root {--custom-background-color: grey;}
+</style>
+<meta property="og:url" content="https://globaltrace-docs.uat.dgnx.io/confluence/risk_assessment/">
+  <meta property="og:site_name" content="Global Trace">
+  <meta property="og:title" content="6. Risk assessment">
+  <meta property="og:description" content="The risk assessment methodology is selected in from the following list:
+Highest risk: Maximum risk for the category/indicator/sub-indicator triple. Average risk: Average risk for the category/indicator/sub-indicator triple Weighted average. A weighted average is calculated, enabling the super administrator to assign different weights to the different types of ESG Assessment reports. In the case where weighted average is selected, a further screen is provided for the user to enter weights for the different input types that were registered during system configuration.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="website">
+    <meta property="og:image" content="https://globaltrace-docs.uat.dgnx.io/confluence/images/icon.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://globaltrace-docs.uat.dgnx.io/confluence/images/icon.png"><meta name="twitter:title" content="6. Risk assessment">
+<meta name="twitter:description" content="">
+
+  <meta itemprop="name" content="6. Risk assessment">
+  <meta itemprop="description" content="The risk assessment methodology is selected in from the following list:
+Highest risk: Maximum risk for the category/indicator/sub-indicator triple. Average risk: Average risk for the category/indicator/sub-indicator triple Weighted average. A weighted average is calculated, enabling the super administrator to assign different weights to the different types of ESG Assessment reports. In the case where weighted average is selected, a further screen is provided for the user to enter weights for the different input types that were registered during system configuration.">
+  <meta itemprop="datePublished" content="2024-04-20T15:43:10+09:30">
+  <meta itemprop="dateModified" content="2024-04-20T15:43:10+09:30">
+  <meta itemprop="wordCount" content="277">
+  <meta itemprop="image" content="https://globaltrace-docs.uat.dgnx.io/confluence/images/icon.png"></head>
+<body>
+
+<div class="container"><header>
+<h1>Global Trace</h1>
+</header>
+
+
+<div class="content-container">
+<main><h1>6. Risk assessment</h1><p>The risk assessment methodology is selected in from the following list:</p>
+<ul>
+<li>Highest risk: Maximum risk for the category/indicator/sub-indicator triple.</li>
+<li>Average risk: Average risk for the category/indicator/sub-indicator triple</li>
+<li>Weighted average. A weighted average is calculated, enabling the super administrator to assign different weights to the different types of ESG Assessment reports.</li>
+</ul>
+<p>In the case where weighted average is selected, a further screen is provided for the user to enter weights for the different input types that were registered during system configuration. The list is dynamically created based on the following:</p>
+<ul>
+<li>Geography is added if a geographic risk metric is uploaded in the first tab of the template spreadsheet.</li>
+<li>Product risk listings  is added if a geographic risk metric is uploaded in the first tab of the template spreadsheet.</li>
+<li>If any producer role has been assigned the ability to submit an assessment, SAQs will be listed.</li>
+<li>If any administrator role has been assigned the ability to submit DNA test results, it will appear in the list.</li>
+</ul>
+<p>Each ESG Assessment role that has been assigned the ability to submit reports will appear separately in the list. This allows the super administrator to assign more weight to reports from one assessor than others.</p>
+<p><img src="https://globaltrace-docs.uat.dgnx.io/confluence/images/weighted_average.png" alt="targets"></p>
+<p>Regardless of the risk methodology selected, the Indicator List and ESG Assessment reports are combined together as:</p>
+<p><code>Weight = Risk of reported case (low=1; medium=2; high=3) X Severity from Indicator List</code></p>
+<p>This means that each report will result in a score between 1 to 15 (1 indicating low risk, 15 indicating extreme risk), signifying the severity of the reported incidence.</p>
+<p>Once a complete list of weights for each report is calculated, they are combined using the selected methodology.</p>
+<div class="edit-meta">
+Last updated on 20 Apr 2024
+
+
+<br>
+Published on 20 Apr 2024
+<br></div><nav class="pagination"><a class="nav nav-prev" href="https://globaltrace-docs.uat.dgnx.io/confluence/assessment_config/" title="5. Assessment configuration"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - 5. Assessment configuration</a>
+<a class="nav nav-next" href="https://globaltrace-docs.uat.dgnx.io/confluence/external_risk/" title="Appendix A. External risk">Next - Appendix A. External risk <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main>
+<div class="sidebar">
+
+<nav class="open-menu">
+<ul>
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/">Home</a></li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/define_product/">1. Product definition</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/define_role/">2. Role definition</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/map_chain/">3. Mapping the supply chain</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/indicator_list/">4. List of Indicators</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/assessment_config/">5. Assessment configuration</a>
+  
+</li>
+
+<li class=" active"><a href="https://globaltrace-docs.uat.dgnx.io/confluence/risk_assessment/">6. Risk assessment</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/external_risk/">Appendix A. External risk</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/translations/">Appendix B. Translations</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/tracing/">Appendix C. Product tracing</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/purchase_sale/">Appendix D. Purchases and sales</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/open_supply/">Appendix E. Open Supply ID</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/resources/">Appendx F. Resources</a>
+  
+<ul class="sub-menu">
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/resources/cobalt/">Cobalt Pilot Configuration</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/resources/cotton/">Cotton Pilot Configuration</a>
+  
+</li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>

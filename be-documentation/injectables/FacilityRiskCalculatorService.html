@@ -1,0 +1,1291 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Global Trace BE documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">Global Trace BE documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Injectables</li>
+  <li class="breadcrumb-item" >FacilityRiskCalculatorService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/risk-assessments/services/facility-risk-calculator.service.ts</code>
+        </p>
+
+
+
+
+
+            <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#calculateAvgScore" >calculateAvgScore</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#calculateMaxScore" >calculateMaxScore</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#calculateRisk" >calculateRisk</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#calculateRiskByMethodology" >calculateRiskByMethodology</a>
+                            </li>
+                            <li>
+                                <a href="#calculateRiskScore" >calculateRiskScore</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#calculateWeightedScore" >calculateWeightedScore</a>
+                            </li>
+                            <li>
+                                <a href="#countByRiskLevel" >countByRiskLevel</a>
+                            </li>
+                            <li>
+                                <a href="#countByRiskLevels" >countByRiskLevels</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getFactor" >getFactor</a>
+                            </li>
+                            <li>
+                                <a href="#getNote" >getNote</a>
+                            </li>
+                            <li>
+                                <a href="#getScoreCap" >getScoreCap</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                                <span class="modifier">Public</span>
+                        <code>constructor(riskAssessmentService: <a href="../injectables/RiskAssessmentService.html" target="_self">RiskAssessmentService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/risk-assessments/services/facility-risk-calculator.service.ts:27</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>riskAssessmentService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/RiskAssessmentService.html" target="_self" >RiskAssessmentService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="calculateAvgScore"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>calculateAvgScore</b></span>
+                        <a href="#calculateAvgScore"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>calculateAvgScore(riskItems: ResultRiskItemType[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="61"
+                                    class="link-to-prism">src/risk-assessments/services/facility-risk-calculator.service.ts:61</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>riskItems</td>
+                                            <td>
+                                                        <code>ResultRiskItemType[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="calculateMaxScore"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>calculateMaxScore</b></span>
+                        <a href="#calculateMaxScore"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>calculateMaxScore(riskItems: ResultRiskItemType[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="55"
+                                    class="link-to-prism">src/risk-assessments/services/facility-risk-calculator.service.ts:55</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>riskItems</td>
+                                            <td>
+                                                        <code>ResultRiskItemType[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="calculateRisk"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>calculateRisk</b></span>
+                        <a href="#calculateRisk"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>calculateRisk(riskItems: ResultRiskItemType[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="30"
+                                    class="link-to-prism">src/risk-assessments/services/facility-risk-calculator.service.ts:30</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>riskItems</td>
+                                            <td>
+                                                        <code>ResultRiskItemType[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#RiskType" target="_self" >Promise&lt;RiskType&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="calculateRiskByMethodology"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>calculateRiskByMethodology</b></span>
+                        <a href="#calculateRiskByMethodology"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>calculateRiskByMethodology(riskItems: ResultRiskItemType[], riskMethodology: <a href="../entitys/RiskAssessmentEntity.html" target="_self">RiskAssessmentEntity</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="35"
+                                    class="link-to-prism">src/risk-assessments/services/facility-risk-calculator.service.ts:35</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>riskItems</td>
+                                            <td>
+                                                        <code>ResultRiskItemType[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>riskMethodology</td>
+                                            <td>
+                                                            <code><a href="../entitys/RiskAssessmentEntity.html" target="_self" >RiskAssessmentEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#RiskType" target="_self" >RiskType</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="calculateRiskScore"></a>
+                    <span class="name">
+                        <span ><b>calculateRiskScore</b></span>
+                        <a href="#calculateRiskScore"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>calculateRiskScore(riskMethodology: <a href="../entitys/RiskAssessmentEntity.html" target="_self">RiskAssessmentEntity</a>, riskItems: ResultRiskItemType[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="44"
+                                    class="link-to-prism">src/risk-assessments/services/facility-risk-calculator.service.ts:44</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>riskMethodology</td>
+                                            <td>
+                                                            <code><a href="../entitys/RiskAssessmentEntity.html" target="_self" >RiskAssessmentEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>riskItems</td>
+                                            <td>
+                                                        <code>ResultRiskItemType[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="calculateWeightedScore"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>calculateWeightedScore</b></span>
+                        <a href="#calculateWeightedScore"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>calculateWeightedScore(riskMethodology: <a href="../entitys/RiskAssessmentEntity.html" target="_self">RiskAssessmentEntity</a>, riskItems: ResultRiskItemType[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="65"
+                                    class="link-to-prism">src/risk-assessments/services/facility-risk-calculator.service.ts:65</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>riskMethodology</td>
+                                            <td>
+                                                            <code><a href="../entitys/RiskAssessmentEntity.html" target="_self" >RiskAssessmentEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>riskItems</td>
+                                            <td>
+                                                        <code>ResultRiskItemType[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="countByRiskLevel"></a>
+                    <span class="name">
+                        <span ><b>countByRiskLevel</b></span>
+                        <a href="#countByRiskLevel"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>countByRiskLevel(riskItems: ResultRiskItemType[], riskLevel: <a href="../undefineds/RiskScoreLevelEnum.html" target="_self">RiskScoreLevelEnum</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="107"
+                                    class="link-to-prism">src/risk-assessments/services/facility-risk-calculator.service.ts:107</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>riskItems</td>
+                                            <td>
+                                                        <code>ResultRiskItemType[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>riskLevel</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/enumerations.html#RiskScoreLevelEnum" target="_self" >RiskScoreLevelEnum</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="countByRiskLevels"></a>
+                    <span class="name">
+                        <span ><b>countByRiskLevels</b></span>
+                        <a href="#countByRiskLevels"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>countByRiskLevels(riskItems: ResultRiskItemType[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="98"
+                                    class="link-to-prism">src/risk-assessments/services/facility-risk-calculator.service.ts:98</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>riskItems</td>
+                                            <td>
+                                                        <code>ResultRiskItemType[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#CountRiskLevel" target="_self" >CountRiskLevel</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getFactor"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>getFactor</b></span>
+                        <a href="#getFactor"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getFactor(riskMethodology: <a href="../entitys/RiskAssessmentEntity.html" target="_self">RiskAssessmentEntity</a>, riskItem: <a href="../undefineds/ResultRiskItemType.html" target="_self">ResultRiskItemType</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="81"
+                                    class="link-to-prism">src/risk-assessments/services/facility-risk-calculator.service.ts:81</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>riskMethodology</td>
+                                            <td>
+                                                            <code><a href="../entitys/RiskAssessmentEntity.html" target="_self" >RiskAssessmentEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>riskItem</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#ResultRiskItemType" target="_self" >ResultRiskItemType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getNote"></a>
+                    <span class="name">
+                        <span ><b>getNote</b></span>
+                        <a href="#getNote"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getNote(riskItem: <a href="../undefineds/RiskItemType.html" target="_self">RiskItemType</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="126"
+                                    class="link-to-prism">src/risk-assessments/services/facility-risk-calculator.service.ts:126</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>riskItem</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#RiskItemType" target="_self" >RiskItemType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getScoreCap"></a>
+                    <span class="name">
+                        <span ><b>getScoreCap</b></span>
+                        <a href="#getScoreCap"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getScoreCap(riskScoreLevel: <a href="../undefineds/RiskScoreLevelEnum.html" target="_self">RiskScoreLevelEnum</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="111"
+                                    class="link-to-prism">src/risk-assessments/services/facility-risk-calculator.service.ts:111</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>riskScoreLevel</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/enumerations.html#RiskScoreLevelEnum" target="_self" >RiskScoreLevelEnum</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@nestjs/common&#x27;;
+import { maxBy, meanBy } from &#x27;lodash&#x27;;
+import { RiskAssessmentEntity } from &#x27;~risk-assessments/entities/risk-assessment.entity&#x27;;
+import { MethodologyEnum } from &#x27;~risk-assessments/enums/methodology.enum&#x27;;
+import { RiskSourceEnum } from &#x27;~risk-assessments/enums/risk-source.enum&#x27;;
+import { convertRiskLevel } from &#x27;~risk-assessments/helpers/convert-risk-level.helper&#x27;;
+import { ResultRiskItemType } from &#x27;~risk-assessments/types/result-risk-item.type&#x27;;
+import { RiskType } from &#x27;~risk-assessments/types/risk.type&#x27;;
+import { RiskAssessmentService } from &#x27;./risk-assessment.service&#x27;;
+import { RiskScoreLevelEnum } from &#x27;~self-assessments/enums/risk-score-level.enum&#x27;;
+import { CountRiskLevel } from &#x27;~risk-assessments/types/count-risk-level.type&#x27;;
+import { RiskItemType } from &#x27;~risk-assessments/types/risk-item.type&#x27;;
+import { I18nHelper } from &#x27;~core/helpers/i18n.helper&#x27;;
+import {
+    AVG_NUMBER_RISK_SCORE_LEVEL,
+    MAX_RISK_SCORE_EXTREME_LEVEL,
+    MAX_RISK_SCORE_HIGH_LEVEL,
+    MAX_RISK_SCORE_LOW_LEVEL,
+    MAX_RISK_SCORE_MEDIUM_LEVEL,
+    MIN_RISK_SCORE_EXTREME_LEVEL,
+    MIN_RISK_SCORE_HIGH_LEVEL,
+    MIN_RISK_SCORE_LOW_LEVEL,
+    MIN_RISK_SCORE_MEDIUM_LEVEL
+} from &#x27;~risk-assessments/constants/risk-score-level.constant&#x27;;
+
+@Injectable()
+export class FacilityRiskCalculatorService {
+    public constructor(private riskAssessmentService: RiskAssessmentService) {}
+
+    async calculateRisk(riskItems: ResultRiskItemType[]): Promise&lt;RiskType&gt; {
+        const riskMethodology &#x3D; await this.riskAssessmentService.getRiskAssessment();
+        return this.calculateRiskByMethodology(riskItems, riskMethodology);
+    }
+
+    private calculateRiskByMethodology(
+        riskItems: ResultRiskItemType[],
+        riskMethodology: RiskAssessmentEntity
+    ): RiskType {
+        const score &#x3D; this.calculateRiskScore(riskMethodology, riskItems);
+        const level &#x3D; convertRiskLevel(score);
+        return { score, level };
+    }
+
+    calculateRiskScore(riskMethodology: RiskAssessmentEntity, riskItems: ResultRiskItemType[]): number {
+        switch (riskMethodology.methodology) {
+            case MethodologyEnum.AVERAGE_RISK:
+                return this.calculateAvgScore(riskItems);
+            case MethodologyEnum.HIGHEST_RISK:
+                return this.calculateMaxScore(riskItems);
+            default:
+                return this.calculateWeightedScore(riskMethodology, riskItems);
+        }
+    }
+
+    private calculateMaxScore(riskItems: ResultRiskItemType[]): number {
+        if (riskItems.length) {
+            return maxBy(riskItems, ({ risk }) &#x3D;&gt; risk.score).risk.score;
+        }
+    }
+
+    private calculateAvgScore(riskItems: ResultRiskItemType[]): number {
+        return meanBy(riskItems, ({ risk }) &#x3D;&gt; risk.score);
+    }
+
+    private calculateWeightedScore(riskMethodology: RiskAssessmentEntity, riskItems: ResultRiskItemType[]): number {
+        let sum &#x3D; 0;
+        let factorSum &#x3D; 0;
+
+        for (const riskItem of riskItems) {
+            const factor &#x3D; this.getFactor(riskMethodology, riskItem);
+            sum +&#x3D; riskItem.risk.score * factor;
+            factorSum +&#x3D; factor;
+        }
+
+        if (factorSum &#x3D;&#x3D;&#x3D; 0) {
+            return 0;
+        }
+        return sum / factorSum;
+    }
+
+    private getFactor(riskMethodology: RiskAssessmentEntity, riskItem: ResultRiskItemType): number {
+        switch (riskItem.source) {
+            case RiskSourceEnum.PRODUCT_RISK_LISTINGS:
+                return riskMethodology.listOfGoodsWeight;
+            case RiskSourceEnum.DNA_TEST_RESULTS:
+                return riskMethodology.dnaWeight;
+            case RiskSourceEnum.SAQ:
+                return riskMethodology.saqsWeight;
+            case RiskSourceEnum.ADMIN:
+                return riskMethodology.hotlineWeight;
+            case RiskSourceEnum.CAP:
+                return riskMethodology.capWeight;
+            default:
+                return riskMethodology.roleWeights.find(({ roleId }) &#x3D;&gt; roleId &#x3D;&#x3D;&#x3D; riskItem.roleId)?.weight ?? 0;
+        }
+    }
+
+    countByRiskLevels(riskItems: ResultRiskItemType[]): CountRiskLevel {
+        return {
+            extreme: this.countByRiskLevel(riskItems, RiskScoreLevelEnum.EXTREME),
+            high: this.countByRiskLevel(riskItems, RiskScoreLevelEnum.HIGH),
+            medium: this.countByRiskLevel(riskItems, RiskScoreLevelEnum.MEDIUM),
+            low: this.countByRiskLevel(riskItems, RiskScoreLevelEnum.LOW)
+        };
+    }
+
+    countByRiskLevel(riskItems: ResultRiskItemType[], riskLevel: RiskScoreLevelEnum): number {
+        return riskItems.filter(({ risk }) &#x3D;&gt; risk.level &#x3D;&#x3D;&#x3D; riskLevel).length;
+    }
+
+    getScoreCap(riskScoreLevel: RiskScoreLevelEnum): number {
+        switch (riskScoreLevel) {
+            case RiskScoreLevelEnum.EXTREME:
+                return (MAX_RISK_SCORE_EXTREME_LEVEL + MIN_RISK_SCORE_EXTREME_LEVEL) / AVG_NUMBER_RISK_SCORE_LEVEL;
+            case RiskScoreLevelEnum.HIGH:
+                return (MAX_RISK_SCORE_HIGH_LEVEL + MIN_RISK_SCORE_HIGH_LEVEL) / AVG_NUMBER_RISK_SCORE_LEVEL;
+            case RiskScoreLevelEnum.MEDIUM:
+                return (MAX_RISK_SCORE_MEDIUM_LEVEL + MIN_RISK_SCORE_MEDIUM_LEVEL) / AVG_NUMBER_RISK_SCORE_LEVEL;
+            case RiskScoreLevelEnum.LOW:
+                return (MAX_RISK_SCORE_LOW_LEVEL + MIN_RISK_SCORE_LOW_LEVEL) / AVG_NUMBER_RISK_SCORE_LEVEL;
+            default:
+                return 0;
+        }
+    }
+
+    getNote(riskItem: RiskItemType): string {
+        switch (riskItem.source) {
+            case RiskSourceEnum.PRODUCT_RISK_LISTINGS:
+                return riskItem.additionData.good;
+            case RiskSourceEnum.INCIDENT_REPORT:
+            case RiskSourceEnum.ADMIN:
+                return riskItem.additionData.reportMessage;
+            case RiskSourceEnum.SAQ:
+                const question &#x3D; I18nHelper.getFieldTranslationText(
+                    { translation: riskItem.additionData.saqAnswer.question.title },
+                    &#x27;title&#x27;
+                );
+                const response &#x3D; I18nHelper.getFieldTranslationText(riskItem.additionData.saqAnswer.response, &#x27;option&#x27;);
+                return &#x60;${question} ${response}&#x60;;
+            default:
+                return null;
+        }
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'FacilityRiskCalculatorService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

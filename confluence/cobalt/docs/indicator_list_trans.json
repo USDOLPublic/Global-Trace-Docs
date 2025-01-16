@@ -1,0 +1,4124 @@
+[
+    {
+        "id": "25106f91-ced0-464c-abcc-cac34b749579",
+        "name": "All",
+        "translation": {
+            "en": "All",
+            "fr": "Tous"
+        },
+        "index": 0
+    },
+    {
+        "id": "8793362d-b7e2-48a2-a528-90477056238b",
+        "name": "Due Diligence Management System",
+        "translation": {
+            "en": "Due Diligence Management System",
+            "fr": "Système de gestion de la diligence raisonnable"
+        },
+        "index": 1
+    },
+    {
+        "id": "a8a3aa10-6fb0-45f1-86c5-590682c58eb0",
+        "name": "Environment",
+        "translation": {
+            "en": "Environment",
+            "fr": "Environnement"
+        },
+        "index": 2
+    },
+    {
+        "id": "1fe03600-5a81-4086-9a21-a8c85275ae2f",
+        "name": "Fair Trade",
+        "translation": {
+            "en": "Fair Trade",
+            "fr": "Commerce équitable"
+        },
+        "index": 3
+    },
+    {
+        "id": "08014567-e2ec-4918-b415-b8408231be8c",
+        "name": "Occupational Safety & Health",
+        "translation": {
+            "en": "Occupational Safety & Health",
+            "fr": "Santé et sécurité au travail"
+        },
+        "index": 4
+    },
+    {
+        "id": "2f23504b-86e9-46c0-9af8-a882c6094fec",
+        "name": "Organizational Governance",
+        "translation": {
+            "en": "Organizational Governance",
+            "fr": "Gouvernance organisationnelle"
+        },
+        "index": 5
+    },
+    {
+        "id": "7c17d2b6-fb9e-45cc-979c-4e3a5bee83a1",
+        "name": "Labor",
+        "translation": {
+            "en": "Labor",
+            "fr": "Travail"
+        },
+        "index": 6
+    },
+    {
+        "id": "9a3da57b-9daa-4aa8-9282-32cb07060ac9",
+        "name": "Country based risk",
+        "translation": {
+            "en": "Country based risk",
+            "fr": "Risque basé sur le pays"
+        },
+        "index": 7
+    },
+    {
+        "id": "71a68dd6-6752-4b5c-a3e3-45471fcb548e",
+        "name": "Good produced with Child labor",
+        "translation": {
+            "en": "Good produced with Child labor",
+            "fr": "Produits issus du travail des enfants"
+        },
+        "index": 8
+    },
+    {
+        "id": "e13730a4-7ce4-4219-b56f-c48aa028745b",
+        "name": "Good produced with Forced labor",
+        "translation": {
+            "en": "Good produced with Forced labor",
+            "fr": "Produits issus du travail forcé"
+        },
+        "index": 9
+    },
+    {
+        "id": "efb54b97-02be-40c7-b39a-23eddbb8cc1d",
+        "name": "Physical violence",
+        "translation": {
+            "en": "Physical violence",
+            "fr": "Violence physique"
+        },
+        "index": 10
+    },
+    {
+        "id": "f5ffe8ca-8db2-40e8-a7be-e700d437f41b",
+        "name": "Not a registered mining cooperative",
+        "translation": {
+            "en": "Not a registered mining cooperative",
+            "fr": "Coopérative minière non enregistrée"
+        }, 
+        "index": 11
+    },
+    {
+        "id": "6d03d47c-0f9f-4c2e-aa39-deeb077d59f0",
+        "name": "None",
+        "translation": {
+            "en": "None",
+            "fr": "Aucun"
+        },
+        "index": 12
+    },
+    {
+        "id": "4b78f8ac-a2a7-4379-8cde-16619a78edc3",
+        "name": "None",
+        "translation": {
+            "en": "None",
+            "fr": "Aucun"
+        },
+        "index": 13
+    },
+    {
+        "id": "ae774fc1-9fe4-44e8-afe3-d7b9f6c07728",
+        "name": "Audit",
+        "translation": {
+            "en": "Audit",
+            "fr": "Audit"
+        },
+        "index": 14
+    },
+    {
+        "id": "5206437e-301d-4347-862b-9c1986be1a5b",
+        "name": "Missing audit",
+        "translation": {
+            "en": "Missing audit",
+            "fr": "Audit manquant"
+        },
+        "index": 15
+    },
+    {
+        "id": "b967b4e9-7eb6-408a-8339-56aa1e774da8",
+        "name": "No certification schemes",
+        "translation": {
+            "en": "No certification schemes",
+            "fr": "Absence de systèmes de certification"
+        },
+        "index": 16
+    },
+    {
+        "id": "b6e97631-6ddf-4a40-82d6-46db8a6556fb",
+        "name": "Product Documentation",
+        "translation": {
+            "en": "Product Documentation",
+            "fr": "Documentation du produit"
+        },
+        "index": 17
+    },
+    {
+        "id": "0ca8e47f-db78-4d37-8073-bae7dc1a9b36",
+        "name": "Country of origin with known risks",
+        "translation": {
+            "en": "Country of origin with known risks",
+            "fr": "Pays d'origine présentant des risques connus"
+        },
+        "index": 18
+    },
+    {
+        "id": "60fb98f7-26dc-448e-bc70-d138f60ad079",
+        "name": "Incomplete additional documentation",
+        "translation": {
+            "en": "Incomplete additional documentation",
+            "fr": "Documentation supplémentaire incomplète"
+        },
+        "index": 19
+    },
+    {
+        "id": "a491077c-eee5-4d2d-a950-9ac737e9c04e",
+        "name": "Incomplete documentation on product origin",
+        "translation": {
+            "en": "Incomplete documentation on product origin",
+            "fr": "Documentation incomplète sur l'origine des produits"
+        },
+        "index": 20
+    },
+    {
+        "id": "6c57b26c-7265-4c93-8807-cf47c94e1a8f",
+        "name": "Incomplete documentation on purchases",
+        "translation": {
+            "en": "Incomplete documentation on purchases",
+            "fr": "Documentation incomplète sur les achats"
+        },
+        "index": 21
+    },
+    {
+        "id": "5ae01cb3-0cb8-4fde-a8ff-3f9838910dd3",
+        "name": "Incomplete documentation on sales",
+        "translation": {
+            "en": "Incomplete documentation on sales",
+            "fr": "Documentation incomplète sur les ventes"
+        },
+        "index": 22
+    },
+    {
+        "id": "791e3b79-bf3a-4068-afbd-b50a0d1c7466",
+        "name": "Incomplete documentation on transport",
+        "translation": {
+            "en": "Incomplete documentation on transport",
+            "fr": "Documentation incomplète sur le transport"
+        },
+        "index": 23
+    },
+    {
+        "id": "8b5360f0-399c-4b31-af12-5a9ce9ba3edb",
+        "name": "Policy fails to cover all risks in the OECD Due Diligence Guidance Annex II Model Policy or the worst forms of child labor",
+        "translation": {
+            "en": "Policy fails to cover all risks in the OECD Due Diligence Guidance Annex II Model Policy or the worst forms of child labor",
+            "fr": "La politique ne couvre pas tous les risques mentionnés dans le modèle de politique ou les pires formes de travail des enfants de l'annexe II du Guide de l'OCDE sur le devoir de diligence"
+        },
+        "index": 24
+    },
+    {
+        "id": "7bcecd34-1f65-42b1-bb2c-63c82e5925ef",
+        "name": "Product Testing",
+        "translation": {
+            "en": "Product Testing",
+            "fr": "Test du produit"
+        },
+        "index": 25
+    },
+    {
+        "id": "fa845146-bd50-424f-a3bc-81348d2ffa3c",
+        "name": "Failed DNA Test",
+        "translation": {
+            "en": "Failed DNA Test",
+            "fr": "Test du produit"
+        },
+        "index": 26
+    },
+    {
+        "id": "11144c60-81d3-466a-a9df-d3eb0e28c242",
+        "name": "Supplier procedures",
+        "translation": {
+            "en": "Supplier procedures",
+            "fr": "Procédures des fournisseurs"
+        },
+        "index": 27
+    },
+    {
+        "id": "c5ff7d0d-dfd6-49da-b38c-934dabb93aa2",
+        "name": "Company does not conduct a supply chain survey of its relevant suppliers",
+        "translation": {
+            "en": "Company does not conduct a supply chain survey of its relevant suppliers",
+            "fr": "L'entreprise ne mène pas d'enquête sur la chaîne d'approvisionnement auprès de ses fournisseurs concernés"
+        },
+        "index": 28
+    },
+    {
+        "id": "f26d1888-3b2f-46e5-87b5-80ecce6de32a",
+        "name": "Complaints raised by groups of workers",
+        "translation": {
+            "en": "Complaints raised by groups of workers",
+            "fr": "Plaintes déposées par des groupes de travailleurs"
+        },
+        "index": 29
+    },
+    {
+        "id": "a5849dd5-bfd1-4aba-916b-4ad804957fd9",
+        "name": "Documentation does not extend to raw material extraction",
+        "translation": {
+            "en": "Documentation does not extend to raw material extraction",
+            "fr": "La documentation ne s'étend pas à l'extraction des matières premières"
+        },
+        "index": 30
+    },
+    {
+        "id": "511ee1aa-0a72-4a34-9051-233aba3e2c8b",
+        "name": "Does not require suppliers to exercise due diligence over the minerals supply chain in accordance with the OECD Due Diligence Guidance",
+        "translation": {
+            "en": "Does not require suppliers to exercise due diligence over the minerals supply chain in accordance with the OECD Due Diligence Guidance",
+            "fr": "L'entreprise n'exige pas de ses fournisseurs qu'ils fassent preuve de diligence raisonnable dans la chaîne d'approvisionnement en minerais, conformément au Guide de l'OCDE sur le devoir de diligence"
+        },
+        "index": 31
+    },
+    {
+        "id": "428e7695-45a1-4f86-91bb-59cd9200d009",
+        "name": "Failure to embed responsible business conduct in enterprise policy and management system",
+        "translation": {
+            "en": "Failure to embed responsible business conduct in enterprise policy and management system",
+            "fr": "Absence d'intégration de la conduite responsable des affaires dans la politique et le système de gestion de l'entreprise "
+        },
+        "index": 32
+    },
+    {
+        "id": "5875f899-01fe-4312-9a91-d9fca41019a3",
+        "name": "Failure to require that suppliers source minerals from mines/traders/smelters whose due diligence practices have been validated by an independent third party audit or assessment program",
+        "translation": {
+            "en": "Failure to require that suppliers source minerals from mines/traders/smelters whose due diligence practices have been validated by an independent third party audit or assessment program",
+            "fr": "Ne pas exiger des fournisseurs qu'ils s'approvisionnent en minerais auprès de mines, de négociants ou de fonderies dont les pratiques de diligence raisonnable ont été validées par un audit ou un programme d'évaluation d'une tierce partie indépendante."
+        },
+        "index": 33
+    },
+    {
+        "id": "7ef06318-41c0-4228-a7c1-a79e839c1271",
+        "name": "Failure to review due diligence information received from  suppliers against the company’s expectations",
+        "translation": {
+            "en": "Failure to review due diligence information received from  suppliers against the company’s expectations",
+            "fr": "Absence d'examen des informations de diligence raisonnable reçues des fournisseurs par rapport aux attentes de l'entreprise"
+        },
+        "index": 34
+    },
+    {
+        "id": "969c831f-da3c-487f-80b7-6726ee48073f",
+        "name": "Incomplete additional documentation",
+        "translation": {
+            "en": "Incomplete additional documentation",
+            "fr": "Documentation supplémentaire incomplète"
+        },
+        "index": 35
+    },
+    {
+        "id": "55dd9aa8-83c8-47f9-9bb3-1f1f99426142",
+        "name": "Incomplete documentation on purchases and/or transactions",
+        "translation": {
+            "en": "Incomplete documentation on purchases and/or transactions",
+            "fr": "Documentation incomplète sur les achats et/ou les transactions"
+        },
+        "index": 36
+    },
+    {
+        "id": "37ee1935-a044-4247-95fe-a544c4039c1a",
+        "name": "Incomplete policies",
+        "translation": {
+            "en": "Incomplete policies",
+            "fr": "Politiques incomplètes"
+        },
+        "index": 37
+    },
+    {
+        "id": "de6354b2-d3a6-447f-b1b5-1c132e20fb20",
+        "name": "Incomplete policy of disclosing sub-contractors",
+        "translation": {
+            "en": "Incomplete policy of disclosing sub-contractors",
+            "fr": "Politique de divulgation des sous-traitants incomplète"
+        },
+        "index": 38
+    },
+    {
+        "id": "8fd4b29f-af90-450c-8a45-224956922621",
+        "name": "Incomplete policy of disclosing suppliers",
+        "translation": {
+            "en": "Incomplete policy of disclosing suppliers",
+            "fr": "Politique de divulgation des fournisseurs incomplète"
+        },
+        "index": 39
+    },
+    {
+        "id": "590cd034-7bca-4f61-b928-b81d56396936",
+        "name": "Limited use of product tracking systems",
+        "translation": {
+            "en": "Limited use of product tracking systems",
+            "fr": "Utilisation limitée des systèmes de suivi des produits"
+        },
+        "index": 40
+    },
+    {
+        "id": "05fba650-e494-4eab-9cc4-89c11ce0f5bd",
+        "name": "No annual due diligence implementation report",
+        "translation": {
+            "en": "No annual due diligence implementation report",
+            "fr": "Absence de rapport annuel sur la mise en œuvre du devoir de diligence"
+        },
+        "index": 41
+    },
+    {
+        "id": "8d56aa4a-817f-4d1b-ab8b-b4a975f96dc7",
+        "name": "No grievance mechanism to effectively receive and respond to complaints.",
+        "translation": {
+            "en": "No grievance mechanism to effectively receive and respond to complaints.",
+            "fr": "Absence de mécanisme de réclamation permettant de recevoir et de traiter efficacement les plaintes. "
+        },
+        "index": 42
+    },
+    {
+        "id": "8d95da44-af98-4b64-bfea-641ed821ccfd",
+        "name": "No information captured or provided during assessment related to the form, type, weight and physical description of minerals/metals",
+        "translation": {
+            "en": "No information captured or provided during assessment related to the form, type, weight and physical description of minerals/metals",
+            "fr": "Aucune information saisie ou fournie lors de l'évaluation concernant la forme, le type, le poids et la description physique des minéraux/métaux."
+        },
+        "index": 43
+    },
+    {
+        "id": "56026c6f-5d46-4ce4-9024-edcb8c0ebdbb",
+        "name": "No policy for disclosing suppliers and sub-contracting",
+        "translation": {
+            "en": "No policy for disclosing suppliers and sub-contracting",
+            "fr": "Pas de politique de divulgation des fournisseurs et de la sous-traitance"
+        },
+        "index": 44
+    },
+    {
+        "id": "c716a97e-fdbe-4aad-bedb-bc08134a4314",
+        "name": "No policy of disclosing sub-contractors",
+        "translation": {
+            "en": "No policy of disclosing sub-contractors",
+            "fr": "Pas de politique de divulgation des sous-traitants"
+        },
+        "index": 45
+    },
+    {
+        "id": "65ba17f3-faa7-4408-842f-72ff02d2cd1d",
+        "name": "No policy of disclosing suppliers",
+        "translation": {
+            "en": "No policy of disclosing suppliers",
+            "fr": "Pas de politique de divulgation des fournisseurs"
+        },
+        "index": 46
+    },
+    {
+        "id": "89c3b960-0032-49db-b24b-6a4911f66bd9",
+        "name": "No publicly available minerals sourcing policy",
+        "translation": {
+            "en": "No publicly available minerals sourcing policy",
+            "fr": "Pas de politique d'approvisionnement en minerais accessible au public"
+        },
+        "index": 47
+    },
+    {
+        "id": "31d13e32-7456-45fa-b94b-5dded10362ce",
+        "name": "No strategy to respond to identified risks",
+        "translation": {
+            "en": "No strategy to respond to identified risks",
+            "fr": "Pas de stratégie pour répondre aux risques identifiés"
+        },
+        "index": 48
+    },
+    {
+        "id": "a2d2f1a5-a7b6-4fd9-ae47-ed550c57282c",
+        "name": "Purchase through intermediaries",
+        "translation": {
+            "en": "Purchase through intermediaries",
+            "fr": "Achat par le biais d'intermédiaires"
+        },
+        "index": 49
+    },
+    {
+        "id": "9d8e9e2e-97ae-4cee-8c86-2c0ebbbe8266",
+        "name": "Review process does not include corrective action management in a way that can mitigate risks with a mechanism to track indicators of improvement",
+        "translation": {
+            "en": "Review process does not include corrective action management in a way that can mitigate risks with a mechanism to track indicators of improvement",
+            "fr": "Le processus d'examen n'inclut pas la gestion des actions correctives de manière à atténuer les risques, avec un mécanisme de suivi des indicateurs d'amélioration. "
+        },
+        "index": 50
+    },
+    {
+        "id": "4348fbb5-c500-48d8-9dd1-ca89d4d3be15",
+        "name": "Top management level does not oversee supply chain",
+        "translation": {
+            "en": "Top management level does not oversee supply chain",
+            "fr": "L'encadrement supérieur ne supervise pas la chaîne d'approvisionnement"
+        },
+        "index": 51
+    },
+    {
+        "id": "bedec8d2-c873-4441-b3d1-edd925af9ca9",
+        "name": "Worker complaints are not resolved",
+        "translation": {
+            "en": "Worker complaints are not resolved",
+            "fr": "Les plaintes des travailleurs ne sont pas résolues"
+        },
+        "index": 52
+    },
+    {
+        "id": "69f8891d-3400-407b-92b0-74abead3d24a",
+        "name": "Community Dialogue",
+        "translation": {
+            "en": "Community Dialogue",
+            "fr": "Dialogue avec la communauté"
+        },
+        "index": 53
+    },
+    {
+        "id": "88b8ddd0-77c6-4da7-b7b4-a90ed81a99c9",
+        "name": "Missing evidence of consultation with local community",
+        "translation": {
+            "en": "Missing evidence of consultation with local community",
+            "fr": "Absence de preuve de consultation de la communauté locale"
+        },
+        "index": 54
+    },
+    {
+        "id": "04dccb0c-9e68-4558-8965-017d77becab3",
+        "name": "Missing policy on local community engagement",
+        "translation": {
+            "en": "Missing policy on local community engagement",
+            "fr": "Absence de politique sur l'engagement des communautés locales"
+        },
+        "index": 55
+    },
+    {
+        "id": "f73d0114-67b4-4a27-8610-5bda42ed78d1",
+        "name": "Mine Rehabilitation",
+        "translation": {
+            "en": "Mine Rehabilitation",
+            "fr": "Réhabilitation de la mine"
+        },
+        "index": 56
+    },
+    {
+        "id": "d9083e7e-6c43-455b-befe-cdf8f3bf1b48",
+        "name": "Contours of relief and landscape not rehabilitated",
+        "translation": {
+            "en": "Contours of relief and landscape not rehabilitated",
+            "fr": "Les terrains ne sont pas réhabilités"
+        },
+        "index": 57
+    },
+    {
+        "id": "be5d4bc0-ecca-4c00-a108-51e23bd92cab",
+        "name": "Insufficient contribution to rehabilitation funds",
+        "translation": {
+            "en": "Insufficient contribution to rehabilitation funds",
+            "fr": "Contribution insuffisante aux fonds de réhabilitation"
+        },
+        "index": 58
+    },
+    {
+        "id": "44681a4a-7638-42ee-b389-1e7bee202e80",
+        "name": "No commitment to rehabilitate AMZ as soon as work stops",
+        "translation": {
+            "en": "No commitment to rehabilitate AMZ as soon as work stops",
+            "fr": "Absence d'engagement à réhabiliter l'AMZ dès l'arrêt des travaux"
+        },
+        "index": 59
+    },
+    {
+        "id": "8d4edcd9-58fc-4ea9-80a4-bfe8e74c65b3",
+        "name": "Minimize Emissions",
+        "translation": {
+            "en": "Minimize Emissions",
+            "fr": "Minimiser les émissions "
+        },
+        "index": 60
+    },
+    {
+        "id": "b95cb228-faac-47d2-a02c-b98788156002",
+        "name": "Contamination of water bodies that put the livelihoods of other water users at risk",
+        "translation": {
+            "en": "Contamination of water bodies that put the livelihoods of other water users at risk",
+            "fr": "Contamination des eaux mettant en péril les moyens de subsistance d'autres utilisateurs "
+        },
+        "index": 61
+    },
+    {
+        "id": "32a2785c-f71a-4052-bf08-cf700fdc8aef",
+        "name": "Missing ESIA and / or ESMP",
+        "translation": {
+            "en": "Missing ESIA and / or ESMP",
+            "fr": "Absence d'ESIA et/ou d'ESMP"
+        },
+        "index": 62
+    },
+    {
+        "id": "58b3f3d2-d913-4861-8a4e-0fa67e1d91e8",
+        "name": "Missing policy on complying with Annex IV of Mining regulations",
+        "translation": {
+            "en": "Missing policy on complying with Annex IV of Mining regulations",
+            "fr": "Absence de politique de conformité avec l'annexe IV de la réglementation minière"
+        },
+        "index": 63
+    },
+    {
+        "id": "e9577a37-92fa-4f86-bf6c-df040c5ae004",
+        "name": "Missing water management plan or implementation",
+        "translation": {
+            "en": "Missing water management plan or implementation",
+            "fr": "Absence de plan de gestion de l'eau ou de mise en œuvre"
+        },
+        "index": 64
+    },
+    {
+        "id": "a3db2c14-efc4-4500-9b09-87a9a3e6142f",
+        "name": "No measures for regular water quality monitoring",
+        "translation": {
+            "en": "No measures for regular water quality monitoring",
+            "fr": "Absence de mesures de contrôle régulier de la qualité de l'eau"
+        },
+        "index": 65
+    },
+    {
+        "id": "78901b9c-5a37-42e8-b567-96f71e3298b9",
+        "name": "No water treatment that is isolated from run-off water",
+        "translation": {
+            "en": "No water treatment that is isolated from run-off water",
+            "fr": "Absence de traitement de l'eau isolé des eaux de ruissellement"
+        },
+        "index": 66
+    },
+    {
+        "id": "f8b721ff-9926-463f-8e8f-d6c04974567c",
+        "name": "Pollution of  air (e.g. dust) and soil at the mine site and surrounding communities",
+        "translation": {
+            "en": "Pollution of  air (e.g. dust) and soil at the mine site and surrounding communities",
+            "fr": "Pollution de l'air (par exemple, poussières) et du sol sur le site minier et dans les communautés environnantes"
+        },
+        "index": 67
+    },
+    {
+        "id": "f939a0aa-ad7a-4413-bbb6-879ed12e63ca",
+        "name": "Uncontaminated water runoff not rationalized before entering treatment circuit",
+        "translation": {
+            "en": "Uncontaminated water runoff not rationalized before entering treatment circuit",
+            "fr": "Les eaux de ruissellement non contaminées ne sont pas rationalisées avant d'entrer dans le circuit de traitement"
+        },
+        "index": 68
+    },
+    {
+        "id": "7a3e9186-50a2-4a2f-9321-976e56ed0573",
+        "name": "Wastewater and drainage water not treated before discharge",
+        "translation": {
+            "en": "Wastewater and drainage water not treated before discharge",
+            "fr": "Les eaux usées et les eaux de drainage ne sont pas traitées avant d'être rejetées"
+        },
+        "index": 69
+    },
+    {
+        "id": "47d110b5-5fe8-4f22-858d-f05e1e3f8bb6",
+        "name": "Responsible Waste Management",
+        "translation": {
+            "en": "Responsible Waste Management",
+            "fr": "Gestion responsable des déchets"
+        },
+        "index": 70
+    },
+    {
+        "id": "612492cb-0bc3-4d96-91b0-c194ffaafb24",
+        "name": "Ineffective waste management",
+        "translation": {
+            "en": "Ineffective waste management",
+            "fr": "Gestion inefficace des déchets"
+        },
+        "index": 71
+    },
+    {
+        "id": "e4d71711-7870-408f-b031-846fa7e2436a",
+        "name": "Missing plan on responsible management of toxic and radioactive material",
+        "translation": {
+            "en": "Missing plan on responsible management of toxic and radioactive material",
+            "fr": "Absence de plan de gestion responsable des matières toxiques et radioactives"
+        },
+        "index": 72
+    },
+    {
+        "id": "c352fc03-6ce4-4c0c-ad2d-d3a00b740471",
+        "name": "Fair and transparent pricing",
+        "translation": {
+            "en": "Fair and transparent pricing",
+            "fr": "Prix équitables et transparents"
+        },
+        "index": 73
+    },
+    {
+        "id": "8def82a0-d789-45fe-8780-a519225cf301",
+        "name": "Inadequate awareness raising on combating mining fraud and smuggling",
+        "translation": {
+            "en": "Inadequate awareness raising on combating mining fraud and smuggling",
+            "fr": "Sensibilisation insuffisante à la lutte contre la fraude minière et la contrebande"
+        },
+        "index": 74
+    },
+    {
+        "id": "2c13a9b1-e488-4450-8145-8e9621f88ac0",
+        "name": "Inadequate awareness raising on combating money laundering",
+        "translation": {
+            "en": "Inadequate awareness raising on combating money laundering",
+            "fr": "Sensibilisation insuffisante à la lutte contre la fraude minière et la contrebande"
+        },
+        "index": 75
+    },
+    {
+        "id": "a81c5f61-d688-474f-92d9-081f3cdb6717",
+        "name": "Excessive Overtime",
+        "translation": {
+            "en": "Excessive Overtime",
+            "fr": "Heures supplémentaires excessives"
+        },
+        "index": 76
+    },
+    {
+        "id": "395b9a0a-55d4-45fe-b3f3-acdfe999cd97",
+        "name": "No commitment to actively combat mining fraud and smuggling",
+        "translation": {
+            "en": "No commitment to actively combat mining fraud and smuggling",
+            "fr": "Absence d'engagement à lutter activement contre la fraude minière et la contrebande"
+        },
+        "index": 77
+    },
+    {
+        "id": "6f773a63-5022-4313-9ba1-9cd8a49eafb9",
+        "name": "No commitment to actively combat money laundering",
+        "translation": {
+            "en": "No commitment to actively combat money laundering",
+            "fr": "Pas d'engagement à lutter activement contre le blanchiment d'argent"
+        },
+        "index": 78
+    },
+    {
+        "id": "1332a59d-0b5d-4ca3-8b4a-9b18f923df01",
+        "name": "No provisions in internal governance rules to combat money laundering",
+        "translation": {
+            "en": "No provisions in internal governance rules to combat money laundering",
+            "fr": "Pas de dispositions dans les règles de gouvernance interne pour lutter contre le blanchiment d'argent"
+        },
+        "index": 79
+    },
+    {
+        "id": "32f29ce3-7fd5-4af3-9c45-4f75f93f6fc2",
+        "name": "No provisions in internal governance rules to penalize mining fraud and smuggling",
+        "translation": {
+            "en": "No provisions in internal governance rules to penalize mining fraud and smuggling",
+            "fr": "Pas de dispositions dans les règles de gouvernance interne pour sanctionner la fraude minière et la contrebande"
+        },
+        "index": 80
+    },
+    {
+        "id": "03306160-7817-4205-9e82-c6f7cfb44b2b",
+        "name": "Traceability",
+        "translation": {
+            "en": "Traceability",
+            "fr": "Traçabilité"
+        },
+        "index": 81
+    },
+    {
+        "id": "9659bcbd-5b2c-4e73-b454-8ffadc32f943",
+        "name": "Incomplete documentation on transactions",
+        "translation": {
+            "en": "Incomplete documentation on transactions",
+            "fr": "Documentation incomplète sur les transactions"
+        },
+        "index": 82
+    },
+    {
+        "id": "235ef23a-c689-4e18-b0fd-8efc090354b6",
+        "name": "No written commitment to comply with procedures on traceability",
+        "translation": {
+            "en": "No written commitment to comply with procedures on traceability",
+            "fr": "Pas d'engagement écrit à respecter les procédures de traçabilité"
+        },
+        "index": 83
+    },
+    {
+        "id": "3022f906-d988-49c7-9712-10157c5a1cf7",
+        "name": "No written commitment to prohibit any minerals from other areas on site",
+        "translation": {
+            "en": "No written commitment to prohibit any minerals from other areas on site",
+            "fr": "Pas d'engagement écrit d'interdire tout minéral provenant d'autres zones du site"
+        },
+        "index": 84
+    },
+    {
+        "id": "e5e05bc1-e940-4767-bd06-70112893058b",
+        "name": "No written commitment to sell only minerals from the ZEA",
+        "translation": {
+            "en": "No written commitment to sell only minerals from the ZEA",
+            "fr": "Pas d'engagement écrit de vendre uniquement des minéraux de la ZEA"
+        },
+        "index": 85
+    },
+    {
+        "id": "0686b2d7-6d20-4e33-8557-bf5de70ba5fa",
+        "name": "Basic Needs",
+        "translation": {
+            "en": "Basic Needs",
+            "fr": "Besoins fondamentaux"
+        },
+        "index": 86
+    },
+    {
+        "id": "31143152-5a1a-48aa-a651-a3bd121c316c",
+        "name": "Workers not provided access to sanitary and hygiene facilities",
+        "translation": {
+            "en": "Workers not provided access to sanitary and hygiene facilities",
+            "fr": "Les travailleurs n'ont pas accès à des installations sanitaires et d'hygiène"
+        },
+        "index": 87
+    },
+    {
+        "id": "bb7bf36f-605b-4494-8506-828a94f63aff",
+        "name": "Workers not provided sufficient drinking water",
+        "translation": {
+            "en": "Workers not provided sufficient drinking water",
+            "fr": "Les travailleurs ne disposent pas d'une quantité suffisante d'eau potable"
+        },
+        "index": 88
+    },
+    {
+        "id": "1e0ee809-adc7-403b-ad7b-e80ebaec4232",
+        "name": "Workers not provided with rest breaks",
+        "translation": {
+            "en": "Workers not provided with rest breaks",
+            "fr": "Les travailleurs ne bénéficient pas de pauses"
+        },
+        "index": 89
+    },
+    {
+        "id": "1c099de5-973a-4e7c-9e5a-928785e5a89f",
+        "name": "Chemicals and hazardous material",
+        "translation": {
+            "en": "Chemicals and hazardous material",
+            "fr": "Produits chimiques et matières dangereuses"
+        },
+        "index": 90
+    },
+    {
+        "id": "64af5b25-6db5-46e6-9763-0fdb51926c76",
+        "name": "Exposure of children  to chemicals and hazardous substances",
+        "translation": {
+            "en": "Exposure of children to chemicals and hazardous substances",
+            "fr": "Exposition des enfants aux produits chimiques et aux substances dangereuses"
+        },
+        "index": 91
+    },
+    {
+        "id": "223d30e0-c713-4116-9778-7d5d2192ccc2",
+        "name": "Exposure of children to chemicals and hazardous substances",
+        "translation": {
+            "en": "Exposure of children to chemicals and hazardous substances",
+            "fr": "Exposition des enfants aux produits chimiques et aux substances dangereuses"
+        },
+        "index": 92
+    },
+    {
+        "id": "a953a040-1ce7-491b-b126-36ecd20b8ed8",
+        "name": "Inadequate communication of OSH policies and procedures",
+        "translation": {
+            "en": "Inadequate communication of OSH policies and procedures",
+            "fr": "Communication inadéquate des politiques et procédures en matière de santé et de sécurité au travail"
+        },
+        "index": 93
+    },
+    {
+        "id": "a6b1017d-954e-4318-af4b-c6f04b4e3a8d",
+        "name": "Inadequate health and safety training",
+        "translation": {
+            "en": "Inadequate health and safety training",
+            "fr": "Formation inadéquate en matière de santé et de sécurité"
+        },
+        "index": 94
+    },
+    {
+        "id": "f4388a22-513f-470e-b2b6-60daf8df5ba9",
+        "name": "Inadequate training for use of chemicals and hazardous substances",
+        "translation": {
+            "en": "Inadequate training for use of chemicals and hazardous substances",
+            "fr": "Formation inadéquate à l'utilisation de produits chimiques et de substances dangereuses"
+        },
+        "index": 95
+    },
+    {
+        "id": "79662b21-5959-4c77-beb4-b76a0a869aed",
+        "name": "No action to assess, monitor, prevent, and limit workers' exposure to chemicals and hazardous substances",
+        "translation": {
+            "en": "No action to assess, monitor, prevent, and limit workers' exposure to chemicals and hazardous substances",
+            "fr": "Aucune action visant à évaluer, contrôler, prévenir et limiter l'exposition des travailleurs aux produits chimiques et aux substances dangereuses"
+        },
+        "index": 96
+    },
+    {
+        "id": "e818b666-8df5-43b2-86f8-503eab0c2486",
+        "name": "No record / inventory on the use and storage of hazardous substances",
+        "translation": {
+            "en": "No record / inventory on the use and storage of hazardous substances",
+            "fr": "Absence d'enregistrement / d'inventaire sur l'utilisation et le stockage des substances dangereuses"
+        },
+        "index": 97
+    },
+    {
+        "id": "9543643a-17f0-41e0-a60f-1b1f73f75fe6",
+        "name": "Continual improvement",
+        "translation": {
+            "en": "Continual improvement",
+            "fr": "Amélioration continue"
+        },
+        "index": 98
+    },
+    {
+        "id": "3663892d-aefd-4a7c-ae0e-1b042e37134e",
+        "name": "Incidents, nonconformities and corrective action, continual improvement of objectives and processes",
+        "translation": {
+            "en": "Incidents, nonconformities and corrective action, continual improvement of objectives and processes",
+            "fr": "Incidents, non-conformités et mesures correctives, amélioration continue des objectifs et des processus"
+        },
+        "index": 99
+    },
+    {
+        "id": "69b8733e-6371-45d6-84f1-a0064745577b",
+        "name": "Emergency preparedness",
+        "translation": {
+            "en": "Emergency preparedness",
+            "fr": "Préparation aux situations d'urgence"
+        },
+        "index": 100
+    },
+    {
+        "id": "17a7d06a-634c-4bec-a9a6-8c4bcc442465",
+        "name": "Emergency exits are not accessible, are obstructed, or locked during working hours (including overtime)",
+        "translation": {
+            "en": "Emergency exits are not accessible, are obstructed, or locked during working hours (including overtime)",
+            "fr": "Les sorties de secours ne sont pas accessibles, sont obstruées ou verrouillées pendant les heures de travail (y compris les heures supplémentaires)"
+        },
+        "index": 101
+    },
+    {
+        "id": "fe3d09bc-a09b-4017-b850-8efb857d0e1b",
+        "name": "Employer does not have an active emergency preparedness plan",
+        "translation": {
+            "en": "Employer does not have an active emergency preparedness plan",
+            "fr": "L'employeur ne dispose pas d'un plan actif de préparation aux situations d'urgence"
+        },
+        "index": 102
+    },
+    {
+        "id": "143e675c-12f0-4058-8b44-ba9d18082e29",
+        "name": "Facilities are not adequately designed for emergency evacuation",
+        "translation": {
+            "en": "Facilities are not adequately designed for emergency evacuation",
+            "fr": "Les installations ne sont pas conçues de manière adéquate pour l'évacuation d'urgence"
+        },
+        "index": 103
+    },
+    {
+        "id": "42534cc4-1e5a-4671-bae2-9d3c96702ab7",
+        "name": "Workers are not trained on emergency preparedness",
+        "translation": {
+            "en": "Workers are not trained on emergency preparedness",
+            "fr": "Les installations ne sont pas conçues de manière adéquate pour l'évacuation d'urgence"
+        },
+        "index": 104
+    },
+    {
+        "id": "33ef2203-5f6a-4200-9c6c-b39a262801e1",
+        "name": "Workplace does not have sufficient equipment to implement an emergency preparedness plan",
+        "translation": {
+            "en": "Workplace does not have sufficient equipment to implement an emergency preparedness plan",
+            "fr": "Le lieu de travail ne dispose pas d'un équipement suffisant pour mettre en œuvre un plan de préparation aux situations d'urgence"
+        },
+        "index": 105
+    },
+    {
+        "id": "bbb1c09f-fabf-4a69-9c4f-794f6b3bcdd2",
+        "name": "Exposure to unnecessary risk",
+        "translation": {
+            "en": "Exposure to unnecessary risk",
+            "fr": "Exposition à des risques inutiles"
+        },
+        "index": 106
+    },
+    {
+        "id": "1dae8fe6-ee1c-424f-bb36-297b0f12f915",
+        "name": "Deep pits (+30m) are not backfilled or adequately strengthened",
+        "translation": {
+            "en": "Deep pits (+30m) are not backfilled or adequately strengthened",
+            "fr": "Les fosses profondes (+30m) ne sont pas remblayées ou renforcées de manière adéquate"
+        },
+        "index": 107
+    },
+    {
+        "id": "af84630b-19f5-4e27-a306-d63227682a9b",
+        "name": "Does not ensure maximum pit depth of 10m",
+        "translation": {
+            "en": "Does not ensure maximum pit depth of 10m",
+            "fr": "Ne garantit pas une profondeur de fosse maximale de 10 m"
+        },
+        "index": 108
+    },
+    {
+        "id": "5bf81d48-d203-4b74-ad45-c711f949ec00",
+        "name": "Does not ensure no undercutting or tunnelling",
+        "translation": {
+            "en": "Does not ensure no undercutting or tunnelling",
+            "fr": "Ne garantit pas l'absence de sous-découpe ou de creusement de tunnels"
+        },
+        "index": 109
+    },
+    {
+        "id": "3b296075-21ad-4494-b858-28da03bbeb81",
+        "name": "Does not suspend activites when pits exceed maximum pit depth",
+        "translation": {
+            "en": "Does not suspend activites when pits exceed maximum pit depth",
+            "fr": "Ne suspend pas les activités lorsque les fosses dépassent la profondeur maximale de la fosse"
+        },
+        "index": 110
+    },
+    {
+        "id": "d745c959-51ad-4584-a36b-3c723891c189",
+        "name": "Does not suspend activities when undercutting or tunnelling identified",
+        "translation": {
+            "en": "Does not suspend activities when undercutting or tunnelling identified",
+            "fr": "Ne suspend pas les activités lorsque des sapes ou des tunnels sont identifiés"
+        },
+        "index": 111
+    },
+    {
+        "id": "9ba7cd25-1c5d-48bc-8939-9507f2867cd9",
+        "name": "Inadequate drainage systems underground",
+        "translation": {
+            "en": "Inadequate drainage systems underground",
+            "fr": "Systèmes de drainage souterrains inadéquats"
+        },
+        "index": 112
+    },
+    {
+        "id": "75967c1f-6113-40b3-9320-504205452146",
+        "name": "Inadequate infrastructure to control access to unsafe and abandoned areas of the site",
+        "translation": {
+            "en": "Inadequate infrastructure to control access to unsafe and abandoned areas of the site",
+            "fr": "Infrastructure inadéquate pour contrôler l'accès aux zones dangereuses et abandonnées du site"
+        },
+        "index": 113
+    },
+    {
+        "id": "b9834d1e-f9d7-4c40-8b38-efa08805e9cb",
+        "name": "Inadequate plan for sustainable use of mining material",
+        "translation": {
+            "en": "Inadequate plan for sustainable use of mining material",
+            "fr": "Plan inadéquat pour l'utilisation durable des matériaux miniers"
+        },
+        "index": 114
+    },
+    {
+        "id": "8303ae09-45d7-4f96-8555-0473922316fb",
+        "name": "Limited awareness raising on occupational safety and health",
+        "translation": {
+            "en": "Limited awareness raising on occupational safety and health",
+            "fr": "Sensibilisation limitée à la sécurité et à la santé au travail"
+        },
+        "index": 115
+    },
+    {
+        "id": "2bb92b2c-e1d2-4c49-be78-6db064e3d72b",
+        "name": "Missing OSH policy and implementation",
+        "translation": {
+            "en": "Missing OSH policy and implementation",
+            "fr": "Absence de politique de sécurité et de santé au travail et de mise en œuvre"
+        },
+        "index": 116
+    },
+    {
+        "id": "97c1ee69-c198-4ec5-9c6f-0d4cf4644c6d",
+        "name": "Non compliance with the legal maximum depth of 30m for the development of excavation tunnels",
+        "translation": {
+            "en": "Non compliance with the legal maximum depth of 30m for the development of excavation tunnels",
+            "fr": "Non-respect de la profondeur maximale légale de 30 m pour le développement des tunnels d'excavation"
+        },
+        "index": 117
+    },
+    {
+        "id": "62c2efbb-dbe3-4f86-8b4c-4a242e7a143d",
+        "name": "Tunnels lack proper ventilation, lighting and galleries",
+        "translation": {
+            "en": "Tunnels lack proper ventilation, lighting and galleries",
+            "fr": "Les tunnels manquent de ventilation, d'éclairage et de galeries"
+        },
+        "index": 118
+    },
+    {
+        "id": "5963273a-d298-4898-beb3-57860a0b8f24",
+        "name": "Workers are unable to remove themselves from unsafe work",
+        "translation": {
+            "en": "Workers are unable to remove themselves from unsafe work",
+            "fr": "Les travailleurs ne sont pas en mesure de se retirer d’un travail dangereux"
+        },
+        "index": 119
+    },
+    {
+        "id": "5730d635-90b6-4430-bd48-618b7255d6e9",
+        "name": "Hazard and Risk Identification",
+        "translation": {
+            "en": "Hazard and Risk Identification",
+            "fr": "Identification des dangers et des risques"
+        },
+        "index": 120
+    },
+    {
+        "id": "a24a7dcb-1f98-49c2-99b2-4213813d9ecc",
+        "name": "Inadequate communication of OSH policies and procedures",
+        "translation": {
+            "en": "Inadequate communication of OSH policies and procedures",
+            "fr": "Les travailleurs ne sont pas en mesure de se retirer d’un travail dangereux"
+        },
+        "index": 121
+    },
+    {
+        "id": "b34d59c9-a871-462d-a84b-a7aca93f0b2f",
+        "name": "Missing policy on prevention of risks and occupational diseases",
+        "translation": {
+            "en": "Missing policy on prevention of risks and occupational diseases",
+            "fr": "Absence de politique de prévention des risques et des maladies professionnelles"
+        },
+        "index": 122
+    },
+    {
+        "id": "27eaec62-d1df-4da7-af19-7be612144639",
+        "name": "No documentation of dangerous incidents in the workplace",
+        "translation": {
+            "en": "No documentation of dangerous incidents in the workplace",
+            "fr": "Absence de documentation sur les incidents dangereux sur le lieu de travail"
+        },
+        "index": 123
+    },
+    {
+        "id": "96de12a4-e5c4-428f-8d94-7cdfa2e29df9",
+        "name": "Ongoing and systematic risk assessment not performed or available to EGC",
+        "translation": {
+            "en": "Ongoing and systematic risk assessment not performed or available to EGC",
+            "fr": "Évaluation continue et systématique des risques non réalisée ou non disponible pour l'EGC"
+        },
+        "index": 124
+    },
+    {
+        "id": "cee584fc-6767-428b-80ea-18e4c4cc0004",
+        "name": "Risk mitigation or control plan not available to EGC",
+        "translation": {
+            "en": "Risk mitigation or control plan not available to EGC",
+            "fr": "Plan d'atténuation ou de contrôle des risques non disponible pour EGC"
+        },
+        "index": 125
+    },
+    {
+        "id": "881369a8-020e-4d0c-ba96-7b7076eb66ba",
+        "name": "Women are not represented on OSH committee",
+        "translation": {
+            "en": "Women are not represented on OSH committee",
+            "fr": "Les femmes ne sont pas représentées au sein du comité de sécurité et de santé au travail"
+        },
+        "index": 126
+    },
+    {
+        "id": "2a4e2d6e-da40-4f0e-9736-f029123e25df",
+        "name": "Hazardous conditions",
+        "translation": {
+            "en": "Hazardous conditions",
+            "fr": "Conditions dangereuses"
+        },
+        "index": 127
+    },
+    {
+        "id": "15b519f1-1be0-47f9-9c17-e9064f5c00f1",
+        "name": "Exposure of children to extreme environmental conditions",
+        "translation": {
+            "en": "Exposure of children to extreme environmental conditions",
+            "fr": "Exposition des enfants aux produits chimiques et aux substances dangereuses"
+        },
+        "index": 128
+    },
+    {
+        "id": "da7a988c-5a2d-47a6-a50a-fde49ef5dd0d",
+        "name": "Workers are focred to engage in work that is unreasonably hazardous",
+        "translation": {
+            "en": "Workers are forced to engage in work that is unreasonably hazardous",
+            "fr": "Les travailleurs sont contraints d'effectuer un travail qui est déraisonnablement dangereux"
+        },
+        "index": 129
+    },
+    {
+        "id": "327716f4-c392-4c1c-9998-2779e1024931",
+        "name": "Workers are forced to engage in work under extreme environmental conditions",
+        "translation": {
+            "en": "Workers are forced to engage in work under extreme environmental conditions",
+            "fr": "Les travailleurs sont contraints de travailler dans des conditions environnementales extrêmes"
+        },
+        "index": 130
+    },
+    {
+        "id": "ef342e11-d4c8-4f55-ad09-b1cfabf68576",
+        "name": "Management systems",
+        "translation": {
+            "en": "Management systems",
+            "fr": "Systèmes de gestion"
+        },
+        "index": 131
+    },
+    {
+        "id": "b2ab5030-ce85-4adc-b648-e00830d4b2bf",
+        "name": "Inadequate accident investigation procedure",
+        "translation": {
+            "en": "Inadequate accident investigation procedure",
+            "fr": "Procédure d'enquête sur les accidents inadéquate"
+        },
+        "index": 132
+    },
+    {
+        "id": "e73b249f-a147-423b-989f-ff60038f361c",
+        "name": "Inadequate assignment of accountability to management for carrying out health and safety responsibilities",
+        "translation": {
+            "en": "Inadequate assignment of accountability to management for carrying out health and safety responsibilities",
+            "fr": "Attribution inadéquate de la responsabilité à la direction pour l'exécution des obligations en matière de santé et de sécurité"
+        },
+        "index": 133
+    },
+    {
+        "id": "eaf6f3a7-1eb3-4232-b3e6-87695ef080b0",
+        "name": "Inadequate hazard / risk management and control procedure",
+        "translation": {
+            "en": "Inadequate hazard / risk management and control procedure",
+            "fr": "Procédure inadéquate de gestion et de contrôle des dangers/risques"
+        },
+        "index": 134
+    },
+    {
+        "id": "d7396730-4a61-41f8-95b5-d33e1c3462bb",
+        "name": "No alerts to EGC after serious accident or incident",
+        "translation": {
+            "en": "No alerts to EGC after serious accident or incident",
+            "fr": "Aucune alerte à l'EGC après un accident ou un incident grave"
+        },
+        "index": 135
+    },
+    {
+        "id": "4e666729-5685-48af-869c-33ce349955ad",
+        "name": "No commitment to investigation and remediation of incidents",
+        "translation": {
+            "en": "No commitment to investigation and remediation of incidents",
+            "fr": "Aucun engagement en matière d’enquête et de résolution des incidents"
+        },
+        "index": 136
+    },
+    {
+        "id": "f3d5938c-94a9-419d-805e-d0494ef8ed06",
+        "name": "No legally required construction / building permits",
+        "translation": {
+            "en": "No legally required construction / building permits",
+            "fr": "Absence de permis de construire légalement requis"
+        },
+        "index": 137
+    },
+    {
+        "id": "d03ff482-6a5a-468a-8194-a2d77c510b57",
+        "name": "No record of accidents on site / associated with site operations",
+        "translation": {
+            "en": "No record of accidents on site / associated with site operations",
+            "fr": "Aucun accident sur le site / lié aux opérations du site n'a été signalé"
+        },
+        "index": 138
+    },
+    {
+        "id": "7f4caa96-5300-4af5-b760-86db66b75340",
+        "name": "No record of accidents that did not cause injury",
+        "translation": {
+            "en": "No record of accidents that did not cause injury",
+            "fr": "Aucun cas d'accident n'ayant causé de blessés"
+        },
+        "index": 139
+    },
+    {
+        "id": "2e410eee-28fc-4fe9-a05b-dc12c42832ed",
+        "name": "No records of work-related accidents and diseases",
+        "translation": {
+            "en": "No records of work-related accidents and diseases",
+            "fr": "Absence de registres des accidents du travail et des maladies professionnelles"
+        },
+        "index": 140
+    },
+    {
+        "id": "6b7415f8-0bef-4993-b5b5-bd9081795a15",
+        "name": "No written OSH policy",
+        "translation": {
+            "en": "No written OSH policy",
+            "fr": "Absence de politique écrite en matière de santé et de sécurité au travail"
+        },
+        "index": 141
+    },
+    {
+        "id": "8c0526ac-afab-4f58-a3d7-f1dd7eca10a3",
+        "name": "Manages Access to the Site",
+        "translation": {
+            "en": "Manages Access to the Site",
+            "fr": "Gestion de l'accès au site"
+        },
+        "index": 142
+    },
+    {
+        "id": "4a86b211-9e73-4429-b8bc-75914b05b288",
+        "name": "Conditions of membership not in accordance with national legislation",
+        "translation": {
+            "en": "Conditions of membership not in accordance with national legislation",
+            "fr": "Conditions d'adhésion non conformes à la législation nationale"
+        },
+        "index": 143
+    },
+    {
+        "id": "be2428a0-d7ad-41a5-ac9d-0c6510151acd",
+        "name": "Inability to demonstrate procedures to refuse entry to the site",
+        "translation": {
+            "en": "Inability to demonstrate procedures to refuse entry to the site",
+            "fr": "Incapacité à démontrer les procédures de refus d'entrée sur le site"
+        },
+        "index": 144
+    },
+    {
+        "id": "434eb83b-196e-42fc-828d-598d462278c9",
+        "name": "Inadequate infrastructure to control access to mine",
+        "translation": {
+            "en": "Inadequate infrastructure to control access to mine",
+            "fr": "Infrastructure inadéquate pour contrôler l'accès à la mine"
+        },
+        "index": 145
+    },
+    {
+        "id": "32858805-07a7-4da3-9c27-55bcd28b45b2",
+        "name": "Inadequate signage on operating procedure",
+        "translation": {
+            "en": "Inadequate signage on operating procedure",
+            "fr": "Signalisation inadéquate des procédures d'exploitation"
+        },
+        "index": 146
+    },
+    {
+        "id": "835d7b8a-8761-4168-8ebc-5613a47720b8",
+        "name": "Incomplete record of workers entering ASM site",
+        "translation": {
+            "en": "Incomplete record of workers entering ASM site",
+            "fr": "Registre incomplet des travailleurs entrant sur le site artisanal"
+        },
+        "index": 147
+    },
+    {
+        "id": "74d8039c-359a-494c-a2e2-7212e6196ad5",
+        "name": "Mining cooperative membership not required to be justified with documentation",
+        "translation": {
+            "en": "Mining cooperative membership not required to be justified with documentation",
+            "fr": "L'appartenance à une coopérative minière ne doit pas être justifiée par des documents."
+        },
+        "index": 148
+    },
+    {
+        "id": "a6a97de4-ba81-4280-bc86-8d215cf674fd",
+        "name": "Workers not required to have valid artisanal miners card / mining cooperative membership",
+        "translation": {
+            "en": "Workers not required to have valid artisanal miners card / mining cooperative membership",
+            "fr": "Les travailleurs ne sont pas tenus d'avoir une carte d'artisan minier ou d'être membre d'une coopérative minière en cours de validité."
+        },
+        "index": 149
+    },
+    {
+        "id": "59d08c1b-4baa-4608-a34f-819c887752fd",
+        "name": "Medical and Health Care Available",
+        "translation": {
+            "en": "Medical and Health Care Available",
+            "fr": "Soins de santé disponibles"
+        },
+        "index": 150
+    },
+    {
+        "id": "998e2919-7b5e-4e3f-9dbd-5b8b72e0716d",
+        "name": "No first aid and basic health services",
+        "translation": {
+            "en": "No first aid and basic health services",
+            "fr": "Les travailleurs ne sont pas tenus d'avoir une carte d'artisan minier ou d'être membre d'une coopérative minière en cours de validité."
+        },
+        "index": 151
+    },
+    {
+        "id": "6d003fb8-c429-4863-9c3d-1682c5d1e426",
+        "name": "No mine evacuation and rescue facility that it regularly tests",
+        "translation": {
+            "en": "No mine evacuation and rescue facility that it regularly tests",
+            "fr": "Pas d'installation d'évacuation et de sauvetage de la mine testée régulièrement"
+        },
+        "index": 152
+    },
+    {
+        "id": "8ecceebc-1942-4ea0-bacc-fd7f467e14bb",
+        "name": "No routine medical and health inspections",
+        "translation": {
+            "en": "No routine medical and health inspections",
+            "fr": "Absence d'inspections médicales et sanitaires de routine"
+        },
+        "index": 153
+    },
+    {
+        "id": "2b4f153e-7082-4b38-9a37-8cbf59d0ff44",
+        "name": "No safety plan found that includes contingency measures in the event of an accident",
+        "translation": {
+            "en": "No safety plan found that includes contingency measures in the event of an accident",
+            "fr": "Absence de plan de sécurité comprenant des mesures d'urgence en cas d'accident"
+        },
+        "index": 154
+    },
+    {
+        "id": "d5cd147a-e205-4b72-beec-43db09ea3436",
+        "name": "Operational planning and control",
+        "translation": {
+            "en": "Operational planning and control",
+            "fr": "Planification et contrôle des opérations"
+        },
+        "index": 155
+    },
+    {
+        "id": "3e1c6abc-0188-4ef6-b9b9-0ff0763c1746",
+        "name": "Inadequate operational controls for change management",
+        "translation": {
+            "en": "Inadequate operational controls for change management",
+            "fr": "Contrôles opérationnels inadéquats pour la gestion du changement"
+        },
+        "index": 156
+    },
+    {
+        "id": "7ff0b79f-063c-40cd-9847-ea10d4a456a0",
+        "name": "Inadequate operational controls for emergency preparedness and response",
+        "translation": {
+            "en": "Inadequate operational controls for emergency preparedness and response",
+            "fr": "Contrôles opérationnels inadéquats pour la préparation et la réponse aux situations d'urgence"
+        },
+        "index": 157
+    },
+    {
+        "id": "0e44f176-4117-4c93-8144-0da5364f75fe",
+        "name": "Inadequate operational controls for outsourcing",
+        "translation": {
+            "en": "Inadequate operational controls for outsourcing",
+            "fr": "Contrôles opérationnels inadéquats pour la sous-traitance"
+        },
+        "index": 158
+    },
+    {
+        "id": "31d088df-2bf9-431d-aaa1-a7b798c653d8",
+        "name": "Inadequate operational controls for procurement and contracts",
+        "translation": {
+            "en": "Inadequate operational controls for procurement and contracts",
+            "fr": "Contrôles opérationnels inadéquats pour les achats et les contrats"
+        },
+        "index": 159
+    },
+    {
+        "id": "f1f2c1cc-dfd0-4b31-9ebf-4ff6d40c56a5",
+        "name": "Performance evaluation",
+        "translation": {
+            "en": "Performance evaluation",
+            "fr": "Évaluation des performances"
+        },
+        "index": 160
+    },
+    {
+        "id": "2e998bab-da16-4ceb-9ea9-54686c492d7c",
+        "name": "inadequate analysis and evaluation",
+        "translation": {
+            "en": "Inadequate analysis and evaluation",
+            "fr": "Analyse et évaluation inadéquates"
+        },
+        "index": 161
+    },
+    {
+        "id": "91ff953c-a0db-43fe-b6b7-1b0b82c35db4",
+        "name": "inadequate internal audits",
+        "translation": {
+            "en": "Inadequate internal audits",
+            "fr": "Audits internes inadéquats"
+        },
+        "index": 162
+    },
+    {
+        "id": "d1ce59b2-2487-4319-b721-2a40778803df",
+        "name": "Inadequate monitoring and measurement",
+        "translation": {
+            "en": "Inadequate monitoring and measurement",
+            "fr": "Audits internes inadéquats"
+        },
+        "index": 163
+    },
+    {
+        "id": "e3335233-0ca7-4912-b34e-855c2a890486",
+        "name": "Risk assessment and management",
+        "translation": {
+            "en": "Risk assessment and management",
+            "fr": "Évaluation et gestion des risques"
+        },
+        "index": 164
+    },
+    {
+        "id": "3c9cdace-a662-4ecc-b35f-c15517c12065",
+        "name": "No medical treatment facility",
+        "translation": {
+            "en": "No medical treatment facility",
+            "fr": "Pas d'établissement de soins médicaux"
+        },
+        "index": 165
+    },
+    {
+        "id": "50039d69-776d-48ad-b102-faac4ee7140d",
+        "name": "No provisions for pregnant women to work safely",
+        "translation": {
+            "en": "No provisions for pregnant women to work safely",
+            "fr": "Pas de modification des tâches pour les travailleuses enceintes"
+        },
+        "index": 166
+    },
+    {
+        "id": "2433ccf0-54a1-4578-84b0-3f82842be44a",
+        "name": "Workers do not have access to appropriate tools and equipment",
+        "translation": {
+            "en": "Workers do not have access to appropriate tools and equipment",
+            "fr": "Les travailleurs n’ont pas accès aux outils et équipements appropriés"
+        },
+        "index": 167
+    },
+    {
+        "id": "f8a409d8-3456-42e9-a553-aa6d349a320b",
+        "name": "Safe mining",
+        "translation": {
+            "en": "Safe mining",
+            "fr": "Exploitation minière sécurisée"
+        },
+        "index": 168
+    },
+    {
+        "id": "8034573c-ea35-43b4-a595-f939b7f3ae6c",
+        "name": "No process to ensure that workers are fit to work",
+        "translation": {
+            "en": "No process to ensure that workers are fit to work",
+            "fr": "Aucun processus pour garantir que les travailleurs sont aptes à travailler"
+        },
+        "index": 169
+    },
+    {
+        "id": "98c7d780-d356-4624-aad1-1d790c52b4ab",
+        "name": "Safety and Use of PPE",
+        "translation": {
+            "en": "Safety and Use of PPE",
+            "fr": "Sécurité et utilisation des EPI"
+        },
+        "index": 170
+    },
+    {
+        "id": "e568f165-0373-4514-8711-f1aafddda9eb",
+        "name": "Inadequate provision and replacement of PPE (e.g. dust masks, ear protection)",
+        "translation": {
+            "en": "Inadequate provision and replacement of PPE (e.g. dust masks, ear protection)",
+            "fr": "Fourniture et remplacement inadéquats des EPI (par exemple, masques anti-poussière, protections auditives)"
+        },
+        "index": 171
+    },
+    {
+        "id": "6fe9c952-d946-4e09-9f04-382fe01a1ada",
+        "name": "Organization does not ensure safety of workplace, machinery and equipment",
+        "translation": {
+            "en": "Organization does not ensure safety of workplace, machinery and equipment",
+            "fr": "Fourniture et remplacement inadéquats des EPI (par exemple, masques anti-poussière, protections auditives)"
+        },
+        "index": 172
+    },
+    {
+        "id": "98d5a460-66f6-4b76-a2b6-5a1aad103235",
+        "name": "Workers are not training or encouraged to properly use personal protective clothing and equipment",
+        "translation": {
+            "en": "Workers are not training or encouraged to properly use personal protective clothing and equipment",
+            "fr": "Les travailleurs ne sont pas formés ou encouragés à utiliser correctement les vêtements et équipements de protection individuelle"
+        },
+        "index": 173
+    },
+    {
+        "id": "a366773f-30f0-4374-a0ec-39d0b84f5461",
+        "name": "Workers working underground not using or maintain appropriate, basic PPE",
+        "translation": {
+            "en": "Workers working underground not using or maintain appropriate, basic PPE",
+            "fr": "Les travailleurs souterrains n'utilisent pas ou n'entretiennent pas les EPI de base appropriés"
+        },
+        "index": 174
+    },
+    {
+        "id": "2c6e215f-29a2-4f24-80ae-b5e677d30e3d",
+        "name": "Worker accommodation",
+        "translation": {
+            "en": "Worker accommodation",
+            "fr": "Hébergement des travailleurs"
+        },
+        "index": 175
+    },
+    {
+        "id": "6336de85-fb6d-431d-bdc4-9b183e862850",
+        "name": "Accommodation does not comply with health, safety, and occupation requirements",
+        "translation": {
+            "en": "Accommodation does not comply with health, safety, and occupation requirements",
+            "fr": "Le logement n'est pas conforme aux exigences en matière de santé, de sécurité et d'occupation"
+        },
+        "index": 176
+    },
+    {
+        "id": "af572356-6b1e-4054-ab8f-fcf77f9ab8c4",
+        "name": "Worker protection",
+        "translation": {
+            "en": "Worker protection",
+            "fr": "Protection des travailleurs"
+        },
+        "index": 177
+    },
+    {
+        "id": "fd543606-1bf7-4f2f-8ca6-6f7865e4cb8f",
+        "name": "Complete records of training topics and attendance not kept",
+        "translation": {
+            "en": "Complete records of training topics and attendance not kept",
+            "fr": "Les dossiers complets des sujets de formation et de la participation ne sont pas conservés"
+        },
+        "index": 178
+    },
+    {
+        "id": "6983b69c-71fd-425b-a3c1-3a0ea6519f56",
+        "name": "Heavy reliance on manual labour during product processing",
+        "translation": {
+            "en": "Heavy reliance on manual labour during product processing",
+            "fr": "Forte dépendance au travail manuel lors de la transformation des produits"
+        },
+        "index": 179
+    },
+    {
+        "id": "c1b05dff-daee-4565-bdab-083e6814eaf6",
+        "name": "Inadequate fire saftey equipment and training",
+        "translation": {
+            "en": "Inadequate fire saftey equipment and training",
+            "fr": "Equipement et formation inadéquats en matière de sécurité incendie"
+        },
+        "index": 180
+    },
+    {
+        "id": "836300ce-aac1-4780-8800-98c4007a5fea",
+        "name": "Inadequate health and safety training",
+        "translation": {
+            "en": "Inadequate health and safety training",
+            "fr": "Formation inadéquate en matière de santé et de sécurité"
+        },
+        "index": 181
+    },
+    {
+        "id": "513d7c95-99f6-414a-982e-eb380b3c9404",
+        "name": "Inadequate lighting in facility",
+        "translation": {
+            "en": "Inadequate lighting in facility",
+            "fr": "Éclairage inadéquat dans l'établissement"
+        },
+        "index": 182
+    },
+    {
+        "id": "410b00b0-d20d-450d-af7c-79bc43bb7236",
+        "name": "Inadequate medical assistance for work-related accidents",
+        "translation": {
+            "en": "Inadequate medical assistance for work-related accidents",
+            "fr": "Assistance médicale inadéquate en cas d'accident du travail"
+        },
+        "index": 183
+    },
+    {
+        "id": "e0c1882c-312e-4937-99db-ac5f096223df",
+        "name": "Inadequate provision and replacement of PPE (e.g dust masks, ear protection)",
+        "translation": {
+            "en": "Inadequate provision and replacement of PPE (e.g dust masks, ear protection)",
+            "fr": "Fourniture et remplacement inadéquats des EPI (par exemple, masques anti-poussière, protections auditives)"
+        },
+        "index": 184
+    },
+    {
+        "id": "6c79726f-7859-4ac8-9862-0db7e3eda6f8",
+        "name": "Inadequate safety railings on raised platforms",
+        "translation": {
+            "en": "Inadequate safety railings on raised platforms",
+            "fr": "Insuffisance des garde-corps sur les plates-formes surélevées"
+        },
+        "index": 185
+    },
+    {
+        "id": "b07cf4f2-98c1-4aef-89d9-e057df8eba9e",
+        "name": "Inadequate shiedling from rotating or moving components",
+        "translation": {
+            "en": "Inadequate shiedling from rotating or moving components",
+            "fr": "Insuffisance des garde-corps sur les plates-formes surélevées"
+        },
+        "index": 186
+    },
+    {
+        "id": "9c2365cb-9d54-4a4e-a31e-d2cbb21300b1",
+        "name": "Inadequate training for hazardous tasks",
+        "translation": {
+            "en": "Inadequate training for hazardous tasks",
+            "fr": "Formation inadéquate aux tâches dangereuses"
+        },
+        "index": 187
+    },
+    {
+        "id": "77bc194c-c69b-421a-8042-09a32e9c5bf1",
+        "name": "Inadequate training for specialised machinery",
+        "translation": {
+            "en": "Inadequate training for specialised machinery",
+            "fr": "Formation inadéquate pour les machines spécialisées"
+        },
+        "index": 188
+    },
+    {
+        "id": "7eb75895-c386-4e16-96a9-abad51dc06cc",
+        "name": "Inadequate training for use of chemicals and hazardous substances",
+        "translation": {
+            "en": "Inadequate training for use of chemicals and hazardous substances",
+            "fr": "Formation inadéquate à l'utilisation de produits chimiques et de substances dangereuses"
+        },
+        "index": 189
+    },
+    {
+        "id": "60e3e3ef-fcfd-45b5-bd32-73aec4d7422e",
+        "name": "Insufficiuent training provided on risks faced by miners or from mining activities",
+        "translation": {
+            "en": "Insufficiuent training provided on risks faced by miners or from mining activities",
+            "fr": "Formation insuffisante sur les risques auxquels sont confrontés les mineurs ou liés aux activités minières"
+        },
+        "index": 190
+    },
+    {
+        "id": "ca9026c7-5a1f-4068-9efd-ec59ba710651",
+        "name": "No first aid and basic health services",
+        "translation": {
+            "en": "No first aid and basic health services",
+            "fr": "Absence de premiers secours et de services de santé de base"
+        },
+        "index": 191
+    },
+    {
+        "id": "9c181bc6-9771-4705-8d0b-afb200fc292b",
+        "name": "No safety plan found that includes contingency measures in the event of an accident",
+        "translation": {
+            "en": "No safety plan found that includes contingency measures in the event of an accident",
+            "fr": "Absence de plan de sécurité comprenant des mesures d'urgence en cas d'accident"
+        },
+        "index": 192
+    },
+    {
+        "id": "4315f89a-566f-4a62-9913-69ee4d9672e5",
+        "name": "Non compliance with the legal maximum depth of 30m for the development of excavation tunnels",
+        "translation": {
+            "en": "Non compliance with the legal maximum depth of 30m for the development of excavation tunnels",
+            "fr": "Non-respect de la profondeur maximale légale de 30 m pour le développement des tunnels d'excavation"
+        },
+        "index": 193
+    },
+    {
+        "id": "93db634a-237e-47fc-92e6-3a5af74092ab",
+        "name": "Organization does not ensure safety of workplace, machinery and equipment",
+        "translation": {
+            "en": "Organization does not ensure safety of workplace, machinery and equipment",
+            "fr": "L'organisation n'assure pas la sécurité du lieu de travail, des machines et des équipements"
+        },
+        "index": 194
+    },
+    {
+        "id": "85c35dcb-4f45-4e3f-b7d1-05bc2a7a4732",
+        "name": "PPE required",
+        "translation": {
+            "en": "PPE required",
+            "fr": "L'organisation n'assure pas la sécurité du lieu de travail, des machines et des équipements"
+        },
+        "index": 195
+    },
+    {
+        "id": "79652d79-c92a-47b0-bf86-96cc33880f76",
+        "name": "Workers are not provided with facilities to support safe work practices",
+        "translation": {
+            "en": "Workers are not provided with facilities to support safe work practices",
+            "fr": "Les travailleurs ne disposent pas des installations nécessaires à la mise en œuvre de pratiques de travail sûres"
+        },
+        "index": 196
+    },
+    {
+        "id": "39df100e-6aa7-4b40-b96b-8ca080137659",
+        "name": "Workers are not training or encouraged to properly use personal protective clothing and equipment",
+        "translation": {
+            "en": "Workers are not trained or encouraged to properly use personal protective clothing and equipment",
+            "fr": "Les travailleurs ne sont pas formés ou encouragés à utiliser correctement les vêtements et équipements de protection individuelle"
+        },
+        "index": 197
+    },
+    {
+        "id": "7fcba920-657f-4c47-9518-89ea9eca8de0",
+        "name": "Workers are punished if they remove themselves from work situations that they believe present an imminent and serious danger to health",
+        "translation": {
+            "en": "Workers are punished if they remove themselves from work situations that they believe present an imminent and serious danger to health",
+            "fr": "Les travailleurs sont punis s'ils se retirent de situations de travail qui, selon eux, présentent un danger imminent et grave pour la santé."
+        },
+        "index": 198
+    },
+    {
+        "id": "27ba20c2-2156-4c43-b811-6474675ebeda",
+        "name": "Workers required to pay for PPE",
+        "translation": {
+            "en": "Workers required to pay for PPE",
+            "fr": "Les travailleurs sont punis s'ils se retirent de situations de travail qui, selon eux, présentent un danger imminent et grave pour la santé."
+        },
+        "index": 199
+    },
+    {
+        "id": "b1598465-1d32-4776-a477-e4998246c77b",
+        "name": "Accountability and Transparency",
+        "translation": {
+            "en": "Accountability and Transparency",
+            "fr": "Responsabilité et transparence"
+        },
+        "index": 200
+    },
+    {
+        "id": "a643d421-938e-47e9-afd6-368bd7861cf3",
+        "name": "Does not disclose legally required registration documents",
+        "translation": {
+            "en": "Does not disclose legally required registration documents",
+            "fr": "Ne divulgue pas les documents d’enregistrement légalement requis"
+        },
+        "index": 201
+    },
+    {
+        "id": "4b100342-a387-42d8-9c04-44698fb2446d",
+        "name": "Does not proactively disclose political / military associations",
+        "translation": {
+            "en": "Does not proactively disclose political / military associations",
+            "fr": "Ne divulgue pas de manière proactive les associations politiques/militaires"
+        },
+        "index": 202
+    },
+    {
+        "id": "323d648b-2d97-4544-8b27-2ab344554217",
+        "name": "Does not publicly disclose ownership structure",
+        "translation": {
+            "en": "Does not publicly disclose ownership structure",
+            "fr": "La structure de propriété n'est pas divulguée publiquement"
+        },
+        "index": 203
+    },
+    {
+        "id": "13c3783b-774e-44b5-8ac2-efa7866a0d64",
+        "name": "Incomplete or missing documented registry of contracts and transactions",
+        "translation": {
+            "en": "Incomplete or missing documented registry of contracts and transactions",
+            "fr": "Registre des contrats et des transactions incomplet ou non documenté"
+        },
+        "index": 204
+    },
+    {
+        "id": "97a28efe-3db0-4b12-b3a5-6a934d7b12ba",
+        "name": "Management structure and line accountability not shared with all workers",
+        "translation": {
+            "en": "Management structure and line accountability not shared with all workers",
+            "fr": "La structure de gestion et la responsabilité hiérarchique ne sont pas partagées avec tous les travailleurs"
+        },
+        "index": 205
+    },
+    {
+        "id": "2a6afbe9-df4c-4e20-8c5e-f6601ea7ba2e",
+        "name": "No charter that incorporates organization's responsibilities",
+        "translation": {
+            "en": "No charter that incorporates organization's responsibilities",
+            "fr": "Absence de charte intégrant les responsabilités de l'organisation"
+        },
+        "index": 206
+    },
+    {
+        "id": "8d8bc15e-8b94-46c5-b598-ad16c86c0420",
+        "name": "Commitment to EGC Standard",
+        "translation": {
+            "en": "Commitment to EGC Standard",
+            "fr": "Engagement envers la norme EGC"
+        },
+        "index": 207
+    },
+    {
+        "id": "05b5067f-f8f8-4e55-b9ef-7722382c01c1",
+        "name": "Does not fully cooperate with implementation of due diligence processes",
+        "translation": {
+            "en": "Does not fully cooperate with implementation of due diligence processes",
+            "fr": "Ne coopère pas pleinement avec la mise en œuvre des processus de diligence raisonnable"
+        },
+        "index": 208
+    },
+    {
+        "id": "a8a0255c-8bb6-4aff-a31e-4368069a611b",
+        "name": "Lack of reporting of illegal control or taxation",
+        "translation": {
+            "en": "Lack of reporting of illegal control or taxation",
+            "fr": "Absence de signalement de contrôles ou de taxations illégales"
+        },
+        "index": 209
+    },
+    {
+        "id": "22126082-c787-4a35-9b2c-199137efde8e",
+        "name": "Lack of training on implementation of EGC Standard",
+        "translation": {
+            "en": "Lack of training on implementation of EGC Standard",
+            "fr": "Manque de formation sur la mise en œuvre de la norme EGC"
+        },
+        "index": 210
+    },
+    {
+        "id": "1362b0ab-2127-4589-96e0-23c47beb9ec8",
+        "name": "Limited review of implementation of EGC Standard",
+        "translation": {
+            "en": "Limited review of implementation of EGC Standard",
+            "fr": "Examen limité de la mise en œuvre de la norme EGC"
+        },
+        "index": 211
+    },
+    {
+        "id": "ff83966d-774a-41e9-9df0-e0f6b534053c",
+        "name": "Missing governance structures that support EGC Standard",
+        "translation": {
+            "en": "Missing governance structures that support EGC Standard",
+            "fr": "Structures de gouvernance manquantes qui soutiennent la norme EGC"
+        },
+        "index": 212
+    },
+    {
+        "id": "e10a957e-fb0a-484d-965f-c1801bbf1514",
+        "name": "Missing written commitment to uphold EGC Standard",
+        "translation": {
+            "en": "Missing written commitment to uphold EGC Standard",
+            "fr": "Absence d'engagement écrit pour respecter la norme EGC"
+        },
+        "index": 213
+    },
+    {
+        "id": "1ab6f95d-08c8-40aa-9f2b-2220a6a50272",
+        "name": "Non-compliance with national laws and regulations",
+        "translation": {
+            "en": "Non-compliance with national laws and regulations",
+            "fr": "Non-respect des lois et réglementations nationales"
+        },
+        "index": 214
+    },
+    {
+        "id": "a7efa82c-4538-4fcb-9a1f-4b8c4ff96dcd",
+        "name": "Review process does not include corrective actions",
+        "translation": {
+            "en": "Review process does not include corrective actions",
+            "fr": "Le processus de révision n’inclut pas de mesures correctives"
+        },
+        "index": 215
+    },
+    {
+        "id": "baae1276-b95e-4df7-93d2-bda997c8b9e0",
+        "name": "Corruption or Bribery",
+        "translation": {
+            "en": "Corruption or Bribery",
+            "fr": "Corruption"
+        },
+        "index": 216
+    },
+    {
+        "id": "aa05494e-22db-44d8-a0fa-1e09fb244c90",
+        "name": "Limited awareness raising measures on corruption, bribery and tax evasion",
+        "translation": {
+            "en": "Limited awareness raising measures on corruption, bribery and tax evasion",
+            "fr": "Mesures limitées de sensibilisation à la corruption, aux pots-de-vin et à l'évasion fiscale"
+        },
+        "index": 217
+    },
+    {
+        "id": "7a381962-6740-427e-8266-8fd3926073c5",
+        "name": "Missing written policy on combatting corruption, bribery and tax evasion",
+        "translation": {
+            "en": "Missing written policy on combatting corruption, bribery and tax evasion",
+            "fr": "Absence de politique écrite sur la lutte contre la corruption et l'évasion fiscale"
+        },
+        "index": 218
+    },
+    {
+        "id": "11fb44b1-99f8-4986-9956-90a0bf11e028",
+        "name": "No alerts to EGC after incidents of soliciation",
+        "translation": {
+            "en": "No alerts to EGC after incidents of soliciation",
+            "fr": "Aucune alerte à l'ECG après des incidents de sollicitation"
+        },
+        "index": 219
+    },
+    {
+        "id": "436e4a01-6a5c-4e8d-91ca-7a090c71fb13",
+        "name": "No provisions in internal governance rules prohibiting corruption, bribery, and tax evasion",
+        "translation": {
+            "en": "No provisions in internal governance rules prohibiting corruption, bribery, and tax evasion",
+            "fr": "Les règles de gouvernance interne ne contiennent aucune disposition interdisant la corruption et l'évasion fiscale."
+        },
+        "index": 220
+    },
+    {
+        "id": "0a1e8ffd-85c1-44a6-ad8e-21f3333321b5",
+        "name": "Financial Records and Business Plan",
+        "translation": {
+            "en": "Financial Records and Business Plan",
+            "fr": "Registres financiers et plan d'affaires"
+        },
+        "index": 221
+    },
+    {
+        "id": "70edf17b-2b9a-414e-b81a-a5b402344571",
+        "name": "All outgoing payments are not documented through invoices",
+        "translation": {
+            "en": "All outgoing payments are not documented through invoices",
+            "fr": "Tous les paiements sortants ne sont pas documentés par des factures"
+        },
+        "index": 222
+    },
+    {
+        "id": "f906fed3-4fbc-466c-b832-d8a266f64ede",
+        "name": "All outgoing payments are not made through wire transfer",
+        "translation": {
+            "en": "All outgoing payments are not made through wire transfer",
+            "fr": "Tous les paiements sortants ne sont pas effectués par virement bancaire"
+        },
+        "index": 223
+    },
+    {
+        "id": "b3dd6de6-4dad-4474-9b37-fc53f7de887c",
+        "name": "All records on financial flows not kept in transparent manner",
+        "translation": {
+            "en": "All records on financial flows not kept in transparent manner",
+            "fr": "Tous les documents relatifs aux flux financiers ne sont pas conservés de manière transparente"
+        },
+        "index": 224
+    },
+    {
+        "id": "a31ce5b9-ab25-47f6-8929-b994a133377b",
+        "name": "All reports and accounting not kept in transparent manner",
+        "translation": {
+            "en": "All reports and accounting not kept in transparent manner",
+            "fr": "Tous les rapports et la comptabilité ne sont pas tenus de manière transparente"
+        },
+        "index": 225
+    },
+    {
+        "id": "2ed160a1-5021-415e-bbcb-9b5d8cc27fae",
+        "name": "Incomplete or missing feasibility study or bankable business plan",
+        "translation": {
+            "en": "Incomplete or missing feasibility study or bankable business plan",
+            "fr": "Étude de faisabilité ou plan d'affaires viable incomplet ou manquant"
+        },
+        "index": 226
+    },
+    {
+        "id": "527775cc-f07f-4bfc-9c8a-8430c846ff40",
+        "name": "Incomplete product register",
+        "translation": {
+            "en": "Incomplete product register",
+            "fr": "Étude de faisabilité ou plan d'affaires viable incomplet ou manquant"
+        },
+        "index": 227
+    },
+    {
+        "id": "670acaa2-b39e-475f-9fb9-f8a56964a720",
+        "name": "Missing production register",
+        "translation": {
+            "en": "Missing production register",
+            "fr": "Registre de production manquant"
+        },
+        "index": 228
+    },
+    {
+        "id": "78c3ab9d-0a8d-4146-a5c2-0f7f65ea649a",
+        "name": "No exploration or evaluation of the deposit",
+        "translation": {
+            "en": "No exploration or evaluation of the deposit",
+            "fr": "Absence de prospection ou d'évaluation du gisement"
+        },
+        "index": 229
+    },
+    {
+        "id": "682ca679-67e2-4191-8f3e-cdabc85bad6a",
+        "name": "Production register does not extend to members",
+        "translation": {
+            "en": "Production register does not extend to members",
+            "fr": "Le registre de production ne s'étend pas aux membres"
+        },
+        "index": 230
+    },
+    {
+        "id": "0054a39b-c037-4084-a05b-ed2769a4a907",
+        "name": "Reports or corruption or irregular business activities",
+        "translation": {
+            "en": "Reports or corruption or irregular business activities",
+            "fr": "Rapports de corruption ou d'activités commerciales irrégulières"
+        },
+        "index": 231
+    },
+    {
+        "id": "0c82cd31-248a-44de-af15-af4c253f97dd",
+        "name": "Formalised and Controlled Security Provision",
+        "translation": {
+            "en": "Formalised and Controlled Security Provision",
+            "fr": "Prestations de sécurité formalisées et contrôlées"
+        },
+        "index": 232
+    },
+    {
+        "id": "94709228-8eda-4673-9b77-b4c61d59e574",
+        "name": "Additional security personnel contracted by mining cooperative",
+        "translation": {
+            "en": "Additional security personnel contracted by mining cooperative",
+            "fr": "Du personnel de sécurité supplémentaire est engagé par la coopérative minière"
+        },
+        "index": 233
+    },
+    {
+        "id": "d78d6584-da25-4d09-8b59-b7261f8dae78",
+        "name": "Armed additional security personnel",
+        "translation": {
+            "en": "Armed additional security personnel",
+            "fr": "Personnel de sécurité supplémentaire armé"
+        },
+        "index": 234
+    },
+    {
+        "id": "46ec182c-2ce3-4195-a05d-b53207381fff",
+        "name": "Organization does not allow access to proof of payment / written contracts for  armed security",
+        "translation": {
+            "en": "Organization does not allow access to proof of payment / written contracts for armed security",
+            "fr": "L'organisation ne permet pas l'accès aux preuves de paiement / contrats écrits pour la sécurité armée"
+        },
+        "index": 235
+    },
+    {
+        "id": "6d83a4dc-38c8-40c9-8803-9f7c90f0f62d",
+        "name": "Organization does not report all incidents of violence on site",
+        "translation": {
+            "en": "Organization does not report all incidents of violence on site",
+            "fr": "L'organisation ne signale pas tous les incidents de violence sur le site"
+        },
+        "index": 236
+    },
+    {
+        "id": "0a3d014a-1ec2-434f-b499-6369f33eb550",
+        "name": "Honors Legal Payment Obligations",
+        "translation": {
+            "en": "Honors Legal Payment Obligations",
+            "fr": "Honorer les obligations légales de paiement"
+        },
+        "index": 237
+    },
+    {
+        "id": "3e2e50fb-5a89-40fa-bc1b-f94b913af5b7",
+        "name": "Organization does not allow access to proof of payment of duties, taxes, fees and charges",
+        "translation": {
+            "en": "Organization does not allow access to proof of payment of duties, taxes, fees and charges",
+            "fr": "L'organisation ne permet pas l'accès aux preuves de paiement des droits, taxes, frais et charges"
+        },
+        "index": 238
+    },
+    {
+        "id": "e5827c3f-a0d3-4ab5-b38f-31d504660e64",
+        "name": "Organization does not pay all duties, taxes, fees and charges",
+        "translation": {
+            "en": "Organization does not pay all duties, taxes, fees and charges",
+            "fr": "L'organisation ne paie pas tous les droits, taxes, redevances et charges"
+        },
+        "index": 239
+    },
+    {
+        "id": "43a6d74a-639e-4cdc-bd3c-1698de295840",
+        "name": "Legal Mining Framework",
+        "translation": {
+            "en": "Legal Mining Framework",
+            "fr": "Cadre légal de l'exploitation minière"
+        },
+        "index": 240
+    },
+    {
+        "id": "4ffaaae3-c30c-4f77-ba81-f3bd452bb8fe",
+        "name": "Invalid mining title for small-scall miner",
+        "translation": {
+            "en": "Invalid mining title for small-scall miner",
+            "fr": "Titre minier non valide pour un petit mineur"
+        },
+        "index": 241
+    },
+    {
+        "id": "df7b7c5e-67c9-48b3-8ce6-38a90a186ed0",
+        "name": "Knowingly operating outside of the legal mining framework",
+        "translation": {
+            "en": "Knowingly operating outside of the legal mining framework",
+            "fr": "Opère sciemment en dehors du cadre légal de l'exploitation minière"
+        },
+        "index": 242
+    },
+    {
+        "id": "790fa396-13d2-4ab5-8c56-0232a45ce69f",
+        "name": "License's perimeter not conceded for artisanal mining",
+        "translation": {
+            "en": "License's perimeter not conceded for artisanal mining",
+            "fr": "Le périmètre de la licence n'est pas concédé pour l'exploitation minière artisanale"
+        },
+        "index": 243
+    },
+    {
+        "id": "9af1b62d-eb0d-4fb2-b034-b848675e7334",
+        "name": "Limited awareness raising on risks of supporting armed forces",
+        "translation": {
+            "en": "Limited awareness raising on risks of supporting armed forces",
+            "fr": "Sensibilisation limitée aux risques liés au soutien des forces armées"
+        },
+        "index": 244
+    },
+    {
+        "id": "ecc17a5b-0db4-4bea-8d44-283bd9df4c49",
+        "name": "Mining cooperative's operations extend outside of ZEA",
+        "translation": {
+            "en": "Mining cooperative's operations extend outside of ZEA",
+            "fr": "Les opérations de la coopérative minière s'étendent au-delà de la ZEA"
+        },
+        "index": 245
+    },
+    {
+        "id": "7334213d-826a-4bde-8625-03ffd87ee041",
+        "name": "Missing provisions to sanction",
+        "translation": {
+            "en": "Missing provisions to sanction",
+            "fr": "Absence de dispositions relatives aux sanctions"
+        },
+        "index": 246
+    },
+    {
+        "id": "9aa94ffa-52a4-416c-9de4-20d42e6afb52",
+        "name": "Missing written authorization from license holder",
+        "translation": {
+            "en": "Missing written authorization from license holder",
+            "fr": "Absence d'autorisation écrite du titulaire du permis"
+        },
+        "index": 247
+    },
+    {
+        "id": "c053e73e-522c-4fca-b73a-901e5f23afca",
+        "name": "Missing written policy prohibiting support of armed forces",
+        "translation": {
+            "en": "Missing written policy prohibiting support of armed forces",
+            "fr": "Absence de politique écrite interdisant le soutien aux forces armées"
+        },
+        "index": 248
+    },
+    {
+        "id": "98483bbe-ea61-465a-b0f3-d72e962dd512",
+        "name": "Organization does not abide by Artisinal Mining Code of Conduct",
+        "translation": {
+            "en": "Organization does not abide by Artisinal Mining Code of Conduct",
+            "fr": "L'organisation ne respecte pas le code de conduite de l'exploitation minière artisanale"
+        },
+        "index": 249
+    },
+    {
+        "id": "e19b8240-b816-4f86-aafb-e18c8e139e1f",
+        "name": "Organization not operating as small scale mine",
+        "translation": {
+            "en": "Organization not operating as small scale mine",
+            "fr": "L'organisation n'opère pas en tant que mine à petite échelle"
+        },
+        "index": 250
+    },
+    {
+        "id": "882e8eb5-faea-45b0-ad3e-30932df89d64",
+        "name": "Mine Plan and Inventory",
+        "translation": {
+            "en": "Mine Plan and Inventory",
+            "fr": "Plan et inventaire de la mine"
+        },
+        "index": 251
+    },
+    {
+        "id": "3ba0b9ec-f31e-470d-b1a2-ec4f286cc477",
+        "name": "All production equipment and materials are not",
+        "translation": {
+            "en": "All production equipment and materials are not",
+            "fr": "Tous les équipements et matériaux de production sont absents"
+        },
+        "index": 252
+    },
+    {
+        "id": "4ca33237-77dd-405b-b746-2f07f240bb78",
+        "name": "Incomplete mapping of all mineshafts",
+        "translation": {
+            "en": "Incomplete mapping of all mineshafts",
+            "fr": "Cartographie incomplète de tous les puits de mine"
+        },
+        "index": 253
+    },
+    {
+        "id": "5c9688fa-c3ca-4e73-807d-304b0ab58d88",
+        "name": "No site plan",
+        "translation": {
+            "en": "No site plan",
+            "fr": "Pas de plan du site"
+        },
+        "index": 254
+    },
+    {
+        "id": "58dc1f92-1b01-4b3f-b335-68a19fa57da5",
+        "name": "Abuse of vulnerability",
+        "translation": {
+            "en": "Abuse of vulnerability",
+            "fr": "Abus de vulnérabilité"
+        },
+        "index": 255
+    },
+    {
+        "id": "7223c6a3-9b89-496a-aa14-67fe4a8b52c1",
+        "name": "Age",
+        "translation": {
+            "en": "Age",
+            "fr": "L'âge"
+        },
+        "index": 256
+    },
+    {
+        "id": "ec45f3a9-fe79-4ebf-b214-0ed1c701e5d1",
+        "name": "Creation of situation of dependency relationship with employer",
+        "translation": {
+            "en": "Creation of situation of dependency relationship with employer",
+            "fr": "Création d'une situation de dépendance à l'égard de l'employeur "
+        },
+        "index": 257
+    },
+    {
+        "id": "4d2b6c2f-2afa-468c-acd3-512c2553701e",
+        "name": "Gender or gender identity",
+        "translation": {
+            "en": "Gender or gender identity",
+            "fr": "Sexe ou identité sexuelle "
+        },
+        "index": 258
+    },
+    {
+        "id": "d4ae99ef-20c2-4b50-a973-975678bdc818",
+        "name": "Internal migrants",
+        "translation": {
+            "en": "Internal migrants",
+            "fr": "Migrants internes"
+        },
+        "index": 259
+    },
+    {
+        "id": "740884ef-f096-4616-8487-5c618f40c7a0",
+        "name": "International migrants",
+        "translation": {
+            "en": "International migrants",
+            "fr": "Migrants internes"
+        },
+        "index": 260
+    },
+    {
+        "id": "388ec012-adc6-4419-a070-2f2be7472e8d",
+        "name": "Minority groups",
+        "translation": {
+            "en": "Minority groups",
+            "fr": "Groupes minoritaires"
+        },
+        "index": 261
+    },
+    {
+        "id": "3b5a5417-bca2-4fbc-bbfa-afdf7d4c032a",
+        "name": "Multiple dependency on employer (jobs for relatives, housing)",
+        "translation": {
+            "en": "Multiple dependency on employer (jobs for relatives, housing)",
+            "fr": "Dépendance multiple vis-à-vis de l'employeur (emplois pour les proches, logement)"
+        },
+        "index": 262
+    },
+    {
+        "id": "87cb360d-c804-4ef4-92fc-ea2783582cec",
+        "name": "No awareness raising around worker rights, risks related to child labor, or the risk of forced, compulsory, and bonded labour at the ASM site",
+        "translation": {
+            "en": "No awareness raising around worker rights, risks related to child labor, or the risk of forced, compulsory, and bonded labour at the ASM site",
+            "fr": "Dépendance multiple vis-à-vis de l'employeur (emplois pour les proches, logement)"
+        },
+        "index": 263
+    },
+    {
+        "id": "73143802-3edb-457a-aa47-3c8f3fa55521",
+        "name": "Pre-existence of a dependency relationship with employer",
+        "translation": {
+            "en": "Pre-existence of a dependency relationship with employer",
+            "fr": "Préexistence d'une relation de dépendance avec l'employeur"
+        },
+        "index": 264
+    },
+    {
+        "id": "e5f4b735-844d-4c4d-b63a-5770a62f1475",
+        "name": "Religious retribution",
+        "translation": {
+            "en": "Religious retribution",
+            "fr": "Représailles religieuses"
+        },
+        "index": 265
+    },
+    {
+        "id": "871f986c-9a1c-49f6-ad3a-24999299c29b",
+        "name": "Retribution based on gender, minority status, other",
+        "translation": {
+            "en": "Retribution based on gender, minority status, other",
+            "fr": "Représailles fondées sur le sexe, l'appartenance à une minorité ou autre "
+        },
+        "index": 266
+    },
+    {
+        "id": "2ab5d9e8-bccb-4102-9013-25f31d1d87d5",
+        "name": "Seasonal or temporary labor",
+        "translation": {
+            "en": "Seasonal or temporary labor",
+            "fr": "Représailles fondées sur le sexe, l'appartenance à une minorité ou autre "
+        },
+        "index": 267
+    },
+    {
+        "id": "eaf106b7-09bf-44af-bd2b-7dbdf086f26a",
+        "name": "Workers not employed on full-time basis",
+        "translation": {
+            "en": "Workers not employed on full-time basis",
+            "fr": "Travailleurs non employés à temps plein"
+        },
+        "index": 268
+    },
+    {
+        "id": "addd30f2-b3c3-4664-a29d-9de02841acec",
+        "name": "Abusive working and living conditions",
+        "translation": {
+            "en": "Abusive working and living conditions",
+            "fr": "Conditions de travail et de vie abusives"
+        },
+        "index": 269
+    },
+    {
+        "id": "6d8d1c8e-7b80-436e-88d6-d5d0033f05d4",
+        "name": "Accommodation does not comply with health, safety, and occupation requirements",
+        "translation": {
+            "en": "Accommodation does not comply with health, safety, and occupation requirements",
+            "fr": "Le logement n'est pas conforme aux exigences en matière de santé, de sécurité et d'occupation"
+        },
+        "index": 270
+    },
+    {
+        "id": "baf17137-5b5b-4b5a-ad2c-b7762a899fb8",
+        "name": "Accommodation provided by facility or recruiter",
+        "translation": {
+            "en": "Accommodation provided by facility or recruiter",
+            "fr": "Hébergement fourni par l'établissement ou le recruteur"
+        },
+        "index": 271
+    },
+    {
+        "id": "db7dd93e-9918-43a5-b5a7-10cc32406f71",
+        "name": "Alternate forms of punishment (depriation of food, water, sleep)",
+        "translation": {
+            "en": "Alternate forms of punishment (depriation of food, water, sleep)",
+            "fr": "Autres formes de punition (privation de nourriture, d'eau, de sommeil)"
+        },
+        "index": 272
+    },
+    {
+        "id": "55584ca6-686b-4873-a542-b17d36d7dee9",
+        "name": "AMP found to be linked to committing war crimes or other serious violations of international humanitarian law, crimes against humanity, or genocide.",
+        "translation": {
+            "en": "AMP found to be linked to committing war crimes or other serious violations of international humanitarian law, crimes against humanity, or genocide.",
+            "fr": "AMP dont on sait qu'elle est liée à la commission de crimes de guerre ou d'autres violations graves du droit international humanitaire, de crimes contre l'humanité ou de génocide. "
+        },
+        "index": 273
+    },
+    {
+        "id": "325f00a9-b7cc-4cec-9a68-1da0e932381d",
+        "name": "Bonded labor",
+        "translation": {
+            "en": "Bonded labor",
+            "fr": "Travail en servitude"
+        },
+        "index": 274
+    },
+    {
+        "id": "fe841a77-fa20-4f06-a725-1a7c3f67649a",
+        "name": "Constant surveillance",
+        "translation": {
+            "en": "Constant surveillance",
+            "fr": "Surveillance constante"
+        },
+        "index": 275
+    },
+    {
+        "id": "2458a1b6-1ee5-4a10-b24e-d3674cb67d7e",
+        "name": "Contamination of water bodies with suspended solids and/or chemicals and fuel residues that put the livelihoods of other water users at risk",
+        "translation": {
+            "en": "Contamination of water bodies with suspended solids and/or chemicals and fuel residues that put the livelihoods of other water users at risk",
+            "fr": "Surveillance constante"
+        },
+        "index": 276
+    },
+    {
+        "id": "f31b652f-7716-4434-8ae8-ed9b1a7d4a96",
+        "name": "Deterioration in working conditions",
+        "translation": {
+            "en": "Deterioration in working conditions",
+            "fr": "Détérioration des conditions de travail"
+        },
+        "index": 277
+    },
+    {
+        "id": "3888c5eb-c925-45d0-bb69-64d91d83616b",
+        "name": "Extra work for breaching labor discipline",
+        "translation": {
+            "en": "Extra work for breaching labor discipline",
+            "fr": "Travail supplémentaire en cas d'infraction à la discipline de travail"
+        },
+        "index": 278
+    },
+    {
+        "id": "e46c96bc-8a51-4c58-a56d-7e569a88f663",
+        "name": "Forced engagement in illicit activities",
+        "translation": {
+            "en": "Forced engagement in illicit activities",
+            "fr": "Participation forcée à des activités illicites"
+        },
+        "index": 279
+    },
+    {
+        "id": "41074f78-2de5-48d8-8e3a-d87f3a21d229",
+        "name": "Forced overtime",
+        "translation": {
+            "en": "Forced overtime",
+            "fr": "Participation forcée à des activités illicites"
+        },
+        "index": 280
+    },
+    {
+        "id": "baae68d8-bc5f-4abc-839e-6f5ecd85082b",
+        "name": "Forced sex for housing and pay",
+        "translation": {
+            "en": "Forced sex for housing and pay",
+            "fr": "Rapports sexuels forcés en échange d'un logement et d'un salaire"
+        },
+        "index": 281
+    },
+    {
+        "id": "fc437cec-9310-4a93-9ac6-85b98a0617c0",
+        "name": "Induced addiction to illegal substances",
+        "translation": {
+            "en": "Induced addiction to illegal substances",
+            "fr": "Dépendance induite à des substances illégales"
+        },
+        "index": 282
+    },
+    {
+        "id": "18b6708d-5c53-42ca-ab33-e90ae3becb1c",
+        "name": "Legally insufficient rest periods after consecutive hours of work",
+        "translation": {
+            "en": "Legally insufficient rest periods after consecutive hours of work",
+            "fr": "Périodes de repos légalement insuffisantes après des heures de travail consécutives"
+        },
+        "index": 283
+    },
+    {
+        "id": "fc4f4641-557f-483d-89a7-eec042eb9171",
+        "name": "Manual labor in raw material extraction",
+        "translation": {
+            "en": "Manual labor in raw material extraction",
+            "fr": "Travail manuel dans l'extraction des matières premières"
+        },
+        "index": 284
+    },
+    {
+        "id": "c2957c8d-1d26-4654-ba85-1c961c1c62fb",
+        "name": "Mine site and transportation routes are  illegally controlled by non-state armed groups.",
+        "translation": {
+            "en": "Mine site and transportation routes are  illegally controlled by non-state armed groups.",
+            "fr": "Le site minier et les voies de transport sont illégalement contrôlés par des groupes armés non étatiques. "
+        },
+        "index": 285
+    },
+    {
+        "id": "badd8879-bfae-41b6-933f-88a110a9e661",
+        "name": "No changes to work duties after sickness or injury",
+        "translation": {
+            "en": "No changes to work duties after sickness or injury",
+            "fr": "Pas de modification des tâches après une maladie ou une blessure"
+        },
+        "index": 286
+    },
+    {
+        "id": "45582ca7-400b-4251-af1a-6694a29a7b21",
+        "name": "No changes to work duties for pregnant workers",
+        "translation": {
+            "en": "No changes to work duties for pregnant workers",
+            "fr": "Pas de modification des tâches pour les travailleuses enceintes"
+        },
+        "index": 287
+    },
+    {
+        "id": "3042ce9a-799e-474a-b188-8fc6ea24bf03",
+        "name": "No freedom to resign in accordance with legal requirements",
+        "translation": {
+            "en": "No freedom to resign in accordance with legal requirements",
+            "fr": "Pas de liberté de démissionner conformément aux exigences légales"
+        },
+        "index": 288
+    },
+    {
+        "id": "9247a4f8-c065-485e-b146-d9456530286a",
+        "name": "No or low mechanization in workplace",
+        "translation": {
+            "en": "No or low mechanization in workplace",
+            "fr": "Pas de liberté de démissionner conformément aux exigences légales"
+        },
+        "index": 289
+    },
+    {
+        "id": "786c9760-ddfa-40ee-a237-1125d1bcc874",
+        "name": "No or low occurrences of standards-based audits",
+        "translation": {
+            "en": "No or low occurrences of standards-based audits",
+            "fr": "Pas ou peu d'audits fondés sur des normes"
+        },
+        "index": 290
+    },
+    {
+        "id": "375f9f7f-bb9a-4bb4-95fe-8f67f724ee5e",
+        "name": "Physical and sexual intimidation and abuse",
+        "translation": {
+            "en": "Physical and sexual intimidation and abuse",
+            "fr": "Intimidation et abus physiques et sexuels"
+        },
+        "index": 291
+    },
+    {
+        "id": "67541fcf-ae49-443a-929e-157031ad9ff1",
+        "name": "Pollution of  air (e.g. dust) and soil at the mine site and surrounding communities",
+        "translation": {
+            "en": "Pollution of air (e.g. dust) and soil at the mine site and surrounding communities",
+            "fr": "Pollution de l'air (par exemple, poussières) et du sol sur le site minier et dans les communautés environnantes"
+        },
+        "index": 292
+    },
+    {
+        "id": "3d962e98-46e1-47b7-aa46-60f89486faf9",
+        "name": "Psycholocal abuse and intimidation and use of threats and punishment",
+        "translation": {
+            "en": "Psycholocal abuse and intimidation and use of threats and punishment",
+            "fr": "Abus et intimidation psycholocaux et recours aux menaces et aux punitions "
+        },
+        "index": 293
+    },
+    {
+        "id": "12eab039-8811-4334-8d18-564d30bb1105",
+        "name": "Reduced freedom to terminate contract after training or other benefit paid by employer",
+        "translation": {
+            "en": "Reduced freedom to terminate contract after training or other benefit paid by employer",
+            "fr": "Liberté réduite de mettre fin au contrat après une formation ou un autre avantage payé par l'employeur"
+        },
+        "index": 294
+    },
+    {
+        "id": "f8938414-639c-4622-87f1-e133feb75723",
+        "name": "Removal of rights or privileges",
+        "translation": {
+            "en": "Removal of rights or privileges",
+            "fr": "Suppression de droits ou de privilèges"
+        },
+        "index": 295
+    },
+    {
+        "id": "e683382b-06d3-47a3-bfd4-b2e738caeb36",
+        "name": "Retribution",
+        "translation": {
+            "en": "Retribution",
+            "fr": "Punition"
+        },
+        "index": 296
+    },
+    {
+        "id": "6cd60856-ae69-4cb8-942a-bc9f2d90b6f9",
+        "name": "Tunnels lack proper ventilation, lighting and galleries",
+        "translation": {
+            "en": "Tunnels lack proper ventilation, lighting and galleries",
+            "fr": "Les tunnels manquent de ventilation, d'éclairage et de galeries"
+        },
+        "index": 297
+    },
+    {
+        "id": "1050d2eb-278c-44be-ab14-fdb5961efd84",
+        "name": "Verbal working arrangements/no written agreement",
+        "translation": {
+            "en": "Verbal working arrangements/no written agreement",
+            "fr": "Arrangements de travail verbaux/absence d'accord écrit"
+        },
+        "index": 298
+    },
+    {
+        "id": "c7a17c46-5343-4529-a2ac-e5266e030798",
+        "name": "Workers are forced to engage in work that is unreasonably hazardous",
+        "translation": {
+            "en": "Workers are forced to engage in work that is unreasonably hazardous",
+            "fr": "Les travailleurs sont contraints d'effectuer un travail déraisonnablement dangereux"
+        },
+        "index": 299
+    },
+    {
+        "id": "177cbf7c-f255-466f-8119-9fad98a80541",
+        "name": "Workers are forced to engage in work under extreme environmental conditions",
+        "translation": {
+            "en": "Workers are forced to engage in work under extreme environmental conditions",
+            "fr": "Les travailleurs sont contraints de travailler dans des conditions environnementales extrêmes"
+        },
+        "index": 300
+    },
+    {
+        "id": "06f202a7-7b46-45b0-9d16-3dcb1eccd42f",
+        "name": "Workers are not trained on emergency preparedness",
+        "translation": {
+            "en": "Workers are not trained on emergency preparedness",
+            "fr": "Les travailleurs ne sont pas formés à la préparation aux situations d'urgence"
+        },
+        "index": 301
+    },
+    {
+        "id": "56d576cc-680f-43d3-8fd0-1c89e7d0438a",
+        "name": "Workers are punished if they remove themselves from work situations that they believe present an imminent and serious danger to health",
+        "translation": {
+            "en": "Workers are punished if they remove themselves from work situations that they believe present an imminent and serious danger to health",
+            "fr": "Les travailleurs sont punis s'ils se retirent de situations de travail qui, selon eux, présentent un danger imminent et grave pour la santé."
+        },
+        "index": 302
+    },
+    {
+        "id": "92671db0-dc18-4b74-9589-dc44d8092f79",
+        "name": "Workers not provided sufficient drinking water",
+        "translation": {
+            "en": "Workers not provided sufficient drinking water",
+            "fr": "Les travailleurs ne disposent pas d'une quantité suffisante d'eau potable"
+        },
+        "index": 303
+    },
+    {
+        "id": "92132f4a-e4c1-4e0f-b1b0-e9f5a90332a7",
+        "name": "Workers working underground not using or maintain appropriate, basic PPE",
+        "translation": {
+            "en": "Workers working underground not using or maintain appropriate, basic PPE",
+            "fr": "Les travailleurs souterrains n'utilisent pas ou n'entretiennent pas les EPI de base appropriés"
+        },
+        "index": 304
+    },
+    {
+        "id": "4bc5db68-386e-4db9-8e60-ec0642cc30f4",
+        "name": "Workplace does not comply with health, safety, and occupation requirements",
+        "translation": {
+            "en": "Workplace does not comply with health, safety, and occupation requirements",
+            "fr": "Le lieu de travail n'est pas conforme aux exigences en matière de santé, de sécurité et d'occupation."
+        },
+        "index": 305
+    },
+    {
+        "id": "e89ffee7-338c-4300-a010-b18b3b6d950a",
+        "name": "Workplace is not designed for emergency evacuation (e.g. locked emergency exits)",
+        "translation": {
+            "en": "Workplace is not designed for emergency evacuation (e.g. locked emergency exits)",
+            "fr": "Le lieu de travail n'est pas conçu pour l'évacuation d'urgence (par exemple, les sorties de secours sont verrouillées)."
+        },
+        "index": 306
+    },
+    {
+        "id": "e32ccafa-5588-4c75-8862-5010c61e5f25",
+        "name": "Child labor",
+        "translation": {
+            "en": "Child labor",
+            "fr": "Travail des enfants"
+        },
+        "index": 307
+    },
+    {
+        "id": "7c8fc6ec-41ee-4a7b-8481-6b73bb4b10a7",
+        "name": "Child paid less than adults for same work",
+        "translation": {
+            "en": "Child paid less than adults for same work",
+            "fr": "Enfant moins bien payé qu'un adulte pour le même travail"
+        },
+        "index": 308
+    },
+    {
+        "id": "3a9d37bd-8f69-40b2-9f3b-db8293ae5584",
+        "name": "Child paid little or nothing",
+        "translation": {
+            "en": "Child paid little or nothing",
+            "fr": "Enfant peu ou pas payé"
+        },
+        "index": 309
+    },
+    {
+        "id": "a907490f-1c7a-49d1-99fa-5f1c332d7d67",
+        "name": "Child working during school hours",
+        "translation": {
+            "en": "Child working during school hours",
+            "fr": "Enfant travaillant pendant les heures d'école "
+        },
+        "index": 310
+    },
+    {
+        "id": "770f343c-1767-490e-9b36-0014edbf5ba5",
+        "name": "Children aged 13 years and under working at facility",
+        "translation": {
+            "en": "Children aged 13 years and under working at facility",
+            "fr": "Enfants âgés de 13 ans et moins travaillant dans l'établissement"
+        },
+        "index": 311
+    },
+    {
+        "id": "c12c040e-4815-421b-ad7c-9e0940af71c5",
+        "name": "Children aged 14-17 years working at facility",
+        "translation": {
+            "en": "Children aged 14-17 years working at facility",
+            "fr": "Enfants âgés de 14 à 17 ans travaillant dans l'établissement"
+        },
+        "index": 312
+    },
+    {
+        "id": "f7327591-0cd7-40cd-8e3c-17fcdf95d391",
+        "name": "Children aged 15-17 years working at facility",
+        "translation": {
+            "en": "Children aged 15-17 years working at facility",
+            "fr": "Enfants âgés de 15 à 17 ans travaillant dans l'établissement"
+        },
+        "index": 313
+    },
+    {
+        "id": "84561a83-13dc-459f-897d-3306394ff974",
+        "name": "Children living at facility",
+        "translation": {
+            "en": "Children living at facility",
+            "fr": "Enfants vivant dans l'établissement"
+        },
+        "index": 314
+    },
+    {
+        "id": "e80954cf-decd-4df6-8f07-4f86c63b9aef",
+        "name": "Children within facility but not working",
+        "translation": {
+            "en": "Children within facility but not working",
+            "fr": "Enfants présents dans l'établissement mais ne travaillant pas"
+        },
+        "index": 315
+    },
+    {
+        "id": "ee2e884d-e311-401b-9a48-a391ba6301b4",
+        "name": "Children within facility for food provision",
+        "translation": {
+            "en": "Children within facility for food provision",
+            "fr": "Enfants se trouvant dans l'établissement pour l'approvisionnement en nourriture"
+        },
+        "index": 316
+    },
+    {
+        "id": "87625382-97ac-4d32-a7dc-bd5f5f6d2599",
+        "name": "Children working alongside family member(s)",
+        "translation": {
+            "en": "Children working alongside family member(s)",
+            "fr": "Enfants travaillant aux côtés d'un ou de plusieurs membres de leur famille"
+        },
+        "index": 317
+    },
+    {
+        "id": "67bd1e9a-b5d0-4d0c-9bfc-77a70f932462",
+        "name": "Children working in isolation from family",
+        "translation": {
+            "en": "Children working in isolation from family",
+            "fr": "Enfants travaillant isolés de leur famille "
+        },
+        "index": 318
+    },
+    {
+        "id": "ff6a1588-8ced-400e-a8ce-71d8a7abbefc",
+        "name": "Children working overtime",
+        "translation": {
+            "en": "Children working overtime",
+            "fr": "Enfants travaillant isolés de leur famille "
+        },
+        "index": 319
+    },
+    {
+        "id": "aeb1e57d-2628-46ae-9c57-bbdc40ee8d64",
+        "name": "Goods produced with child labor (ILAB List of Goods)",
+        "translation": {
+            "en": "Goods produced with child labor (ILAB List of Goods)",
+            "fr": "Produits issus du travail des enfants (liste de produits de ILAB)"
+        },
+        "index": 320
+    },
+    {
+        "id": "a83fc8cd-d78a-4ed9-9726-1c26771371ec",
+        "name": "Hazardous work",
+        "translation": {
+            "en": "Hazardous work",
+            "fr": "Travail dangereux"
+        },
+        "index": 321
+    },
+    {
+        "id": "54114984-9082-4037-8bd8-9e260e7a9909",
+        "name": "Lax system to verify age of worker",
+        "translation": {
+            "en": "Lax system to verify age of worker",
+            "fr": "Travail dangereux"
+        },
+        "index": 322
+    },
+    {
+        "id": "499cec82-7fe6-4a1a-8b08-96c93a7eb787",
+        "name": "Migrant child",
+        "translation": {
+            "en": "Migrant child",
+            "fr": "Enfant migrant"
+        },
+        "index": 323
+    },
+    {
+        "id": "b283fb58-c0dd-4e3d-986e-d364442e5719",
+        "name": "No system to verify age of workers",
+        "translation": {
+            "en": "No system to verify age of workers",
+            "fr": "Aucun système de vérification de l'âge des travailleurs"
+        },
+        "index": 324
+    },
+    {
+        "id": "435f4a22-1da9-4c80-b7d4-6a741c4f843b",
+        "name": "Non hazardous work",
+        "translation": {
+            "en": "Non hazardous work",
+            "fr": "Travaux non dangereux"
+        },
+        "index": 325
+    },
+    {
+        "id": "4b7d5ef6-faa5-4a88-811f-8d08b31ce20b",
+        "name": "Persons under the age of 18 (children) perform work classified as a worst forms of child labour in the internal supply chain of the AMP",
+        "translation": {
+            "en": "Persons under the age of 18 (children) perform work classified as a worst forms of child labour in the internal supply chain of the AMP",
+            "fr": "Les personnes de moins de 18 ans (enfants) effectuant un travail classé comme l'une des pires formes de travail des enfants dans la chaîne d'approvisionnement interne de l'AMP"
+        },
+        "index": 326
+    },
+    {
+        "id": "b96af587-f899-46b8-9ab8-86638f3042eb",
+        "name": "Persons under the age of 18 (children) performing hazardous tasks per national law and in compliance with ILO 182 hazardous tasks list",
+        "translation": {
+            "en": "Persons under the age of 18 (children) performing hazardous tasks per national law and in compliance with ILO 182 hazardous tasks list",
+            "fr": "Personnes de moins de 18 ans (enfants) effectuant des tâches dangereuses conformément à la législation nationale et à la liste des tâches dangereuses de l'OIT 182. "
+        },
+        "index": 327
+    },
+    {
+        "id": "952aaa25-8834-4a9f-b1a8-6dacd0035b5f",
+        "name": "Work at night",
+        "translation": {
+            "en": "Work at night",
+            "fr": "Travailler de nuit"
+        },
+        "index": 328
+    },
+    {
+        "id": "28a50aaa-b6c3-41d6-a6b0-4cf59a7ce56c",
+        "name": "Work longer hours than allowed by law",
+        "translation": {
+            "en": "Work longer hours than allowed by law",
+            "fr": "Travailler plus longtemps que la loi ne l'autorise"
+        },
+        "index": 329
+    },
+    {
+        "id": "6b55c63c-6c1e-431a-81dc-f40a3fb4005f",
+        "name": "Workers under 18 years involved in mining operations",
+        "translation": {
+            "en": "Workers under 18 years involved in mining operations",
+            "fr": "Travailleurs de moins de 18 ans impliqués dans les opérations minières"
+        },
+        "index": 330
+    },
+    {
+        "id": "ab36e816-d4e5-4346-a365-623273b3895c",
+        "name": "Young workers",
+        "translation": {
+            "en": "Young workers",
+            "fr": "Jeunes travailleurs"
+        },
+        "index": 331
+    },
+    {
+        "id": "208691c7-7584-4288-a6d2-7e76735b8b02",
+        "name": "Child Labor",
+        "translation": {
+            "en": "Child Labor",
+            "fr": "Travail des enfants"
+        },
+        "index": 332
+    },
+    {
+        "id": "a2a252a0-e417-4b50-95ba-9f722a8f9e53",
+        "name": "Limited awareness raising on risks of child labor",
+        "translation": {
+            "en": "Limited awareness raising on risks of child labor",
+            "fr": "Sensibilisation limitée aux risques liés au travail des enfants"
+        },
+        "index": 333
+    },
+    {
+        "id": "7cc3a0bb-2c1c-4cbb-acc5-7a7526ab8a7b",
+        "name": "Missing notification procedures when young workers found on mine site",
+        "translation": {
+            "en": "Missing notification procedures when young workers found on mine site",
+            "fr": "Absence de procédures de notification en cas de découverte de jeunes travailleurs sur le site minier"
+        },
+        "index": 334
+    },
+    {
+        "id": "25851c05-7d1b-4d66-a7ff-fa01a8bc903a",
+        "name": "Missing policy or implementation of policy on child labor",
+        "translation": {
+            "en": "Missing policy or implementation of policy on child labor",
+            "fr": "Absence de politique ou de mise en œuvre d'une politique sur le travail des enfants"
+        },
+        "index": 335
+    },
+    {
+        "id": "9774fa1c-9f9a-4ce5-9fde-89ca19dd0ee8",
+        "name": "Missing provisions in internal governance rules prohibiting child labor",
+        "translation": {
+            "en": "Missing provisions in internal governance rules prohibiting child labor",
+            "fr": "Absence de politique ou de mise en œuvre d'une politique sur le travail des enfants"
+        },
+        "index": 336
+    },
+    {
+        "id": "601fd0f0-ac72-46f9-a62a-8282ea0c0142",
+        "name": "No oversight of young workers in secondary areas around mine site",
+        "translation": {
+            "en": "No oversight of young workers in secondary areas around mine site",
+            "fr": "Absence de surveillance des jeunes travailleurs dans les zones secondaires autour du site minier"
+        },
+        "index": 337
+    },
+    {
+        "id": "b35e4bc5-9626-4a66-ae70-f19ee61eb84c",
+        "name": "Debt bondage",
+        "translation": {
+            "en": "Debt bondage",
+            "fr": "Servitude pour dettes"
+        },
+        "index": 338
+    },
+    {
+        "id": "b56c28f2-3825-480f-b5e9-41ff4471554d",
+        "name": "All or most of income used to pay back their debts the cooperative, association, buyer or permit holder,",
+        "translation": {
+            "en": "All or most of income used to pay back their debts the cooperative, association, buyer or permit holder,",
+            "fr": "Absence de surveillance des jeunes travailleurs dans les zones secondaires autour du site minier"
+        },
+        "index": 339
+    },
+    {
+        "id": "3e8afa59-0d66-4d70-9737-437ddb602492",
+        "name": "Contractors charge worker advanced fees",
+        "translation": {
+            "en": "Contractors charge worker advanced fees",
+            "fr": "Les contracteurs demandent des frais en avance aux travailleurs"
+        },
+        "index": 340
+    },
+    {
+        "id": "1331cb4b-ad22-47bc-aeff-13d716ab62d6",
+        "name": "Forced to work for indeterminate period in order to repay outstanding debt or wage advances",
+        "translation": {
+            "en": "Forced to work for indeterminate period in order to repay outstanding debt or wage advances",
+            "fr": "Obligation de travailler pendant une période indéterminée afin de rembourser des dettes ou des avances sur salaire."
+        },
+        "index": 341
+    },
+    {
+        "id": "ca3eb67f-1ac3-4215-be6f-4ad6333220c1",
+        "name": "Landowner making advanced payment to worker",
+        "translation": {
+            "en": "Landowner making advanced payment to worker",
+            "fr": "Le propriétaire foncier verse une avance au travailleur"
+        },
+        "index": 342
+    },
+    {
+        "id": "bb51dbed-503d-4335-817b-91bce2256a99",
+        "name": "Loans and wages advanced to workers",
+        "translation": {
+            "en": "Loans and wages advanced to workers",
+            "fr": "Le propriétaire foncier verse une avance au travailleur"
+        },
+        "index": 343
+    },
+    {
+        "id": "530d56d1-56f2-4697-a687-1d10aa2578e9",
+        "name": "Deception",
+        "translation": {
+            "en": "Deception",
+            "fr": "Tromperie"
+        },
+        "index": 344
+    },
+    {
+        "id": "136b7f7c-d4fd-473a-9426-7c443468fba7",
+        "name": "Deception about job location or employer",
+        "translation": {
+            "en": "Deception about job location or employer",
+            "fr": "Tromperie sur le lieu de travail ou l'employeur"
+        },
+        "index": 345
+    },
+    {
+        "id": "b8d8117b-0e42-4257-abc7-f2f77bd7e2cf",
+        "name": "Deception about nature of the work",
+        "translation": {
+            "en": "Deception about nature of the work",
+            "fr": "Tromperie sur la nature du travail"
+        },
+        "index": 346
+    },
+    {
+        "id": "b68ac1fc-fe8c-4085-a7f8-9eafe26bd5b3",
+        "name": "Deception about wages or earnings",
+        "translation": {
+            "en": "Deception about wages or earnings",
+            "fr": "Tromperie sur le salaire ou les revenus"
+        },
+        "index": 347
+    },
+    {
+        "id": "42169c16-a13f-4a5b-bcbb-8e38c3102de2",
+        "name": "Deceptive recruitment",
+        "translation": {
+            "en": "Deceptive recruitment",
+            "fr": "Recrutement trompeur"
+        },
+        "index": 348
+    },
+    {
+        "id": "90837882-296d-4fce-9527-ca5dfc35b824",
+        "name": "Forced to work for employer's private home or family",
+        "translation": {
+            "en": "Forced to work for employer's private home or family",
+            "fr": "Travail forcé pour la maison privée ou la famille de l'employeur"
+        },
+        "index": 349
+    },
+    {
+        "id": "86fd12b0-1853-45e4-b596-1d1152f836b1",
+        "name": "Wages paid to workers are not what was promised at the time of employment",
+        "translation": {
+            "en": "Wages paid to workers are not what was promised at the time of employment",
+            "fr": "Les salaires versés aux travailleurs ne correspondent pas à ce qui avait été promis au moment de l'embauche"
+        },
+        "index": 350
+    },
+    {
+        "id": "ca8b08ff-206d-4029-a47e-5e8501d7905c",
+        "name": "Discrimination in occupation and employment",
+        "translation": {
+            "en": "Discrimination in occupation and employment",
+            "fr": "Discrimination dans la profession et l'emploi"
+        },
+        "index": 351
+    },
+    {
+        "id": "e050d608-343d-4592-ac93-f0c0b5c27d5f",
+        "name": "Discrimination in access to employment",
+        "translation": {
+            "en": "Discrimination in access to employment",
+            "fr": "Discrimination dans l'accès à l'emploi"
+        },
+        "index": 352
+    },
+    {
+        "id": "fcd002a4-3ab7-4cb1-8acc-d43a474f136d",
+        "name": "Discrimination in access to particular occupations",
+        "translation": {
+            "en": "Discrimination in access to particular occupations",
+            "fr": "Discrimination dans l'accès à des professions particulières"
+        },
+        "index": 353
+    },
+    {
+        "id": "08d81fac-54ad-48ca-a352-3a1d3e4390be",
+        "name": "Discrimination in access to training",
+        "translation": {
+            "en": "Discrimination in access to training",
+            "fr": "Discrimination dans l'accès à la formation"
+        },
+        "index": 354
+    },
+    {
+        "id": "4755ba98-b348-41dc-937a-51d1745316b9",
+        "name": "Discrimination in terms and conditions of employment",
+        "translation": {
+            "en": "Discrimination in terms and conditions of employment",
+            "fr": "Discrimination dans l'accès à la formation"
+        },
+        "index": 355
+    },
+    {
+        "id": "0358fe39-85fb-4c85-9c03-f4f176e85740",
+        "name": "Forced overtime beyond legal limits",
+        "translation": {
+            "en": "Forced overtime beyond legal limits",
+            "fr": "Heures supplémentaires forcées au-delà des limites légales"
+        },
+        "index": 356
+    },
+    {
+        "id": "0239e809-c82f-45e1-92d1-fd8314663e8f",
+        "name": "Forced to work overtime under threats of penalty",
+        "translation": {
+            "en": "Forced to work overtime under threats of penalty",
+            "fr": "Heures supplémentaires forcées sous la menace d'une sanction"
+        },
+        "index": 357
+    },
+    {
+        "id": "90c1bf54-fce6-410b-9ac4-39267225da16",
+        "name": "Mining cooperative does not ensure that work only occurs during the day",
+        "translation": {
+            "en": "Mining cooperative does not ensure that work only occurs during the day",
+            "fr": "L'organisation ne veille pas à ce que le travail n'ait lieu que pendant la journée"
+        },
+        "index": 358
+    },
+    {
+        "id": "9fe33854-50dd-4f2c-992e-ef43c78c0062",
+        "name": "Missing policy on working hours and rest periods",
+        "translation": {
+            "en": "Missing policy on working hours and rest periods",
+            "fr": "Absence de politique sur les heures de travail et les périodes de repos"
+        },
+        "index": 359
+    },
+    {
+        "id": "a3ccbef3-062e-42b7-8101-caff5ff034bc",
+        "name": "Fair and Equal Compensation",
+        "translation": {
+            "en": "Fair and Equal Compensation",
+            "fr": "Rémunération juste et équitable"
+        },
+        "index": 360
+    },
+    {
+        "id": "fe2d1dbb-278a-44d1-a39e-34649fcc0e0f",
+        "name": "Disproportionate payment for contributions",
+        "translation": {
+            "en": "Disproportionate payment for contributions",
+            "fr": "Paiement disproportionné des contributions"
+        },
+        "index": 361
+    },
+    {
+        "id": "76e7a316-e81f-4450-8e62-a190a4825174",
+        "name": "Missing investment plan for optimizing productivity and overall income levels",
+        "translation": {
+            "en": "Missing investment plan for optimizing productivity and overall income levels",
+            "fr": "Absence de plan d'investissement visant à optimiser la productivité et les niveaux de revenus globaux"
+        },
+        "index": 362
+    },
+    {
+        "id": "b0c15a19-f365-4e38-bee1-ddcc182608a2",
+        "name": "Overtime work is not voluntary and paid",
+        "translation": {
+            "en": "Overtime work is not voluntary and paid",
+            "fr": "Les heures supplémentaires ne sont ni volontaires ni rémunérées"
+        },
+        "index": 363
+    },
+    {
+        "id": "cb53f23e-5f8d-4404-806d-6176418f6616",
+        "name": "Wages are not commensuration with level of responsibility",
+        "translation": {
+            "en": "Wages are not commensuration with level of responsibility",
+            "fr": "Les salaires ne sont pas proportionnels au niveau de responsabilité"
+        },
+        "index": 364
+    },
+    {
+        "id": "428bdcbd-7687-422b-bf32-0b67fafdf056",
+        "name": "Wages are not paid regularly and on time",
+        "translation": {
+            "en": "Wages are not paid regularly and on time",
+            "fr": "Les salaires ne sont pas payés régulièrement et à temps"
+        },
+        "index": 365
+    },
+    {
+        "id": "b7cb1bbf-088d-4846-86f2-a2c9a8a34811",
+        "name": "Wages below minimum wage",
+        "translation": {
+            "en": "Wages below minimum wage",
+            "fr": "Les salaires sont inférieurs au salaire minimum"
+        },
+        "index": 366
+    },
+    {
+        "id": "9e635e49-2cc6-4c70-beb5-70e69d60481d",
+        "name": "Fair Working Hours",
+        "translation": {
+            "en": "Fair Working Hours",
+            "fr": "Heures de travail équitables"
+        },
+        "index": 367
+    },
+    {
+        "id": "10fc6acd-b54a-491a-82ed-13c1103daab0",
+        "name": "Limited awareness raising on working hours and rest periods",
+        "translation": {
+            "en": "Limited awareness raising on working hours and rest periods",
+            "fr": "Sensibilisation limitée aux heures de travail et aux périodes de repos"
+        },
+        "index": 368
+    },
+    {
+        "id": "de698823-04a4-4ed4-a102-c6b92b62df22",
+        "name": "Missing policy on working hours and rest periods",
+        "translation": {
+            "en": "Missing policy on working hours and rest periods",
+            "fr": "Absence de politique sur les heures de travail et les périodes de repos"
+        },
+        "index": 369
+    },
+    {
+        "id": "87a21e90-3a35-45a3-9d93-bb7d0d47ffef",
+        "name": "Organization does not ensure that work only occurs during the day",
+        "translation": {
+            "en": "Organization does not ensure that work only occurs during the day",
+            "fr": "L'organisation ne veille pas à ce que le travail n'ait lieu que pendant la journée"
+        },
+        "index": 370
+    },
+    {
+        "id": "3b76477b-97b4-4778-8124-7c43040efa74",
+        "name": "Forced labor",
+        "translation": {
+            "en": "Forced labor",
+            "fr": "Travail forcé"
+        },
+        "index": 371
+    },
+    {
+        "id": "13e797e5-61ba-47fa-9b07-58da19a2349e",
+        "name": "Goods produced with forced or indentured child labor (ILAB List of Goods)",
+        "translation": {
+            "en": "Goods produced with forced or indentured child labor (ILAB List of Goods)",
+            "fr": "Produits issus du travail forcé ou sous servitude des enfants (liste de produits de ILAB)"
+        },
+        "index": 372
+    },
+    {
+        "id": "33d17736-f80e-4ccd-a1c4-66a26a34ec15",
+        "name": "Goods produced with forced labor (ILAB List of Goods)",
+        "translation": {
+            "en": "Goods produced with forced labor (ILAB List of Goods)",
+            "fr": "Produits issus du travail forcé (liste de produits de ILAB)"
+        },
+        "index": 373
+    },
+    {
+        "id": "6e1735d3-42e7-459d-acf1-4aabf365c02a",
+        "name": "Forced Labor",
+        "translation": {
+            "en": "Forced Labor",
+            "fr": "Travail forcé"
+        },
+        "index": 374
+    },
+    {
+        "id": "ac017e02-4d60-48cf-869e-8b27414553ae",
+        "name": "Limited awareness raising on risk of forced labor",
+        "translation": {
+            "en": "Limited awareness raising on risk of forced labor",
+            "fr": "Sensibilisation limitée au risque de travail forcé"
+        },
+        "index": 375
+    },
+    {
+        "id": "17d2ed1a-7216-4a79-84df-1299d49c3dc4",
+        "name": "Missing policy on forced labor",
+        "translation": {
+            "en": "Missing policy on forced labor",
+            "fr": "Absence de politique sur le travail forcé"
+        },
+        "index": 376
+    },
+    {
+        "id": "78894d89-8470-47fe-8fac-7a72e980c11d",
+        "name": "Missing provisions in code of conduct on forced labor",
+        "translation": {
+            "en": "Missing provisions in code of conduct on forced labor",
+            "fr": "Absence de dispositions dans le code de conduite sur le travail forcé"
+        },
+        "index": 377
+    },
+    {
+        "id": "092c527f-38fc-4e28-ae43-be71c3e00fde",
+        "name": "Not all workers hold a contract or valid adherence agreement",
+        "translation": {
+            "en": "Not all workers hold a contract or valid adherence agreement",
+            "fr": "Tous les travailleurs ne sont pas titulaires d'un contrat ou d'un accord d'adhésion valide"
+        },
+        "index": 378
+    },
+    {
+        "id": "39d08a11-eca4-47d9-bf3c-9f575c99be52",
+        "name": "Freedom of assoication and collective bargaining",
+        "translation": {
+            "en": "Freedom of assoication and collective bargaining",
+            "fr": "Liberté d'association et de négociation collective"
+        },
+        "index": 379
+    },
+    {
+        "id": "cc39c950-4764-4e80-8884-d8eacf5bb007",
+        "name": "Collective bargaining agreements not in effect in the enterprise",
+        "translation": {
+            "en": "Collective bargaining agreements not in effect in the enterprise",
+            "fr": "Les conventions collectives ne sont pas en vigueur dans l'entreprise"
+        },
+        "index": 380
+    },
+    {
+        "id": "93303fb0-fe7f-480f-802c-345ced8aaab4",
+        "name": "Employer does not consult with worker organizations where legally required",
+        "translation": {
+            "en": "Employer does not consult with worker organizations where legally required",
+            "fr": "L'employeur ne consulte pas les organisations de travailleurs lorsque la loi l'exige"
+        },
+        "index": 381
+    },
+    {
+        "id": "dc68114c-7ddd-41c0-9b77-30143c2bd0ef",
+        "name": "Employer interferes with, manipulates, or controls the worker organization",
+        "translation": {
+            "en": "Employer interferes with, manipulates, or controls the worker organization",
+            "fr": "L'employeur interfère avec l'organisation des travailleurs, la manipule ou la contrôle"
+        },
+        "index": 382
+    },
+    {
+        "id": "c2eeb895-bb98-4022-ab30-f0295b55d352",
+        "name": "Employer threatens, intimidates, harasses or punishes workers who join a union or engage in union activities",
+        "translation": {
+            "en": "Employer threatens, intimidates, harasses or punishes workers who join a union or engage in union activities",
+            "fr": "L'employeur menace, intimide, harcèle ou punit les travailleurs qui adhèrent à un syndicat ou participent à des activités syndicales."
+        },
+        "index": 383
+    },
+    {
+        "id": "39432228-d3ae-40f0-ad53-05bc7c4a5356",
+        "name": "Worker representatives do not have access to workers in the workplace",
+        "translation": {
+            "en": "Worker representatives do not have access to workers in the workplace",
+            "fr": "Les représentants des travailleurs n'ont pas accès aux travailleurs sur le lieu de travail"
+        },
+        "index": 384
+    },
+    {
+        "id": "0e1c2198-ab4f-44d3-bda1-148b3e12bb02",
+        "name": "Worker unions and associations are not allowed in the workplace",
+        "translation": {
+            "en": "Worker unions and associations are not allowed in the workplace",
+            "fr": "Les syndicats et associations de travailleurs ne sont pas autorisés sur le lieu de travail"
+        },
+        "index": 385
+    },
+    {
+        "id": "d2c8f181-139c-4737-852d-db30c3998734",
+        "name": "Worker unions and associations are not recognised in the workplace",
+        "translation": {
+            "en": "Worker unions and associations are not recognised in the workplace",
+            "fr": "Les syndicats et associations de travailleurs ne sont pas reconnus sur le lieu de travail"
+        },
+        "index": 386
+    },
+    {
+        "id": "e77b2aed-9116-4f79-9205-2b4445d2fa00",
+        "name": "Workers are not free to meet without management present",
+        "translation": {
+            "en": "Workers are not free to meet without management present",
+            "fr": "Les travailleurs ne sont pas libres de se réunir en l'absence de la direction"
+        },
+        "index": 387
+    },
+    {
+        "id": "4eda4624-2e82-4bf9-8e13-fb4cca331f5a",
+        "name": "Grievance mechanisms",
+        "translation": {
+            "en": "Grievance mechanisms",
+            "fr": "Mécanismes de réclamation"
+        },
+        "index": 388
+    },
+    {
+        "id": "d0f7a7d7-fcd1-4128-99cc-16826a42ff04",
+        "name": "No case management for grievances that are reported",
+        "translation": {
+            "en": "No case management for grievances that are reported",
+            "fr": "Aucune gestion des dossiers pour les griefs signalés"
+        },
+        "index": 389
+    },
+    {
+        "id": "fa563116-8fc9-4072-83b2-c26aef2d5b0c",
+        "name": "No grievance mechanism to effectively receive and respond to complaints.",
+        "translation": {
+            "en": "No grievance mechanism to effectively receive and respond to complaints.",
+            "fr": "Absence de mécanisme de réclamation permettant de recevoir et de traiter efficacement les plaintes. "
+        },
+        "index": 390
+    },
+    {
+        "id": "98d6e627-95d5-49c0-b685-c4b8dddaf691",
+        "name": "No safeguards in place to protect those raising grievances",
+        "translation": {
+            "en": "No safeguards in place to protect those raising grievances",
+            "fr": "Aucune mesure de protection n’est en place pour ceux qui formulent des griefs"
+        },
+        "index": 391
+    },
+    {
+        "id": "8e296fb1-f9ae-45dd-b12c-da9ddc818494",
+        "name": "Intimidation and threats",
+        "translation": {
+            "en": "Intimidation and threats",
+            "fr": "Intimidation et menaces"
+        },
+        "index": 392
+    },
+    {
+        "id": "dbd593e2-6b22-43c6-b3b7-7c19929f9e6f",
+        "name": "Blackmail",
+        "translation": {
+            "en": "Blackmail",
+            "fr": "Chantage"
+        },
+        "index": 393
+    },
+    {
+        "id": "026b444c-173f-490e-8fe6-8301076286a0",
+        "name": "Forced work as punishment for participation in a strike",
+        "translation": {
+            "en": "Forced work as punishment for participation in a strike",
+            "fr": "Travail forcé pour punir la participation à une grève"
+        },
+        "index": 394
+    },
+    {
+        "id": "ac069794-a1a5-4e61-9b13-a061482bc783",
+        "name": "Other coercive tactics",
+        "translation": {
+            "en": "Other coercive tactics",
+            "fr": "Autres tactiques coercitives"
+        },
+        "index": 395
+    },
+    {
+        "id": "ddb28a60-3ad0-4807-b59c-d0f322605cb2",
+        "name": "Threats against family members",
+        "translation": {
+            "en": "Threats against family members",
+            "fr": "Menaces contre les membres de la famille"
+        },
+        "index": 396
+    },
+    {
+        "id": "37f7757d-1afa-4038-88d7-6dd8245f7e40",
+        "name": "Threats of  deportation, visa cancellation, or reporting to authorities",
+        "translation": {
+            "en": "Threats of  deportation, visa cancellation, or reporting to authorities",
+            "fr": "Menaces d'expulsion, d'annulation de visa ou de dénonciation aux autorités"
+        },
+        "index": 397
+    },
+    {
+        "id": "5849d101-c41e-4eed-bf57-d77c1464ce36",
+        "name": "Violence or threats of violence for engaging in union activities",
+        "translation": {
+            "en": "Violence or threats of violence for engaging in union activities",
+            "fr": "Violence ou menaces de violence pour avoir participé à des activités syndicales"
+        },
+        "index": 398
+    },
+    {
+        "id": "df71c2af-59f3-432f-974c-13851fdf1965",
+        "name": "Violence or threats of violence to intimidate workers",
+        "translation": {
+            "en": "Violence or threats of violence to intimidate workers",
+            "fr": "Violence ou menaces de violence pour intimider les travailleurs"
+        },
+        "index": 399
+    },
+    {
+        "id": "0fcf2142-13fa-4f35-a766-5cdc573c1b97",
+        "name": "Workers are not free to terminate their employment with reasonable notice, and to leave their jobs when their contract expires",
+        "translation": {
+            "en": "Workers are not free to terminate their employment with reasonable notice, and to leave their jobs when their contract expires",
+            "fr": "Les travailleurs ne sont pas libres de mettre fin à leur emploi avec un préavis raisonnable et de quitter leur emploi à l'expiration de leur contrat."
+        },
+        "index": 400
+    },
+    {
+        "id": "f62bfa19-2f7c-4da5-9f87-1e4617588007",
+        "name": "Isolation",
+        "translation": {
+            "en": "Isolation",
+            "fr": "Isolement"
+        },
+        "index": 401
+    },
+    {
+        "id": "6627edfe-8a74-40df-b64b-74d3bdf977b2",
+        "name": "Confiscation of mobile phones outside of work hours",
+        "translation": {
+            "en": "Confiscation of mobile phones outside of work hours",
+            "fr": "Confiscation des téléphones portables en dehors des heures de travail"
+        },
+        "index": 402
+    },
+    {
+        "id": "7ca6d2bc-6846-45ac-b16e-894d6091bf8b",
+        "name": "Locked in workplace or living quarters",
+        "translation": {
+            "en": "Locked in workplace or living quarters",
+            "fr": "Enfermement sur le lieu de travail ou dans les locaux d'habitation"
+        },
+        "index": 403
+    },
+    {
+        "id": "42b1c11d-8a16-4ea5-947e-0e7709f2d47f",
+        "name": "Worker performing duties isolated from other workers",
+        "translation": {
+            "en": "Worker performing duties isolated from other workers",
+            "fr": "Travailleur effectuant des tâches isolé des autres travailleurs"
+        },
+        "index": 404
+    },
+    {
+        "id": "1fb78c96-79d4-47cf-8245-f783e87f727d",
+        "name": "Non-discrimination",
+        "translation": {
+            "en": "Non-discrimination",
+            "fr": "Non-discrimination "
+        },
+        "index": 405
+    },
+    {
+        "id": "0a92a3b3-ed2a-4262-8cc6-ec67bf76ad77",
+        "name": "Limited awareness raising on non discrimination",
+        "translation": {
+            "en": "Limited awareness raising on non discrimination",
+            "fr": "Sensibilisation limitée à la non-discrimination"
+        },
+        "index": 406
+    },
+    {
+        "id": "6a3ba8b4-bc77-47a4-a58e-ba9a5a9e1405",
+        "name": "Limited awareness raising on principles of gender equity",
+        "translation": {
+            "en": "Limited awareness raising on principles of gender equity",
+            "fr": "Sensibilisation limitée aux principes d'équité entre les sexes"
+        },
+        "index": 407
+    },
+    {
+        "id": "86fb78cc-e490-4f7e-a0f6-8397cb988b61",
+        "name": "Missing policy on non discrimination",
+        "translation": {
+            "en": "Missing policy on non discrimination",
+            "fr": "Absence de politique de non-discrimination"
+        },
+        "index": 408
+    },
+    {
+        "id": "ac6c1107-915e-4d18-bce4-6e116ae6886e",
+        "name": "Missing policy on principles of gender equity",
+        "translation": {
+            "en": "Missing policy on principles of gender equity",
+            "fr": "Absence de politique sur les principes d'équité entre les hommes et les femmes"
+        },
+        "index": 409
+    },
+    {
+        "id": "ee50ef86-6fa3-456f-a9e3-deb892f1857d",
+        "name": "Missing provisions in internal governance rules on gender equity",
+        "translation": {
+            "en": "Missing provisions in internal governance rules on gender equity",
+            "fr": "Absence de dispositions dans les règles de gouvernance interne sur l'égalité entre les hommes et les femmes"
+        },
+        "index": 410
+    },
+    {
+        "id": "38cbfd86-09c3-4dbb-b0df-d84c48291559",
+        "name": "Missing provisions in internal governance rules on non discrimination",
+        "translation": {
+            "en": "Missing provisions in internal governance rules on non discrimination",
+            "fr": "Absence de dispositions sur la non-discrimination dans les règles de gouvernance interne"
+        },
+        "index": 411
+    },
+    {
+        "id": "e4d65c9c-6db5-494f-a3ba-761d26d88a3a",
+        "name": "People Treated with Dignity",
+        "translation": {
+            "en": "People Treated with Dignity",
+            "fr": "Traitement digne des personnes"
+        },
+        "index": 412
+    },
+    {
+        "id": "d318e881-543f-46c9-9a56-6e218c9d56e9",
+        "name": "Insufficient training for security on sexual violence and abuse",
+        "translation": {
+            "en": "Insufficient training for security on sexual violence and abuse",
+            "fr": "Formation insuffisante des services de sécurité en matière de violences et d'abus sexuels"
+        },
+        "index": 413
+    },
+    {
+        "id": "6f7609b6-717c-4c96-afc8-50ac9739db92",
+        "name": "Limited awareness raising on underage labor, forced labor, degrading treatment",
+        "translation": {
+            "en": "Limited awareness raising on underage labor, forced labor, degrading treatment",
+            "fr": "Sensibilisation limitée au travail des mineurs, au travail forcé et aux traitements dégradants"
+        },
+        "index": 414
+    },
+    {
+        "id": "f0550999-3752-49f5-8070-62913f093094",
+        "name": "Limited or no implementation of policy prohibiting support of armed forces",
+        "translation": {
+            "en": "Limited or no implementation of policy prohibiting support of armed forces",
+            "fr": "Mise en œuvre limitée ou inexistante de la politique interdisant le soutien aux forces armées"
+        },
+        "index": 415
+    },
+    {
+        "id": "8319afaf-22df-4b06-adbf-7c9347c0d6d5",
+        "name": "Limited training on  torture, cruel, inhuman and degrading treatment",
+        "translation": {
+            "en": "Limited training on  torture, cruel, inhuman and degrading treatment",
+            "fr": "Formation limitée sur la torture et les traitements cruels, inhumains et dégradants"
+        },
+        "index": 416
+    },
+    {
+        "id": "a316b793-daf9-4cb9-82ab-aa9c875e44df",
+        "name": "Limited training on disciplinary action and corporal punishment",
+        "translation": {
+            "en": "Limited training on disciplinary action and corporal punishment",
+            "fr": "Formation limitée sur les mesures disciplinaires et les châtiments corporels"
+        },
+        "index": 417
+    },
+    {
+        "id": "2348c206-a962-4a52-9bd0-1c7d8e74c970",
+        "name": "Missing provisions in code of conduct to prohibit corporal punishment",
+        "translation": {
+            "en": "Missing provisions in code of conduct to prohibit corporal punishment",
+            "fr": "Absence de dispositions dans le code de conduite interdisant les châtiments corporels"
+        },
+        "index": 418
+    },
+    {
+        "id": "1e6465e4-5748-4cb0-aa9c-e8138f6ce6f2",
+        "name": "Missing provisions in code of conduct to prohibit torture, cruel, inhuman and degrading treatment",
+        "translation": {
+            "en": "Missing provisions in code of conduct to prohibit torture, cruel, inhuman and degrading treatment",
+            "fr": "Absence de dispositions dans le code de conduite interdisant la torture et les traitements cruels, inhumains et dégradants"
+        },
+        "index": 419
+    },
+    {
+        "id": "f9449b83-f3a1-40dc-a318-ad3334d152d7",
+        "name": "Missing written policy on disciplinary action and corporal punishment",
+        "translation": {
+            "en": "Missing written policy on disciplinary action and corporal punishment",
+            "fr": "Absence de politique écrite sur les mesures disciplinaires et les châtiments corporels"
+        },
+        "index": 420
+    },
+    {
+        "id": "c2761442-0c89-4341-a332-105e899e63a4",
+        "name": "Missing written policy on torture, cruel, inhuman and degrading treatment",
+        "translation": {
+            "en": "Missing written policy on torture, cruel, inhuman and degrading treatment",
+            "fr": "Absence de politique écrite sur la torture et les traitements cruels, inhumains et dégradants"
+        },
+        "index": 421
+    },
+    {
+        "id": "a983090f-3299-4096-97e8-26de5dfd66c4",
+        "name": "Missing written policy on underage labor, forced labor, degrading treatment",
+        "translation": {
+            "en": "Missing written policy on underage labor, forced labor, degrading treatment",
+            "fr": "Absence de politique écrite sur le travail des mineurs, le travail forcé et les traitements dégradants"
+        },
+        "index": 422
+    },
+    {
+        "id": "e80fc475-1816-41c3-b920-162c7016edc4",
+        "name": "Policy prohibiting support of armed forces not communicated to all parties",
+        "translation": {
+            "en": "Policy prohibiting support of armed forces not communicated to all parties",
+            "fr": "Politique interdisant le soutien aux forces armées non communiquée à toutes les parties"
+        },
+        "index": 423
+    },
+    {
+        "id": "4ca5c5e7-00ec-4357-afc3-b7b2e37c0fdc",
+        "name": "Physical and sexual violence",
+        "translation": {
+            "en": "Physical and sexual violence",
+            "fr": "Violence physique et sexuelle"
+        },
+        "index": 424
+    },
+    {
+        "id": "36d04ae3-a0a4-4c16-9abe-5e81b9680179",
+        "name": "Sexual harassment (e.g. unwanted sexual advances, comments, jokes)",
+        "translation": {
+            "en": "Sexual harassment (e.g. unwanted sexual advances, comments, jokes)",
+            "fr": "Harcèlement sexuel (par exemple, avances sexuelles non désirées, commentaires, plaisanteries)"
+        },
+        "index": 425
+    },
+    {
+        "id": "a06e8dc0-175c-4254-928d-e68d11709d88",
+        "name": "Sexual violence (e.g. physical acts of a sexual nature)",
+        "translation": {
+            "en": "Sexual violence (e.g. physical acts of a sexual nature)",
+            "fr": "Violence sexuelle (par exemple, actes physiques de nature sexuelle)"
+        },
+        "index": 426
+    },
+    {
+        "id": "8bbed24b-45c0-450c-af5e-0dd6fb2be740",
+        "name": "Violence against workers in front of other workers",
+        "translation": {
+            "en": "Violence against workers in front of other workers",
+            "fr": "Violence à l'encontre de travailleurs devant d'autres travailleurs"
+        },
+        "index": 427
+    },
+    {
+        "id": "930838c8-bfb7-4d85-ba18-ad0d8ac1cd88",
+        "name": "Prison Labor",
+        "translation": {
+            "en": "Prison Labor",
+            "fr": "Travail en prison"
+        },
+        "index": 428
+    },
+    {
+        "id": "38c112a7-55a5-4ada-9ea5-a463577157ae",
+        "name": "Prisoners have not freely consented to work; or they do not receive similar treatment to non-prison workers.",
+        "translation": {
+            "en": "Prisoners have not freely consented to work; or they do not receive similar treatment to non-prison workers.",
+            "fr": "Les prisonniers n'ont pas librement consenti à travailler ; ou ils ne reçoivent pas un traitement similaire à celui des travailleurs non détenus."
+        },
+        "index": 429
+    },
+    {
+        "id": "fd6e4c01-ac96-4456-aee6-2a494f24d9e7",
+        "name": "Recruitment",
+        "translation": {
+            "en": "Recruitment",
+            "fr": "Recrutement"
+        },
+        "index": 430
+    },
+    {
+        "id": "4ad73562-cb44-46c2-a6b1-76b04090f15b",
+        "name": "Labor recruiters involved in hiring",
+        "translation": {
+            "en": "Labor recruiters involved in hiring",
+            "fr": "Recruteurs de main-d'œuvre impliqués dans l'embauche"
+        },
+        "index": 431
+    },
+    {
+        "id": "ffcef155-d0e6-40dd-a197-81e1a3850adb",
+        "name": "Representation of Workers",
+        "translation": {
+            "en": "Representation of Workers",
+            "fr": "Représentation des travailleurs"
+        },
+        "index": 432
+    },
+    {
+        "id": "f81a4549-09f6-4e68-8ddc-a94525ead2e3",
+        "name": "Incomplete communication with all workers",
+        "translation": {
+            "en": "Incomplete communication with all workers",
+            "fr": "Communication incomplète avec tous les travailleurs"
+        },
+        "index": 433
+    },
+    {
+        "id": "4cebf80a-7e33-41c7-ad75-8f78de13da46",
+        "name": "Limited awareness raising on principles of freedom of association",
+        "translation": {
+            "en": "Limited awareness raising on principles of freedom of association",
+            "fr": "Sensibilisation limitée aux principes de la liberté d'association"
+        },
+        "index": 434
+    },
+    {
+        "id": "283f0001-f920-4443-86db-31eae7de8dda",
+        "name": "Missing policy recognizing freedom of association",
+        "translation": {
+            "en": "Missing policy recognizing freedom of association",
+            "fr": "Absence de politique reconnaissant la liberté d'association"
+        },
+        "index": 435
+    },
+    {
+        "id": "a0c2bf97-6880-4b23-a62b-fbce26cc5d1e",
+        "name": "Restriction of movement",
+        "translation": {
+            "en": "Restriction of movement",
+            "fr": "Restriction des déplacements"
+        },
+        "index": 436
+    },
+    {
+        "id": "0236938e-a974-4212-83b0-fd8bc7a29a5a",
+        "name": "Employer restricts workers from leaving the workplace, dormitories, or industrial zone",
+        "translation": {
+            "en": "Employer restricts workers from leaving the workplace, dormitories, or industrial zone",
+            "fr": "L'employeur empêche les travailleurs de quitter le lieu de travail, les dortoirs ou la zone industrielle."
+        },
+        "index": 437
+    },
+    {
+        "id": "16646d8c-95cf-426a-a6fa-55af2308a64d",
+        "name": "Limited freedom of movement and communication",
+        "translation": {
+            "en": "Limited freedom of movement and communication",
+            "fr": "Liberté de mouvement et de communication limitée"
+        },
+        "index": 438
+    },
+    {
+        "id": "174ada8f-4803-4136-85c8-6fe930d6a7fa",
+        "name": "Retention of identity document",
+        "translation": {
+            "en": "Retention of identity document",
+            "fr": "Rétention des documents d'identité"
+        },
+        "index": 439
+    },
+    {
+        "id": "0f09d85f-62b5-4f88-8383-bff929cd7b63",
+        "name": "Identity or travel documents confiscated",
+        "translation": {
+            "en": "Identity or travel documents confiscated",
+            "fr": "Documents d'identité ou de voyage confisqués"
+        },
+        "index": 440
+    },
+    {
+        "id": "16016ef4-1bf2-442b-9208-184746d59f6f",
+        "name": "Identity or travel documents kept by employer (suggestion that it may be returned)",
+        "translation": {
+            "en": "Identity or travel documents kept by employer (suggestion that it may be returned)",
+            "fr": "Documents d'identité ou de voyage conservés par l'employeur (suggestion qu'ils soient restitués)"
+        },
+        "index": 441
+    },
+    {
+        "id": "8467cf50-1447-4b5e-8211-630730af9c9a",
+        "name": "Sexual Violence and Abuse",
+        "translation": {
+            "en": "Sexual Violence and Abuse",
+            "fr": "Violence et abus sexuels"
+        },
+        "index": 442
+    },
+    {
+        "id": "031d598b-9732-47e2-96f7-3914c56d70c0",
+        "name": "Limited awareness raising on sexual violence and abuse",
+        "translation": {
+            "en": "Limited awareness raising on sexual violence and abuse",
+            "fr": "Sensibilisation limitée aux violences et abus sexuels"
+        },
+        "index": 443
+    },
+    {
+        "id": "c3802e71-258a-4aef-b8dc-bb80d7ae1ea7",
+        "name": "Missing policy on sexual violence and abuse",
+        "translation": {
+            "en": "Missing policy on sexual violence and abuse",
+            "fr": "Absence de politique en matière de violence et d'abus sexuels"
+        },
+        "index": 444
+    },
+    {
+        "id": "77f26c9f-c590-4a15-a60e-05de3f1bac11",
+        "name": "Missing provisions in code of conduct on sexual violence and abuse",
+        "translation": {
+            "en": "Missing provisions in code of conduct on sexual violence and abuse",
+            "fr": "Absence de dispositions dans le code de conduite sur la violence et les abus sexuels"
+        },
+        "index": 445
+    },
+    {
+        "id": "96db31c8-08bd-4d04-aa43-965e2dce03b4",
+        "name": "Withholding wages",
+        "translation": {
+            "en": "Withholding wages",
+            "fr": "Retenue de salaire"
+        },
+        "index": 446
+    },
+    {
+        "id": "d9e42c0e-8b38-45f7-8a64-345bb7fca109",
+        "name": "Financial penalties",
+        "translation": {
+            "en": "Financial penalties",
+            "fr": "Pénalités financières"
+        },
+        "index": 447
+    },
+    {
+        "id": "5a07bd6f-eb25-4aa9-b2db-794d7e1ee52e",
+        "name": "Inaccurate wage payment details",
+        "translation": {
+            "en": "Inaccurate wage payment details",
+            "fr": "Données inexactes sur le paiement des salaires"
+        },
+        "index": 448
+    },
+    {
+        "id": "ede79d3d-83d0-47d4-a65c-9141f0993b59",
+        "name": "Incorrect payment for legally required leave",
+        "translation": {
+            "en": "Incorrect payment for legally required leave",
+            "fr": "Paiement incorrect des congés légaux"
+        },
+        "index": 449
+    },
+    {
+        "id": "95728b9c-70cf-4a9b-a30f-fb98c87a1e23",
+        "name": "Incorrect payment for overtime",
+        "translation": {
+            "en": "Incorrect payment for overtime",
+            "fr": "Paiement incorrect des heures supplémentaires"
+        },
+        "index": 450
+    },
+    {
+        "id": "bfbaaac3-9b8b-477e-b7af-da4a6c5ed958",
+        "name": "Late payment of wages (after work is completed)",
+        "translation": {
+            "en": "Late payment of wages (after work is completed)",
+            "fr": "Paiement tardif des salaires (après l'achèvement du travail)"
+        },
+        "index": 451
+    },
+    {
+        "id": "c4dde202-65d0-453f-9cb3-6d4cfae59d3c",
+        "name": "Late payment of wages until work is completed",
+        "translation": {
+            "en": "Late payment of wages until work is completed",
+            "fr": "Paiement tardif des salaires jusqu'à l'achèvement du travail"
+        },
+        "index": 452
+    },
+    {
+        "id": "2a17e739-aed9-4642-9f6b-177f952c41f8",
+        "name": "Staff wages of salaried employees less than minimum wage and not paid on time",
+        "translation": {
+            "en": "Staff wages of salaried employees less than minimum wage and not paid on time",
+            "fr": "Les salaires des employés salariés sont inférieurs au salaire minimum et ne sont pas payés à temps"
+        },
+        "index": 453
+    },
+    {
+        "id": "5d55b075-cd89-418f-b7e8-c1225b92dfab",
+        "name": "Unauthorized wage deductions",
+        "translation": {
+            "en": "Unauthorized wage deductions",
+            "fr": "Retenues salariales non autorisées"
+        },
+        "index": 454
+    },
+    {
+        "id": "f3481062-79cb-4e3f-ae4d-befc27aa08d2",
+        "name": "Wages withheld as a commission for recruiter",
+        "translation": {
+            "en": "Wages withheld as a commission for recruiter",
+            "fr": "Salaires retenus à titre de commission pour le recruteur"
+        },
+        "index": 455
+    },
+    {
+        "id": "a5500f4f-81b7-4ebc-8a60-1a386ada8568",
+        "name": "Withholding of assets (cash or other)",
+        "translation": {
+            "en": "Withholding of assets (cash or other)",
+            "fr": "Salaires retenus à titre de commission pour le recruteur"
+        },
+        "index": 456
+    },
+    {
+        "id": "fbedaaf8-ee35-400e-afaf-3d637fb653a7",
+        "name": "Withholding of wages",
+        "translation": {
+            "en": "Withholding of wages",
+            "fr": "Retenue de salaires"
+        },
+        "index": 457
+    }
+]

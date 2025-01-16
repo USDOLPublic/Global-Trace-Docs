@@ -1,0 +1,2333 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Global Trace BE documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">Global Trace BE documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Injectables</li>
+  <li class="breadcrumb-item" >OpenApparelRegistryService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/http-client/open-apparel-registry/services/open-apparel-registry.service.ts</code>
+        </p>
+
+
+
+            <p class="comment">
+                <h3>Extends</h3>
+            </p>
+            <p class="comment">
+                            <code><a href="../classes/HttpBaseService.html" target="_self" >HttpBaseService</a></code>
+            </p>
+
+
+            <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#httpClient" >httpClient</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#checkIsFacilityMatchConfirmed" >checkIsFacilityMatchConfirmed</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#checkOarId" >checkOarId</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#confirmMatchOarId" >confirmMatchOarId</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#convertRmiCidXml" >convertRmiCidXml</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#debug" >debug</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#extractFacilityMatchId" >extractFacilityMatchId</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#getOarAttributes" >getOarAttributes</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getRmiCid" >getRmiCid</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#handleConfirmMatchFacilityResponse" >handleConfirmMatchFacilityResponse</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#handleRegisterOarIdResponse" >handleRegisterOarIdResponse</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#mapMatchToDefinition" >mapMatchToDefinition</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#registerOarId" >registerOarId</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#rejectMatchOarIds" >rejectMatchOarIds</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#requestRejectMatchOarId" >requestRejectMatchOarId</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#configBaseURL" >configBaseURL</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#configHeaders" >configHeaders</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#configParams" >configParams</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#get" >get</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#post" >post</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#request" >request</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#isDevelopment" >isDevelopment</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+            <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                                <span class="modifier">Public</span>
+                        <code>constructor(locationService: <a href="../injectables/LocationService.html" target="_self">LocationService</a>, googleMapApiService: <a href="../injectables/GoogleMapApiService.html" target="_self">GoogleMapApiService</a>, attributeService: <a href="../injectables/AttributeService.html" target="_self">AttributeService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/http-client/open-apparel-registry/services/open-apparel-registry.service.ts:42</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>locationService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/LocationService.html" target="_self" >LocationService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>googleMapApiService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/GoogleMapApiService.html" target="_self" >GoogleMapApiService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>attributeService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AttributeService.html" target="_self" >AttributeService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="checkIsFacilityMatchConfirmed"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>checkIsFacilityMatchConfirmed</b></span>
+                        <a href="#checkIsFacilityMatchConfirmed"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>checkIsFacilityMatchConfirmed(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="261"
+                                    class="link-to-prism">src/http-client/open-apparel-registry/services/open-apparel-registry.service.ts:261</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>id</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;boolean&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="checkOarId"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>checkOarId</b></span>
+                        <a href="#checkOarId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>checkOarId(dto: <a href="../classes/CheckOarIdDto.html" target="_self">CheckOarIdDto</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="66"
+                                    class="link-to-prism">src/http-client/open-apparel-registry/services/open-apparel-registry.service.ts:66</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>dto</td>
+                                            <td>
+                                                            <code><a href="../classes/CheckOarIdDto.html" target="_self" >CheckOarIdDto</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#now" target="_self" >unknown</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="confirmMatchOarId"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>confirmMatchOarId</b></span>
+                        <a href="#confirmMatchOarId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>confirmMatchOarId(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="276"
+                                    class="link-to-prism">src/http-client/open-apparel-registry/services/open-apparel-registry.service.ts:276</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>id</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../classes/RegisterOarIdConfirmMatchResponse.html" target="_self" >Promise&lt;RegisterOarIdConfirmMatchResponseType&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="convertRmiCidXml"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>convertRmiCidXml</b></span>
+                        <a href="#convertRmiCidXml"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>convertRmiCidXml(facilityId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, data: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="355"
+                                    class="link-to-prism">src/http-client/open-apparel-registry/services/open-apparel-registry.service.ts:355</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>facilityId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>data</td>
+                                            <td>
+                                                            <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#RmiCidResponseType" target="_self" >Promise&lt;RmiCidResponseType[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="debug"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>debug</b></span>
+                        <a href="#debug"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>debug()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="57"
+                                    class="link-to-prism">src/http-client/open-apparel-registry/services/open-apparel-registry.service.ts:57</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="extractFacilityMatchId"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>extractFacilityMatchId</b></span>
+                        <a href="#extractFacilityMatchId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>extractFacilityMatchId(url: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="130"
+                                    class="link-to-prism">src/http-client/open-apparel-registry/services/open-apparel-registry.service.ts:130</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>url</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getOarAttributes"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>getOarAttributes</b></span>
+                        <a href="#getOarAttributes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getOarAttributes()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="117"
+                                    class="link-to-prism">src/http-client/open-apparel-registry/services/open-apparel-registry.service.ts:117</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#now" target="_self" >unknown</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getRmiCid"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>getRmiCid</b></span>
+                        <a href="#getRmiCid"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getRmiCid(facilityId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="343"
+                                    class="link-to-prism">src/http-client/open-apparel-registry/services/open-apparel-registry.service.ts:343</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>facilityId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#now" target="_self" >unknown</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleConfirmMatchFacilityResponse"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>handleConfirmMatchFacilityResponse</b></span>
+                        <a href="#handleConfirmMatchFacilityResponse"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>handleConfirmMatchFacilityResponse(response: <a href="../undefineds/OarIdConfirmMatchResponseType.html" target="_self">OarIdConfirmMatchResponseType</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="229"
+                                    class="link-to-prism">src/http-client/open-apparel-registry/services/open-apparel-registry.service.ts:229</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>response</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#OarIdConfirmMatchResponseType" target="_self" >OarIdConfirmMatchResponseType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../classes/RegisterOarIdConfirmMatchResponse.html" target="_self" >Promise&lt;RegisterOarIdConfirmMatchResponseType&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleRegisterOarIdResponse"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>handleRegisterOarIdResponse</b></span>
+                        <a href="#handleRegisterOarIdResponse"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>handleRegisterOarIdResponse(response: <a href="../undefineds/OarFacilitySearchResponseType.html" target="_self">OarFacilitySearchResponseType</a>, dto: <a href="../classes/RegisterOarIdDto.html" target="_self">RegisterOarIdDto</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="134"
+                                    class="link-to-prism">src/http-client/open-apparel-registry/services/open-apparel-registry.service.ts:134</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>response</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#OarFacilitySearchResponseType" target="_self" >OarFacilitySearchResponseType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>dto</td>
+                                            <td>
+                                                            <code><a href="../classes/RegisterOarIdDto.html" target="_self" >RegisterOarIdDto</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#now" target="_self" >unknown</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="mapMatchToDefinition"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>mapMatchToDefinition</b></span>
+                        <a href="#mapMatchToDefinition"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>mapMatchToDefinition(facility: <a href="../undefineds/OarFacilityPotentialMatched.html" target="_self">OarFacilityPotentialMatched</a>, status: <a href="../undefineds/RegisterOarIdStatusEnum.html" target="_self">RegisterOarIdStatusEnum</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="158"
+                                    class="link-to-prism">src/http-client/open-apparel-registry/services/open-apparel-registry.service.ts:158</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>facility</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#OarFacilityPotentialMatched" target="_self" >OarFacilityPotentialMatched</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>status</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/enumerations.html#RegisterOarIdStatusEnum" target="_self" >RegisterOarIdStatusEnum</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#now" target="_self" >unknown</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="registerOarId"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>registerOarId</b></span>
+                        <a href="#registerOarId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>registerOarId(dto: <a href="../classes/RegisterOarIdDto.html" target="_self">RegisterOarIdDto</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="198"
+                                    class="link-to-prism">src/http-client/open-apparel-registry/services/open-apparel-registry.service.ts:198</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>dto</td>
+                                            <td>
+                                                            <code><a href="../classes/RegisterOarIdDto.html" target="_self" >RegisterOarIdDto</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#now" target="_self" >unknown</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="rejectMatchOarIds"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>rejectMatchOarIds</b></span>
+                        <a href="#rejectMatchOarIds"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>rejectMatchOarIds(ids: string[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="324"
+                                    class="link-to-prism">src/http-client/open-apparel-registry/services/open-apparel-registry.service.ts:324</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>ids</td>
+                                            <td>
+                                                        <code>string[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../classes/RegisterOarIdConfirmMatchResponse.html" target="_self" >Promise&lt;RegisterOarIdConfirmMatchResponseType&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="requestRejectMatchOarId"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>requestRejectMatchOarId</b></span>
+                        <a href="#requestRejectMatchOarId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>requestRejectMatchOarId(ids: string[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="290"
+                                    class="link-to-prism">src/http-client/open-apparel-registry/services/open-apparel-registry.service.ts:290</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>ids</td>
+                                            <td>
+                                                        <code>string[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#OarIdConfirmMatchResponseType" target="_self" >Promise&lt;OarIdConfirmMatchResponseType&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="configBaseURL"></a>
+                    <span class="name">
+                            <span class="modifier">Protected</span>
+                        <span ><b>configBaseURL</b></span>
+                        <a href="#configBaseURL"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>configBaseURL(url: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Inherited from         <code><a href="../classes/HttpBaseService.html" target="_self" >HttpBaseService</a></code>
+</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in         <code><a href="../classes/HttpBaseService.html#source" target="_self" >HttpBaseService:14</a></code>
+</div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>url</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="configHeaders"></a>
+                    <span class="name">
+                            <span class="modifier">Protected</span>
+                        <span ><b>configHeaders</b></span>
+                        <a href="#configHeaders"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>configHeaders(headers: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Inherited from         <code><a href="../classes/HttpBaseService.html" target="_self" >HttpBaseService</a></code>
+</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in         <code><a href="../classes/HttpBaseService.html#source" target="_self" >HttpBaseService:22</a></code>
+</div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>headers</td>
+                                            <td>
+                                                            <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="configParams"></a>
+                    <span class="name">
+                            <span class="modifier">Protected</span>
+                        <span ><b>configParams</b></span>
+                        <a href="#configParams"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>configParams(params: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Inherited from         <code><a href="../classes/HttpBaseService.html" target="_self" >HttpBaseService</a></code>
+</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in         <code><a href="../classes/HttpBaseService.html#source" target="_self" >HttpBaseService:18</a></code>
+</div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>params</td>
+                                            <td>
+                                                            <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="get"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>get</b></span>
+                        <a href="#get"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>get(url: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, config: AxiosRequestConfig)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Inherited from         <code><a href="../classes/HttpBaseService.html" target="_self" >HttpBaseService</a></code>
+</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in         <code><a href="../classes/HttpBaseService.html#source" target="_self" >HttpBaseService:26</a></code>
+</div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Default value</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>url</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+                                            <td>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                                <td>config</td>
+                                            <td>
+                                                        <code>AxiosRequestConfig</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+                                            <td>
+                                                    <code>{}</code>
+                                            </td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="post"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>post</b></span>
+                        <a href="#post"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>post(url: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, config: AxiosRequestConfig)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Inherited from         <code><a href="../classes/HttpBaseService.html" target="_self" >HttpBaseService</a></code>
+</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in         <code><a href="../classes/HttpBaseService.html#source" target="_self" >HttpBaseService:34</a></code>
+</div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Default value</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>url</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+                                            <td>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                                <td>config</td>
+                                            <td>
+                                                        <code>AxiosRequestConfig</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+                                            <td>
+                                                    <code>{}</code>
+                                            </td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="request"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>request</b></span>
+                        <a href="#request"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>request(config)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Inherited from         <code><a href="../classes/HttpBaseService.html" target="_self" >HttpBaseService</a></code>
+</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in         <code><a href="../classes/HttpBaseService.html#source" target="_self" >HttpBaseService:42</a></code>
+</div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>config</td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+            <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="httpClient"></a>
+                    <span class="name">
+                            <span class="modifier">Protected</span>
+                            <span class="modifier">Readonly</span>
+                        <span ><b>httpClient</b></span>
+                        <a href="#httpClient"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>HttpService</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Inherited from         <code><a href="../classes/HttpBaseService.html" target="_self" >HttpBaseService</a></code>
+</div>
+                            </td>
+                        </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in         <code><a href="../classes/HttpBaseService.html#source" target="_self" >HttpBaseService:8</a></code>
+</div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section data-compodoc="block-accessors">
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isDevelopment"></a>
+                        <span class="name"><b>isDevelopment</b><a href="#isDevelopment"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>isDevelopment()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/http-client/open-apparel-registry/services/open-apparel-registry.service.ts:53</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import fs from &#x27;fs&#x27;;
+import path from &#x27;path&#x27;;
+import { parseStringPromise } from &#x27;xml2js&#x27;;
+import { HttpBaseService } from &#x27;~http-client/services/http-base.service&#x27;;
+import { env } from &#x27;~config/env.config&#x27;;
+import { BadRequestException, forwardRef, Global, HttpStatus, Inject, Injectable } from &#x27;@nestjs/common&#x27;;
+import { RegisterOarIdDto } from &#x27;~facilities/http/dto/register-oar-id.dto&#x27;;
+import { CheckOarIdDto } from &#x27;~facilities/http/dto/check-oar-id.dto&#x27;;
+import {
+    OarFacilityPotentialMatched,
+    OarFacilitySearchResponseType
+} from &#x27;~http-client/open-apparel-registry/types/oar-facility-search-response.type&#x27;;
+import { RegisterOarIdStatusEnum } from &#x27;~http-client/open-apparel-registry/enums/register-oar-id-status.enum&#x27;;
+import { RegisterOarIdConfirmMatchResponseType } from &#x27;~http-client/open-apparel-registry/types/register-oar-id-confirm-match-response.type&#x27;;
+import { GoogleMapApiService } from &#x27;~http-client/google-map/services/google-map-api.service&#x27;;
+import {
+    OarIdConfirmMatchResponseType,
+    RejectMatchOarIdStatusEnum
+} from &#x27;~http-client/open-apparel-registry/types/oar-id-reject-response.type&#x27;;
+import { CheckOarIdResponse } from &#x27;~http-client/open-apparel-registry/types/check-oar-id-respone.type&#x27;;
+import { extractLocation } from &#x27;~http-client/google-map/helpers/extract-province-and-district.helper&#x27;;
+import CHECK_OAR_ID_RESPONSE from &#x27;../mock-data/check-oar-id-response.json&#x27;;
+import REGISTER_OAR_ID_NEW_FACILITY_RESPONSE from &#x27;../mock-data/regist-oar-id-new-facility-respone.json&#x27;;
+import REGISTER_OAR_ID_POTENTIAL_RESPONSE from &#x27;../mock-data/regist-oar-id-potentional-match-respone.json&#x27;;
+import REGISTER_OAR_ID_MATCH_RESPONSE from &#x27;../mock-data/regist-oar-id-match-respone.json&#x27;;
+import REGISTER_OAR_ID_ERROR_MATCH_RESPONSE from &#x27;../mock-data/regist-oar-id-error-match-respone.json&#x27;;
+import FACILITY_MATCH_CONFIRM_RESPONSE from &#x27;../mock-data/facility-match-confirm.json&#x27;;
+import FACILITY_MATCH_REJECT_RESPONSE from &#x27;../mock-data/facility-match-reject.json&#x27;;
+import { generalStringCode } from &#x27;~core/helpers/string.helper&#x27;;
+import { LocationService } from &#x27;~locations/services/location.service&#x27;;
+import { RMI_CID_XML_PATH } from &#x27;~http-client/constants/rmi-cid-xml-path.constant&#x27;;
+import { RmiCidResponseType } from &#x27;../types/rmi-cid-response.type&#x27;;
+import { AttributeService } from &#x27;~product-definitions/services/attribute.service&#x27;;
+import { FieldTypeEnum } from &#x27;~product-definitions/enums/field-type.enum&#x27;;
+import { keyBy } from &#x27;lodash&#x27;;
+import { CELL_RESPONSE_TYPE_MAPPING, CELL_XML_DATA } from &#x27;../constants/cell-xml-data.constant&#x27;;
+import { SUPPLY_HUP_ATTRIBUTES } from &#x27;../constants/supply-hup-attributes.constants&#x27;;
+import STORE_FACILITY_DETAIL_RESPONSE from &#x27;../mock-data/store-facility-detail-response.json&#x27;;
+
+@Global()
+@Injectable()
+export class OpenApparelRegistryService extends HttpBaseService {
+    public constructor(
+        private locationService: LocationService,
+        private googleMapApiService: GoogleMapApiService,
+        @Inject(forwardRef(() &#x3D;&gt; AttributeService)) private attributeService: AttributeService
+    ) {
+        super();
+        this.configBaseURL(env.OPEN_APPAREL_REGISTRY_API.BASE_URL);
+        this.configHeaders({ Authorization: &#x60;Token ${env.OPEN_APPAREL_REGISTRY_API.API_KEY}&#x60; });
+    }
+
+    get isDevelopment() {
+        return process.env.NODE_ENV &#x3D;&#x3D;&#x3D; &#x27;development&#x27;;
+    }
+
+    private debug() {
+        console.debug({
+            type: typeof env.DOES_CALL_OS_API,
+            value: env.DOES_CALL_OS_API,
+            rawType: typeof process.env.DOES_CALL_OS_API,
+            rawValue: process.env.DOES_CALL_OS_API
+        });
+    }
+
+    async checkOarId(dto: CheckOarIdDto) {
+        this.debug();
+        try {
+            let response: CheckOarIdResponse;
+            if (!env.DOES_CALL_OS_API) {
+                response &#x3D; STORE_FACILITY_DETAIL_RESPONSE as unknown as CheckOarIdResponse;
+            } else if (this.isDevelopment) {
+                response &#x3D; CHECK_OAR_ID_RESPONSE as unknown as CheckOarIdResponse;
+            } else {
+                const { oarId, page, pageSize } &#x3D; dto;
+                response &#x3D; (await this.get(&#x27;/api/facilities&#x27;, {
+                    params: {
+                        q: oarId,
+                        page,
+                        pageSize
+                    }
+                })) as CheckOarIdResponse;
+            }
+
+            const matchedOarId &#x3D; response.features.find(({ id }) &#x3D;&gt; id &#x3D;&#x3D;&#x3D; dto.oarId);
+            if (!matchedOarId) {
+                return { isMatched: false };
+            }
+
+            const { name, address, countryName } &#x3D; matchedOarId.properties;
+
+            const locationResponse &#x3D; await this.googleMapApiService.getLocation({
+                lat: +matchedOarId.geometry.coordinates[1],
+                lng: +matchedOarId.geometry.coordinates[0]
+            });
+            const { province, district } &#x3D; extractLocation(locationResponse.results[0]);
+            const location &#x3D; await this.locationService.findLocation(countryName, province, district);
+
+            return {
+                isMatched: true,
+                name,
+                address,
+                countryId: location.country?.id,
+                provinceId: location.province?.id,
+                districtId: location.district?.id,
+                country: location.country,
+                province: location.province,
+                district: location.district,
+                ...(await this.getOarAttributes())
+            };
+        } catch (err) {
+            console.log(err);
+            throw new BadRequestException({ translate: &#x27;error.check_oar_id_fail&#x27; });
+        }
+    }
+
+    private async getOarAttributes() {
+        const attributes &#x3D; await this.attributeService.find({ where: { type: FieldTypeEnum.OPEN_SUPPLY_HUB_ID } });
+        const attributeMap &#x3D; keyBy(attributes, &#x27;name&#x27;);
+        return {
+            nameAttributeId: attributeMap[SUPPLY_HUP_ATTRIBUTES.BUSINESS_NAME]?.id,
+            addressAttributeId: attributeMap[SUPPLY_HUP_ATTRIBUTES.ADDRESS]?.id,
+            countryIdAttributeId: attributeMap[SUPPLY_HUP_ATTRIBUTES.COUNTRY]?.id,
+            provinceIdAttributeId: attributeMap[SUPPLY_HUP_ATTRIBUTES.PROVINCE_STATE]?.id,
+            districtIdAttributeId: attributeMap[SUPPLY_HUP_ATTRIBUTES.DISTRICT]?.id,
+            oarIdAttributeId: attributeMap[SUPPLY_HUP_ATTRIBUTES.OS_ID]?.id
+        };
+    }
+
+    private extractFacilityMatchId(url: string) {
+        return +url.split(&#x27;/&#x27;).find((item) &#x3D;&gt; !isNaN(+item) &amp;&amp; item !&#x3D;&#x3D; &#x27;&#x27;);
+    }
+
+    async handleRegisterOarIdResponse(response: OarFacilitySearchResponseType, dto: RegisterOarIdDto) {
+        const { matches, status } &#x3D; response;
+        const dataResponse: any &#x3D; {
+            matches,
+            status,
+            oarId: response.osId
+        };
+        if ([RegisterOarIdStatusEnum.POTENTIAL_MATCH, RegisterOarIdStatusEnum.MATCHED].includes(status)) {
+            dataResponse.matches &#x3D; await Promise.all(
+                matches.map(async (facility) &#x3D;&gt; {
+                    return this.mapMatchToDefinition(facility, status);
+                })
+            );
+        }
+        if ([RegisterOarIdStatusEnum.NEW_FACILITY].includes(status)) {
+            const data &#x3D; {
+                ...dto,
+                ...(await this.getOarAttributes())
+            };
+            dataResponse.matches.push(data);
+        }
+        return dataResponse;
+    }
+
+    private async mapMatchToDefinition(facility: OarFacilityPotentialMatched, status: RegisterOarIdStatusEnum) {
+        const {
+            properties: { name, address, osId, countryName },
+            confirmMatchUrl,
+            geometry: { coordinates }
+        } &#x3D; facility;
+
+        const locationResponse &#x3D; await this.googleMapApiService.getLocation({
+            lat: coordinates[1],
+            lng: coordinates[0]
+        });
+        const { province, district } &#x3D; extractLocation(locationResponse.results[0]);
+        const {
+            country: countryEntity,
+            province: provinceEntity,
+            district: districtEntity
+        } &#x3D; await this.locationService.findLocation(countryName, province, district);
+
+        const data: RegisterOarIdConfirmMatchResponseType &#x3D; {
+            name,
+            address,
+            oarId: osId,
+            countryId: countryEntity?.id,
+            provinceId: provinceEntity?.id,
+            districtId: districtEntity?.id,
+            country: countryEntity,
+            province: provinceEntity,
+            district: districtEntity,
+            ...(await this.getOarAttributes())
+        };
+
+        if (status &#x3D;&#x3D;&#x3D; RegisterOarIdStatusEnum.POTENTIAL_MATCH) {
+            const facilityMatchId &#x3D; this.extractFacilityMatchId(confirmMatchUrl);
+            data.facilityMatchId &#x3D; facilityMatchId;
+            data.isConfirmed &#x3D; await this.checkIsFacilityMatchConfirmed(facilityMatchId);
+        }
+
+        return data;
+    }
+
+    async registerOarId(dto: RegisterOarIdDto) {
+        try {
+            let response;
+            if (this.isDevelopment) {
+                switch (Math.floor(Math.random() * 4)) {
+                    case 1:
+                        response &#x3D; { ...REGISTER_OAR_ID_NEW_FACILITY_RESPONSE, osId: generalStringCode(&#x27;OAR_ID_&#x27;) };
+                        break;
+                    case 2:
+                        response &#x3D; { ...REGISTER_OAR_ID_POTENTIAL_RESPONSE, osId: generalStringCode(&#x27;OAR_ID_&#x27;) };
+                        break;
+                    case 3:
+                        response &#x3D; { ...REGISTER_OAR_ID_MATCH_RESPONSE, osId: generalStringCode(&#x27;OAR_ID_&#x27;) };
+                        break;
+                    default:
+                        response &#x3D; REGISTER_OAR_ID_ERROR_MATCH_RESPONSE;
+                }
+            } else {
+                const country &#x3D; await this.locationService.findCountryById(dto.countryId);
+                response &#x3D; (await this.post(&#x27;/api/facilities/&#x27;, {
+                    data: { country: country.country, name: dto.name, address: dto.address },
+                    params: { create: true, public: true, textonlyfallback: true }
+                })) as OarFacilitySearchResponseType;
+            }
+            return this.handleRegisterOarIdResponse(response, dto);
+        } catch (err) {
+            console.log(err);
+            throw new BadRequestException({ translate: &#x27;error.request_oar_id_fail&#x27; });
+        }
+    }
+
+    async handleConfirmMatchFacilityResponse(
+        response: OarIdConfirmMatchResponseType
+    ): Promise&lt;RegisterOarIdConfirmMatchResponseType&gt; {
+        const { matchedFacility, countryName, processingErrors } &#x3D; response;
+        if (processingErrors &amp;&amp; processingErrors.length) {
+            throw new BadRequestException({ translate: &#x27;error.can_not_create_oar_id&#x27; });
+        }
+        const result &#x3D; await this.googleMapApiService.getLocation({
+            lat: matchedFacility.location.lat,
+            lng: matchedFacility.location.lng
+        });
+        const extractedResult &#x3D; extractLocation(result.results[0]);
+        const { country, province, district } &#x3D; await this.locationService.findLocation(
+            countryName,
+            extractedResult.province,
+            extractedResult.district
+        );
+
+        return {
+            oarId: matchedFacility.osId,
+            name: matchedFacility.name,
+            address: matchedFacility.address,
+            countryId: country?.id,
+            provinceId: province?.id,
+            districtId: district?.id,
+            country,
+            province,
+            district,
+            ...(await this.getOarAttributes())
+        };
+    }
+
+    async checkIsFacilityMatchConfirmed(id: number): Promise&lt;boolean&gt; {
+        try {
+            if (this.isDevelopment) {
+                return Math.floor(Math.random() * 10) &gt;&#x3D; 5;
+            }
+            await this.get(&#x60;/api/facility-matches/${id}/&#x60;);
+            return false;
+        } catch (err) {
+            console.log(err);
+            if (err.response.status &#x3D;&#x3D;&#x3D; HttpStatus.BAD_REQUEST) {
+                return true;
+            }
+        }
+    }
+
+    async confirmMatchOarId(id: string): Promise&lt;RegisterOarIdConfirmMatchResponseType&gt; {
+        try {
+            if (this.isDevelopment) {
+                return this.handleConfirmMatchFacilityResponse(FACILITY_MATCH_CONFIRM_RESPONSE as any);
+            }
+
+            const response &#x3D; (await this.post(&#x60;/api/facility-matches/${id}/confirm/&#x60;)) as OarIdConfirmMatchResponseType;
+            return this.handleConfirmMatchFacilityResponse(response);
+        } catch (err) {
+            console.log(err);
+            throw new BadRequestException({ translate: &#x27;error.confirm_oar_id_fail&#x27; });
+        }
+    }
+
+    private async requestRejectMatchOarId(ids: string[]): Promise&lt;OarIdConfirmMatchResponseType&gt; {
+        if (this.isDevelopment) {
+            let response;
+            let random &#x3D; Math.floor(Math.random() * 10);
+            let isMatched &#x3D; false;
+
+            for (const id of ids) {
+                console.log(&#x27;Reject facility match: &#x27;, id, random);
+                if (random &lt; 5) {
+                    response &#x3D; FACILITY_MATCH_CONFIRM_RESPONSE;
+                    isMatched &#x3D; true;
+                    break;
+                } else {
+                    response &#x3D; FACILITY_MATCH_REJECT_RESPONSE;
+                }
+            }
+            if (!isMatched) {
+                return this.requestRejectMatchOarId(ids);
+            }
+            return response;
+        }
+
+        for (const id of ids) {
+            const response &#x3D; (await this.post(&#x60;/api/facility-matches/${id}/reject/&#x60;)) as OarIdConfirmMatchResponseType;
+            if (response.status &#x3D;&#x3D;&#x3D; RejectMatchOarIdStatusEnum.CONFIRMED_MATCH) {
+                return response;
+            }
+            if (response.processingErrors &amp;&amp; response.processingErrors.length) {
+                throw new BadRequestException({ translate: &#x27;error.can_not_create_oar_id&#x27; });
+            }
+        }
+        throw new BadRequestException({ translate: &#x27;error.confirm_oar_id_fail&#x27; });
+    }
+
+    async rejectMatchOarIds(ids: string[]): Promise&lt;RegisterOarIdConfirmMatchResponseType&gt; {
+        try {
+            const response &#x3D; await this.requestRejectMatchOarId(ids);
+            if (this.isDevelopment) {
+                return this.handleConfirmMatchFacilityResponse({
+                    ...response,
+                    matchedFacility: { ...response.matchedFacility, osId: generalStringCode(&#x27;OAR_ID_&#x27;) }
+                });
+            }
+            return this.handleConfirmMatchFacilityResponse(response);
+        } catch (err) {
+            console.log(err);
+            if (err instanceof BadRequestException) {
+                throw err;
+            }
+            throw new BadRequestException({ translate: &#x27;error.reject_oar_id_fail&#x27; });
+        }
+    }
+
+    async getRmiCid(facilityId: string) {
+        const xmldata &#x3D; fs.readFileSync(path.join(env.ROOT_PATH, RMI_CID_XML_PATH), &#x27;utf8&#x27;);
+        return await parseStringPromise(xmldata)
+            .then((res) &#x3D;&gt; {
+                return this.convertRmiCidXml(facilityId, res);
+            })
+            .catch((err) &#x3D;&gt; {
+                console.error(err);
+                throw new BadRequestException({ translate: &#x27;error.invalid_file_format&#x27; });
+            });
+    }
+
+    private async convertRmiCidXml(facilityId: string, data: any): Promise&lt;RmiCidResponseType[]&gt; {
+        const convertXmlData &#x3D; JSON.parse(JSON.stringify(data));
+        const rmiCidResponses: RmiCidResponseType[] &#x3D; [];
+        const rowXmlData &#x3D; convertXmlData.Workbook.Worksheet[0].Table[0].Row;
+        const cellXmlData &#x3D; rowXmlData.map((item) &#x3D;&gt; item.Cell);
+        const attribute &#x3D; await this.attributeService.find({
+            where: { type: FieldTypeEnum.RMI_CID }
+        });
+        const countries &#x3D; await this.locationService.listCountries();
+        const attributeMap &#x3D; keyBy(attribute, &#x27;name&#x27;);
+        const countryMap &#x3D; keyBy(countries, (country) &#x3D;&gt; country.country.toUpperCase());
+        for (const cell of cellXmlData) {
+            const rmiCidInput &#x3D; [] as RmiCidResponseType;
+            for (const key of Object.values(CELL_XML_DATA)) {
+                let value &#x3D; cell[key].Data[0]._;
+                if (key &#x3D;&#x3D;&#x3D; CELL_XML_DATA.CELL_5) {
+                    value &#x3D; countryMap[String(value).toUpperCase()]?.id || null;
+                }
+                rmiCidInput.push({
+                    attributeId: attributeMap[CELL_RESPONSE_TYPE_MAPPING[key]].id,
+                    roleAttributeType: FieldTypeEnum.RMI_CID,
+                    value,
+                    category: attributeMap[CELL_RESPONSE_TYPE_MAPPING[key]].category
+                });
+            }
+
+            rmiCidResponses.push(rmiCidInput);
+        }
+
+        if (facilityId) {
+            return rmiCidResponses.filter((attributes) &#x3D;&gt;
+                attributes.some(
+                    (attribute) &#x3D;&gt;
+                        attribute.attributeId &#x3D;&#x3D;&#x3D; attributeMap[&#x27;Facility ID&#x27;].id &amp;&amp; attribute.value.includes(facilityId)
+                )
+            );
+        }
+        return rmiCidResponses;
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'OpenApparelRegistryService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

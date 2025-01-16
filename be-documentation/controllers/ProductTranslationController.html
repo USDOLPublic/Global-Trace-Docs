@@ -1,0 +1,966 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Global Trace BE documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">Global Trace BE documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content controller">
+                   <div class="content-data">
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Controllers</li>
+  <li class="breadcrumb-item" >ProductTranslationController</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/product-definitions/http/controllers/product-translation.controller.ts</code>
+        </p>
+
+            <p class="comment">
+                <h3>Prefix</h3>
+            </p>
+            <p class="comment">
+                <code>product-translations</code>
+            </p>
+
+
+
+            <p class="comment">
+                <h3>Extends</h3>
+            </p>
+            <p class="comment">
+            </p>
+
+
+
+            <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier">Async</span>
+                                <a href="#getProductAttributeTranslations" >getProductAttributeTranslations</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier">Async</span>
+                                <a href="#getProductTranslations" >getProductTranslations</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                <a href="#saveProductAttributeTranslation" >saveProductAttributeTranslation</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                <a href="#saveProductTranslation" >saveProductTranslation</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                <a href="#uploadAndValidateProductAttributeTranslationFile" >uploadAndValidateProductAttributeTranslationFile</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                <a href="#uploadAndValidateProductTranslationFile" >uploadAndValidateProductTranslationFile</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getProductAttributeTranslations"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier">Async</span>
+                        <span ><b>getProductAttributeTranslations</b></span>
+                        <a href="#getProductAttributeTranslations"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getProductAttributeTranslations(res: Response)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Get(&#x27;attributes&#x27;)<br />@UseGuards(ShortTokenGuard)<br />@Header(&#x27;Access-Control-Allow-Headers&#x27;, &#x27;X-Requested-With&#x27;)<br />@Header(&#x27;Content-Type&#x27;, &#x27;application/json&#x27;)<br />@Header(&#x27;Content-Disposition&#x27;, &#x27;attachment; filename&#x3D;&quot;Product attribute translate.json&quot;&#x27;)<br />@ApiOperation({description: &#x27;Get all product attribute translations&#x27;})<br />@ApiQuery({name: &#x27;shortToken&#x27;, description: &#x27;short token&#x27;, required: true, type: String})<br /></code>
+                </td>
+            </tr>
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="102"
+                                    class="link-to-prism">src/product-definitions/http/controllers/product-translation.controller.ts:102</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>res</td>
+                                            <td>
+                                                        <code>Response</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getProductTranslations"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier">Async</span>
+                        <span ><b>getProductTranslations</b></span>
+                        <a href="#getProductTranslations"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getProductTranslations(res: Response)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Get(&#x27;products&#x27;)<br />@UseGuards(ShortTokenGuard)<br />@Header(&#x27;Access-Control-Allow-Headers&#x27;, &#x27;X-Requested-With&#x27;)<br />@Header(&#x27;Content-Type&#x27;, &#x27;application/json&#x27;)<br />@Header(&#x27;Content-Disposition&#x27;, &#x27;attachment; filename&#x3D;&quot;Product translate.json&quot;&#x27;)<br />@ApiOperation({description: &#x27;Get all product translations&#x27;})<br />@ApiQuery({name: &#x27;shortToken&#x27;, description: &#x27;short token&#x27;, required: true, type: String})<br /></code>
+                </td>
+            </tr>
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="52"
+                                    class="link-to-prism">src/product-definitions/http/controllers/product-translation.controller.ts:52</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>res</td>
+                                            <td>
+                                                        <code>Response</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveProductAttributeTranslation"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                        <span ><b>saveProductAttributeTranslation</b></span>
+                        <a href="#saveProductAttributeTranslation"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>saveProductAttributeTranslation(fileId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Post(&#x27;attributes/:id&#x27;)<br />@UseGuards(JwtAuthGuard, undefined)<br />@HttpCode(HttpStatus.NO_CONTENT)<br />@ApiOperation({description: &#x27;Submit Product Attribute Translation File&#x27;})<br />@ApiParam({name: &#x27;id&#x27;, description: &#x27;File id&#x27;, type: &#x27;string&#x27;})<br /></code>
+                </td>
+            </tr>
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="134"
+                                    class="link-to-prism">src/product-definitions/http/controllers/product-translation.controller.ts:134</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>fileId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveProductTranslation"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                        <span ><b>saveProductTranslation</b></span>
+                        <a href="#saveProductTranslation"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>saveProductTranslation(fileId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Post(&#x27;products/:id&#x27;)<br />@UseGuards(JwtAuthGuard, undefined)<br />@HttpCode(HttpStatus.NO_CONTENT)<br />@ApiOperation({description: &#x27;Submit Product Translation File&#x27;})<br />@ApiParam({name: &#x27;id&#x27;, description: &#x27;File id&#x27;, type: &#x27;string&#x27;})<br /></code>
+                </td>
+            </tr>
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="84"
+                                    class="link-to-prism">src/product-definitions/http/controllers/product-translation.controller.ts:84</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>fileId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="uploadAndValidateProductAttributeTranslationFile"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                        <span ><b>uploadAndValidateProductAttributeTranslationFile</b></span>
+                        <a href="#uploadAndValidateProductAttributeTranslationFile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>uploadAndValidateProductAttributeTranslationFile(dto: <a href="../classes/UploadProductTranslationFileDto.html" target="_self">UploadProductTranslationFileDto</a>, file: Express.Multer.File)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Post(&#x27;attributes&#x27;)<br />@UseGuards(JwtAuthGuard, undefined)<br />@ResponseModel(UploadProductTranslationResponse)<br />@ApiOperation({description: &#x27;Upload and validate product attribute translation file&#x27;})<br />@ApiConsumes(&#x27;multipart/form-data&#x27;)<br />@RequireUploadTemplateFile({fieldName: &#x27;file&#x27;, maxCount: 1})<br /></code>
+                </td>
+            </tr>
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="114"
+                                    class="link-to-prism">src/product-definitions/http/controllers/product-translation.controller.ts:114</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>dto</td>
+                                            <td>
+                                                            <code><a href="../classes/UploadProductTranslationFileDto.html" target="_self" >UploadProductTranslationFileDto</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>file</td>
+                                            <td>
+                                                        <code>Express.Multer.File</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../classes/UploadProductTranslationResponse.html" target="_self" >Promise&lt;UploadProductTranslationResponse&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="uploadAndValidateProductTranslationFile"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                        <span ><b>uploadAndValidateProductTranslationFile</b></span>
+                        <a href="#uploadAndValidateProductTranslationFile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>uploadAndValidateProductTranslationFile(dto: <a href="../classes/UploadProductTranslationFileDto.html" target="_self">UploadProductTranslationFileDto</a>, file: Express.Multer.File)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Post(&#x27;products&#x27;)<br />@UseGuards(JwtAuthGuard, undefined)<br />@ResponseModel(UploadProductTranslationResponse)<br />@ApiOperation({description: &#x27;Upload and validate product translation file&#x27;})<br />@ApiConsumes(&#x27;multipart/form-data&#x27;)<br />@RequireUploadTemplateFile({fieldName: &#x27;file&#x27;, maxCount: 1})<br /></code>
+                </td>
+            </tr>
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="64"
+                                    class="link-to-prism">src/product-definitions/http/controllers/product-translation.controller.ts:64</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>dto</td>
+                                            <td>
+                                                            <code><a href="../classes/UploadProductTranslationFileDto.html" target="_self" >UploadProductTranslationFileDto</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>file</td>
+                                            <td>
+                                                        <code>Express.Multer.File</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../classes/UploadProductTranslationResponse.html" target="_self" >Promise&lt;UploadProductTranslationResponse&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Id } from &#x27;@diginexhk/nestjs-base-decorator&#x27;;
+import { ResponseModel } from &#x27;@diginexhk/nestjs-response&#x27;;
+import {
+    Body,
+    Controller,
+    Get,
+    Header,
+    HttpCode,
+    HttpStatus,
+    Post,
+    Res,
+    StreamableFile,
+    UploadedFile,
+    UseGuards
+} from &#x27;@nestjs/common&#x27;;
+import { ApiBearerAuth, ApiConsumes, ApiOperation, ApiParam, ApiQuery, ApiTags } from &#x27;@nestjs/swagger&#x27;;
+import { Response } from &#x27;express&#x27;;
+import { DataSource, EntityManager } from &#x27;typeorm&#x27;;
+import { RequireUploadTemplateFile } from &#x27;~core/decorators/require-upload-file.decorator&#x27;;
+import { BaseController } from &#x27;~core/http/controllers/base.controller&#x27;;
+import { ProductTranslationService } from &#x27;~product-definitions/services/product-translation.service&#x27;;
+import { UserRoleEnum } from &#x27;~role-permissions/enums/user-role.enum&#x27;;
+import { JwtAuthGuard } from &#x27;~users/http/guards/jwt-auth.guard&#x27;;
+import { RoleGuard } from &#x27;~users/http/guards/role.guard&#x27;;
+import { ShortTokenGuard } from &#x27;~users/http/guards/short-token.guard&#x27;;
+import { UploadProductTranslationFileDto } from &#x27;../dto/upload-product-translation-file.dto&#x27;;
+import { UploadProductTranslationResponse } from &#x27;../response/upload-product-translation.response&#x27;;
+
+@Controller(&#x27;product-translations&#x27;)
+@ApiTags(&#x27;Product Translation&#x27;)
+@ApiBearerAuth()
+export class ProductTranslationController extends BaseController {
+    constructor(
+        private dataSource: DataSource,
+        private productTranslationService: ProductTranslationService
+    ) {
+        super();
+    }
+
+    @Get(&#x27;products&#x27;)
+    @UseGuards(ShortTokenGuard)
+    @Header(&#x27;Access-Control-Allow-Headers&#x27;, &#x27;X-Requested-With&#x27;)
+    @Header(&#x27;Content-Type&#x27;, &#x27;application/json&#x27;)
+    @Header(&#x27;Content-Disposition&#x27;, &#x27;attachment; filename&#x3D;&quot;Product translate.json&quot;&#x27;)
+    @ApiOperation({ description: &#x27;Get all product translations&#x27; })
+    @ApiQuery({
+        name: &#x27;shortToken&#x27;,
+        description: &#x27;short token&#x27;,
+        required: true,
+        type: String
+    })
+    async getProductTranslations(@Res() res: Response) {
+        const data &#x3D; await this.productTranslationService.getProductTranslations();
+        const buffer &#x3D; Buffer.from(JSON.stringify(data, null, 4), &#x27;utf8&#x27;);
+        new StreamableFile(buffer).getStream().pipe(res);
+    }
+
+    @Post(&#x27;products&#x27;)
+    @UseGuards(JwtAuthGuard, RoleGuard(UserRoleEnum.SUPER_ADMIN))
+    @ResponseModel(UploadProductTranslationResponse)
+    @ApiOperation({ description: &#x27;Upload and validate product translation file&#x27; })
+    @ApiConsumes(&#x27;multipart/form-data&#x27;)
+    @RequireUploadTemplateFile({ fieldName: &#x27;file&#x27;, maxCount: 1 })
+    uploadAndValidateProductTranslationFile(
+        @Body() dto: UploadProductTranslationFileDto,
+        @UploadedFile() file: Express.Multer.File
+    ): Promise&lt;UploadProductTranslationResponse&gt; {
+        return this.dataSource.transaction((manager: EntityManager) &#x3D;&gt; {
+            return this.productTranslationService
+                .withTransaction(manager)
+                .uploadAndValidateProductTranslationFile(file);
+        });
+    }
+
+    @Post(&#x27;products/:id&#x27;)
+    @UseGuards(JwtAuthGuard, RoleGuard(UserRoleEnum.SUPER_ADMIN))
+    @HttpCode(HttpStatus.NO_CONTENT)
+    @ApiOperation({ description: &#x27;Submit Product Translation File&#x27; })
+    @ApiParam({
+        name: &#x27;id&#x27;,
+        description: &#x27;File id&#x27;,
+        type: &#x27;string&#x27;
+    })
+    saveProductTranslation(@Id() fileId: string): Promise&lt;void&gt; {
+        return this.dataSource.transaction((manager: EntityManager) &#x3D;&gt; {
+            return this.productTranslationService.withTransaction(manager).saveProductTranslation(fileId);
+        });
+    }
+
+    @Get(&#x27;attributes&#x27;)
+    @UseGuards(ShortTokenGuard)
+    @Header(&#x27;Access-Control-Allow-Headers&#x27;, &#x27;X-Requested-With&#x27;)
+    @Header(&#x27;Content-Type&#x27;, &#x27;application/json&#x27;)
+    @Header(&#x27;Content-Disposition&#x27;, &#x27;attachment; filename&#x3D;&quot;Product attribute translate.json&quot;&#x27;)
+    @ApiOperation({ description: &#x27;Get all product attribute translations&#x27; })
+    @ApiQuery({
+        name: &#x27;shortToken&#x27;,
+        description: &#x27;short token&#x27;,
+        required: true,
+        type: String
+    })
+    async getProductAttributeTranslations(@Res() res: Response) {
+        const data &#x3D; await this.productTranslationService.getProductAttributeTranslations();
+        const buffer &#x3D; Buffer.from(JSON.stringify(data, null, 4), &#x27;utf8&#x27;);
+        new StreamableFile(buffer).getStream().pipe(res);
+    }
+
+    @Post(&#x27;attributes&#x27;)
+    @UseGuards(JwtAuthGuard, RoleGuard(UserRoleEnum.SUPER_ADMIN))
+    @ResponseModel(UploadProductTranslationResponse)
+    @ApiOperation({ description: &#x27;Upload and validate product attribute translation file&#x27; })
+    @ApiConsumes(&#x27;multipart/form-data&#x27;)
+    @RequireUploadTemplateFile({ fieldName: &#x27;file&#x27;, maxCount: 1 })
+    uploadAndValidateProductAttributeTranslationFile(
+        @Body() dto: UploadProductTranslationFileDto,
+        @UploadedFile() file: Express.Multer.File
+    ): Promise&lt;UploadProductTranslationResponse&gt; {
+        return this.dataSource.transaction((manager: EntityManager) &#x3D;&gt; {
+            return this.productTranslationService
+                .withTransaction(manager)
+                .uploadAndValidateProductAttributeTranslationFile(file);
+        });
+    }
+
+    @Post(&#x27;attributes/:id&#x27;)
+    @UseGuards(JwtAuthGuard, RoleGuard(UserRoleEnum.SUPER_ADMIN))
+    @HttpCode(HttpStatus.NO_CONTENT)
+    @ApiOperation({ description: &#x27;Submit Product Attribute Translation File&#x27; })
+    @ApiParam({
+        name: &#x27;id&#x27;,
+        description: &#x27;File id&#x27;,
+        type: &#x27;string&#x27;
+    })
+    saveProductAttributeTranslation(@Id() fileId: string): Promise&lt;void&gt; {
+        return this.dataSource.transaction((manager: EntityManager) &#x3D;&gt; {
+            return this.productTranslationService.withTransaction(manager).saveProductAttributeTranslation(fileId);
+        });
+    }
+}
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'controller';
+            var COMPODOC_CURRENT_PAGE_URL = 'ProductTranslationController.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,1624 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Global Trace BE documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">Global Trace BE documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Injectables</li>
+  <li class="breadcrumb-item" >HistoryService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/history/services/history.service.ts</code>
+        </p>
+
+
+
+
+
+            <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#addDocumentToZip" >addDocumentToZip</a>
+                            </li>
+                            <li>
+                                <a href="#createEvent" >createEvent</a>
+                            </li>
+                            <li>
+                                <a href="#createRecordProductEvent" >createRecordProductEvent</a>
+                            </li>
+                            <li>
+                                <a href="#createTransactionEvent" >createTransactionEvent</a>
+                            </li>
+                            <li>
+                                <a href="#createTransformationEvent" >createTransformationEvent</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#downloadDocuments" >downloadDocuments</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getDirectory" >getDirectory</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getHistoryTransformationsByIds" >getHistoryTransformationsByIds</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getMorphEntityIds" >getMorphEntityIds</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getRecordProducts" >getRecordProducts</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getSeasonStartTime" >getSeasonStartTime</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getTransactionHistories" >getTransactionHistories</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#list" >list</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(storageService: StorageService, eventRepo: <a href="../classes/EventRepository.html" target="_self">EventRepository</a>, transactionHistoryService: <a href="../injectables/TransactionHistoryService.html" target="_self">TransactionHistoryService</a>, transformationHistoryService: <a href="../injectables/TransformationHistoryService.html" target="_self">TransformationHistoryService</a>, recordProductService: <a href="../injectables/RecordProductService.html" target="_self">RecordProductService</a>, supplyChainService: <a href="../injectables/SupplyChainService.html" target="_self">SupplyChainService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/history/services/history.service.ts:29</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>storageService</td>
+                                                  
+                                                        <td>
+                                                                    <code>StorageService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>eventRepo</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../classes/EventRepository.html" target="_self" >EventRepository</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>transactionHistoryService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/TransactionHistoryService.html" target="_self" >TransactionHistoryService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>transformationHistoryService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/TransformationHistoryService.html" target="_self" >TransformationHistoryService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>recordProductService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/RecordProductService.html" target="_self" >RecordProductService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>supplyChainService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SupplyChainService.html" target="_self" >SupplyChainService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addDocumentToZip"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>addDocumentToZip</b></span>
+                        <a href="#addDocumentToZip"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>addDocumentToZip(zip: AdmZip, transaction: <a href="../classes/TransactionEntity.html" target="_self">TransactionEntity | RecordProductEntity</a>, field: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, type: <a href="../undefineds/EventTypeEnum.html" target="_self">EventTypeEnum</a>, existingFiles: string[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="144"
+                                    class="link-to-prism">src/history/services/history.service.ts:144</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>zip</td>
+                                            <td>
+                                                        <code>AdmZip</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>transaction</td>
+                                            <td>
+                                                            <code><a href="../classes/TransactionEntity.html" target="_self" >TransactionEntity | RecordProductEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>field</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>type</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/enumerations.html#EventTypeEnum" target="_self" >EventTypeEnum</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>existingFiles</td>
+                                            <td>
+                                                        <code>string[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createEvent"></a>
+                    <span class="name">
+                        <span ><b>createEvent</b></span>
+                        <a href="#createEvent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>createEvent(data: <a href="../entitys/EventEntity.html" target="_self">DeepPartial&lt;EventEntity&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="95"
+                                    class="link-to-prism">src/history/services/history.service.ts:95</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>data</td>
+                                            <td>
+                                                            <code><a href="../entitys/EventEntity.html" target="_self" >DeepPartial&lt;EventEntity&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createRecordProductEvent"></a>
+                    <span class="name">
+                        <span ><b>createRecordProductEvent</b></span>
+                        <a href="#createRecordProductEvent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>createRecordProductEvent(record: <a href="../entitys/RecordProductEntity.html" target="_self">RecordProductEntity</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="119"
+                                    class="link-to-prism">src/history/services/history.service.ts:119</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>record</td>
+                                            <td>
+                                                            <code><a href="../entitys/RecordProductEntity.html" target="_self" >RecordProductEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createTransactionEvent"></a>
+                    <span class="name">
+                        <span ><b>createTransactionEvent</b></span>
+                        <a href="#createTransactionEvent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>createTransactionEvent(transaction: <a href="../classes/TransactionEntity.html" target="_self">TransactionEntity</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="109"
+                                    class="link-to-prism">src/history/services/history.service.ts:109</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>transaction</td>
+                                            <td>
+                                                            <code><a href="../classes/TransactionEntity.html" target="_self" >TransactionEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createTransformationEvent"></a>
+                    <span class="name">
+                        <span ><b>createTransformationEvent</b></span>
+                        <a href="#createTransformationEvent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>createTransformationEvent(transformation: <a href="../classes/TransformationEntity.html" target="_self">TransformationEntity</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="99"
+                                    class="link-to-prism">src/history/services/history.service.ts:99</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>transformation</td>
+                                            <td>
+                                                            <code><a href="../classes/TransformationEntity.html" target="_self" >TransformationEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="downloadDocuments"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>downloadDocuments</b></span>
+                        <a href="#downloadDocuments"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>downloadDocuments(transactionId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, res: Response, type: <a href="../undefineds/EventTypeEnum.html" target="_self">EventTypeEnum</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="129"
+                                    class="link-to-prism">src/history/services/history.service.ts:129</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>transactionId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>res</td>
+                                            <td>
+                                                        <code>Response</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>type</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/enumerations.html#EventTypeEnum" target="_self" >EventTypeEnum</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#now" target="_self" >unknown</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getDirectory"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>getDirectory</b></span>
+                        <a href="#getDirectory"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getDirectory(type: <a href="../undefineds/EventTypeEnum.html" target="_self">EventTypeEnum</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="170"
+                                    class="link-to-prism">src/history/services/history.service.ts:170</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>type</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/enumerations.html#EventTypeEnum" target="_self" >EventTypeEnum</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getHistoryTransformationsByIds"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>getHistoryTransformationsByIds</b></span>
+                        <a href="#getHistoryTransformationsByIds"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getHistoryTransformationsByIds(events: <a href="../entitys/EventEntity.html" target="_self">EventEntity[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="69"
+                                    class="link-to-prism">src/history/services/history.service.ts:69</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>events</td>
+                                            <td>
+                                                            <code><a href="../entitys/EventEntity.html" target="_self" >EventEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../classes/TransformationEntity.html" target="_self" >Promise&lt;TransformationEntity[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getMorphEntityIds"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>getMorphEntityIds</b></span>
+                        <a href="#getMorphEntityIds"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getMorphEntityIds(events: <a href="../entitys/EventEntity.html" target="_self">EventEntity[]</a>, eventType: <a href="../undefineds/EventTypeEnum.html" target="_self">EventTypeEnum</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="91"
+                                    class="link-to-prism">src/history/services/history.service.ts:91</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>events</td>
+                                            <td>
+                                                            <code><a href="../entitys/EventEntity.html" target="_self" >EventEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>eventType</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/enumerations.html#EventTypeEnum" target="_self" >EventTypeEnum</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getRecordProducts"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>getRecordProducts</b></span>
+                        <a href="#getRecordProducts"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getRecordProducts(events: <a href="../entitys/EventEntity.html" target="_self">EventEntity[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="86"
+                                    class="link-to-prism">src/history/services/history.service.ts:86</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>events</td>
+                                            <td>
+                                                            <code><a href="../entitys/EventEntity.html" target="_self" >EventEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;RecordProductEntity[]&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSeasonStartTime"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>getSeasonStartTime</b></span>
+                        <a href="#getSeasonStartTime"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getSeasonStartTime(user: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="184"
+                                    class="link-to-prism">src/history/services/history.service.ts:184</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>user</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;literal type&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getTransactionHistories"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>getTransactionHistories</b></span>
+                        <a href="#getTransactionHistories"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getTransactionHistories(events: <a href="../entitys/EventEntity.html" target="_self">EventEntity[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="74"
+                                    class="link-to-prism">src/history/services/history.service.ts:74</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>events</td>
+                                            <td>
+                                                            <code><a href="../entitys/EventEntity.html" target="_self" >EventEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../classes/TransactionEntity.html" target="_self" >Promise&lt;TransactionEntity[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="list"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>list</b></span>
+                        <a href="#list"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>list(user: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>, paginationParams: PaginationParams, timeRange: <a href="../undefineds/TimeRangeType.html" target="_self">TimeRangeType&lt;number&gt;</a>, types: <a href="../undefineds/EventType.html" target="_self">EventTypeEnum[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="39"
+                                    class="link-to-prism">src/history/services/history.service.ts:39</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Default value</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>user</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+                                            <td>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                                <td>paginationParams</td>
+                                            <td>
+                                                        <code>PaginationParams</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+                                            <td>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                                <td>timeRange</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#TimeRangeType" target="_self" >TimeRangeType&lt;number&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+                                            <td>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                                <td>types</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#EventType" target="_self" >EventTypeEnum[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+                                            <td>
+                                                    <code>[]</code>
+                                            </td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#now" target="_self" >unknown</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { PaginationParams } from &#x27;@diginexhk/nestjs-base-decorator&#x27;;
+import { StorageService } from &#x27;@diginexhk/nestjs-storage&#x27;;
+import { forwardRef, Inject, Injectable, InternalServerErrorException, StreamableFile } from &#x27;@nestjs/common&#x27;;
+import AdmZip from &#x27;adm-zip&#x27;;
+import { Response } from &#x27;express&#x27;;
+import { Dictionary, keyBy } from &#x27;lodash&#x27;;
+import moment from &#x27;moment&#x27;;
+import { DeepPartial } from &#x27;typeorm&#x27;;
+import { setHeaderDownloadZipFile } from &#x27;~core/helpers/zip-file.helper&#x27;;
+import { FileUploadType } from &#x27;~core/types/file-upload.type&#x27;;
+import { RecordProductEntity } from &#x27;~events/entities/record-product.entity&#x27;;
+import { TransactionEntity } from &#x27;~events/entities/transaction.entity&#x27;;
+import { TransformationEntity } from &#x27;~events/entities/transformation.entity&#x27;;
+import { RecordProductService } from &#x27;~events/services/record-product.service&#x27;;
+import { TransactionHistoryService } from &#x27;~events/services/transaction/transaction-history.service&#x27;;
+import { TransformationHistoryService } from &#x27;~events/services/transformation/transformation-history.service&#x27;;
+import { TimeRangeType } from &#x27;~events/types/time-range.type&#x27;;
+import { DATE_FORMAT } from &#x27;~facilities/constants/farm-group-template.constants&#x27;;
+import { TRANSACTION_TYPE } from &#x27;~history/constants/transaction-type.const&#x27;;
+import { EventEntity } from &#x27;~history/entities/event.entity&#x27;;
+import { EventTypeEnum } from &#x27;~history/enums/event-type.enum&#x27;;
+import { getFileName } from &#x27;~history/helpers/download-file-name.helper&#x27;;
+import { GetEventsQuery } from &#x27;~history/queries/get-events.query&#x27;;
+import { EventRepository } from &#x27;~history/repositories/event.repository&#x27;;
+import { SupplyChainService } from &#x27;~supply-chains/services/supply-chain.service&#x27;;
+import { UserEntity } from &#x27;~users/entities/user.entity&#x27;;
+
+@Injectable()
+export class HistoryService {
+    constructor(
+        private storageService: StorageService,
+        private eventRepo: EventRepository,
+        private transactionHistoryService: TransactionHistoryService,
+        private transformationHistoryService: TransformationHistoryService,
+        @Inject(forwardRef(() &#x3D;&gt; RecordProductService)) private recordProductService: RecordProductService,
+        private supplyChainService: SupplyChainService
+    ) {}
+
+    async list(
+        user: UserEntity,
+        paginationParams: PaginationParams,
+        timeRange: TimeRangeType&lt;number&gt;,
+        types: EventTypeEnum[] &#x3D; []
+    ) {
+        const data &#x3D; await this.eventRepo.pagination(
+            new GetEventsQuery(user.currentFacility.id, timeRange, types),
+            paginationParams
+        );
+
+        const transactions: Dictionary&lt;TransactionEntity&gt; &#x3D; keyBy(await this.getTransactionHistories(data.items), &#x27;id&#x27;);
+        const transformations: Dictionary&lt;TransformationEntity&gt; &#x3D; keyBy(
+            await this.getHistoryTransformationsByIds(data.items),
+            &#x27;id&#x27;
+        );
+        const recordProducts: Dictionary&lt;RecordProductEntity&gt; &#x3D; keyBy(await this.getRecordProducts(data.items), &#x27;id&#x27;);
+
+        for (const event of data.items) {
+            if (TRANSACTION_TYPE.includes(event.type)) {
+                event.transaction &#x3D; transactions[event.entityId];
+            } else if (event.type &#x3D;&#x3D;&#x3D; EventTypeEnum.TRANSFORM) {
+                event.transformation &#x3D; transformations[event.entityId];
+            } else if (event.type &#x3D;&#x3D;&#x3D; EventTypeEnum.RECORD_PRODUCT) {
+                event.recordProduct &#x3D; recordProducts[event.entityId];
+            }
+        }
+        return data;
+    }
+
+    private getHistoryTransformationsByIds(events: EventEntity[]): Promise&lt;TransformationEntity[]&gt; {
+        const transformationIds &#x3D; this.getMorphEntityIds(events, EventTypeEnum.TRANSFORM);
+        return this.transformationHistoryService.getHistoryTransformationsByIds(transformationIds);
+    }
+
+    private getTransactionHistories(events: EventEntity[]): Promise&lt;TransactionEntity[]&gt; {
+        const transactionIds &#x3D; events.reduce((acc: string[], { type, entityId }) &#x3D;&gt; {
+            if (TRANSACTION_TYPE.includes(type)) {
+                acc.push(entityId);
+            }
+
+            return acc;
+        }, []);
+
+        return this.transactionHistoryService.getHistoryTransactionByIds(transactionIds);
+    }
+
+    private getRecordProducts(events: EventEntity[]): Promise&lt;RecordProductEntity[]&gt; {
+        const recordProductIds &#x3D; this.getMorphEntityIds(events, EventTypeEnum.RECORD_PRODUCT);
+        return this.recordProductService.getRecordProductsByIds(recordProductIds);
+    }
+
+    private getMorphEntityIds(events: EventEntity[], eventType: EventTypeEnum) {
+        return events.filter(({ type }) &#x3D;&gt; type &#x3D;&#x3D;&#x3D; eventType).map(({ entityId }) &#x3D;&gt; entityId);
+    }
+
+    createEvent(data: DeepPartial&lt;EventEntity&gt;) {
+        return this.eventRepo.createOne(data);
+    }
+
+    createTransformationEvent(transformation: TransformationEntity) {
+        return this.createEvent({
+            facilityId: transformation.facilityId || transformation.facility.id,
+            type: EventTypeEnum.TRANSFORM,
+            recordedAt: transformation.createdAt,
+            entityId: transformation.id,
+            entityType: TransformationEntity.name
+        });
+    }
+
+    createTransactionEvent(transaction: TransactionEntity) {
+        return this.createEvent({
+            facilityId: transaction.facilityId || transaction.facility.id,
+            type: transaction.type as unknown as EventTypeEnum,
+            recordedAt: transaction.transactedAt,
+            entityId: transaction.id,
+            entityType: TransactionEntity.name
+        });
+    }
+
+    createRecordProductEvent(record: RecordProductEntity) {
+        return this.createEvent({
+            facilityId: record.facilityId || record.facility.id,
+            type: EventTypeEnum.RECORD_PRODUCT,
+            recordedAt: record.recordedAt,
+            entityId: record.id,
+            entityType: RecordProductEntity.name
+        });
+    }
+
+    async downloadDocuments(transactionId: string, res: Response, type: EventTypeEnum) {
+        const transaction &#x3D; await this.transactionHistoryService.getDocumentTransactionsById(transactionId, type);
+        const zip &#x3D; new AdmZip();
+
+        const existingFiles: string[] &#x3D; [];
+
+        await this.addDocumentToZip(zip, transaction, &#x27;uploadProofs&#x27;, type, existingFiles);
+        await this.addDocumentToZip(zip, transaction, &#x27;uploadInvoices&#x27;, type, existingFiles);
+        await this.addDocumentToZip(zip, transaction, &#x27;uploadPackingLists&#x27;, type, existingFiles);
+
+        const directory &#x3D; this.getDirectory(type);
+        setHeaderDownloadZipFile(res, directory);
+        return new StreamableFile(zip.toBuffer()).getStream().pipe(res);
+    }
+
+    private async addDocumentToZip(
+        zip: AdmZip,
+        transaction: TransactionEntity | RecordProductEntity,
+        field: string,
+        type: EventTypeEnum,
+        existingFiles: string[]
+    ): Promise&lt;void&gt; {
+        let fileUploads: FileUploadType[];
+        if (type &#x3D;&#x3D; EventTypeEnum.RECORD_PRODUCT) {
+            fileUploads &#x3D; transaction[&#x27;uploadProofs&#x27;];
+        } else {
+            fileUploads &#x3D; transaction[field];
+        }
+        if (!fileUploads.length) {
+            return;
+        }
+
+        const directory &#x3D; this.getDirectory(type);
+
+        for (const fileUpload of fileUploads) {
+            const fileName &#x3D; getFileName(existingFiles, &#x60;${directory}/${fileUpload.fileName}&#x60;);
+            const buffer &#x3D; await this.storageService.getFileBuffer(fileUpload.blobName);
+            zip.addFile(fileName, buffer);
+        }
+    }
+
+    private getDirectory(type: EventTypeEnum) {
+        const currentDate &#x3D; moment().format(&#x27;DD-MM-YYYY&#x27;);
+        switch (type) {
+            case EventTypeEnum.PURCHASE:
+                return &#x27;Purchase_Order_&#x27; + currentDate;
+            case EventTypeEnum.SELL:
+                return &#x27;Sale_Order_&#x27; + currentDate;
+            case EventTypeEnum.TRANSPORT:
+                return &#x27;Shipping_Doc_&#x27; + currentDate;
+            case EventTypeEnum.RECORD_PRODUCT:
+                return &#x27;By_Product_&#x27; + currentDate;
+        }
+    }
+
+    async getSeasonStartTime(user: UserEntity): Promise&lt;{ seasonStartTime: number; seasonDuration: number }&gt; {
+        const rawMaterialExtractorRole &#x3D; await this.supplyChainService.getRawMaterialExtractorRole(user.role.id);
+        if (!rawMaterialExtractorRole) {
+            throw new InternalServerErrorException({
+                translate: &#x27;error.there_is_no_raw_material_extractor_in_supply_chain_yet&#x27;
+            });
+        }
+
+        return {
+            seasonStartTime: moment(rawMaterialExtractorRole.seasonStartDate, DATE_FORMAT).unix(),
+            seasonDuration: rawMaterialExtractorRole.seasonDuration
+        };
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'HistoryService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

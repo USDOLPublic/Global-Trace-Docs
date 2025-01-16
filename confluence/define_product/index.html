@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>1. Product definition - Global Trace</title>
+<meta name="generator" content="Hugo 0.125.1">
+<link href="./index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="https://globaltrace-docs.uat.dgnx.io/confluence/define_product/">
+<link rel="stylesheet" href="https://globaltrace-docs.uat.dgnx.io/confluence/css/theme.min.css">
+<link rel="stylesheet" href="https://globaltrace-docs.uat.dgnx.io/confluence/css/chroma.min.css">
+<script defer src="./js/fontawesome6/all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js" integrity="sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha256-4XodgW4TwIJuDtf+v6vDJ39FVxI0veC/kSCCmnFp7ck=" crossorigin="anonymous"></script>
+<script src="https://globaltrace-docs.uat.dgnx.io/confluence/js/bundle.js"></script><style>
+:root {--custom-background-color: grey;}
+</style>
+<meta property="og:url" content="https://globaltrace-docs.uat.dgnx.io/confluence/define_product/">
+  <meta property="og:site_name" content="Global Trace">
+  <meta property="og:title" content="1. Product definition">
+  <meta property="og:description" content="For each input or output product that will be traced in Global Trace, the super administrator must specify the key data elements (KDEs) or product attributes that will be required to be collected.
+Attribute definition An attribute is created by the super admin and has a name, type, category, and other optional defined values.
+An attribute type can be one of three types: PRODUCT_ID, PRODUCT_QUANTITY, and OTHER. PRODUCT_ID can be used to identify a unique product, i.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="website">
+    <meta property="og:image" content="https://globaltrace-docs.uat.dgnx.io/confluence/images/icon.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://globaltrace-docs.uat.dgnx.io/confluence/images/icon.png"><meta name="twitter:title" content="1. Product definition">
+<meta name="twitter:description" content="">
+
+  <meta itemprop="name" content="1. Product definition">
+  <meta itemprop="description" content="For each input or output product that will be traced in Global Trace, the super administrator must specify the key data elements (KDEs) or product attributes that will be required to be collected.
+Attribute definition An attribute is created by the super admin and has a name, type, category, and other optional defined values.
+An attribute type can be one of three types: PRODUCT_ID, PRODUCT_QUANTITY, and OTHER. PRODUCT_ID can be used to identify a unique product, i.">
+  <meta itemprop="datePublished" content="2024-04-20T12:23:43+09:30">
+  <meta itemprop="dateModified" content="2024-04-20T12:23:43+09:30">
+  <meta itemprop="wordCount" content="374">
+  <meta itemprop="image" content="https://globaltrace-docs.uat.dgnx.io/confluence/images/icon.png"></head>
+<body>
+
+<div class="container"><header>
+<h1>Global Trace</h1>
+</header>
+
+
+<div class="content-container">
+<main><h1>1. Product definition</h1><p>For each input or output product that will be traced in Global Trace, the super administrator must specify the key data elements (KDEs) or product attributes that will be required to be collected.</p>
+<h2 id="attribute-definition">Attribute definition</h2>
+<p>An attribute is created by the super admin and has a name, type, category, and other optional defined values.</p>
+<ol>
+<li>An attribute type can be one of three types: PRODUCT_ID, PRODUCT_QUANTITY, and OTHER.</li>
+</ol>
+<ul>
+<li>PRODUCT_ID can be used to identify a unique product, i.e. Personal ID for a person, Serial Number for an mobile device, Code for cotton,</li>
+<li>PRODUCT_QUANTITY is the quantity that the product is bought or sold.</li>
+</ul>
+<ol start="2">
+<li>An attribute category is one of eight types: TEXT, NUMBER, PERCENTAGE, DATE, LIST, NUMBER_PAIR_UNIT, COUNTRY_PROVINCE_DISTRICT, ATTACHMENTS.</li>
+</ol>
+<ul>
+<li>PERCENTAGE defines that the attribute must be a number from 0 to 100.</li>
+<li>LIST defines that this attribute is a list of values, such as attribute Color with three options: black, pink, and red.</li>
+<li>NUMBER_PAIR_UNIT defines an attribute of two connected properties, for example, attribute Price with type of NUMBER and currency is one of PKR, USD, and EUR.
+<img src="https://globaltrace-docs.uat.dgnx.io/confluence/images/currency.png" alt="targets"></li>
+<li>COUNTRY_PROVINCE_DISTRICT is the address containing three values: Country ID, Province ID, and District ID in one attribute.</li>
+<li>ATTACHMENTS is used to contain uploaded certifications or proofs of the product. This category must contain the blobName and fileName of the uploaded file.</li>
+</ul>
+<style type="text/css">
+    .notice {
+        --root-color: #444;
+        --root-background: #eff;
+        --title-color: #fff;
+        --title-background: #7bd;
+        --warning-title: #c33;
+        --warning-content: #fee;
+        --info-title: #fb7;
+        --info-content: #fec;
+        --note-title: #6be;
+        --note-content: #e7f2fa;
+        --tip-title: #5a5;
+        --tip-content: #efe
+    }
+
+    @media (prefers-color-scheme:dark) {
+        .notice {
+            --root-color: #ddd;
+            --root-background: #eff;
+            --title-color: #fff;
+            --title-background: #7bd;
+            --warning-title: #800;
+            --warning-content: #400;
+            --info-title: #a50;
+            --info-content: #420;
+            --note-title: #069;
+            --note-content: #023;
+            --tip-title: #363;
+            --tip-content: #121
+        }
+    }
+
+    body.dark .notice {
+        --root-color: #ddd;
+        --root-background: #eff;
+        --title-color: #fff;
+        --title-background: #7bd;
+        --warning-title: #800;
+        --warning-content: #400;
+        --info-title: #a50;
+        --info-content: #420;
+        --note-title: #069;
+        --note-content: #023;
+        --tip-title: #363;
+        --tip-content: #121
+    }
+
+    .notice {
+        padding: 18px;
+        line-height: 24px;
+        margin-bottom: 24px;
+        border-radius: 4px;
+        color: var(--root-color);
+        background: var(--root-background)
+    }
+
+    .notice p:last-child {
+        margin-bottom: 0
+    }
+
+    .notice-title {
+        margin: -18px -18px 12px;
+        padding: 4px 18px;
+        border-radius: 4px 4px 0 0;
+        font-weight: 700;
+        color: var(--title-color);
+        background: var(--title-background)
+    }
+
+    .notice.warning .notice-title {
+        background: var(--warning-title)
+    }
+
+    .notice.warning {
+        background: var(--warning-content)
+    }
+
+    .notice.info .notice-title {
+        background: var(--info-title)
+    }
+
+    .notice.info {
+        background: var(--info-content)
+    }
+
+    .notice.note .notice-title {
+        background: var(--note-title)
+    }
+
+    .notice.note {
+        background: var(--note-content)
+    }
+
+    .notice.tip .notice-title {
+        background: var(--tip-title)
+    }
+
+    .notice.tip {
+        background: var(--tip-content)
+    }
+
+    .icon-notice {
+        display: inline-flex;
+        align-self: center;
+        margin-right: 8px
+    }
+
+    .icon-notice img,
+    .icon-notice svg {
+        height: 1em;
+        width: 1em;
+        fill: currentColor
+    }
+
+    .icon-notice img,
+    .icon-notice.baseline svg {
+        top: .125em;
+        position: relative
+    }
+</style><div class="notice note" >
+    <p class="notice-title">
+        <span class="icon-notice baseline">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 128 300 300">
+  <path d="M150 128c82.813 0 150 67.188 150 150 0 82.813-67.188 150-150 150C67.187 428 0 360.812 0 278c0-82.813 67.188-150 150-150Zm25 243.555v-37.11c0-3.515-2.734-6.445-6.055-6.445h-37.5c-3.515 0-6.445 2.93-6.445 6.445v37.11c0 3.515 2.93 6.445 6.445 6.445h37.5c3.32 0 6.055-2.93 6.055-6.445Zm-.39-67.188 3.515-121.289c0-1.367-.586-2.734-1.953-3.516-1.172-.976-2.93-1.562-4.688-1.562h-42.968c-1.758 0-3.516.586-4.688 1.563-1.367.78-1.953 2.148-1.953 3.515l3.32 121.29c0 2.734 2.93 4.882 6.64 4.882h36.134c3.515 0 6.445-2.148 6.64-4.883Z"/>
+</svg>
+
+        </span>Note</p><p>An attribute of type PRODUCT_ID must have category TEXT. An attribute of type PRODUCT_QUANTITY must have category NUMBER_UNIT_PAIR.</p></div>
+
+<h2 id="product-definition">Product definition</h2>
+<p>Product attributes are combined to represent the key data elements of a product. Each attribute is defined as above, and combined together to form a product.
+As an example, the following attributes are defined separately, and then combined to represent the product ‘Seed Cotton’.
+<img src="https://globaltrace-docs.uat.dgnx.io/confluence/images/product_attributes.png" alt="targets"></p>
+<p>As the image shows, in selecting attributes, the super administrator must specify:</p>
+<ul>
+<li>If the attribute is optional or required when creating the product.</li>
+<li>If the attribute is only required when the product is defined manually. Consider the definition of a cotton bale. In the case where cotton bales are traced from farm level, the country of origin is not required to be added - it is calculated through tracing. If cotton bales are imported (and added manually into the system), country of origin must be supplied when creating the bale product.</li>
+</ul>
+<div class="edit-meta">
+Last updated on 20 Apr 2024
+
+
+<br>
+Published on 20 Apr 2024
+<br></div><nav class="pagination"><a class="nav nav-prev" href="https://globaltrace-docs.uat.dgnx.io/confluence/" title="Global Trace Documentation"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Global Trace Documentation</a>
+<a class="nav nav-next" href="https://globaltrace-docs.uat.dgnx.io/confluence/define_role/" title="2. Role definition">Next - 2. Role definition <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main>
+<div class="sidebar">
+
+<nav class="open-menu">
+<ul>
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/">Home</a></li>
+
+<li class=" active"><a href="https://globaltrace-docs.uat.dgnx.io/confluence/define_product/">1. Product definition</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/define_role/">2. Role definition</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/map_chain/">3. Mapping the supply chain</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/indicator_list/">4. List of Indicators</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/assessment_config/">5. Assessment configuration</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/risk_assessment/">6. Risk assessment</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/external_risk/">Appendix A. External risk</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/translations/">Appendix B. Translations</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/tracing/">Appendix C. Product tracing</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/purchase_sale/">Appendix D. Purchases and sales</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/open_supply/">Appendix E. Open Supply ID</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/resources/">Appendx F. Resources</a>
+  
+<ul class="sub-menu">
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/resources/cobalt/">Cobalt Pilot Configuration</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/resources/cotton/">Cotton Pilot Configuration</a>
+  
+</li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>

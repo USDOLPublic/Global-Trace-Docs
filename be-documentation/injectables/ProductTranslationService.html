@@ -1,0 +1,1311 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Global Trace BE documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">Global Trace BE documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Injectables</li>
+  <li class="breadcrumb-item" >ProductTranslationService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/product-definitions/services/product-translation.service.ts</code>
+        </p>
+
+
+
+            <p class="comment">
+                <h3>Extends</h3>
+            </p>
+            <p class="comment">
+                        <code>TransactionService</code>
+            </p>
+
+
+            <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getProductAttributeTranslations" >getProductAttributeTranslations</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getProductTranslations" >getProductTranslations</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#readTranslationJsonFile" >readTranslationJsonFile</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#saveProductAttributeTranslation" >saveProductAttributeTranslation</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#saveProductTranslation" >saveProductTranslation</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#uploadAndValidateProductAttributeTranslationFile" >uploadAndValidateProductAttributeTranslationFile</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#uploadAndValidateProductTranslationFile" >uploadAndValidateProductTranslationFile</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#validateTranslationFile" >validateTranslationFile</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#schema" >schema</a>
+                                </li>
+                                <li>
+                                    <a href="#attributeSchema" >attributeSchema</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+            <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                                <span class="modifier">Public</span>
+                        <code>constructor(productDefinitionRepo: <a href="../classes/ProductDefinitionRepository.html" target="_self">ProductDefinitionRepository</a>, attributeRepo: <a href="../classes/AttributeRepository.html" target="_self">AttributeRepository</a>, productDefinitionFileRepo: <a href="../classes/ProductDefinitionFileRepository.html" target="_self">ProductDefinitionFileRepository</a>, attributeFileRepo: <a href="../classes/AttributeFileRepository.html" target="_self">AttributeFileRepository</a>, storageService: StorageService)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/product-definitions/services/product-translation.service.ts:19</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>productDefinitionRepo</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../classes/ProductDefinitionRepository.html" target="_self" >ProductDefinitionRepository</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>attributeRepo</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../classes/AttributeRepository.html" target="_self" >AttributeRepository</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>productDefinitionFileRepo</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../classes/ProductDefinitionFileRepository.html" target="_self" >ProductDefinitionFileRepository</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>attributeFileRepo</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../classes/AttributeFileRepository.html" target="_self" >AttributeFileRepository</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>storageService</td>
+                                                  
+                                                        <td>
+                                                                    <code>StorageService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getProductAttributeTranslations"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>getProductAttributeTranslations</b></span>
+                        <a href="#getProductAttributeTranslations"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getProductAttributeTranslations()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="162"
+                                    class="link-to-prism">src/product-definitions/services/product-translation.service.ts:162</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#now" target="_self" >unknown</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getProductTranslations"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>getProductTranslations</b></span>
+                        <a href="#getProductTranslations"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getProductTranslations()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="152"
+                                    class="link-to-prism">src/product-definitions/services/product-translation.service.ts:152</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#now" target="_self" >unknown</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="readTranslationJsonFile"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>readTranslationJsonFile</b></span>
+                        <a href="#readTranslationJsonFile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>readTranslationJsonFile(file: Express.Multer.File, type: "Product" | "Attribute")</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="235"
+                                    class="link-to-prism">src/product-definitions/services/product-translation.service.ts:235</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>file</td>
+                                            <td>
+                                                        <code>Express.Multer.File</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>type</td>
+                                            <td>
+                                                        <code>&quot;Product&quot; | &quot;Attribute&quot;</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../interfaces/UploadProductTranslationItem.html" target="_self" >UploadProductTranslationItem[]</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveProductAttributeTranslation"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>saveProductAttributeTranslation</b></span>
+                        <a href="#saveProductAttributeTranslation"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>saveProductAttributeTranslation(fileId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="322"
+                                    class="link-to-prism">src/product-definitions/services/product-translation.service.ts:322</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>fileId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveProductTranslation"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>saveProductTranslation</b></span>
+                        <a href="#saveProductTranslation"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>saveProductTranslation(fileId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="276"
+                                    class="link-to-prism">src/product-definitions/services/product-translation.service.ts:276</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>fileId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="uploadAndValidateProductAttributeTranslationFile"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>uploadAndValidateProductAttributeTranslationFile</b></span>
+                        <a href="#uploadAndValidateProductAttributeTranslationFile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>uploadAndValidateProductAttributeTranslationFile(file: Express.Multer.File)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="297"
+                                    class="link-to-prism">src/product-definitions/services/product-translation.service.ts:297</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>file</td>
+                                            <td>
+                                                        <code>Express.Multer.File</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../classes/UploadProductTranslationResponse.html" target="_self" >Promise&lt;UploadProductTranslationResponse&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="uploadAndValidateProductTranslationFile"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>uploadAndValidateProductTranslationFile</b></span>
+                        <a href="#uploadAndValidateProductTranslationFile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>uploadAndValidateProductTranslationFile(file: Express.Multer.File)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="251"
+                                    class="link-to-prism">src/product-definitions/services/product-translation.service.ts:251</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>file</td>
+                                            <td>
+                                                        <code>Express.Multer.File</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../classes/UploadProductTranslationResponse.html" target="_self" >Promise&lt;UploadProductTranslationResponse&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateTranslationFile"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>validateTranslationFile</b></span>
+                        <a href="#validateTranslationFile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateTranslationFile(file: Express.Multer.File, type: "Product" | "Attribute")</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="185"
+                                    class="link-to-prism">src/product-definitions/services/product-translation.service.ts:185</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>file</td>
+                                            <td>
+                                                        <code>Express.Multer.File</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>type</td>
+                                            <td>
+                                                        <code>&quot;Product&quot; | &quot;Attribute&quot;</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/variables.html#lat" target="_self" >Promise&lt;ProductTranslationValidationResultType&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+            <section data-compodoc="block-accessors">
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="schema"></a>
+                        <span class="name"><b>schema</b><a href="#schema"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>schema()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/product-definitions/services/product-translation.service.ts:30</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="attributeSchema"></a>
+                        <span class="name"><b>attributeSchema</b><a href="#attributeSchema"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>attributeSchema()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="72" class="link-to-prism">src/product-definitions/services/product-translation.service.ts:72</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { trans } from &#x27;@diginexhk/nestjs-cls-translation&#x27;;
+import { StorageService, generateUniqueName } from &#x27;@diginexhk/nestjs-storage&#x27;;
+import { TransactionService } from &#x27;@diginexhk/nestjs-transaction&#x27;;
+import { BadRequestException, Injectable } from &#x27;@nestjs/common&#x27;;
+import Joi from &#x27;joi&#x27;;
+import { isUuidV4 } from &#x27;~core/helpers/string.helper&#x27;;
+import { addMissingTranslations } from &#x27;~core/helpers/translation.helper&#x27;;
+import { FieldCategoryEnum } from &#x27;~product-definitions/enums/field-category.enum&#x27;;
+import { UploadProductTranslationResponse } from &#x27;~product-definitions/http/response/upload-product-translation.response&#x27;;
+import { UploadProductTranslationItem } from &#x27;~product-definitions/interfaces/upload-product-translation-item.interface&#x27;;
+import { AttributeFileRepository } from &#x27;~product-definitions/repositories/attribute-file.repository&#x27;;
+import { AttributeRepository } from &#x27;~product-definitions/repositories/attribute.repository&#x27;;
+import { ProductDefinitionFileRepository } from &#x27;~product-definitions/repositories/product-definition-file.repository&#x27;;
+import { ProductDefinitionRepository } from &#x27;~product-definitions/repositories/product-definition.repository&#x27;;
+import { ProductTranslationValidationType } from &#x27;~product-definitions/types/product-translation-validation-error.type&#x27;;
+import { ProductTranslationValidationResultType } from &#x27;~product-definitions/types/product-translation-validation-result.type&#x27;;
+
+@Injectable()
+export class ProductTranslationService extends TransactionService {
+    public constructor(
+        private productDefinitionRepo: ProductDefinitionRepository,
+        private attributeRepo: AttributeRepository,
+        private productDefinitionFileRepo: ProductDefinitionFileRepository,
+        private attributeFileRepo: AttributeFileRepository,
+        private storageService: StorageService
+    ) {
+        super();
+    }
+
+    get schema() {
+        /* eslint-disable @typescript-eslint/naming-convention */
+        return Joi.object({
+            id: Joi.string()
+                .required()
+                .guid()
+                .messages({
+                    &#x27;any.base&#x27;: trans(&#x27;import.invalid_id_in_object&#x27;),
+                    &#x27;any.required&#x27;: trans(&#x27;import.require_id_in_object&#x27;),
+                    &#x27;string.guid&#x27;: trans(&#x27;import.id_must_be_uuid&#x27;)
+                }),
+            name: Joi.string()
+                .max(255)
+                .required()
+                .messages({
+                    &#x27;any.base&#x27;: trans(&#x27;import.invalid_name_in_object&#x27;),
+                    &#x27;any.required&#x27;: trans(&#x27;import.require_name_in_object&#x27;)
+                }),
+            nameTranslation: Joi.object()
+                .pattern(
+                    Joi.string()
+                        .pattern(/^[a-z]+$/)
+                        .max(255)
+                        .required(),
+                    Joi.string()
+                        .max(255)
+                        .required()
+                        .messages({
+                            &#x27;string.base&#x27;: trans(&#x27;import.invalid_language_translation&#x27;, {
+                                args: { languageTranslation: &#x27;{{#label}}&#x27; }
+                            })
+                        })
+                )
+                .messages({
+                    &#x27;object.base&#x27;: trans(&#x27;import.invalid_name_translation&#x27;)
+                }),
+            index: Joi.number().optional()
+        });
+    }
+
+    /* eslint-disable @typescript-eslint/naming-convention */
+    // eslint-disable-next-line max-lines-per-function
+    get attributeSchema() {
+        return Joi.object({
+            id: Joi.string()
+                .required()
+                .guid()
+                .messages({
+                    &#x27;any.base&#x27;: trans(&#x27;import.invalid_id_in_object&#x27;),
+                    &#x27;any.required&#x27;: trans(&#x27;import.require_id_in_object&#x27;),
+                    &#x27;string.guid&#x27;: trans(&#x27;import.id_must_be_uuid&#x27;)
+                }),
+            category: Joi.string()
+                .max(255)
+                .required()
+                .valid(...Object.values(FieldCategoryEnum))
+                .messages({
+                    &#x27;any.base&#x27;: trans(&#x27;import.invalid_category_in_object&#x27;),
+                    &#x27;any.required&#x27;: trans(&#x27;import.require_category_in_object&#x27;)
+                }),
+            name: Joi.string()
+                .max(255)
+                .required()
+                .messages({
+                    &#x27;any.base&#x27;: trans(&#x27;import.invalid_name_in_object&#x27;),
+                    &#x27;any.required&#x27;: trans(&#x27;import.require_name_in_object&#x27;)
+                }),
+            nameTranslation: Joi.object()
+                .pattern(
+                    Joi.string()
+                        .pattern(/^[a-z]+$/)
+                        .max(255)
+                        .required(),
+                    Joi.string()
+                        .max(255)
+                        .required()
+                        .messages({
+                            &#x27;string.base&#x27;: trans(&#x27;import.invalid_language_translation&#x27;, {
+                                args: { languageTranslation: &#x27;{{#label}}&#x27; }
+                            })
+                        })
+                )
+                .messages({
+                    &#x27;object.base&#x27;: trans(&#x27;import.invalid_name_translation&#x27;)
+                }),
+            options: Joi.when(&#x27;category&#x27;, {
+                is: Joi.string().valid(FieldCategoryEnum.LIST, FieldCategoryEnum.NUMBER_UNIT_PAIR),
+                then: Joi.array().items(
+                    Joi.object({
+                        value: Joi.string()
+                            .max(255)
+                            .required()
+                            .messages({
+                                &#x27;any.base&#x27;: trans(&#x27;import.invalid_name_in_object&#x27;),
+                                &#x27;any.required&#x27;: trans(&#x27;import.require_name_in_object&#x27;)
+                            }),
+                        translation: Joi.object()
+                            .pattern(
+                                Joi.string()
+                                    .pattern(/^[a-z]+$/)
+                                    .max(255)
+                                    .required(),
+                                Joi.string()
+                                    .max(255)
+                                    .required()
+                                    .messages({
+                                        &#x27;string.base&#x27;: trans(&#x27;import.invalid_language_translation&#x27;, {
+                                            args: { languageTranslation: &#x27;{{#label}}&#x27; }
+                                        })
+                                    })
+                            )
+                            .messages({
+                                &#x27;object.base&#x27;: trans(&#x27;import.invalid_name_translation&#x27;)
+                            })
+                    })
+                ),
+                otherwise: Joi.optional()
+            }),
+            index: Joi.number().optional()
+        });
+    }
+
+    async getProductTranslations() {
+        const productDefinitions &#x3D; await this.productDefinitionRepo.find({ select: [&#x27;id&#x27;, &#x27;name&#x27;, &#x27;nameTranslation&#x27;] });
+
+        for (let i &#x3D; 0; i &lt; productDefinitions.length; i++) {
+            productDefinitions[i][&#x27;index&#x27;] &#x3D; i;
+        }
+
+        return addMissingTranslations(productDefinitions, &#x27;nameTranslation&#x27;);
+    }
+
+    async getProductAttributeTranslations() {
+        const attributes &#x3D; await this.attributeRepo.find({
+            select: [&#x27;id&#x27;, &#x27;name&#x27;, &#x27;category&#x27;, &#x27;nameTranslation&#x27;, &#x27;options&#x27;]
+        });
+
+        for (let i &#x3D; 0; i &lt; attributes.length; i++) {
+            attributes[i][&#x27;index&#x27;] &#x3D; i;
+
+            const attribute &#x3D; attributes[i];
+            if (
+                attribute.category &#x3D;&#x3D;&#x3D; FieldCategoryEnum.LIST ||
+                attribute.category &#x3D;&#x3D;&#x3D; FieldCategoryEnum.NUMBER_UNIT_PAIR
+            ) {
+                addMissingTranslations(attribute.options, &#x27;translation&#x27;);
+            } else {
+                delete attribute.options;
+            }
+        }
+
+        return addMissingTranslations(attributes, &#x27;nameTranslation&#x27;);
+    }
+
+    // eslint-disable-next-line sonarjs/cognitive-complexity
+    private async validateTranslationFile(
+        file: Express.Multer.File,
+        type: &#x27;Product&#x27; | &#x27;Attribute&#x27;
+    ): Promise&lt;ProductTranslationValidationResultType&gt; {
+        const uploadedTranslations &#x3D; this.readTranslationJsonFile(file, type);
+
+        if (!uploadedTranslations?.length) {
+            throw new BadRequestException({
+                translate:
+                    type &#x3D;&#x3D;&#x3D; &#x27;Product&#x27;
+                        ? &#x27;error.invalid_product_translation_file&#x27;
+                        : &#x27;error.invalid_product_attribute_translation_file&#x27;
+            });
+        }
+
+        const validationErrors: ProductTranslationValidationType[] &#x3D; [];
+        let validatedItemCount &#x3D; uploadedTranslations.length;
+        const isTypeProduct &#x3D; type &#x3D;&#x3D;&#x3D; &#x27;Product&#x27;;
+        const schema &#x3D; isTypeProduct ? this.schema : this.attributeSchema;
+        uploadedTranslations.forEach(async (uploadedTranslation, index) &#x3D;&gt; {
+            const { error } &#x3D; schema.validate(uploadedTranslation, { abortEarly: false });
+            let errors &#x3D; [];
+
+            if (error) {
+                errors &#x3D; error.message.split(&#x27;. &#x27;).map((message) &#x3D;&gt; ({
+                    key: message.match(/\\?&quot;(.*?)(?&lt;!\\)&quot;/gm)[0].replace(/\&quot;/g, &#x27;&#x27;),
+                    error: message.trim().replace(/\&quot;/g, &#x27;&#x27;),
+                    isShowKey: false
+                }));
+            }
+            if (uploadedTranslation?.id &amp;&amp; isUuidV4(uploadedTranslation?.id)) {
+                const fountItem &#x3D; isTypeProduct
+                    ? await this.productDefinitionRepo.findOne({ where: { id: uploadedTranslation.id } })
+                    : await this.attributeRepo.findOne({ where: { id: uploadedTranslation.id } });
+
+                if (!fountItem) errors.push({ key: &#x27;id&#x27;, error: &#x27;Invalid id&#x27;, isShowKey: false });
+            }
+            if (errors.length) {
+                validationErrors.push({
+                    index,
+                    errors,
+                    isShowRow: true
+                });
+                validatedItemCount--;
+            }
+        });
+
+        return { totalItems: uploadedTranslations.length, validatedItemCount, validationErrors };
+    }
+
+    private readTranslationJsonFile(
+        file: Express.Multer.File,
+        type: &#x27;Product&#x27; | &#x27;Attribute&#x27;
+    ): UploadProductTranslationItem[] {
+        try {
+            return JSON.parse(file.buffer.toString(&#x27;utf8&#x27;));
+        } catch (error) {
+            throw new BadRequestException({
+                translate:
+                    type &#x3D;&#x3D;&#x3D; &#x27;Product&#x27;
+                        ? &#x27;error.invalid_product_translation_file&#x27;
+                        : &#x27;error.invalid_product_attribute_translation_file&#x27;
+            });
+        }
+    }
+
+    async uploadAndValidateProductTranslationFile(
+        file: Express.Multer.File
+    ): Promise&lt;UploadProductTranslationResponse&gt; {
+        const { totalItems, validatedItemCount, validationErrors } &#x3D; await this.validateTranslationFile(
+            file,
+            &#x27;Product&#x27;
+        );
+        const { blobName } &#x3D; await this.storageService.uploadFile({
+            file: file.buffer,
+            fileName: generateUniqueName(file.originalname)
+        });
+        const productDefinitionFile &#x3D; await this.productDefinitionFileRepo.save({ blobName, isValidated: true });
+
+        return {
+            file: {
+                id: productDefinitionFile.id,
+                name: file.originalname,
+                size: file.size
+            },
+            totalItems,
+            validatedItemCount,
+            validationErrors
+        };
+    }
+
+    async saveProductTranslation(fileId: string): Promise&lt;void&gt; {
+        const file &#x3D; await this.productDefinitionFileRepo.findById(fileId);
+
+        if (!file.isValidated) {
+            throw new BadRequestException({ translate: &#x27;error.not_validated_product_translation_upload_file&#x27; });
+        }
+
+        if (file.isImported) {
+            throw new BadRequestException({ translate: &#x27;error.imported_product_translation_upload_file&#x27; });
+        }
+
+        const fileUrl &#x3D; await this.storageService.getFileUrl(file.blobName);
+        const response &#x3D; await fetch(fileUrl);
+        const uploadedProductDefinitionTranslations: UploadProductTranslationItem &#x3D; await response.json();
+
+        await Promise.all([
+            this.productDefinitionRepo.save(uploadedProductDefinitionTranslations),
+            this.productDefinitionFileRepo.update(fileId, { isImported: true })
+        ]);
+    }
+
+    async uploadAndValidateProductAttributeTranslationFile(
+        file: Express.Multer.File
+    ): Promise&lt;UploadProductTranslationResponse&gt; {
+        const { totalItems, validatedItemCount, validationErrors } &#x3D; await this.validateTranslationFile(
+            file,
+            &#x27;Attribute&#x27;
+        );
+        const { blobName } &#x3D; await this.storageService.uploadFile({
+            file: file.buffer,
+            fileName: generateUniqueName(file.originalname)
+        });
+        const attributeFile &#x3D; await this.attributeFileRepo.save({ blobName, isValidated: true });
+
+        return {
+            file: {
+                id: attributeFile.id,
+                name: file.originalname,
+                size: file.size
+            },
+            totalItems,
+            validatedItemCount,
+            validationErrors
+        };
+    }
+
+    async saveProductAttributeTranslation(fileId: string): Promise&lt;void&gt; {
+        const file &#x3D; await this.attributeFileRepo.findById(fileId);
+
+        if (!file.isValidated) {
+            throw new BadRequestException({ translate: &#x27;error.not_validated_product_translation_upload_file&#x27; });
+        }
+
+        if (file.isImported) {
+            throw new BadRequestException({ translate: &#x27;error.imported_product_translation_upload_file&#x27; });
+        }
+
+        const fileUrl &#x3D; await this.storageService.getFileUrl(file.blobName);
+        const response &#x3D; await fetch(fileUrl);
+        const uploadedProductDefinitionTranslations: UploadProductTranslationItem &#x3D; await response.json();
+
+        await Promise.all([
+            this.attributeRepo.save(uploadedProductDefinitionTranslations),
+            this.attributeFileRepo.update(fileId, { isImported: true })
+        ]);
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'ProductTranslationService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

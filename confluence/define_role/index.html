@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>2. Role definition - Global Trace</title>
+<meta name="generator" content="Hugo 0.125.1">
+<link href="./index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="https://globaltrace-docs.uat.dgnx.io/confluence/define_role/">
+<link rel="stylesheet" href="https://globaltrace-docs.uat.dgnx.io/confluence/css/theme.min.css">
+<link rel="stylesheet" href="https://globaltrace-docs.uat.dgnx.io/confluence/css/chroma.min.css">
+<script defer src="./js/fontawesome6/all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js" integrity="sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha256-4XodgW4TwIJuDtf+v6vDJ39FVxI0veC/kSCCmnFp7ck=" crossorigin="anonymous"></script>
+<script src="https://globaltrace-docs.uat.dgnx.io/confluence/js/bundle.js"></script><style>
+:root {--custom-background-color: grey;}
+</style>
+<meta property="og:url" content="https://globaltrace-docs.uat.dgnx.io/confluence/define_role/">
+  <meta property="og:site_name" content="Global Trace">
+  <meta property="og:title" content="2. Role definition">
+  <meta property="og:description" content="The super administrator user must define each data input role required in the system, and the functionality or critical tracking events that they should be able to record.
+Each role consists of a name, role type and list of permissions. There is a subset of permissions that can be selected for each of the role types. there are four role types: administrator role; producer role; ESG assessor role; and brand role.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="website">
+    <meta property="og:image" content="https://globaltrace-docs.uat.dgnx.io/confluence/images/icon.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://globaltrace-docs.uat.dgnx.io/confluence/images/icon.png"><meta name="twitter:title" content="2. Role definition">
+<meta name="twitter:description" content="">
+
+  <meta itemprop="name" content="2. Role definition">
+  <meta itemprop="description" content="The super administrator user must define each data input role required in the system, and the functionality or critical tracking events that they should be able to record.
+Each role consists of a name, role type and list of permissions. There is a subset of permissions that can be selected for each of the role types. there are four role types: administrator role; producer role; ESG assessor role; and brand role.">
+  <meta itemprop="datePublished" content="2024-04-20T12:23:51+09:30">
+  <meta itemprop="dateModified" content="2024-04-20T12:23:51+09:30">
+  <meta itemprop="wordCount" content="703">
+  <meta itemprop="image" content="https://globaltrace-docs.uat.dgnx.io/confluence/images/icon.png"></head>
+<body>
+
+<div class="container"><header>
+<h1>Global Trace</h1>
+</header>
+
+
+<div class="content-container">
+<main><h1>2. Role definition</h1><p>The super administrator user must define each data input role required in the system, and the functionality or critical tracking events that they should be able to record.</p>
+<p>Each role consists of a name, role type and list of permissions. There is a subset of permissions that can be selected for each of the role types. there are four role types: administrator role; producer role; ESG assessor role; and brand role.</p>
+<h2 id="administrator-role-configuration">Administrator role configuration</h2>
+<p>Listed below is a table of all permissions that can be assigned for administrator roles.</p>
+<table>
+<thead>
+<tr>
+<th>Category / Permission</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Onboarding</td>
+<td>Complete user profile information when first creating their account</td>
+</tr>
+<tr>
+<td>Synthetic DNA test results</td>
+<td>Log Synthetic DNA test results / view Synthetic DNA test results for products in the supply chain</td>
+</tr>
+<tr>
+<td>Generate QR codes</td>
+<td>Administer QR codes by creating groups of codes, downloading them, and sending them to suppliers. QR Codes are on of the data carriers supported in Global trace</td>
+</tr>
+<tr>
+<td>Submit incident reports</td>
+<td>Create/View Incident report &amp; assign to Information partners (ESG assessor roles)</td>
+</tr>
+<tr>
+<td>User Management</td>
+<td>Inviting/managing users on the system, view risk assessment of producer roles</td>
+</tr>
+<tr>
+<td>Trace product</td>
+<td>Create an order &amp; trace product using product identifiers and other attributes like Invoice number/Packing list number through their supply chain</td>
+</tr>
+</tbody>
+</table>
+<h2 id="producer-role-configuration">Producer role configuration</h2>
+<p>A Producer role is any user that purchases, transforms, and sells products.  When defining a producer, the super administrator must also specify if the facility extracts raw material, and the chain of custody model that will be supported.</p>
+<table>
+<thead>
+<tr>
+<th>Category / Permission</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Onboarding (Profile)</td>
+<td>Complete user profile information when first creating their account. This can be configured to be undertaken by the user themselves, or onboarding by the administrator user.</td>
+</tr>
+<tr>
+<td>Onboarding (SAQ)</td>
+<td>User must complete an assessment during onboarding. The assessment can be uploaded by the administrator, or the user can complete themselves (as a self assessment questionnaire).</td>
+</tr>
+<tr>
+<td>Invite partners</td>
+<td>Add other business partners for recording transaction/shipping activities</td>
+</tr>
+<tr>
+<td>Log purchase</td>
+<td>Record purchase information. The super administrator must specify: the data carriers supported (product ID, QR code, DNA marker ID); support provided for imported products; and if the user can record purchase from intermediaries(brokers)</td>
+</tr>
+<tr>
+<td>Log transformations</td>
+<td>Recording transformation activity and assign product identifier for output product</td>
+</tr>
+<tr>
+<td>Log sale</td>
+<td>Record sale transaction to another business partner</td>
+</tr>
+<tr>
+<td>Log by-product</td>
+<td>Record quantity of by-product generated during transformation process</td>
+</tr>
+<tr>
+<td>Log transport</td>
+<td>Record transport of products from the current user to another user</td>
+</tr>
+<tr>
+<td>View History</td>
+<td>Overview of all product activities(transaction/transformation/shipping) and by-product along with margin of error</td>
+</tr>
+<tr>
+<td>Trace product</td>
+<td>Create an order &amp; trace product using product identifiers and other objects like Invoice number/Packing list number through their supply chain</td>
+</tr>
+</tbody>
+</table>
+<p>Producer roles can be identified using standardized identifiers. In the  onboarding phase of the current version of Global Trace, producer roles must specify an <a href="https://opensupplyhub.org/">Open Supply Hub Identifier</a> (OS ID). The complete process of configuring Open Supply Hub is included in the sub-page.</p>
+<h2 id="esg-assessor-role-configuration">ESG Assessor role configuration</h2>
+<p>This role is used to define Information partners who assess conditions in facilities and report them. Assessment can be undertaken reactively (after receiving a request for investigation), or proactively (after undertaking a community risk scan.</p>
+<table>
+<thead>
+<tr>
+<th>Category / Permission</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Onboarding (Profile)</td>
+<td>Complete profile by themselves or admin</td>
+</tr>
+<tr>
+<td>Onboarding (SAQ)</td>
+<td>Assign an SAQ to be completed during account creation. This SAQ can be configured to be undertaken by the user themselves, or by the administrator user.</td>
+</tr>
+<tr>
+<td>Submit reports (Proactive assessments)</td>
+<td>Proactively submit incident reports on labor issues against any facility via Community Risk Scan</td>
+</tr>
+<tr>
+<td>Submit reports (Reactive assessments)</td>
+<td>Reactively responds to incident reports assigned to them</td>
+</tr>
+<tr>
+<td>View Reports</td>
+<td>Ability to view either all incident reports or only reports assigned to myself</td>
+</tr>
+</tbody>
+</table>
+<p>##Brand role configuration
+This role is used to define brand who can use this platform for managing their suppliers and trace product throughout their supply chain</p>
+<table>
+<thead>
+<tr>
+<th>Category / Permission</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Onboarding (Profile)</td>
+<td>Complete profile</td>
+</tr>
+<tr>
+<td>Onboarding (SAQ)</td>
+<td>Assign an SAQ to be completed during account creation. This SAQ can be configured to be undertaken by the user themselves, or by the administrator user.</td>
+</tr>
+<tr>
+<td>Trace product</td>
+<td>Create an order &amp; trace product using product identifiers and other objects like Invoice number/Packing list number all the way through their supply chain to find the origin</td>
+</tr>
+<tr>
+<td>Supplier Management</td>
+<td>Manage their own suppliers and view comprehensive risk assessment of them</td>
+</tr>
+</tbody>
+</table>
+<div class="edit-meta">
+Last updated on 20 Apr 2024
+
+
+<br>
+Published on 20 Apr 2024
+<br></div><nav class="pagination"><a class="nav nav-prev" href="https://globaltrace-docs.uat.dgnx.io/confluence/define_product/" title="1. Product definition"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - 1. Product definition</a>
+<a class="nav nav-next" href="https://globaltrace-docs.uat.dgnx.io/confluence/map_chain/" title="3. Mapping the supply chain">Next - 3. Mapping the supply chain <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main>
+<div class="sidebar">
+
+<nav class="open-menu">
+<ul>
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/">Home</a></li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/define_product/">1. Product definition</a>
+  
+</li>
+
+<li class=" active"><a href="https://globaltrace-docs.uat.dgnx.io/confluence/define_role/">2. Role definition</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/map_chain/">3. Mapping the supply chain</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/indicator_list/">4. List of Indicators</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/assessment_config/">5. Assessment configuration</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/risk_assessment/">6. Risk assessment</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/external_risk/">Appendix A. External risk</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/translations/">Appendix B. Translations</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/tracing/">Appendix C. Product tracing</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/purchase_sale/">Appendix D. Purchases and sales</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/open_supply/">Appendix E. Open Supply ID</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/resources/">Appendx F. Resources</a>
+  
+<ul class="sub-menu">
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/resources/cobalt/">Cobalt Pilot Configuration</a>
+  
+</li>
+
+<li class=""><a href="https://globaltrace-docs.uat.dgnx.io/confluence/resources/cotton/">Cotton Pilot Configuration</a>
+  
+</li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>

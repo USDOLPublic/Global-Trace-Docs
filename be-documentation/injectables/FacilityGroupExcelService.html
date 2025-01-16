@@ -1,0 +1,2458 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Global Trace BE documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">Global Trace BE documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Injectables</li>
+  <li class="breadcrumb-item" >FacilityGroupExcelService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/facilities/services/import/facility-group-excel.service.ts</code>
+        </p>
+
+
+
+
+
+            <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addHeaderTemplate" >addHeaderTemplate</a>
+                            </li>
+                            <li>
+                                <a href="#convertGroupQuestionOfRiskData" >convertGroupQuestionOfRiskData</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#downloadAndSetFarmUuid" >downloadAndSetFarmUuid</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#downloadXlsxFile" >downloadXlsxFile</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#extractExitColumns" >extractExitColumns</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#extractHeaders" >extractHeaders</a>
+                            </li>
+                            <li>
+                                <a href="#formatExcelFile" >formatExcelFile</a>
+                            </li>
+                            <li>
+                                <a href="#getTemplateXlsxFile" >getTemplateXlsxFile</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getXlsxFile" >getXlsxFile</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#initWorkbook" >initWorkbook</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#leverHeader" >leverHeader</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#parseDateXlsx" >parseDateXlsx</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#parseXlsx" >parseXlsx</a>
+                            </li>
+                            <li>
+                                <a href="#readCommunityRiskXlsxData" >readCommunityRiskXlsxData</a>
+                            </li>
+                            <li>
+                                <a href="#readFarmLevelRiskXlsxData" >readFarmLevelRiskXlsxData</a>
+                            </li>
+                            <li>
+                                <a href="#readInstructionXlsxData" >readInstructionXlsxData</a>
+                            </li>
+                            <li>
+                                <a href="#removeExcessColumnValues" >removeExcessColumnValues</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#sendXlsxFile" >sendXlsxFile</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#updateFarmUuid" >updateFarmUuid</a>
+                            </li>
+                            <li>
+                                <a href="#validateFileStructure" >validateFileStructure</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#validDownloadTemplate" >validDownloadTemplate</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(facilityGroupService: <a href="../injectables/FacilityGroupService.html" target="_self">FacilityGroupService</a>, selfAssessmentGroupService: <a href="../injectables/SelfAssessmentGroupService.html" target="_self">SelfAssessmentGroupService</a>, storageService: StorageService, selfAssessmentUploadFileService: <a href="../injectables/SelfAssessmentUploadFileService.html" target="_self">SelfAssessmentUploadFileService</a>, fileService: <a href="../injectables/FileService.html" target="_self">FileService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/facilities/services/import/facility-group-excel.service.ts:49</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>facilityGroupService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/FacilityGroupService.html" target="_self" >FacilityGroupService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>selfAssessmentGroupService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SelfAssessmentGroupService.html" target="_self" >SelfAssessmentGroupService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>storageService</td>
+                                                  
+                                                        <td>
+                                                                    <code>StorageService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>selfAssessmentUploadFileService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SelfAssessmentUploadFileService.html" target="_self" >SelfAssessmentUploadFileService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>fileService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/FileService.html" target="_self" >FileService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addHeaderTemplate"></a>
+                    <span class="name">
+                        <span ><b>addHeaderTemplate</b></span>
+                        <a href="#addHeaderTemplate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addHeaderTemplate(workBook: Workbook, groups: <a href="../entitys/SelfAssessmentGroupEntity.html" target="_self">SelfAssessmentGroupEntity[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="308"
+                                    class="link-to-prism">src/facilities/services/import/facility-group-excel.service.ts:308</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>workBook</td>
+                                            <td>
+                                                        <code>Workbook</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>groups</td>
+                                            <td>
+                                                            <code><a href="../entitys/SelfAssessmentGroupEntity.html" target="_self" >SelfAssessmentGroupEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>{ workSheet2: Worksheet; workSheet3: Worksheet; }</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="convertGroupQuestionOfRiskData"></a>
+                    <span class="name">
+                        <span ><b>convertGroupQuestionOfRiskData</b></span>
+                        <a href="#convertGroupQuestionOfRiskData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>convertGroupQuestionOfRiskData(groupQuestions: <a href="../entitys/SelfAssessmentQuestionEntity.html" target="_self">SelfAssessmentQuestionEntity[]</a>, dataRow: Row)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="228"
+                                    class="link-to-prism">src/facilities/services/import/facility-group-excel.service.ts:228</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>groupQuestions</td>
+                                            <td>
+                                                            <code><a href="../entitys/SelfAssessmentQuestionEntity.html" target="_self" >SelfAssessmentQuestionEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>dataRow</td>
+                                            <td>
+                                                        <code>Row</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="downloadAndSetFarmUuid"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>downloadAndSetFarmUuid</b></span>
+                        <a href="#downloadAndSetFarmUuid"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>downloadAndSetFarmUuid(res: Response, file: Express.Multer.File | NodeJS.ReadableStream, farms: <a href="../entitys/FacilityEntity.html" target="_self">FacilityEntity[]</a>, roleId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="92"
+                                    class="link-to-prism">src/facilities/services/import/facility-group-excel.service.ts:92</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>res</td>
+                                            <td>
+                                                        <code>Response</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>file</td>
+                                            <td>
+                                                        <code>Express.Multer.File | NodeJS.ReadableStream</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>farms</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >FacilityEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>roleId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#now" target="_self" >unknown</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="downloadXlsxFile"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>downloadXlsxFile</b></span>
+                        <a href="#downloadXlsxFile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>downloadXlsxFile(res: Response, blobName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, fileName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="84"
+                                    class="link-to-prism">src/facilities/services/import/facility-group-excel.service.ts:84</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>res</td>
+                                            <td>
+                                                        <code>Response</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>blobName</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>fileName</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="extractExitColumns"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>extractExitColumns</b></span>
+                        <a href="#extractExitColumns"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>extractExitColumns(groups: <a href="../entitys/SelfAssessmentGroupEntity.html" target="_self">SelfAssessmentGroupEntity[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="376"
+                                    class="link-to-prism">src/facilities/services/import/facility-group-excel.service.ts:376</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>groups</td>
+                                            <td>
+                                                            <code><a href="../entitys/SelfAssessmentGroupEntity.html" target="_self" >SelfAssessmentGroupEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#FilterColumnExit" target="_self" >FilterColumnExit[]</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="extractHeaders"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>extractHeaders</b></span>
+                        <a href="#extractHeaders"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>extractHeaders(groups: <a href="../entitys/SelfAssessmentGroupEntity.html" target="_self">SelfAssessmentGroupEntity[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="337"
+                                    class="link-to-prism">src/facilities/services/import/facility-group-excel.service.ts:337</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>groups</td>
+                                            <td>
+                                                            <code><a href="../entitys/SelfAssessmentGroupEntity.html" target="_self" >SelfAssessmentGroupEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#HeadersExtractionType" target="_self" >HeadersExtractionType</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="formatExcelFile"></a>
+                    <span class="name">
+                        <span ><b>formatExcelFile</b></span>
+                        <a href="#formatExcelFile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>formatExcelFile(workbook: Workbook)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="364"
+                                    class="link-to-prism">src/facilities/services/import/facility-group-excel.service.ts:364</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>workbook</td>
+                                            <td>
+                                                        <code>Workbook</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getTemplateXlsxFile"></a>
+                    <span class="name">
+                        <span ><b>getTemplateXlsxFile</b></span>
+                        <a href="#getTemplateXlsxFile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getTemplateXlsxFile()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="358"
+                                    class="link-to-prism">src/facilities/services/import/facility-group-excel.service.ts:358</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;Workbook&gt;</code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getXlsxFile"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>getXlsxFile</b></span>
+                        <a href="#getXlsxFile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getXlsxFile(res: Response, roleId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, farmGroupId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="69"
+                                    class="link-to-prism">src/facilities/services/import/facility-group-excel.service.ts:69</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>res</td>
+                                            <td>
+                                                        <code>Response</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>roleId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>farmGroupId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initWorkbook"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>initWorkbook</b></span>
+                        <a href="#initWorkbook"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>initWorkbook(undefined: <a href="../undefineds/InitWorkbookType.html" target="_self">InitWorkbookType</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="150"
+                                    class="link-to-prism">src/facilities/services/import/facility-group-excel.service.ts:150</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#InitWorkbookType" target="_self" >InitWorkbookType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#now" target="_self" >unknown</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="leverHeader"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>leverHeader</b></span>
+                        <a href="#leverHeader"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>leverHeader(group: <a href="../entitys/SelfAssessmentGroupEntity.html" target="_self">SelfAssessmentGroupEntity</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="350"
+                                    class="link-to-prism">src/facilities/services/import/facility-group-excel.service.ts:350</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>group</td>
+                                            <td>
+                                                            <code><a href="../entitys/SelfAssessmentGroupEntity.html" target="_self" >SelfAssessmentGroupEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Partial[]</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="parseDateXlsx"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>parseDateXlsx</b></span>
+                        <a href="#parseDateXlsx"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>parseDateXlsx(cell: Cell)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="319"
+                                    class="link-to-prism">src/facilities/services/import/facility-group-excel.service.ts:319</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>cell</td>
+                                            <td>
+                                                        <code>Cell</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="parseXlsx"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>parseXlsx</b></span>
+                        <a href="#parseXlsx"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>parseXlsx(undefined: <a href="../undefineds/ExcelParsingType.html" target="_self">ExcelParsingType</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="121"
+                                    class="link-to-prism">src/facilities/services/import/facility-group-excel.service.ts:121</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#ExcelParsingType" target="_self" >ExcelParsingType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#ParseDataFarmGroup" target="_self" >Promise&lt;ParseDataFarmGroup&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="readCommunityRiskXlsxData"></a>
+                    <span class="name">
+                        <span ><b>readCommunityRiskXlsxData</b></span>
+                        <a href="#readCommunityRiskXlsxData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>readCommunityRiskXlsxData(worksheet: Worksheet, groups: <a href="../entitys/SelfAssessmentGroupEntity.html" target="_self">SelfAssessmentGroupEntity[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="222"
+                                    class="link-to-prism">src/facilities/services/import/facility-group-excel.service.ts:222</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>worksheet</td>
+                                            <td>
+                                                        <code>Worksheet</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>groups</td>
+                                            <td>
+                                                            <code><a href="../entitys/SelfAssessmentGroupEntity.html" target="_self" >SelfAssessmentGroupEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#ValidExcelQuestionData" target="_self" >ValidExcelQuestionData</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="readFarmLevelRiskXlsxData"></a>
+                    <span class="name">
+                        <span ><b>readFarmLevelRiskXlsxData</b></span>
+                        <a href="#readFarmLevelRiskXlsxData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>readFarmLevelRiskXlsxData(worksheet: Worksheet, groups: <a href="../entitys/SelfAssessmentGroupEntity.html" target="_self">SelfAssessmentGroupEntity[]</a>, isParsingForUpdate: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>, includeEmpty: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="164"
+                                    class="link-to-prism">src/facilities/services/import/facility-group-excel.service.ts:164</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Default value</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>worksheet</td>
+                                            <td>
+                                                        <code>Worksheet</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+                                            <td>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                                <td>groups</td>
+                                            <td>
+                                                            <code><a href="../entitys/SelfAssessmentGroupEntity.html" target="_self" >SelfAssessmentGroupEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+                                            <td>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                                <td>isParsingForUpdate</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+                                            <td>
+                                                    <code>false</code>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                                <td>includeEmpty</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+                                            <td>
+                                                    <code>true</code>
+                                            </td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#FarmLevelRiskExcelData" target="_self" >FarmLevelRiskExcelData[]</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="readInstructionXlsxData"></a>
+                    <span class="name">
+                        <span ><b>readInstructionXlsxData</b></span>
+                        <a href="#readInstructionXlsxData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>readInstructionXlsxData(worksheet: Worksheet)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="211"
+                                    class="link-to-prism">src/facilities/services/import/facility-group-excel.service.ts:211</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>worksheet</td>
+                                            <td>
+                                                        <code>Worksheet</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#InstructionExcelType" target="_self" >InstructionExcelType</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="removeExcessColumnValues"></a>
+                    <span class="name">
+                        <span ><b>removeExcessColumnValues</b></span>
+                        <a href="#removeExcessColumnValues"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>removeExcessColumnValues(workSheet: Worksheet, filterColumns: <a href="../undefineds/FilterColumnExit.html" target="_self">FilterColumnExit[]</a>, isGoToTypeEndOfCommunityRisk: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="273"
+                                    class="link-to-prism">src/facilities/services/import/facility-group-excel.service.ts:273</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Default value</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>workSheet</td>
+                                            <td>
+                                                        <code>Worksheet</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+                                            <td>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                                <td>filterColumns</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#FilterColumnExit" target="_self" >FilterColumnExit[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+                                            <td>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                                <td>isGoToTypeEndOfCommunityRisk</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+                                            <td>
+                                                    <code>false</code>
+                                            </td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sendXlsxFile"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>sendXlsxFile</b></span>
+                        <a href="#sendXlsxFile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>sendXlsxFile(res: Response, xlsxWorkbook: Workbook)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="113"
+                                    class="link-to-prism">src/facilities/services/import/facility-group-excel.service.ts:113</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>res</td>
+                                            <td>
+                                                        <code>Response</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>xlsxWorkbook</td>
+                                            <td>
+                                                        <code>Workbook</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateFarmUuid"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>updateFarmUuid</b></span>
+                        <a href="#updateFarmUuid"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updateFarmUuid(farmLevelRiskWorksheet: Worksheet, farms: <a href="../entitys/FacilityEntity.html" target="_self">FacilityEntity[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="391"
+                                    class="link-to-prism">src/facilities/services/import/facility-group-excel.service.ts:391</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>farmLevelRiskWorksheet</td>
+                                            <td>
+                                                        <code>Worksheet</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>farms</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >FacilityEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateFileStructure"></a>
+                    <span class="name">
+                        <span ><b>validateFileStructure</b></span>
+                        <a href="#validateFileStructure"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>validateFileStructure(workbook: Workbook, groups: <a href="../entitys/SelfAssessmentGroupEntity.html" target="_self">SelfAssessmentGroupEntity[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="251"
+                                    class="link-to-prism">src/facilities/services/import/facility-group-excel.service.ts:251</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>workbook</td>
+                                            <td>
+                                                        <code>Workbook</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>groups</td>
+                                            <td>
+                                                            <code><a href="../entitys/SelfAssessmentGroupEntity.html" target="_self" >SelfAssessmentGroupEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validDownloadTemplate"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>validDownloadTemplate</b></span>
+                        <a href="#validDownloadTemplate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validDownloadTemplate(roleId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="58"
+                                    class="link-to-prism">src/facilities/services/import/facility-group-excel.service.ts:58</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>roleId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;void | SelfAssessmentUploadFileEntity&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ExcelParsingType } from &#x27;~facilities/types/excel-parsing.type&#x27;;
+import { ParseDataFarmGroup } from &#x27;~facilities/types/facility-groups/parse-data-farm-group.type&#x27;;
+import {
+    FARM_UUID_COLUMN,
+    FORMULA,
+    HEADER_FARM_LEVEL_DEFAULT,
+    HEIGHT_ROW_HEADER_SHEET_2,
+    HEIGHT_ROW_HEADER_SHEET_3,
+    MAXIMUM_FARMS_PER_TEMPLATE,
+    RANGE,
+    SHEET_1,
+    SHEET_2,
+    SHEET_3,
+    TEMPLATE_HEADER_ROW_COUNT,
+    WIDTH_COLUMN_HEADER
+} from &#x27;~facilities/constants/farm-group-template.constants&#x27;;
+import { BadRequestException, Injectable, StreamableFile } from &#x27;@nestjs/common&#x27;;
+import { SelfAssessmentGroupService } from &#x27;~self-assessments/services/self-assessment-group.service&#x27;;
+import { InitWorkbookType } from &#x27;~facilities/types/init-workbook.type&#x27;;
+import { Cell, Column, Row, Workbook, Worksheet } from &#x27;exceljs&#x27;;
+import { SelfAssessmentGroupEntity } from &#x27;~self-assessments/entities/self-assessment-group.entity&#x27;;
+import { FarmLevelRiskExcelData } from &#x27;~facilities/types/facility-groups/xlsx-farm-level-risk-data.type&#x27;;
+import moment from &#x27;moment/moment&#x27;;
+import { cloneDeep, flatten, isNull, map } from &#x27;lodash&#x27;;
+import { checkIfBlankRow } from &#x27;~files/helpers/is-blank-row.helper&#x27;;
+import { initWorkbook } from &#x27;~files/helpers/file.helper&#x27;;
+import { HeadersExtractionType } from &#x27;~facilities/types/headers-extraction.type&#x27;;
+import { FacilityEntity } from &#x27;~facilities/entities/facility.entity&#x27;;
+import { Response } from &#x27;express&#x27;;
+import path from &#x27;path&#x27;;
+import { env } from &#x27;~config/env.config&#x27;;
+import { SelfAssessmentUploadFileTypeEnum } from &#x27;~self-assessments/enums/self-assessment-upload-file-type.enum&#x27;;
+import { StorageService } from &#x27;@diginexhk/nestjs-storage&#x27;;
+import { SelfAssessmentUploadFileService } from &#x27;~self-assessments/services/self-assessment-upload-file.service&#x27;;
+import { FacilityGroupService } from &#x27;~facilities/services/facility-group.service&#x27;;
+import { InstructionExcelType } from &#x27;~facilities/types/facility-groups/instruction-excel.type&#x27;;
+import { LABOR_SHEET_NAME, COMMUNITY_SHEET_NAME } from &#x27;~self-assessments/constants/import-saq.constant&#x27;;
+import { trimValue } from &#x27;~core/helpers/string.helper&#x27;;
+import { SelfAssessmentQuestionEntity } from &#x27;~self-assessments/entities/self-assessment-question.entity&#x27;;
+import { ValidExcelQuestionData } from &#x27;~facilities/types/facility-groups/valid-excel-question-data.type&#x27;;
+import { FileService } from &#x27;~files/services/file.service&#x27;;
+import { SelfAssessmentUploadFileEntity } from &#x27;~self-assessments/entities/self-assessment-upload-file.entity&#x27;;
+import { FARM_LEVEL_RISK_ASSESSMENT_COLUMN_NAMES } from &#x27;~self-assessments/constants/upload-facility-group-template.constant&#x27;;
+import { GoToTypeEnum } from &#x27;~self-assessments/enums/go-to-type.enum&#x27;;
+import { FilterColumnExit } from &#x27;~facilities/types/facility-groups/filter-column-exit.type&#x27;;
+import { SelfAssessmentQuestionTypesEnum } from &#x27;~self-assessments/enums/self-assessment-question-types.enum.&#x27;;
+
+@Injectable()
+export class FacilityGroupExcelService {
+    constructor(
+        private facilityGroupService: FacilityGroupService,
+        private selfAssessmentGroupService: SelfAssessmentGroupService,
+        private storageService: StorageService,
+        private selfAssessmentUploadFileService: SelfAssessmentUploadFileService,
+        private fileService: FileService
+    ) {}
+
+    async validDownloadTemplate(roleId: string): Promise&lt;void | SelfAssessmentUploadFileEntity&gt; {
+        await this.facilityGroupService.validRoleCompleteProfile(roleId);
+        const selfAssessmentUploadFile &#x3D; await this.selfAssessmentUploadFileService.findOne({
+            where: { roleId, type: SelfAssessmentUploadFileTypeEnum.FACILITY_GROUP_TEMPLATE }
+        });
+        if (!selfAssessmentUploadFile) {
+            throw new BadRequestException({ translate: &#x27;error.facility_group_template_file_has_not_imported&#x27; });
+        }
+        return selfAssessmentUploadFile;
+    }
+
+    async getXlsxFile(res: Response, roleId: string, farmGroupId: string): Promise&lt;void&gt; {
+        await this.facilityGroupService.validRoleCompleteProfile(roleId);
+        const selfAssessmentUploadFile &#x3D; await this.validDownloadTemplate(roleId);
+        if (farmGroupId) {
+            const { facilityGroupFile, farms, facilityGroupFileId } &#x3D;
+                await this.facilityGroupService.getFacilityGroupById(farmGroupId);
+            if (facilityGroupFile) {
+                const fileStream &#x3D; await this.fileService.getFileById(facilityGroupFileId);
+                return this.downloadAndSetFarmUuid(res, fileStream, farms, roleId);
+            }
+        }
+        const { file } &#x3D; selfAssessmentUploadFile as SelfAssessmentUploadFileEntity;
+        return this.downloadXlsxFile(res, file.blobName, file.fileName);
+    }
+
+    private async downloadXlsxFile(res: Response, blobName: string, fileName: string): Promise&lt;void&gt; {
+        const buffer &#x3D; await this.storageService.createBufferFromBlob(blobName);
+        res.header(&#x27;Access-Control-Allow-Headers&#x27;, &#x27;X-Requested-With&#x27;);
+        res.header(&#x27;content-type&#x27;, &#x27;application/vnd.openxmlformats-officedocument.spreadsheetml.sheet&#x27;);
+        res.header(&#x27;Content-Disposition&#x27;, &#x60;attachment; filename&#x3D;&quot;${fileName}&quot;&#x60;);
+        new StreamableFile(buffer).getStream().pipe(res);
+    }
+
+    async downloadAndSetFarmUuid(
+        res: Response,
+        file: Express.Multer.File | NodeJS.ReadableStream,
+        farms: FacilityEntity[],
+        roleId: string
+    ) {
+        const groups &#x3D; await this.selfAssessmentGroupService.getSelfAssessmentGroupByRoleId(roleId);
+        const { workbook, farmLevelRiskWorksheet, communityRiskWorksheet } &#x3D; await this.initWorkbook({
+            fileOrStream: file,
+            groups
+        });
+        const communitySaqGroups &#x3D; groups.filter(({ title }) &#x3D;&gt; title.en &#x3D;&#x3D;&#x3D; COMMUNITY_SHEET_NAME);
+        const communityRisk &#x3D; this.readCommunityRiskXlsxData(communityRiskWorksheet, communitySaqGroups);
+        const isGoToTypeEnd &#x3D; Object.values(communityRisk).some((question) &#x3D;&gt; question.goToType &#x3D;&#x3D;&#x3D; GoToTypeEnum.END);
+        const filterColumns &#x3D; this.extractExitColumns(groups);
+        this.removeExcessColumnValues(communityRiskWorksheet, filterColumns);
+        this.removeExcessColumnValues(farmLevelRiskWorksheet, filterColumns, isGoToTypeEnd);
+        this.updateFarmUuid(farmLevelRiskWorksheet, farms);
+        return this.sendXlsxFile(res, workbook);
+    }
+
+    async sendXlsxFile(res: Response, xlsxWorkbook: Workbook): Promise&lt;void&gt; {
+        res.header(&#x27;Access-Control-Allow-Headers&#x27;, &#x27;X-Requested-With&#x27;);
+        res.header(&#x27;content-type&#x27;, &#x27;application/vnd.openxmlformats-officedocument.spreadsheetml.sheet&#x27;);
+        res.header(&#x27;Content-Disposition&#x27;, &#x60;attachment; filename&#x3D;import-facility-group-template.xlsx&#x60;);
+        const fileBuffer &#x3D; Buffer.from(await xlsxWorkbook.xlsx.writeBuffer());
+        new StreamableFile(fileBuffer).getStream().pipe(res);
+    }
+
+    async parseXlsx({
+        file,
+        groups,
+        isParsingForUpdate &#x3D; false,
+        includeEmpty &#x3D; false
+    }: ExcelParsingType): Promise&lt;ParseDataFarmGroup&gt; {
+        const { instructionWorksheet, communityRiskWorksheet, farmLevelRiskWorksheet } &#x3D; await this.initWorkbook({
+            fileOrStream: file,
+            groups
+        });
+        const instruction &#x3D; this.readInstructionXlsxData(instructionWorksheet);
+        const communitySaqGroups &#x3D; groups.filter(({ title }) &#x3D;&gt; title.en &#x3D;&#x3D;&#x3D; COMMUNITY_SHEET_NAME);
+        const communityRisk &#x3D; this.readCommunityRiskXlsxData(communityRiskWorksheet, communitySaqGroups);
+        const farmLevelSaqGroups &#x3D; groups.filter(({ title }) &#x3D;&gt; title.en &#x3D;&#x3D;&#x3D; LABOR_SHEET_NAME);
+        const farmLevelRisk &#x3D; this.readFarmLevelRiskXlsxData(
+            farmLevelRiskWorksheet,
+            farmLevelSaqGroups,
+            isParsingForUpdate,
+            includeEmpty
+        );
+        const isNotEmptySheet &#x3D; farmLevelRisk.some(({ isBlankRow }) &#x3D;&gt; !isBlankRow);
+
+        if (!isNotEmptySheet) {
+            throw new BadRequestException({ translate: &#x27;error.farm_group_must_include_at_least_one_farm&#x27; });
+        }
+
+        return { instruction, communityRisk, farmLevelRisk };
+    }
+
+    async initWorkbook({ fileOrStream, groups }: InitWorkbookType) {
+        const workbook &#x3D; await initWorkbook(fileOrStream);
+        this.validateFileStructure(workbook, groups);
+        const worksheets &#x3D; this.addHeaderTemplate(workbook, groups);
+        const instructionWorksheet: Worksheet &#x3D; workbook.getWorksheet(SHEET_1);
+        return {
+            workbook,
+            instructionWorksheet,
+            communityRiskWorksheet: worksheets.workSheet2,
+            farmLevelRiskWorksheet: worksheets.workSheet3
+        };
+    }
+
+    // eslint-disable-next-line max-lines-per-function
+    readFarmLevelRiskXlsxData(
+        worksheet: Worksheet,
+        groups: SelfAssessmentGroupEntity[],
+        isParsingForUpdate: boolean &#x3D; false,
+        includeEmpty: boolean &#x3D; true
+    ): FarmLevelRiskExcelData[] {
+        if (worksheet.actualRowCount &gt; MAXIMUM_FARMS_PER_TEMPLATE + TEMPLATE_HEADER_ROW_COUNT) {
+            throw new BadRequestException({ translate: &#x27;error.maximum_farms_per_template&#x27; });
+        }
+        const startTime &#x3D; moment().unix();
+        const defaultKeys &#x3D; map(HEADER_FARM_LEVEL_DEFAULT, &#x27;key&#x27;);
+        const groupQuestions &#x3D; flatten(map(groups, &#x27;questions&#x27;));
+        const farms: FarmLevelRiskExcelData[] &#x3D; [];
+        worksheet.eachRow({ includeEmpty }, (row: Row, rowNumber: number) &#x3D;&gt; {
+            if (!isParsingForUpdate &amp;&amp; row.getCell(&#x27;farmUUID&#x27;).toString()) {
+                throw new BadRequestException({ translate: &#x27;error.can_not_use_another_farm_group_template_to_upload&#x27; });
+            }
+            const isValidRangeOfRowToExtract &#x3D;
+                rowNumber &gt; TEMPLATE_HEADER_ROW_COUNT &amp;&amp;
+                rowNumber &lt; MAXIMUM_FARMS_PER_TEMPLATE + TEMPLATE_HEADER_ROW_COUNT;
+            const headerColumnsExceptedId &#x3D; HEADER_FARM_LEVEL_DEFAULT.slice(1);
+            const checkBlankRow &#x3D; checkIfBlankRow(row, HEADER_FARM_LEVEL_DEFAULT);
+            const isValidRowToExtract &#x3D;
+                headerColumnsExceptedId.some(({ key }) &#x3D;&gt; row.getCell(key).toString()) || checkBlankRow;
+            if (isValidRangeOfRowToExtract &amp;&amp; isValidRowToExtract) {
+                const farm: FarmLevelRiskExcelData &#x3D; defaultKeys.reduce(
+                    (acc: FarmLevelRiskExcelData, key: string) &#x3D;&gt; ({
+                        ...acc,
+                        [key]:
+                            key &#x3D;&#x3D;&#x3D; &#x27;certificationExpiredDate&#x27;
+                                ? this.parseDateXlsx(row.getCell(key))
+                                : row.getCell(key).toString()
+                    }),
+                    {} as FarmLevelRiskExcelData
+                );
+                farm.selfAssessments &#x3D; this.convertGroupQuestionOfRiskData(groupQuestions, row);
+                farm.farmUUID &#x3D; row.getCell(&#x27;farmUUID&#x27;).toString();
+                farm.createdAt &#x3D; startTime + rowNumber;
+                farm.isBlankRow &#x3D; checkBlankRow;
+                farm.rowIndex &#x3D; rowNumber;
+                farms.push(farm);
+            }
+        });
+
+        return farms;
+    }
+
+    readInstructionXlsxData(worksheet: Worksheet): InstructionExcelType {
+        return {
+            farmGroupId: worksheet.getCell(&#x27;B1&#x27;)?.value?.toString(),
+            farmGroupName: worksheet.getCell(&#x27;B2&#x27;)?.value?.toString(),
+            country: worksheet.getCell(&#x27;B3&#x27;)?.value?.toString(),
+            province: worksheet.getCell(&#x27;B4&#x27;)?.value?.toString(),
+            district: worksheet.getCell(&#x27;B5&#x27;)?.value?.toString(),
+            areas: []
+        };
+    }
+
+    readCommunityRiskXlsxData(worksheet: Worksheet, groups: SelfAssessmentGroupEntity[]): ValidExcelQuestionData {
+        const groupQuestions &#x3D; flatten(map(groups, &#x27;questions&#x27;));
+        const dataRow &#x3D; worksheet.getRow(2);
+        return this.convertGroupQuestionOfRiskData(groupQuestions, dataRow);
+    }
+
+    convertGroupQuestionOfRiskData(groupQuestions: SelfAssessmentQuestionEntity[], dataRow: Row) {
+        return groupQuestions.reduce((acc: ValidExcelQuestionData, groupQuestion) &#x3D;&gt; {
+            const questionResponseOptions &#x3D; map(groupQuestion.questionResponses, &#x27;option&#x27;);
+            const cellValue &#x3D; dataRow.getCell(groupQuestion.id).toString();
+            const goToType &#x3D;
+                groupQuestion.questionResponses.find(
+                    (questionResponse) &#x3D;&gt; !isNull(questionResponse.goToType) &amp;&amp; questionResponse.option &#x3D;&#x3D;&#x3D; cellValue
+                )?.goToType ?? null;
+            return {
+                ...acc,
+                [groupQuestion.id]: {
+                    column: trimValue(groupQuestion.title.en),
+                    value: trimValue(cellValue),
+                    type: groupQuestion.type,
+                    questionResponses: groupQuestion.questionResponses,
+                    groupId: groupQuestion.groupId,
+                    options: questionResponseOptions,
+                    goToType
+                }
+            };
+        }, {} as ValidExcelQuestionData);
+    }
+
+    validateFileStructure(workbook: Workbook, groups: SelfAssessmentGroupEntity[]) {
+        const workSheet1: Worksheet &#x3D; workbook.getWorksheet(SHEET_1);
+        const workSheet2: Worksheet &#x3D; workbook.getWorksheet(SHEET_2);
+        const workSheet3: Worksheet &#x3D; workbook.getWorksheet(SHEET_3);
+        const { communityLevelHeaders, farmLevelHeaders } &#x3D; this.extractHeaders(groups);
+        if (!workSheet1 || !workSheet2 || !workSheet3) {
+            throw new BadRequestException({ translate: &#x27;error.worksheet_name_mismatch&#x27; });
+        }
+        for (const [index, header] of Object.entries(workSheet2.getRow(1).values as string[])) {
+            const communityLevelHeader &#x3D; communityLevelHeaders[+index - 1].header as string;
+            if (header &amp;&amp; header.toLowerCase().trim() !&#x3D;&#x3D; communityLevelHeader.toLowerCase().trim()) {
+                throw new BadRequestException({ translate: &#x27;error.modified_template&#x27; });
+            }
+        }
+        for (const [index, header] of Object.entries(workSheet3.getRow(1).values as string[])) {
+            const farmLevelHeader &#x3D; farmLevelHeaders[+index - 1].header as string;
+            if (header &amp;&amp; header.toLowerCase().trim() !&#x3D;&#x3D; farmLevelHeader.toLowerCase().trim()) {
+                throw new BadRequestException({ translate: &#x27;error.modified_template&#x27; });
+            }
+        }
+    }
+
+    removeExcessColumnValues(
+        workSheet: Worksheet,
+        filterColumns: FilterColumnExit[],
+        isGoToTypeEndOfCommunityRisk: boolean &#x3D; false
+    ): void {
+        const values &#x3D; workSheet.getRow(1).values as string[];
+        const rowNumberExit &#x3D; isGoToTypeEndOfCommunityRisk
+            ? 0
+            : values.findIndex((value) &#x3D;&gt; filterColumns.some((column) &#x3D;&gt; column.column &#x3D;&#x3D;&#x3D; value));
+        if (rowNumberExit &#x3D;&#x3D;&#x3D; -1) {
+            return;
+        }
+        const columnExit &#x3D; workSheet.getRow(1).getCell(rowNumberExit).value;
+
+        workSheet.eachRow({ includeEmpty: true }, (row: Row, rowIndex: number) &#x3D;&gt; {
+            if (rowIndex &lt;&#x3D; 1) return;
+            const valueExit &#x3D; row.getCell(rowNumberExit).value;
+            const shouldRemoveColumns &#x3D; filterColumns.some(
+                (column) &#x3D;&gt;
+                    column.column &#x3D;&#x3D;&#x3D; columnExit &amp;&amp;
+                    (column.value &#x3D;&#x3D;&#x3D; valueExit ||
+                        column.type &#x3D;&#x3D;&#x3D; SelfAssessmentQuestionTypesEnum.FREE_TEXT ||
+                        column.type &#x3D;&#x3D;&#x3D; SelfAssessmentQuestionTypesEnum.NUMBER)
+            );
+            row.eachCell({ includeEmpty: false }, (cell: Cell, rowNumber: number) &#x3D;&gt; {
+                if (isGoToTypeEndOfCommunityRisk &amp;&amp; rowNumber &gt; FARM_LEVEL_RISK_ASSESSMENT_COLUMN_NAMES.length) {
+                    cell.value &#x3D; &#x27;&#x27;;
+                }
+                if (shouldRemoveColumns &amp;&amp; rowNumber &gt; rowNumberExit) {
+                    cell.value &#x3D; &#x27;&#x27;;
+                }
+            });
+        });
+    }
+
+    addHeaderTemplate(workBook: Workbook, groups: SelfAssessmentGroupEntity[]) {
+        const workSheet2: Worksheet &#x3D; workBook.getWorksheet(SHEET_2);
+        const workSheet3: Worksheet &#x3D; workBook.getWorksheet(SHEET_3);
+        const { communityLevelHeaders, farmLevelHeaders } &#x3D; this.extractHeaders(groups);
+        workSheet3.columns &#x3D; [...farmLevelHeaders, FARM_UUID_COLUMN];
+        workSheet2.columns &#x3D; communityLevelHeaders;
+        workSheet2.getRow(1).height &#x3D; HEIGHT_ROW_HEADER_SHEET_2;
+        workSheet3.getRow(1).height &#x3D; HEIGHT_ROW_HEADER_SHEET_3;
+        return { workSheet2, workSheet3 };
+    }
+
+    private parseDateXlsx(cell: Cell) {
+        if (!cell || !cell.value) {
+            return null;
+        }
+        if (cell.value instanceof Date) {
+            return new Date(cell.toString());
+        }
+        const timeNumber &#x3D; cell.toString() as unknown as number;
+        const utcValue &#x3D; Math.floor(timeNumber - 25569) * 86400;
+        if (!isNaN(utcValue)) {
+            const dateInfo &#x3D; new Date(utcValue * 1000);
+            const month &#x3D; parseInt(&#x60;${dateInfo.getMonth()}&#x60;) + 1;
+            const newDate &#x3D; dateInfo.getFullYear() + &#x27;/&#x27; + month + &#x27;/&#x27; + dateInfo.getDate();
+            return new Date(newDate);
+        }
+        return timeNumber;
+    }
+
+    private extractHeaders(groups: SelfAssessmentGroupEntity[]): HeadersExtractionType {
+        let communityLevelHeaders: Partial&lt;Column&gt;[] &#x3D; [];
+        let farmLevelHeaders: Partial&lt;Column&gt;[] &#x3D; [...cloneDeep(HEADER_FARM_LEVEL_DEFAULT)];
+        for (const group of groups) {
+            if (group.title.en &#x3D;&#x3D;&#x3D; COMMUNITY_SHEET_NAME) {
+                communityLevelHeaders &#x3D; this.leverHeader(group);
+            } else if (group.title.en &#x3D;&#x3D;&#x3D; LABOR_SHEET_NAME) {
+                farmLevelHeaders.push(...this.leverHeader(group));
+            }
+        }
+        return { communityLevelHeaders, farmLevelHeaders };
+    }
+
+    private leverHeader(group: SelfAssessmentGroupEntity): Partial&lt;Column&gt;[] {
+        return group.questions.map(({ id, title }) &#x3D;&gt; ({
+            header: title.en,
+            key: id,
+            width: WIDTH_COLUMN_HEADER
+        }));
+    }
+
+    getTemplateXlsxFile(): Promise&lt;Workbook&gt; {
+        return new Workbook().xlsx.readFile(
+            path.join(env.ROOT_PATH, &#x60;static/xlsx-template/import-farm-group-template.xlsx&#x60;)
+        );
+    }
+
+    formatExcelFile(workbook: Workbook): void {
+        workbook.getWorksheet(SHEET_3).fillFormula(RANGE, FORMULA);
+        workbook
+            .getWorksheet(SHEET_3)
+            .getColumn(11)
+            .eachCell((cell: Cell, rowIndex: number) &#x3D;&gt; {
+                if (rowIndex &gt; 1) {
+                    cell.style &#x3D; { ...cell.style, numFmt: &#x27;dd/mm/yyyy&#x27; };
+                }
+            });
+    }
+
+    private extractExitColumns(groups: SelfAssessmentGroupEntity[]): FilterColumnExit[] {
+        const groupQuestions &#x3D; flatten(groups.map((group) &#x3D;&gt; group.questions));
+        const extractExitColumns: FilterColumnExit[] &#x3D; [];
+        for (const groupQuestion of groupQuestions) {
+            if (groupQuestion.questionResponses.find((questionResponse) &#x3D;&gt; !isNull(questionResponse.goToType))) {
+                extractExitColumns.push({
+                    column: groupQuestion.title.en,
+                    value: groupQuestion.questionResponses[0].option,
+                    type: groupQuestion.type
+                });
+            }
+        }
+        return extractExitColumns;
+    }
+
+    private updateFarmUuid(farmLevelRiskWorksheet: Worksheet, farms: FacilityEntity[]) {
+        farmLevelRiskWorksheet.eachRow({ includeEmpty: false }, (row: Row, rowNumber) &#x3D;&gt; {
+            if (rowNumber &gt; 1 &amp;&amp; row.getCell(&#x27;id&#x27;).toString()) {
+                const farm &#x3D; farms.find(({ farmId }) &#x3D;&gt; farmId.split(&#x27;-&#x27;)[1] &#x3D;&#x3D;&#x3D; row.getCell(&#x27;id&#x27;).toString());
+                if (farm) {
+                    row.getCell(&#x27;farmUUID&#x27;).value &#x3D; farm.id;
+                }
+            }
+        });
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'FacilityGroupExcelService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

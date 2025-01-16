@@ -1,0 +1,1387 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Global Trace BE documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">Global Trace BE documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content controller">
+                   <div class="content-data">
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Controllers</li>
+  <li class="breadcrumb-item" >SelfAssessmentController</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/self-assessments/http/controllers/self-assessment.controller.ts</code>
+        </p>
+
+            <p class="comment">
+                <h3>Prefix</h3>
+            </p>
+            <p class="comment">
+                <code>self-assessments</code>
+            </p>
+
+
+
+            <p class="comment">
+                <h3>Extends</h3>
+            </p>
+            <p class="comment">
+            </p>
+
+
+
+            <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                <a href="#answerAssessment" >answerAssessment</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                <a href="#downloadTemplate" >downloadTemplate</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier">Async</span>
+                                <a href="#getAnswer" >getAnswer</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                <a href="#getSelfAssessmentFileOfRoles" >getSelfAssessmentFileOfRoles</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier">Async</span>
+                                <a href="#getSelfAssessmentTranslations" >getSelfAssessmentTranslations</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                <a href="#import" >import</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                <a href="#listSelfAssessments" >listSelfAssessments</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                <a href="#translateSelfAssessments" >translateSelfAssessments</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                <a href="#validateImport" >validateImport</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="answerAssessment"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                        <span ><b>answerAssessment</b></span>
+                        <a href="#answerAssessment"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>answerAssessment(user: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>, data: <a href="../classes/AnswerSelfAssessmentDto.html" target="_self">AnswerSelfAssessmentDto</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Post(&#x27;answers&#x27;)<br />@UseGuards(JwtAuthGuard, undefined)<br />@HttpCode(HttpStatus.OK)<br />@ApiOperation({description: &#x27;Answer assessment&#x27;})<br /></code>
+                </td>
+            </tr>
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="147"
+                                    class="link-to-prism">src/self-assessments/http/controllers/self-assessment.controller.ts:147</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>user</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>data</td>
+                                            <td>
+                                                            <code><a href="../classes/AnswerSelfAssessmentDto.html" target="_self" >AnswerSelfAssessmentDto</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#ValidationError" target="_self" >Promise&lt;ValidationError[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="downloadTemplate"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                        <span ><b>downloadTemplate</b></span>
+                        <a href="#downloadTemplate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>downloadTemplate(roleId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, res: Response)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Get(&#x27;download-template&#x27;)<br />@UseGuards(ShortTokenGuard)<br />@ApiOperation({description: &#x27;Download template&#x27;})<br />@ApiQuery({name: &#x27;roleId&#x27;, required: true, type: String})<br /></code>
+                </td>
+            </tr>
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="95"
+                                    class="link-to-prism">src/self-assessments/http/controllers/self-assessment.controller.ts:95</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>roleId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>res</td>
+                                            <td>
+                                                        <code>Response</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAnswer"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier">Async</span>
+                        <span ><b>getAnswer</b></span>
+                        <a href="#getAnswer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getAnswer(user: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Get(&#x27;answers&#x27;)<br />@UseGuards(JwtAuthGuard, undefined)<br />@ResponseModel(SelfAssessmentAnswerResponse, undefined)<br />@HttpCode(HttpStatus.OK)<br />@ApiOperation({description: &#x27;Get answer assessment&#x27;})<br /></code>
+                </td>
+            </tr>
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="163"
+                                    class="link-to-prism">src/self-assessments/http/controllers/self-assessment.controller.ts:163</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>user</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;SelfAssessmentAnswerResponse[]&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSelfAssessmentFileOfRoles"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                        <span ><b>getSelfAssessmentFileOfRoles</b></span>
+                        <a href="#getSelfAssessmentFileOfRoles"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getSelfAssessmentFileOfRoles(key: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, sort: SortParams)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Get(&#x27;list-role-with-file&#x27;)<br />@UseGuards(JwtAuthGuard, undefined)<br />@ResponseModel(ListTemplateFileResponse, undefined)<br />@ApiOperation({description: &#x27;Get list role with file&#x27;})<br />@ApiQuery({name: &#x27;key&#x27;, required: false, type: String})<br /></code>
+                </td>
+            </tr>
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="76"
+                                    class="link-to-prism">src/self-assessments/http/controllers/self-assessment.controller.ts:76</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>key</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>sort</td>
+                                            <td>
+                                                        <code>SortParams</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/variables.html#lat" target="_self" >Promise&lt;ListTemplateFileResponse[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSelfAssessmentTranslations"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier">Async</span>
+                        <span ><b>getSelfAssessmentTranslations</b></span>
+                        <a href="#getSelfAssessmentTranslations"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getSelfAssessmentTranslations(roleId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, res: Response)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Get(&#x27;translations&#x27;)<br />@UseGuards(ShortTokenGuard)<br />@Header(&#x27;Access-Control-Allow-Headers&#x27;, &#x27;X-Requested-With&#x27;)<br />@Header(&#x27;Content-Type&#x27;, &#x27;application/json&#x27;)<br />@Header(&#x27;Content-Disposition&#x27;, &#x27;attachment; filename&#x3D;&quot;Self-assessment-translations.json&quot;&#x27;)<br />@ApiOperation({description: &#x27;Download self assessment translations&#x27;})<br />@ApiQuery({name: &#x27;roleId&#x27;, required: true, type: String})<br /></code>
+                </td>
+            </tr>
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="110"
+                                    class="link-to-prism">src/self-assessments/http/controllers/self-assessment.controller.ts:110</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>roleId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>res</td>
+                                            <td>
+                                                        <code>Response</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="import"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                        <span ><b>import</b></span>
+                        <a href="#import"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>import(dto: <a href="../classes/ImportSelfAssessmentFileDto.html" target="_self">ImportSelfAssessmentFileDto</a>, files: <a href="../undefineds/ImportFilesSelfAssessmentType.html" target="_self">ImportFilesSelfAssessmentType</a>, req: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Post(&#x27;import&#x27;)<br />@UseGuards(JwtAuthGuard, undefined)<br />@ApiOperation({description: &#x27;Import self assessment&#x27;})<br />@ApiConsumes(&#x27;multipart/form-data&#x27;)<br />@UseInterceptors(undefined)<br /></code>
+                </td>
+            </tr>
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="185"
+                                    class="link-to-prism">src/self-assessments/http/controllers/self-assessment.controller.ts:185</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>dto</td>
+                                            <td>
+                                                            <code><a href="../classes/ImportSelfAssessmentFileDto.html" target="_self" >ImportSelfAssessmentFileDto</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>files</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#ImportFilesSelfAssessmentType" target="_self" >ImportFilesSelfAssessmentType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>req</td>
+                                            <td>
+                                                            <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;literal type&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="listSelfAssessments"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                        <span ><b>listSelfAssessments</b></span>
+                        <a href="#listSelfAssessments"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>listSelfAssessments(user: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Get()<br />@UseGuards(JwtAuthGuard, undefined)<br />@ResponseModel(GetSelfAssessmentListResponse)<br />@ApiOperation({description: &#x27;Get list self assessments&#x27;})<br /></code>
+                </td>
+            </tr>
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="137"
+                                    class="link-to-prism">src/self-assessments/http/controllers/self-assessment.controller.ts:137</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>user</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../classes/GetSelfAssessmentListResponse.html" target="_self" >Promise&lt;GetSelfAssessmentListResponse&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="translateSelfAssessments"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                        <span ><b>translateSelfAssessments</b></span>
+                        <a href="#translateSelfAssessments"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>translateSelfAssessments(dto: <a href="../classes/UploadSelfAssessmentTranslationsDto.html" target="_self">UploadSelfAssessmentTranslationsDto</a>, file: Express.Multer.File)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Post(&#x27;translations&#x27;)<br />@UseGuards(JwtAuthGuard, undefined)<br />@ResponseModel(SelfAssessmentTranslationResponse)<br />@ApiOperation({description: &#x27;Upload self assessment translation file&#x27;})<br />@ApiConsumes(&#x27;multipart/form-data&#x27;)<br />@RequireUploadTemplateFile({fieldName: &#x27;file&#x27;, maxCount: 1})<br /></code>
+                </td>
+            </tr>
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="122"
+                                    class="link-to-prism">src/self-assessments/http/controllers/self-assessment.controller.ts:122</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>dto</td>
+                                            <td>
+                                                            <code><a href="../classes/UploadSelfAssessmentTranslationsDto.html" target="_self" >UploadSelfAssessmentTranslationsDto</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>file</td>
+                                            <td>
+                                                        <code>Express.Multer.File</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateImport"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                        <span ><b>validateImport</b></span>
+                        <a href="#validateImport"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateImport(dto: <a href="../classes/ImportSelfAssessmentFileDto.html" target="_self">ImportSelfAssessmentFileDto</a>, files: <a href="../undefineds/ImportFilesSelfAssessmentType.html" target="_self">ImportFilesSelfAssessmentType</a>, req: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Post(&#x27;import/validate&#x27;)<br />@UseGuards(JwtAuthGuard, undefined)<br />@ApiOperation({description: &#x27;Validate import self assessment&#x27;})<br />@ApiConsumes(&#x27;multipart/form-data&#x27;)<br />@UseInterceptors(undefined)<br /></code>
+                </td>
+            </tr>
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="214"
+                                    class="link-to-prism">src/self-assessments/http/controllers/self-assessment.controller.ts:214</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>dto</td>
+                                            <td>
+                                                            <code><a href="../classes/ImportSelfAssessmentFileDto.html" target="_self" >ImportSelfAssessmentFileDto</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>files</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#ImportFilesSelfAssessmentType" target="_self" >ImportFilesSelfAssessmentType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>req</td>
+                                            <td>
+                                                            <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#ValidateImportFileType" target="_self" >Promise&lt;ValidateImportFileType[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Sort, SortParams } from &#x27;@diginexhk/nestjs-base-decorator&#x27;;
+import { ResponseModel } from &#x27;@diginexhk/nestjs-response&#x27;;
+import {
+    BadRequestException,
+    Body,
+    Controller,
+    Get,
+    Header,
+    HttpCode,
+    HttpStatus,
+    Post,
+    Query,
+    Req,
+    Res,
+    StreamableFile,
+    UploadedFile,
+    UploadedFiles,
+    UseGuards,
+    UseInterceptors
+} from &#x27;@nestjs/common&#x27;;
+import { FileFieldsInterceptor } from &#x27;@nestjs/platform-express&#x27;;
+import { ApiBearerAuth, ApiConsumes, ApiOperation, ApiQuery, ApiTags } from &#x27;@nestjs/swagger&#x27;;
+import { Response } from &#x27;express&#x27;;
+import { DataSource, EntityManager } from &#x27;typeorm&#x27;;
+import { RequireUploadTemplateFile } from &#x27;~core/decorators/require-upload-file.decorator&#x27;;
+import { assessmentDocumentFilter } from &#x27;~core/filters/assessment-document.filter&#x27;;
+import { BaseController } from &#x27;~core/http/controllers/base.controller&#x27;;
+import { PermissionEnum } from &#x27;~role-permissions/enums/permission.enum&#x27;;
+import { UserRoleEnum } from &#x27;~role-permissions/enums/user-role.enum&#x27;;
+import { FILE_SIZE } from &#x27;~self-assessments/constants/file-size.constant&#x27;;
+import { FILE_TYPES } from &#x27;~self-assessments/constants/file-types.constant&#x27;;
+import { ImportSelfAssessmentFileDto } from &#x27;~self-assessments/http/dto/import-self-assessment-file.dto&#x27;;
+import { ImportSelfAssessmentService } from &#x27;~self-assessments/services/import/import-self-assessment.service&#x27;;
+import { ValidateSelfAssessmentService } from &#x27;~self-assessments/services/import/validate-self-assessment.service&#x27;;
+import { SelfAssessmentQuestionService } from &#x27;~self-assessments/services/self-assessment-question.service&#x27;;
+import { SelfAssessmentService } from &#x27;~self-assessments/services/self-assessment.service&#x27;;
+import { ValidationError } from &#x27;~self-assessments/types/answer-validation-error.type&#x27;;
+import { ImportFilesSelfAssessmentType } from &#x27;~self-assessments/types/import-files-self-assessment.type&#x27;;
+import { ValidateImportFileType } from &#x27;~self-assessments/types/validate-import-file.type&#x27;;
+import { CurrentUser } from &#x27;~users/decorators/current-user.decorator&#x27;;
+import { UserEntity } from &#x27;~users/entities/user.entity&#x27;;
+import { JwtAuthGuard } from &#x27;~users/http/guards/jwt-auth.guard&#x27;;
+import { PermissionGuard } from &#x27;~users/http/guards/permission.guard&#x27;;
+import { RoleGuard } from &#x27;~users/http/guards/role.guard&#x27;;
+import { ShortTokenGuard } from &#x27;~users/http/guards/short-token.guard&#x27;;
+import { AnswerSelfAssessmentDto } from &#x27;../dto/answer-self-assessment.dto&#x27;;
+import { UploadSelfAssessmentTranslationsDto } from &#x27;../dto/upload-self-assessment-translations.dto&#x27;;
+import { GetSelfAssessmentListResponse } from &#x27;../response/get-self-assessment-list.response&#x27;;
+import { ListTemplateFileResponse } from &#x27;../response/list-template-file.response&#x27;;
+import { SelfAssessmentAnswerResponse } from &#x27;../response/self-assessment-answer.response&#x27;;
+import { SelfAssessmentTranslationResponse } from &#x27;../response/self-assessment-translation.response&#x27;;
+
+@Controller(&#x27;self-assessments&#x27;)
+@ApiTags(&#x27;SelfAssessments&#x27;)
+@ApiBearerAuth()
+export class SelfAssessmentController extends BaseController {
+    constructor(
+        private selfAssessmentsService: SelfAssessmentService,
+        private importSelfAssessmentService: ImportSelfAssessmentService,
+        private validateSelfAssessmentService: ValidateSelfAssessmentService,
+        private selfAssessmentQuestionService: SelfAssessmentQuestionService,
+        private dataSource: DataSource
+    ) {
+        super();
+    }
+
+    @Get(&#x27;list-role-with-file&#x27;)
+    @UseGuards(JwtAuthGuard, RoleGuard(UserRoleEnum.SUPER_ADMIN))
+    @ResponseModel(ListTemplateFileResponse, true)
+    @ApiOperation({ description: &#x27;Get list role with file&#x27; })
+    @ApiQuery({
+        name: &#x27;key&#x27;,
+        required: false,
+        type: String
+    })
+    getSelfAssessmentFileOfRoles(
+        @Query(&#x27;key&#x27;) key: string,
+        @Sort({
+            allowedFields: [&#x27;name&#x27;],
+            default: { sortField: &#x27;createdAt&#x27;, sortDirection: &#x27;DESC&#x27; }
+        })
+        sort: SortParams
+    ): Promise&lt;ListTemplateFileResponse[]&gt; {
+        return this.selfAssessmentsService.getSelfAssessmentFileOfRoles(key, sort);
+    }
+
+    @Get(&#x27;download-template&#x27;)
+    @UseGuards(ShortTokenGuard)
+    @ApiOperation({ description: &#x27;Download template&#x27; })
+    @ApiQuery({
+        name: &#x27;roleId&#x27;,
+        required: true,
+        type: String
+    })
+    downloadTemplate(@Query(&#x27;roleId&#x27;) roleId: string, @Res() res: Response) {
+        return this.selfAssessmentsService.downloadTemplate(roleId, res);
+    }
+
+    @Get(&#x27;translations&#x27;)
+    @UseGuards(ShortTokenGuard)
+    @Header(&#x27;Access-Control-Allow-Headers&#x27;, &#x27;X-Requested-With&#x27;)
+    @Header(&#x27;Content-Type&#x27;, &#x27;application/json&#x27;)
+    @Header(&#x27;Content-Disposition&#x27;, &#x27;attachment; filename&#x3D;&quot;Self-assessment-translations.json&quot;&#x27;)
+    @ApiOperation({ description: &#x27;Download self assessment translations&#x27; })
+    @ApiQuery({
+        name: &#x27;roleId&#x27;,
+        required: true,
+        type: String
+    })
+    async getSelfAssessmentTranslations(@Query(&#x27;roleId&#x27;) roleId: string, @Res() res: Response) {
+        const data &#x3D; await this.selfAssessmentQuestionService.getSelfAssessmentTranslations(roleId);
+        const buffer &#x3D; Buffer.from(JSON.stringify(data, null, 4), &#x27;utf8&#x27;);
+        new StreamableFile(buffer).getStream().pipe(res);
+    }
+
+    @Post(&#x27;translations&#x27;)
+    @UseGuards(JwtAuthGuard, RoleGuard(UserRoleEnum.SUPER_ADMIN))
+    @ResponseModel(SelfAssessmentTranslationResponse)
+    @ApiOperation({ description: &#x27;Upload self assessment translation file&#x27; })
+    @ApiConsumes(&#x27;multipart/form-data&#x27;)
+    @RequireUploadTemplateFile({ fieldName: &#x27;file&#x27;, maxCount: 1 })
+    translateSelfAssessments(
+        @Body() dto: UploadSelfAssessmentTranslationsDto,
+        @UploadedFile() file: Express.Multer.File
+    ) {
+        return this.dataSource.transaction((manager: EntityManager) &#x3D;&gt; {
+            return this.selfAssessmentQuestionService
+                .withTransaction(manager)
+                .translateSelfAssessments(file, dto.roleId);
+        });
+    }
+
+    @Get()
+    @UseGuards(JwtAuthGuard, PermissionGuard(PermissionEnum.COMPLETE_OWN_SAQ))
+    @ResponseModel(GetSelfAssessmentListResponse)
+    @ApiOperation({ description: &#x27;Get list self assessments&#x27; })
+    listSelfAssessments(@CurrentUser() user: UserEntity): Promise&lt;GetSelfAssessmentListResponse&gt; {
+        return this.selfAssessmentsService.listSelfAssessmentsGroups(user);
+    }
+
+    @Post(&#x27;answers&#x27;)
+    @UseGuards(JwtAuthGuard, PermissionGuard(PermissionEnum.COMPLETE_OWN_SAQ))
+    @HttpCode(HttpStatus.OK)
+    @ApiOperation({
+        description: &#x27;Answer assessment&#x27;
+    })
+    answerAssessment(
+        @CurrentUser() user: UserEntity,
+        @Body() data: AnswerSelfAssessmentDto
+    ): Promise&lt;ValidationError[]&gt; {
+        return this.dataSource.transaction((manager) &#x3D;&gt;
+            this.selfAssessmentsService.withTransaction(manager).answerAssessment(user, data)
+        );
+    }
+
+    @Get(&#x27;answers&#x27;)
+    @UseGuards(JwtAuthGuard, PermissionGuard(PermissionEnum.COMPLETE_OWN_SAQ))
+    @ResponseModel(SelfAssessmentAnswerResponse, true)
+    @HttpCode(HttpStatus.OK)
+    @ApiOperation({
+        description: &#x27;Get answer assessment&#x27;
+    })
+    async getAnswer(@CurrentUser() user: UserEntity): Promise&lt;SelfAssessmentAnswerResponse[]&gt; {
+        return this.dataSource.transaction((manager) &#x3D;&gt;
+            this.selfAssessmentsService.withTransaction(manager).getAnswers(user)
+        );
+    }
+
+    @Post(&#x27;import&#x27;)
+    @UseGuards(JwtAuthGuard, RoleGuard(UserRoleEnum.SUPER_ADMIN))
+    @ApiOperation({ description: &#x27;Import self assessment&#x27; })
+    @ApiConsumes(&#x27;multipart/form-data&#x27;)
+    @UseInterceptors(
+        FileFieldsInterceptor(
+            [
+                { name: &#x27;fileSaq&#x27;, maxCount: 1 },
+                { name: &#x27;fileFacilityGroupTemplate&#x27;, maxCount: 1 }
+            ],
+            {
+                fileFilter: (req, file, callback) &#x3D;&gt; assessmentDocumentFilter(req, file, FILE_TYPES, callback),
+                limits: { fileSize: FILE_SIZE }
+            }
+        )
+    )
+    import(
+        @Body() dto: ImportSelfAssessmentFileDto,
+        @UploadedFiles() files: ImportFilesSelfAssessmentType,
+        @Req() req: any
+    ): Promise&lt;{ result: boolean }&gt; {
+        if (req.fileValidationError) {
+            throw new BadRequestException({ translate: &#x27;error.excel_file_has_the_wrong_format&#x27; });
+        }
+        return this.dataSource.transaction((manager: EntityManager) &#x3D;&gt; {
+            return this.importSelfAssessmentService.withTransaction(manager).import(dto, files);
+        });
+    }
+
+    @Post(&#x27;import/validate&#x27;)
+    @UseGuards(JwtAuthGuard, RoleGuard(UserRoleEnum.SUPER_ADMIN))
+    @ApiOperation({ description: &#x27;Validate import self assessment&#x27; })
+    @ApiConsumes(&#x27;multipart/form-data&#x27;)
+    @UseInterceptors(
+        FileFieldsInterceptor(
+            [
+                { name: &#x27;fileSaq&#x27;, maxCount: 1 },
+                { name: &#x27;fileFacilityGroupTemplate&#x27;, maxCount: 1 }
+            ],
+            {
+                fileFilter: (req, file, callback) &#x3D;&gt; assessmentDocumentFilter(req, file, FILE_TYPES, callback),
+                limits: { fileSize: FILE_SIZE }
+            }
+        )
+    )
+    validateImport(
+        @Body() dto: ImportSelfAssessmentFileDto,
+        @UploadedFiles() files: ImportFilesSelfAssessmentType,
+        @Req() req: any
+    ): Promise&lt;ValidateImportFileType[]&gt; {
+        if (req.fileValidationError) {
+            throw new BadRequestException({ translate: &#x27;error.excel_file_has_the_wrong_format&#x27; });
+        }
+        return this.validateSelfAssessmentService.validateImport(dto, files);
+    }
+}
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'controller';
+            var COMPODOC_CURRENT_PAGE_URL = 'SelfAssessmentController.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

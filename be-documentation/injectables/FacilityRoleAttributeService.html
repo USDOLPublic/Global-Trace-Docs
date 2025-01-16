@@ -1,0 +1,1469 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Global Trace BE documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">Global Trace BE documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Injectables</li>
+  <li class="breadcrumb-item" >FacilityRoleAttributeService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/role-attributes/services/facility-role-attribute.service.ts</code>
+        </p>
+
+
+
+            <p class="comment">
+                <h3>Extends</h3>
+            </p>
+            <p class="comment">
+                        <code>TransactionService</code>
+            </p>
+
+
+            <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#createFacilityRoleAttributes" >createFacilityRoleAttributes</a>
+                            </li>
+                            <li>
+                                <a href="#find" >find</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#findWithHasUpdatedProfile" >findWithHasUpdatedProfile</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getAttachmentLabel" >getAttachmentLabel</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getAttributeLabel" >getAttributeLabel</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getFacilityRoleAttributesByFacilityId" >getFacilityRoleAttributesByFacilityId</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getTimeLabel" >getTimeLabel</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#getValueRoleAttributes" >getValueRoleAttributes</a>
+                            </li>
+                            <li>
+                                <a href="#isExists" >isExists</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#prepareOptionData" >prepareOptionData</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                                <span class="modifier">Public</span>
+                        <code>constructor(facilityRoleAttributeRepo: <a href="../classes/FacilityRoleAttributeRepository.html" target="_self">FacilityRoleAttributeRepository</a>, attributeRepo: <a href="../classes/AttributeRepository.html" target="_self">AttributeRepository</a>, roleAttributeRepo: <a href="../classes/RoleAttributeRepository.html" target="_self">RoleAttributeRepository</a>, validateRoleAttributeService: <a href="../injectables/ValidateRoleAttributeService.html" target="_self">ValidateRoleAttributeService</a>, locationService: <a href="../injectables/LocationService.html" target="_self">LocationService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/role-attributes/services/facility-role-attribute.service.ts:24</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>facilityRoleAttributeRepo</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../classes/FacilityRoleAttributeRepository.html" target="_self" >FacilityRoleAttributeRepository</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>attributeRepo</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../classes/AttributeRepository.html" target="_self" >AttributeRepository</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>roleAttributeRepo</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../classes/RoleAttributeRepository.html" target="_self" >RoleAttributeRepository</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>validateRoleAttributeService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ValidateRoleAttributeService.html" target="_self" >ValidateRoleAttributeService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>locationService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/LocationService.html" target="_self" >LocationService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createFacilityRoleAttributes"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>createFacilityRoleAttributes</b></span>
+                        <a href="#createFacilityRoleAttributes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createFacilityRoleAttributes(undefined: <a href="../undefineds/CreateFacilityRoleAttributesParam.html" target="_self">CreateFacilityRoleAttributesParam</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="39"
+                                    class="link-to-prism">src/role-attributes/services/facility-role-attribute.service.ts:39</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#CreateFacilityRoleAttributesParam" target="_self" >CreateFacilityRoleAttributesParam</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="find"></a>
+                    <span class="name">
+                        <span ><b>find</b></span>
+                        <a href="#find"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>find(options: FindManyOptions<FacilityRoleAttributeEntity>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="35"
+                                    class="link-to-prism">src/role-attributes/services/facility-role-attribute.service.ts:35</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>options</td>
+                                            <td>
+                                                        <code>FindManyOptions&lt;FacilityRoleAttributeEntity&gt;</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;FacilityRoleAttributeEntity[]&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findWithHasUpdatedProfile"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>findWithHasUpdatedProfile</b></span>
+                        <a href="#findWithHasUpdatedProfile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>findWithHasUpdatedProfile(roleId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, hasUpdatedProfile: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="253"
+                                    class="link-to-prism">src/role-attributes/services/facility-role-attribute.service.ts:253</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Default value</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>roleId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+                                            <td>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                                <td>hasUpdatedProfile</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+                                            <td>
+                                                    <code>false</code>
+                                            </td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;RoleAttributeEntity[]&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAttachmentLabel"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>getAttachmentLabel</b></span>
+                        <a href="#getAttachmentLabel"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getAttachmentLabel(undefined: <a href="../classes/ValueRoleAttributeResponse.html" target="_self">ValueRoleAttributeResponse</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="233"
+                                    class="link-to-prism">src/role-attributes/services/facility-role-attribute.service.ts:233</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                            <code><a href="../classes/ValueRoleAttributeResponse.html" target="_self" >ValueRoleAttributeResponse</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAttributeLabel"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>getAttributeLabel</b></span>
+                        <a href="#getAttributeLabel"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getAttributeLabel(attribute: <a href="../entitys/AttributeEntity.html" target="_self">AttributeEntity</a>, option: <a href="../classes/ValueRoleAttributeResponse.html" target="_self">ValueRoleAttributeResponse</a>, metadata: <a href="../undefineds/LocationMapped.html" target="_self">LocationMapped</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="178"
+                                    class="link-to-prism">src/role-attributes/services/facility-role-attribute.service.ts:178</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>attribute</td>
+                                            <td>
+                                                            <code><a href="../entitys/AttributeEntity.html" target="_self" >AttributeEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>option</td>
+                                            <td>
+                                                            <code><a href="../classes/ValueRoleAttributeResponse.html" target="_self" >ValueRoleAttributeResponse</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>metadata</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#LocationMapped" target="_self" >LocationMapped</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getFacilityRoleAttributesByFacilityId"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>getFacilityRoleAttributesByFacilityId</b></span>
+                        <a href="#getFacilityRoleAttributesByFacilityId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getFacilityRoleAttributesByFacilityId(facilityId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, userId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, roleId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="105"
+                                    class="link-to-prism">src/role-attributes/services/facility-role-attribute.service.ts:105</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>facilityId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>userId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>roleId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;Dictionary&lt;ValueRoleAttributeResponse[]&gt;&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getTimeLabel"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>getTimeLabel</b></span>
+                        <a href="#getTimeLabel"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getTimeLabel(undefined: <a href="../classes/ValueRoleAttributeResponse.html" target="_self">ValueRoleAttributeResponse</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="225"
+                                    class="link-to-prism">src/role-attributes/services/facility-role-attribute.service.ts:225</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                            <code><a href="../classes/ValueRoleAttributeResponse.html" target="_self" >ValueRoleAttributeResponse</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getValueRoleAttributes"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>getValueRoleAttributes</b></span>
+                        <a href="#getValueRoleAttributes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getValueRoleAttributes(valueRoleAttributes: ValueRoleAttributeResponse[], roleAttributeMap: Dictionary<RoleAttributeEntity>, locationMapped: <a href="../undefineds/LocationMapped.html" target="_self">LocationMapped</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="141"
+                                    class="link-to-prism">src/role-attributes/services/facility-role-attribute.service.ts:141</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>valueRoleAttributes</td>
+                                            <td>
+                                                        <code>ValueRoleAttributeResponse[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>roleAttributeMap</td>
+                                            <td>
+                                                        <code>Dictionary&lt;RoleAttributeEntity&gt;</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>locationMapped</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#LocationMapped" target="_self" >LocationMapped</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;ValueRoleAttributeResponse[]&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isExists"></a>
+                    <span class="name">
+                        <span ><b>isExists</b></span>
+                        <a href="#isExists"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isExists(conditions: FindManyOptions<FacilityRoleAttributeEntity>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="249"
+                                    class="link-to-prism">src/role-attributes/services/facility-role-attribute.service.ts:249</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>conditions</td>
+                                            <td>
+                                                        <code>FindManyOptions&lt;FacilityRoleAttributeEntity&gt;</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;boolean&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="prepareOptionData"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>prepareOptionData</b></span>
+                        <a href="#prepareOptionData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>prepareOptionData(roleAttributes: RoleAttributeEntity[], options: <a href="../classes/FacilityRoleAttributeDto.html" target="_self">FacilityRoleAttributeDto[]</a>, currentRoleAttributes: FacilityRoleAttributeEntity[], roleAttributeType: <a href="../undefineds/RoleAttributeTypeEnum.html" target="_self">RoleAttributeTypeEnum</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="80"
+                                    class="link-to-prism">src/role-attributes/services/facility-role-attribute.service.ts:80</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>roleAttributes</td>
+                                            <td>
+                                                        <code>RoleAttributeEntity[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>options</td>
+                                            <td>
+                                                            <code><a href="../classes/FacilityRoleAttributeDto.html" target="_self" >FacilityRoleAttributeDto[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>currentRoleAttributes</td>
+                                            <td>
+                                                        <code>FacilityRoleAttributeEntity[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>roleAttributeType</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/enumerations.html#RoleAttributeTypeEnum" target="_self" >RoleAttributeTypeEnum</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>[]</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { TransactionService } from &#x27;@diginexhk/nestjs-transaction&#x27;;
+import { Injectable } from &#x27;@nestjs/common&#x27;;
+import { FacilityRoleAttributeRepository } from &#x27;~role-attributes/repositories/facility-role-attribute.repository&#x27;;
+import { Dictionary, groupBy, keyBy, map, uniqBy } from &#x27;lodash&#x27;;
+import { AttributeRepository } from &#x27;~product-definitions/repositories/attribute.repository&#x27;;
+import { ValueRoleAttributeResponse } from &#x27;~role-attributes/response/value-role-attribute.response&#x27;;
+import { FacilityRoleAttributeEntity } from &#x27;~role-attributes/entities/facility-role-attribute.entity&#x27;;
+import { FindManyOptions, FindOptionsWhere } from &#x27;typeorm&#x27;;
+import { ValidateRoleAttributeService } from &#x27;./validate-role-attribute.service&#x27;;
+import { RoleAttributeRepository } from &#x27;~role-attributes/repositories/role-attribute.repository&#x27;;
+import { RoleAttributeTypeEnum } from &#x27;~role-attributes/enums/role-attribute-type.enum&#x27;;
+import { FieldCategoryEnum } from &#x27;~product-definitions/enums/field-category.enum&#x27;;
+import { LocationService } from &#x27;~locations/services/location.service&#x27;;
+import { AttributeEntity } from &#x27;~product-definitions/entities/attribute.entity&#x27;;
+import { FieldTypeEnum } from &#x27;~product-definitions/enums/field-type.enum&#x27;;
+import moment from &#x27;moment&#x27;;
+import { LOCATION } from &#x27;~role-attributes/constants/location.constant&#x27;;
+import { CreateFacilityRoleAttributesParam } from &#x27;~role-attributes/types/create-facility-role-attributes-param&#x27;;
+import { RoleAttributeEntity } from &#x27;~role-attributes/entities/role-attribute.entity&#x27;;
+import { FacilityRoleAttributeDto } from &#x27;~role-attributes/http/dto/facility-role-attribute.dto&#x27;;
+import { LocationMapped } from &#x27;~role-attributes/types/location-maped.type&#x27;;
+
+@Injectable()
+export class FacilityRoleAttributeService extends TransactionService {
+    public constructor(
+        private facilityRoleAttributeRepo: FacilityRoleAttributeRepository,
+        private attributeRepo: AttributeRepository,
+        private roleAttributeRepo: RoleAttributeRepository,
+        private validateRoleAttributeService: ValidateRoleAttributeService,
+        private locationService: LocationService
+    ) {
+        super();
+    }
+
+    find(options: FindManyOptions&lt;FacilityRoleAttributeEntity&gt;): Promise&lt;FacilityRoleAttributeEntity[]&gt; {
+        return this.facilityRoleAttributeRepo.find(options);
+    }
+
+    async createFacilityRoleAttributes({
+        roleId,
+        facilityId,
+        userId,
+        data,
+        hasUpdatedProfile
+    }: CreateFacilityRoleAttributesParam): Promise&lt;void&gt; {
+        const roleAttributes &#x3D; await this.findWithHasUpdatedProfile(roleId, hasUpdatedProfile);
+        const currentRoleAttributes &#x3D; await this.facilityRoleAttributeRepo.find({ where: { userId } });
+        await this.facilityRoleAttributeRepo.delete({ userId });
+        if (hasUpdatedProfile) {
+            data &#x3D; data.filter(
+                ({ roleAttributeType }) &#x3D;&gt; roleAttributeType &#x3D;&#x3D;&#x3D; RoleAttributeTypeEnum.ADDITIONAL_ATTRIBUTE
+            );
+        }
+
+        this.validateRoleAttributeService.validateDuplicatedAttributes(roleAttributes, data);
+
+        await Promise.all([
+            this.validateRoleAttributeService.checkRequiredAttributes(roleAttributes, data),
+            this.validateRoleAttributeService.validateAttributesValue(roleAttributes, data)
+        ]);
+
+        const mappedFacilityRoleAttributes &#x3D; groupBy(data, &#x27;roleAttributeType&#x27;);
+        const roleAttributeTypes &#x3D; Object.keys(mappedFacilityRoleAttributes) as RoleAttributeTypeEnum[];
+        const groupedRoleAttributes &#x3D; groupBy(roleAttributes, &#x27;roleAttributeType&#x27;);
+
+        await this.facilityRoleAttributeRepo.save(
+            roleAttributeTypes.map((roleAttributeType) &#x3D;&gt; {
+                const options &#x3D; mappedFacilityRoleAttributes[roleAttributeType];
+                const roleAttributes &#x3D; groupedRoleAttributes[roleAttributeType];
+                return {
+                    roleAttributeType,
+                    facilityId: roleAttributeType !&#x3D;&#x3D; RoleAttributeTypeEnum.ADDITIONAL_ATTRIBUTE ? facilityId : null,
+                    userId: roleAttributeType &#x3D;&#x3D;&#x3D; RoleAttributeTypeEnum.ADDITIONAL_ATTRIBUTE ? userId : null,
+                    options: this.prepareOptionData(roleAttributes, options, currentRoleAttributes, roleAttributeType)
+                };
+            })
+        );
+    }
+
+    private prepareOptionData(
+        roleAttributes: RoleAttributeEntity[],
+        options: FacilityRoleAttributeDto[],
+        currentRoleAttributes: FacilityRoleAttributeEntity[],
+        roleAttributeType: RoleAttributeTypeEnum
+    ): (FacilityRoleAttributeDto | ValueRoleAttributeResponse)[] {
+        const currentOptions &#x3D;
+            currentRoleAttributes.find((item) &#x3D;&gt; item.roleAttributeType &#x3D;&#x3D;&#x3D; roleAttributeType)?.options || [];
+        const uniqueOptions &#x3D; uniqBy([...options, ...currentOptions], (item) &#x3D;&gt; item.attributeId);
+        const mappedUniqueOptions &#x3D; keyBy(uniqueOptions, &#x27;attributeId&#x27;);
+
+        const missingRoleAttribues &#x3D; roleAttributes.reduce((acc, roleAttribute) &#x3D;&gt; {
+            if (!mappedUniqueOptions[roleAttribute.attributeId]) {
+                acc.push({
+                    attributeId: roleAttribute.attributeId,
+                    roleAttributeType: roleAttribute.roleAttributeType,
+                    value: null
+                });
+            }
+            return acc;
+        }, []);
+
+        return uniqueOptions.concat(missingRoleAttribues);
+    }
+
+    async getFacilityRoleAttributesByFacilityId(
+        facilityId: string,
+        userId: string,
+        roleId: string
+    ): Promise&lt;Dictionary&lt;ValueRoleAttributeResponse[]&gt;&gt; {
+        const roleAttributes &#x3D; await this.roleAttributeRepo.find({
+            where: { roleId }
+        });
+        const roleAttributeMap &#x3D; keyBy(roleAttributes, (roleAttribute) &#x3D;&gt; roleAttribute.attributeId);
+
+        const facilityRoleAttributes &#x3D; await this.facilityRoleAttributeRepo.find({
+            where: [{ facilityId }, { userId }]
+        });
+
+        const [countries, provinces, districts] &#x3D; await Promise.all([
+            this.locationService.listCountries(),
+            this.locationService.getListProvinces(),
+            this.locationService.getListDistricts()
+        ]);
+
+        const countryMap &#x3D; keyBy(countries, (country) &#x3D;&gt; country.id);
+        const provinceMap &#x3D; keyBy(provinces, (province) &#x3D;&gt; province.id);
+        const districtMap &#x3D; keyBy(districts, (district) &#x3D;&gt; district.id);
+
+        let valueRoleAttributes &#x3D; facilityRoleAttributes.flatMap(({ options }) &#x3D;&gt;
+            options.map((item) &#x3D;&gt; item)
+        ) as ValueRoleAttributeResponse[];
+
+        valueRoleAttributes &#x3D; await this.getValueRoleAttributes(valueRoleAttributes, roleAttributeMap, {
+            countryMap,
+            provinceMap,
+            districtMap
+        });
+        return groupBy(valueRoleAttributes, &#x27;roleAttributeType&#x27;);
+    }
+
+    private async getValueRoleAttributes(
+        valueRoleAttributes: ValueRoleAttributeResponse[],
+        roleAttributeMap: Dictionary&lt;RoleAttributeEntity&gt;,
+        locationMapped: LocationMapped
+    ): Promise&lt;ValueRoleAttributeResponse[]&gt; {
+        const attributes &#x3D; await this.attributeRepo.findByIds(map(valueRoleAttributes, &#x27;attributeId&#x27;));
+        const attributesKeyId &#x3D; keyBy(attributes, &#x27;id&#x27;);
+        let countryAttributeId &#x3D; &#x27;&#x27;;
+        let provinceAttributeId &#x3D; &#x27;&#x27;;
+
+        return valueRoleAttributes.map((item) &#x3D;&gt; {
+            const attribute &#x3D; attributesKeyId[item.attributeId];
+            const dataRoleAttribute: ValueRoleAttributeResponse &#x3D; {
+                ...item,
+                isOptional: roleAttributeMap[attribute.id]?.isOptional,
+                attribute
+            };
+            if (item.roleAttributeType &#x3D;&#x3D;&#x3D; RoleAttributeTypeEnum.OPEN_SUPPLY_HUB_ID) {
+                if (attribute.category &#x3D;&#x3D;&#x3D; FieldCategoryEnum.COUNTRY) {
+                    countryAttributeId &#x3D; attribute.id;
+                }
+                if (attribute.category &#x3D;&#x3D;&#x3D; FieldCategoryEnum.PROVINCE) {
+                    provinceAttributeId &#x3D; attribute.id;
+                    dataRoleAttribute.countryAttributeId &#x3D; countryAttributeId;
+                }
+                if (attribute.category &#x3D;&#x3D;&#x3D; FieldCategoryEnum.DISTRICT) {
+                    dataRoleAttribute.countryAttributeId &#x3D; countryAttributeId;
+                    dataRoleAttribute.provinceAttributeId &#x3D; provinceAttributeId;
+                }
+            }
+            return {
+                ...dataRoleAttribute,
+                label: this.getAttributeLabel(attribute, item, locationMapped)
+            };
+        });
+    }
+
+    private getAttributeLabel(
+        attribute: AttributeEntity,
+        option: ValueRoleAttributeResponse,
+        metadata: LocationMapped
+    ): any {
+        const { value } &#x3D; option;
+
+        if (attribute.category &#x3D;&#x3D;&#x3D; FieldCategoryEnum.DATE) {
+            return this.getTimeLabel(option);
+        }
+
+        if (attribute.category &#x3D;&#x3D;&#x3D; FieldCategoryEnum.ATTACHMENTS) {
+            return this.getAttachmentLabel(option);
+        }
+
+        const { countryMap, districtMap, provinceMap } &#x3D; metadata;
+
+        if (attribute.category &#x3D;&#x3D;&#x3D; FieldCategoryEnum.COUNTRY_PROVINCE_DISTRICT) {
+            if (!value) {
+                return &#x27;&#x27;;
+            }
+
+            const country &#x3D; countryMap[value.countryId]?.country;
+            const province &#x3D; provinceMap[value.provinceId]?.province;
+            const district &#x3D; districtMap[value.districtId]?.district;
+
+            return &#x60;${country}, ${district}, ${province}&#x60;;
+        }
+
+        if (attribute.type &#x3D;&#x3D;&#x3D; FieldTypeEnum.OPEN_SUPPLY_HUB_ID) {
+            switch (attribute.name) {
+                case LOCATION.COUNTRY:
+                    return countryMap[value]?.country;
+                case LOCATION.PROVINCE_STATE:
+                    return provinceMap[value]?.province;
+                case LOCATION.DISTRICT:
+                    return districtMap[value]?.district;
+            }
+        }
+
+        if (attribute.type &#x3D;&#x3D;&#x3D; FieldTypeEnum.RMI_CID &amp;&amp; attribute.category &#x3D;&#x3D;&#x3D; FieldCategoryEnum.COUNTRY) {
+            return countryMap[value]?.country;
+        }
+
+        return value;
+    }
+
+    private getTimeLabel({ value }: ValueRoleAttributeResponse): string {
+        if (!value) {
+            return null;
+        }
+
+        return moment.unix(value).local().format(&#x27;DD/MM/YYYY HH:mm&#x27;);
+    }
+
+    private getAttachmentLabel({ value }: ValueRoleAttributeResponse): string {
+        if (!value?.length) {
+            return &#x27;&#x27;;
+        }
+
+        return value.reduce((acc, { fileName }, index) &#x3D;&gt; {
+            if (index &#x3D;&#x3D;&#x3D; value.length - 1) {
+                acc &#x3D; acc + fileName;
+            } else {
+                acc &#x3D; acc + fileName + &#x27; \n &#x27;;
+            }
+
+            return acc;
+        }, &#x27;&#x27;) as string;
+    }
+
+    isExists(conditions: FindManyOptions&lt;FacilityRoleAttributeEntity&gt;): Promise&lt;boolean&gt; {
+        return this.facilityRoleAttributeRepo.exist(conditions);
+    }
+
+    private findWithHasUpdatedProfile(
+        roleId: string,
+        hasUpdatedProfile: boolean &#x3D; false
+    ): Promise&lt;RoleAttributeEntity[]&gt; {
+        const findOptionsWhere: FindOptionsWhere&lt;RoleAttributeEntity&gt; &#x3D; {};
+        if (hasUpdatedProfile) {
+            findOptionsWhere[&#x27;roleAttributeType&#x27;] &#x3D; RoleAttributeTypeEnum.ADDITIONAL_ATTRIBUTE;
+        }
+
+        return this.roleAttributeRepo.find({
+            relations: [&#x27;attribute&#x27;],
+            where: { ...findOptionsWhere, roleId }
+        });
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'FacilityRoleAttributeService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

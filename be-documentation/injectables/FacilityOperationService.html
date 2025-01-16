@@ -1,0 +1,1335 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Global Trace BE documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">Global Trace BE documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Injectables</li>
+  <li class="breadcrumb-item" >FacilityOperationService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/facilities/services/facility-operation.service.ts</code>
+        </p>
+
+
+
+
+
+            <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#findDataForMapExternalInfo" >findDataForMapExternalInfo</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getDataFacility" >getDataFacility</a>
+                            </li>
+                            <li>
+                                <a href="#getFacilityInformationByOSH" >getFacilityInformationByOSH</a>
+                            </li>
+                            <li>
+                                <a href="#getFacilityInformationByRMI" >getFacilityInformationByRMI</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getValueByAttributeName" >getValueByAttributeName</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#mapDataFarmItems" >mapDataFarmItems</a>
+                            </li>
+                            <li>
+                                <a href="#mapWithAllExternalInfo" >mapWithAllExternalInfo</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#mapWithEachExternalInfo" >mapWithEachExternalInfo</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#prepareFarmItem" >prepareFarmItem</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(locationService: <a href="../injectables/LocationService.html" target="_self">LocationService</a>, facilityRoleAttributeService: <a href="../injectables/FacilityRoleAttributeService.html" target="_self">FacilityRoleAttributeService</a>, attributeService: <a href="../injectables/AttributeService.html" target="_self">AttributeService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/facilities/services/facility-operation.service.ts:26</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>locationService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/LocationService.html" target="_self" >LocationService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>facilityRoleAttributeService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/FacilityRoleAttributeService.html" target="_self" >FacilityRoleAttributeService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>attributeService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AttributeService.html" target="_self" >AttributeService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findDataForMapExternalInfo"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>findDataForMapExternalInfo</b></span>
+                        <a href="#findDataForMapExternalInfo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>findDataForMapExternalInfo(tracedSupplierIds: string[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="170"
+                                    class="link-to-prism">src/facilities/services/facility-operation.service.ts:170</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>tracedSupplierIds</td>
+                                            <td>
+                                                        <code>string[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;DataForMapExternalInfo&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getDataFacility"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>getDataFacility</b></span>
+                        <a href="#getDataFacility"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getDataFacility(dto: <a href="../classes/ImportFacilityGroupDto.html" target="_self">ImportFacilityGroupDto</a>, data: <a href="../undefineds/InstructionExcelType.html" target="_self">InstructionExcelType</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="33"
+                                    class="link-to-prism">src/facilities/services/facility-operation.service.ts:33</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>dto</td>
+                                            <td>
+                                                            <code><a href="../classes/ImportFacilityGroupDto.html" target="_self" >ImportFacilityGroupDto</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>data</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#InstructionExcelType" target="_self" >InstructionExcelType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/FacilityEntity.html" target="_self" >Promise&lt;Partial&lt;FacilityEntity&gt;&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getFacilityInformationByOSH"></a>
+                    <span class="name">
+                        <span ><b>getFacilityInformationByOSH</b></span>
+                        <a href="#getFacilityInformationByOSH"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getFacilityInformationByOSH(openSupplyHubAttributes: <a href="../classes/FacilityRoleAttributeDto.html" target="_self">FacilityRoleAttributeDto[]</a>, mappedExistedRoleAttributes: Dictionary<RoleAttributeEntity>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="134"
+                                    class="link-to-prism">src/facilities/services/facility-operation.service.ts:134</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>openSupplyHubAttributes</td>
+                                            <td>
+                                                            <code><a href="../classes/FacilityRoleAttributeDto.html" target="_self" >FacilityRoleAttributeDto[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>mappedExistedRoleAttributes</td>
+                                            <td>
+                                                        <code>Dictionary&lt;RoleAttributeEntity&gt;</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#FacilityInformation" target="_self" >FacilityInformation</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getFacilityInformationByRMI"></a>
+                    <span class="name">
+                        <span ><b>getFacilityInformationByRMI</b></span>
+                        <a href="#getFacilityInformationByRMI"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getFacilityInformationByRMI(rMIAttributes: <a href="../classes/FacilityRoleAttributeDto.html" target="_self">FacilityRoleAttributeDto[]</a>, mappedExistedRoleAttributes: Dictionary<RoleAttributeEntity>, facilityInformation: <a href="../undefineds/FacilityInformation.html" target="_self">FacilityInformation</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="111"
+                                    class="link-to-prism">src/facilities/services/facility-operation.service.ts:111</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>rMIAttributes</td>
+                                            <td>
+                                                            <code><a href="../classes/FacilityRoleAttributeDto.html" target="_self" >FacilityRoleAttributeDto[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>mappedExistedRoleAttributes</td>
+                                            <td>
+                                                        <code>Dictionary&lt;RoleAttributeEntity&gt;</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>facilityInformation</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#FacilityInformation" target="_self" >FacilityInformation</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#FacilityInformation" target="_self" >FacilityInformation</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getValueByAttributeName"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>getValueByAttributeName</b></span>
+                        <a href="#getValueByAttributeName"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getValueByAttributeName(value: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, attributeName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, dataForMapExternalInfo: <a href="../undefineds/DataForMapExternalInfo.html" target="_self">DataForMapExternalInfo</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="226"
+                                    class="link-to-prism">src/facilities/services/facility-operation.service.ts:226</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>value</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>attributeName</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>dataForMapExternalInfo</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#DataForMapExternalInfo" target="_self" >DataForMapExternalInfo</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="mapDataFarmItems"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>mapDataFarmItems</b></span>
+                        <a href="#mapDataFarmItems"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>mapDataFarmItems(dataArray: <a href="../undefineds/FarmLevelRiskExcelData.html" target="_self">FarmLevelRiskExcelData[]</a>, facility: <a href="../entitys/FacilityEntity.html" target="_self">FacilityEntity</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="51"
+                                    class="link-to-prism">src/facilities/services/facility-operation.service.ts:51</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>dataArray</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#FarmLevelRiskExcelData" target="_self" >FarmLevelRiskExcelData[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>facility</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >FacilityEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;Partial[]&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="mapWithAllExternalInfo"></a>
+                    <span class="name">
+                        <span ><b>mapWithAllExternalInfo</b></span>
+                        <a href="#mapWithAllExternalInfo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>mapWithAllExternalInfo(supplier: <a href="../entitys/FacilityEntity.html" target="_self">FacilityEntity</a>, dataForMapExternalInfo: <a href="../undefineds/DataForMapExternalInfo.html" target="_self">DataForMapExternalInfo</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="196"
+                                    class="link-to-prism">src/facilities/services/facility-operation.service.ts:196</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>supplier</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >FacilityEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>dataForMapExternalInfo</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#DataForMapExternalInfo" target="_self" >DataForMapExternalInfo</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="mapWithEachExternalInfo"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>mapWithEachExternalInfo</b></span>
+                        <a href="#mapWithEachExternalInfo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>mapWithEachExternalInfo(options: ValueRoleAttributeResponse[], dataForMapExternalInfo: <a href="../undefineds/DataForMapExternalInfo.html" target="_self">DataForMapExternalInfo</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="212"
+                                    class="link-to-prism">src/facilities/services/facility-operation.service.ts:212</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>options</td>
+                                            <td>
+                                                        <code>ValueRoleAttributeResponse[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>dataForMapExternalInfo</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#DataForMapExternalInfo" target="_self" >DataForMapExternalInfo</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#ExternalInfo" target="_self" >ExternalInfo[]</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="prepareFarmItem"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>prepareFarmItem</b></span>
+                        <a href="#prepareFarmItem"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>prepareFarmItem(facility: <a href="../entitys/FacilityEntity.html" target="_self">FacilityEntity</a>, data: <a href="../undefineds/FarmLevelRiskExcelData.html" target="_self">FarmLevelRiskExcelData</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="69"
+                                    class="link-to-prism">src/facilities/services/facility-operation.service.ts:69</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>facility</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >FacilityEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>data</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#FarmLevelRiskExcelData" target="_self" >FarmLevelRiskExcelData</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/FacilityEntity.html" target="_self" >Promise&lt;Partial&lt;FacilityEntity&gt;&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@nestjs/common&#x27;;
+import { FarmLevelRiskExcelData } from &#x27;~facilities/types/facility-groups/xlsx-farm-level-risk-data.type&#x27;;
+import { FacilityEntity } from &#x27;~facilities/entities/facility.entity&#x27;;
+import { Dictionary, groupBy, keyBy, omit } from &#x27;lodash&#x27;;
+import { FarmCertificationEnum } from &#x27;~facilities/enums/farm-certification.enum&#x27;;
+import { LocationService } from &#x27;~locations/services/location.service&#x27;;
+import { InstructionExcelType } from &#x27;~facilities/types/facility-groups/instruction-excel.type&#x27;;
+import { AdditionalRoleEnum } from &#x27;~facilities/enums/additional-role.enum&#x27;;
+import { ImportFacilityGroupDto } from &#x27;~facilities/http/dto/import-facility-group.dto&#x27;;
+import { convertDateToTimestamp } from &#x27;~core/helpers/time.helper&#x27;;
+import { FacilityRoleAttributeDto } from &#x27;~role-attributes/http/dto/facility-role-attribute.dto&#x27;;
+import { RoleAttributeEntity } from &#x27;~role-attributes/entities/role-attribute.entity&#x27;;
+import { FacilityInformation } from &#x27;~facilities/types/geographic-information.type&#x27;;
+import { GeographicInformationEnum } from &#x27;~role-attributes/enums/geographic-information.enum&#x27;;
+import { DataForMapExternalInfo } from &#x27;~pdf-exports/types/data-for-map-external-infor.type&#x27;;
+import { ExternalInfo } from &#x27;~facilities/types/external-info.type&#x27;;
+import { ValueRoleAttributeResponse } from &#x27;~role-attributes/response/value-role-attribute.response&#x27;;
+import { LOCATION } from &#x27;~role-attributes/constants/location.constant&#x27;;
+import { RoleAttributeTypeEnum } from &#x27;~role-attributes/enums/role-attribute-type.enum&#x27;;
+import { In } from &#x27;typeorm&#x27;;
+import { FieldTypeEnum } from &#x27;~product-definitions/enums/field-type.enum&#x27;;
+import { FacilityRoleAttributeService } from &#x27;~role-attributes/services/facility-role-attribute.service&#x27;;
+import { AttributeService } from &#x27;~product-definitions/services/attribute.service&#x27;;
+
+@Injectable()
+export class FacilityOperationService {
+    constructor(
+        private locationService: LocationService,
+        private facilityRoleAttributeService: FacilityRoleAttributeService,
+        private attributeService: AttributeService
+    ) {}
+
+    async getDataFacility(dto: ImportFacilityGroupDto, data: InstructionExcelType): Promise&lt;Partial&lt;FacilityEntity&gt;&gt; {
+        const country &#x3D; await this.locationService.findCountry({ country: data.country });
+        const province &#x3D; await this.locationService.findProvince({ province: data.province, countryId: country.id });
+        const district &#x3D; await this.locationService.findDistrict({ district: data.district, provinceId: province.id });
+
+        return {
+            typeId: dto.roleId,
+            name: data.farmGroupName,
+            districtId: district.id,
+            provinceId: province.id,
+            countryId: country.id,
+            additionalRole: AdditionalRoleEnum.FARM_GROUP,
+            facilityGroupFileId: dto.fileId,
+            farmId: data.farmGroupId,
+            additionalInformation: { areas: data.areas }
+        };
+    }
+
+    async mapDataFarmItems(
+        dataArray: FarmLevelRiskExcelData[],
+        facility: FacilityEntity
+    ): Promise&lt;Partial&lt;FacilityEntity&gt;[]&gt; {
+        const chunkSize &#x3D; 20;
+        const farms &#x3D; [];
+
+        for (let i &#x3D; 0; i &lt; dataArray.length; i +&#x3D; chunkSize) {
+            const chunkData &#x3D; dataArray.slice(i, i + chunkSize);
+            const farmItems: Partial&lt;FacilityEntity&gt;[] &#x3D; await Promise.all(
+                chunkData.map((data: FarmLevelRiskExcelData) &#x3D;&gt; this.prepareFarmItem(facility, data))
+            );
+
+            farms.push(...farmItems);
+        }
+        return farms;
+    }
+
+    private async prepareFarmItem(
+        facility: FacilityEntity,
+        data: FarmLevelRiskExcelData
+    ): Promise&lt;Partial&lt;FacilityEntity&gt;&gt; {
+        const {
+            id,
+            certification,
+            farmName,
+            businessRegisterNumber,
+            certificationExpiredDate,
+            tehsil,
+            firstNameContactor,
+            lastNameContactor,
+            contactPhoneNumber
+        } &#x3D; data;
+
+        return omit(
+            {
+                farmGroupId: facility.id,
+                name: farmName,
+                businessRegisterNumber,
+                typeId: facility.typeId,
+                countryId: facility.countryId,
+                provinceId: facility.provinceId,
+                districtId: facility.districtId,
+                certification: (certification ? certification : null) as FarmCertificationEnum,
+                facilityGroupFileId: facility.facilityGroupFileId,
+                farmId: &#x60;${facility.farmId}-${id}&#x60;,
+                certificationExpiredDate: certificationExpiredDate
+                    ? convertDateToTimestamp(certificationExpiredDate)
+                    : null,
+                additionalInformation: {
+                    tehsil,
+                    firstNameContactor,
+                    lastNameContactor,
+                    contactPhoneNumber
+                }
+            },
+            id ? [] : [&#x27;id&#x27;]
+        );
+    }
+
+    getFacilityInformationByRMI(
+        rMIAttributes: FacilityRoleAttributeDto[],
+        mappedExistedRoleAttributes: Dictionary&lt;RoleAttributeEntity&gt;,
+        facilityInformation: FacilityInformation
+    ): FacilityInformation {
+        for (const rMIAttribute of rMIAttributes) {
+            const existedRoleAttribute &#x3D; mappedExistedRoleAttributes[rMIAttribute.attributeId];
+            if (!existedRoleAttribute) {
+                continue;
+            }
+
+            if (!facilityInformation.name &amp;&amp; existedRoleAttribute.attribute.name &#x3D;&#x3D;&#x3D; &#x27;Facility name&#x27;) {
+                facilityInformation[&#x27;name&#x27;] &#x3D; rMIAttribute.value;
+            }
+
+            if (!facilityInformation.countryId &amp;&amp; existedRoleAttribute.attribute.name &#x3D;&#x3D;&#x3D; &#x27;Country location&#x27;) {
+                facilityInformation[&#x27;countryId&#x27;] &#x3D; rMIAttribute.value;
+            }
+        }
+
+        return facilityInformation;
+    }
+
+    getFacilityInformationByOSH(
+        openSupplyHubAttributes: FacilityRoleAttributeDto[],
+        mappedExistedRoleAttributes: Dictionary&lt;RoleAttributeEntity&gt;
+    ): FacilityInformation {
+        const facilityInformation: FacilityInformation &#x3D; {};
+        for (const openSupplyHubAttribute of openSupplyHubAttributes) {
+            const existedRoleAttribute &#x3D; mappedExistedRoleAttributes[openSupplyHubAttribute.attributeId];
+            if (!existedRoleAttribute) {
+                continue;
+            }
+
+            switch (existedRoleAttribute.attribute.name) {
+                case GeographicInformationEnum.COUNTRY:
+                    facilityInformation[&#x27;countryId&#x27;] &#x3D; openSupplyHubAttribute.value;
+                    break;
+                case GeographicInformationEnum.PROVINCE:
+                    facilityInformation[&#x27;provinceId&#x27;] &#x3D; openSupplyHubAttribute.value;
+                    break;
+                case GeographicInformationEnum.DISTRICT:
+                    facilityInformation[&#x27;districtId&#x27;] &#x3D; openSupplyHubAttribute.value;
+                    break;
+                case GeographicInformationEnum.ADDRESS:
+                    facilityInformation[&#x27;address&#x27;] &#x3D; openSupplyHubAttribute.value;
+                    break;
+                case &#x27;Business Name&#x27;:
+                    facilityInformation[&#x27;name&#x27;] &#x3D; openSupplyHubAttribute.value;
+                    break;
+                case &#x27;OS ID&#x27;:
+                    facilityInformation[&#x27;oarId&#x27;] &#x3D; openSupplyHubAttribute.value;
+                    break;
+            }
+        }
+
+        return facilityInformation;
+    }
+
+    async findDataForMapExternalInfo(tracedSupplierIds: string[]): Promise&lt;DataForMapExternalInfo&gt; {
+        const [countries, provinces, districts, facilityRoleAttributes, attributes] &#x3D; await Promise.all([
+            this.locationService.listCountries(),
+            this.locationService.getListProvinces(),
+            this.locationService.getListDistricts(),
+            this.facilityRoleAttributeService.find({
+                select: [&#x27;facilityId&#x27;, &#x27;options&#x27;, &#x27;roleAttributeType&#x27;],
+                where: {
+                    facilityId: In(tracedSupplierIds),
+                    roleAttributeType: In([RoleAttributeTypeEnum.RMI_CID, RoleAttributeTypeEnum.OPEN_SUPPLY_HUB_ID])
+                }
+            }),
+            this.attributeService.find({
+                where: { type: In([FieldTypeEnum.OPEN_SUPPLY_HUB_ID, FieldTypeEnum.RMI_CID]) }
+            })
+        ]);
+
+        return {
+            countryMap: keyBy(countries, (country) &#x3D;&gt; country.id),
+            provinceMap: keyBy(provinces, (province) &#x3D;&gt; province.id),
+            districtMap: keyBy(districts, (district) &#x3D;&gt; district.id),
+            attributesMap: keyBy(attributes, &#x27;id&#x27;),
+            facilityRoleAttributesGroup: groupBy(facilityRoleAttributes, &#x27;facilityId&#x27;)
+        };
+    }
+
+    mapWithAllExternalInfo(supplier: FacilityEntity, dataForMapExternalInfo: DataForMapExternalInfo): void {
+        const { facilityRoleAttributesGroup } &#x3D; dataForMapExternalInfo;
+        const facilityRoleAttributes &#x3D; facilityRoleAttributesGroup[supplier.id] || [];
+        if (!facilityRoleAttributes.length) {
+            return;
+        }
+
+        supplier.identifierSystem &#x3D; {};
+        for (const { options, roleAttributeType } of facilityRoleAttributes) {
+            supplier.identifierSystem[roleAttributeType] &#x3D; this.mapWithEachExternalInfo(
+                options,
+                dataForMapExternalInfo
+            );
+        }
+    }
+
+    private mapWithEachExternalInfo(
+        options: ValueRoleAttributeResponse[],
+        dataForMapExternalInfo: DataForMapExternalInfo
+    ): ExternalInfo[] {
+        const { attributesMap } &#x3D; dataForMapExternalInfo;
+        return options.map(({ attributeId, value }) &#x3D;&gt; {
+            const attribute &#x3D; attributesMap[attributeId];
+            return {
+                name: attribute.name,
+                value: this.getValueByAttributeName(value, attribute.name, dataForMapExternalInfo)
+            };
+        });
+    }
+
+    private getValueByAttributeName(
+        value: string,
+        attributeName: string,
+        dataForMapExternalInfo: DataForMapExternalInfo
+    ): string {
+        const { countryMap, provinceMap, districtMap } &#x3D; dataForMapExternalInfo;
+        switch (attributeName) {
+            case LOCATION.COUNTRY:
+                return countryMap[value]?.country;
+            case LOCATION.PROVINCE_STATE:
+                return provinceMap[value]?.province;
+            case LOCATION.DISTRICT:
+                return districtMap[value]?.district;
+            default:
+                return value;
+        }
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'FacilityOperationService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

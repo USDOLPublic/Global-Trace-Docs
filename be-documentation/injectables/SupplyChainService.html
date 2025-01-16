@@ -1,0 +1,2463 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Global Trace BE documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">Global Trace BE documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Injectables</li>
+  <li class="breadcrumb-item" >SupplyChainService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/supply-chains/services/supply-chain.service.ts</code>
+        </p>
+
+
+
+            <p class="comment">
+                <h3>Extends</h3>
+            </p>
+            <p class="comment">
+                        <code>TransactionService</code>
+            </p>
+
+
+            <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#addSupplyChainNode" >addSupplyChainNode</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#addSupplyChainNodes" >addSupplyChainNodes</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#deleteByOption" >deleteByOption</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#doesBuyFromRawMaterialExtractor" >doesBuyFromRawMaterialExtractor</a>
+                            </li>
+                            <li>
+                                <a href="#exists" >exists</a>
+                            </li>
+                            <li>
+                                <a href="#find" >find</a>
+                            </li>
+                            <li>
+                                <a href="#findOneBy" >findOneBy</a>
+                            </li>
+                            <li>
+                                <a href="#findSupplyChainMetadata" >findSupplyChainMetadata</a>
+                            </li>
+                            <li>
+                                <a href="#findSupplyChainNode" >findSupplyChainNode</a>
+                            </li>
+                            <li>
+                                <a href="#findSupplyChainNodeBy" >findSupplyChainNodeBy</a>
+                            </li>
+                            <li>
+                                <a href="#findSupplyChainNodes" >findSupplyChainNodes</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getBrandTierIds" >getBrandTierIds</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getLines" >getLines</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getPartnerRoleIds" >getPartnerRoleIds</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getRawMaterialExtractorRole" >getRawMaterialExtractorRole</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getRawMaterialExtractorRoles" >getRawMaterialExtractorRoles</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getRoleIdsAllowSaleAndAllowPurchase" >getRoleIdsAllowSaleAndAllowPurchase</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getRolesOfPreviousNodes" >getRolesOfPreviousNodes</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getRolesOrder" >getRolesOrder</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getSupplyChain" >getSupplyChain</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#isOutputOfSecondNode" >isOutputOfSecondNode</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#updateSupplyChainNode" >updateSupplyChainNode</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#validatePurchaseRole" >validatePurchaseRole</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#validateSaleRole" >validateSaleRole</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#validateSupplyChainNode" >validateSupplyChainNode</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(supplyChainNodeRepo: <a href="../classes/SupplyChainNodeRepository.html" target="_self">SupplyChainNodeRepository</a>, rolePermissionService: <a href="../injectables/RolePermissionService.html" target="_self">RolePermissionService</a>, roleService: <a href="../injectables/RoleService.html" target="_self">RoleService</a>, supplyChainNodeMetadataRepo: <a href="../classes/SupplyChainNodeMetadataRepository.html" target="_self">SupplyChainNodeMetadataRepository</a>, supplyChainNodeService: <a href="../injectables/SupplyChainNodeService.html" target="_self">SupplyChainNodeService</a>, supplyChainMetaDataService: <a href="../injectables/SupplyChainMetaDataService.html" target="_self">SupplyChainMetaDataService</a>, supplyChainTierService: <a href="../injectables/SupplyChainTierService.html" target="_self">SupplyChainTierService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/supply-chains/services/supply-chain.service.ts:28</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>supplyChainNodeRepo</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../classes/SupplyChainNodeRepository.html" target="_self" >SupplyChainNodeRepository</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>rolePermissionService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/RolePermissionService.html" target="_self" >RolePermissionService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>roleService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/RoleService.html" target="_self" >RoleService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>supplyChainNodeMetadataRepo</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../classes/SupplyChainNodeMetadataRepository.html" target="_self" >SupplyChainNodeMetadataRepository</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>supplyChainNodeService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SupplyChainNodeService.html" target="_self" >SupplyChainNodeService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>supplyChainMetaDataService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SupplyChainMetaDataService.html" target="_self" >SupplyChainMetaDataService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>supplyChainTierService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SupplyChainTierService.html" target="_self" >SupplyChainTierService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addSupplyChainNode"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>addSupplyChainNode</b></span>
+                        <a href="#addSupplyChainNode"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>addSupplyChainNode(dto: <a href="../classes/AddSupplyChainNodeDto.html" target="_self">AddSupplyChainNodeDto</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="41"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain.service.ts:41</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>dto</td>
+                                            <td>
+                                                            <code><a href="../classes/AddSupplyChainNodeDto.html" target="_self" >AddSupplyChainNodeDto</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#SupplyChainNodeMapping" target="_self" >Promise&lt;SupplyChainNodeMapping&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addSupplyChainNodes"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>addSupplyChainNodes</b></span>
+                        <a href="#addSupplyChainNodes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>addSupplyChainNodes(dto: <a href="../classes/AddSupplyChainNodesDto.html" target="_self">AddSupplyChainNodesDto</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="58"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain.service.ts:58</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>dto</td>
+                                            <td>
+                                                            <code><a href="../classes/AddSupplyChainNodesDto.html" target="_self" >AddSupplyChainNodesDto</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#SupplyChainNodeMapping" target="_self" >Promise&lt;SupplyChainNodeMapping[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteByOption"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>deleteByOption</b></span>
+                        <a href="#deleteByOption"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>deleteByOption(option: <a href="../entitys/SupplyChainNodeMetadataEntity.html" target="_self">FindOneOptions&lt;SupplyChainNodeMetadataEntity&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="155"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain.service.ts:155</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>option</td>
+                                            <td>
+                                                            <code><a href="../entitys/SupplyChainNodeMetadataEntity.html" target="_self" >FindOneOptions&lt;SupplyChainNodeMetadataEntity&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="doesBuyFromRawMaterialExtractor"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>doesBuyFromRawMaterialExtractor</b></span>
+                        <a href="#doesBuyFromRawMaterialExtractor"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>doesBuyFromRawMaterialExtractor(roleId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="243"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain.service.ts:243</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>roleId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;boolean&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="exists"></a>
+                    <span class="name">
+                        <span ><b>exists</b></span>
+                        <a href="#exists"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>exists(options: <a href="../entitys/SupplyChainNodeEntity.html" target="_self">FindManyOptions&lt;SupplyChainNodeEntity&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="317"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain.service.ts:317</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>options</td>
+                                            <td>
+                                                            <code><a href="../entitys/SupplyChainNodeEntity.html" target="_self" >FindManyOptions&lt;SupplyChainNodeEntity&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;boolean&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="find"></a>
+                    <span class="name">
+                        <span ><b>find</b></span>
+                        <a href="#find"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>find(options: <a href="../entitys/SupplyChainNodeEntity.html" target="_self">FindManyOptions&lt;SupplyChainNodeEntity&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="297"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain.service.ts:297</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>options</td>
+                                            <td>
+                                                            <code><a href="../entitys/SupplyChainNodeEntity.html" target="_self" >FindManyOptions&lt;SupplyChainNodeEntity&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/SupplyChainNodeEntity.html" target="_self" >Promise&lt;SupplyChainNodeEntity[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findOneBy"></a>
+                    <span class="name">
+                        <span ><b>findOneBy</b></span>
+                        <a href="#findOneBy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>findOneBy(options: <a href="../entitys/SupplyChainNodeMetadataEntity.html" target="_self">FindOptionsWhere&lt;SupplyChainNodeMetadataEntity&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="301"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain.service.ts:301</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>options</td>
+                                            <td>
+                                                            <code><a href="../entitys/SupplyChainNodeMetadataEntity.html" target="_self" >FindOptionsWhere&lt;SupplyChainNodeMetadataEntity&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/SupplyChainNodeMetadataEntity.html" target="_self" >Promise&lt;SupplyChainNodeMetadataEntity&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findSupplyChainMetadata"></a>
+                    <span class="name">
+                        <span ><b>findSupplyChainMetadata</b></span>
+                        <a href="#findSupplyChainMetadata"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>findSupplyChainMetadata(roleId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="281"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain.service.ts:281</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>roleId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/SupplyChainNodeMetadataEntity.html" target="_self" >Promise&lt;SupplyChainNodeMetadataEntity&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findSupplyChainNode"></a>
+                    <span class="name">
+                        <span ><b>findSupplyChainNode</b></span>
+                        <a href="#findSupplyChainNode"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>findSupplyChainNode(options: <a href="../entitys/SupplyChainNodeEntity.html" target="_self">FindOneOptions&lt;SupplyChainNodeEntity&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="277"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain.service.ts:277</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>options</td>
+                                            <td>
+                                                            <code><a href="../entitys/SupplyChainNodeEntity.html" target="_self" >FindOneOptions&lt;SupplyChainNodeEntity&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/SupplyChainNodeEntity.html" target="_self" >Promise&lt;SupplyChainNodeEntity&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findSupplyChainNodeBy"></a>
+                    <span class="name">
+                        <span ><b>findSupplyChainNodeBy</b></span>
+                        <a href="#findSupplyChainNodeBy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>findSupplyChainNodeBy(where: <a href="../entitys/SupplyChainNodeEntity.html" target="_self">FindOptionsWhere&lt;SupplyChainNodeEntity&gt; | FindOptionsWhere&lt;SupplyChainNodeEntity&gt;[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="285"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain.service.ts:285</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>where</td>
+                                            <td>
+                                                            <code><a href="../entitys/SupplyChainNodeEntity.html" target="_self" >FindOptionsWhere&lt;SupplyChainNodeEntity&gt; | FindOptionsWhere&lt;SupplyChainNodeEntity&gt;[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/SupplyChainNodeEntity.html" target="_self" >Promise&lt;SupplyChainNodeEntity&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findSupplyChainNodes"></a>
+                    <span class="name">
+                        <span ><b>findSupplyChainNodes</b></span>
+                        <a href="#findSupplyChainNodes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>findSupplyChainNodes(where: <a href="../entitys/SupplyChainNodeEntity.html" target="_self">FindOptionsWhere&lt;SupplyChainNodeEntity&gt; | FindOptionsWhere&lt;SupplyChainNodeEntity&gt;[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="291"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain.service.ts:291</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>where</td>
+                                            <td>
+                                                            <code><a href="../entitys/SupplyChainNodeEntity.html" target="_self" >FindOptionsWhere&lt;SupplyChainNodeEntity&gt; | FindOptionsWhere&lt;SupplyChainNodeEntity&gt;[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/SupplyChainNodeEntity.html" target="_self" >Promise&lt;SupplyChainNodeEntity[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getBrandTierIds"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>getBrandTierIds</b></span>
+                        <a href="#getBrandTierIds"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getBrandTierIds(role: <a href="../entitys/RoleEntity.html" target="_self">RoleEntity</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="321"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain.service.ts:321</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>role</td>
+                                            <td>
+                                                            <code><a href="../entitys/RoleEntity.html" target="_self" >RoleEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;string[]&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getLines"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>getLines</b></span>
+                        <a href="#getLines"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getLines(supplyChainNodes: <a href="../entitys/SupplyChainNodeEntity.html" target="_self">SupplyChainNodeEntity[]</a>, metadataList: <a href="../entitys/SupplyChainNodeMetadataEntity.html" target="_self">SupplyChainNodeMetadataEntity[]</a>, roleIdsAllowSale: string[], roleIdsAllowPurchase: string[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="194"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain.service.ts:194</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>supplyChainNodes</td>
+                                            <td>
+                                                            <code><a href="../entitys/SupplyChainNodeEntity.html" target="_self" >SupplyChainNodeEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>metadataList</td>
+                                            <td>
+                                                            <code><a href="../entitys/SupplyChainNodeMetadataEntity.html" target="_self" >SupplyChainNodeMetadataEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>roleIdsAllowSale</td>
+                                            <td>
+                                                        <code>string[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>roleIdsAllowPurchase</td>
+                                            <td>
+                                                        <code>string[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Line[]</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPartnerRoleIds"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>getPartnerRoleIds</b></span>
+                        <a href="#getPartnerRoleIds"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getPartnerRoleIds(roleId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="218"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain.service.ts:218</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>roleId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;string[]&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getRawMaterialExtractorRole"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>getRawMaterialExtractorRole</b></span>
+                        <a href="#getRawMaterialExtractorRole"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getRawMaterialExtractorRole(roleId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="256"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain.service.ts:256</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>roleId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/RoleEntity.html" target="_self" >Promise&lt;RoleEntity&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getRawMaterialExtractorRoles"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>getRawMaterialExtractorRoles</b></span>
+                        <a href="#getRawMaterialExtractorRoles"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getRawMaterialExtractorRoles()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="272"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain.service.ts:272</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/RoleEntity.html" target="_self" >Promise&lt;RoleEntity[]&gt;</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getRoleIdsAllowSaleAndAllowPurchase"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>getRoleIdsAllowSaleAndAllowPurchase</b></span>
+                        <a href="#getRoleIdsAllowSaleAndAllowPurchase"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getRoleIdsAllowSaleAndAllowPurchase()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="187"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain.service.ts:187</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;&gt;</code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getRolesOfPreviousNodes"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>getRolesOfPreviousNodes</b></span>
+                        <a href="#getRolesOfPreviousNodes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getRolesOfPreviousNodes(roleId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="248"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain.service.ts:248</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>roleId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/RoleEntity.html" target="_self" >Promise&lt;RoleEntity[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getRolesOrder"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>getRolesOrder</b></span>
+                        <a href="#getRolesOrder"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getRolesOrder()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="305"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain.service.ts:305</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;literal type&gt;</code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSupplyChain"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>getSupplyChain</b></span>
+                        <a href="#getSupplyChain"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getSupplyChain()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="163"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain.service.ts:163</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#SupplyChainMapping" target="_self" >Promise&lt;SupplyChainMapping[]&gt;</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isOutputOfSecondNode"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>isOutputOfSecondNode</b></span>
+                        <a href="#isOutputOfSecondNode"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>isOutputOfSecondNode(outputProductDefinitionId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, roleId?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="231"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain.service.ts:231</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>outputProductDefinitionId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>roleId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    Yes
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;boolean&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateSupplyChainNode"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>updateSupplyChainNode</b></span>
+                        <a href="#updateSupplyChainNode"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updateSupplyChainNode(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, dto: <a href="../classes/UpdateSupplyChainNodeDto.html" target="_self">UpdateSupplyChainNodeDto</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="100"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain.service.ts:100</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>id</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>dto</td>
+                                            <td>
+                                                            <code><a href="../classes/UpdateSupplyChainNodeDto.html" target="_self" >UpdateSupplyChainNodeDto</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validatePurchaseRole"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>validatePurchaseRole</b></span>
+                        <a href="#validatePurchaseRole"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validatePurchaseRole(roleId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="127"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain.service.ts:127</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>roleId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateSaleRole"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>validateSaleRole</b></span>
+                        <a href="#validateSaleRole"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateSaleRole(fromRoleId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="141"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain.service.ts:141</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>fromRoleId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateSupplyChainNode"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>validateSupplyChainNode</b></span>
+                        <a href="#validateSupplyChainNode"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateSupplyChainNode(roleId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, fromRoleId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="116"
+                                    class="link-to-prism">src/supply-chains/services/supply-chain.service.ts:116</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>roleId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>fromRoleId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { TransactionService } from &#x27;@diginexhk/nestjs-transaction&#x27;;
+import { BadRequestException, Inject, Injectable, forwardRef } from &#x27;@nestjs/common&#x27;;
+import { isNil } from &#x27;@nestjs/common/utils/shared.utils&#x27;;
+import { groupBy, keyBy, uniq } from &#x27;lodash&#x27;;
+import { FindManyOptions, FindOneOptions, FindOptionsWhere, IsNull } from &#x27;typeorm&#x27;;
+import { allSettled } from &#x27;~core/helpers/settled.helper&#x27;;
+import { RoleEntity } from &#x27;~role-permissions/entities/role.entity&#x27;;
+import { PermissionEnum } from &#x27;~role-permissions/enums/permission.enum&#x27;;
+import { RolePermissionService } from &#x27;~role-permissions/services/role-permission.service&#x27;;
+import { RoleService } from &#x27;~role-permissions/services/role.service&#x27;;
+import { SupplyChainNodeMetadataEntity } from &#x27;~supply-chains/entities/supply-chain-node-metadata.entity&#x27;;
+import { SupplyChainNodeEntity } from &#x27;~supply-chains/entities/supply-chain-node.entity&#x27;;
+import { AddSupplyChainNodeDto } from &#x27;~supply-chains/http/dto/add-supply-chain-node.dto&#x27;;
+import { AddSupplyChainNodesDto } from &#x27;~supply-chains/http/dto/add-supply-chain-nodes.dto&#x27;;
+import { UpdateSupplyChainNodeDto } from &#x27;~supply-chains/http/dto/update-supply-chain-node.dto&#x27;;
+import { SupplyChainNodeMetadataRepository } from &#x27;~supply-chains/repositories/supply-chain-node-metadata.repository&#x27;;
+import { SupplyChainNodeRepository } from &#x27;~supply-chains/repositories/supply-chain-node.repository&#x27;;
+import { Line } from &#x27;~supply-chains/types/line.type&#x27;;
+import { SupplyChainMapping } from &#x27;~supply-chains/types/supply-chain-mapping.type&#x27;;
+import { SupplyChainNodeMapping } from &#x27;~supply-chains/types/supply-chain-node-mapping.type&#x27;;
+import { SupplyChainNodeService } from &#x27;./supply-chain-node.service&#x27;;
+import { SupplyChainMetaDataService } from &#x27;./supply-chain-meta-data.service&#x27;;
+import { randomUUID } from &#x27;crypto&#x27;;
+import { loadRelations } from &#x27;@diginexhk/typeorm-helper&#x27;;
+import { SupplyChainTierService } from &#x27;./supply-chain-tier.service&#x27;;
+
+@Injectable()
+export class SupplyChainService extends TransactionService {
+    constructor(
+        private supplyChainNodeRepo: SupplyChainNodeRepository,
+        private rolePermissionService: RolePermissionService,
+        @Inject(forwardRef(() &#x3D;&gt; RoleService)) private roleService: RoleService,
+        private supplyChainNodeMetadataRepo: SupplyChainNodeMetadataRepository,
+        @Inject(forwardRef(() &#x3D;&gt; SupplyChainNodeService)) private supplyChainNodeService: SupplyChainNodeService,
+        private supplyChainMetaDataService: SupplyChainMetaDataService,
+        private supplyChainTierService: SupplyChainTierService
+    ) {
+        super();
+    }
+
+    async addSupplyChainNode(dto: AddSupplyChainNodeDto): Promise&lt;SupplyChainNodeMapping&gt; {
+        await this.supplyChainNodeService.validateRoleForSupplyChainNodeAddition(dto.roleId, dto.fromRoleId);
+        if (dto.fromRoleId) {
+            await this.supplyChainNodeService.checkForCycle(dto.roleId, dto.fromRoleId, dto.chainId);
+            await this.validateSupplyChainNode(dto.roleId, dto.fromRoleId);
+        }
+        const partialEntity: Partial&lt;SupplyChainNodeEntity&gt; &#x3D; dto;
+        let supplyChainNode &#x3D; await this.supplyChainNodeRepo.createOne(partialEntity);
+        const [roleIdsAllowSale, roleIdsAllowPurchase] &#x3D; await this.getRoleIdsAllowSaleAndAllowPurchase();
+        return {
+            ...supplyChainNode,
+            hasBrokerIcon:
+                roleIdsAllowPurchase.includes(supplyChainNode.roleId) ||
+                roleIdsAllowSale.includes(supplyChainNode.fromRoleId)
+        };
+    }
+
+    async addSupplyChainNodes(dto: AddSupplyChainNodesDto): Promise&lt;SupplyChainNodeMapping[]&gt; {
+        const supplyChainNodes &#x3D; [];
+        for (const node of dto.supplyChainNodes) {
+            if (isNil(node.fromRoleId)) {
+                node.chainId &#x3D; randomUUID();
+            }
+            await this.supplyChainMetaDataService.upsertNodeMetadata(node.roleId, node.position, node.chainId);
+        }
+        await allSettled(
+            dto.supplyChainNodes.map(async (dto) &#x3D;&gt; {
+                const supplyChainNode &#x3D; await this.addSupplyChainNode(dto);
+                const fromMetadata &#x3D; dto.fromRoleId
+                    ? await this.supplyChainNodeMetadataRepo.findOneByOrFail({ roleId: dto.fromRoleId })
+                    : null;
+                const metadata &#x3D; await this.supplyChainNodeMetadataRepo.findOne({
+                    where: { roleId: supplyChainNode.roleId },
+                    relations: [&#x27;role&#x27;]
+                });
+                if (fromMetadata &amp;&amp; fromMetadata.chainId !&#x3D; metadata.chainId) {
+                    await this.supplyChainNodeMetadataRepo.update(
+                        { chainId: fromMetadata.chainId },
+                        { chainId: metadata.chainId }
+                    );
+                    await this.supplyChainNodeRepo.update(
+                        { chainId: fromMetadata.chainId },
+                        { chainId: metadata.chainId }
+                    );
+                }
+                supplyChainNodes.push({
+                    ...supplyChainNode,
+                    position: metadata?.position,
+                    outputProductDefinitionIds: dto.outputProductDefinitionIds,
+                    role: metadata?.role,
+                    supplyChainNodeMetadataId: metadata?.id,
+                    calculateFields: []
+                });
+            })
+        );
+
+        return supplyChainNodes;
+    }
+
+    async updateSupplyChainNode(id: string, dto: UpdateSupplyChainNodeDto): Promise&lt;void&gt; {
+        if (dto.fromRoleId) {
+            await this.validateSupplyChainNode(dto.roleId, dto.fromRoleId);
+        }
+        const supplyChainNode &#x3D; await this.supplyChainNodeRepo.findOneOrFail({
+            select: [&#x27;roleId&#x27;],
+            where: { id }
+        });
+        const { ...otherFields } &#x3D; dto;
+        const partialEntity: Partial&lt;SupplyChainNodeEntity&gt; &#x3D; otherFields;
+        await allSettled([
+            this.supplyChainNodeRepo.update(id, partialEntity),
+            this.supplyChainNodeRepo.update({ fromRoleId: supplyChainNode.roleId }, { fromRoleId: dto.roleId })
+        ]);
+    }
+
+    private async validateSupplyChainNode(roleId: string, fromRoleId: string) {
+        await this.validatePurchaseRole(roleId);
+        const firstNode &#x3D; await this.supplyChainNodeRepo.findOneBy({
+            roleId: fromRoleId,
+            fromRoleId: IsNull()
+        });
+        if (!firstNode) {
+            await this.validateSaleRole(fromRoleId);
+        }
+    }
+
+    private async validatePurchaseRole(roleId: string) {
+        const canRolePurchase &#x3D; await this.rolePermissionService.findOne({
+            where: { roleId, permission: { action: PermissionEnum.LOG_PURCHASE } },
+            relations: [&#x27;role&#x27;]
+        });
+        if (!canRolePurchase) {
+            const role &#x3D; await this.roleService.findRoleById(roleId);
+            throw new BadRequestException({
+                translate: &#x27;validation.role_can_not_purchase&#x27;,
+                args: { roleName: role.name }
+            });
+        }
+    }
+
+    private async validateSaleRole(fromRoleId: string) {
+        const canRoleSell &#x3D; await this.rolePermissionService.findOne({
+            where: { roleId: fromRoleId, permission: { action: PermissionEnum.LOG_SALE } },
+            relations: [&#x27;role&#x27;]
+        });
+        if (!canRoleSell) {
+            const role &#x3D; await this.roleService.findRoleById(fromRoleId);
+            throw new BadRequestException({
+                translate: &#x27;validation.role_can_not_sell&#x27;,
+                args: { roleName: role.name }
+            });
+        }
+    }
+
+    async deleteByOption(option: FindOneOptions&lt;SupplyChainNodeMetadataEntity&gt;): Promise&lt;void&gt; {
+        const metadata &#x3D; await this.supplyChainNodeMetadataRepo.findOne(option);
+        if (!metadata) {
+            return;
+        }
+        await this.supplyChainNodeService.deleteSupplyChainMetadata(metadata.id);
+    }
+
+    async getSupplyChain(): Promise&lt;SupplyChainMapping[]&gt; {
+        const [metadataList, supplyChainNodes, [roleIdsAllowSale, roleIdsAllowPurchase]] &#x3D; await Promise.all([
+            this.supplyChainNodeMetadataRepo.find({ where: {}, relations: [&#x27;role&#x27;, &#x27;calculateFields&#x27;] }),
+            this.supplyChainNodeRepo.find({ where: {}, relations: [&#x27;role&#x27;, &#x27;fromRole&#x27;] }),
+            this.getRoleIdsAllowSaleAndAllowPurchase()
+        ]);
+        const chainIds &#x3D; uniq(supplyChainNodes.map((node) &#x3D;&gt; node.chainId));
+        return chainIds.map((chainId) &#x3D;&gt; {
+            const lines &#x3D; supplyChainNodes.filter((node) &#x3D;&gt; node.chainId &#x3D;&#x3D;&#x3D; chainId);
+            const nodes: SupplyChainMapping[&#x27;nodes&#x27;] &#x3D; metadataList.filter((metadata) &#x3D;&gt; metadata.chainId &#x3D;&#x3D;&#x3D; chainId);
+            const linesGroup &#x3D; groupBy(lines, (node) &#x3D;&gt; node.roleId);
+            for (const node of nodes) {
+                node.outputProductDefinitionIds &#x3D; uniq(
+                    (linesGroup[node.roleId] || []).flatMap((node) &#x3D;&gt; node.outputProductDefinitionIds)
+                );
+            }
+            return {
+                nodes,
+                lines: this.getLines(lines, nodes, roleIdsAllowSale, roleIdsAllowPurchase),
+                chainId
+            };
+        });
+    }
+
+    private getRoleIdsAllowSaleAndAllowPurchase(): Promise&lt;[string[], string[]]&gt; {
+        return Promise.all([
+            this.rolePermissionService.findRoleIdsHasPermissionByAction(PermissionEnum.ALLOW_SALE_INTERMEDIARIES),
+            this.rolePermissionService.findRoleIdsHasPermissionByAction(PermissionEnum.ALLOW_PURCHASE_INTERMEDIARIES)
+        ]);
+    }
+
+    private getLines(
+        supplyChainNodes: SupplyChainNodeEntity[],
+        metadataList: SupplyChainNodeMetadataEntity[],
+        roleIdsAllowSale: string[],
+        roleIdsAllowPurchase: string[]
+    ): Line[] {
+        const lines &#x3D; [];
+        const metadataMap &#x3D; keyBy(metadataList, (metadata) &#x3D;&gt; metadata.roleId);
+        for (const node of supplyChainNodes) {
+            const { roleId, fromRoleId } &#x3D; node;
+            const toNode &#x3D; metadataMap[roleId];
+            const fromNode &#x3D; node.fromRoleId ? metadataMap[fromRoleId] : null;
+            if (toNode) {
+                lines.push({
+                    toNodeId: toNode.id,
+                    fromNodeId: fromNode?.id,
+                    hasBrokerIcon: roleIdsAllowPurchase.includes(roleId) || roleIdsAllowSale.includes(fromRoleId),
+                    relation: node
+                });
+            }
+        }
+        return lines;
+    }
+
+    async getPartnerRoleIds(roleId: string): Promise&lt;string[]&gt; {
+        const supplyChainNodes &#x3D; await this.supplyChainNodeRepo.getPartnerRoleIds(roleId);
+        const partnerRoleIds: string[] &#x3D; [];
+        for (const node of supplyChainNodes) {
+            if (node.fromRoleId &#x3D;&#x3D;&#x3D; roleId) {
+                partnerRoleIds.push(node.roleId);
+            } else if (node.roleId &#x3D;&#x3D;&#x3D; roleId &amp;&amp; node.fromRoleId) {
+                partnerRoleIds.push(node.fromRoleId);
+            }
+        }
+        return partnerRoleIds;
+    }
+
+    async isOutputOfSecondNode(outputProductDefinitionId: string, roleId?: string): Promise&lt;boolean&gt; {
+        const supplyChainNodes &#x3D; await this.supplyChainNodeRepo.findByProductDefinitionId(
+            outputProductDefinitionId,
+            roleId
+        );
+        if (!supplyChainNodes.length) {
+            return false;
+        }
+        await loadRelations(supplyChainNodes, [&#x27;fromRole&#x27;]);
+        return supplyChainNodes[0]?.fromRole?.isRawMaterialExtractor;
+    }
+
+    async doesBuyFromRawMaterialExtractor(roleId: string): Promise&lt;boolean&gt; {
+        const preNodeRoles &#x3D; await this.getRolesOfPreviousNodes(roleId);
+        return preNodeRoles.some(({ isRawMaterialExtractor }) &#x3D;&gt; isRawMaterialExtractor);
+    }
+
+    async getRolesOfPreviousNodes(roleId: string): Promise&lt;RoleEntity[]&gt; {
+        const supplyChainNodes &#x3D; await this.supplyChainNodeRepo.find({
+            where: { roleId },
+            relations: [&#x27;fromRole&#x27;]
+        });
+        return supplyChainNodes.map((node) &#x3D;&gt; node.fromRole).filter((fromRole) &#x3D;&gt; !!fromRole);
+    }
+
+    async getRawMaterialExtractorRole(roleId: string): Promise&lt;RoleEntity&gt; {
+        const preNodeRoles &#x3D; await this.getRolesOfPreviousNodes(roleId);
+        for (const preNodeRole of preNodeRoles) {
+            if (preNodeRole.isRawMaterialExtractor) {
+                return preNodeRole;
+            }
+        }
+        for (const preNodeRole of preNodeRoles) {
+            const extractorRole &#x3D; await this.getRawMaterialExtractorRole(preNodeRole.id);
+            if (extractorRole) {
+                return extractorRole;
+            }
+        }
+        return null;
+    }
+
+    async getRawMaterialExtractorRoles(): Promise&lt;RoleEntity[]&gt; {
+        const nodes &#x3D; await this.supplyChainNodeRepo.find({ where: {}, relations: [&#x27;role&#x27;] });
+        return nodes.filter(({ role }) &#x3D;&gt; role?.isRawMaterialExtractor).map(({ role }) &#x3D;&gt; role);
+    }
+
+    findSupplyChainNode(options: FindOneOptions&lt;SupplyChainNodeEntity&gt;): Promise&lt;SupplyChainNodeEntity&gt; {
+        return this.supplyChainNodeRepo.findOne(options);
+    }
+
+    findSupplyChainMetadata(roleId: string): Promise&lt;SupplyChainNodeMetadataEntity&gt; {
+        return this.supplyChainNodeMetadataRepo.findOneByOrFail({ roleId });
+    }
+
+    findSupplyChainNodeBy(
+        where: FindOptionsWhere&lt;SupplyChainNodeEntity&gt; | FindOptionsWhere&lt;SupplyChainNodeEntity&gt;[]
+    ): Promise&lt;SupplyChainNodeEntity&gt; {
+        return this.supplyChainNodeRepo.findOneBy(where);
+    }
+
+    findSupplyChainNodes(
+        where: FindOptionsWhere&lt;SupplyChainNodeEntity&gt; | FindOptionsWhere&lt;SupplyChainNodeEntity&gt;[]
+    ): Promise&lt;SupplyChainNodeEntity[]&gt; {
+        return this.supplyChainNodeRepo.findBy(where);
+    }
+
+    find(options: FindManyOptions&lt;SupplyChainNodeEntity&gt;): Promise&lt;SupplyChainNodeEntity[]&gt; {
+        return this.supplyChainNodeRepo.find(options);
+    }
+
+    findOneBy(options: FindOptionsWhere&lt;SupplyChainNodeMetadataEntity&gt;): Promise&lt;SupplyChainNodeMetadataEntity&gt; {
+        return this.supplyChainNodeMetadataRepo.findOneBy(options);
+    }
+
+    async getRolesOrder(): Promise&lt;{ [key: string]: number }&gt; {
+        const nodes &#x3D; await this.supplyChainNodeRepo.find({ order: { createdAt: &#x27;ASC&#x27; } });
+        return nodes
+            .map(({ roleId }) &#x3D;&gt; roleId)
+            .reduce((acc, roleId, index) &#x3D;&gt; {
+                if (!acc.hasOwnProperty(roleId)) {
+                    acc[roleId] &#x3D; index;
+                }
+                return acc;
+            }, {});
+    }
+
+    exists(options: FindManyOptions&lt;SupplyChainNodeEntity&gt;): Promise&lt;boolean&gt; {
+        return this.supplyChainNodeRepo.exists(options);
+    }
+
+    async getBrandTierIds(role: RoleEntity): Promise&lt;string[]&gt; {
+        const brandTiers &#x3D; await this.supplyChainTierService.getTiers(role, false);
+        return brandTiers.flatMap((tiers) &#x3D;&gt; tiers.map((item) &#x3D;&gt; item.id));
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'SupplyChainService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

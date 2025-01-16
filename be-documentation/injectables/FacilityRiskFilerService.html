@@ -1,0 +1,790 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Global Trace BE documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">Global Trace BE documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Injectables</li>
+  <li class="breadcrumb-item" >FacilityRiskFilerService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/facilities/services/facility-risk-filter.service.ts</code>
+        </p>
+
+
+
+
+
+            <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#filterRiskData" >filterRiskData</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#filterSubIndicatorRisk" >filterSubIndicatorRisk</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getFilterParams" >getFilterParams</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getFilterValues" >getFilterValues</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(facilityRepo: <a href="../classes/FacilityRepository.html" target="_self">FacilityRepository</a>, facilityRiskService: <a href="../injectables/FacilityRiskService.html" target="_self">FacilityRiskService</a>, categoryService: <a href="../injectables/CategoryService.html" target="_self">CategoryService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/facilities/services/facility-risk-filter.service.ts:13</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>facilityRepo</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../classes/FacilityRepository.html" target="_self" >FacilityRepository</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>facilityRiskService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/FacilityRiskService.html" target="_self" >FacilityRiskService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>categoryService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CategoryService.html" target="_self" >CategoryService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="filterRiskData"></a>
+                    <span class="name">
+                        <span ><b>filterRiskData</b></span>
+                        <a href="#filterRiskData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>filterRiskData(riskData: <a href="../undefineds/FacilityRiskType.html" target="_self">FacilityRiskType</a>, filters: <a href="../classes/FacilityRiskFilterDto.html" target="_self">FacilityRiskFilterDto</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="20"
+                                    class="link-to-prism">src/facilities/services/facility-risk-filter.service.ts:20</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>riskData</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#FacilityRiskType" target="_self" >FacilityRiskType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>filters</td>
+                                            <td>
+                                                            <code><a href="../classes/FacilityRiskFilterDto.html" target="_self" >FacilityRiskFilterDto</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#FacilityRiskType" target="_self" >FacilityRiskType</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="filterSubIndicatorRisk"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>filterSubIndicatorRisk</b></span>
+                        <a href="#filterSubIndicatorRisk"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>filterSubIndicatorRisk(subIndicatorRisk: <a href="../undefineds/SubIndicatorRiskType.html" target="_self">SubIndicatorRiskType</a>, filters: <a href="../classes/FacilityRiskFilterDto.html" target="_self">FacilityRiskFilterDto</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="63"
+                                    class="link-to-prism">src/facilities/services/facility-risk-filter.service.ts:63</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>subIndicatorRisk</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#SubIndicatorRiskType" target="_self" >SubIndicatorRiskType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>filters</td>
+                                            <td>
+                                                            <code><a href="../classes/FacilityRiskFilterDto.html" target="_self" >FacilityRiskFilterDto</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#SubIndicatorRiskType" target="_self" >SubIndicatorRiskType</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getFilterParams"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>getFilterParams</b></span>
+                        <a href="#getFilterParams"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getFilterParams(filters: <a href="../classes/FacilityRiskFilterDto.html" target="_self">FacilityRiskFilterDto</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="106"
+                                    class="link-to-prism">src/facilities/services/facility-risk-filter.service.ts:106</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>filters</td>
+                                            <td>
+                                                            <code><a href="../classes/FacilityRiskFilterDto.html" target="_self" >FacilityRiskFilterDto</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#now" target="_self" >unknown</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getFilterValues"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>getFilterValues</b></span>
+                        <a href="#getFilterValues"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getFilterValues(supplierId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, filters: <a href="../classes/FacilityRiskFilterDto.html" target="_self">FacilityRiskFilterDto</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="76"
+                                    class="link-to-prism">src/facilities/services/facility-risk-filter.service.ts:76</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>supplierId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>filters</td>
+                                            <td>
+                                                            <code><a href="../classes/FacilityRiskFilterDto.html" target="_self" >FacilityRiskFilterDto</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#now" target="_self" >unknown</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@nestjs/common&#x27;;
+import { groupBy, isEmpty, uniq } from &#x27;lodash&#x27;;
+import { CategoryEntity } from &#x27;~categories/entities/category.entity&#x27;;
+import { CategoryService } from &#x27;~categories/services/category.service&#x27;;
+import { GetSupplierDetailQuery } from &#x27;~facilities/queries/get-supplier-detail.query&#x27;;
+import { FacilityRepository } from &#x27;~facilities/repositories/facility.repository&#x27;;
+import { FacilityRiskFilterDto } from &#x27;~risk-assessments/http/dto/facility-risk-filter.dto&#x27;;
+import { FacilityRiskService } from &#x27;~risk-assessments/services/facility-risk.service&#x27;;
+import { FacilityRiskType } from &#x27;~risk-assessments/types/facility-risk.type&#x27;;
+import { SubIndicatorRiskType } from &#x27;~risk-assessments/types/sub-indicator-risk.type&#x27;;
+
+@Injectable()
+export class FacilityRiskFilerService {
+    constructor(
+        private facilityRepo: FacilityRepository,
+        private facilityRiskService: FacilityRiskService,
+        private categoryService: CategoryService
+    ) {}
+
+    filterRiskData(riskData: FacilityRiskType, filters: FacilityRiskFilterDto) {
+        riskData.data &#x3D; riskData.data
+            .map((categoryRisk) &#x3D;&gt; {
+                categoryRisk.indicatorRiskData &#x3D; categoryRisk.indicatorRiskData
+                    .map((indicatorRisk) &#x3D;&gt; {
+                        indicatorRisk.subIndicatorRiskData &#x3D; indicatorRisk.subIndicatorRiskData
+                            .map((subIndicatorRisk) &#x3D;&gt; this.filterSubIndicatorRisk(subIndicatorRisk, filters))
+                            .filter((subIndicatorRisk) &#x3D;&gt; {
+                                let hasSubIndicator &#x3D; true;
+                                if (filters.subIndicatorIds?.length) {
+                                    hasSubIndicator &#x3D; filters.subIndicatorIds.includes(
+                                        subIndicatorRisk.subIndicator.id
+                                    );
+                                }
+                                return subIndicatorRisk.data.length &amp;&amp; hasSubIndicator;
+                            });
+                        return indicatorRisk;
+                    })
+                    .filter((indicatorRisk) &#x3D;&gt; {
+                        let hasIndicator &#x3D; true;
+                        if (filters.indicatorIds?.length) {
+                            hasIndicator &#x3D; filters.indicatorIds.includes(indicatorRisk.indicator.id);
+                        }
+                        return indicatorRisk.subIndicatorRiskData.length &amp;&amp; hasIndicator;
+                    });
+
+                if (filters.sources?.length) {
+                    categoryRisk.sourceRiskData &#x3D; categoryRisk.sourceRiskData.filter(({ source }) &#x3D;&gt;
+                        filters.sources.includes(source)
+                    );
+                }
+                return categoryRisk;
+            })
+            .filter((categoryRisk) &#x3D;&gt; {
+                let hasCategory &#x3D; true;
+                if (filters.categoryIds?.length) {
+                    hasCategory &#x3D; filters.categoryIds.includes(categoryRisk.category.id);
+                }
+                return categoryRisk.indicatorRiskData.length &amp;&amp; hasCategory;
+            });
+        return riskData;
+    }
+
+    private filterSubIndicatorRisk(subIndicatorRisk: SubIndicatorRiskType, filters: FacilityRiskFilterDto) {
+        if (filters.sources?.length) {
+            subIndicatorRisk.data &#x3D; subIndicatorRisk.data.filter(({ source }) &#x3D;&gt; filters.sources.includes(source));
+        }
+        if (filters.fromTime) {
+            subIndicatorRisk.data &#x3D; subIndicatorRisk.data.filter(({ createdAt }) &#x3D;&gt; filters.fromTime &lt;&#x3D; createdAt);
+        }
+        if (filters.toTime) {
+            subIndicatorRisk.data &#x3D; subIndicatorRisk.data.filter(({ createdAt }) &#x3D;&gt; filters.toTime &gt;&#x3D; createdAt);
+        }
+        return subIndicatorRisk;
+    }
+
+    async getFilterValues(supplierId: string, filters: FacilityRiskFilterDto) {
+        const facility &#x3D; await this.facilityRepo.findOne(new GetSupplierDetailQuery(supplierId));
+        let riskData &#x3D; await this.facilityRiskService.getFacilityRisk(facility);
+        riskData &#x3D; this.filterRiskData(riskData, filters);
+
+        const categories &#x3D; riskData.data.map(({ category }) &#x3D;&gt; category).sort((a, b) &#x3D;&gt; a.name.localeCompare(b.name));
+
+        const reportedIndicators &#x3D; riskData.data.flatMap(({ indicatorRiskData }) &#x3D;&gt;
+            indicatorRiskData.map(({ indicator, subIndicatorRiskData }) &#x3D;&gt; ({
+                indicator,
+                subIndicators: subIndicatorRiskData.map(({ subIndicator }) &#x3D;&gt; subIndicator)
+            }))
+        );
+        const groupIndicators &#x3D; groupBy(reportedIndicators, ({ indicator }) &#x3D;&gt; indicator.id);
+        const issues &#x3D; Object.entries(groupIndicators)
+            .map(([indicatorId, groupIndicator]) &#x3D;&gt; ({
+                indicator: groupIndicator[0].indicator,
+                subIndicators: groupIndicator
+                    .flatMap(({ subIndicators }) &#x3D;&gt; subIndicators)
+                    .sort((a, b) &#x3D;&gt; a.name.localeCompare(b.name))
+            }))
+            .sort((a, b) &#x3D;&gt; a.indicator.name.localeCompare(b.indicator.name));
+
+        const sources &#x3D; uniq(
+            riskData.data.flatMap(({ sourceRiskData }) &#x3D;&gt; sourceRiskData.map(({ source }) &#x3D;&gt; source))
+        ).sort((a, b) &#x3D;&gt; a.localeCompare(b));
+
+        return { categories, issues, sources };
+    }
+
+    async getFilterParams(filters: FacilityRiskFilterDto) {
+        const { sources, categoryIds, indicatorIds, subIndicatorIds, fromTime, toTime } &#x3D; filters;
+        let categories: CategoryEntity[];
+        let subIndicators: CategoryEntity[] &#x3D; [];
+        let indicators: CategoryEntity[] &#x3D; [];
+        let parentIds: string[] &#x3D; [];
+
+        if (!isEmpty(categoryIds)) {
+            categories &#x3D; await this.categoryService.findByIds(categoryIds);
+        }
+
+        if (!isEmpty(subIndicatorIds)) {
+            subIndicators &#x3D; await this.categoryService.findByIds(subIndicatorIds);
+            parentIds &#x3D; subIndicators.map(({ parentId }) &#x3D;&gt; parentId);
+        }
+
+        if (!isEmpty(indicatorIds)) {
+            parentIds &#x3D; parentIds.concat(indicatorIds);
+        }
+
+        if (parentIds.length) {
+            indicators &#x3D; await this.categoryService.findByIds(parentIds);
+        }
+
+        const issues &#x3D; indicators.map((indicator) &#x3D;&gt; ({
+            indicator,
+            subIndicators: subIndicators.filter(({ parentId }) &#x3D;&gt; parentId &#x3D;&#x3D;&#x3D; indicator.id)
+        }));
+
+        return {
+            sources,
+            categories,
+            issues,
+            fromTime,
+            toTime
+        };
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'FacilityRiskFilerService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

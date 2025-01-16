@@ -1,0 +1,1907 @@
+[
+    {
+        "title": {
+            "en": "Have you identified all of the mine sites supplying cobalt to your supply chain?",
+            "fr": "Avez-vous identifié tous les sites miniers qui fournissent du cobalt à votre chaîne d'approvisionnement?"
+        },
+        "questionId": "1a21534a-8144-4efa-ab98-4eee9e4e13f9",
+        "index": 1,
+        "questionResponses": [
+            {
+                "option": "Yes, we know the country of origin and location of all mine sites",
+                "translation": {
+                    "en": "Yes, we know the country of origin and location of all mine sites",
+                    "fr": "Oui, nous connaissons le pays d'origine et l'emplacement de tous les sites miniers"
+             },
+                "questionResponseId": "d78a25e5-83f1-4460-ac8c-7215f0862656"
+            },
+            {
+                "option": "No, we don’t know the country of origin or location of any of the mine sites",
+                "translation": {
+                    "en": "No, we don’t know the country of origin or location of any of the mine sites",
+                    "fr": "Non, nous ne connaissons pas le pays d'origine ni l'emplacement d'aucun des sites miniers"
+                },
+                "questionResponseId": "4436b46d-ec2f-4727-9ab7-753960fac710"
+            },
+            {
+                "option": "Yes, we know the country of origin and location of the mine sites",
+                "translation": {
+                    "en": "Yes, we know the country of origin and location of the mine sites",
+                    "fr": "Oui, nous connaissons le pays d'origine et l'emplacement de tous les sites miniers"
+                },
+                "questionResponseId": "fda230b8-420c-4537-8a62-37517a1d4d4e"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "What is the total number of workers (excluding management) at the site?",
+            "fr": "Quel est le nombre total de travailleurs (hors direction) sur le site ?"
+        },
+        "questionId": "a4c02e62-467e-4c65-8e44-253c383648bd",
+        "index": 2,
+        "questionResponses": [
+            {
+                "option": "Women: Numeric",
+                "translation": {
+                    "en": "Women: Numeric",
+                    "fr": "Femmes : Numérique"
+                },
+                "questionResponseId": "f4440465-182e-4078-a384-8754fda4a66a"
+            },
+            {
+                "option": "Men: Numeric",
+                "translation": {
+                    "en": "Men: Numeric",
+                    "fr": "Hommes : Numérique"
+                },
+                "questionResponseId": "37d54767-2bcc-488b-ac66-9700cf5f9603"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "What percent of management (including trainers, supervisors, and/or other high level functions) at the site are women?",
+            "fr": "Quel pourcentage de la direction (y compris les formateurs, les superviseurs et/ou d'autres fonctions de haut niveau) sur le site est composé de femmes ?"
+        },
+        "questionId": "19427e91-ac32-4309-8358-d509616b97c8",
+        "index": 3,
+        "questionResponses": [
+            {
+                "option": "More than 40%",
+                "translation": {
+                    "en": "More than 40%",
+                    "fr": "Plus de 40%"
+                },
+                "questionResponseId": "1ae59fb5-6613-4ac5-86b0-2ffa793bb84d"
+            },
+            {
+                "option": "Less than 40%",
+                "translation": {
+                    "en": "Less than 40%",
+                    "fr": "Moins de 40%"
+                },
+                "questionResponseId": "8fe9e19d-69c1-4dc1-a64c-498315b50b14"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Do you source from artisanal and small-scale mine sites (directly or through sub-suppliers)?",
+            "fr": "Vous approvisionnez-vous auprès de sites miniers artisanaux et à petite échelle (directement ou par l'intermédiaire de sous-traitants) ?"
+        },
+        "questionId": "461492d6-aa05-4608-b5df-9803bd30f08e",
+        "index": 4,
+        "questionResponses": [
+            {
+                "option": "No, we don’t source from ASM",
+                "translation": {
+                    "en": "No, we don’t source from ASM",
+                    "fr": "Non, nous ne nous approvisionnons pas auprès de l'ASM"
+                },
+                "questionResponseId": "858f9420-b839-410a-a831-bdaca0ccb2a7"
+            },
+            {
+                "option": "Yes, we source from ASM and do not know the location of some of the mine sites",
+                "translation": {
+                    "en": "Yes, we source from ASM and do not know the location of some of the mine sites",
+                    "fr": "Oui, nous nous approvisionnons auprès de l'ASM et nous ne connaissons pas l'emplacement de certains sites miniers"
+                },
+                "questionResponseId": "69598fdf-d0fc-46e6-bde4-eb2744806f3d"
+            },
+            {
+                "option": "Yes, we source from ASM and we know the origin of all mine sites",
+                "translation": {
+                    "en": "Yes, we source from ASM and we know the origin of all mine sites",
+                    "fr": "Oui, nous connaissons le pays d'origine et l'emplacement de tous les sites miniers"
+                },
+                "questionResponseId": "5e032830-d2fa-41fc-b091-058533ae2849"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Does cobalt processing rely on manual labor, including for any of the following activities: milling, flotation, separation, and smelting?",
+            "fr": "Le traitement du cobalt repose-t-il sur le travail manuel, y compris pour l'une des activités suivantes : broyage, flottation, séparation et fusion ?"
+        },
+        "questionId": "3184b70d-d5a4-4bbb-a5c2-467a2b496ca1",
+        "index": 5,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "7011eccf-8633-4590-895c-248eb962c4fc"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "f2cbc678-1c9f-49f5-bb5c-f3ce95c61af3"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "If source from ASM, do you know if they participate in an ASM sourcing program?",
+            "fr": "Si vous vous approvisionnez auprès d'ASM, savez-vous s'ils participent à un programme d'approvisionnement ASM ?"
+        },
+        "questionId": "b4cd1c15-57a1-4f08-b762-51a76761cb47",
+        "index": 6,
+        "questionResponses": [
+            {
+                "option": "Yes, we know they participate",
+                "translation": {
+                    "en": "Yes, we know they participate",
+                    "fr": "Oui, nous savons qu'ils participent"
+                },
+                "questionResponseId": "72b4b2dc-4664-4ecb-8a18-a9de96410e5c"
+            },
+            {
+                "option": "No, we don’t know if they participate",
+                "translation": {
+                    "en": "No, we don’t know if they participate",
+                    "fr": "Non, nous ne savons pas s'ils participant"
+                },
+                "questionResponseId": "3804fd9c-fc0d-416d-afa8-9338b27eccb5"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Do you purchase materials in part or in whole from mineral traders?",
+            "fr": "Achetez-vous des matériaux en partie ou en totalité auprès de négociants en minéraux ?"
+        },
+        "questionId": "6d91c4ec-ec08-4acf-8948-4f51ece4b9e3",
+        "index": 7,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "438780c1-ef6a-4533-961b-f19bafac6ddc"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "67ccbf46-850e-4ad1-9a1d-c40d5111ca8a"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Does the facility rely on seasonal or temporary workers?",
+            "fr": "L'installation fait-elle appel à des travailleurs saisonniers ou temporaires ?"
+        },
+        "questionId": "f449c3ae-202a-41a4-904b-1f5daa397225",
+        "index": 8,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "31605059-963d-4c0a-9687-2b90c6be3bbe"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "80dab399-b45d-422c-a89f-a9dfea740e3a"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Do persons often travel from different regions/provinces for the purpose of working at the facility?",
+            "fr": "Les personnes voyagent-elles souvent de différentes régions/provinces pour travailler dans l'installation ?"
+        },
+        "questionId": "4545516e-1266-43e2-8207-572152e15d5f",
+        "index": 9,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "10e4ebf5-064a-415c-8fe4-5bfe8931dbb4"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "edc3194e-961b-4ea5-8e31-c227358a7b76"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Have you established a responsible minerals sourcing policy?",
+            "fr": "Avez-vous établi une politique d'approvisionnement responsable en minéraux ?"
+        },
+        "questionId": "cc87650d-4b81-4646-98e3-dca3d68f35a2",
+        "index": 10,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "e3910880-adab-41da-a0b9-1fcc2c219740"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "07de7477-5bce-4520-9850-67ad41f2390b"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Do persons from other countries  work at the facility?",
+       "fr": "Des personnes d'autres pays travaillent-elles dans l'installation?"
+             },
+        "questionId": "5219ee49-05e4-418d-a59c-24ef562eee62",
+        "index": 11,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "fa5c9c93-3372-41c2-9176-d18419f5de08"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "c3e5e998-f5fc-4ebc-9792-c23d99f050a8"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Is your responsible minerals sourcing policy publicly available on your website?",
+          "fr": "Votre politique d'approvisionnement responsable en minéraux est-elle accessible au public sur votre site Web ?"
+        },
+        "questionId": "d93ac848-90d3-456c-b5cb-0264f504bd13",
+        "index": 12,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "cf9ad8a2-4749-4240-8e76-f57cb753f85e"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "5d486775-5593-4850-8a8a-c6305e528156"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Are there persons working in this facility from a minority religious, ethnic or social group?",
+            "fr": "Y a-t-il des personnes travaillant dans cette installation qui appartiennent à un groupe religieux, ethnique ou social minoritaire ?"
+        },
+        "questionId": "db33d777-5363-4fe7-afcc-3386b6b0eb39",
+        "index": 13,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "95c93aee-ee5f-4da9-8ff6-d2cedc83ecac"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "df2e4793-facb-4079-b836-825faeccae34"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Does your company conduct a supply chain survey(s) of your active supplier(s)?",
+            "fr": "Votre entreprise mène-t-elle une ou plusieurs enquêtes sur la chaîne d'approvisionnement de vos fournisseurs actifs ?"
+        },
+        "questionId": "3d133c7e-d58a-42bc-bcd7-bb7e8e64429a",
+        "index": 14,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "cda82733-2004-46d2-8c1c-0abf9fe5c5f9"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "bddaeaeb-3144-4c89-8cd1-d12f10606ae3"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "What percentage of active suppliers have provided a response to your supply chain survey?",
+            "fr": "Quel pourcentage de fournisseurs actifs a fourni une réponse à votre enquête sur la chaîne d'approvisionnement ?"
+        },
+        "questionId": "5909ed66-7834-4196-8143-67f8926d6f1b",
+        "index": 15,
+        "questionResponses": [
+            {
+                "option": "1-49%",
+                "translation": {
+                    "en": "1-49%",
+                    "fr": "1-49%"
+                },
+                "questionResponseId": "62da1e14-250e-4362-82f2-e53a4b32c778"
+            },
+            {
+                "option": "50-99%",
+                "translation": {
+                    "en": "50-99%",
+                    "fr": "50-99%"
+                },
+                "questionResponseId": "63a2569e-db60-4b96-9a70-5f1b8eb7d815"
+            },
+            {
+                "option": "0",
+                "translation": {
+                    "en": "0",
+                    "fr": "0"
+                },
+                "questionResponseId": "1cdf8284-3d8b-4a52-96be-f5e5fe8e313c"
+            },
+            {
+                "option": "1",
+                "translation": {
+                    "en": "100%",
+                    "fr": "100%"
+                },
+                "questionResponseId": "32e552f0-0a68-4c0f-b4e3-5b7b63717d65"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Are workers provided loans or wage advances by the facility owner or labor recruiters?",
+            "fr": "Le propriétaire de l'installation ou les recruteurs de main-d'œuvre accordent-ils des prêts ou des avances de salaire aux travailleurs ?"
+        },
+        "questionId": "156b761f-c3d1-4f7d-ae17-14ee5434298f",
+        "index": 16,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "d7d0da0b-7bd8-4916-8179-5d8d02869d37"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "ce33269f-51d0-4d0b-a615-c150defe4831"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Do you require all your active suppliers to source cobalt from smelters or mine sites whose due diligence practices have been validated by an independent third-party audit program?",
+            "fr": "Exigez-vous que tous vos fournisseurs actifs s'approvisionnent en cobalt auprès de fonderies ou de sites miniers dont les pratiques de diligence raisonnable ont été validées par un programme d'audit indépendant par un tiers ?"
+        },
+        "questionId": "411cc762-ca4a-46b6-972e-ac52c0e40ae2",
+        "index": 17,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "66ad9299-2573-418a-b138-322a9d9d296d"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "34c3f61d-ae69-452c-88b3-df6ac7688e83"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Are labor recruiters/intermediaries involved in hiring or supplying any workers for the facility?",
+            "fr": "Les recruteurs/intermédiaires de main-d'œuvre participent-ils à l'embauche ou à la fourniture de travailleurs pour l'installation ?"
+        },
+        "questionId": "92f8aee9-2329-443f-9ead-217c00df37ac",
+        "index": 18,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "6dd0b32b-8c4a-4761-8c43-51c267631539"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "e70a9083-a5d1-46b0-a5b6-3cb086df44a9"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Is accommodation (temporary or permanent) provided to any workers by the facility or labor recruiters?",
+            "fr": "Un logement (temporaire ou permanent) est-il fourni aux travailleurs par l'installation ou les recruteurs de main-d'œuvre ?"
+        },
+        "questionId": "671a65df-3e6f-44db-b2a9-0663f86f62f8",
+        "index": 19,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "cd06249c-f152-42b0-a525-8a9f858895fe"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "70272217-a4bc-4b50-9f6b-a07af412b42e"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Do you have a procedure to identify Due Diligence information (including OECD Annex II risks) within your supply chain?",
+            "fr": "Disposez-vous d'une procédure permettant d'identifier les informations relatives à la diligence raisonnable (y compris les risques de l'annexe II de l'OCDE) au sein de votre chaîne d'approvisionnement ?"
+        },
+        "questionId": "3adb8f03-9969-4cbc-81f8-d885d25b7147",
+        "index": 20,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "e2d3b644-fda7-4181-85ce-eda279f1a4d7"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "a9cbc409-b24f-47fa-b91e-f14aaa2cc3d1"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Do any children (under age of 18) live at the facility with their parents?",
+            "fr": "Est-ce que des enfants (de moins de 18 ans) vivent dans l'établissement avec leurs parents ?"
+        },
+        "questionId": "e4911d08-8495-4654-aa89-54dbfbd86daf",
+        "index": 21,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "9dedcb1f-59d3-4229-b32f-7a1d3be2173c"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "73852f92-8485-47b6-ba9e-67382cd1b486"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Do you review due diligence information received from your active suppliers against your company’s expectations?",
+            "fr": "Examinez-vous les informations de diligence raisonnable reçues de vos fournisseurs actifs par rapport aux attentes de votre entreprise ?"
+        },
+        "questionId": "465e7eff-5815-4c02-b098-9ee2a9a519d0",
+        "index": 22,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "74ddd960-9d6f-4f32-92d1-1f6daa1bec92"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "3688682b-5ccc-40dd-85de-a3e3fa9cca23"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "When hiring, do you require prospective workers to provide proof of their age?",
+            "fr": "Lors de l'embauche, demandez-vous aux futurs travailleurs de fournir une preuve de leur âge ?"
+        },
+        "questionId": "db53e564-7026-4676-ae92-f9ae050dd76a",
+        "index": 23,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "c1c2d6cd-8541-4770-bc2b-ebc809ddfe46"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "52f3e891-b6c6-4b65-adb0-b6c9e4242d1e"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Do you have a process to consult with active suppliers to design and agree on a risk mitigation plan against your expectations?",
+            "fr": "Disposez-vous d’un processus de consultation avec les fournisseurs actifs pour concevoir et convenir d’un plan d’atténuation des risques par rapport à vos attentes ?"
+        },
+        "questionId": "0fce164e-460e-4365-b999-c0106aee08e0",
+        "index": 24,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "494e8613-6a7f-4c2d-b845-0b05eac91639"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "48758cc2-6d0b-4001-ad49-716476e34b53"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "How many persons aged 15-17 years work at the facility?",
+            "fr": "Combien de personnes âgées de 15 à 17 ans travaillent dans l'établissement ?"
+        },
+        "questionId": "675166ca-acee-471a-a5d1-cf9a237b6d9e",
+        "index": 25,
+        "questionResponses": [
+            {
+                "option": "0",
+                "translation": {
+                    "en": "0",
+                    "fr": "0"
+                },
+                "questionResponseId": "9fdd8c0a-f47b-4304-bc11-9e510292aeae"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Does top management level oversee the company supply chain due diligence policy?",
+            "fr": "La haute direction supervise-t-elle la politique de diligence raisonnable de la chaîne d’approvisionnement de l’entreprise ?"
+        },
+        "questionId": "832251c3-d3fa-41cc-8acc-364d53339c3b",
+        "index": 26,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "0cc9c8d4-f952-455f-9b55-bb0be137c821"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "10ad85cb-448a-4d79-ba05-a672a4b622d0"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Does your company have a grievance mechanism, including an early-warning risk-awareness system, for workers?",
+            "fr": "Votre entreprise dispose-t-elle d’un mécanisme de réclamation, y compris un système d’alerte précoce des risques, pour les travailleurs ?"
+        },
+        "questionId": "f3a3135c-b9cf-449e-9059-0ada0538b053",
+        "index": 27,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "7fd78682-c616-4c24-97fe-ce970ca94af3"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "a78d9aa6-675b-4a2f-9d4b-b0092872b21f"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "How many persons aged 14 years work at the facility?",
+            "fr": "Combien de personnes âgées de 14 ans travaillent dans l'établissement ?"
+        },
+        "questionId": "15c11e8b-5550-4e3d-af62-3e98a452f5d8",
+        "index": 28,
+        "questionResponses": [
+            {
+                "option": "0",
+                "translation": {
+                    "en": "0",
+                    "fr": "0"
+                },
+                "questionResponseId": "53ddb3fa-c5fa-44fe-bae1-82d990002d00"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Does your company carry out an annual review of the identified risks and remediation strategies?",
+            "fr": "Votre entreprise dispose-t-elle d’un mécanisme de réclamation, y compris un système d’alerte précoce des risques, pour les travailleurs ?"
+        },
+        "questionId": "e1ba78c0-3720-4622-8b89-93a616fce0b3",
+        "index": 29,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "33a77489-e654-4e41-bae3-8b0b1712cecb"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "01d0e66d-7ff4-46a1-8521-54f72eab4025"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "How many persons aged 13 years and under work at the facility?",
+            "fr": "Combien de personnes âgées de 13 ans et moins travaillent dans l'établissement ?"
+        },
+        "questionId": "12eb4442-ff7c-44cd-a49d-0dc9ffc6781d",
+        "index": 30,
+        "questionResponses": [
+            {
+                "option": "0",
+                "translation": {
+                    "en": "0",
+                    "fr": "0"
+                },
+                "questionResponseId": "4f78351b-05da-4867-b0b2-7a3dcaae55a6"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Does your company have a strategy to respond to the identified risks to prevent, mitigate and otherwise address adverse impacts?",
+            "fr": "Votre entreprise a-t-elle une stratégie pour répondre aux risques identifiés afin de prévenir, d’atténuer et de traiter les impacts négatifs ?"
+        },
+        "questionId": "12e3c5b1-f77a-4819-b941-8116ab44585a",
+        "index": 31,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "b6e96559-883f-4f4d-a560-7dff84684460"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "c8169e4f-5d2f-4d4d-a5fb-82d2306b82fd"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "If unable to discern exact age, are there persons working at the facility between 14 and 17 years old?",
+            "fr": "Si l'âge exact n'est pas déterminé, y a-t-il des personnes âgées de 14 à 17 ans qui travaillent dans l'établissement ?"
+        },
+        "questionId": "12908289-0dd6-4e63-a687-e50d7749f40c",
+        "index": 32,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "8bd7652a-2eb8-425f-8aaa-730ad13a435a"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "d2a21263-710c-4c59-bc70-12a17dfee483"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Does your review process include corrective action management?",
+            "fr": "Votre processus d’examen comprend-il la gestion des mesures correctives ?"
+        },
+        "questionId": "f4802fda-d844-45dc-acae-ea739f085ba6",
+        "index": 33,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "01dea6e1-3751-4920-ada5-2166b58d42e2"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "9d3e5900-f5d5-43ab-8b88-062aad0032fb"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "If unable to discern exact age, are there persons working at the facility aged 13 years and under?",
+            "fr": "S’il est impossible de déterminer l’âge exact, y a-t-il des personnes travaillant dans l’établissement âgées de 13 ans et moins ?"
+        },
+        "questionId": "52dbc06b-7673-4468-a073-f03dc9cc2334",
+        "index": 34,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "a6c07e4e-b8e1-45c8-b0e3-ee3c9f728a73"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "d30d3111-edfc-4da6-b9cb-474aa337c755"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Does your company carry out an annual review of the identified risks, remediation strategies and publish them in an annual report?",
+            "fr": "Votre entreprise effectue-t-elle un examen annuel des risques identifiés, des stratégies de remédiation et les publie-t-elle dans un rapport annuel ?"
+        },
+        "questionId": "8cd22970-bc91-4353-bda8-2b67ead5131a",
+        "index": 35,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "c62a5050-1f71-431a-b496-9c089910b0fe"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "3aeff68a-56cb-4b70-8a6e-3f10d225e294"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Do persons aged 15-17 years work overnight shifts?",
+           "fr": "Les personnes âgées de 15 à 17 ans travaillent-elles de nuit ?"
+        },
+        "questionId": "1a96010a-8731-40f4-a4f3-c36e607c5097",
+        "index": 36,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "74e8ed0b-e7b3-446e-8c3e-9badb41dbac6"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "f04f97d5-f903-4ea6-b8a2-eeae8ee85053"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Do persons aged 15-17 years work in excess of seven hours a day and 42 hours a week?",
+            "fr": "Les personnes âgées de 15 à 17 ans travaillent-elles plus de sept heures par jour et 42 heures par semaine ?"
+        },
+        "questionId": "170725ff-0f8e-4f0c-89f3-f094e6514bdf",
+        "index": 37,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "834cd1e1-7e40-4dac-bccf-cacd60c5f07b"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "b791e221-0258-47d6-be6e-f295902fb989"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "What systems do you use to track material from warehouse incoming goods, through production to warehouse outgoing goods?",
+            "fr": "Votre entreprise effectue-t-elle un examen annuel des risques identifiés, des stratégies de remédiation et les publie-t-elle dans un rapport annuel ?"
+        },
+        "questionId": "48802661-cf43-4f4a-944b-2867d0726190",
+        "index": 38,
+        "questionResponses": [
+            {
+                "option": "Enterprise Resource Planning /Warehouse management system",
+                "translation": {
+                    "en": "Enterprise Resource Planning /Warehouse management system",
+                    "fr": "Système de gestion d'entrepôt/planification des ressources de l'entreprise"
+                },
+                "questionResponseId": "c4bd7d82-97d1-4306-a407-5a657370e7e2"
+            },
+            {
+                "option": "Barcode",
+                "translation": {
+                    "en": "Barcode",
+                    "fr": "Code-barres"
+                },
+                "questionResponseId": "e8a8fca6-82e1-4a58-bc4f-10aea598d592"
+            },
+            {
+                "option": "RFID",
+                "translation": {
+                    "en": "RFID",
+                    "fr": "RFID"
+                },
+                "questionResponseId": "67377977-f1f1-4d9c-94c3-61a16b8c560e"
+            },
+            {
+                "option": "Other (Please specify)",
+                "translation": {
+                    "en": "Other (Please specify)",
+                    "fr": "Autre (veuillez préciser)"
+                },
+                "questionResponseId": "74498513-98bb-4bd0-829d-9a6d9452b67c"
+            },
+            {
+                "option": "No product tracking systems",
+                "translation": {
+                    "en": "No product tracking systems",
+                "fr": "Aucun système de suivi des produits"
+                },
+                "questionResponseId": "3e3c2a42-f085-4cd4-a07f-d7dbadfa315f"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "What type of purchase documents does your facility maintain?",
+            "fr": "Quel type de documents d’achat votre établissement conserve-t-il ?"
+        },
+        "questionId": "b0ae09a2-1afb-482c-9671-f04f2aa01051",
+        "index": 39,
+        "questionResponses": [
+            {
+                "option": "Airway/vessel bills",
+                "translation": {
+                    "en": "Airway/vessel bills",
+                    "fr": "Factures de transport aérien/navire"
+                },
+                "questionResponseId": "9b370079-f768-4b9e-b316-add7b434d6d5"
+            },
+            {
+                "option": "Commercial invoice",
+                "translation": {
+                    "en": "Commercial invoice",
+                    "fr": "Facture commerciale"
+                },
+                "questionResponseId": "02dbb719-1722-4ae9-a1e8-b7932576856d"
+            },
+            {
+                "option": "Bills of lading",
+                "translation": {
+                    "en": "Bills of lading",
+                    "fr": "Connaissements"
+                },
+                "questionResponseId": "612d052e-2bc2-4e67-afd9-aa687a0128d8"
+            },
+            {
+                "option": "Export packing lists",
+                "translation": {
+                    "en": "Export packing lists",
+                    "fr": "Listes de colisage à l'exportation"
+                },
+                "questionResponseId": "03cdb7fe-ea62-4df0-8ba5-add1b88dc3a8"
+            },
+            {
+                "option": "Requests for quotations and quotations",
+                "translation": {
+                    "en": "Requests for quotations and quotations",
+                    "fr": "Demandes de devis et devis"
+                },
+                "questionResponseId": "8ac08dfd-4357-49c0-b737-3dac561820cd"
+            },
+            {
+                "option": "Certificates of origin",
+                "translation": {
+                    "en": "Certificates of origin",
+                    "fr": "Certificats d'origine"
+                },
+                "questionResponseId": "31299524-2371-41af-bfa2-afe915e5c8a8"
+            },
+            {
+                "option": "Purchase orders",
+                "translation": {
+                    "en": "Purchase orders",
+                    "fr": "Bons de commande"
+                },
+                "questionResponseId": "d7ef5f65-3464-4f54-a249-b11e1fe01e1d"
+            },
+            {
+                "option": "Other (Please specify)",
+                "translation": {
+                    "en": "Other (Please specify)",
+                    "fr": "Autre (veuillez préciser)"
+                },
+                "questionResponseId": "6ddadf76-4689-46a2-a6fa-21e95f17404b"
+            },
+            {
+                "option": "No documentation",
+                "translation": {
+                    "en": "No documentation",
+                    "fr": "Aucune documentation"
+                },
+                "questionResponseId": "ef91d317-855a-455f-8e85-8fee6d76085e"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Do persons aged 15-17 years face exposure to chemicals or other noxious substances?",
+            "fr": "Les personnes âgées de 15 à 17 ans sont-elles exposées à des produits chimiques ou à d'autres substances nocives ?"
+        },
+        "questionId": "29ca514c-93f1-42a2-b155-3537154d1ce5",
+        "index": 40,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "b84d6bff-11a4-4681-b29f-6e43765c7a2d"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "5f29801e-f8af-4982-86a6-9f128a3acf81"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "What type of sales documents does your facility maintain?",
+            "fr": "Quel type de documents de vente votre établissement conserve-t-il ?"
+        },
+        "questionId": "b7a037e0-6da1-4b6c-86f6-63120983fea7",
+        "index": 41,
+        "questionResponses": [
+            {
+                "option": "Commercial invoice",
+                "translation": {
+                    "en": "Commercial invoice",
+                    "fr": "Facture commerciale"
+                },
+                "questionResponseId": "74b1a6a7-0a9f-48ac-8ae3-1c7c4e403dbf"
+            },
+            {
+                "option": "No documentation",
+                "translation": {
+                    "en": "No documentation",
+                    "fr": "Aucune documentation"
+                },
+                "questionResponseId": "b68ef684-17d0-4a6c-b674-304e62e1944c"
+            },
+            {
+                "option": "Other (Please specify)",
+                "translation": {
+                    "en": "Other (Please specify)",
+                    "fr": "Autre (veuillez préciser)"
+                },
+                "questionResponseId": "5457b221-5a78-436b-a41a-d788393ecd58"
+            },
+            {
+                "option": "Certificates of origin",
+                "translation": {
+                    "en": "Certificates of origin",
+                    "fr": "Certificats d'origine"
+                },
+                "questionResponseId": "b3672507-2b41-49f8-9be0-6c0933278160"
+            },
+            {
+                "option": "Airway/vessel bills",
+                "translation": {
+                    "en": "Airway/vessel bills",
+                    "fr": "Factures de transport aérien/navire"
+                },
+                "questionResponseId": "04541006-8d77-45a9-9a81-021739e22d1d"
+            },
+            {
+                "option": "Export packing lists",
+                "translation": {
+                    "en": "Export packing lists",
+                    "fr": "Listes de colisage à l'exportation"
+                },
+                "questionResponseId": "02377a7a-4605-4508-aad3-5440c9efc439"
+            },
+            {
+                "option": "Bills of lading",
+                "translation": {
+                    "en": "Bills of lading",
+                    "fr": "Connaissements"
+                },
+                "questionResponseId": "b8042fa6-54a6-4679-aa68-7365231d6f1c"
+            },
+            {
+                "option": "Purchase orders",
+                "translation": {
+                    "en": "Purchase orders",
+                    "fr": "Bons de commande"
+                },
+                "questionResponseId": "07cba25a-bb3b-443b-997f-2ab83502a30e"
+            },
+            {
+                "option": "Requests for quotations and quotations",
+                "translation": {
+                    "en": "Requests for quotations and quotations",
+                    "fr": "Demandes de devis et devis"
+                },
+                "questionResponseId": "ebe70b67-e78d-4edc-bbcf-09c7e46dfc3b"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Do persons aged 15-17 years lift heavy items or loads?",
+            "fr": "Les personnes âgées de 15 à 17 ans soulèvent-elles des objets ou des charges lourds ?"
+        },
+        "questionId": "9fb3bf75-e7a9-402d-8e51-2514f145698d",
+        "index": 42,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "0b423f5e-aef5-45a3-b42a-51fa9aa84db3"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "68b83464-80d9-4b48-b7dd-d74163e3a07c"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Do persons aged 15-17 years use equipment or machinery that may be hazardous (including for example heavy machinery or dangerous equipment)?",
+            "fr": "Les personnes âgées de 15 à 17 ans utilisent-elles des équipements ou des machines qui peuvent être dangereux (y compris par exemple des machines lourdes ou des équipements dangereux) ?"
+        },
+        "questionId": "c2040bf5-3475-4224-bd45-8028506fc24a",
+        "index": 43,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "1fb9aba4-bde7-433a-bc99-4381e0959c1c"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "87ce9e8a-b276-4fb9-9afc-83b2ae992875"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "What type of transport documents does your facility maintain?",
+            "fr": "Quel type de documents de transport votre établissement conserve-t-il ?"
+        },
+        "questionId": "297f4173-af22-4420-a09c-5ca12f7340b9",
+        "index": 44,
+        "questionResponses": [
+            {
+                "option": "Bills of lading",
+                "translation": {
+                    "en": "Bills of lading",
+                    "fr": "Connaissements"
+                },
+                "questionResponseId": "b8141c30-ab7e-4204-b1db-6ac174220874"
+            },
+            {
+                "option": "Airway/vessel bills",
+                "translation": {
+                    "en": "Airway/vessel bills",
+                    "fr": "Factures de transport aérien/navire"
+                },
+                "questionResponseId": "2f226dfb-ae48-4db0-9b97-ea943e2da7b8"
+            },
+            {
+                "option": "Other (Please specify)",
+                "translation": {
+                    "en": "Other (Please specify)",
+                    "fr": "Autre (veuillez préciser)"
+                },
+                "questionResponseId": "a005eb41-236e-4c0f-b9e6-7e677ef221be"
+            },
+            {
+                "option": "No documentation",
+                "translation": {
+                    "en": "No documentation",
+                    "fr": "Aucune documentation"
+                },
+                "questionResponseId": "0441bb6f-fdc8-4f71-a976-c604ebde0761"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "What other documents does the facility maintain?",
+           "fr": "Quels autres documents l’établissement conserve-t-il ?"
+        
+        },
+        "questionId": "70f7e080-7d70-42db-a86f-e6ebbf8a9f2c",
+        "index": 45,
+        "questionResponses": [
+            {
+                "option": "Other (Please specify)",
+                "translation": {
+                    "en": "Other (Please specify)",
+                    "fr": "Autre (veuillez préciser)"
+                },
+                "questionResponseId": "89ebd84c-23f1-4987-8fcf-c4348f215fcb"
+            },
+            {
+                "option": "No documentation",
+                "translation": {
+                    "en": "No documentation",
+                    "fr": "Aucune documentation"
+                },
+                "questionResponseId": "537470c1-4da5-4038-b7d9-e134afa6619f"
+            },
+            {
+                "option": "Dock/warehouse receipts",
+                "translation": {
+                    "en": "Dock/warehouse receipts",
+                    "fr": "Reçus de quai/entrepôt"
+                },
+                "questionResponseId": "b98cc2ba-090e-41a1-a771-50c257d9f53c"
+            },
+            {
+                "option": "Warehouse inventory control",
+                "translation": {
+                    "en": "Warehouse inventory control",
+                    "fr": "Contrôle des stocks en entrepôt"
+                },
+                "questionResponseId": "c3362223-14ee-481a-b0b8-1350d25b00b7"
+            },
+            {
+                "option": "Production records showing input and output of no longer than one day",
+                "translation": {
+                    "en": "Production records showing input and output of no longer than one day",
+                    "fr": "Registres de production indiquant les entrées et les sorties ne dépassant pas une journée"
+                },
+                "questionResponseId": "bce78297-f471-4841-9e3e-86b3fae66395"
+            },
+            {
+                "option": "Manufacturing / process control",
+                "translation": {
+                    "en": "Manufacturing / process control",
+                    "fr": "Contrôle de fabrication / de processus"
+                },
+                "questionResponseId": "568fcd79-dacf-44e3-81b7-c0a79ad9ef91"
+            },
+            {
+                "option": "Finished good warehousing",
+                "translation": {
+                    "en": "Finished good warehousing",
+                    "fr": "Bon entrepôt fini"
+                },
+                "questionResponseId": "08f80f12-be1a-4846-902d-5d909cd59097"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Do persons aged 15-17 years work with a parent or adult relative present?",
+            "fr": "Les personnes âgées de 15 à 17 ans travaillent-elles en présence d'un parent ou d'un adulte de la famille ?"
+        },
+        "questionId": "422aff86-acd0-4a1f-8968-00cf97e57de6",
+        "index": 46,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "67bb5faf-0075-41ce-82d2-cba4eeac581c"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "696fe2b2-dc66-4bf7-ac69-74ba5724612a"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Do you collect supplier details and record every product sale undertaken by your company?",
+            "fr": "Collectez-vous les coordonnées des fournisseurs et enregistrez-vous chaque vente de produits effectuée par votre entreprise ?"
+        },
+        "questionId": "d0e2495e-79d7-470d-9c1a-732dfdbb3db7",
+        "index": 47,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "dc8939e0-60a3-4b20-9a06-f18c85f99f56"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "b0ef1b43-65b2-441d-a332-fdff977d0a27"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Do persons aged 15-17 years work during school hours?",
+            "fr": "Les personnes âgées de 15 à 17 ans travaillent-elles pendant les heures de cours ?"
+        },
+        "questionId": "57106cfe-0d01-477c-85d0-276d9fe42ec0",
+        "index": 48,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "fba3945d-5114-4a14-8ad9-9e53d3f0c3f5"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "fb9f84ae-dfeb-4ecb-80e5-3e47affdc81e"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Do your records extend from raw material mining to sale to immediate supplier?",
+            "fr": "Vos dossiers s'étendent-ils de l'extraction des matières premières à la vente au fournisseur immédiat ?"
+        },
+        "questionId": "7ae586aa-6ebd-40ad-af02-c4e291a961bb",
+        "index": 49,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "391ea9d9-2850-4f68-b0ec-e4f668295174"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "b39fc800-36de-418c-a17a-66e8052a76e7"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Do persons aged 17 and under on the site perform non-hazardous work in a non-hazardous manner (including for example sweeping, carrying food to parents, carrying light loads)?",
+            "fr": "Les personnes âgées de 17 ans et moins présentes sur le site effectuent-elles des travaux non dangereux de manière non dangereuse (y compris par exemple balayer, apporter de la nourriture aux parents, transporter des charges légères) ?"
+        },
+        "questionId": "dab28434-c4aa-450f-8709-08431f2714b6",
+        "index": 50,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "0e0413b5-c797-45af-a7f0-c4dcae55a3ec"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "8fb6839d-721a-44f5-bbeb-821b9ee320d0"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Are persons aged 17 and under not working but present on site exposed to toxic chemicals?",
+            "fr": "Les personnes âgées de 17 ans et moins qui ne travaillent pas mais qui sont présentes sur le site sont-elles exposées à des produits chimiques toxiques ?"
+        },
+        "questionId": "190453bc-e03f-41c6-bbf8-4206dcbe16b3",
+        "index": 51,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "9377110e-988f-4cd1-9718-0e0e554bf7f3"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "aadd5d8c-9a5d-4322-a002-97226bfc2f67"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Are there any worker organizations at this facility?",
+            "fr": "Existe-t-il des organisations de travailleurs dans cette installation ?"
+        },
+        "questionId": "b00495b2-7e9d-4c9c-84d1-0bcaf1716abf",
+        "index": 52,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "014ce410-27fc-4b32-8e50-4fe15f09f5fc"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "6d57a76a-b1bd-48a6-9283-7986ca6d515d"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "What percentage of the workforce is part of a worker organization?",
+            "fr": "Quel pourcentage de la main-d'œuvre fait partie d'une organisation de travailleurs ?"
+        },
+        "questionId": "d58eb5fa-6373-491c-bcd7-14f6b81c8a88",
+        "index": 53,
+        "questionResponses": [
+            {
+                "option": "1% - 50%",
+                "translation": {
+                    "en": "1% - 50%",
+                    "fr": "1-50%"
+                },
+                "questionResponseId": "d0503faf-0b52-48a3-b2a3-25940c2e5364"
+            },
+            {
+                "option": ">50%",
+                "translation": {
+                    "en": ">50%",
+                    "fr": ">50%"
+                },
+                "questionResponseId": "60a7866a-202a-44ef-acd8-8acc8a03d0b4"
+            },
+            {
+                "option": "0",
+                "translation": {
+                    "en": "0%",
+                    "fr": "0%"
+                },
+                "questionResponseId": "475ab798-75c7-4bbf-bb61-1c60472cfa32"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "What percentage of the workforce is covered by collective bargaining agreements?",
+            "fr": "Quel pourcentage de la main-d'œuvre est couvert par des conventions collectives ?"
+        },
+        "questionId": "c9a56ca6-6276-4088-b5f8-84a1d60ffa5c",
+        "index": 54,
+        "questionResponses": [
+            {
+                "option": ">50%",
+                "translation": {
+                    "en": ">50%",
+                    "fr": ">50%"
+                },
+                "questionResponseId": "257cf8b8-bf8a-4a3a-bca8-8e54a5e854b7"
+            },
+            {
+                "option": "1% - 50%",
+                "translation": {
+                    "en": "1% - 50%",
+                    "fr": "1-50%"
+                },
+                "questionResponseId": "018a8832-6616-455a-b65d-2f6e6850eb1d"
+            },
+            {
+                "option": "0",
+                "translation": {
+                    "en": "0%",
+                    "fr": "0%"
+                },
+                "questionResponseId": "39c8e9d7-67ed-48ba-9b00-edcf4c292712"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Have any group of workers made complaints about work at the facility this year?",
+            "fr": "Un groupe de travailleurs a-t-il déposé des plaintes concernant le travail effectué dans l'établissement cette année ?"
+        },
+        "questionId": "bb7f4f92-3b98-4ef4-9cee-abbebf7a9f63",
+        "index": 55,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "25c6fe3a-c1aa-411b-b05b-c0e3dca58edc"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "828ea5a4-470c-4b75-bbdd-6b0ace097cc0"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "If yes, how many complaints were raised by workers at this site this year?",
+            "fr": "Si oui, combien de plaintes ont été déposées par les travailleurs sur ce site cette année ?"
+        },
+        "questionId": "bbc950c9-cdc5-4788-8b47-111b6d3ff89f",
+        "index": 56
+    },
+    {
+        "title": {
+            "en": "If so, have they been resolved?",
+            "fr": "Si oui, ont-elles été résolues ?"
+        },
+        "questionId": "bb981ab0-0aff-4a61-b899-b99b6eda68df",
+        "index": 57,
+        "questionResponses": [
+            {
+                "option": "Partly",
+                "translation": {
+                    "en": "Partly",
+                    "fr": "En partie"
+                },
+                "questionResponseId": "b35a17f5-164e-4c40-ae0f-e0ffd1a1af25"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "2f25054f-c617-41fe-8ce2-afe3e3f11131"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "2ff66641-0cdd-41fc-87a8-1d205d625353"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Are workers giiven health and safety training, such as appropriate use of equipment and use of personal protective equipment (PPE)?",
+            "fr": "Les travailleurs reçoivent-ils une formation en matière de santé et de sécurité, notamment sur l'utilisation appropriée de l'équipement et l'utilisation d'équipements de protection individuelle (EPI) ?"
+        },
+        "questionId": "4f319d7d-9cb9-421d-aca5-168f260e3c96",
+        "index": 58,
+        "questionResponses": [
+            {
+                "option": "We provide all workers with health and safety training at least once per year",
+                "translation": {
+                    "en": "We provide all workers with health and safety training at least once per year",
+                    "fr": "Nous offrons à tous les travailleurs une formation en matière de santé et de sécurité au moins une fois par an"
+                },
+                "questionResponseId": "9bba62e8-386e-4694-946c-b1ced630712e"
+            },
+            {
+                "option": "We provide new workers with health and safety training when they join",
+                "translation": {
+                    "en": "We provide new workers with health and safety training when they join",
+                    "fr": "Nous offrons aux nouveaux travailleurs une formation en matière de santé et de sécurité lorsqu'ils rejoignent notre entreprise."
+                },
+                "questionResponseId": "2393e22c-9e84-4ec8-8577-e729f23c6f56"
+            },
+            {
+                "option": "We do not provide workers with health and safety training, as they are already very familiar with health and safety",
+                "translation": {
+                    "en": "We do not provide workers with health and safety training, as they are already very familiar with health and safety",
+                    "fr": "Nous n'offrons pas de formation en matière de santé et de sécurité aux travailleurs, car ils sont déjà très familiarisés avec la santé et la sécurité."
+                },
+                "questionResponseId": "7d2c52f5-5ff3-4481-b91c-47aef40b77dc"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Do workers have to wear protective clothing and personal protective equipment (PPE) for any tasks at the facility?",
+            "fr": "Les travailleurs doivent-ils porter des vêtements de protection et des équipements de protection individuelle (EPI) pour toutes les tâches effectuées dans l’établissement ?"
+        },
+        "questionId": "491892b9-5958-49b7-bbfd-5109ae8d0d47",
+        "index": 59,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "dd434483-4ae2-47a7-9741-10d7f9ec31fd"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "586e3c28-a0b5-4baa-a21c-cf3f83cfa69a"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Is protective clothing and personal protective equipment (PPE) provided free of charge?",
+            "fr": "Des vêtements de protection et des équipements de protection individuelle (EPI) sont-ils fournis gratuitement ?"
+        },
+        "questionId": "1596fb6a-d6e5-4906-9c58-83f1bffb018a",
+        "index": 60,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "563e70cb-f966-4c64-9e9a-1ce38bc40d66"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "e225bb5a-3bad-44e7-a1aa-6ba79f7a1fe8"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Does the company provide professional/knowledge development training to workers? (This does not include health and safety training.)",
+            "fr": "L'entreprise propose-t-elle une formation professionnelle/de développement des connaissances aux travailleurs ? (Cela n'inclut pas la formation en matière de santé et de sécurité.)"
+        },
+        "questionId": "4a2d08b6-74ed-4499-8073-5af1c53df9a1",
+        "index": 61,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "4a7cd166-f7d9-42f0-aabc-66a6fe819840"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "46dda05e-d8c7-4751-859b-4649489ad5ab"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "What percent of workers participating in  professional/knowledge development training in the last 12 months were women?",
+            "fr": "Quel pourcentage de travailleurs ayant participé à une formation professionnelle/de développement des connaissances au cours des 12 derniers mois étaient des femmes ?"
+        },
+        "questionId": "84ad8790-6f13-4b36-8ea6-077e7a094e71",
+        "index": 62,
+        "questionResponses": [
+            {
+                "option": "More than 40%",
+                "translation": {
+                    "en": "More than 40%",
+                    "fr": "Plus de 40%"
+                },
+                "questionResponseId": "8a99c0a7-28bb-47c2-9ca9-c7f8e9f5f259"
+            },
+            {
+                "option": "Less than 40%",
+                "translation": {
+                    "en": "Less than 40%",
+                    "fr": "Moins de 40%"
+                },
+                "questionResponseId": "6a212be6-f073-4b7a-bb15-e6df2d939cee"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Are workers provided with access to healthcare and/or medical check-ups free of charge?",
+            "fr": "Les travailleurs ont-ils accès gratuitement aux soins de santé et/ou aux examens médicaux ?"
+        },
+        "questionId": "dd54d3ad-a549-4648-a0fb-8d6f4569cdc1",
+        "index": 63,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "27fe5fb9-3f59-4134-84a2-4d4c902d539c"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "6f592c25-889d-4769-b336-c93e91e6c108"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Are workers employed on a full-time basis?",
+            "fr": "Les travailleurs sont-ils employés à temps plein ?"
+        },
+        "questionId": "fbbfb75a-e292-4e5d-ae97-83337ccc4f61",
+        "index": 64,
+        "questionResponses": [
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "87f6e322-b644-4226-834c-64701fe217ea"
+            },
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "465ec897-94bd-4a48-b222-3412847d17ee"
+            }
+        ]
+    },
+    {
+        "title": {
+            "en": "Are workers granted periodic rest breaks during their shifts?",
+            "fr": "Les travailleurs bénéficient-ils de pauses périodiques pendant leurs quarts de travail ?"
+        },
+        "questionId": "29c3458b-9b5d-4c7e-b528-0ec624fbe0ef",
+        "index": 65,
+        "questionResponses": [
+            {
+                "option": "Yes",
+                "translation": {
+                    "en": "Yes",
+                    "fr": "Oui"
+                },
+                "questionResponseId": "25f7ba53-3944-4516-9711-571e557784c0"
+            },
+            {
+                "option": "No",
+                "translation": {
+                    "en": "No",
+                    "fr": "Non"
+                },
+                "questionResponseId": "334b67f2-f4d4-480a-b443-64c6a8193019"
+            }
+        ]
+    }
+]

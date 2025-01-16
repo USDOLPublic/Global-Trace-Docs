@@ -1,0 +1,968 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Global Trace BE documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">Global Trace BE documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Injectables</li>
+  <li class="breadcrumb-item" >MarginOfErrorService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/events/services/margin-of-error.service.ts</code>
+        </p>
+
+
+
+
+
+            <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#calculate" >calculate</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#calculateMarginOfError" >calculateMarginOfError</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#flatMapProducts" >flatMapProducts</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#getPurchasedProducts" >getPurchasedProducts</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#getSoldProducts" >getSoldProducts</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#getTotalByProduct" >getTotalByProduct</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(transactionRepo: <a href="../classes/TransactionRepository.html" target="_self">TransactionRepository</a>, recordProductRepo: <a href="../classes/RecordProductRepository.html" target="_self">RecordProductRepository</a>, productService: <a href="../injectables/ProductService.html" target="_self">ProductService</a>, productDefinitionService: <a href="../injectables/ProductDefinitionService.html" target="_self">ProductDefinitionService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/events/services/margin-of-error.service.ts:22</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>transactionRepo</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../classes/TransactionRepository.html" target="_self" >TransactionRepository</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>recordProductRepo</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../classes/RecordProductRepository.html" target="_self" >RecordProductRepository</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>productService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ProductService.html" target="_self" >ProductService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>productDefinitionService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ProductDefinitionService.html" target="_self" >ProductDefinitionService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="calculate"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>calculate</b></span>
+                        <a href="#calculate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>calculate(user: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>, timeRange: <a href="../undefineds/TimeRangeType.html" target="_self">TimeRangeType&lt;number&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="30"
+                                    class="link-to-prism">src/events/services/margin-of-error.service.ts:30</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>user</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>timeRange</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#TimeRangeType" target="_self" >TimeRangeType&lt;number&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#now" target="_self" >unknown</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="calculateMarginOfError"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>calculateMarginOfError</b></span>
+                        <a href="#calculateMarginOfError"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>calculateMarginOfError(user: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>, timeRange: <a href="../undefineds/TimeRangeType.html" target="_self">TimeRangeType&lt;number&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="79"
+                                    class="link-to-prism">src/events/services/margin-of-error.service.ts:79</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>user</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>timeRange</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#TimeRangeType" target="_self" >TimeRangeType&lt;number&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#now" target="_self" >unknown</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="flatMapProducts"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>flatMapProducts</b></span>
+                        <a href="#flatMapProducts"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>flatMapProducts(transactions: <a href="../classes/TransactionEntity.html" target="_self">TransactionEntity[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="127"
+                                    class="link-to-prism">src/events/services/margin-of-error.service.ts:127</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>transactions</td>
+                                            <td>
+                                                            <code><a href="../classes/TransactionEntity.html" target="_self" >TransactionEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/ProductEntity.html" target="_self" >ProductEntity[]</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPurchasedProducts"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>getPurchasedProducts</b></span>
+                        <a href="#getPurchasedProducts"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getPurchasedProducts(user: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>, convertedTimeRange: <a href="../undefineds/TimeRangeType.html" target="_self">TimeRangeType&lt;Date&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="108"
+                                    class="link-to-prism">src/events/services/margin-of-error.service.ts:108</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>user</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>convertedTimeRange</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#TimeRangeType" target="_self" >TimeRangeType&lt;Date&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/ProductEntity.html" target="_self" >Promise&lt;ProductEntity[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSoldProducts"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>getSoldProducts</b></span>
+                        <a href="#getSoldProducts"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getSoldProducts(user: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>, convertedTimeRange: <a href="../undefineds/TimeRangeType.html" target="_self">TimeRangeType&lt;Date&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="119"
+                                    class="link-to-prism">src/events/services/margin-of-error.service.ts:119</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>user</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>convertedTimeRange</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#TimeRangeType" target="_self" >TimeRangeType&lt;Date&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/ProductEntity.html" target="_self" >Promise&lt;ProductEntity[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getTotalByProduct"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>getTotalByProduct</b></span>
+                        <a href="#getTotalByProduct"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getTotalByProduct(facility: <a href="../entitys/FacilityEntity.html" target="_self">FacilityEntity</a>, timeRange: <a href="../undefineds/TimeRangeType.html" target="_self">TimeRangeType&lt;Date&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="91"
+                                    class="link-to-prism">src/events/services/margin-of-error.service.ts:91</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>facility</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >FacilityEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>timeRange</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#TimeRangeType" target="_self" >TimeRangeType&lt;Date&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;RecordProductEntity[]&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@nestjs/common&#x27;;
+import moment from &#x27;moment&#x27;;
+import { Between, FindOptionsWhere, LessThanOrEqual, MoreThanOrEqual } from &#x27;typeorm&#x27;;
+import {
+    calculateTotalWeight,
+    convertToKg,
+    isUsingWeightUnits,
+    isWeightUnit
+} from &#x27;~events/helpers/convert-to-kg.helper&#x27;;
+import { RecordProductRepository } from &#x27;~events/repositories/record-product.repository&#x27;;
+import { FacilityEntity } from &#x27;~facilities/entities/facility.entity&#x27;;
+import { RecordProductEntity } from &#x27;~events/entities/record-product.entity&#x27;;
+import { TransactionEntity } from &#x27;~events/entities/transaction.entity&#x27;;
+import { TransactionRepository } from &#x27;~events/repositories/transaction.repository&#x27;;
+import { TimeRangeType } from &#x27;~events/types/time-range.type&#x27;;
+import { ProductDefinitionService } from &#x27;~product-definitions/services/product-definition.service&#x27;;
+import { ProductEntity } from &#x27;~products/entities/product.entity&#x27;;
+import { ProductService } from &#x27;~products/services/product.service&#x27;;
+import { UserEntity } from &#x27;~users/entities/user.entity&#x27;;
+
+@Injectable()
+export class MarginOfErrorService {
+    constructor(
+        private transactionRepo: TransactionRepository,
+        private recordProductRepo: RecordProductRepository,
+        private productService: ProductService,
+        private productDefinitionService: ProductDefinitionService
+    ) {}
+
+    async calculate(user: UserEntity, timeRange: TimeRangeType&lt;number&gt;) {
+        const convertedTimeRange: TimeRangeType&lt;Date&gt; &#x3D; {
+            from: timeRange.from ? moment.unix(timeRange.from).toDate() : null,
+            to: timeRange.to ? moment.unix(timeRange.to).toDate() : null
+        };
+
+        const purchasedProducts &#x3D; await this.getPurchasedProducts(user, convertedTimeRange);
+        const canCalculateTotalInputs &#x3D; isUsingWeightUnits(purchasedProducts);
+        let totalInputs: number;
+        if (canCalculateTotalInputs) {
+            totalInputs &#x3D; calculateTotalWeight(purchasedProducts);
+        }
+
+        const recordProducts &#x3D; await this.getTotalByProduct(user.currentFacility, convertedTimeRange);
+        const areRecordProductsUsingWeightUnits &#x3D; recordProducts.every(({ weightUnit }) &#x3D;&gt; isWeightUnit(weightUnit));
+        let totalByProduct: number;
+        if (areRecordProductsUsingWeightUnits) {
+            totalByProduct &#x3D; recordProducts.reduce&lt;number&gt;((previousValue, item) &#x3D;&gt; {
+                return previousValue + convertToKg(item.totalWeight, item.weightUnit);
+            }, 0);
+        }
+
+        const soldProducts &#x3D; await this.getSoldProducts(user, convertedTimeRange);
+        const canCalculateTotalSold &#x3D; isUsingWeightUnits(soldProducts);
+
+        const purchasedProductDefinitions &#x3D; await this.productDefinitionService.getPurchasedProductDefinitions(user);
+        const notTransformedProducts &#x3D; await this.productService.getPurchaseCottonNotTransformed(
+            user.currentFacility,
+            purchasedProductDefinitions.map(({ id }) &#x3D;&gt; id),
+            convertedTimeRange
+        );
+        const canCalculateTotalNotTransformed &#x3D; isUsingWeightUnits(notTransformedProducts);
+
+        const canCalculateTotalOutputs &#x3D;
+            canCalculateTotalSold &amp;&amp; areRecordProductsUsingWeightUnits &amp;&amp; canCalculateTotalNotTransformed;
+        let totalOutputs: number;
+        if (canCalculateTotalOutputs) {
+            const totalSoldWeight &#x3D; calculateTotalWeight(soldProducts);
+            const totalNotTransformed &#x3D; calculateTotalWeight(notTransformedProducts);
+            totalOutputs &#x3D; totalSoldWeight + totalByProduct + totalNotTransformed;
+        }
+
+        return {
+            totalInputs: { canCalculate: canCalculateTotalInputs, value: totalInputs },
+            totalOutputs: { canCalculate: canCalculateTotalOutputs, value: totalOutputs },
+            totalByProduct: { canCalculate: areRecordProductsUsingWeightUnits, value: totalByProduct }
+        };
+    }
+
+    async calculateMarginOfError(user: UserEntity, timeRange: TimeRangeType&lt;number&gt;) {
+        const { totalInputs, totalOutputs } &#x3D; await this.calculate(user, timeRange);
+        const canCalculate &#x3D; totalInputs.canCalculate &amp;&amp; totalOutputs.canCalculate;
+        let marginOfError: number;
+        if (canCalculate) {
+            marginOfError &#x3D;
+                totalInputs.value &#x3D;&#x3D;&#x3D; 0 ? 0 : ((totalInputs.value - totalOutputs.value) / totalInputs.value) * 100;
+        }
+
+        return { canCalculate, value: marginOfError };
+    }
+
+    private async getTotalByProduct(
+        facility: FacilityEntity,
+        timeRange: TimeRangeType&lt;Date&gt;
+    ): Promise&lt;RecordProductEntity[]&gt; {
+        const condition: FindOptionsWhere&lt;RecordProductEntity&gt; &#x3D; { facilityId: facility.id };
+
+        if (timeRange.from &amp;&amp; timeRange.to) {
+            condition.recordedAt &#x3D; Between(timeRange.from, timeRange.to);
+        } else if (timeRange.from) {
+            condition.recordedAt &#x3D; MoreThanOrEqual(timeRange.from);
+        } else if (timeRange.to) {
+            condition.recordedAt &#x3D; LessThanOrEqual(timeRange.to);
+        }
+
+        return this.recordProductRepo.findBy(condition);
+    }
+
+    private async getPurchasedProducts(
+        user: UserEntity,
+        convertedTimeRange: TimeRangeType&lt;Date&gt;
+    ): Promise&lt;ProductEntity[]&gt; {
+        const purchaseTransactions &#x3D; await this.transactionRepo.getTotalPurchasedByTime(
+            user.currentFacility.id,
+            convertedTimeRange
+        );
+        return this.flatMapProducts(purchaseTransactions);
+    }
+
+    private async getSoldProducts(user: UserEntity, convertedTimeRange: TimeRangeType&lt;Date&gt;): Promise&lt;ProductEntity[]&gt; {
+        const saleTransactions &#x3D; await this.transactionRepo.getTotalSoldByTime(
+            user.currentFacility.id,
+            convertedTimeRange
+        );
+        return this.flatMapProducts(saleTransactions);
+    }
+
+    private flatMapProducts(transactions: TransactionEntity[]): ProductEntity[] {
+        return transactions.flatMap(({ transactionItems }) &#x3D;&gt; transactionItems).flatMap(({ product }) &#x3D;&gt; product);
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'MarginOfErrorService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

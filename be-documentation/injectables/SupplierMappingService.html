@@ -1,0 +1,1112 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Global Trace BE documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">Global Trace BE documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Injectables</li>
+  <li class="breadcrumb-item" >SupplierMappingService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/facilities/services/supplier-mapping.service.ts</code>
+        </p>
+
+
+
+
+
+            <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#addSuppliers" >addSuppliers</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getLines" >getLines</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getMappingList" >getMappingList</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#mapTraceGroup" >mapTraceGroup</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#traceFromSuppliers" >traceFromSuppliers</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#traceGroup" >traceGroup</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#traceGroupSuppliers" >traceGroupSuppliers</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(facilityRepo: <a href="../classes/FacilityRepository.html" target="_self">FacilityRepository</a>, supplyChainService: <a href="../injectables/SupplyChainService.html" target="_self">SupplyChainService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/facilities/services/supplier-mapping.service.ts:14</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>facilityRepo</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../classes/FacilityRepository.html" target="_self" >FacilityRepository</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>supplyChainService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SupplyChainService.html" target="_self" >SupplyChainService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addSuppliers"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>addSuppliers</b></span>
+                        <a href="#addSuppliers"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>addSuppliers(supplier: <a href="../entitys/FacilityEntity.html" target="_self">FacilityEntity</a>, supplierMap: <a href="../entitys/FacilityEntity.html" target="_self">Map&lt;string | FacilityEntity&gt;</a>, maps: <a href="../undefineds/TracingSupplierMapsType.html" target="_self">TracingSupplierMapsType</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="148"
+                                    class="link-to-prism">src/facilities/services/supplier-mapping.service.ts:148</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>supplier</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >FacilityEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>supplierMap</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >Map&lt;string | FacilityEntity&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>maps</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#TracingSupplierMapsType" target="_self" >TracingSupplierMapsType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getLines"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>getLines</b></span>
+                        <a href="#getLines"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getLines(suppliers: <a href="../entitys/FacilityEntity.html" target="_self">FacilityEntity[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="131"
+                                    class="link-to-prism">src/facilities/services/supplier-mapping.service.ts:131</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>suppliers</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >FacilityEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Line[]</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getMappingList"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>getMappingList</b></span>
+                        <a href="#getMappingList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getMappingList(user: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="20"
+                                    class="link-to-prism">src/facilities/services/supplier-mapping.service.ts:20</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>user</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;[][]&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="mapTraceGroup"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>mapTraceGroup</b></span>
+                        <a href="#mapTraceGroup"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>mapTraceGroup(groupSuppliers: <a href="../entitys/FacilityEntity.html" target="_self">Dictionary&lt;FacilityEntity[]&gt;</a>, rolesOrder: literal type, groupedLineByTargetId: Dictionary<Line[]>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="83"
+                                    class="link-to-prism">src/facilities/services/supplier-mapping.service.ts:83</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>groupSuppliers</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >Dictionary&lt;FacilityEntity[]&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>rolesOrder</td>
+                                            <td>
+                                                        <code>literal type</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>groupedLineByTargetId</td>
+                                            <td>
+                                                        <code>Dictionary&lt;Line[]&gt;</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#TypeMapElementType" target="_self" >TypeMapElementType[]</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="traceFromSuppliers"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>traceFromSuppliers</b></span>
+                        <a href="#traceFromSuppliers"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>traceFromSuppliers(maps: <a href="../undefineds/TracingSupplierMapsType.html" target="_self">TracingSupplierMapsType</a>, rolesOrder: literal type, brandTierIds: string[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="36"
+                                    class="link-to-prism">src/facilities/services/supplier-mapping.service.ts:36</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>maps</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#TracingSupplierMapsType" target="_self" >TracingSupplierMapsType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>rolesOrder</td>
+                                            <td>
+                                                        <code>literal type</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>brandTierIds</td>
+                                            <td>
+                                                        <code>string[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>[][]</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="traceGroup"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>traceGroup</b></span>
+                        <a href="#traceGroup"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>traceGroup(supplier: <a href="../entitys/FacilityEntity.html" target="_self">FacilityEntity</a>, maps: <a href="../undefineds/TracingSupplierMapsType.html" target="_self">TracingSupplierMapsType</a>, rolesOrder: literal type, brandTierIds: string[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="57"
+                                    class="link-to-prism">src/facilities/services/supplier-mapping.service.ts:57</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>supplier</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >FacilityEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>maps</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#TracingSupplierMapsType" target="_self" >TracingSupplierMapsType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>rolesOrder</td>
+                                            <td>
+                                                        <code>literal type</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>brandTierIds</td>
+                                            <td>
+                                                        <code>string[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#TypeMapElementType" target="_self" >TypeMapElementType[]</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="traceGroupSuppliers"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>traceGroupSuppliers</b></span>
+                        <a href="#traceGroupSuppliers"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>traceGroupSuppliers(supplier: <a href="../entitys/FacilityEntity.html" target="_self">FacilityEntity</a>, maps: <a href="../undefineds/TracingSupplierMapsType.html" target="_self">TracingSupplierMapsType</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="140"
+                                    class="link-to-prism">src/facilities/services/supplier-mapping.service.ts:140</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>supplier</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >FacilityEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>maps</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#TracingSupplierMapsType" target="_self" >TracingSupplierMapsType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/FacilityEntity.html" target="_self" >FacilityEntity[]</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@nestjs/common&#x27;;
+import { Dictionary, difference, groupBy, orderBy, pick, reverse, union } from &#x27;lodash&#x27;;
+import { FacilityEntity } from &#x27;~facilities/entities/facility.entity&#x27;;
+import { getFacilityTypeName } from &#x27;~facilities/helpers/get-facility-type-name.helper&#x27;;
+import { FacilityRepository } from &#x27;~facilities/repositories/facility.repository&#x27;;
+import { Line } from &#x27;~facilities/types/line.type&#x27;;
+import { SupplierMapElementType } from &#x27;~facilities/types/supplier-map-element.type&#x27;;
+import { TracingSupplierMapsType } from &#x27;~facilities/types/tracing-supplier-maps.type&#x27;;
+import { TypeMapElementType } from &#x27;~facilities/types/type-map-element.type&#x27;;
+import { SupplyChainService } from &#x27;~supply-chains/services/supply-chain.service&#x27;;
+import { UserEntity } from &#x27;~users/entities/user.entity&#x27;;
+
+@Injectable()
+export class SupplierMappingService {
+    constructor(
+        private facilityRepo: FacilityRepository,
+        private supplyChainService: SupplyChainService
+    ) {}
+
+    async getMappingList(user: UserEntity): Promise&lt;TypeMapElementType[][]&gt; {
+        const allSuppliers &#x3D; await this.facilityRepo.findBrandSuppliers(user.currentFacility);
+        const allSuppliersMap &#x3D; new Map(
+            allSuppliers.map((supplier) &#x3D;&gt; {
+                supplier.users &#x3D; orderBy(supplier.users, &#x27;createdAt&#x27;);
+                return [supplier.id, supplier];
+            })
+        );
+
+        const tracedSupplierMap &#x3D; new Map();
+        const rolesOrder &#x3D; await this.supplyChainService.getRolesOrder();
+        const brandTierIds &#x3D; await this.supplyChainService.getBrandTierIds(user.role);
+
+        return this.traceFromSuppliers({ allSuppliersMap, tracedSupplierMap }, rolesOrder, brandTierIds);
+    }
+
+    private traceFromSuppliers(
+        maps: TracingSupplierMapsType,
+        rolesOrder: { [key: string]: number },
+        brandTierIds: string[]
+    ): TypeMapElementType[][] {
+        const ids &#x3D; Array.from(maps.allSuppliersMap.keys());
+
+        const result: TypeMapElementType[][] &#x3D; [];
+        while (true) {
+            const remainingIds &#x3D; ids.filter((id) &#x3D;&gt; !maps.tracedSupplierMap.has(id));
+            if (!remainingIds.length) {
+                break;
+            }
+
+            const supplier &#x3D; maps.allSuppliersMap.get(remainingIds[0]);
+            const mapElementType &#x3D; this.traceGroup(supplier, maps, rolesOrder, brandTierIds);
+            mapElementType &amp;&amp; result.push(mapElementType);
+        }
+        return result;
+    }
+
+    private traceGroup(
+        supplier: FacilityEntity,
+        maps: TracingSupplierMapsType,
+        rolesOrder: { [key: string]: number },
+        brandTierIds: string[]
+    ): TypeMapElementType[] {
+        const suppliers &#x3D; this.traceGroupSuppliers(supplier, maps).filter((item) &#x3D;&gt; brandTierIds.includes(item.typeId));
+        if (suppliers.length) {
+            const lines &#x3D; this.getLines(suppliers);
+            const groupedLineByTargetId &#x3D; groupBy(lines, &#x27;targetId&#x27;);
+
+            const groupSuppliers &#x3D; groupBy(suppliers, ({ type }) &#x3D;&gt; type.id);
+            const groups &#x3D; this.mapTraceGroup(groupSuppliers, rolesOrder, groupedLineByTargetId);
+
+            const appearedSupplierIds &#x3D; [];
+            for (const group of reverse([...groups])) {
+                for (const supplier of group.suppliers) {
+                    supplier.targets &#x3D; difference(supplier.targets, appearedSupplierIds);
+                }
+                appearedSupplierIds.push(...group.suppliers.map((supplier) &#x3D;&gt; supplier.id));
+            }
+
+            return groups;
+        }
+    }
+
+    private mapTraceGroup(
+        groupSuppliers: Dictionary&lt;FacilityEntity[]&gt;,
+        rolesOrder: { [key: string]: number },
+        groupedLineByTargetId: Dictionary&lt;Line[]&gt;
+    ): TypeMapElementType[] {
+        const groupSuppliersWithRoleId &#x3D; Object.entries(groupSuppliers);
+        return groupSuppliersWithRoleId
+            .sort((a, b) &#x3D;&gt; rolesOrder[a[0]] - rolesOrder[b[0]])
+            .map(([roleId, groupSupplier], index) &#x3D;&gt; {
+                return {
+                    roleId,
+                    type: groupSupplier[0].type.name,
+                    suppliers: groupSupplier.map((facility) &#x3D;&gt; {
+                        let afterSupplierIds: string[] &#x3D; [];
+
+                        if (index &lt; groupSuppliersWithRoleId.length - 1) {
+                            const [, afterSuppliers] &#x3D; groupSuppliersWithRoleId[index + 1];
+                            afterSupplierIds &#x3D; afterSuppliers.map(({ id }) &#x3D;&gt; id);
+                        }
+
+                        const targets &#x3D; union(
+                            (groupedLineByTargetId[facility.id] || []).map(({ id }) &#x3D;&gt; id),
+                            facility.facilityPartners.map(({ partnerId }) &#x3D;&gt; partnerId)
+                        );
+
+                        return {
+                            ...pick(facility, [
+                                &#x27;id&#x27;,
+                                &#x27;name&#x27;,
+                                &#x27;selfAssessment&#x27;,
+                                &#x27;users&#x27;,
+                                &#x27;riskLevel&#x27;,
+                                &#x27;typeId&#x27;,
+                                &#x27;businessRegisterNumber&#x27;,
+                                &#x27;oarId&#x27;,
+                                &#x27;facilityPartners&#x27;,
+                                &#x27;riskData&#x27;
+                            ]),
+                            label: getFacilityTypeName(facility.typeName, facility.type),
+                            targets: targets.filter((id) &#x3D;&gt; !afterSupplierIds.includes(id)),
+                            type: facility.typeName,
+                            icon: facility.type.icon
+                        } as SupplierMapElementType;
+                    })
+                };
+            });
+    }
+
+    private getLines(suppliers: FacilityEntity[]): Line[] {
+        return suppliers.reduce((acc, { id, facilityPartners }) &#x3D;&gt; {
+            if (facilityPartners.length) {
+                acc.push(...facilityPartners.map(({ partnerId: targetId }) &#x3D;&gt; ({ id, targetId })));
+            }
+            return acc;
+        }, []);
+    }
+
+    private traceGroupSuppliers(supplier: FacilityEntity, maps: TracingSupplierMapsType): FacilityEntity[] {
+        const supplierMap &#x3D; new Map();
+
+        this.addSuppliers(supplier, supplierMap, maps);
+
+        return Array.from(supplierMap.values());
+    }
+
+    private addSuppliers(
+        supplier: FacilityEntity,
+        supplierMap: Map&lt;string, FacilityEntity&gt;,
+        maps: TracingSupplierMapsType
+    ) {
+        if (!supplier || supplierMap.has(supplier.id)) {
+            return;
+        }
+
+        supplierMap.set(supplier.id, supplier);
+
+        if (!maps.tracedSupplierMap.has(supplier.id)) {
+            maps.tracedSupplierMap.set(supplier.id, supplier);
+        }
+
+        for (const partner of supplier.facilityPartners) {
+            this.addSuppliers(maps.allSuppliersMap.get(partner.partnerId), supplierMap, maps);
+        }
+
+        for (const partner of supplier.partnerFacilities) {
+            this.addSuppliers(maps.allSuppliersMap.get(partner.facilityId), supplierMap, maps);
+        }
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'SupplierMappingService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

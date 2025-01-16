@@ -1,0 +1,3476 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Global Trace BE documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">Global Trace BE documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Injectables</li>
+  <li class="breadcrumb-item" >FacilityService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/facilities/services/facility.service.ts</code>
+        </p>
+
+
+
+            <p class="comment">
+                <h3>Extends</h3>
+            </p>
+            <p class="comment">
+                        <code>TransactionService</code>
+            </p>
+
+
+            <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#addOarId" >addOarId</a>
+                            </li>
+                            <li>
+                                <a href="#checkValidFacilityType" >checkValidFacilityType</a>
+                            </li>
+                            <li>
+                                <a href="#createOne" >createOne</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#deleteFacilityById" >deleteFacilityById</a>
+                            </li>
+                            <li>
+                                <a href="#findBusinessPartnerByFacilityId" >findBusinessPartnerByFacilityId</a>
+                            </li>
+                            <li>
+                                <a href="#findById" >findById</a>
+                            </li>
+                            <li>
+                                <a href="#findByIds" >findByIds</a>
+                            </li>
+                            <li>
+                                <a href="#findByTypes" >findByTypes</a>
+                            </li>
+                            <li>
+                                <a href="#findExistedSupplierFacility" >findExistedSupplierFacility</a>
+                            </li>
+                            <li>
+                                <a href="#findFacilityOfUser" >findFacilityOfUser</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#findFacilityWithRelations" >findFacilityWithRelations</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#findInformationSupplierById" >findInformationSupplierById</a>
+                            </li>
+                            <li>
+                                <a href="#findOne" >findOne</a>
+                            </li>
+                            <li>
+                                <a href="#findOneByUserId" >findOneByUserId</a>
+                            </li>
+                            <li>
+                                <a href="#findSupplierFacilityByContactorEmail" >findSupplierFacilityByContactorEmail</a>
+                            </li>
+                            <li>
+                                <a href="#findSupplierFacilityByContactorOarId" >findSupplierFacilityByContactorOarId</a>
+                            </li>
+                            <li>
+                                <a href="#getAllSuppliers" >getAllSuppliers</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getDetailSupplierById" >getDetailSupplierById</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#getFacilityInformation" >getFacilityInformation</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getListSuppliers" >getListSuppliers</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getProductSupplierForDna" >getProductSupplierForDna</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getRequestingFacilityForDna" >getRequestingFacilityForDna</a>
+                            </li>
+                            <li>
+                                <a href="#getSupplierById" >getSupplierById</a>
+                            </li>
+                            <li>
+                                <a href="#mapExternalRiskIndicators" >mapExternalRiskIndicators</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#searchByName" >searchByName</a>
+                            </li>
+                            <li>
+                                <a href="#searchExitingFacilities" >searchExitingFacilities</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#searchFacilities" >searchFacilities</a>
+                            </li>
+                            <li>
+                                <a href="#updateAnsweredSaqAt" >updateAnsweredSaqAt</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#updateFacilityByAdmin" >updateFacilityByAdmin</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#updateFacilityInformation" >updateFacilityInformation</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#updateFacilityRiskData" >updateFacilityRiskData</a>
+                            </li>
+                            <li>
+                                <a href="#updateLastAddedPartnerAt" >updateLastAddedPartnerAt</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#updateProfileBrand" >updateProfileBrand</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#updateRiskDataForFacility" >updateRiskDataForFacility</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(facilityRepo: <a href="../classes/FacilityRepository.html" target="_self">FacilityRepository</a>, uploadProofService: <a href="../injectables/UploadProofService.html" target="_self">UploadProofService</a>, userService: <a href="../injectables/UserService.html" target="_self">UserService</a>, businessDetailService: <a href="../injectables/BusinessDetailService.html" target="_self">BusinessDetailService</a>, facilityRiskService: <a href="../injectables/FacilityRiskService.html" target="_self">FacilityRiskService</a>, roleService: <a href="../injectables/RoleService.html" target="_self">RoleService</a>, rolePermissionService: <a href="../injectables/RolePermissionService.html" target="_self">RolePermissionService</a>, facilityRiskFilerService: <a href="../injectables/FacilityRiskFilerService.html" target="_self">FacilityRiskFilerService</a>, categoryService: <a href="../injectables/CategoryService.html" target="_self">CategoryService</a>, facilityRiskMapperService: <a href="../injectables/FacilityRiskMapperService.html" target="_self">FacilityRiskMapperService</a>, facilityOperationService: <a href="../injectables/FacilityOperationService.html" target="_self">FacilityOperationService</a>, facilityRoleAttributeService: <a href="../injectables/FacilityRoleAttributeService.html" target="_self">FacilityRoleAttributeService</a>, roleAttributeService: <a href="../injectables/RoleAttributeService.html" target="_self">RoleAttributeService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/facilities/services/facility.service.ts:50</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>facilityRepo</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../classes/FacilityRepository.html" target="_self" >FacilityRepository</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>uploadProofService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UploadProofService.html" target="_self" >UploadProofService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>userService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UserService.html" target="_self" >UserService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>businessDetailService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/BusinessDetailService.html" target="_self" >BusinessDetailService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>facilityRiskService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/FacilityRiskService.html" target="_self" >FacilityRiskService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>roleService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/RoleService.html" target="_self" >RoleService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>rolePermissionService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/RolePermissionService.html" target="_self" >RolePermissionService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>facilityRiskFilerService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/FacilityRiskFilerService.html" target="_self" >FacilityRiskFilerService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>categoryService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CategoryService.html" target="_self" >CategoryService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>facilityRiskMapperService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/FacilityRiskMapperService.html" target="_self" >FacilityRiskMapperService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>facilityOperationService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/FacilityOperationService.html" target="_self" >FacilityOperationService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>facilityRoleAttributeService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/FacilityRoleAttributeService.html" target="_self" >FacilityRoleAttributeService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>roleAttributeService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/RoleAttributeService.html" target="_self" >RoleAttributeService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addOarId"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>addOarId</b></span>
+                        <a href="#addOarId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>addOarId(user: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>, dto: <a href="../classes/AddFacilityOarIdDto.html" target="_self">AddFacilityOarIdDto</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="281"
+                                    class="link-to-prism">src/facilities/services/facility.service.ts:281</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>user</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>dto</td>
+                                            <td>
+                                                            <code><a href="../classes/AddFacilityOarIdDto.html" target="_self" >AddFacilityOarIdDto</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="checkValidFacilityType"></a>
+                    <span class="name">
+                        <span ><b>checkValidFacilityType</b></span>
+                        <a href="#checkValidFacilityType"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>checkValidFacilityType(facility: <a href="../entitys/FacilityEntity.html" target="_self">FacilityEntity</a>, types: string[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="187"
+                                    class="link-to-prism">src/facilities/services/facility.service.ts:187</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>facility</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >FacilityEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>types</td>
+                                            <td>
+                                                        <code>string[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createOne"></a>
+                    <span class="name">
+                        <span ><b>createOne</b></span>
+                        <a href="#createOne"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>createOne(data: <a href="../entitys/FacilityEntity.html" target="_self">Partial&lt;FacilityEntity&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="69"
+                                    class="link-to-prism">src/facilities/services/facility.service.ts:69</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>data</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >Partial&lt;FacilityEntity&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/FacilityEntity.html" target="_self" >Promise&lt;FacilityEntity&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteFacilityById"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>deleteFacilityById</b></span>
+                        <a href="#deleteFacilityById"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>deleteFacilityById(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="193"
+                                    class="link-to-prism">src/facilities/services/facility.service.ts:193</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>id</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findBusinessPartnerByFacilityId"></a>
+                    <span class="name">
+                        <span ><b>findBusinessPartnerByFacilityId</b></span>
+                        <a href="#findBusinessPartnerByFacilityId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>findBusinessPartnerByFacilityId(facilityId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="285"
+                                    class="link-to-prism">src/facilities/services/facility.service.ts:285</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>facilityId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/FacilityEntity.html" target="_self" >Promise&lt;FacilityEntity[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findById"></a>
+                    <span class="name">
+                        <span ><b>findById</b></span>
+                        <a href="#findById"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>findById(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, options?: <a href="../entitys/FacilityEntity.html" target="_self">FindOneOptions&lt;FacilityEntity&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="73"
+                                    class="link-to-prism">src/facilities/services/facility.service.ts:73</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>id</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>options</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >FindOneOptions&lt;FacilityEntity&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    Yes
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/FacilityEntity.html" target="_self" >Promise&lt;FacilityEntity&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findByIds"></a>
+                    <span class="name">
+                        <span ><b>findByIds</b></span>
+                        <a href="#findByIds"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>findByIds(ids: string[], options?: <a href="../entitys/FacilityEntity.html" target="_self">FindManyOptions&lt;FacilityEntity&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="77"
+                                    class="link-to-prism">src/facilities/services/facility.service.ts:77</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>ids</td>
+                                            <td>
+                                                        <code>string[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>options</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >FindManyOptions&lt;FacilityEntity&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    Yes
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/FacilityEntity.html" target="_self" >Promise&lt;FacilityEntity[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findByTypes"></a>
+                    <span class="name">
+                        <span ><b>findByTypes</b></span>
+                        <a href="#findByTypes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>findByTypes(types: <a href="../undefineds/UserRoleEnum.html" target="_self">UserRoleEnum[]</a>, options?: FindOptions)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="81"
+                                    class="link-to-prism">src/facilities/services/facility.service.ts:81</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>types</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/enumerations.html#UserRoleEnum" target="_self" >UserRoleEnum[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>options</td>
+                                            <td>
+                                                        <code>FindOptions</code>
+                                            </td>
+
+                                            <td>
+                                                    Yes
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/FacilityEntity.html" target="_self" >Promise&lt;FacilityEntity[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findExistedSupplierFacility"></a>
+                    <span class="name">
+                        <span ><b>findExistedSupplierFacility</b></span>
+                        <a href="#findExistedSupplierFacility"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>findExistedSupplierFacility(businessName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, email: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, oarId?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="269"
+                                    class="link-to-prism">src/facilities/services/facility.service.ts:269</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>businessName</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>email</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>oarId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    Yes
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/FacilityEntity.html" target="_self" >Promise&lt;FacilityEntity&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findFacilityOfUser"></a>
+                    <span class="name">
+                        <span ><b>findFacilityOfUser</b></span>
+                        <a href="#findFacilityOfUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>findFacilityOfUser(user: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="96"
+                                    class="link-to-prism">src/facilities/services/facility.service.ts:96</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>user</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/FacilityEntity.html" target="_self" >Promise&lt;FacilityEntity&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findFacilityWithRelations"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>findFacilityWithRelations</b></span>
+                        <a href="#findFacilityWithRelations"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>findFacilityWithRelations(facilityId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="289"
+                                    class="link-to-prism">src/facilities/services/facility.service.ts:289</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>facilityId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/FacilityEntity.html" target="_self" >Promise&lt;FacilityEntity&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findInformationSupplierById"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>findInformationSupplierById</b></span>
+                        <a href="#findInformationSupplierById"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>findInformationSupplierById(supplierId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, filters: <a href="../classes/FacilityRiskFilterDto.html" target="_self">FacilityRiskFilterDto</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="244"
+                                    class="link-to-prism">src/facilities/services/facility.service.ts:244</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>supplierId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>filters</td>
+                                            <td>
+                                                            <code><a href="../classes/FacilityRiskFilterDto.html" target="_self" >FacilityRiskFilterDto</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#FacilityWithFirstAdmin" target="_self" >Promise&lt;FacilityWithFirstAdmin&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findOne"></a>
+                    <span class="name">
+                        <span ><b>findOne</b></span>
+                        <a href="#findOne"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>findOne(options: <a href="../entitys/FacilityEntity.html" target="_self">FindOneOptions&lt;FacilityEntity&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="92"
+                                    class="link-to-prism">src/facilities/services/facility.service.ts:92</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>options</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >FindOneOptions&lt;FacilityEntity&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/FacilityEntity.html" target="_self" >Promise&lt;FacilityEntity&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findOneByUserId"></a>
+                    <span class="name">
+                        <span ><b>findOneByUserId</b></span>
+                        <a href="#findOneByUserId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>findOneByUserId(userId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="380"
+                                    class="link-to-prism">src/facilities/services/facility.service.ts:380</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>userId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/FacilityEntity.html" target="_self" >Promise&lt;FacilityEntity&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findSupplierFacilityByContactorEmail"></a>
+                    <span class="name">
+                        <span ><b>findSupplierFacilityByContactorEmail</b></span>
+                        <a href="#findSupplierFacilityByContactorEmail"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>findSupplierFacilityByContactorEmail(businessName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, email: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="273"
+                                    class="link-to-prism">src/facilities/services/facility.service.ts:273</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>businessName</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>email</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/FacilityEntity.html" target="_self" >Promise&lt;FacilityEntity&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findSupplierFacilityByContactorOarId"></a>
+                    <span class="name">
+                        <span ><b>findSupplierFacilityByContactorOarId</b></span>
+                        <a href="#findSupplierFacilityByContactorOarId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>findSupplierFacilityByContactorOarId(businessName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, oarId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="277"
+                                    class="link-to-prism">src/facilities/services/facility.service.ts:277</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>businessName</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>oarId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/FacilityEntity.html" target="_self" >Promise&lt;FacilityEntity&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAllSuppliers"></a>
+                    <span class="name">
+                        <span ><b>getAllSuppliers</b></span>
+                        <a href="#getAllSuppliers"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAllSuppliers(user: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="240"
+                                    class="link-to-prism">src/facilities/services/facility.service.ts:240</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>user</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/FacilityEntity.html" target="_self" >Promise&lt;FacilityEntity[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getDetailSupplierById"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>getDetailSupplierById</b></span>
+                        <a href="#getDetailSupplierById"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getDetailSupplierById(supplierId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="256"
+                                    class="link-to-prism">src/facilities/services/facility.service.ts:256</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>supplierId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/FacilityEntity.html" target="_self" >Promise&lt;FacilityEntity&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getFacilityInformation"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>getFacilityInformation</b></span>
+                        <a href="#getFacilityInformation"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getFacilityInformation(roleAttributes: <a href="../classes/FacilityRoleAttributeDto.html" target="_self">FacilityRoleAttributeDto[]</a>, roleId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="142"
+                                    class="link-to-prism">src/facilities/services/facility.service.ts:142</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>roleAttributes</td>
+                                            <td>
+                                                            <code><a href="../classes/FacilityRoleAttributeDto.html" target="_self" >FacilityRoleAttributeDto[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>roleId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#FacilityInformation" target="_self" >Promise&lt;FacilityInformation&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getListSuppliers"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>getListSuppliers</b></span>
+                        <a href="#getListSuppliers"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getListSuppliers(user: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>, paginationParams: PaginationParams, sortParams: SortMultipleParams[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="223"
+                                    class="link-to-prism">src/facilities/services/facility.service.ts:223</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>user</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>paginationParams</td>
+                                            <td>
+                                                        <code>PaginationParams</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>sortParams</td>
+                                            <td>
+                                                        <code>SortMultipleParams[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/FacilityEntity.html" target="_self" >Promise&lt;PaginationCollection&lt;FacilityEntity&gt;&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getProductSupplierForDna"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>getProductSupplierForDna</b></span>
+                        <a href="#getProductSupplierForDna"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getProductSupplierForDna()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="302"
+                                    class="link-to-prism">src/facilities/services/facility.service.ts:302</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/FacilityEntity.html" target="_self" >Promise&lt;FacilityEntity[]&gt;</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getRequestingFacilityForDna"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>getRequestingFacilityForDna</b></span>
+                        <a href="#getRequestingFacilityForDna"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getRequestingFacilityForDna()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="294"
+                                    class="link-to-prism">src/facilities/services/facility.service.ts:294</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/FacilityEntity.html" target="_self" >Promise&lt;FacilityEntity[]&gt;</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSupplierById"></a>
+                    <span class="name">
+                        <span ><b>getSupplierById</b></span>
+                        <a href="#getSupplierById"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getSupplierById(facility: <a href="../entitys/FacilityEntity.html" target="_self">FacilityEntity</a>, supplierId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="214"
+                                    class="link-to-prism">src/facilities/services/facility.service.ts:214</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>facility</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >FacilityEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>supplierId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/FacilityEntity.html" target="_self" >Promise&lt;FacilityEntity&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="mapExternalRiskIndicators"></a>
+                    <span class="name">
+                        <span ><b>mapExternalRiskIndicators</b></span>
+                        <a href="#mapExternalRiskIndicators"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>mapExternalRiskIndicators(externalRiskIndicators: <a href="../undefineds/ExternalRiskIndicator.html" target="_self">ExternalRiskIndicator[]</a>, externalRiskIndicatorCategories: <a href="../entitys/CategoryEntity.html" target="_self">CategoryEntity[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="350"
+                                    class="link-to-prism">src/facilities/services/facility.service.ts:350</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>externalRiskIndicators</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#ExternalRiskIndicator" target="_self" >ExternalRiskIndicator[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>externalRiskIndicatorCategories</td>
+                                            <td>
+                                                            <code><a href="../entitys/CategoryEntity.html" target="_self" >CategoryEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#ExternalRiskIndicator" target="_self" >ExternalRiskIndicator[]</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="searchByName"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>searchByName</b></span>
+                        <a href="#searchByName"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>searchByName(user: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>, key: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="218"
+                                    class="link-to-prism">src/facilities/services/facility.service.ts:218</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>user</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>key</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/FacilityEntity.html" target="_self" >Promise&lt;FacilityEntity[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="searchExitingFacilities"></a>
+                    <span class="name">
+                        <span ><b>searchExitingFacilities</b></span>
+                        <a href="#searchExitingFacilities"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>searchExitingFacilities(param: <a href="../undefineds/SearchFacilitiesQueryParamType.html" target="_self">SearchFacilitiesQueryParamType</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="197"
+                                    class="link-to-prism">src/facilities/services/facility.service.ts:197</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>param</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#SearchFacilitiesQueryParamType" target="_self" >SearchFacilitiesQueryParamType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/FacilityEntity.html" target="_self" >Promise&lt;FacilityEntity[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="searchFacilities"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>searchFacilities</b></span>
+                        <a href="#searchFacilities"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>searchFacilities(undefined: <a href="../undefineds/SearchingFacilityParamType.html" target="_self">SearchingFacilityParamType</a>, requester: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="100"
+                                    class="link-to-prism">src/facilities/services/facility.service.ts:100</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                            <code><a href="../miscellaneous/typealiases.html#SearchingFacilityParamType" target="_self" >SearchingFacilityParamType</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>requester</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../entitys/FacilityEntity.html" target="_self" >Promise&lt;FacilityEntity[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateAnsweredSaqAt"></a>
+                    <span class="name">
+                        <span ><b>updateAnsweredSaqAt</b></span>
+                        <a href="#updateAnsweredSaqAt"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>updateAnsweredSaqAt(facilityId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="390"
+                                    class="link-to-prism">src/facilities/services/facility.service.ts:390</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>facilityId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateFacilityByAdmin"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>updateFacilityByAdmin</b></span>
+                        <a href="#updateFacilityByAdmin"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updateFacilityByAdmin(userId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, dto: <a href="../classes/UpdateUserFacilityDto.html" target="_self">UpdateUserFacilityDto</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="182"
+                                    class="link-to-prism">src/facilities/services/facility.service.ts:182</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>userId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>dto</td>
+                                            <td>
+                                                            <code><a href="../classes/UpdateUserFacilityDto.html" target="_self" >UpdateUserFacilityDto</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateFacilityInformation"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>updateFacilityInformation</b></span>
+                        <a href="#updateFacilityInformation"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updateFacilityInformation(user: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>, facilityData: <a href="../entitys/FacilityEntity.html" target="_self">Partial&lt;FacilityEntity&gt;</a>, roleAttributes: <a href="../classes/FacilityRoleAttributeDto.html" target="_self">FacilityRoleAttributeDto[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="115"
+                                    class="link-to-prism">src/facilities/services/facility.service.ts:115</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>user</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>facilityData</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >Partial&lt;FacilityEntity&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>roleAttributes</td>
+                                            <td>
+                                                            <code><a href="../classes/FacilityRoleAttributeDto.html" target="_self" >FacilityRoleAttributeDto[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateFacilityRiskData"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                        <span ><b>updateFacilityRiskData</b></span>
+                        <a href="#updateFacilityRiskData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updateFacilityRiskData(facility: <a href="../entitys/FacilityEntity.html" target="_self">FacilityEntity</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="318"
+                                    class="link-to-prism">src/facilities/services/facility.service.ts:318</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>facility</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >FacilityEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateLastAddedPartnerAt"></a>
+                    <span class="name">
+                        <span ><b>updateLastAddedPartnerAt</b></span>
+                        <a href="#updateLastAddedPartnerAt"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>updateLastAddedPartnerAt(facilityId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="384"
+                                    class="link-to-prism">src/facilities/services/facility.service.ts:384</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>facilityId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;UpdateResult&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateProfileBrand"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>updateProfileBrand</b></span>
+                        <a href="#updateProfileBrand"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updateProfileBrand(user: <a href="../entitys/UserEntity.html" target="_self">UserEntity</a>, data: <a href="../entitys/FacilityEntity.html" target="_self">Partial&lt;FacilityEntity&gt;</a>, logo?: Express.Multer.File)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="201"
+                                    class="link-to-prism">src/facilities/services/facility.service.ts:201</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>user</td>
+                                            <td>
+                                                            <code><a href="../entitys/UserEntity.html" target="_self" >UserEntity</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>data</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >Partial&lt;FacilityEntity&gt;</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>logo</td>
+                                            <td>
+                                                        <code>Express.Multer.File</code>
+                                            </td>
+
+                                            <td>
+                                                    Yes
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateRiskDataForFacility"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>updateRiskDataForFacility</b></span>
+                        <a href="#updateRiskDataForFacility"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updateRiskDataForFacility(data: <a href="../entitys/FacilityEntity.html" target="_self">FacilityEntity | FacilityEntity[]</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="310"
+                                    class="link-to-prism">src/facilities/services/facility.service.ts:310</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>data</td>
+                                            <td>
+                                                            <code><a href="../entitys/FacilityEntity.html" target="_self" >FacilityEntity | FacilityEntity[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { PaginationParams, SortMultipleParams } from &#x27;@diginexhk/nestjs-base-decorator&#x27;;
+import { TransactionService } from &#x27;@diginexhk/nestjs-transaction&#x27;;
+import { PaginationCollection } from &#x27;@diginexhk/typeorm-helper&#x27;;
+import { BadRequestException, Inject, Injectable, forwardRef } from &#x27;@nestjs/common&#x27;;
+import { FindOptions } from &#x27;@nestjs/schematics&#x27;;
+import { isArray, keyBy, orderBy } from &#x27;lodash&#x27;;
+import { FindManyOptions, FindOneOptions, In, UpdateResult } from &#x27;typeorm&#x27;;
+import { I18nHelper } from &#x27;~core/helpers/i18n.helper&#x27;;
+import { UploadProofService } from &#x27;~events/services/upload-proof.service&#x27;;
+import { FacilityEntity } from &#x27;~facilities/entities/facility.entity&#x27;;
+import { AddFacilityOarIdDto } from &#x27;~facilities/http/dto/add-facility-oar-id.dto&#x27;;
+import { GetAndSearchFacilityQuery } from &#x27;~facilities/queries/get-and-search-facility.query&#x27;;
+import { GetBusinessPartnersByFacilityIdQuery } from &#x27;~facilities/queries/get-business-partner-by-facilityId.query&#x27;;
+import { GetFacilitiesByIdQuery } from &#x27;~facilities/queries/get-facilities-by-id.query&#x27;;
+import { GetListOfAllSuppliersQuery } from &#x27;~facilities/queries/get-list-of-all-suppliers.query&#x27;;
+import { GetSupplierDetailQuery } from &#x27;~facilities/queries/get-supplier-detail.query&#x27;;
+import { SearchExistingFacilitiesQuery } from &#x27;~facilities/queries/search-existing-facilities.query&#x27;;
+import { SearchFacilitiesByNameQuery } from &#x27;~facilities/queries/search-facilities-by-name.query&#x27;;
+import { FacilityRepository } from &#x27;~facilities/repositories/facility.repository&#x27;;
+import { SearchFacilitiesQueryParamType } from &#x27;~facilities/types/search-facilities-query-param.type&#x27;;
+import { SearchingFacilityParamType } from &#x27;~facilities/types/searching-facility-param.type&#x27;;
+import { SearchingFacilityQueryParamType } from &#x27;~facilities/types/searching-facility-query-param.type&#x27;;
+import { FacilityRiskFilterDto } from &#x27;~risk-assessments/http/dto/facility-risk-filter.dto&#x27;;
+import { FacilityRiskService } from &#x27;~risk-assessments/services/facility-risk.service&#x27;;
+import { RoleTypeEnum } from &#x27;~role-permissions/enums/role-type.enum&#x27;;
+import { UserRoleEnum } from &#x27;~role-permissions/enums/user-role.enum&#x27;;
+import { RoleService } from &#x27;~role-permissions/services/role.service&#x27;;
+import { BusinessDetailService } from &#x27;~site-details/services/business-detail.service&#x27;;
+import { UserEntity } from &#x27;~users/entities/user.entity&#x27;;
+import { UpdateUserFacilityDto } from &#x27;~users/http/dto/admin/update-user-facility.dto&#x27;;
+import { UserService } from &#x27;~users/services/user.service&#x27;;
+import { FacilityRiskFilerService } from &#x27;./facility-risk-filter.service&#x27;;
+import { RolePermissionService } from &#x27;~role-permissions/services/role-permission.service&#x27;;
+import { PermissionEnum } from &#x27;~role-permissions/enums/permission.enum&#x27;;
+import { ExternalRiskIndicator } from &#x27;~risk-assessments/types/external-risk-indicator.type&#x27;;
+import { CategoryService } from &#x27;~categories/services/category.service&#x27;;
+import { CategoryTypeEnum } from &#x27;~categories/enums/category-type.enum&#x27;;
+import { CategoryEntity } from &#x27;~categories/entities/category.entity&#x27;;
+import moment from &#x27;moment&#x27;;
+import { FacilityWithFirstAdmin } from &#x27;~facilities/types/facility-with-first-admin.type&#x27;;
+import { FacilityRiskMapperService } from &#x27;~risk-assessments/services/facility-risk-mapper.service&#x27;;
+import { FacilityRoleAttributeDto } from &#x27;~role-attributes/http/dto/facility-role-attribute.dto&#x27;;
+import { RoleAttributeTypeEnum } from &#x27;~role-attributes/enums/role-attribute-type.enum&#x27;;
+import { RoleAttributeService } from &#x27;~role-attributes/services/role-attribute.service&#x27;;
+import { FacilityInformation } from &#x27;~facilities/types/geographic-information.type&#x27;;
+import { FacilityOperationService } from &#x27;./facility-operation.service&#x27;;
+import { FacilityRoleAttributeService } from &#x27;~role-attributes/services/facility-role-attribute.service&#x27;;
+
+@Injectable()
+export class FacilityService extends TransactionService {
+    constructor(
+        private facilityRepo: FacilityRepository,
+        private uploadProofService: UploadProofService,
+        @Inject(forwardRef(() &#x3D;&gt; UserService)) private userService: UserService,
+        private businessDetailService: BusinessDetailService,
+        private facilityRiskService: FacilityRiskService,
+        private roleService: RoleService,
+        private rolePermissionService: RolePermissionService,
+        private facilityRiskFilerService: FacilityRiskFilerService,
+        private categoryService: CategoryService,
+        private facilityRiskMapperService: FacilityRiskMapperService,
+        private facilityOperationService: FacilityOperationService,
+        private facilityRoleAttributeService: FacilityRoleAttributeService,
+        @Inject(forwardRef(() &#x3D;&gt; RoleAttributeService)) private roleAttributeService: RoleAttributeService
+    ) {
+        super();
+    }
+
+    createOne(data: Partial&lt;FacilityEntity&gt;): Promise&lt;FacilityEntity&gt; {
+        return this.facilityRepo.createOne(data);
+    }
+
+    findById(id: string, options?: FindOneOptions&lt;FacilityEntity&gt;): Promise&lt;FacilityEntity&gt; {
+        return this.facilityRepo.findById(id, options);
+    }
+
+    findByIds(ids: string[], options?: FindManyOptions&lt;FacilityEntity&gt;): Promise&lt;FacilityEntity[]&gt; {
+        return this.facilityRepo.findByIds(ids, options);
+    }
+
+    findByTypes(types: UserRoleEnum[], options?: FindOptions): Promise&lt;FacilityEntity[]&gt; {
+        return this.facilityRepo.find({
+            where: {
+                type: {
+                    name: In(types)
+                },
+                ...options
+            }
+        });
+    }
+
+    findOne(options: FindOneOptions&lt;FacilityEntity&gt;): Promise&lt;FacilityEntity&gt; {
+        return this.facilityRepo.findOne(options);
+    }
+
+    findFacilityOfUser(user: UserEntity): Promise&lt;FacilityEntity&gt; {
+        return this.facilityRepo.findFacilityOfUser(user.id);
+    }
+
+    async searchFacilities(
+        { key, types &#x3D; [], isFilledAddress &#x3D; false, isExcludeAddedPartners &#x3D; true }: SearchingFacilityParamType,
+        requester: UserEntity
+    ): Promise&lt;FacilityEntity[]&gt; {
+        const searchParam: SearchingFacilityQueryParamType &#x3D; {
+            key,
+            types,
+            isFilledAddress,
+            isExcludeAddedPartners,
+            ownerFacility: requester.currentFacility
+        };
+
+        return this.facilityRepo.find(new GetAndSearchFacilityQuery(searchParam));
+    }
+
+    async updateFacilityInformation(
+        user: UserEntity,
+        facilityData: Partial&lt;FacilityEntity&gt;,
+        roleAttributes: FacilityRoleAttributeDto[]
+    ): Promise&lt;void&gt; {
+        if (user.role.type &#x3D;&#x3D;&#x3D; RoleTypeEnum.ADMINISTRATOR) {
+            return;
+        }
+
+        const facilityInformation &#x3D; await this.getFacilityInformation(roleAttributes, user.roleId);
+        const selectedGoods &#x3D; await this.businessDetailService.getSelectedGoods(user.roleId);
+
+        for (const goods of facilityData.goods || []) {
+            if (!selectedGoods.includes(goods)) {
+                throw new BadRequestException({
+                    translate: &#x27;validation.property_must_be_a_valid_goods_value&#x27;
+                });
+            }
+        }
+
+        await this.facilityRepo.updateOrFail(
+            { id: user.currentFacility.id },
+            { ...facilityData, ...facilityInformation }
+        );
+        await this.updateRiskDataForFacility(user.currentFacility);
+    }
+
+    private async getFacilityInformation(
+        roleAttributes: FacilityRoleAttributeDto[],
+        roleId: string
+    ): Promise&lt;FacilityInformation&gt; {
+        if (!roleAttributes?.length) {
+            return {};
+        }
+
+        const existedRoleAttributes &#x3D; await this.roleAttributeService.find({
+            relations: [&#x27;attribute&#x27;],
+            where: {
+                roleId,
+                roleAttributeType: In([RoleAttributeTypeEnum.OPEN_SUPPLY_HUB_ID, RoleAttributeTypeEnum.RMI_CID])
+            }
+        });
+        const mappedExistedRoleAttributes &#x3D; keyBy(existedRoleAttributes, &#x27;attributeId&#x27;);
+        const openSupplyHubAttributes &#x3D; roleAttributes.filter(
+            ({ roleAttributeType }) &#x3D;&gt; roleAttributeType &#x3D;&#x3D;&#x3D; RoleAttributeTypeEnum.OPEN_SUPPLY_HUB_ID
+        );
+
+        const facilityInformation &#x3D; this.facilityOperationService.getFacilityInformationByOSH(
+            openSupplyHubAttributes,
+            mappedExistedRoleAttributes
+        );
+
+        if (!facilityInformation.name || !facilityInformation.countryId) {
+            const rMIAttributes &#x3D; roleAttributes.filter(
+                ({ roleAttributeType }) &#x3D;&gt; roleAttributeType &#x3D;&#x3D;&#x3D; RoleAttributeTypeEnum.RMI_CID
+            );
+
+            return this.facilityOperationService.getFacilityInformationByRMI(
+                rMIAttributes,
+                mappedExistedRoleAttributes,
+                facilityInformation
+            );
+        }
+
+        return facilityInformation;
+    }
+
+    async updateFacilityByAdmin(userId: string, dto: UpdateUserFacilityDto): Promise&lt;void&gt; {
+        const facility &#x3D; await this.facilityRepo.findFacilityOfUser(userId);
+        await this.facilityRepo.update(facility.id, { typeId: dto.roleId });
+    }
+
+    checkValidFacilityType(facility: FacilityEntity, types: string[]): void {
+        if (!types.includes(facility.typeName)) {
+            throw new BadRequestException({ translate: &#x27;error.transact_partner_invalid&#x27; });
+        }
+    }
+
+    async deleteFacilityById(id: string): Promise&lt;void&gt; {
+        await this.facilityRepo.softDelete({ id });
+    }
+
+    searchExitingFacilities(param: SearchFacilitiesQueryParamType): Promise&lt;FacilityEntity[]&gt; {
+        return this.facilityRepo.find(new SearchExistingFacilitiesQuery(param));
+    }
+
+    async updateProfileBrand(
+        user: UserEntity,
+        data: Partial&lt;FacilityEntity&gt;,
+        logo?: Express.Multer.File
+    ): Promise&lt;void&gt; {
+        if (logo) {
+            data.logo &#x3D; (await this.uploadProofService.uploadProofs([logo]))[0]?.blobName;
+        }
+
+        await this.facilityRepo.updateOrFail({ id: user.currentFacility.id }, data);
+        await this.userService.updateUserInformation(user.id, { updatedProfileAt: moment().toDate() });
+    }
+
+    getSupplierById(facility: FacilityEntity, supplierId: string): Promise&lt;FacilityEntity&gt; {
+        return this.facilityRepo.findFacilityPartner(facility, supplierId);
+    }
+
+    async searchByName(user: UserEntity, key: string): Promise&lt;FacilityEntity[]&gt; {
+        const supplierRoleIds &#x3D; await this.roleService.getSupplierRoleIds();
+        return this.facilityRepo.find(new SearchFacilitiesByNameQuery(user.currentFacility.id, supplierRoleIds, key));
+    }
+
+    async getListSuppliers(
+        user: UserEntity,
+        paginationParams: PaginationParams,
+        sortParams: SortMultipleParams[]
+    ): Promise&lt;PaginationCollection&lt;FacilityEntity&gt;&gt; {
+        const result &#x3D; await this.facilityRepo.pagination(
+            new GetListOfAllSuppliersQuery(user.currentFacility.id, sortParams),
+            paginationParams
+        );
+
+        for (const supplier of result.items) {
+            supplier.users &#x3D; orderBy(supplier.users, &#x27;createdAt&#x27;);
+        }
+
+        return result;
+    }
+
+    getAllSuppliers(user: UserEntity): Promise&lt;FacilityEntity[]&gt; {
+        return this.facilityRepo.getSuppliersByCurrentFacilityId(user.currentFacility.id);
+    }
+
+    async findInformationSupplierById(
+        supplierId: string,
+        filters: FacilityRiskFilterDto
+    ): Promise&lt;FacilityWithFirstAdmin&gt; {
+        const facility &#x3D; await this.getDetailSupplierById(supplierId);
+        facility.riskData &#x3D; this.facilityRiskFilerService.filterRiskData(facility.riskData, filters);
+        const dataForMapExternalInfo &#x3D; await this.facilityOperationService.findDataForMapExternalInfo([facility.id]);
+        this.facilityOperationService.mapWithAllExternalInfo(facility, dataForMapExternalInfo);
+
+        return { ...facility, firstAdmin: facility.firstAdmin } as FacilityEntity;
+    }
+
+    async getDetailSupplierById(supplierId: string): Promise&lt;FacilityEntity&gt; {
+        const [facility, users] &#x3D; await Promise.all([
+            this.facilityRepo.findOne(new GetSupplierDetailQuery(supplierId)),
+            this.userService.findUsersInFacility({ facilityId: supplierId, withDeleted: true })
+        ]);
+
+        facility.users &#x3D; users;
+        await this.updateFacilityRiskData(facility);
+        I18nHelper.translateFacilityLocation(facility);
+
+        return facility;
+    }
+
+    findExistedSupplierFacility(businessName: string, email: string, oarId?: string): Promise&lt;FacilityEntity&gt; {
+        return this.facilityRepo.findExistedSupplierFacility(businessName, email, oarId);
+    }
+
+    findSupplierFacilityByContactorEmail(businessName: string, email: string): Promise&lt;FacilityEntity&gt; {
+        return this.facilityRepo.findSupplierFacilityByContactorEmail(businessName, email);
+    }
+
+    findSupplierFacilityByContactorOarId(businessName: string, oarId: string): Promise&lt;FacilityEntity&gt; {
+        return this.facilityRepo.findSupplierFacilityByContactorOarId(businessName, oarId);
+    }
+
+    async addOarId(user: UserEntity, dto: AddFacilityOarIdDto): Promise&lt;void&gt; {
+        await this.facilityRepo.updateOrFail({ id: user.currentFacility.id }, dto);
+    }
+
+    findBusinessPartnerByFacilityId(facilityId: string): Promise&lt;FacilityEntity[]&gt; {
+        return this.facilityRepo.find(new GetBusinessPartnersByFacilityIdQuery(facilityId));
+    }
+
+    async findFacilityWithRelations(facilityId: string): Promise&lt;FacilityEntity&gt; {
+        const facilities &#x3D; await this.facilityRepo.find(new GetFacilitiesByIdQuery([facilityId]));
+        return facilities[0];
+    }
+
+    async getRequestingFacilityForDna(): Promise&lt;FacilityEntity[]&gt; {
+        const roles &#x3D; await this.rolePermissionService.findRolesByPermission(PermissionEnum.COMPLETE_OWN_PROFILE, [
+            RoleTypeEnum.PRODUCT
+        ]);
+        const roleIds &#x3D; roles.map(({ id }) &#x3D;&gt; id);
+        return this.facilityRepo.findByRoles(roleIds);
+    }
+
+    async getProductSupplierForDna(): Promise&lt;FacilityEntity[]&gt; {
+        const roles &#x3D; await this.rolePermissionService.findRolesByPermission(PermissionEnum.ASSIGN_DNA, [
+            RoleTypeEnum.PRODUCT
+        ]);
+        const roleIds &#x3D; roles.map(({ id }) &#x3D;&gt; id);
+        return this.facilityRepo.findByRoles(roleIds);
+    }
+
+    async updateRiskDataForFacility(data: FacilityEntity | FacilityEntity[]): Promise&lt;void&gt; {
+        if (isArray(data)) {
+            await Promise.all(data.map((facility) &#x3D;&gt; this.updateFacilityRiskData(facility)));
+        } else {
+            await this.updateFacilityRiskData(data);
+        }
+    }
+
+    private async updateFacilityRiskData(facility: FacilityEntity): Promise&lt;void&gt; {
+        const [riskData, externalRiskIndicators, externalRiskIndicatorCategories] &#x3D; await Promise.all([
+            this.facilityRiskService.getFacilityRisk(facility),
+            this.facilityRiskService.getExternalRiskIndicators(facility),
+            this.categoryService.all({ type: CategoryTypeEnum.EXTERNAL_RISK_INDICATOR })
+        ]);
+
+        const riskGroup &#x3D; this.facilityRiskMapperService.mapRiskGroup(riskData.data).filter(({ data }) &#x3D;&gt; data.length);
+        const topFourIssues &#x3D; await this.facilityRiskService.getIssuesByOptions(riskGroup, 4);
+        const allExternalRiskIndicators &#x3D; [
+            { country: facility.country, risk: riskData.countryRisk },
+            ...externalRiskIndicators
+        ];
+
+        facility.riskData &#x3D; riskData;
+        facility.overallRiskScore &#x3D; riskData.overallRisk.score;
+        facility.overallRiskLevel &#x3D; riskData.overallRisk.level;
+        facility.topIssues &#x3D; topFourIssues;
+        facility.externalRiskIndicators &#x3D; this.mapExternalRiskIndicators(
+            allExternalRiskIndicators,
+            externalRiskIndicatorCategories
+        );
+
+        await this.facilityRepo.update(facility.id, {
+            riskData,
+            topIssues: topFourIssues,
+            overallRiskScore: riskData.overallRisk.score,
+            overallRiskLevel: riskData.overallRisk.level,
+            externalRiskIndicators: facility.externalRiskIndicators
+        });
+    }
+
+    mapExternalRiskIndicators(
+        externalRiskIndicators: ExternalRiskIndicator[],
+        externalRiskIndicatorCategories: CategoryEntity[]
+    ): ExternalRiskIndicator[] {
+        const mappedCategories &#x3D; keyBy(externalRiskIndicatorCategories, &#x27;name&#x27;);
+        return externalRiskIndicators.reduce((acc, externalRiskIndicator) &#x3D;&gt; {
+            if (externalRiskIndicator?.country) {
+                acc.push({ ...externalRiskIndicator, category: mappedCategories[&#x27;Country based risk&#x27;] });
+            }
+
+            if (externalRiskIndicator?.indicator?.name?.toLowerCase() &#x3D;&#x3D;&#x3D; &#x27;Child Labor&#x27;.toLowerCase()) {
+                acc.push({ ...externalRiskIndicator, category: mappedCategories[&#x27;Good produced with Child labor&#x27;] });
+            }
+
+            if (
+                externalRiskIndicator?.subIndicator?.name?.toLowerCase() &#x3D;&#x3D;&#x3D;
+                &#x27;Goods produced with forced or indentured child labor (ILAB List of Goods)&#x27;.toLowerCase()
+            ) {
+                acc.push({
+                    ...externalRiskIndicator,
+                    category: mappedCategories[&#x27;Goods produced with forced or indentured child labor&#x27;]
+                });
+            } else if (externalRiskIndicator?.indicator?.name?.toLowerCase() &#x3D;&#x3D;&#x3D; &#x27;Forced Labor&#x27;.toLowerCase()) {
+                acc.push({ ...externalRiskIndicator, category: mappedCategories[&#x27;Good produced with Forced labor&#x27;] });
+            }
+
+            return acc;
+        }, []);
+    }
+
+    findOneByUserId(userId: string): Promise&lt;FacilityEntity&gt; {
+        return this.facilityRepo.findOneByUserId(userId);
+    }
+
+    updateLastAddedPartnerAt(facilityId: string): Promise&lt;UpdateResult&gt; {
+        return this.facilityRepo.update(facilityId, {
+            addedPartnerAt: moment().toDate()
+        });
+    }
+
+    updateAnsweredSaqAt(facilityId: string) {
+        return this.facilityRepo.update(facilityId, { answeredSaqAt: moment().toDate() });
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'FacilityService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
